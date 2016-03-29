@@ -1,0 +1,27 @@
+Admin module
+
+Email                       -- Done. Reply Testing is remain
+Notifications               -- Done 
+Course                      -- Done
+Class                       -- Done (onchange dropdown value append remain to ID field)
+User Management
+Roles Management
+system_setting					-- Done
+Attendance/Calendar
+Students
+Parents
+SMS
+Subjects                    -- Done
+Semester					-- Done	
+Timetable
+Holidays					-- Done
+Exams						-- Done
+Payment
+Dashboard
+
+
+Reports
+History and Data Management
+
+
+Manage profile & read Unread notification on header add

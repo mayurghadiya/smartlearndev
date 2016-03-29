@@ -1,0 +1,42 @@
+.box.box-solid.box-warning > .box-header {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #ffffff;
+}
+.box.box-solid.box-warning {
+    border: 1px solid #f39c12;
+}
+.box {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 3px;
+    border-top: 3px solid #d2d6de;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+.box.box-solid.box-info {
+    border: 1px solid #00c0ef;
+}
+.box.box-solid.box-info > .box-header {
+    background: #00c0ef none repeat scroll 0 0;
+    color: #ffffff;
+}
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.box-body {
+    border-radius: 0 0 3px 3px;
+    padding: 10px;
+}
+.box-footer {
+    background-color: #ffffff;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+}

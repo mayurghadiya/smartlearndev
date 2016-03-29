@@ -1,0 +1,23 @@
+{
+  "events": [{
+    "month": "2",
+    "day": "12",
+    "year": "2016",
+    "title": "Day 12",
+    "description": "Event D."
+  },
+  {
+    "month": "2",
+    "day": "9",
+    "year": "2016",
+    "title": "Day 9",
+    "description": "Event C."
+  },
+  {
+   // "month": "2",
+    //"day": "10",
+   // "year": "2016",
+   // "title": "Day 10",
+    //"description": "<a href='#'>Event G</a><br/><a href='#'>Event H</a><br/><a href='#'>Event J</a><br/><a href='#'>Event K</a>"
+  }]
+}

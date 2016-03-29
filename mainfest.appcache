@@ -1,0 +1,10 @@
+CACHE MANIFEST
+index.html
+style.css
+logo.png
+
+FALLBACK:
+/ no-internet.html
+
+NETWORK:
+*

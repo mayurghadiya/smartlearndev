@@ -1,0 +1,166 @@
+/* Insert Your Custom CSS Here */
+
+div#profiletab {
+    display: none;
+}
+.dataTables_filter{
+	float: right;
+}
+div#data-tables_paginate {
+    float: right;
+}
+.padded {
+    margin: 25px;
+}
+/* Modal_edit_course.php page style  */
+.checkbox-switch-animate .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .checkbox-switch-animate .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary{margin-left: 0;}
+
+.chatbox {
+	position: fixed;
+	position:expression("absolute");
+	width: 225px;
+	display:none;
+}
+
+.chatboxhead {
+	background-color: #A87FC6;
+	padding:7px;
+	color: #ffffff;
+
+	border-right:1px solid #A87FC6;
+	border-left:1px solid #A87FC6;
+}
+
+.chatboxblink {
+	background-color: #176689;
+	border-right:1px solid #176689;
+	border-left:1px solid #176689;
+}
+
+.chatboxcontent {
+	font-family: arial,sans-serif;
+	font-size: 13px;
+	color: #333333;
+	height:200px;
+	width:225px;
+	overflow-y:auto;
+	overflow-x:auto;
+	padding:7px;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #eeeeee;
+	background-color: #ffffff;
+	line-height: 1.3em;
+}
+
+.chatboxinput {
+	padding: 5px;
+	background-color: #ffffff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+}
+
+.chatboxtextarea {
+	width: 206px;
+	height:44px;
+	padding:3px 0pt 3px 3px;
+	border: 1px solid #eeeeee;
+	margin: 1px;
+	overflow:hidden;
+}
+
+.chatboxtextareaselected {
+	border: 2px solid #A87FC6;
+	margin:0;
+}
+
+.chatboxmessage {
+	margin-left:1em;
+}
+
+.chatboxinfo {
+	margin-left:-1em;
+	color:#666666;
+
+}
+
+.chatboxmessagefrom {
+	margin-left:-1em;
+	font-weight: bold;
+}
+
+.chatboxmessagecontent {
+}
+
+.chatboxoptions {
+	float: right;
+}
+
+.chatboxoptions a {
+	text-decoration: none;
+	color: white;
+	font-weight:bold;
+	font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+}
+
+.chatboxtitle {
+	float: left;
+}
+.chat-link-box .content a { color:#1c1c11c; text-decoration: none; font-size:14px; display:inline-block; padding:2px; margin-top:3px;}
+.chat-link-box .title { background:#A87FC6; padding:5px 20px; font-size:15px; color:#FFF; margin-bottom:1px; line-height:22px;}
+.chat-link-box {
+  position: fixed;
+  overflow-y: scroll;  
+  right: 35px;
+  bottom: 38px;  
+  
+  display: block;
+  border-radius: 0px;
+  transform: translateY(20px);
+  max-height:320px;  
+  visibility:hidden;
+  background:#FFF; 
+  
+  
+}
+
+.chat-link-box.active {
+  display: block;
+  visibility: visible;
+  box-shadow: 2px 3px 16px silver;
+  transition: all 300ms;
+  transform: translateY(0px);
+ z-index:2000;
+}
+
+.chat-link-box.active .content {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  padding:5px 10px !important;
+  
+}
+
+a.chat-button {
+  padding: 7px 15px 7px 15px;
+  outline: none;
+  border-radius: 0px;
+  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px;
+ /* background: #007fed;
+  color: #fff;*/
+  font-size: 16px;
+  display: block;
+  position: fixed;
+  right: 35px;
+  bottom: 0px;
+  text-decoration:none;  
+  transition: transform 0.25s;
+  width:215px;
+  z-index:2000;
+ 
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off,
+.bootstrap-switch.bootstrap-switch-yellow.bootstrap-switch-mini.bootstrap-switch-animate .bootstrap-switch-container span{height: auto !important; }

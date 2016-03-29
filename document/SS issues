@@ -1,0 +1,17 @@
+Listing "L" to be made capital
+Profile and listing does not close until it is clicked
+The borders for the address keep in alignment with other textbox borders
+Change blood group> select Groop group spelling
+Relpace name with Father's name and actual name of father 
+Add Mother's name with actual name of father 
+Phone number 232323232333333333333333333333 is accepted
+Even if validation is corrected the text box remains in red
+Parent create does not show added class
+Parent listing does not show parent name
+Search not working in parent listing
+Keep parent listing initially blank
+On saving on all pages keep the data visible
+On saving provide a message for 1-2 sec more
+do not take to listing page automatically
+Keep all listing pages empty initially
+User name and password combination of all must be unique. Currently same can be done for students and parents
