@@ -1,5 +1,5 @@
 <?php  //test   test ddd
-//ddd
+//ddd  njjj
 $text = NULL;
 
 ?>
