@@ -1435,30 +1435,41 @@ class Student extends CI_Controller {
     }
 
     function participate($param1 = '', $param2 = '') {
-        if ($param1 == "create") {
-            $data['academicquality'] = $this->input->post('Field1');
-            $data['cocurricular'] = $this->input->post('Field2');
-            $data['facilities'] = $this->input->post('Field3');
-            $data['valueofdegree'] = $this->input->post('Field4');
-            $data['faculty'] = $this->input->post('Field5');
-            $data['motivation'] = $this->input->post('Field6');
-            $data['bodydiversity'] = $this->input->post('Field7');
-            $data['cost'] = $this->input->post('Field8');
-            $data['reputation'] = $this->input->post('Field9');
-            $data['strength'] = $this->input->post('strength');
-            $data['weekness'] = $this->input->post('weekness');
-            $data['created_date'] = date('Y');
-            $data['student_id'] = $this->session->userdata('std_id');
-            $this->db->insert('survey', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
-            redirect(base_url() . 'index.php?student/participate', 'refresh');
-        }
-        $std = $this->session->userdata('std_id');
-        $page_data['survey'] = $this->db->get_where('survey', array('student_id' => $std, 'created_date' => date('Y')))->result();
-        $page_data['page_name'] = 'participate';
-        $page_data['page_title'] = 'Survey Application Form';
-        $page_data['param'] = $param1;
-        $this->load->view('backend/index', $page_data);
+        
+        if($param1=="create")
+            {
+               
+ $survey= $this->db->get_where('survey_question',array('question_status'=>'1'))->result();
+ $count  =1;
+
+                foreach($survey as $res )
+                {
+                    
+                   // echo $count;
+                        $question[] = $this->input->post('question_id'.$count);
+                        $field[] = $this->input->post('Field'.$count);
+                        $que = implode(",",$question);
+                        $status = implode(",",$field);
+                        $count++;                
+
+                }
+
+                $data['sq_id'] = $que;
+                $data['survey_status'] = $status;
+              
+                $data['student_id']  = $this->session->userdata('std_id');  +        
+                $this->db->insert('survey_list', $data);
+                $this->session->set_flashdata('flash_message' , get_phrase('data_added_successfully'));
+                redirect(base_url() . 'index.php?student/participate', 'refresh'); 
+            }
+            $std = $this->session->userdata('std_id');
+            //$page_data['survey']= $this->db->get_where('survey',array('student_id'=>$std,'created_date'=>date('Y')))->result();
+            $page_data['survey']= $this->db->get_where('survey_question',array('question_status'=>'1'))->result();
+            $page_data['page_name']  = 'participate';
+            $page_data['page_title'] = 'Survey Application Form';
+            $page_data['param'] = $param1;
+            $this->load->view('backend/index', $page_data);
+       
     }
 
     function participate_attend($param = '') {
