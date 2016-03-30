@@ -64,7 +64,7 @@
 
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
-                            <div class="tab-pane box active" id="list">								
+                            <div class="tab-pane box" id="list">								
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
@@ -770,9 +770,6 @@
                                                                 "use strict";
                                                                 $('#data-tabless').dataTable();
                                                             });
-
-
-
 
 
     </script>
