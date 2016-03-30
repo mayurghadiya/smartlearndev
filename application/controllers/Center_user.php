@@ -173,6 +173,13 @@ class Center_user extends CI_Controller {
         }
         echo $option;
     }
+    function manage_profile($param1 = '', $param2 = '', $param3 = '') {
+        
+        $page_data['page_name'] = 'manage_profile';
+        $page_data['page_title'] = 'Manage Profile';
+        $page_data['edit_data'] = $this->db->get_where('center_user', array('center_id' => $this->session->userdata('center_id')))->result_array();
+        $this->load->view('backend/index', $page_data);
+    }
    
 
 }
