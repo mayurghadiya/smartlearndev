@@ -44,14 +44,7 @@
                                                         <i class=" fa fa-reply-all"></i>
                                                     </div> <div class="menu-text">Reply to all</div> 
                                                 </a> 
-                                            </li>
-                                            <li> 
-                                                <a href="email-compose.html"> 
-                                                    <div class="menu-icon">
-                                                        <i class=" fa fa-forward"></i></div> 
-                                                        <div class="menu-text">Forward</div> 
-                                                </a> 
-                                            </li>
+                                            </li>                                            
                                         </ul>
                                     </div>
                                 </div>

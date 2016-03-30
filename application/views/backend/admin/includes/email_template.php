@@ -12,8 +12,8 @@
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <meta name="keywords" content="HTML5 Template, CSS3, All Purpose Admin Template, Smart learn" />
-        <meta name="description" content="Responsive Admin Template for blogging dashboard">
+        <meta name="keywords" content="Smart learn" />
+        <meta name="description" content="">
         <meta name="author" content="Searchnative">
 
         <!-- Set the viewport width to device width for mobile -->
@@ -54,7 +54,7 @@
         <link href="<?php echo base_url(); ?>assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url(); ?>assets/plugins/colorpicker/css/colorpicker.css" rel="stylesheet" type="text/css">            
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script> 
-        
+
         <!-- Specific CSS -->
         <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.2/select2.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>assets/plugins/bootstrap-wysiwyg/css/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet" type="text/css">   
@@ -186,90 +186,18 @@
                                                 <li id="top-menu-3"  class="one-icon mega-li"> 
                                                     <a href="index.html" class="mega-link" data-action="click-trigger">
                                                         <span class="mega-icon"><i class="fa fa-globe"></i></span> 
-                                                        <span class="badge vd_bg-red">51</span>        
+                                                        <span class="badge vd_bg-red">0</span>        
                                                     </a>
-                                                    <div class="vd_mega-menu-content  width-xs-3 width-sm-4  center-xs-3 left-sm" data-action="click-target">
-                                                        <div class="child-menu">  
-                                                            <div class="title"> 
-                                                                Notifications 
-                                                                <div class="vd_panel-menu">
-                                                                    <span data-original-title="Notification Setting" data-toggle="tooltip" data-placement="bottom" class="menu">
-                                                                        <i class="fa fa-cog"></i>
-                                                                    </span>                   
-                                                <!--                     <span class="text-menu" data-original-title="Settings" data-toggle="tooltip" data-placement="bottom">
-                                                                        Settings
-                                                                    </span> -->                                                              
-                                                                </div>
-                                                            </div>                 
-                                                            <div class="content-list">	
-                                                                <div  data-rel="scroll">	
-                                                                    <ul  class="list-wrapper pd-lr-10">
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                <div class="menu-text"> Someone has give you a surprise 
-                                                                                    <div class="menu-info"><span class="menu-date">12 Minutes Ago</span></div>
-                                                                                </div> 
-                                                                            </a> </li>
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_blue"><i class=" fa fa-user"></i></div> 
-                                                                                <div class="menu-text">  Change your user profile details
-                                                                                    <div class="menu-info"><span class="menu-date">1 Hour 20 Minutes Ago</span></div>
-                                                                                </div> 
-                                                                            </a> </li>    
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_red"><i class=" fa fa-cogs"></i></div> 
-                                                                                <div class="menu-text">  Your setting is updated
-                                                                                    <div class="menu-info"><span class="menu-date">12 Days Ago</span></div>                            
-                                                                                </div> 
-                                                                            </a> </li>                                     
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_green"><i class=" fa fa-book"></i></div> 
-                                                                                <div class="menu-text">  Added new article
-                                                                                    <div class="menu-info"><span class="menu-date">19 Days Ago</span></div>                              
-                                                                                </div> 
-                                                                            </a> </li> 
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_green"><img alt="example image" src="<?php echo base_url(); ?>assets/img/avatar/avatar.jpg"></div> 
-                                                                                <div class="menu-text">  Change Profile Pic
-                                                                                    <div class="menu-info"><span class="menu-date">20 Days Ago</span></div>                              
-                                                                                </div> 
-                                                                            </a> </li>
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_red"><i class=" fa fa-cogs"></i></div> 
-                                                                                <div class="menu-text">  Your setting is updated
-                                                                                    <div class="menu-info"><span class="menu-date">12 Days Ago</span></div>                            
-                                                                                </div> 
-                                                                            </a> </li>                                     
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_green"><i class=" fa fa-book"></i></div> 
-                                                                                <div class="menu-text">  Added new article
-                                                                                    <div class="menu-info"><span class="menu-date">19 Days Ago</span></div>                              
-                                                                                </div> 
-                                                                            </a> </li> 
-                                                                        <li> <a href="#"> 
-                                                                                <div class="menu-icon vd_green"><img alt="example image" src="<?php echo base_url(); ?>assets/img/avatar/avatar.jpg"></div> 
-                                                                                <div class="menu-text">  Change Profile Pic
-                                                                                    <div class="menu-info"><span class="menu-date">20 Days Ago</span></div>                              
-                                                                                </div> 
-                                                                            </a> </li>                                                                                
 
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="closing text-center" style="">
-                                                                    <a href="#">See All Notifications <i class="fa fa-angle-double-right"></i></a>
-                                                                </div>                                                                       
-                                                            </div>                              
-                                                        </div> <!-- child-menu -->                      
-                                                    </div>   <!-- vd_mega-menu-content -->         
                                                 </li>  
 
                                                 <li id="top-menu-profile" class="profile mega-li"> 
                                                     <a href="#" class="mega-link"  data-action="click-trigger"> 
                                                         <span  class="mega-image">
-                                                            <img src="<?php echo base_url(); ?>assets/img/avatar/avatar.jpg" alt="example image" />               
+                                                            <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('admin', $this->session->userdata('admin_id')); ?>" alt="...">             
                                                         </span>
                                                         <span class="mega-name">
-                                                            Caroline <i class="fa fa-caret-down fa-fw"></i> 
+                                                            <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
                                                         </span>
                                                     </a> 
                                                     <div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">
@@ -347,12 +275,12 @@
                                             <span class="menu-text">Inbox</span>  
                                         </a> 
                                     </li> 
-<!--                                    <li>
-                                        <a href="<?php echo base_url('index.php?admin/email_draft'); ?>">
-                                            <span class="menu-icon"><i class="fa fa-archive"></i></span> 
-                                            <span class="menu-text">Drafts</span>            
-                                        </a>
-                                    </li>          -->
+                                    <!--                                    <li>
+                                                                            <a href="<?php echo base_url('index.php?admin/email_draft'); ?>">
+                                                                                <span class="menu-icon"><i class="fa fa-archive"></i></span> 
+                                                                                <span class="menu-text">Drafts</span>            
+                                                                            </a>
+                                                                        </li>          -->
                                     <li>
                                         <a href="<?php echo base_url(); ?>index.php?admin/email_sent">
                                             <span class="menu-icon entypo-icon"><i class="icon-paperplane"></i></span> 
@@ -463,6 +391,6 @@
                 </script>
                 <!-- Specific Page Scripts END -->
 
-             
+
                 </body>
                 </html>

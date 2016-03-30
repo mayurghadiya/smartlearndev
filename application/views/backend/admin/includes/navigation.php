@@ -13,7 +13,7 @@
                     <a href="<?php echo base_url(); ?>index.php?admin/email_inbox">
                         <span class="menu-icon"><i class="fa fa-envelope"></i></span> 
                         <span class="menu-text">Email</span>  
-                        <span class="menu-badge"><span class="badge vd_bg-red">78</span></span>
+                        <span class="menu-badge"></span>
                     </a> 
                 </li>
                 <li style="display:none;">
