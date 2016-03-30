@@ -1,6 +1,10 @@
-    
 <?php 
-$edit_data =$this->db->get_where('survey',array('survey_id' => $param2))->result();
+$this->db->select('s.*,sl.*');
+$this->db->join('student s','s.std_id=sl.student_id');
+$edit_data =$this->db->get_where('survey_list sl',array('survey_id' => $param2))->result();
+$question = explode(",",$edit_data[0]->sq_id);
+$status = explode(",",$edit_data[0]->survey_status);
+$data=array_combine($question,$status);
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -16,6 +20,31 @@ $edit_data =$this->db->get_where('survey',array('survey_id' => $param2))->result
                     <div class="box-content">  
                         <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="data-tables">
+                                         <thead>
+                                            <tr>
+                                                <th>Student Name</th>
+                                                <th>Degree </th>
+                                                <th>Course </th>
+                                                <th>Batch </th>
+                                                <th>Semester </th>
+                                            </tr>
+                                        </thead>
+                                        <?php $degree = $this->db->get_where("degree",array("d_id"=>$edit_data[0]->std_degree))->result();
+                                            $course = $this->db->get_where("course",array("course_id"=>$edit_data[0]->course_id))->result();
+                                             $batch = $this->db->get_where("batch",array("b_id"=>$edit_data[0]->std_batch))->result();
+                                              $semester = $this->db->get_where("semester",array("s_id"=>$edit_data[0]->semester_id))->result();
+                                         ?>
+                                         <tbody>
+                                             <td><?php echo $edit_data[0]->std_first_name.' '.$edit_data[0]->std_last_name; ?></td>
+                                             <td><?php echo $degree[0]->d_name; ?></td>
+                                             <td><?php  echo $course[0]->c_name;?></td>
+                                             <td><?php  echo $batch[0]->b_name;?></td>
+                                             <td><?php  echo $semester[0]->s_name;?></td>
+                                             
+
+                                         </tbody>
+                                         </table>
+                                           <table class="table table-striped" id="data-tables">
                                         <thead>
                                             <tr>
                                                 <th>Question</th>
@@ -23,18 +52,33 @@ $edit_data =$this->db->get_where('survey',array('survey_id' => $param2))->result
                                             </tr>
                                         </thead>
                                          <tbody>
-                                                <tr>											
-                                                <td>Academic Quality</td><td><?php echo $edit_data[0]->academicquality ?></td>                                                </tr>
-                                                <tr><td>Cocurricular Survey</td><td><?php echo $edit_data[0]->cocurricular ?></td></tr>											
-                                                <tr><td>Facilities</td><td><?php echo $edit_data[0]->facilities ?></td></tr>											
-                                                <tr><td>Value of Degree</td><td><?php echo $edit_data[0]->valueofdegree ?></td></tr>									
-                                                <tr><td>Faculty</td><td><?php echo $edit_data[0]->faculty ?></td></tr>
-                                                <tr><td>Motivation</td><td><?php echo $edit_data[0]->motivation ?></td></tr>
-                                                <tr><td>Bodydiversity</td><td><?php echo $edit_data[0]->bodydiversity ?></td></tr>
-                                                <tr><td>Cost</td><td><?php echo $edit_data[0]->cost ?></td></tr>
-                                                <tr><td>Reputation</td><td><?php echo $edit_data[0]->reputation ?></td></tr>
-                                                <tr><td>Strength</td><td><?php echo $edit_data[0]->strength ?></td></tr>
-                                                <tr><td>Weekness</td><td><?php echo $edit_data[0]->weekness ?></td></tr>			
+                                         <?php foreach($data as $key=>$val):
+                                            $valques = $this->db->get_where('survey_question',array("sq_id"=>$key))->num_rows();
+                                            if($valques > 0)
+                                            {
+                                          ?>
+                                            <?php   $question1 =  $this->crud_model->getquestion('survey_question',$key);
+                                                      ?>
+                                                <tr>		
+                                                <td><?php  echo $question1; ?></td>						
+                                                <td><?php  $s1= $val; 
+if($s1=="1")
+                                                        {
+                                                            echo "Yes";
+                                                        }
+                                                        elseif($s1=="0")
+                                                        {
+                                                            echo "No";
+                                                        }
+                                                        elseif($s1=="2")
+                                                        {
+                                                            echo "No Opinion";
+                                                        }
+
+                                                ?></td>                     			
+                                               </tr>	
+                                               <?php } ?>
+                                           <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
