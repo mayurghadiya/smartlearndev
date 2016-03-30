@@ -8,6 +8,28 @@ class Crud_model extends CI_Model {
     function __construct() {
         parent::__construct();
     }
+    
+    
+  /******  
+    Created :-- Mayur Panchal
+    Message : -- For get question title
+
+    ****/
+
+    function getquestion($table,$question='',$field='question')
+    {
+
+    return $this->db->get_where($table, array('sq_id'=>$question))->row()->$field;
+    }
+
+    
+
+
+
+
+    /*  End code */
+
+
 
     function clear_cache() {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
