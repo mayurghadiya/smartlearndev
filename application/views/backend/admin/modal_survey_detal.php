@@ -1,5 +1,5 @@
 <?php 
-$this->db->select('s.*,sl.*,sl.created_date as cdate');
+$this->db->select('s.*,sl.*,sl.created_date as cdate'); 
 $this->db->join('student s','s.std_id=sl.student_id');
 $edit_data =$this->db->get_where('survey_list sl',array('survey_id' => $param2))->result();
 $question = explode(",",$edit_data[0]->sq_id);
