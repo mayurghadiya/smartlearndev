@@ -173,9 +173,6 @@ class Center_user extends CI_Controller {
         }
         echo $option;
     }
-    
-    function test() {
-        
-    }
+   
 
 }
