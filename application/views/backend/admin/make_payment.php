@@ -74,7 +74,7 @@
                                                     <td><?php echo $row->c_name; ?></td>
                                                     <td><?php echo $row->s_name; ?></td>
                                                     <td><?php echo $row->paid_amount; ?></td>
-                                                    <td><?php echo date('d-m-Y', strtotime($row->paid_created_at)); ?></td>
+                                                    <td><?php echo date('F d, Y', strtotime(strtotime($row->paid_created_at))); ?></td>
                                                     <td>
                                                         <div class="btn-group">
                                                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
