@@ -1353,10 +1353,17 @@ $data['pp_course'] = $this->input->post('course');
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
 		       
-	$this->db->select("ps.*,s.* ");
+	/*$this->db->select("ps.*,s.* ");
         $this->db->from('survey ps');
         $this->db->join("student s","s.std_id=ps.student_id");
-        $page_data['survey']=$this->db->get();
+        $page_data['survey']=$this->db->get();         
+         */
+        
+         $this->db->select("ls.*,s.*");
+        $this->db->from('survey_list ls');
+        $this->db->join("student s","s.std_id=ls.student_id");
+        $page_data['survey']=$this->db->get()->result();
+        $page_data['questions'] = $this->db->get('survey_question')->result();
 
         $page_data['participate'] = $this->db->get('participate_manager')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
@@ -3473,5 +3480,74 @@ $centerimplode=implode(',',$this->input->post('center'));
 
         echo json_encode($subjects);
     }    
+    
+    /* worked by Mayur Panchal 29-3-2016 */
+    function confirmparticipate($param='')
+    {
+        if($param!='')
+        {
+            $pp_id = $param;
+
+            $this->db->delete("participate_student",array("participate_student_id"=>$pp_id));
+              $this->session->set_flashdata('flash_message','disapprove successfully');  
+              redirect(base_url('index.php?admin/participate'));
+
+        }
+
+    }  
+
+
+    function survey($param='',$param2='')
+    {
+    	if($param=='create')
+    	{
+    		
+
+    		$indata['question'] = $this->input->post('question');
+    		$indata['question_status'] = $this->input->post('status');
+    		$indata['question_description'] = $this->input->post('description');
+
+    		$this->db->insert("survey_question",$indata);
+    		$this->session->set_flashdata('flash_message',get_phrase('question_added_successfully'));
+    		 redirect(base_url('index.php?admin/participate'));
+    	}
+        if($param=='do_update')
+        {
+            if(!empty($param2))
+            {
+            $indata['question'] = $this->input->post('question');
+            $indata['question_status'] = $this->input->post('status');
+            $indata['question_description'] = $this->input->post('description');
+            
+            $this->db->where("sq_id",$param2);
+            $this->db->update("survey_question",$indata);
+            $this->session->set_flashdata('flash_message',get_phrase('question_update_successfully'));
+            }
+             redirect(base_url('index.php?admin/participate'));
+
+        }
+        if($param=='delete')
+        {
+            if(!empty($param2))
+            {
+                $this->db->where("sq_id",$param2);
+                $this->db->delete("survey_question");
+                 $this->session->set_flashdata('flash_message',get_phrase('question_delete_successfully'));   
+
+            }
+        redirect(base_url('index.php?admin/participate'));
+        }
+
+               /* $data['page_name'] = 'survey_form';
+                $data['page_title'] = 'Survey Question';
+               $this->session->set_flashdata('flash_message','question_added_successfully');
+          redirect(base_url().'index.php?admin/participate');      
+          */
+
+        //$this->load->view('backend/index', $data);
+    }
+    
+    /* end  */
+    
 
 }
