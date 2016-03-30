@@ -36,7 +36,7 @@
                                     Add Study Resource
                                 </a></li>
                         </ul>
-                        <!------CONTROL TABS END------>
+                        <!------CONTROL TABS END------> 
 
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
