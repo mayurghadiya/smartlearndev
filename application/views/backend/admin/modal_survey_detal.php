@@ -1,5 +1,5 @@
 <?php 
-$this->db->select('s.*,sl.*');
+$this->db->select('s.*,sl.*,sl.created_date as cdate'); 
 $this->db->join('student s','s.std_id=sl.student_id');
 $edit_data =$this->db->get_where('survey_list sl',array('survey_id' => $param2))->result();
 $question = explode(",",$edit_data[0]->sq_id);
@@ -20,6 +20,7 @@ $data=array_combine($question,$status);
                     <div class="box-content">  
                         <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="data-tables">
+                                        <h5>Date : <?php echo date('F d, Y h:i:s A',strtotime($edit_data[0]->cdate)); ?></h5>
                                          <thead>
                                             <tr>
                                                 <th>Student Name</th>

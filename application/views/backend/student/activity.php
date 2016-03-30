@@ -35,7 +35,7 @@ $std_id = $this->session->userdata('std_id');
                                     <td><?php echo $count++; ?></td>	
                                     <td><?php echo $row->pp_title; ?></td>	
                                     <td><a href="<?php echo $row->pp_url; ?>" download="" title="<?php echo $row->pp_filename; ?>"  ><i class=" fa fa-download"></i></a></td>	
-                                    <td><?php echo date('F d Y',strtotime($row->pp_dos)); ?></td>	
+                                    <td><?php echo date('F d, Y',strtotime($row->pp_dos)); ?></td>	
 
 
                                 </tr>
