@@ -66,8 +66,7 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label">Your interest</label>
                                                 <div class="col-sm-5">
-                                                 <input type="radio" name="p_status" value="1" >Yes
-						<input type="radio" name="p_status" value="0" >No
+                                                    <input type="radio" name="p_status" value="1" checked="" >Yes						
                                                 </div>
                                             </div>
                                             
