@@ -3436,7 +3436,7 @@ $centerimplode=implode(',',$this->input->post('center'));
         $did = $this->input->post("degree");
         if ($cid != '') {
             if ($cid == "All") {
-                
+                $html .= '<option value="All">All</option>';
             } else {
                 // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
                 $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
