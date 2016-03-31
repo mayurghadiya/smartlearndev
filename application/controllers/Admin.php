@@ -1370,6 +1370,8 @@ $data['pp_course'] = $this->input->post('course');
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['student'] = $this->db->get('student')->result();
+        $page_data['course'] = $this->db->get('course')->result();
+        
         $page_data['page_name'] = 'participate';
         $page_data['page_title'] = 'Participate Management';
 		$page_data['volunteer'] = $this->db->get('participate_student')->result_array();
