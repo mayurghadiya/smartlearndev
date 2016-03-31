@@ -19,8 +19,8 @@
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
                     <h1>Student Management</h1>
-                    
-                    
+
+
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -84,7 +84,7 @@
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">                	
-                                    <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top',"enctype"=>"multipart/form-data")); ?>
+                                    <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
                                     <div class="padded">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Name</label>
@@ -108,7 +108,7 @@
                                             <label class="col-sm-3 control-label">Email Id</label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="email_id" id="email_id" onblur="return checkemail(this.value);"  />
-                                                 <span id="emailerror" style="color: red"></span>
+                                                <span id="emailerror" style="color: red"></span>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -160,7 +160,7 @@
                                                 </select>
                                             </div>
                                         </div>	
-                                         <div class="form-group">
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">Degree</label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
@@ -176,7 +176,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                          <div class="form-group">
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">Course</label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
@@ -208,7 +208,7 @@
                                                 </select>
                                             </div>
                                         </div>	
-                                      
+
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Semester</label>
                                             <div class="col-sm-5">
@@ -304,32 +304,32 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-        $("#degree").change(function(){
-                var degree = $(this).val();
-                var dataString = "degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/student'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#course").html(response);
-                    }
-                });
-        });
-        
-         $("#course").change(function(){
-                var course = $(this).val();
-                 var degree = $("#degree").val();
-                var dataString = "course="+course+"&degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/student'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#batch").html(response);
-                    }
-                });
-        });
+                                                    $("#degree").change(function () {
+                                                        var degree = $(this).val();
+                                                        var dataString = "degree=" + degree;
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "<?php echo base_url() . 'index.php?admin/get_cource/student'; ?>",
+                                                            data: dataString,
+                                                            success: function (response) {
+                                                                $("#course").html(response);
+                                                            }
+                                                        });
+                                                    });
+
+                                                    $("#course").change(function () {
+                                                        var course = $(this).val();
+                                                        var degree = $("#degree").val();
+                                                        var dataString = "course=" + course + "&degree=" + degree;
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "<?php echo base_url() . 'index.php?admin/get_batchs/student'; ?>",
+                                                            data: dataString,
+                                                            success: function (response) {
+                                                                $("#batch").html(response);
+                                                            }
+                                                        });
+                                                    });
 
 
                                                     $.validator.setDefaults({
@@ -385,15 +385,15 @@
                                                                         {
                                                                             required: true,
                                                                             email_id: true,
-                                                                             remote: {
-                                                                                        url: "<?=base_url()?>index.php?admin/getstudentemail",
-                                                                                        type: "post",
-                                                                                        data: {
-                                                                                            eid: function() {
-                                                                                                return $( "#email_id" ).val();
-                                                                                            }
-                                                                                        }
+                                                                            remote: {
+                                                                                url: "<?= base_url() ?>index.php?admin/getstudentemail",
+                                                                                type: "post",
+                                                                                data: {
+                                                                                    eid: function () {
+                                                                                        return $("#email_id").val();
                                                                                     }
+                                                                                }
+                                                                            }
                                                                         },
                                                                 password: "required",
                                                                 gen: "required",
@@ -425,9 +425,8 @@
                                                                         },
                                                                 admissiontype: "required",
                                                                 profilefile: {
-                                                                    
                                                                     required: true,
-                                                                    extension:'gif|png|jpg|jpeg',
+                                                                    extension: 'gif|png|jpg|jpeg',
                                                                 }
                                                             },
                                                             messages: {
@@ -448,9 +447,7 @@
                                                                 email_id: {
                                                                     required: "Please enter email id",
                                                                     email_id: "Please enter valid email id",
-                                                                    remote:"Email id already exists",
-                                                                    
-                                                                    
+                                                                    remote: "Email id already exists",
                                                                 },
                                                                 password: "Please enter password",
                                                                 gen: "Please slect gender",
@@ -473,8 +470,8 @@
                                                                         },
                                                                 admissiontype: "Plese select admission type",
                                                                 profilefile: {
-                                                                    required:"Plese upload image",
-                                                                    extension:"Invalid File",
+                                                                    required: "Plese upload image",
+                                                                    extension: "Invalid File",
                                                                 }
                                                             }
                                                         });
