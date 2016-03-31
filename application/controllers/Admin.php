@@ -419,7 +419,7 @@ class Admin extends CI_Controller {
     }
 
     function get_sem($s_id) {
-        $sem = $this->db->get_where('semester', array('batch_id' => $s_id))->result_array();
+        $sem = $this->db->get('semester')->result_array();
         echo '<option value="">Select Semester</option>';
         foreach ($sem as $srow) {
             echo '<option value="' . $srow['s_id'] . '">' . $srow['s_name'] . '</option>';
