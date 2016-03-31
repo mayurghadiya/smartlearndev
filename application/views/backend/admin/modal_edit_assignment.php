@@ -66,7 +66,7 @@ foreach ($edit_data as $row):
                                     <select name="batch" id="batch2">
                                         <option value="">Select batch</option>
     <?php
-    //$databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+    
      $databatch = $this->db->query("SELECT * FROM batch WHERE b_status=1 AND FIND_IN_SET('".$row['assign_degree']."',degree_id) AND FIND_IN_SET('".$row['course_id']."',course_id)")->result();
    
        
