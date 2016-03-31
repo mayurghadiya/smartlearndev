@@ -44,7 +44,7 @@ foreach ($edit_data as $row):
                                     <select name="course" id="course2">
                                         <option value="">Select course</option>
                                         <?php
-                                        $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                        $course = $this->db->get_where('course', array('course_status' => 1,'degree_id'=>$row['assign_degree']))->result();
                                         foreach ($course as $crs) {
                                             if ($crs->course_id == $row['course_id']) {
                                                 ?>
@@ -62,11 +62,14 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
-                                <div class="col-sm-5">
+                                <div class="col-sm-5">                                    
                                     <select name="batch" id="batch2">
                                         <option value="">Select batch</option>
     <?php
-    $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+    //$databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+     $databatch = $this->db->query("SELECT * FROM batch WHERE b_status=1 AND FIND_IN_SET('".$row['assign_degree']."',degree_id) AND FIND_IN_SET('".$row['course_id']."',course_id)")->result();
+   
+       
     foreach ($databatch as $row1) {
         if ($row1->b_id == $row['assign_batch']) {
             ?>
