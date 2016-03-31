@@ -50,7 +50,7 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label class="control-label">Select Degree</label>
-                                                <select style="width:100%;" class="form-control" name="degree" id="user_type" onchange="return get_batch(this.value)">
+                                                <select style="width:100%;" class="form-control" name="degree" id="user_type" onchange="return get_recourse(this.value)">
                                                     <option value="">--- Select Degree ---</option>		
                                                     <?php
                                                     $degree = $this->db->get_where('degree')->result_array();
@@ -63,6 +63,15 @@
                                                 </select>
                                             </div>
                                         </div>
+                                         <div class="col-sm-4">
+                                            <div class="form-group field-examgroupsearch-eg_course_id required">
+                                                <label class="control-label" for="examgroupsearch-eg_course_id">Course</label>
+                                                <select id="course_selection_holder" class="form-control" name="course" onchange="return get_batch(this.value)">
+                                                    <option value="">--- Select course ---</option>
+                                                </select>
+                                            </div>
+                                        </div>	
+                                        
                                         <div class="col-sm-4">
                                             <div class="form-group field-examgroupsearch-eg_batch_id required">
                                                 <label class="control-label" for="examgroupsearch-eg_batch_id">Batch</label>
@@ -370,9 +379,20 @@
     <!-- .vd_content --> 
 </div>
 <script type="text/javascript">
-    function get_batch(d_id) {
+    function get_recourse(d_id)
+    {
         $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_batch/' + d_id,
+            url: '<?php echo base_url(); ?>index.php?admin/get_recourse/'+d_id,
+            success: function (response)
+            {
+                jQuery('#course_selection_holder').html(response);
+            }
+        });
+    }
+    function get_batch(c_id) {        
+        var d_id = $("#user_type").val();
+        $.ajax({
+            url: '<?php echo base_url(); ?>index.php?admin/get_batch/' + c_id+'/'+d_id,
             success: function (response)
             {
                 jQuery('#batch_selection_holder').html(response);
