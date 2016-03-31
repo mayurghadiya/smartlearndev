@@ -73,6 +73,53 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                            $show_exam_details = $this->db->select('exam_manager.*, exam_type.*, course.*, batch.*, semester.*, degree.*')
+                                    ->from('exam_manager')
+                                    ->join('exam_type', 'exam_type.exam_type_id = exam_manager.em_type')
+                                    ->join('course', 'course.course_id = exam_manager.course_id')
+                                    ->join('semester', 'semester.s_id = exam_manager.em_semester')
+                                    ->join('degree', 'degree.d_id = exam_manager.degree_id')
+                                    ->join('batch', 'batch.b_id = exam_manager.batch_id')
+                                    ->where('exam_manager.em_id', $exam_id)
+                                    ->get()
+                                    ->row();
+                            ?>
+
+                            <?php if (count($show_exam_details)) { ?> 
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title">Exam Details</div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <table class="table table-bordered">
+                                                    <tr>
+                                                        <th>Exam Name</th>
+                                                        <th>Total Marks</th>
+                                                        <th>Passing Marks</th>
+                                                        <th>Degree</th>
+                                                        <th>Course</th>
+                                                        <th>Batch</th>
+                                                        <th>Semester</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo $show_exam_details->em_name; ?></td>
+                                                        <td><?php echo $show_exam_details->total_marks; ?></td>
+                                                        <td><?php echo $show_exam_details->passing_mark; ?></td>
+                                                        <td><?php echo $show_exam_details->d_name; ?></td>
+                                                        <td><?php echo $show_exam_details->c_name; ?></td>
+                                                        <td><?php echo $show_exam_details->b_name; ?></td>
+                                                        <td><?php echo $show_exam_details->s_name; ?></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+
                             <div class="row">
                                 <div id="gridview" class="col-sm-12">
                                     <div style="" id="entermarks" class="panel panel-default">
