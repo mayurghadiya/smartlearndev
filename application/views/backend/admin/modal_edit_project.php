@@ -46,7 +46,7 @@ foreach ($edit_data as $row):
                                     <select name="course" id="course2">
                                         <option value="">Select course</option>
                                         <?php
-                                        $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                        $course = $this->db->get_where('course', array('course_status' => 1,'degree_id'=>$row['pm_degree']))->result();
                                         foreach ($course as $crs) {
                                             if ($crs->course_id == $row['pm_course']) {
                                                 ?>
@@ -69,7 +69,7 @@ foreach ($edit_data as $row):
                                     <select name="batch"  id="batch2" onchange="get_student(this.value);">
                                         <option value="">Select batch</option>
                                             <?php
-                                            $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+                                            $databatch = $this->db->query("SELECT * FROM batch WHERE b_status=1 AND FIND_IN_SET('".$row['pm_degree']."',degree_id) AND FIND_IN_SET('".$row['pm_course']."',course_id)")->result();
                                             foreach ($databatch as $row1) {
                                                 if ($row1->b_id == $row['pm_batch']) {
                                                     ?>
@@ -116,7 +116,7 @@ foreach ($edit_data as $row):
                                                                                              'std_batch'=>$row['pm_batch'],
                                                                                               'semester_id'=>$row['pm_semester']))->result();
 //                                       
-                                        echo $this->db->last_query();
+                                        
                                         ?>
                                 
                                 <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
