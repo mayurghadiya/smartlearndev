@@ -96,9 +96,9 @@ foreach ($edit_data as $row):
                                             if ($rowsem->s_id == $row['assign_sem']) {
                                                 ?>
                                                 <option value="<?= $rowsem->s_id ?>" selected><?= $rowsem->s_name ?></option>
-            <?php
-        } else {
-            ?>
+                                                    <?php
+                                                } else {
+                                                    ?>
                                                 <option value="<?= $rowsem->s_id ?>" ><?= $rowsem->s_name ?></option>
                                                 <?php
                                             }
