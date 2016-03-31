@@ -18,7 +18,7 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/project/do_update/' . $row['pm_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Degree</label>
+                                <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
                                         <option value="">Select degree</option>
@@ -41,7 +41,7 @@ foreach ($edit_data as $row):
                             </div>
                             
                              <div class="form-group">
-                                <label class="col-sm-3 control-label">Course</label>
+                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course2">
                                         <option value="">Select course</option>
@@ -64,7 +64,7 @@ foreach ($edit_data as $row):
                             </div>
                             
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Batch</label>
+                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="batch"  id="batch2" onchange="get_student(this.value);">
                                         <option value="">Select batch</option>
@@ -86,7 +86,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>	
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Semester</label>
+                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="semester"  id="semester"  onchange="get_students(this.value);">
                                         <option value="">Select semester</option>
@@ -108,9 +108,20 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Student</label>
+                                  <?php
+                                        $stu=explode(',',$row['pm_student_id']);
+                                        
+                                        $datastudent = $this->db->get_where('student', array('std_degree'=>$row['pm_degree'],
+                                                                                            'course_id'=>$row['pm_course'],
+                                                                                             'std_batch'=>$row['pm_batch'],
+                                                                                              'semester_id'=>$row['pm_semester']))->result();
+//                                       
+                                        echo $this->db->last_query();
+                                        ?>
+                                
+                                <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="student[]" id="student2" multiple>
+                                     <select name="student[]" id="student2" multiple>
                                         <option value="">Select student</option>
                                         <?php
                                         $stu=explode(',',$row['pm_student_id']);
@@ -120,14 +131,15 @@ foreach ($edit_data as $row):
                                                                                              'std_batch'=>$row['pm_batch'],
                                                                                               'semester_id'=>$row['pm_semester']))->result();
 //                                       
+                                        echo $this->db->last_query();
                                         foreach ($datastudent as $rowstu) {
                                              if(in_array($rowstu->std_id, $stu)) {
                                                 ?>
-                                                <option value="<?= $rowstu->std_id ?>" selected><?= $rowstu->name ?></option>
+                                                <option value="<?= $rowstu->std_id ?>" selected><?= $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
             <?php
         } else {
             ?>
-                                                <option value="<?= $rowstu->std_id ?>"><?= $rowstu->name ?></option>
+                                                <option value="<?= $rowstu->std_id ?>"><?= $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
             <?php
         }
     }
@@ -136,13 +148,13 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Date of Submission</label>
+                                <label class="col-sm-3 control-label">Date of Submission<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['pm_dos']; ?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Title</label>
+                                <label class="col-sm-3 control-label">Title<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['pm_title']; ?>"/>
                                 </div>
@@ -266,7 +278,7 @@ endforeach;
                 course:"required",
                 batch: "required",
                 semester: "required",
-                student: "required",
+               'student[]': "required",
                 dateofsubmission1: "required",
                 pageurl:
                         {
@@ -283,25 +295,22 @@ endforeach;
                         },
             },
             messages: {
-                degree: "Please select degree",
-                course:"Please select course",
-                batch: "Please select batch",
-                semester: "Please select semester",
-                student: "Please select student",
-                dateofsubmission1: "Please select date of submission",
+                degree: "Select degree",
+                course:"Select course",
+                batch: "Select batch",
+                semester:"Select semester", 
+               'student[]':"Select student",
+                dateofsubmission1: "Select date of submission",
                 pageurl:
                         {
-                            required: "Please enter page url",
+                            required: "Enter page url",
                         },
-                 projectfile: {
-                                                                        
-                                                                       
-                                                                       extension:'Please upload valid file!',  
-                                                                    },
+                 projectfile: {                 
+                        extension:'Upload valid file!',  
+                     },
                 title:
                         {
-                            required: "Please enter title",
-                           
+                            required: "Enter title",
                         },
             }
         });

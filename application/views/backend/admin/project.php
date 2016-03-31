@@ -74,7 +74,7 @@
                                                         foreach ($student as $std) {
                                                             if(in_array($std->std_id,$stu))
                                                             {
-                                                                 echo $std->name.', ';
+                                                                 echo $std->std_first_name.'&nbsp'.$std->std_last_name. ', ';
                                                             }
                                                         }
 
@@ -139,7 +139,7 @@
 <?php echo form_open(base_url() . 'index.php?admin/project/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
                                                     <option value="">Select degree</option>
@@ -155,7 +155,7 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
@@ -171,7 +171,7 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="batch" id="batch" onchange="get_student2(this.value);" >
                                                     <option value="">Select batch</option>
@@ -187,7 +187,7 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester</label>
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester"  onchange="get_students2(this.value);">
                                                     <option value="">Select semester</option>
@@ -203,13 +203,13 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Project Name</label>
+                                            <label class="col-sm-3 control-label">Project Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Student</label>
+                                            <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
@@ -217,7 +217,7 @@ foreach ($datadegree as $rowdegree) {
                                                     $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
                                                     foreach ($datastudent as $rowstu) {
                                                         ?>
-                                                        <option value="<?= $rowstu->std_id ?>"><?= $rowstu->name ?></option>
+                                                        <option value="<?= $rowstu->std_id ?>"><?=$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
     <?php
 }
 ?>
@@ -225,7 +225,7 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date of Submission</label>
+                                            <label class="col-sm-3 control-label">Date of Submission<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="dateofsubmission" id="dateofsubmission" />
                                             </div>
@@ -238,7 +238,7 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File Upload</label>
+                                            <label class="col-sm-3 control-label">File Upload<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="projectfile" id="projectfile" />
                                             </div>
@@ -280,7 +280,7 @@ foreach ($datadegree as $rowdegree) {
                                             <tr>
                                                 <td><?php echo $count++; ?></td>
                                                 <td><?php echo $rowsub->pm_title; ?></td>
-                                                <td><?php echo $rowsub->name; ?></td>	
+                                                <td><?php  echo $rowsub->std_first_name.'&nbsp'.$rowsub->std_last_name. ', '; ?></td>	
                                               <td>
                                                         <?php
                                                         foreach ($degree as $deg) {
@@ -415,9 +415,10 @@ foreach ($datadegree as $rowdegree) {
                                                             $("#frmproject").validate({
                                                                 rules: {
                                                                     degree: "required",
+                                                                    course:"required",
                                                                     batch: "required",
                                                                     semester: "required",
-                                                                    student: "required",
+                                                                    'student[]': "required",
                                                                     dateofsubmission: "required",
                                                                     pageurl:
                                                                             {
@@ -430,26 +431,23 @@ foreach ($datadegree as $rowdegree) {
                                                                     },
                                                                     title:
                                                                             {
-                                                                                required: true,
-                                                                       
-                                                                          },
+                                                                                required: true,                                                                          },
                                                                 },
-                                                                messages: {
-                                                                    degree: "Please select degree",
-                                                                    batch: "Please select batch",
-                                                                    semester: "Please select semester",
-                                                                    student: "Please select student",
-                                                                    dateofsubmission: "Please select date of submission",
-                                                                    
-                                                                    projectfile: {
-                                                                        
-                                                                        required:"Please upload file!",
-                                                                       extension:'Please upload valid file!',  
-                                                                    },
-                                                                    title:
-                                                                            {
-                                                                                required: "Please enter title",                                                                            
+                                                                messages: {                                                                  
+                                                                            degree: "Select degree",
+                                                                            course:"Select course",
+                                                                            batch: "Select batch",
+                                                                            semester:"Select semester",                                                                           
+                                                                            'student[]':"Select student",
+                                                                            dateofsubmission: "Select date of submission",
+                                                                            projectfile: {
+                                                                                required:"Upload file!",
+                                                                               extension:'Upload valid file!',  
                                                                             },
+                                                                            title:
+                                                                                {
+                                                                                    required: "Enter project name",                                                                            
+                                                                                },
                                                                 }
                                                             });
                                                         });
