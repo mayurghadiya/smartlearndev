@@ -409,7 +409,9 @@ class Admin extends CI_Controller {
     }
 
     function get_batch($d_id) {
-        $batch = $this->db->get_where('batch', array('degree_id' => $d_id))->result_array();
+        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+        $this->db->where($where);
+        $batch = $this->db->get('batch')->result_array();
         echo '<option value="">Select Batch</option>';
         foreach ($batch as $row) {
             echo '<option value="' . $row['b_id'] . '">' . $row['b_name'] . '</option>';
