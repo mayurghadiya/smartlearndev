@@ -17,13 +17,13 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/assignment/do_update/' . $row['assign_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Assignment Title</label>
+                                <label class="col-sm-3 control-label">Assignment Title<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title" value="<?php echo $row['assign_title']; ?>" />
                                 </div>
                             </div>
                              <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
                                                     <option value="">Select Degree</option>
@@ -39,7 +39,7 @@ foreach ($edit_data as $row):
                                             </div>
                                         </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course</label>
+                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course2">
                                         <option value="">Select course</option>
@@ -61,7 +61,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Batch</label>
+                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="batch" id="batch2">
                                         <option value="">Select batch</option>
@@ -83,7 +83,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Semester</label>
+                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="semester" id="semester">
                                         <option value="">Select semester</option>
@@ -109,7 +109,7 @@ foreach ($edit_data as $row):
                                     <input type="hidden" class="form-control" name="assignmenturl" id="assignmenturl" value="<?php echo $row['assign_url']; ?>"/>
                            
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Submission Date</label>
+                                <label class="col-sm-3 control-label">Submission Date<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="submissiondate1" id="submissiondate1"  value="<?php echo $row['assign_dos']; ?>"/>
                                 </div>
@@ -196,25 +196,23 @@ endforeach;
                         },
                 assignmentfile: {
                     
-                    extension:'gif|jpg|png|jpeg|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt',  
-                                                                            
+                    extension:'gif|jpg|png|jpeg|pdf|xlsx|xls|doc|docx|ppt|pptx|txt',                                                                              
                 },
             },
             messages: {
-                degree:"Please select degree",
-                course: "Please select course",
-                batch: "Please select batch",
-                semester: "Please select semester",
-                submissiondate: "Please select date of submission",
+                degree:"Select degree",
+                course: "Select course",
+                batch: "Select batch",
+                semester: "Select semester",
+                submissiondate: "Select date of submission",
                 title:
                         {
-                            required: "Please enter title",
-                            
+                            required: "Enter title",                            
                         },
-                assignmentfile: {
-                                   
-                                    extension:'Please upload valid file',  
-                                },
+                assignmentfile: 
+                        {
+                            extension:'Upload valid file',  
+                        },
             }
         });
     });

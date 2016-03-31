@@ -131,13 +131,13 @@
 <?php echo form_open(base_url() . 'index.php?admin/assignment/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Assignment Name</label>
+                                            <label class="col-sm-3 control-label">Assignment Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
                                         </div>
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
                                                     <option value="">Select Degree</option>
@@ -154,7 +154,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
@@ -170,7 +170,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="batch" id="batch">
                                                     <option value="">Select batch</option>
@@ -186,7 +186,7 @@
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester</label>
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
                                                     <option value="">Select semester</option>
@@ -209,7 +209,7 @@
                                             </div>
                                         </div>-->
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Submission Date</label>
+                                            <label class="col-sm-3 control-label">Submission Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="submissiondate" id="submissiondate" />
                                             </div>
@@ -221,7 +221,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File Upload</label>
+                                            <label class="col-sm-3 control-label">File Upload<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="assignmentfile" id="assignmentfile" />
                                             </div>
@@ -354,68 +354,67 @@
         });
         
         
-                                                        $.validator.setDefaults({
-                                                            submitHandler: function (form) {
-                                                                form.submit();
-                                                            }
-                                                        });
+    $.validator.setDefaults({
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
 
-                                                        $().ready(function () {
-                                                            $("#submissiondate").datepicker({
-                                                                minDate: 0
-                                                            });
+    $().ready(function () {
+        $("#submissiondate").datepicker({
+            minDate: 0
+        });
 
-                                                            jQuery.validator.addMethod("character", function (value, element) {
-                                                                return this.optional(element) || /^[A-z]+$/.test(value);
-                                                            }, 'Please enter a valid character.');
+        jQuery.validator.addMethod("character", function (value, element) {
+            return this.optional(element) || /^[A-z ]+$/.test(value);
+        }, 'Please enter a valid character.');
 
-                                                            jQuery.validator.addMethod("url", function (value, element) {
-                                                                return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
-                                                            }, 'Please enter a valid URL.');
+        jQuery.validator.addMethod("url", function (value, element) {
+            return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
+        }, 'Please enter a valid URL.');
 
-                                                            $("#frmassignment").validate({
-                                                                rules: {
-                                                                    degree: "required",
-                                                                    course: "required",
-                                                                    batch: "required",
-                                                                    semester: "required",
-                                                                    submissiondate: "required",
-                                                                    assignmenturl:
-                                                                            {
-                                                                                required: true,
-                                                                                url: true,
-                                                                            },
-                                                                    assignmentfile: {
-										required:true,
-  extension:'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt',  
-										
-									},
-                                                                    title:
-                                                                            {
-                                                                                required: true,                                                                              
-                                                                            },
+        $("#frmassignment").validate({
+            rules: {
+                degree: "required",
+                course: "required",
+                batch: "required",
+                semester: "required",
+                submissiondate: "required",
+                assignmenturl:
+                        {
+                            required: true,
+                            url: true,
+                        },
+                assignmentfile: {
+                            required:true,
+                            extension:'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|txt',  
 
-                                                                },
-                                                                messages: {
-                                                                    degree:"Please select degree",
-                                                                    course: "Please select course",
-                                                                    batch: "Please select batch",
-                                                                    semester: "Please select semester",
-                                                                    submissiondate: "Please select date of submission",
-                                                                    assignmenturl:
-                                                                            {
-                                                                                required: "Please enter page url",
-                                                                            },
-                                                                    assignmentfile: {
-									required: "Please upload file",
-                                                                            extension:'Please upload valid file',  
-									},
-                                                                    title:
-                                                                            {
-                                                                                required: "Please enter title",
-                                                                               
-                                                                            },
-                                                                }
-                                                            });
-                                                        });
+                    },
+                title:
+                        {
+                            required: true,                                                                              
+                        },
+
+            },
+            messages: {
+                degree:"Select degree",
+                course: "Select course",
+                batch: "Select batch",
+                semester: "Select semester",
+                submissiondate: "Select date of submission",
+                assignmenturl:
+                        {
+                            required: "Enter page url",
+                        },
+                assignmentfile: {
+                    required: "Upload file",
+                        extension:'Upload valid file',  
+                    },
+                title:
+                        {
+                            required: "Enter title",
+                        },
+            }
+        });
+    });
     </script>

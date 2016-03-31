@@ -393,62 +393,62 @@ foreach ($datadegree as $rowdegree) {
         
         
     }
-                                                        $.validator.setDefaults({
-                                                            submitHandler: function (form) {
-                                                                form.submit();
-                                                            }
-                                                        });
+    $.validator.setDefaults({
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
 
 
-                                                        $().ready(function () {
-                                                            $("#dateofsubmission").datepicker({
-                                                                minDate:0
-                                                            });
-                                                            jQuery.validator.addMethod("character", function (value, element) {
-                                                                return this.optional(element) || /^[A-z]+$/.test(value);
-                                                            }, 'Please enter a valid character.');
+    $().ready(function () {
+        $("#dateofsubmission").datepicker({
+            minDate:0
+        });
+        jQuery.validator.addMethod("character", function (value, element) {
+            return this.optional(element) || /^[A-z ]+$/.test(value);
+        }, 'Please enter a valid character.');
 
-                                                            jQuery.validator.addMethod("url", function (value, element) {
-                                                                return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
-                                                            }, 'Please enter a valid URL.');
+        jQuery.validator.addMethod("url", function (value, element) {
+            return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
+        }, 'Please enter a valid URL.');
 
-                                                            $("#frmproject").validate({
-                                                                rules: {
-                                                                    degree: "required",
-                                                                    course:"required",
-                                                                    batch: "required",
-                                                                    semester: "required",
-                                                                    'student[]': "required",
-                                                                    dateofsubmission: "required",
-                                                                    pageurl:
-                                                                            {
-                                                                                required: true,
-                                                                                url: true,
-                                                                            },
-                                                                    projectfile: {
-                                                                        required:true,
-                                                                       extension:'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt', 
-                                                                    },
-                                                                    title:
-                                                                            {
-                                                                                required: true,                                                                          },
-                                                                },
-                                                                messages: {                                                                  
-                                                                            degree: "Select degree",
-                                                                            course:"Select course",
-                                                                            batch: "Select batch",
-                                                                            semester:"Select semester",                                                                           
-                                                                            'student[]':"Select student",
-                                                                            dateofsubmission: "Select date of submission",
-                                                                            projectfile: {
-                                                                                required:"Upload file!",
-                                                                               extension:'Upload valid file!',  
-                                                                            },
-                                                                            title:
-                                                                                {
-                                                                                    required: "Enter project name",                                                                            
-                                                                                },
-                                                                }
-                                                            });
-                                                        });
+        $("#frmproject").validate({
+            rules: {
+                degree: "required",
+                course:"required",
+                batch: "required",
+                semester: "required",
+                'student[]': "required",
+                dateofsubmission: "required",
+                pageurl:
+                        {
+                            required: true,
+                            url: true,
+                        },
+                projectfile: {
+                    required:true,
+                   extension:'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt', 
+                },
+                title:
+                        {
+                            required: true,                                                                          },
+            },
+            messages: {                                                                  
+                        degree: "Select degree",
+                        course:"Select course",
+                        batch: "Select batch",
+                        semester:"Select semester",                                                                           
+                        'student[]':"Select student",
+                        dateofsubmission: "Select date of submission",
+                        projectfile: {
+                            required:"Upload file!",
+                           extension:'Upload valid file!',  
+                        },
+                        title:
+                            {
+                                required: "Enter project name",                                                                            
+                            },
+            }
+        });
+    });
     </script>
