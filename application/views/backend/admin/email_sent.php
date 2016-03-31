@@ -25,7 +25,7 @@
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header">
                     <h1>Email</h1>
-                    <small class="subtitle">Email templates</small> 
+                    <small class="subtitle">Sent Email</small> 
                     
                     <!-- vd_panel-menu -->   
                 </div>
