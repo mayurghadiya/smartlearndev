@@ -191,14 +191,15 @@
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
-                                                    <option value="All">All</option>
+                                                  <option value="All">All</option>
                                                     <?php
-                                                    $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                                    /*  
+                                                     * $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
                                                         ?>
-                                                        <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>
+                                                      <!--  <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>-->
                                                         <?php
-                                                    }
+                                                    }*/
                                                     ?>
                                                 </select>
                                             </div>
@@ -210,12 +211,12 @@
                                                     <option value="">Select batch</option>
                                                     <option value="All">All</option>
                                                     <?php
-                                                    $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+                                                   /* $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
                                                     foreach ($databatch as $row) {
                                                         ?>
                                                         <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
                                                         <?php
-                                                    }
+                                                    }*/
                                                     ?>
                                                 </select>
                                             </div>
