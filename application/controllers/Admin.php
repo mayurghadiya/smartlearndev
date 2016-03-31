@@ -3431,7 +3431,7 @@ $centerimplode=implode(',',$this->input->post('center'));
         }
     }
         
-        function get_batchs($param='') {
+        function get_batchs($param='') { 
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
         $html = '';
