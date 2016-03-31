@@ -93,7 +93,7 @@ foreach ($edit_data as $row):
                                 <?php
                                 $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
                                 foreach ($datasem as $rowsem) {
-                                    if ($rowsem->s_id == $row['pm_semester']) {
+                                    if ($rowsem->s_id == $row['pm_semester']) { 
                                         ?>
                                         <option value="<?= $rowsem->s_id ?>" selected><?= $rowsem->s_name ?></option>
                                         <?php
