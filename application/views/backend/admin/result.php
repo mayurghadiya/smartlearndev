@@ -378,6 +378,8 @@
     </div>
     <!-- .vd_content --> 
 </div>
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
 <script type="text/javascript">
     function get_recourse(d_id)
     {
@@ -426,4 +428,44 @@
             }
         });
     }
+    $.validator.setDefaults({
+                                                            submitHandler: function (form) {
+                                                                form.submit();
+                                                            }
+                                                        });
+
+                                                        $().ready(function () {
+                                                             
+                                                           
+                                                            jQuery.validator.addMethod("character", function (value, element) {
+                                                                return this.optional(element) || /^[A-z]+$/.test(value);
+                                                            }, 'Please enter a valid character.');
+
+                                                            jQuery.validator.addMethod("url", function (value, element) {
+                                                                return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
+                                                            }, 'Please enter a valid URL.');
+
+
+                                                            $("#search-results-summary").validate({
+                                                                rules: {
+                                                                    year:"required",
+                                                                    degree: "required",
+                                                                    course:"required",
+                                                                    batch: "required",
+                                                                    sem: "required",
+                                                                    exam:"required",
+                                                                    std:"required",
+                                                                    
+                                                                },
+                                                                messages: {
+                                                                    year:"Please select year",
+                                                                    degree: "Please select degree",
+                                                                    course:"Please select course",
+                                                                    batch: "Please select batch",
+                                                                    sem: "Please select semester",
+                                                                    exam:"Please select exam",
+                                                                    std:"Please select student",
+                                                                }
+                                                            });
+                                                        });
 </script>
