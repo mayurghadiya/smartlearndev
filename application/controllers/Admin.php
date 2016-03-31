@@ -3362,6 +3362,48 @@ $centerimplode=implode(',',$this->input->post('center'));
             } 
         }
         
+        /*      worked by mayur panchal 31-3-2016   *      */
+        function get_course($param='')
+        {
+            $did = $this->input->post("degree");
+
+        if ($did != '') {
+                $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+                $html = '<option value="">Select Course</option>';                
+                foreach ($cource as $crs):
+                    $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+                endforeach;
+                echo $html;           
+        }
+            
+        }
+        
+        function get_batches($param='')
+        {
+         $cid = $this->input->post("course");
+        $did = $this->input->post("degree");
+        if ($cid != '') {
+        
+                // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
+                $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
+                // echo $this->db->last_query();
+
+                $html = '<option value="">Select Batch</option>';
+        
+                foreach ($batch as $btc):
+                    $html .='<option value="' . $btc['b_id'] . '">' . $btc['b_name'] . '</option>';
+
+                endforeach;
+                echo $html;
+        
+        }
+            
+            
+        }
+        
+        /*  end 31-3-2016*/
+        
         
         function get_cource($param = '') {
 
