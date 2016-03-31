@@ -471,7 +471,7 @@ function get_cource_multiple($param='')
         $line_i_am_looking_for = 2;
         $lines = file($file, FILE_IGNORE_NEW_LINES);
         $lines[$line_i_am_looking_for] = "\$_SESSION['username'] = '$name';\n";
-        file_put_contents($file, implode("\n", $lines));
+        //file_put_contents($file, implode("\n", $lines));
     }
 
     //Starting Herry Patel
