@@ -3434,6 +3434,7 @@ $centerimplode=implode(',',$this->input->post('center'));
         function get_batchs($param='') {
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
+        $html = '';
         if ($cid != '') {
             if ($cid == "All") {
                 $html .= '<option value="All">All</option>';
@@ -3451,8 +3452,9 @@ $centerimplode=implode(',',$this->input->post('center'));
                     $html .='<option value="' . $btc['b_id'] . '">' . $btc['b_name'] . '</option>';
 
                 endforeach;
-                echo $html;
+                
             }
+            echo $html;
         }
     }
 
