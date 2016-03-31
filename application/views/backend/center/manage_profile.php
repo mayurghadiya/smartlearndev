@@ -5,7 +5,7 @@
                 <div class="vd_content clearfix">
                     <div class="vd_title-section clearfix">
                         <div class="vd_panel-header">
-                            <h1>Attendance List</h1>            
+                            <h1>Center Profile form</h1>            
                         </div>
                     </div>
                     <div class="vd_content-section clearfix">
@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel widget light-widget">
-                                    <?php echo form_open(base_url() . 'index.php?center_user/manage_profile/update', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmattendance', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+                                    <?php echo form_open(base_url() . 'index.php?center_user/manage_profile/update', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmprofile', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Center Name<span style="color:red">*</span></label>
@@ -91,3 +91,110 @@
         </div>
     </div>
 </div>
+
+ <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        $.validator.setDefaults({
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+
+        $().ready(function () {
+
+            jQuery.validator.addMethod("mobile_no", function (value, element) {
+                return this.optional(element) || /^[0-9-+]+$/.test(value);
+            }, 'Please enter a valid contact no.');
+
+            jQuery.validator.addMethod("zip_code", function (value, element) {
+                return this.optional(element) || /^[0-9]{6}$/.test(value);
+            }, 'Please enter a valid zip code.');
+
+            jQuery.validator.addMethod("character", function (value, element) {
+                return this.optional(element) || /^[A-z ]+$/.test(value);
+            }, 'Please enter a valid character.');
+
+            $("#frmprofile").validate({
+                rules: {
+                    centername:
+                            {
+                                required: true,
+                                character: true,
+                            },
+                    center_contactname:
+                            {
+                                required: true,
+                                character: true,
+                            },
+                    email:
+                            {
+                                required: true,
+                                email: true,
+                            },
+                    contactno:
+                            {
+                                required: true,
+                                maxlength: 11,
+                                mobile_no: true,
+                                minlength: 10,
+                            },
+                    city:
+                            {
+                                required: true,
+                                character: true,
+                            },
+                    zipcode:
+                            {
+                                required: true,
+                                zip_code: true,
+                            },
+                    address: 'required',
+                    settingno:
+                            {
+                                required: true,
+                                mobile_no: true,
+                            },
+                    password: 'required',
+                },
+                messages: {
+                    centername:
+                            {
+                                required: "Enter center name",
+                            },
+                    center_contactname:
+                            {
+                                required: "Enter center contact name",
+                            },
+                    email:
+                            {
+                                required: "Enter email id",
+                                email: "Enter valid email id",
+                            },
+                    contactno:
+                            {
+                                required: "Enter mobile no",
+                                maxlength: "Enter valid contact no",
+                                mobile_no: "Enter valid contact no",
+                                minlength: "Enter valid contact no",
+                            },
+                    city:
+                            {
+                                required: "Enter city",
+                                character: "Enter valid city name",
+                            },
+                    zipcode:
+                            {
+                                required: "Enter zipcode",
+                            },
+                    address: 'Enter address',
+                    settingno:
+                            {
+                                required: "Enter setting number",
+                                mobile_no: "Enter valid setting number",
+                            },
+                    password: 'Enter password',
+                }
+            });
+        });
+    </script>
