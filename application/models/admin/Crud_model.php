@@ -816,4 +816,23 @@ class Crud_model extends CI_Model {
                 ))->row();
     }
 
+    /**
+     * Check exam duplication
+     * @param int $degree
+     * @param int $course
+     * @param int $batch
+     * @param int $sem
+     * @param string $title
+     * @return object
+     */
+    function exam_duplication_check($degree, $course, $batch, $sem, $title) {
+        return $this->db->get_where('exam_manager', array(
+                    'degree_id' => $degree,
+                    'course_id' => $course,
+                    'batch_id' => $batch,
+                    'em_semester' => $sem,
+                    'em_name' => $title
+                ))->row();
+    }
+
 }

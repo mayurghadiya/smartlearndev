@@ -158,7 +158,8 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Passing Marks</label>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="passing_marks" id="passing_marks"/>
+                                                <input type="text" class="form-control" name="passing_marks" id="passing_marks"
+                                                       value="<?php echo set_value('total_marks'); ?>"/>
                                             </div>
                                         </div>
                                             <div class="form-group" style="display: none;">
@@ -299,12 +300,13 @@
                                                         batch: "required",
                                                         semester: "required",
                                                         total_marks: "required",
-                                                        passing_marks: "required",
+                                                        passing_marks: {
+                                                            required: true
+                                                        },
                                                         status: "required",
                                                         date: "required",
                                                         start_date_time: "required",
-                                                        end_date_time: "required",
-                                                        total_marks: "required"
+                                                        end_date_time: "required"
                                                     },
                                                     messages: {
                                                         exam_name: "Please enter Exam Name",
@@ -315,12 +317,13 @@
                                                         batch: "Please select batch",
                                                         semester: "Please select semester",
                                                         total_marks: "Please enter total marks",
-                                                        passing_marks: "Please enter passing marks",
+                                                        passing_marks: {
+                                                            required: "Please enter passing marks"
+                                                        },
                                                         status: "Please select status",
                                                         date: "Please enter date",
                                                         start_date_time: "Please enter start date time",
-                                                        end_date_time: "Please enter end date time",
-                                                        total_marks: "Please enter total marks"
+                                                        end_date_time: "Please enter end date time"
                                                     }
                                                 });
                                             });
