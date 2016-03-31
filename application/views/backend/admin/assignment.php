@@ -331,7 +331,7 @@
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course").html(response);
@@ -345,7 +345,7 @@
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batch").html(response);
