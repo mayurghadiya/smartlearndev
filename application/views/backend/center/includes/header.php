@@ -155,9 +155,7 @@
 
         $gochat = "chatuser" . $sess;
         $gochat = base64_encode($gochat);
-        ?>
-        <a class='btn btn-info chat-button' target="_blank"  href='<?php echo base_url(); ?>chat?index.php?act=<?php echo $gochat; ?>'><i class="fa fa-comment"></i>Go To Chat<?php // include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat2/lhc_web/index.php');  ?>
-        </a>
+        ?>        
 
         <div class='chat-link-box'>
             <p class='title'>Welcome to Support</p>

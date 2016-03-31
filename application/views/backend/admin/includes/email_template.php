@@ -136,45 +136,77 @@
                                 <div class="col-sm-5 col-xs-12">
 
                                     <div class="vd_menu-search">
-                                        <form id="search-box" method="post" action="#">
-                                            <input type="text" name="search" class="vd_menu-search-text width-60" placeholder="Search">
-                                            <div class="vd_menu-search-category"> <span data-action="click-trigger"> <span class="separator"></span> <span class="text">Category</span> <span class="icon"> <i class="fa fa-caret-down"></i></span> </span>
-                                                <div class="vd_mega-menu-content width-xs-2 center-xs-2 right-sm" data-action="click-target">
-                                                    <div class="child-menu">
-                                                        <div class="content-list content-menu content">
-                                                            <ul class="list-wrapper">
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" value="Courses">
-                                                                        <span>Courses</span></label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" value="Assignment">
-                                                                        <span>Assignment</span></label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" value="Participate">
-                                                                        <span>Participate</span></label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" value="Exam">
-                                                                        <span>Exam</span></label>
-                                                                </li>
-                                                                <li>
-                                                                    <label>
-                                                                        <input type="checkbox" value="video">
-                                                                        <span>Video</span></label>
-                                                                </li>	
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="vd_menu-search-submit"><i class="fa fa-search"></i> </span>
-                                        </form>
+                                        <form id="search-box" method="post" action="<?php echo base_url('index.php?admin/search'); ?>">
+                                        <input type="text" name="search" class="vd_menu-search-text width-60" placeholder="Search"
+                                               value="<?php echo isset($search_string) ? $search_string : ''; ?>">
+					<div class="vd_menu-search-category"> <span data-action="click-trigger"> <span class="separator"></span> <span class="text">Category</span> <span class="icon"> <i class="fa fa-caret-down"></i></span> </span>
+					  <div class="vd_mega-menu-content width-xs-2 center-xs-2 right-sm" data-action="click-target">
+						<div class="child-menu">
+						  <div class="content-list content-menu content">
+							<ul class="list-wrapper">
+                                                            <li>
+                                                                <label>
+                                                                    <input type="checkbox" name="degree" value="degree"
+                                                                           <?php if (isset($from['degree'])) echo 'checked'; ?>>
+                                                                    <span>Degree</span>
+                                                                </label>
+                                                            </li>
+							  <li>
+								<label>
+                                                                    <input type="checkbox" name="student" value="student"
+                                                                           <?php if (isset($from['student'])) echo 'checked'; ?>>
+                                                                    <span>Student</span></label>
+                                                            </li>
+                                                            <li>
+                                                                <label>
+                                                                    <input type="checkbox" name="course" value="course"
+                                                                           <?php if (isset($from['course'])) echo 'checked'; ?>>
+								  <span>Courses</span></label>
+							  </li>
+							  <li>
+								<label>
+                                                                    <input type="checkbox" name="exam" value="exam"
+                                                                           <?php if (isset($from['exam'])) echo 'checked'; ?>>
+                                                                    <span>Exam</span></label>
+                                                            </li>
+                                                            <li>
+                                                                <label>
+                                                                    <input type="checkbox" name="event" value="event"
+                                                                           <?php if (isset($from['event'])) echo 'checked'; ?>>
+                                                                    <span>Event</span>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label>
+                                                                    <input type="checkbox" name="batch" value="batch"
+                                                                           <?php if (isset($from['batch'])) echo 'checked'; ?>>
+                                                                    <span>Batch</span></label>
+							  </li>
+							  <li>
+								<label>
+                                                                    <input type="checkbox" name="assignment" value="assignment"
+                                                                           <?php if (isset($from['assignment'])) echo 'checked'; ?>>
+                                                                    <span>Assignment</span></label>
+							  </li>
+							   <li>
+								<label>
+                                                                    <input type="checkbox" name="participate" value="participate"
+                                                                           <?php if (isset($from['participate'])) echo 'checked'; ?>>
+                                                                    <span>Participate</span></label>
+							  </li>
+							  <li>
+								<label>
+                                                                    <input type="checkbox" name="center" value="center"
+                                                                           <?php if (isset($from['center'])) echo 'checked'; ?>>
+								  <span>Exam Center</span></label>
+                                                            </li>	
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					</div>
+                                        <button class="vd_menu-search-submit fa fa-search"></button>                                        
+				  </form>
                                     </div>
                                 </div>
                                 <div class="col-sm-7 col-xs-12">
