@@ -94,7 +94,7 @@
                             </div>
                             <!-- col-sm-10 --> 
                           </div>
-						   <div class="form-group">
+                        <div class="form-group">
                             <label class="col-sm-3 control-label">Confirm Password</label>
                             <div class="col-sm-9 controls">
                               <div class="row mgbt-xs-0">

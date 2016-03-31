@@ -175,6 +175,25 @@ class Center_user extends CI_Controller {
     }
     function manage_profile($param1 = '', $param2 = '', $param3 = '') {
         
+           if ($param1 == 'update') {
+                $data['center_name']  = $this->input->post('centername');
+                $data['name'] = $this->input->post('center_contactname');
+                $data['emailid'] = $this->input->post('email');
+                $data['contactno'] =$this->input->post('contactno');
+                $data['password'] =md5($this->input->post('password'));
+                $data['city'] =$this->input->post('city');
+                $data['zipcode'] =$this->input->post('zipcode');
+                $data['address'] =$this->input->post('address');
+                $data['setting_number'] =$this->input->post('settingno');
+                $data['real_password'] =$this->input->post('password');
+                
+                
+            $this->db->where('center_id', $this->session->userdata('center_id'));
+            $this->db->update('center_user', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('account_updated'));
+            redirect(base_url() . 'index.php?center_user/manage_profile/', 'refresh');
+           }
+        
         $page_data['page_name'] = 'manage_profile';
         $page_data['page_title'] = 'Manage Profile';
         $page_data['edit_data'] = $this->db->get_where('center_user', array('center_id' => $this->session->userdata('center_id')))->result_array();
