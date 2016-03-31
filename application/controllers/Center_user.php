@@ -42,11 +42,10 @@ class Center_user extends CI_Controller {
     function dashboard() {
         if ($this->session->userdata('centeruser_login') != 1)
             redirect(base_url(), 'refresh');
-
+        $page_data['edit_data'] = $this->db->get_where('center_user', array('center_id' => $this->session->userdata('center_id')))->result_array();
+      
         $page_data['page_name'] = 'dashboard';
         $page_data['page_title'] = 'Center Dashboard';
-        $numOfDraws = $this->input->post('name');
-
         $this->load->view('backend/index', $page_data);
     }
 
