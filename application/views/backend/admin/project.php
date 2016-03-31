@@ -55,7 +55,8 @@
                                                 <th><div>Degree</div></th>	
                                                 <th><div>Course</div></th>
                                                 <th><div>Batch</div></th>											
-                                                <th><div>Semester</div></th>										
+                                                <th><div>Semester</div></th>
+                                                 <th><div>Downloadable File</div></th>
                                                 <th><div>Date of submission</div></th>											
                                                											
                                                 <th><div>Operation</div></th>											
@@ -116,13 +117,14 @@
                                                         }
                                                         ?>
 
-                                                    </td>	
+                                                    </td>
+                                                    <td> <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
                                                     <td><?php echo date("F d, Y",strtotime($row->pm_dos)); ?></td>	
                                                    
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_project/<?php echo $row->pm_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
                                                         <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/project/delete/<?php echo $row->pm_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
-                                                        <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a>
+                                                       
                                                     </td>	
                                                 </tr>
                                                     <?php endforeach; ?>						
@@ -160,12 +162,12 @@ foreach ($datadegree as $rowdegree) {
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
                                                     <?php
-                                                    $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                                 /*   $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
                                                         ?>
                                                         <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>
                                                         <?php
-                                                    }
+                                                    }*/
                                                     ?>
                                                 </select>
                                             </div>
@@ -176,13 +178,14 @@ foreach ($datadegree as $rowdegree) {
                                                 <select name="batch" id="batch" onchange="get_student2(this.value);" >
                                                     <option value="">Select batch</option>
                                                     <?php
-                                                    $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+                                                    /*$databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
                                                     foreach ($databatch as $row) {
                                                         ?>
                                                         <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
-    <?php
-}
-?>
+                                                            <?php
+                                                        }                                                    
+                                                     */
+                                                        ?>
                                                 </select>
                                             </div>
                                         </div>	
@@ -214,12 +217,12 @@ foreach ($datadegree as $rowdegree) {
                                                 <select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
                                                     <?php
-                                                    $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
+                                                  /*  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
                                                     foreach ($datastudent as $rowstu) {
                                                         ?>
                                                         <option value="<?= $rowstu->std_id ?>"><?=$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
     <?php
-}
+}*/
 ?>
                                                 </select>
                                             </div>
@@ -266,7 +269,8 @@ foreach ($datadegree as $rowdegree) {
                                                 <th><div>Degree</div></th>	
                                                 <th><div>Course</div></th>
                                                 <th><div>Batch</div></th>											
-                                                <th><div>Semester</div></th>	
+                                                <th><div>Semester</div></th>
+                                               
                                                 <th><div>Submitted date</div></th>
                                                 <th><div>Comment</div></th>
                                                 <th><div>Action</div></th>												                                            
