@@ -8,28 +8,19 @@ class Crud_model extends CI_Model {
     function __construct() {
         parent::__construct();
     }
-    
-    
-  /******  
-    Created :-- Mayur Panchal
-    Message : -- For get question title
 
-    ****/
+    /*     * ****  
+      Created :-- Mayur Panchal
+      Message : -- For get question title
 
-    function getquestion($table,$question='',$field='question')
-    {
+     * ** */
 
-    return $this->db->get_where($table, array('sq_id'=>$question))->row()->$field;
+    function getquestion($table, $question = '', $field = 'question') {
+
+        return $this->db->get_where($table, array('sq_id' => $question))->row()->$field;
     }
 
-    
-
-
-
-
     /*  End code */
-
-
 
     function clear_cache() {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
@@ -799,11 +790,30 @@ class Crud_model extends CI_Model {
      */
     function exam_time_table_subject_list($exam_id) {
         return $this->db->select()
-                ->from('exam_time_table')
-                ->join('subject_manager', 'subject_manager.sm_id = exam_time_table.subject_id')
-                ->where('exam_time_table.exam_id', $exam_id)
-                ->get()
-                ->result();
+                        ->from('exam_time_table')
+                        ->join('subject_manager', 'subject_manager.sm_id = exam_time_table.subject_id')
+                        ->where('exam_time_table.exam_id', $exam_id)
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Check for duplication of fees structure
+     * @param int $degree
+     * @param int $course
+     * @param int $batch
+     * @param int $sem
+     * @param string $title
+     * @return object
+     */
+    function fees_structure_duplication($degree, $course, $batch, $sem, $title) {
+        return $this->db->get_where('fees_structure', array(
+                    'degree_id' => $degree,
+                    'course_id' => $course,
+                    'batch_id' => $batch,
+                    'sem_id' => $sem,
+                    'title' => $title
+                ))->row();
     }
 
 }
