@@ -1921,28 +1921,38 @@ class Admin extends CI_Controller {
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                $centerimplode = implode(',', $this->input->post('center'));
-                // check for validation
-                if ($this->form_validation->run('exam_insert_update') != FALSE) {
-                    $data = array(
-                        'em_name' => $this->input->post('exam_name', TRUE),
-                        'em_type' => $this->input->post('exam_type', TRUE),
-                        'total_marks' => $this->input->post('total_marks', TRUE),
-                        'passing_mark' => $this->input->post('passing_marks', TRUE),
-                        'em_year' => $this->input->post('year', TRUE),
-                        'degree_id' => $this->input->post('degree', TRUE),
-                        'course_id' => $this->input->post('course', TRUE),
-                        'batch_id' => $this->input->post('batch', TRUE),
-                        'em_semester' => $this->input->post('semester', TRUE),
-                        'center_id' => $centerimplode,
-                        'em_status' => $this->input->post('status', TRUE),
-                        'em_date' => $this->input->post('date', TRUE),
-                        'em_start_time' => $this->input->post('start_date_time', TRUE),
-                        'em_end_time' => $this->input->post('end_date_time', TRUE),
-                    );
-                    $this->Crud_model->insert_exam($data);
-                    $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
-                    redirect(base_url('index.php?admin/exam'));
+                //check for duplication
+                $is_record_present = $this->Crud_model->exam_duplication_check(
+                        $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $_POST['exam_name']);
+
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    $centerimplode = implode(',', $this->input->post('center'));
+                    // check for validation
+                    if ($this->form_validation->run('exam_insert_update') != FALSE) {
+                        $data = array(
+                            'em_name' => $this->input->post('exam_name', TRUE),
+                            'em_type' => $this->input->post('exam_type', TRUE),
+                            'total_marks' => $this->input->post('total_marks', TRUE),
+                            'passing_mark' => $this->input->post('passing_marks', TRUE),
+                            'em_year' => $this->input->post('year', TRUE),
+                            'degree_id' => $this->input->post('degree', TRUE),
+                            'course_id' => $this->input->post('course', TRUE),
+                            'batch_id' => $this->input->post('batch', TRUE),
+                            'em_semester' => $this->input->post('semester', TRUE),
+                            'center_id' => $centerimplode,
+                            'em_status' => $this->input->post('status', TRUE),
+                            'em_date' => $this->input->post('date', TRUE),
+                            'em_start_time' => $this->input->post('start_date_time', TRUE),
+                            'em_end_time' => $this->input->post('end_date_time', TRUE),
+                        );
+                        $this->Crud_model->insert_exam($data);
+                        $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
+                        redirect(base_url('index.php?admin/exam'));
+                    } else {
+                        $page_data['edit_error'] = validation_errors();
+                    }
                 }
             } elseif ($param1 == 'do_update') {
                 $centerimplode = implode(',', $this->input->post('center'));
@@ -2872,22 +2882,30 @@ class Admin extends CI_Controller {
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                // do form validation
-                if ($this->form_validation->run('time_table_insert_update') != FALSE) {
-                    //create
-                    $this->Crud_model->exam_time_table_save(array(
-                        'degree_id' => $this->input->post('degree', TRUE),
-                        'course_id' => $this->input->post('course', TRUE),
-                        'batch_id' => $this->input->post('batch', TRUE),
-                        'semester_id' => $this->input->post('semester', TRUE),
-                        'exam_id' => $this->input->post('exam', TRUE),
-                        'subject_id' => $this->input->post('subject', TRUE),
-                        'exam_date' => $this->input->post('exam_date', TRUE),
-                        'exam_start_time' => $this->input->post('start_time', TRUE),
-                        'exam_end_time' => $this->input->post('end_time', TRUE),
-                    ));
-                    $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
-                    redirect(base_url('index.php?admin/exam_time_table'));
+                //check for duplication
+                $is_record_present = $this->Crud_model->exam_time_table_duplication(
+                        $_POST['exam'], $_POST['subject']);
+
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    // do form validation
+                    if ($this->form_validation->run('time_table_insert_update') != FALSE) {
+                        //create
+                        $this->Crud_model->exam_time_table_save(array(
+                            'degree_id' => $this->input->post('degree', TRUE),
+                            'course_id' => $this->input->post('course', TRUE),
+                            'batch_id' => $this->input->post('batch', TRUE),
+                            'semester_id' => $this->input->post('semester', TRUE),
+                            'exam_id' => $this->input->post('exam', TRUE),
+                            'subject_id' => $this->input->post('subject', TRUE),
+                            'exam_date' => $this->input->post('exam_date', TRUE),
+                            'exam_start_time' => $this->input->post('start_time', TRUE),
+                            'exam_end_time' => $this->input->post('end_time', TRUE),
+                        ));
+                        $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
+                        redirect(base_url('index.php?admin/exam_time_table'));
+                    }
                 }
             } elseif ($param1 == 'update') {
                 // do form validation
@@ -3075,20 +3093,13 @@ class Admin extends CI_Controller {
                     $this->session->set_flashdata('flash_message', 'Fees structure is successfully added.');
                 }
             } elseif ($param1 == 'update') {
-                //check for duplication
-                $is_record_present = $this->Crud_model->fees_structure_duplication(
-                        $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $_POST['title']);
-                if (count($is_record_present)) {
-                    $this->session->set_flashdata('flash_message', 'Data is already present');
-                } else {
-                    $this->Crud_model->fees_structure_save(array(
-                        'title' => $this->input->post('title', TRUE),
-                        'course_id' => $this->input->post('course', TRUE),
-                        'sem_id' => $this->input->post('semester', TRUE),
-                        'total_fee' => $this->input->post('fees', TRUE),
-                            ), $param2);
-                    $this->session->set_flashdata('flash_message', 'Fees structure is successfully updated.');
-                }
+                $this->Crud_model->fees_structure_save(array(
+                    'title' => $this->input->post('title', TRUE),
+                    'course_id' => $this->input->post('course', TRUE),
+                    'sem_id' => $this->input->post('semester', TRUE),
+                    'total_fee' => $this->input->post('fees', TRUE),
+                        ), $param2);
+                $this->session->set_flashdata('flash_message', 'Fees structure is successfully updated.');
             }
             redirect(base_url('index.php?admin/fees_structure'));
         }
