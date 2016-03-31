@@ -835,4 +835,17 @@ class Crud_model extends CI_Model {
                 ))->row();
     }
 
+    /**
+     * Time table duplication
+     * @param int $exam
+     * @param int $subject
+     * @return object
+     */
+    function exam_time_table_duplication($exam, $subject) {
+        return $this->db->get_where('exam_time_table', array(
+                    'exam_id' => $exam,
+                    'subject_id' => $subject
+                ))->row();
+    }
+
 }

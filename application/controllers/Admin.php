@@ -2882,22 +2882,30 @@ class Admin extends CI_Controller {
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                // do form validation
-                if ($this->form_validation->run('time_table_insert_update') != FALSE) {
-                    //create
-                    $this->Crud_model->exam_time_table_save(array(
-                        'degree_id' => $this->input->post('degree', TRUE),
-                        'course_id' => $this->input->post('course', TRUE),
-                        'batch_id' => $this->input->post('batch', TRUE),
-                        'semester_id' => $this->input->post('semester', TRUE),
-                        'exam_id' => $this->input->post('exam', TRUE),
-                        'subject_id' => $this->input->post('subject', TRUE),
-                        'exam_date' => $this->input->post('exam_date', TRUE),
-                        'exam_start_time' => $this->input->post('start_time', TRUE),
-                        'exam_end_time' => $this->input->post('end_time', TRUE),
-                    ));
-                    $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
-                    redirect(base_url('index.php?admin/exam_time_table'));
+                //check for duplication
+                $is_record_present = $this->Crud_model->exam_time_table_duplication(
+                        $_POST['exam'], $_POST['subject']);
+
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    // do form validation
+                    if ($this->form_validation->run('time_table_insert_update') != FALSE) {
+                        //create
+                        $this->Crud_model->exam_time_table_save(array(
+                            'degree_id' => $this->input->post('degree', TRUE),
+                            'course_id' => $this->input->post('course', TRUE),
+                            'batch_id' => $this->input->post('batch', TRUE),
+                            'semester_id' => $this->input->post('semester', TRUE),
+                            'exam_id' => $this->input->post('exam', TRUE),
+                            'subject_id' => $this->input->post('subject', TRUE),
+                            'exam_date' => $this->input->post('exam_date', TRUE),
+                            'exam_start_time' => $this->input->post('start_time', TRUE),
+                            'exam_end_time' => $this->input->post('end_time', TRUE),
+                        ));
+                        $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
+                        redirect(base_url('index.php?admin/exam_time_table'));
+                    }
                 }
             } elseif ($param1 == 'update') {
                 // do form validation
