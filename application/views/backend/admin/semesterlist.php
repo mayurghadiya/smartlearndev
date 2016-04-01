@@ -128,11 +128,27 @@
         $().ready(function () {
             $("#frmsemester").validate({
                 rules: {
-                    s_name: "required",
+                     s_name: 
+                        {
+                            required:true,
+                            remote: {
+                              url: "<?php echo base_url().'index.php?admin/check_semester'; ?>",
+                              type: "post",
+                              data: {
+                                semester: function() {
+                                  return $( "#s_name" ).val();
+                                },
+                              }
+                            }
+                        },
                     semester_status: "required",
                 },
                 messages: {
-                    s_name: "Enter semester name",
+                     s_name:
+                    {
+                         required:"Enter semester name",
+                        remote:"Record is already present in the system",
+                    },
                     semester_status: "Slect semester status",
                 }
             });
