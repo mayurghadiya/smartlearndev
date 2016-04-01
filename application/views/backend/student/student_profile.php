@@ -194,7 +194,7 @@
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input type="text" id="datepicker-normal" value="<?php echo $profile->std_birthdate; ?>"  />
+                                            <input type="text" id="datepicker-normal" value="<?php echo date('F d, Y', strtotime($profile->std_birthdate)); ?>"  />
                                         </div>
                                     </div>
                                     <!-- row --> 
@@ -216,7 +216,36 @@
                                 <!-- col-sm-10 --> 
                             </div>
                             <!-- form-group -->
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Degree</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="text" name="degree" value="<?php echo $profile->d_name; ?>" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>                            
+                                                       
+                            <!-- form-group -->
 
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Course</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="text" name="course" value="<?php echo $profile->c_name; ?>" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
+                            <!-- form-group -->
+                            
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Batch</label>
                                 <div class="col-sm-9 controls">
@@ -229,21 +258,32 @@
                                 </div>
                                 <!-- col-sm-10 --> 
                             </div>
-                            <!-- form-group -->
-
+                            
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">About</label>
+                                <label class="col-sm-3 control-label">Semester</label>
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <textarea rows="3"><?php echo $profile->std_about; ?></textarea>
+                                            <input type="text" name="batch" value="<?php echo $profile->s_id; ?>" class="form-control"/>
                                         </div>
                                     </div>
                                     <!-- row --> 
                                 </div>
                                 <!-- col-sm-10 --> 
                             </div>
-                            <!-- form-group -->
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">About</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <textarea class="form-control" name="about"><?php echo $profile->std_about; ?></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
 
                             <hr/>
                             <h3 class="mgbt-xs-15">Contact Setting</h3>
