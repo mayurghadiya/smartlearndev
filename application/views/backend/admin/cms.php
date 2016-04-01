@@ -2,7 +2,16 @@
 		<div class="vd_content-wrapper">
 			<div class="vd_container">
 				<div class="vd_content clearfix">				 
-				  <div class="vd_title-section clearfix">
+				  <div class="vd_head-section clearfix">
+                                    <div class="vd_panel-header">
+                                        <ul class="breadcrumb">
+                                            <li><a href="#">Home</a> </li>
+                                            <li><a href="#">Pages</a> </li>
+                                            <li class="active">CMS Management</li>
+                                        </ul>                  
+                                    </div>
+                                </div>
+                                    <div class="vd_title-section clearfix">
 					<div class="vd_panel-header no-subtitle">
 					  <h1><?php echo $page_title; ?></h1>
 					</div>
