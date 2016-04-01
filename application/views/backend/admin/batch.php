@@ -8,8 +8,7 @@
                         <li><a href="index.html">Home</a> </li>
                         <li><a href="#">Pages</a> </li>
                         <li class="active">Batch Management</li>
-                    </ul>
-                  
+                    </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
