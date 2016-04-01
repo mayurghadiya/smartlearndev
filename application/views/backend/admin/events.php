@@ -123,11 +123,11 @@
 <!-- Specific Page Scripts Put Here -->
 
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
 <script type="text/javascript">
-     $(function () {
-            $('#datepicker-date').datepicker({
+     
+       $().ready(function () {
+           $('#datepicker-date').datepicker({
                 dateFormat: 'yy-mm-dd',
                 changeMonth: true,
                 changeYear: true,
@@ -137,8 +137,6 @@
                     $('#datepicker-date').val(datetext);
                 },
             });
-        });
-       $().ready(function () {
                                                                             $("#eventform").validate({
                                                                                 rules: {
                                                                                     event_name: "required",
