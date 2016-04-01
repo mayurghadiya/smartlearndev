@@ -35,6 +35,7 @@
                                                 <th><div>#</div></th>
                                                 <th>Course Name</th>
                                                 <th>ID</th>
+                                                <th>Degree</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -45,7 +46,14 @@
                                             <tr>
                                                 <td><?php echo $count++; ?></td>
                                                 <td><?php echo $row['c_name']; ?></td>
-                                                <td><?php echo $row['course_alias_id']; ?></td>                          
+                                                <td><?php echo $row['course_alias_id']; ?></td>     
+                                                <td> <?php
+                                                        foreach ($degree as $deg) {
+                                                            if ($deg['d_id']==$row['degree_id']) {
+                                                                echo $deg['d_name']."<br> ";
+                                                            }
+                                                        }
+                                                        ?></td>
                                                 <td class="text-center">
                                                         <?php if ($row['course_status'] == '1') { ?>
                                                     <span class="label label-success">Active</span>
@@ -73,18 +81,6 @@
 <?php echo form_open(base_url() . 'index.php?admin/courses/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'courseform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course Name<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="c_name" id="c_name"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">ID<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="course_alias_id" id="course_alias_id"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">Select Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree" class="form-control">
@@ -96,6 +92,19 @@
                                                 </select>
                                             </div>	
                                         </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Course Name<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="c_name" id="c_name"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">ID<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="course_alias_id" id="course_alias_id"/>
+                                            </div>
+                                        </div>
+                                        
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Description</label>
                                             <div class="col-sm-5">	
@@ -135,21 +144,35 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-        $.validator.setDefaults({
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
-        
-        $().ready(function () {
+    
+        $(document).ready(function () {
             $("#courseform").validate({
                 rules: {
-                    c_name: "required",
+                    c_name: 
+                        {
+                            required:true,
+                            remote: {
+                              url: "<?php echo base_url().'index.php?admin/check_course'; ?>",
+                              type: "post",
+                              data: {
+                                course: function() {
+                                  return $( "#c_name" ).val();
+                                },
+                                 degree: function() {
+                                  return $( "#degree" ).val();
+                                },
+                              }
+                            }
+                        },
                     course_alias_id: "required",
                     degree:  "required",
                 },
                 messages: {
-                    c_name: "Enter course name",
+                    c_name: 
+                    {
+                        required:"Enter course name",
+                        remote:"Record is already present in the system",
+                    },
                     course_alias_id: "Enter course id",
                     degree: "Select degree",
                 },
