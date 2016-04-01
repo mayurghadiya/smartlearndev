@@ -29,7 +29,7 @@ $edit_data		=	$this->db->get_where('event_manager' , array('event_id' => $param2
             </div>
             <div class="form-group">
               <div class="col-sm-offset-3 col-sm-5">
-                  <button type="submit" class="btn btn-info">Edit</button>
+                  <button type="submit" class="btn btn-info">Update</button>
               </div>
             </div>
         </form>
@@ -38,6 +38,7 @@ $edit_data		=	$this->db->get_where('event_manager' , array('event_id' => $param2
 </div>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript">
+    $.noConflict();
 $(window).load(function() 
 {	"use strict";	
 	$( "#datepicker-date123" ).datepicker({ 
@@ -60,7 +61,6 @@ $(window).load(function()
     });
 });*/
 </script>
-<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script>
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.validate.min.js"></script>
 <script type="text/javascript">
   $.validator.setDefaults({
