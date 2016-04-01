@@ -2,7 +2,17 @@
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
-        <div class="vd_content clearfix">				 
+        <div class="vd_content clearfix">
+            <div class="vd_head-section clearfix">
+                <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a> </li>
+                        <li><a href="#">Pages</a> </li>
+                        <li class="active">Course Management</li>
+                    </ul>
+                  
+                </div>
+            </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
                     <h1>Course Managment</h1>
