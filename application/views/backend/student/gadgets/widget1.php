@@ -1,14 +1,17 @@
    <!-- Middle Content Start -->
-<style>
+
+  <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar.css">
+  <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar_theme_responsive.css">
+ <script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script> 
+ <style>
 /*.eventCalendar-slider, .eventCalendar-details{width:48% !important;}
 .eventCalendar-slider{float:left;}
 .eventCalendar-details{float:right;}
 .eventCalendar-slider .eventCalendar-monthWrap.eventCalendar-currentMonth{ width:50% !important; }
 .arrow-nav-block { max-width:50%;}*/
+.eventCalendar-wrap .eventCalendar-arrow{ height: 12px; width:12px; }
 </style>
-  <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar.css">
-  <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar_theme_responsive.css">
- <script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script> 
+
     <div class="vd_content-wrapper">
 		<div class="vd_container">
 			<div class="vd_content-section clearfix">
