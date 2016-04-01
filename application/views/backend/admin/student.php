@@ -1,5 +1,6 @@
 <!-- Middle Content Start -->    
 
+
 <div class="vd_content-wrapper">
 
     <div class="vd_container">
@@ -161,13 +162,8 @@
                                                     <option value="married">Married</option>
                                                     <option value="separated">Separated</option>
                                                     <option value="widowed">Widowed</option>
-                                                </select>
-<<<<<<< HEAD
-=======
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
->>>>>>> origin/master
-                                            <div class="col-sm-5">
+
+<!-- Middle Content Start -->    
                                                 <select name="degree" id="degree">
                                                     <option value="">Select Degree</option>
                                                     <?php
@@ -181,9 +177,10 @@
                                                 </select>
                                             </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Course</label>
+                                            <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
                                                     <?php
@@ -454,14 +451,278 @@
                                                                             character: "Enter valid name",
                                                                         },
                                                                 email_id: {
-
-<<<<<<< HEAD
 =======
+                                                <select name="course" id="course">
+                                                    <option value="">Select course</option>
+                                                    <?php
+                                                    $datacourse = $this->db->get_where('course', array('course_status' => 1))->result();
+                                                    foreach ($datacourse as $rowcourse) {
+                                                        ?>
+                                                        <option value="<?= $rowcourse->course_id ?>"><?= $rowcourse->c_name ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select name="batch" id="batch">
+                                                    <option value="">Select batch</option>
+                                                    <?php
+                                                    $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+                                                    foreach ($databatch as $row) {
+                                                        ?>
+                                                        <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>	
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select name="semester" id="semester">
+                                                    <option value="">Select semester</option>
+                                                    <?php
+                                                    $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
+                                                    foreach ($datasem as $rowsem) {
+                                                        ?>
+                                                        <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Mobile No<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="mobileno" id="mobileno" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Facebook URL</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="facebook" id="facebook" />
+                                            </div>
+                                        </div>	
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Twitter URL</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="twitter" id="twitter" />
+                                            </div>
+                                        </div>	
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Group </label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="group" id="group" placeholder="readonly" readonly />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">User Type</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="usertype" id="usertype" placeholder="readonly" readonly />
+                                            </div>
+                                        </div>	
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Admission Type<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select name="admissiontype" id="admissiontype">
+                                                    <option value="">Select admission type</option>
+                                                    <?php
+                                                    $admissiontype = $this->db->get_where('admission_type', array('at_status' => 1))->result();
+                                                    foreach ($admissiontype as $rowtype) {
+                                                        ?>
+                                                        <option value="<?= $rowtype->at_id ?>"><?= $rowtype->at_name ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Profile Photo<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="file" class="form-control" name="profilefile" id="profilefile" onchange="return filecheck(this.value);" />
+                                                <span id="imgerror" style="color:red;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Description</label>
+                                            <div class="col-sm-5">
+                                                <textarea class="form-control" name="std_about" id="std_about" ></textarea>
+                                            </div>
+                                        </div>	
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-3 col-sm-5">
+                                                <button type="submit" class="btn btn-info">Add Student</button>
+                                            </div>
+                                        </div>
+                                        </form>               
+                                    </div>                
+                                </div>
+                                <!----CREATION FORM ENDS-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>              
+        </div>
+        <!-- row --> 
+    </div>
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+    <script type="text/javascript">
+                                                    $("#degree").change(function () {
+                                                        var degree = $(this).val();
+                                                        var dataString = "degree=" + degree;
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "<?php echo base_url() . 'index.php?admin/get_cource/student'; ?>",
+                                                            data: dataString,
+                                                            success: function (response) {
+                                                                $("#course").html(response);
+                                                            }
+                                                        });
+                                                    });
+
+                                                    $("#course").change(function () {
+                                                        var course = $(this).val();
+                                                        var degree = $("#degree").val();
+                                                        var dataString = "course=" + course + "&degree=" + degree;
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "<?php echo base_url() . 'index.php?admin/get_batchs/student'; ?>",
+                                                            data: dataString,
+                                                            success: function (response) {
+                                                                $("#batch").html(response);
+                                                            }
+                                                        });
+                                                    });
+
+
+                                                    $.validator.setDefaults({
+                                                        submitHandler: function (form) {
+
+                                                            //  filecheck(img);
+                                                            form.submit();
+
+                                                        }
+                                                    });
+
+                                                    $().ready(function () {
+                                                        $("#birthdate").datepicker({
+                                                            maxDate: 0
+                                                        });
+
+                                                        jQuery.validator.addMethod("mobile_no", function (value, element) {
+                                                            return this.optional(element) || /^[0-9-+]+$/.test(value);
+                                                        }, 'Please enter a valid contact no.');
+                                                        jQuery.validator.addMethod("email_id", function (value, element) {
+                                                            return this.optional(element) || /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(value);
+                                                        }, 'Please enter a valid email address.');
+
+                                                        jQuery.validator.addMethod("character", function (value, element) {
+                                                            return this.optional(element) || /^[A-z ]+$/.test(value);
+                                                        }, 'Please enter a valid character.');
+
+                                                        jQuery.validator.addMethod("zip_code", function (value, element) {
+                                                            return this.optional(element) || /^[0-9]{6}$/.test(value);
+                                                        }, 'Please enter a valid zip code.');
+
+
+                                                        $("#frmstudent").validate({
+                                                            rules: {
+                                                                name:
+                                                                        {
+                                                                            required: true,
+                                                                            character: true,
+                                                                        },
+                                                                f_name:
+                                                                        {
+                                                                            required: true,
+                                                                            character: true,
+                                                                        },
+                                                                l_name:
+                                                                        {
+                                                                            required: true,
+                                                                            character: true,
+                                                                        },
+                                                                email_id:
+                                                                        {
+                                                                            required: true,
+                                                                            email_id: true,
+                                                                            remote: {
+                                                                                url: "<?= base_url() ?>index.php?admin/getstudentemail",
+                                                                                type: "post",
+                                                                                data: {
+                                                                                    eid: function () {
+                                                                                        return $("#email_id").val();
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        },
+                                                                password: "required",
+                                                                gen: "required",
+                                                                birthdate: "required",
+                                                                mobileno:
+                                                                        {
+                                                                            required: true,
+                                                                            maxlength: 11,
+                                                                            mobile_no: true,
+                                                                            minlength: 10,
+                                                                        },
+                                                                city:
+                                                                        {
+                                                                            required: true,
+                                                                            character: true,
+                                                                        },
+                                                                zip:
+                                                                        {
+                                                                            required: true,
+                                                                            zip_code: true,
+                                                                        },
+                                                                address:"required",
+                                                                degree:"required",
+                                                                course:"required",
+                                                                batch:"required",
+                                                                semester:"required",
+                                                                facebook:
+                                                                        {
+                                                                            url2: true,
+                                                                        },
+                                                                twitter:
+                                                                        {
+                                                                            url2: true,
+                                                                        },
+                                                                admissiontype: "required",
+                                                                profilefile: {
+                                                                    required: true,
+                                                                    extension: 'gif|png|jpg|jpeg',
+                                                                }
+                                                            },
+                                                            messages: {
+                                                                name:
+                                                                        {
+                                                                            required: "Enter name",
+                                                                            character: "Enter valid name",
+                                                                        },
+                                                                f_name:
+                                                                        {
+                                                                            required: "Enter first name",
+                                                                            character: "Enter valid name",
+                                                                        },
+                                                                l_name:
+                                                                        {
+                                                                            required: "Enter last name",
+                                                                            character: "Enter valid name",
+                                                                        },
+                                                                email_id: {
 >>>>>>> origin/master
-        <div class="vd_content clearfix">
-            <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
                         <li><a href="index.html">Home</a> </li>
@@ -780,6 +1041,50 @@
                                                             data: dataString,
                                                             success: function (response) {
                                                                 $("#course").html(response);
+=======
+                                                                    required: "Please enter email id",
+                                                                    email_id: "Please enter valid email id",
+                                                                    remote: "Email id already exists",
+                                                                },
+                                                                password: "Please enter password",
+                                                                gen: "Please slect gender",
+                                                                birthdate: "Please select birthdate",
+                                                                mobileno:
+                                                                        {
+                                                                            required: "Please enter mobile no",
+                                                                            maxlength: "Please enter maximum 10 digit number",
+                                                                            mobile_no: "Please enter valid mobile number",
+                                                                            minlength: "Please enter minimum 10 digit number",
+                                                                        },
+                                                                city:
+                                                                        {
+                                                                            required: "Please enter city",
+                                                                            character: "Please enter valid city name",
+                                                                        },
+                                                                zip:
+                                                                        {
+                                                                            required: "Please enter zip code",
+                                                                        },
+                                                                admissiontype: "Plese select admission type",
+                                                                profilefile: {
+                                                                    required: "Plese upload image",
+                                                                    extension: "Invalid File",
+                                                                }
+
+
+<<<<<<< HEAD
+=======
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Course</label>
+>>>>>>> origin/master
+
+<<<<<<< HEAD
+                                                                    required: "Please enter email id",
+                                                                    email_id: "Please enter valid email id",
+                                                                    remote: "Email id already exists",
+
+=======
                                                             }
                                                         });
                                                     });
@@ -922,73 +1227,4 @@
                                                                     remote:"Email id already exists",
                                                                     
                                                                     
-=======
-                                                                    required: "Please enter email id",
-                                                                    email_id: "Please enter valid email id",
-                                                                    remote: "Email id already exists",
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-                                                                    required: "Plese upload image",
-                                                                    extension: "Invalid File",
-<<<<<<< HEAD
-                                                                    required: "Please enter email id",
-                                                                    email_id: "Please enter valid email id",
-                                                                    remote: "Email id already exists",
-                                                                },
-                                                                password: "Enter password",
-                                                                gen: "Slect gender",
-                                                                birthdate: "Select birthdate",
-                                                                mobileno:
-                                                                        {
-                                                                            required: "Enter mobile no",
-                                                                            maxlength: "Enter maximum 10 digit number",
-                                                                            mobile_no: "Enter valid mobile number",
-                                                                            minlength: "Enter minimum 10 digit number",
-                                                                        },
-                                                                city:
-                                                                        {
-                                                                            required: "Enter city",
-                                                                            character: "Enter valid city name",
-                                                                        },
-                                                                address:"Enter address",
-                                                                zip:
-                                                                        {
-                                                                            required: "Enter zip code",
-                                                                        },
-                                                                degree:"Select degree",
-                                                                course:"Select course",
-                                                                batch:"Select batch",
-                                                                semester:"Select semester",
-                                                                admissiontype: "Select admission type",
-                                                                profilefile: {
-=======
-                                                                },
-                                                                password: "Enter password",
-                                                                gen: "Slect gender",
-                                                                birthdate: "Select birthdate",
-                                                                mobileno:
-                                                                        {
-                                                                            required: "Enter mobile no",
-                                                                            maxlength: "Enter maximum 10 digit number",
-                                                                            mobile_no: "Enter valid mobile number",
-                                                                            minlength: "Enter minimum 10 digit number",
-                                                                        },
-                                                                city:
-                                                                        {
-                                                                            required: "Enter city",
-                                                                            character: "Enter valid city name",
-                                                                        },
-                                                                address:"Enter address",
-                                                                zip:
-                                                                        {
-                                                                            required: "Enter zip code",
-                                                                        },
-                                                                degree:"Select degree",
-                                                                course:"Select course",
-                                                                batch:"Select batch",
-                                                                semester:"Select semester",
-                                                                admissiontype: "Select admission type",
-                                                                profilefile: {
 >>>>>>> origin/master
