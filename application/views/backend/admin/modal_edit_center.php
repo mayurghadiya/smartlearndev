@@ -63,7 +63,7 @@ foreach ( $edit_data as $row):
                             </div>
                         </div>										
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Setting Number<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label">Sitting Number<span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" name="settingno" id="settingno" value="<?php echo $row['setting_number']?>"/>
                             </div>
