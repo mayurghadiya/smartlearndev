@@ -131,7 +131,7 @@
                                             </div>
                                         </div>										
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Setting Number<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Sitting Number<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="settingno" id="settingno"/>
                                             </div>
