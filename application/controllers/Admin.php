@@ -3375,6 +3375,17 @@ class Admin extends CI_Controller {
             echo "true";
         }
     }
+    
+    function checksubjects()
+    {
+         $eid = $this->input->post('subname');
+        $subcode = $this->input->post('subcode');
+        $course = $this->input->post('course');
+        $semester = $this->input->post('semester');
+        $data = $this->db->get_where('subject_manager', array("sm_course_id" => $course, "sm_sem_id" => $semester, "subject_name" => $eid, "subject_code" => $subcode))->result_array();
+       echo json_encode($data);
+    }
+    
 
     function checksubcode() {
 
