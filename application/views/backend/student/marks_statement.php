@@ -78,10 +78,7 @@
                                     <strong>Batch :   </strong> 
                                     <?php echo $batch_detail->b_name; ?>
                                 </p>
-                                <p>
-                                    <strong>Active/InActive : </strong>
-                                    <span class="label label-success">Active</span>
-                                </p>
+                                
                             </td>
                         </tr>
                     </tbody></table>

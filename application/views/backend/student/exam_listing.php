@@ -30,8 +30,8 @@
                                     <td><?php echo $exam->em_id; ?></td>
                                     <td><?php echo $exam->em_name; ?></td>
                                     <td><?php echo $exam->exam_type_name; ?></td>
-                                    <td><?php echo date('d-m-Y', strtotime($exam->em_start_time)); ?></td>
-                                    <td><?php echo date('d-m-Y', strtotime($exam->em_end_time)); ?></td>
+                                    <td><?php echo date('F d, Y', strtotime($exam->em_start_time)); ?></td>
+                                    <td><?php echo date('F d, Y', strtotime($exam->em_end_time)); ?></td>
                                     <td><?php echo $exam->total_marks; ?></td>
                                     <td><?php echo $exam->passing_mark; ?></td>
                                     <td>

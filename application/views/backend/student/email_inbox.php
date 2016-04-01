@@ -85,8 +85,7 @@
                                             <td><?php echo date('d-m-Y h:m A', strtotime($row->created_at)); ?></td>
                                             <td>
                                                 <a href="<?php echo base_url('index.php?student/inbox_email/' . $row->email_id); ?>" title="view"><span class="fa fa-desktop"></span></a>&nbsp;
-                                                <a href="<?php echo base_url('index.php?admin/delete_email/' . $row->email_id); ?>" title="delete" 
-                                                   onclick="return confirm('Are you sure to delete this email?');"><span class="fa fa-times"></span></a>
+                                                
                                             </td>
                                         </tr>
                                         <?php
