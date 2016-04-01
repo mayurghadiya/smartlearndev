@@ -297,8 +297,7 @@ foreach ($datasem as $rowsem) {
                                                                             },                                                                    
                                                                     title:
                                                                             {
-                                                                                required: true,
-                                                                                character: true,
+                                                                                required: true,                                                                             
                                                                             },
                                                                     resourcefile:{
 									required: true,
@@ -319,8 +318,7 @@ foreach ($datasem as $rowsem) {
                                                                             },                                                                    
                                                                     title:
                                                                             {
-                                                                                required: "Please enter title",
-                                                                                character: "Please enter valid title",
+                                                                                required: "Please enter title",                                                                               
                                                                             },
                                                                     resourcefile: {
 required: 'please upload file',
