@@ -176,6 +176,15 @@ class Admin extends CI_Controller {
             }
             echo $html;
     }
+    
+    function check_batch()
+    {   
+       $degree=implode(',',$this->input->post("degree")) ;
+       $course=implode(',',$this->input->post("course"));
+       $batchname=$this->input->post('batch');
+       $data = $this->db->query("select * from batch where degree_id in($degree) and course_id in($course) and b_name=$batchname")->result_array();
+       echo json_encode($data);
+    }
 
     /*     * *MANAGE Events
       Auth : Brij  Dhami
