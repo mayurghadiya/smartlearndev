@@ -160,21 +160,27 @@ class Admin extends CI_Controller {
     }
 
     function get_cource_multiple($param = '') {
-        $did = implode(',',$this->input->post("degree"));        
-         $courceid =explode(',', $this->input->post("courseid"));
-            $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
-            $html = '<option value="default">Select Course</option>';
-            foreach ($cource as $c) {     
-                if(in_array($c['course_id'],$courceid))
-                {
-                      $html .='<option value="' . $c['course_id'] . '" selected>' . $c['c_name'] . '</option>';
-                }
-                else
-                {
-                     $html .='<option value="' . $c['course_id'] . '">' . $c['c_name'] . '</option>'; 
-                }
+        $did = implode(',', $this->input->post("degree"));
+        $courceid = explode(',', $this->input->post("courseid"));
+        $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
+        $html = '<option value="default">Select Course</option>';
+        foreach ($cource as $c) {
+            if (in_array($c['course_id'], $courceid)) {
+                $html .='<option value="' . $c['course_id'] . '" selected>' . $c['c_name'] . '</option>';
+            } else {
+                $html .='<option value="' . $c['course_id'] . '">' . $c['c_name'] . '</option>';
             }
-            echo $html;
+        }
+        echo $html;
+    }
+    
+    function check_batch()
+    {   
+       $degree=implode(',',$this->input->post("degree")) ;
+       $course=implode(',',$this->input->post("course"));
+       $batchname=$this->input->post('batch');
+       $data = $this->db->query("select * from batch where degree_id in($degree) and course_id in($course) and b_name=$batchname")->result_array();
+       echo json_encode($data);
     }
 
     /*     * *MANAGE Events
@@ -412,22 +418,20 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Result Management';
         $this->load->view('backend/index', $page_data);
     }
-    
-    function get_recourse($d_id='')
-    {
-        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+
+    function get_recourse($d_id = '') {
+        $where = "FIND_IN_SET('" . $d_id . "', degree_id)";
         $this->db->where($where);
         $batch = $this->db->get('course')->result_array();
         echo '<option value="">Select course</option>';
         foreach ($batch as $row) {
             echo '<option value="' . $row['course_id'] . '">' . $row['c_name'] . '</option>';
         }
-        
     }
 
-    function get_batch($c_id='',$d_id='') {
-        $where = "FIND_IN_SET('".$c_id."', course_id)";  
-        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+    function get_batch($c_id = '', $d_id = '') {
+        $where = "FIND_IN_SET('" . $c_id . "', course_id)";
+        $where = "FIND_IN_SET('" . $d_id . "', degree_id)";
         $this->db->where($where);
         $batch = $this->db->get('batch')->result_array();
         echo '<option value="">Select Batch</option>';
@@ -742,9 +746,9 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
             redirect(base_url() . 'index.php?admin/batch/', 'refresh');
         }
-         $page_data['batches'] = $this->db->get('batch')->result_array();
+        $page_data['batches'] = $this->db->get('batch')->result_array();
         $page_data['degree'] = $this->db->get('degree')->result_array();
-        $page_data['course']=$this->db->get('course')->result();
+        $page_data['course'] = $this->db->get('course')->result();
         $page_data['page_name'] = 'batch';
         $page_data['page_title'] = 'Batch Management';
         $this->load->view('backend/index', $page_data);
@@ -2081,7 +2085,7 @@ class Admin extends CI_Controller {
                             'event_name' => $result['Event Name'],
                             'event_desc' => $result['Event Description'],
                             'event_date' => $result['Event Date'],
-                            'event_time'    => $result['Event Time']
+                            'event_time' => $result['Event Time']
                         );
                         import_event_manager($data, $where);
                     }
@@ -2209,7 +2213,7 @@ class Admin extends CI_Controller {
                                 'd_name' => $result['Degree Name']
                             ),
                             'admission_type' => array(
-                                'at_name'   => $result['Admission Type']
+                                'at_name' => $result['Admission Type']
                             )
                         );
                         $data = array(
@@ -2846,17 +2850,25 @@ class Admin extends CI_Controller {
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                $this->Crud_model->cms_manager_save(array(
-                    'degree_id' => $this->input->post('degree', TRUE),
-                    'am_course' => $this->input->post('course', TRUE),
-                    'am_batch' => $this->input->post('batch', TRUE),
-                    'am_semester' => $this->input->post('semester', TRUE),
-                    'am_title' => $this->input->post('page_title', TRUE),
-                    'am_url' => $this->input->post('page_slug', TRUE),
-                    'is_form' => $this->input->post('content_type', TRUE),
-                    'am_content' => $this->input->post('content_data', TRUE)
-                ));
-                $this->session->set_flashdata('flash_message', 'CMS page is successfully added.');
+                //check for duplication
+                $is_present = $this->Crud_model->cms_page_duplication(
+                        $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $_POST['page_title']);
+
+                if (count($is_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    $this->Crud_model->cms_manager_save(array(
+                        'degree_id' => $this->input->post('degree', TRUE),
+                        'am_course' => $this->input->post('course', TRUE),
+                        'am_batch' => $this->input->post('batch', TRUE),
+                        'am_semester' => $this->input->post('semester', TRUE),
+                        'am_title' => $this->input->post('page_title', TRUE),
+                        'am_url' => $this->input->post('page_slug', TRUE),
+                        'is_form' => $this->input->post('content_type', TRUE),
+                        'am_content' => $this->input->post('content_data', TRUE)
+                    ));
+                    $this->session->set_flashdata('flash_message', 'CMS page is successfully added.');
+                }
                 //$this->session->set_flashdata('messge', 'CMS content is added successfully.');
             } elseif ($param1 == 'update') {
                 $this->Crud_model->cms_manager_save(array(

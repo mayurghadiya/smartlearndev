@@ -61,12 +61,12 @@ $.toaster({
 	<script src="<?=$this->config->item('js_path')?>jquery.validate.min.js"></script>
 	<script src="<?=$this->config->item('js_path')?>additional-methods.min.js"></script>
 	<script type="text/javascript">
-	$.validator.setDefaults({
-		submitHandler: function() {
-			 var form = document.getElementsByTagName("form");
-			 form.submit();
-		}
-	});
+//	$.validator.setDefaults({
+//		submitHandler: function() {
+//			 var form = document.getElementsByTagName("form");
+//			 form.submit();
+//		}
+//	});
 
 	$().ready(function() {
 		
