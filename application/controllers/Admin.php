@@ -2080,7 +2080,8 @@ class Admin extends CI_Controller {
                         $data = array(
                             'event_name' => $result['Event Name'],
                             'event_desc' => $result['Event Description'],
-                            'event_date' => $result['Event Date']
+                            'event_date' => $result['Event Date'],
+                            'event_time'    => $result['Event Time']
                         );
                         import_event_manager($data, $where);
                     }
@@ -2107,13 +2108,9 @@ class Admin extends CI_Controller {
                         );
                         $data = array(
                             'em_name' => $result['Exam Name'],
-                            'em_year' => $result['Year'],
-                            'em_date' => $result['Date'],
                             'em_status' => 1,
                             'total_marks' => $result['Total Marks'],
                             'passing_mark' => $result['Passing Marks'],
-                            'em_start_time' => $result['Start Time'],
-                            'em_end_time' => $result['End Time']
                         );
                         import_exam_manager($data, $where);
                     }
@@ -2210,6 +2207,9 @@ class Admin extends CI_Controller {
                             ),
                             'degree' => array(
                                 'd_name' => $result['Degree Name']
+                            ),
+                            'admission_type' => array(
+                                'at_name'   => $result['Admission Type']
                             )
                         );
                         $data = array(
