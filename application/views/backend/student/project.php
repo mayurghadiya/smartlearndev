@@ -84,7 +84,7 @@
                                                                 
                                                 </td>	
 
-                                                <td><?php echo $row->pm_dos; ?></td>	
+                                                <td><?php echo date('F d, Y',strtotime($row->pm_dos)); ?></td>	
                                                 <td>
                                                <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
                                                 <td>
@@ -127,8 +127,8 @@
                                                         <tr>
                                                             <td><?php echo $count++;?></td>
                                                             <td><?php echo $row->pm_title;?></td>	
-                                                            <td><?php echo $row->dos;?></td>	
-                                                            <td><?php echo $row->document_file;?></td>	
+                                                            <td><?php echo date('F d, Y',strtotime($row->dos));?></td>	
+                                                            <td><a href="<?php echo base_url().'uploads/project_file/'.$row->document_file ?>" download="" title="<?php echo $row->document_file; ?>"><?php echo $row->document_file;?></a></td>	
                                                         </tr>
                                                 <?php endforeach;?>						
                                                     </tbody>
