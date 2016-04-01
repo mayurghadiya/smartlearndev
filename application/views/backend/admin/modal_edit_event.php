@@ -36,32 +36,6 @@ $edit_data		=	$this->db->get_where('event_manager' , array('event_id' => $param2
         <?php endforeach;?>
     </div>
 </div>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script type="text/javascript">
-    $.noConflict();
-$(window).load(function() 
-{	"use strict";	
-	$( "#datepicker-date123" ).datepicker({ 
-		dateFormat: 'yy-mm-dd',
-		changeMonth: true,
-		changeYear: true
-	
-	});
-});
-/*$(function() {
-	$('#datepicker-date123').datepicker({
-        dateFormat: 'yy-mm-dd',
-		changeMonth: true,
-		changeYear: true,
-        onSelect: function(datetext){
-            var d = new Date(); // for now
-            datetext=datetext+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
-            $('#datepicker-date123').val(datetext);
-        },
-    });
-});*/
-</script>
-<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.validate.min.js"></script>
 <script type="text/javascript">
   $.validator.setDefaults({
 		submitHandler: function() {
@@ -70,6 +44,12 @@ $(window).load(function()
 	});
 
 	$().ready(function() {	
+            $( "#datepicker-date123" ).datepicker({ 
+		dateFormat: 'yy-mm-dd',
+		changeMonth: true,
+		changeYear: true
+	
+	});
 		$("#editevent").validate({		
 			rules: {
 				event_name: "required",
