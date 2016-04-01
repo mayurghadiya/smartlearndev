@@ -61,3 +61,5 @@ Stack trace:
 #1 [internal function]: _exception_handler(Object(Error))
 #2 {main}
   thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-01 17:43:10 --> Severity: Notice --> Only variables should be assigned by reference /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 2469
+ERROR - 2016-04-01 17:43:11 --> Severity: Notice --> Only variables should be assigned by reference /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 2469
