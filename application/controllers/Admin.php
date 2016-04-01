@@ -2416,6 +2416,8 @@ class Admin extends CI_Controller {
 
         $this->load->helper('download');
         force_download('System-Backup_' . date('d-m-Y h:i:s A') . '.sql', $backup);
+        $this->session->set_flashdata('flash_message', 'System backup successfully.');
+        //redirect(base_url('index.php?admin/backup'));
     }
 
     /**
@@ -2446,7 +2448,7 @@ class Admin extends CI_Controller {
                     $this->db->query("SET FOREIGN_KEY_CHECKS = 1");
                 }
             }
-            $this->session->set_flashdata('message', 'System is restored successfully.');
+            $this->session->set_flashdata('flash_message', 'System is restored successfully.');
             redirect(base_url('index.php?admin/restore'));
         }
         $page_data['title'] = 'Restore System';

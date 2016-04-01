@@ -41,13 +41,6 @@
                                             width: 20%;
                                             margin-right: 10px;
                                         }
-                                        input {
-                                            border: 1px solid #d9d9d9;
-                                            border-radius: 1px;
-                                            font-size: 2em;
-                                            margin: .2em;
-                                            width: 30%;
-                                        }
                                         .setup {
                                             border-bottom-left-radius: 0;
                                             border-top-left-radius: 0;
@@ -69,51 +62,59 @@
 
 <!-- just copy this <section> and next script -->
                                         <section class="experiment">
-                                            <div class="form-horizontal">
+                                            <div class="form-horizontal">                                                
                                                 <div class="form-group" id="private-broadcast-degree">
-                                                    <label class="col-sm-3 control-label">Degree</label>
+                                                    <label class="col-sm-3 control-label">Degree*</label>
                                                     <div class="col-sm-5">
                                                         <select id="degree" class="form-control" name="private-broadcast-degree">
-                                                            <option>Select</option>
+                                                            <option value="">Select</option>
                                                             <?php foreach ($degree as $row) { ?>
                                                                 <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                             <?php } ?>
                                                         </select>
+                                                        <label style="display:none; color: red" id="degree_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-course">
-                                                    <label class="col-sm-3 control-label">Course</label>
+                                                    <label class="col-sm-3 control-label">Course*</label>
                                                     <div class="col-sm-5">
                                                         <select id="course" class="form-control" name="private-broadcast-course">
-
+                                                            <option value="">Select</option>
                                                         </select>
+                                                        <label style="display:none; color: red" id="course_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-batch">
-                                                    <label class="col-sm-3 control-label">Batch</label>
+                                                    <label class="col-sm-3 control-label">Batch*</label>
                                                     <div class="col-sm-5">
                                                         <select id="batch" class="form-control" name="private-broadcast-batch">
-
+                                                            <option value="">Select</option>
                                                         </select>
+                                                        <label style="display:none; color: red" id="batch_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-semester">
-                                                    <label class="col-sm-3 control-label">Semester</label>
+                                                    <label class="col-sm-3 control-label">Semester*</label>
                                                     <div class="col-sm-5">
                                                         <select id="semester" class="form-control" name="private-broadcast-course">
+                                                            <option value="">Select</option>
                                                             <option value="all">All Semester</option>
                                                             <?php foreach ($semester as $row) { ?>
                                                                 <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
                                                             <?php } ?>
                                                         </select>
+                                                        <label style="display:none; color: red" id="sem_error"></label>
                                                     </div>
                                                 </div>
+                                                
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Live Broadcast</label>
+                                                    <label class="col-sm-3 control-label">Live Broadcast*</label>
                                                     <div class="col-sm-5">
                                                         <input id="broadcast-name" type="text" class="form-control" placeholder="live streaming for all batch and course" name="title"/>
+                                                        <label style="display:none; color: red" id="name_error"></label>
                                                     </div>
                                                 </div>
+
                                                 <div class="form-group">
                                                     <div class="col-sm-offset-3 col-sm-5">
                                                         <button id="setup-new-broadcast" class="btn btn-success">Setup New Broadcast</button>
@@ -179,238 +180,254 @@
                                         </section>
                                         <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
                                         <script>
-                                                            // Muaz Khan     - https://github.com/muaz-khan
-                                                            // MIT License   - https://www.webrtc-experiment.com/licence/
-                                                            // Documentation - https://github.com/muaz-khan/RTCMultiConnection
+                                                                    // Muaz Khan     - https://github.com/muaz-khan
+                                                                    // MIT License   - https://www.webrtc-experiment.com/licence/
+                                                                    // Documentation - https://github.com/muaz-khan/RTCMultiConnection
 
-                                                            var connection = new RTCMultiConnection();
-                                                            connection.session = {
-                                                                audio: true,
-                                                                video: true,
-                                                                oneway: true
-                                                            };
+                                                                    var connection = new RTCMultiConnection();
+                                                                    connection.session = {
+                                                                        audio: true,
+                                                                        video: true,
+                                                                        oneway: true
+                                                                    };
 
-                                                            connection.onstream = function (e) {
+                                                                    connection.onstream = function (e) {
 
-                                                                e.mediaElement.width = 600;
-                                                                videosContainer.insertBefore(e.mediaElement, videosContainer.firstChild);
-                                                                //videosContainer.insertBefore(title, videosContainer.firstChild);
-                                                                rotateVideo(e.mediaElement);
-                                                                scaleVideos();
-                                                            };
+                                                                        e.mediaElement.width = 600;
+                                                                        videosContainer.insertBefore(e.mediaElement, videosContainer.firstChild);
+                                                                        //videosContainer.insertBefore(title, videosContainer.firstChild);
+                                                                        rotateVideo(e.mediaElement);
+                                                                        scaleVideos();
+                                                                    };
 
-                                                            function rotateVideo(mediaElement) {
-                                                                mediaElement.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';
-                                                                setTimeout(function () {
-                                                                    mediaElement.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(360deg)';
-                                                                }, 1000);
-                                                            }
-
-                                                            connection.onstreamended = function (e) {
-                                                                e.mediaElement.style.opacity = 0;
-                                                                rotateVideo(e.mediaElement);
-                                                                setTimeout(function () {
-                                                                    if (e.mediaElement.parentNode) {
-                                                                        e.mediaElement.parentNode.removeChild(e.mediaElement);
-                                                                    }
-                                                                    scaleVideos();
-                                                                }, 1000);
-                                                            };
-
-                                                            var sessions = {};
-                                                            connection.onNewSession = function (session) {
-                                                                if (sessions[session.sessionid])
-                                                                    return;
-                                                                sessions[session.sessionid] = session;
-
-                                                                var tr = document.createElement('tr');
-                                                                tr.innerHTML = '<td><strong>' + session.sessionid + '</strong> is sharing his webcam in one-way direction!</td>' +
-                                                                        '<td><button class="join">View His Webcam</button></td>' +
-                                                                        '<td><button session_id=' + session.sessionid + ' class="startstop" style="margin-left: -100px">Start</button></td>';
-                                                                roomsList.insertBefore(tr, roomsList.firstChild);
-
-                                                                var joinRoomButton = tr.querySelector('.join');
-                                                                var startStopButton = tr.querySelector('.startstop');
-                                                                startStopButton.setAttribute('id', session.sessionid + 'btn');
-                                                                joinRoomButton.setAttribute('data-sessionid', session.sessionid);
-                                                                joinRoomButton.onclick = function () {
-                                                                    this.disabled = true;
-                                                                    $('#' + session.sessionid + 'btn').html('Stop');
-
-                                                                    var sessionid = this.getAttribute('data-sessionid');
-                                                                    //$('<p>Hello</p>').insertBefore('video');
-                                                                    $('<label class="stream_title" style="margin-left: 110px;">' + sessionid + '</label>').insertBefore('#videos-container');
-                                                                    session = sessions[sessionid];
-
-                                                                    if (!session)
-                                                                        throw 'No such session exists.';
-
-                                                                    connection.join(session);
-                                                                    //console.log('My Object: '+session);
-                                                                };
-
-                                                                $('.startstop').on('click', function () {
-                                                                    var session_clicked = $(this).attr('session_id');
-                                                                    var streaming_status = $(this).html();
-                                                                    $.ajax({
-                                                                        url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + session_clicked + '/' + streaming_status,
-                                                                        type: 'get',
-                                                                        success: function () {
-                                                                            alert('Streaming is successfully ' + streaming_status);
-                                                                        }
-                                                                    })
-                                                                })
-
-                                                                //multicast start stop
-                                                                $('.multicaststartstop').on('click', function () {
-                                                                    var session_clicked = $(this).attr('session_id');
-                                                                    var streaming_status = $(this).html();
-                                                                    if (streaming_status == 'Start') {
-                                                                        $.ajax({
-                                                                            url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + session_clicked + '/' + streaming_status,
-                                                                            type: 'get',
-                                                                            success: function () {
-
-                                                                            }
-                                                                        });
-                                                                        $(this).html('Stop');
-                                                                        alert('Streaming is started');
-                                                                    } else {
-                                                                        $.ajax({
-                                                                            url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + session_clicked + '/' + streaming_status,
-                                                                            type: 'get',
-                                                                            success: function () {
-
-                                                                            }
-                                                                        });
-                                                                        $(this).html('Start');
-                                                                        alert('Streaming is stopped');
+                                                                    function rotateVideo(mediaElement) {
+                                                                        mediaElement.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';
+                                                                        setTimeout(function () {
+                                                                            mediaElement.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(360deg)';
+                                                                        }, 1000);
                                                                     }
 
-                                                                })
-
-                                                                $('.multicaststartstop_tab').on('click', function () {
-                                                                    var current_multicast_session = $(this).attr('session_id');
-                                                                    var current_milticast_status = $(this).html();
-                                                                    if (current_milticast_status == 'Start') {
-                                                                        $.ajax({
-                                                                            url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + current_multicast_session + '/' + current_milticast_status,
-                                                                            type: 'get',
-                                                                            success: function () {
-
+                                                                    connection.onstreamended = function (e) {
+                                                                        e.mediaElement.style.opacity = 0;
+                                                                        rotateVideo(e.mediaElement);
+                                                                        setTimeout(function () {
+                                                                            if (e.mediaElement.parentNode) {
+                                                                                e.mediaElement.parentNode.removeChild(e.mediaElement);
                                                                             }
-                                                                        });
-                                                                        $(this).html('Stop');
-                                                                        alert('Streaming is started');
-                                                                    } else {
-                                                                        $.ajax({
-                                                                            url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + current_multicast_session + '/' + current_milticast_status,
-                                                                            type: 'get',
-                                                                            success: function () {
+                                                                            scaleVideos();
+                                                                        }, 1000);
+                                                                    };
 
+                                                                    var sessions = {};
+                                                                    connection.onNewSession = function (session) {
+                                                                        if (sessions[session.sessionid])
+                                                                            return;
+                                                                        sessions[session.sessionid] = session;
+
+                                                                        var tr = document.createElement('tr');
+                                                                        tr.innerHTML = '<td><strong>' + session.sessionid + '</strong> is sharing his webcam in one-way direction!</td>' +
+                                                                                '<td><button class="join">View His Webcam</button></td>' +
+                                                                                '<td><button session_id=' + session.sessionid + ' class="startstop" style="margin-left: -100px">Start</button></td>';
+                                                                        roomsList.insertBefore(tr, roomsList.firstChild);
+
+                                                                        var joinRoomButton = tr.querySelector('.join');
+                                                                        var startStopButton = tr.querySelector('.startstop');
+                                                                        startStopButton.setAttribute('id', session.sessionid + 'btn');
+                                                                        joinRoomButton.setAttribute('data-sessionid', session.sessionid);
+                                                                        joinRoomButton.onclick = function () {
+                                                                            this.disabled = true;
+                                                                            $('#' + session.sessionid + 'btn').html('Stop');
+
+                                                                            var sessionid = this.getAttribute('data-sessionid');
+                                                                            //$('<p>Hello</p>').insertBefore('video');
+                                                                            $('<label class="stream_title" style="margin-left: 110px;">' + sessionid + '</label>').insertBefore('#videos-container');
+                                                                            session = sessions[sessionid];
+
+                                                                            if (!session)
+                                                                                throw 'No such session exists.';
+
+                                                                            connection.join(session);
+                                                                            //console.log('My Object: '+session);
+                                                                        };
+
+                                                                        $('.startstop').on('click', function () {
+                                                                            var session_clicked = $(this).attr('session_id');
+                                                                            var streaming_status = $(this).html();
+                                                                            $.ajax({
+                                                                                url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + session_clicked + '/' + streaming_status,
+                                                                                type: 'get',
+                                                                                success: function () {
+                                                                                    alert('Streaming is successfully ' + streaming_status);
+                                                                                }
+                                                                            })
+                                                                        })
+
+                                                                        //multicast start stop
+                                                                        $('.multicaststartstop').on('click', function () {
+                                                                            var session_clicked = $(this).attr('session_id');
+                                                                            var streaming_status = $(this).html();
+                                                                            if (streaming_status == 'Start') {
+                                                                                $.ajax({
+                                                                                    url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + session_clicked + '/' + streaming_status,
+                                                                                    type: 'get',
+                                                                                    success: function () {
+
+                                                                                    }
+                                                                                });
+                                                                                $(this).html('Stop');
+                                                                                alert('Streaming is started');
+                                                                            } else {
+                                                                                $.ajax({
+                                                                                    url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + session_clicked + '/' + streaming_status,
+                                                                                    type: 'get',
+                                                                                    success: function () {
+
+                                                                                    }
+                                                                                });
+                                                                                $(this).html('Start');
+                                                                                alert('Streaming is stopped');
                                                                             }
-                                                                        });
-                                                                        $(this).html('Start');
-                                                                        alert('Streaming is stopped');
-                                                                    }
-                                                                })
 
-                                                                // start and stop
+                                                                        })
 
-                                                                var start_stop_status = 'stop';
-                                                                startStopButton.setAttribute('data-sessionid', session.sessionid);
+                                                                        $('.multicaststartstop_tab').on('click', function () {
+                                                                            var current_multicast_session = $(this).attr('session_id');
+                                                                            var current_milticast_status = $(this).html();
+                                                                            if (current_milticast_status == 'Start') {
+                                                                                $.ajax({
+                                                                                    url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + current_multicast_session + '/' + current_milticast_status,
+                                                                                    type: 'get',
+                                                                                    success: function () {
 
-                                                                startStopButton.onclick = function () {
-                                                                    $('#streamname').val(session.sessionid);
-                                                                    startStopButton.setAttribute('status', start_stop_status);
-                                                                    var current_status = $(this).attr('status');
-                                                                    var video_session_id = $(this).attr('data-sessionid');
+                                                                                    }
+                                                                                });
+                                                                                $(this).html('Stop');
+                                                                                alert('Streaming is started');
+                                                                            } else {
+                                                                                $.ajax({
+                                                                                    url: '<?php echo base_url(); ?>index.php?admin/start_stop_streaming/' + current_multicast_session + '/' + current_milticast_status,
+                                                                                    type: 'get',
+                                                                                    success: function () {
 
-                                                                    if (current_status == 'stop') {
-                                                                        start_stop_status = 'start';
-                                                                        $(this).html('Stop');
-                                                                        // update streaming to 1
-
-                                                                    } else if (current_status == 'start') {
-                                                                        start_stop_status = 'stop';
-
-                                                                        $.ajax({
-                                                                            url: '<?php echo base_url(); ?>index.php?video_streaming/in_active_streaming/' + video_session_id,
-                                                                            type: 'post',
-                                                                            success: function () {
-                                                                                //alert('Video stream is stopped.');
+                                                                                    }
+                                                                                });
+                                                                                $(this).html('Start');
+                                                                                alert('Streaming is stopped');
                                                                             }
                                                                         })
-                                                                        $(this).html('Start');
-                                                                        // update streaming to 0
-                                                                        //$('#myModal').modal('hide');
+
+                                                                        // start and stop
+
+                                                                        var start_stop_status = 'stop';
+                                                                        startStopButton.setAttribute('data-sessionid', session.sessionid);
+
+                                                                        startStopButton.onclick = function () {
+                                                                            $('#streamname').val(session.sessionid);
+                                                                            startStopButton.setAttribute('status', start_stop_status);
+                                                                            var current_status = $(this).attr('status');
+                                                                            var video_session_id = $(this).attr('data-sessionid');
+
+                                                                            if (current_status == 'stop') {
+                                                                                start_stop_status = 'start';
+                                                                                $(this).html('Stop');
+                                                                                // update streaming to 1
+
+                                                                            } else if (current_status == 'start') {
+                                                                                start_stop_status = 'stop';
+
+                                                                                $.ajax({
+                                                                                    url: '<?php echo base_url(); ?>index.php?video_streaming/in_active_streaming/' + video_session_id,
+                                                                                    type: 'post',
+                                                                                    success: function () {
+                                                                                        //alert('Video stream is stopped.');
+                                                                                    }
+                                                                                })
+                                                                                $(this).html('Start');
+                                                                                // update streaming to 0
+                                                                                //$('#myModal').modal('hide');
+                                                                            }
+                                                                            //this.disabled = true;
+
+                                                                            /*var sessionid = this.getAttribute('data-sessionid');
+                                                                             session = sessions[sessionid];
+                                                                             
+                                                                             if (!session)
+                                                                             throw 'No such session exists.';
+                                                                             
+                                                                             connection.join(session);*/
+                                                                        };
+                                                                    };
+
+                                                                    var videosContainer = document.getElementById('videos-container') || document.body;
+                                                                    var roomsList = document.getElementById('rooms-list');
+
+                                                                    document.getElementById('setup-new-broadcast').onclick = function () {
+                                                                        //broadcast
+                                                                        var current_url = window.location.href;
+                                                                        var result = current_url.split("#");
+
+                                                                        if (result.length == 2) {
+                                                                            //multicast
+                                                                            if(!multicast_validation()) {
+                                                                                return false;
+                                                                            }
+                                                                        } else {
+                                                                            if (!validate_streaming()) {
+                                                                                return false;
+                                                                            }
+                                                                        }
+
+
+                                                                        this.disabled = true;
+
+                                                                        connection.open(document.getElementById('broadcast-name').value || 'Anonymous');
+                                                                    };
+
+                                                                    // setup signaling to search existing sessions
+                                                                    connection.connect();
+
+                                                                    (function () {
+                                                                        var uniqueToken = document.getElementById('unique-token');
+                                                                        if (uniqueToken)
+                                                                            if (location.hash.length > 2)
+                                                                                uniqueToken.parentNode.parentNode.parentNode.innerHTML = '';
+                                                                            else
+                                                                                uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
+                                                                    })();
+
+                                                                    function scaleVideos() {
+                                                                        var videos = document.querySelectorAll('video'),
+                                                                                length = videos.length,
+                                                                                video;
+
+                                                                        var minus = 130;
+                                                                        var windowHeight = 700;
+                                                                        var windowWidth = 600;
+                                                                        var windowAspectRatio = windowWidth / windowHeight;
+                                                                        var videoAspectRatio = 4 / 3;
+                                                                        var blockAspectRatio;
+                                                                        var tempVideoWidth = 0;
+                                                                        var maxVideoWidth = 0;
+
+                                                                        for (var i = length; i > 0; i--) {
+                                                                            blockAspectRatio = i * videoAspectRatio / Math.ceil(length / i);
+                                                                            if (blockAspectRatio <= windowAspectRatio) {
+                                                                                tempVideoWidth = videoAspectRatio * windowHeight / Math.ceil(length / i);
+                                                                            } else {
+                                                                                tempVideoWidth = windowWidth / i;
+                                                                            }
+                                                                            if (tempVideoWidth > maxVideoWidth)
+                                                                                maxVideoWidth = tempVideoWidth;
+                                                                        }
+                                                                        for (var i = 0; i < length; i++) {
+                                                                            video = videos[i];
+                                                                            if (video)
+                                                                                video.width = maxVideoWidth - minus;
+                                                                        }
                                                                     }
-                                                                    //this.disabled = true;
-
-                                                                    /*var sessionid = this.getAttribute('data-sessionid');
-                                                                     session = sessions[sessionid];
-                                                                     
-                                                                     if (!session)
-                                                                     throw 'No such session exists.';
-                                                                     
-                                                                     connection.join(session);*/
-                                                                };
-                                                            };
-
-                                                            var videosContainer = document.getElementById('videos-container') || document.body;
-                                                            var roomsList = document.getElementById('rooms-list');
-
-                                                            document.getElementById('setup-new-broadcast').onclick = function () {
-                                                                this.disabled = true;
-
-                                                                connection.open(document.getElementById('broadcast-name').value || 'Anonymous');
-                                                            };
-
-                                                            // setup signaling to search existing sessions
-                                                            connection.connect();
-
-                                                            (function () {
-                                                                var uniqueToken = document.getElementById('unique-token');
-                                                                if (uniqueToken)
-                                                                    if (location.hash.length > 2)
-                                                                        uniqueToken.parentNode.parentNode.parentNode.innerHTML = '';
-                                                                    else
-                                                                        uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
-                                                            })();
-
-                                                            function scaleVideos() {
-                                                                var videos = document.querySelectorAll('video'),
-                                                                        length = videos.length,
-                                                                        video;
-
-                                                                var minus = 130;
-                                                                var windowHeight = 700;
-                                                                var windowWidth = 600;
-                                                                var windowAspectRatio = windowWidth / windowHeight;
-                                                                var videoAspectRatio = 4 / 3;
-                                                                var blockAspectRatio;
-                                                                var tempVideoWidth = 0;
-                                                                var maxVideoWidth = 0;
-
-                                                                for (var i = length; i > 0; i--) {
-                                                                    blockAspectRatio = i * videoAspectRatio / Math.ceil(length / i);
-                                                                    if (blockAspectRatio <= windowAspectRatio) {
-                                                                        tempVideoWidth = videoAspectRatio * windowHeight / Math.ceil(length / i);
-                                                                    } else {
-                                                                        tempVideoWidth = windowWidth / i;
-                                                                    }
-                                                                    if (tempVideoWidth > maxVideoWidth)
-                                                                        maxVideoWidth = tempVideoWidth;
-                                                                }
-                                                                for (var i = 0; i < length; i++) {
-                                                                    video = videos[i];
-                                                                    if (video)
-                                                                        video.width = maxVideoWidth - minus;
-                                                                }
-                                                            }
 
 
-                                                            window.onresize = scaleVideos;
+                                                                    window.onresize = scaleVideos;
                                         </script>
 
                                     </article>
@@ -569,7 +586,10 @@
                 $('.multicast').css('display', 'none');
             }
             $('#setup-new-broadcast').on('click', function () {
+
                 if (result.length == 2) {
+                    if (!multicast_validation())
+                        return false;
                     // private
                     // insert via ajax
                     var form_data = {
@@ -588,6 +608,8 @@
                         }
                     })
                 } else {
+                    if (!validate_streaming())
+                        return false;
                     // broadcast
                     var form_data = {
                         title: $('#broadcast-name').val(),
@@ -660,4 +682,77 @@
             }
 
         })
+    </script>
+
+    <script>
+        function validate_streaming() {
+            var name = $('#broadcast-name').val();
+            if (name == '') {
+                $('#name_error').css('display', 'inline');
+                $('#name_error').text('Please enter broadcast name');
+                return false;
+            } else {
+                $('#name_error').css('display', 'none');
+                $('#name_error').text('');
+                return true;
+            }
+        }
+
+        function multicast_validation() {
+            var name = $('#broadcast-name').val();
+            var degree = $('#degree').val();
+            var course = $('#course').val();
+            var batch = $('#batch').val();
+            var sem = $('#semester').val();
+
+            if (degree == '') {
+                $('#degree_error').css('display', 'inline');
+                $('#degree_error').text('Please select degree');
+                return false;
+            } else {
+                $('#degree_error').css('display', 'none');
+                $('#degree_error').text('');
+                //return true;
+            }
+
+            if (course == '') {
+                $('#course_error').css('display', 'inline');
+                $('#course_error').text('Please select course');
+                return false;
+            } else {
+                $('#course_error').css('display', 'none');
+                $('#course_error').text('');
+                //return true;
+            }
+
+            if (batch == '') {
+                $('#batch_error').css('display', 'inline');
+                $('#batch_error').text('Please select batch');
+                return false;
+            } else {
+                $('#batch_error').css('display', 'none');
+                $('#batch_error').text('');
+                //return true;
+            }
+
+            if (sem == '') {
+                $('#sem_error').css('display', 'inline');
+                $('#sem_error').text('Please select semester');
+                return false;
+            } else {
+                $('#sem_error').css('display', 'none');
+                $('#sem_error').text('');
+                //return true;
+            }
+
+            if (name == '') {
+                $('#name_error').css('display', 'inline');
+                $('#name_error').text('Please enter broadcast name');
+                return false;
+            } else {
+                $('#name_error').css('display', 'none');
+                $('#name_error').text('');
+                return true;
+            }
+        }
     </script>
