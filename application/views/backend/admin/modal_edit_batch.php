@@ -16,6 +16,7 @@ foreach ( $edit_data as $row):
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                 <?php echo form_open(base_url() . 'index.php?admin/batch/do_update/'.$row['b_id'] , array('class' => 'form-horizontal form-groups-bordered validate','id'=>'batchformedit','target'=>'_top'));?>
+                        <input type="text" name="courseid" id="courseid" value="<?php echo $row['course_id']?>">
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Batch Name<span style="color:red">*</span></label>
                             <div class="col-sm-5">
@@ -30,7 +31,7 @@ foreach ( $edit_data as $row):
                             <label class="col-sm-3 control-label"> Degree<span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="degree1" name="degree1[]" class="form-control" multiple>
-                                    <option value="default">Select Degree</option>                                        
+                                    <option value="">Select Degree</option>                                        
                                 <?php
                                 $d=explode(',',$row['degree_id']);
                                 foreach ($degree as $srow) 
@@ -117,15 +118,21 @@ endforeach;
 
         $("#degree1").change(function(){
         var degree = $(this).val();
-        var dataString = "degree="+degree;
-        $.ajax({
-           type:"POST",
-           url:"<?php echo base_url().'index.php?admin/get_cource_multiple/'; ?>",
-           data:dataString,                   
-           success:function(response){
-               $("#course1").html(response);
-           }
-        });
+        if(degree!="")
+        {
+            $.ajax({
+               type:"POST",
+               url:"<?php echo base_url().'index.php?admin/get_cource_multiple/'; ?>",
+               data:
+               {
+                   'degree':degree,
+                   'courseid':$("#courseid").val(),
+               },                   
+               success:function(response){
+                   $("#course1").html(response);
+               }
+            });
+        }
         });
 
                     $.validator.addMethod("valueNotEquals", function(value, element, arg){

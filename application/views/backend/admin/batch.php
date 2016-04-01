@@ -47,6 +47,8 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Batch Name</th>
+                                                <th>Degree</th>
+                                                <th>Course</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -57,7 +59,25 @@
                                                 ?>
                                             <tr>
                                                 <td><?php echo $count++; ?></td>
-                                                <td><?php echo $row['b_name']; ?></td>                         
+                                                <td><?php echo $row['b_name']; ?></td>    
+                                                <td> <?php
+                                                       $explodedegree =explode(',',$row['degree_id']);
+                                                        foreach ($degree as $deg) {
+                                                            if (in_array($deg['d_id'],$explodedegree)) {
+                                                                echo $deg['d_name']."<br> ";
+                                                            }
+                                                        }
+                                                        ?></td>
+                                                <td>                                                    
+                                                    <?php
+                                                    $explodecourse =explode(',',$row['course_id']);
+                                                        foreach ($course as $crs) {
+                                                            if (in_array($crs->course_id, $explodecourse)) {
+                                                                echo $crs->c_name."<br>";
+                                                            }
+                                                        }
+                                                        ?>
+                                                </td>
                                                 <td class="text-center">
                                                         <?php if ($row['b_status'] == '1') { ?>
                                                     <span class="label label-success">Active</span>

@@ -160,16 +160,21 @@ class Admin extends CI_Controller {
     }
 
     function get_cource_multiple($param = '') {
-        $did = $this->input->post("degree");
-        if ($did != 'default') {
+        $did = implode(',',$this->input->post("degree"));        
+         $courceid =explode(',', $this->input->post("courseid"));
             $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
-
             $html = '<option value="default">Select Course</option>';
-            foreach ($cource as $c) {
-                $html .='<option value="' . $c['course_id'] . '">' . $c['c_name'] . '</option>';
+            foreach ($cource as $c) {     
+                if(in_array($c['course_id'],$courceid))
+                {
+                      $html .='<option value="' . $c['course_id'] . '" selected>' . $c['c_name'] . '</option>';
+                }
+                else
+                {
+                     $html .='<option value="' . $c['course_id'] . '">' . $c['c_name'] . '</option>'; 
+                }
             }
             echo $html;
-        }
     }
 
     /*     * *MANAGE Events
@@ -737,8 +742,9 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
             redirect(base_url() . 'index.php?admin/batch/', 'refresh');
         }
-        $page_data['batches'] = $this->db->get('batch')->result_array();
-        $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result_array();
+         $page_data['batches'] = $this->db->get('batch')->result_array();
+        $page_data['degree'] = $this->db->get('degree')->result_array();
+        $page_data['course']=$this->db->get('course')->result();
         $page_data['page_name'] = 'batch';
         $page_data['page_title'] = 'Batch Management';
         $this->load->view('backend/index', $page_data);
