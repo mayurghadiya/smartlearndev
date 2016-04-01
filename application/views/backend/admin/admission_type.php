@@ -118,20 +118,32 @@
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script>
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.validate.min.js"></script>
 <script type="text/javascript">
-	$.validator.setDefaults({
-		submitHandler: function(form) {			
-			form.submit();
-		}
-	});
 	
 	$().ready(function() {	
 		$("#frmadmission_type").validate({		
 			rules: {
 				at_name: "required",
+                                 at_name: 
+                                    {
+                                        required:true,
+                                        remote: {
+                                          url: "<?php echo base_url().'index.php?admin/check_admission_type'; ?>",
+                                          type: "post",
+                                          data: {
+                                            admission_type: function() {
+                                              return $( "#at_name" ).val();
+                                            },
+                                          }
+                                        }
+                                    },
 				at_status: "required",
 			},
 			messages: {
-				at_name: "Please enter admission type Name",
+				at_name:
+                                {
+                                     required:"Enter admission type name",
+                                    remote:"Record is already present in the system",
+                                },                    
 				at_status: "Please slect admission status",
 			}
 		});
