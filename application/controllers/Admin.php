@@ -846,7 +846,18 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Semester Management';
         $this->load->view('backend/index', $page_data);
     }
-
+    function check_semester()
+    {
+          $data=$this->db->get_where('semester',array('s_name'=>$this->input->post('semester')))->result();
+        if(count($data) > 0)
+        {
+            echo "false";
+        }
+        else
+        {
+            echo "true";
+        }
+    }
     function admission_type($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
@@ -3375,6 +3386,17 @@ class Admin extends CI_Controller {
             echo "true";
         }
     }
+    
+    function checksubjects()
+    {
+         $eid = $this->input->post('subname');
+        $subcode = $this->input->post('subcode');
+        $course = $this->input->post('course');
+        $semester = $this->input->post('semester');
+        $data = $this->db->get_where('subject_manager', array("sm_course_id" => $course, "sm_sem_id" => $semester, "subject_name" => $eid, "subject_code" => $subcode))->result_array();
+       echo json_encode($data);
+    }
+    
 
     function checksubcode() {
 
