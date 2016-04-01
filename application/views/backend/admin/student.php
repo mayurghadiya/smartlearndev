@@ -87,63 +87,65 @@
                                     <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Name</label>
+                                            <label class="col-sm-3 control-label">Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="name" id="name" />
                                             </div>
                                         </div>												
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">First Name</label>
+                                            <label class="col-sm-3 control-label">First Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="f_name" id="f_name" />
                                             </div>
                                         </div>												
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Last Name</label>
+                                            <label class="col-sm-3 control-label">Last Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="l_name" id="l_name" />
                                             </div>
                                         </div>												
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Email Id</label>
+                                            <label class="col-sm-3 control-label">Email Id<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="email_id" id="email_id" onblur="return checkemail(this.value);"  />
                                                 <span id="emailerror" style="color: red"></span>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Password</label>
+                                            <label class="col-sm-3 control-label">Password<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="password" class="form-control" name="password" id="password" />
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Gender</label>
+                                            <label class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="radio" name="gen" value="male" >Male
                                                 <input type="radio" name="gen" value="female" >Female
                                             </div>
+                                            <div class="col-sm-5">
+                                            <label for="gen" class="error"></label></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Address</label>
+                                            <label class="col-sm-3 control-label">Address<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="address" id="address" ></textarea>
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">City</label>
+                                            <label class="col-sm-3 control-label">City<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="city" id="city" />
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Zip</label>
+                                            <label class="col-sm-3 control-label">Zip<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="zip" id="zip" />
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Birth Date</label>
+                                            <label class="col-sm-3 control-label">Birth Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="birthdate" id="birthdate" />
                                             </div>
@@ -160,8 +162,8 @@
                                                 </select>
                                             </div>
                                         </div>	
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
                                                     <option value="">Select Degree</option>
@@ -176,8 +178,8 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                          <div class="form-group">
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
@@ -193,7 +195,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="batch" id="batch">
                                                     <option value="">Select batch</option>
@@ -210,7 +212,7 @@
                                         </div>	
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester</label>
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
                                                     <option value="">Select semester</option>
@@ -226,7 +228,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Mobile No</label>
+                                            <label class="col-sm-3 control-label">Mobile No<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="mobileno" id="mobileno" />
                                             </div>
@@ -256,7 +258,7 @@
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Admission Type</label>
+                                            <label class="col-sm-3 control-label">Admission Type<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="admissiontype" id="admissiontype">
                                                     <option value="">Select admission type</option>
@@ -272,7 +274,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Profile Photo</label>
+                                            <label class="col-sm-3 control-label">Profile Photo<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="profilefile" id="profilefile" onchange="return filecheck(this.value);" />
                                                 <span id="imgerror" style="color:red;"></span>
@@ -354,22 +356,20 @@
                                                         }, 'Please enter a valid email address.');
 
                                                         jQuery.validator.addMethod("character", function (value, element) {
-                                                            return this.optional(element) || /^[A-z]+$/.test(value);
+                                                            return this.optional(element) || /^[A-z ]+$/.test(value);
                                                         }, 'Please enter a valid character.');
 
                                                         jQuery.validator.addMethod("zip_code", function (value, element) {
                                                             return this.optional(element) || /^[0-9]{6}$/.test(value);
                                                         }, 'Please enter a valid zip code.');
 
-                                                        jQuery.validator.addMethod("url", function (value, element) {
-                                                            return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
-                                                        }, 'Please enter a valid URL.');
 
                                                         $("#frmstudent").validate({
                                                             rules: {
                                                                 name:
                                                                         {
                                                                             required: true,
+                                                                            character: true,
                                                                         },
                                                                 f_name:
                                                                         {
@@ -415,13 +415,18 @@
                                                                             required: true,
                                                                             zip_code: true,
                                                                         },
+                                                                address:"required",
+                                                                degree:"required",
+                                                                course:"required",
+                                                                batch:"required",
+                                                                semester:"required",
                                                                 facebook:
                                                                         {
-                                                                            url: true,
+                                                                            url2: true,
                                                                         },
                                                                 twitter:
                                                                         {
-                                                                            url: true,
+                                                                            url2: true,
                                                                         },
                                                                 admissiontype: "required",
                                                                 profilefile: {
@@ -432,46 +437,54 @@
                                                             messages: {
                                                                 name:
                                                                         {
-                                                                            required: "Please enter name",
+                                                                            required: "Enter name",
+                                                                            character: "Enter valid name",
                                                                         },
                                                                 f_name:
                                                                         {
-                                                                            required: "Please enter first name",
-                                                                            character: "Please enter valid name",
+                                                                            required: "Enter first name",
+                                                                            character: "Enter valid name",
                                                                         },
                                                                 l_name:
                                                                         {
-                                                                            required: "Please enter last name",
-                                                                            character: "Please enter valid name",
+                                                                            required: "Enter last name",
+                                                                            character: "Enter valid name",
                                                                         },
                                                                 email_id: {
-                                                                    required: "Please enter email id",
-                                                                    email_id: "Please enter valid email id",
-                                                                    remote: "Email id already exists",
+                                                                    required: "Enter email id",
+                                                                    email_id: "Enter valid email id",
+                                                                    remote:"Email id already exists",
+                                                                    
+                                                                    
                                                                 },
-                                                                password: "Please enter password",
-                                                                gen: "Please slect gender",
-                                                                birthdate: "Please select birthdate",
+                                                                password: "Enter password",
+                                                                gen: "Slect gender",
+                                                                birthdate: "Select birthdate",
                                                                 mobileno:
                                                                         {
-                                                                            required: "Please enter mobile no",
-                                                                            maxlength: "Please enter maximum 10 digit number",
-                                                                            mobile_no: "Please enter valid mobile number",
-                                                                            minlength: "Please enter minimum 10 digit number",
+                                                                            required: "Enter mobile no",
+                                                                            maxlength: "Enter maximum 10 digit number",
+                                                                            mobile_no: "Enter valid mobile number",
+                                                                            minlength: "Enter minimum 10 digit number",
                                                                         },
                                                                 city:
                                                                         {
-                                                                            required: "Please enter city",
-                                                                            character: "Please enter valid city name",
+                                                                            required: "Enter city",
+                                                                            character: "Enter valid city name",
                                                                         },
+                                                                address:"Enter address",
                                                                 zip:
                                                                         {
-                                                                            required: "Please enter zip code",
+                                                                            required: "Enter zip code",
                                                                         },
-                                                                admissiontype: "Plese select admission type",
+                                                                degree:"Select degree",
+                                                                course:"Select course",
+                                                                batch:"Select batch",
+                                                                semester:"Select semester",
+                                                                admissiontype: "Select admission type",
                                                                 profilefile: {
-                                                                    required: "Plese upload image",
-                                                                    extension: "Invalid File",
+                                                                    required:"Upload image",
+                                                                    extension:"Upload valid file",
                                                                 }
                                                             }
                                                         });

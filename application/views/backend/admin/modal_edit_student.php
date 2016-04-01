@@ -17,31 +17,31 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <form name="frmstudentedit" id="frmstudentedit" method="post" action="<?=base_url()?>index.php?admin/student/do_update/<?php echo $row['std_id']?>" enctype="multipart/form-data" class="form-horizontal form-groups-bordered validate"> 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Name</label>
+                                    <label class="col-sm-3 control-label">Name<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="name" id="name" value="<?php echo $row['name']; ?>"  />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">First Name</label>
+                                    <label class="col-sm-3 control-label">First Name<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="f_name" id="f_name" value="<?php echo $row['std_first_name']; ?>"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Last Name</label>
+                                    <label class="col-sm-3 control-label">Last Name<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="l_name" id="l_name" value="<?php echo $row['std_last_name'] ?>"/>
                                     </div>
                                 </div>												
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Email Id</label>
+                                    <label class="col-sm-3 control-label">Email Id<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="email_id" id="email_id" value="<?php echo $row['email'] ?>"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Gender</label>
+                                    <label class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <?php
                                         $male = "";
@@ -57,25 +57,25 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Address</label>
+                                    <label class="col-sm-3 control-label">Address<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <textarea class="form-control" name="address" id="address"><?php echo $row['address'] ?></textarea>
                                     </div>
                                 </div>	
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">City</label>
+                                    <label class="col-sm-3 control-label">City<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="city" id="city" value="<?php echo $row['city'] ?>"/>
                                     </div>
                                 </div>	
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Zip</label>
+                                    <label class="col-sm-3 control-label">Zip<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="zip" id="zip" value="<?php echo $row['zip'] ?>"/>
                                     </div>
                                 </div>	
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Birth Date</label>
+                                    <label class="col-sm-3 control-label">Birth Date<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="birthdate1" id="birthdate1" value="<?php echo $row['std_birthdate'] ?>" />
                                     </div>
@@ -108,7 +108,7 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                  <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
                                                     <option value="">Select Degree</option>
@@ -125,7 +125,7 @@ foreach ($edit_data as $row):
                                         </div>
                                 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Select Course</label>
+                                    <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <select name="course" id="course2">
                                             <option value="">Select course</option>
@@ -148,7 +148,7 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Select Branch</label>
+                                    <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <select name="batch" id="batch2">
                                             <option value="">Select branch</option>
@@ -171,7 +171,7 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>	
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Select Semester</label>
+                                    <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <select name="semester" id="semester">
                                             <option value="">Select semester</option>
@@ -194,7 +194,7 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Mobile No</label>
+                                    <label class="col-sm-3 control-label">Mobile No<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control" name="mobileno" id="mobileno"  value="<?php echo $row['std_mobile'] ?>"/>
                                     </div>
@@ -224,7 +224,7 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>	
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Admission Type</label>
+                                    <label class="col-sm-3 control-label">Admission Type<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
 
                                         <select name="admissiontype" id="admissiontype">
@@ -362,54 +362,72 @@ required: true,
                             required: true,
                             zip_code: true,
                         },
+                        address:"required",
+                        degree:"required",
+                        course:"required",
+                        batch:"required",
+                        semester:"required",
+                        facebook:
+                            {
+                                url2: true,
+                            },
+                         twitter:
+                            {
+                                url2: true,
+                            },
                 profilefile:
                         {
-                            extension: 'gif|jpg|png',
+                            extension: 'gif|jpg|png|jpeg',
                         },
                 admissiontype: "required",
             },
             messages: {
                 name: {
-                    required: "Please enter name",
+                    required: "Enter name",
                 },
                 f_name:
                         {
-required: "Please enter first name",
-                            character: "Please enter valid name",
+                            required: "Enter first name",
+                            character: "Enter valid name",
                         },
                 l_name:
                         {
-required: "Please enter last name",
-                            character: "Please enter valid name",
+                            required: "Enter last name",
+                            character: "Enter valid name",
                         },
                 email_id: {
-                    required: "Please enter email id",
+                    required: "Enter email id",
                 },
-                password: "Please enter password",
-                gen: "Please slect gender",
-                birthdate1: "Please select birthdate",
-                address: "Please enter address",
+                password: "Enter password",
+                gen: "Slect gender",
+                birthdate1: "Select birthdate",
+                address: "Enter address",
                 mobileno:
                         {
-                            required: "Please enter mobile no",
-                            maxlength: "Please enter maximum 10 digit number",
-                            mobile_no: "Please enter valid mobile number",
-                            minlength: "Please enter minimum 10 digit number",
+                            required: "Enter mobile no",
+                            maxlength: "Enter maximum 10 digit number",
+                            mobile_no: "Enter valid mobile number",
+                            minlength: "Enter minimum 10 digit number",
                         },
                 city:
                         {
-                            required: "Please enter city",
-                            character: "Please enter valid city name",
+                            required: "Enter city",
+                            character: "Enter valid city name",
                         },
                 zip:
                         {
-                            required: "Please enter zip code",
+                            required: "Enter zip code",
                         },
+                        degree:"Select degree",
+                        course:"Select course",
+                        batch:"Select batch",
+                        semester:"Select semester",
+                         
                 profilefile:
                         {
-                            extension: 'please upload folloeing formate gif|jpg|png file',
+                            extension: 'Upload valid file',
                         },
-                admissiontype: "Plese select admission type",
+                admissiontype: "Select admission type",
             }
         });
     });

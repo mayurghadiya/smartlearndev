@@ -407,9 +407,24 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Result Management';
         $this->load->view('backend/index', $page_data);
     }
+    
+    function get_recourse($d_id='')
+    {
+        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+        $this->db->where($where);
+        $batch = $this->db->get('course')->result_array();
+        echo '<option value="">Select course</option>';
+        foreach ($batch as $row) {
+            echo '<option value="' . $row['course_id'] . '">' . $row['c_name'] . '</option>';
+        }
+        
+    }
 
-    function get_batch($d_id) {
-        $batch = $this->db->get_where('batch', array('degree_id' => $d_id))->result_array();
+    function get_batch($c_id='',$d_id='') {
+        $where = "FIND_IN_SET('".$c_id."', course_id)";  
+        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+        $this->db->where($where);
+        $batch = $this->db->get('batch')->result_array();
         echo '<option value="">Select Batch</option>';
         foreach ($batch as $row) {
             echo '<option value="' . $row['b_id'] . '">' . $row['b_name'] . '</option>';
@@ -417,7 +432,7 @@ class Admin extends CI_Controller {
     }
 
     function get_sem($s_id) {
-        $sem = $this->db->get_where('semester', array('batch_id' => $s_id))->result_array();
+        $sem = $this->db->get('semester')->result_array();
         echo '<option value="">Select Semester</option>';
         foreach ($sem as $srow) {
             echo '<option value="' . $srow['s_id'] . '">' . $srow['s_name'] . '</option>';
