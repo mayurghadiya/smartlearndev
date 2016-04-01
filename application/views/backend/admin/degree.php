@@ -112,8 +112,7 @@
 
         $().ready(function () {
             $("#degreeform").validate({
-                rules: {
-                  
+                rules: {                  
                      d_name: 
                         {
                             required:true,
