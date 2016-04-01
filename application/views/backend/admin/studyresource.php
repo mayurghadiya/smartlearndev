@@ -297,7 +297,7 @@ foreach ($datasem as $rowsem) {
                                                                             },                                                                    
                                                                     title:
                                                                             {
-                                                                                required: true,                                                                             
+                                                                                required: true,                                                                              
                                                                             },
                                                                     resourcefile:{
 									required: true,
