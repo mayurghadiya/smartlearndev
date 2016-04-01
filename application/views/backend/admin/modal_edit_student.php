@@ -40,6 +40,12 @@ foreach ($edit_data as $row):
                                         <input type="text" class="form-control" name="email_id" id="email_id" value="<?php echo $row['email'] ?>"/>
                                     </div>
                                 </div>
+                                 <div class="form-group">
+                                            <label class="col-sm-3 control-label">Password<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="password" class="form-control" name="password" id="password"  value="<?php echo $row['real_pass'] ?>" />
+                                            </div>
+                                        </div>	
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
