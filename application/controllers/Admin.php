@@ -1028,6 +1028,7 @@ class Admin extends CI_Controller {
                 }
             }
             $data['email'] = $this->input->post('email_id');
+            $data['password'] = md5($this->input->post('password'));
             $data['name'] = $this->input->post('name');
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
