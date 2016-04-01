@@ -140,6 +140,7 @@ foreach ($datasem as $rowsem) {
                                                     }
                                                     ?>
                                                 </select>
+                                                 <lable class="error" id="error_lable_exist" style="color:red"></lable>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -162,6 +163,38 @@ foreach ($datasem as $rowsem) {
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
+        
+         $( "#frmsubject" ).submit(function( event ) {
+          if($("#subname").val()!=null & $("#semester").val()!=null & $("#subcode").val()!=null & $("#course").val()!=null )
+          { 
+         $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/checksubjects'; ?>",
+                    dataType:'json',
+                   data:
+                        {
+                            'subname':$("#subname").val(),
+                            'semester':$("#semester").val(),
+                            'subcode':$("#subcode").val(),
+                            'course':$("#course").val()
+                        }, 
+                                success:function(response){
+                                    if(response.length == 0){
+                                         $("#error_lable_exist").html('');
+                                    $('#frmsubject').attr('validated',true);
+                                    $('#frmsubject').submit();
+                                     } else
+                                         {
+                                             $("#error_lable_exist").html('Record is already present in the system');
+                                         return false;
+                                     }
+                    }
+                });
+                    return false; 
+                    }
+        event.preventDefault();
+      });
+        
         $(document).ready(function(){
         $("#subname").change(function(){ 
            $('#semester').val($("#semester option:eq(0)").val());
@@ -187,43 +220,15 @@ foreach ($datasem as $rowsem) {
                                                                       subname:"required",                                                                  
                                                                     subcode:"required",
                                                                     course:"required",
-                                                                    semester: {
-                                                                        required:true,
-                                                                        remote: {
-                                                                                        url: "<?=base_url()?>index.php?admin/checksubject",
-                                                                                        type: "post",
-                                                                                        async:false,
-                                                                                        data: {
-                                                                                            subname: function() {
-                                                                                                
-                                                                                                return $( "#subname" ).val();
-                                                                                            },
-                                                                                            subcode: function() {
-                                                                                                
-                                                                                                return $( "#subcode" ).val();
-                                                                                            },
-                                                                                            course: function() {
-                                                                                                
-                                                                                                return $( "#course" ).val();
-                                                                                            },
-                                                                                            semester: function() {
-                                                                                                
-                                                                                                return $( "#semester" ).val();
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                        
-                                                                    }
+                                                                    semester:"required"
                                                                 },
                                                                 messages: {
                                                                   
                                                                 subname: "Enter subject name",
                                                                  subcode: "Enter subject code",                                                                  
                                                                     course: "Select course",
-                                                                    semester: {
-                                                                        required:"Select semester",
-                                                                        remote:"subject already exists in this course and semester",
-                                                                    },
+                                                                    semester: "Select semester",
+                                                                        
                                                                 }
                                                             });
                                                         });
