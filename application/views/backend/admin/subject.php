@@ -162,13 +162,17 @@ foreach ($datasem as $rowsem) {
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-        /*$(document).ready(function(){
-        $("#subname").change(function(){        
-        
-          
+        $(document).ready(function(){
+        $("#subname").change(function(){ 
            $('#semester').val($("#semester option:eq(0)").val());
         });
-        });*/
+        $("#course").change(function(){
+             $('#semester').val($("#semester option:eq(0)").val());
+        });
+        $("#subcode").change(function(){
+              $('#semester').val($("#semester option:eq(0)").val());
+        });
+        });
                                                         $.validator.setDefaults({
                                                             submitHandler: function (form) {
                                                                 form.submit();
@@ -188,6 +192,7 @@ foreach ($datasem as $rowsem) {
                                                                         remote: {
                                                                                         url: "<?=base_url()?>index.php?admin/checksubject",
                                                                                         type: "post",
+                                                                                        async:false,
                                                                                         data: {
                                                                                             subname: function() {
                                                                                                 
