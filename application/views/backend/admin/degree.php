@@ -113,11 +113,29 @@
         $().ready(function () {
             $("#degreeform").validate({
                 rules: {
-                    d_name: "required",
+                  
+                     d_name: 
+                        {
+                            required:true,
+                            remote: {
+                              url: "<?php echo base_url().'index.php?admin/check_degree'; ?>",
+                              type: "post",
+                              data: {
+                                course: function() {
+                                  return $( "#d_name" ).val();
+                                },
+                              }
+                            }
+                        },
                     degree_status: "required",
                 },
                 messages: {
-                    d_name: "Degree name",
+                    d_name:
+                    {
+                         required:"Enter degree name",
+                        remote:"Record is already present in the system",
+                    },
+                    
                     degree_status: "Degree status",
                 }
             });
