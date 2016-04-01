@@ -146,8 +146,14 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Status</label>
                                             <div class="col-sm-5">
-                                                <input type="checkbox" data-rel="switch" name="center_status" value="1" data-size="mini" data-wrapper-class="yellow" checked>									
-                                            </div>	
+                                                <select name="batch_status">
+                                                    <option value="1">Active</option>
+                                                    <option value="0">Inactive</option>	
+                                                </select>
+                                                <lable class="error" id="error_lable_exist" style="color:red"></lable>
+                                            	
+                                            </div>
+                                             
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
