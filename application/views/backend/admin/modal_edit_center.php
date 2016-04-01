@@ -68,13 +68,15 @@ foreach ( $edit_data as $row):
                                 <input type="text" class="form-control" name="settingno" id="settingno" value="<?php echo $row['setting_number']?>"/>
                             </div>
                         </div>
-                            
+                       
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-5">
-                                <input type="checkbox" data-rel="switch" name="batch_status" value="1" data-size="mini" data-wrapper-class="yellow" <?php if($row['center_status'] == 1) { ?> checked <?php } ?>>
-                            </div>
-                            
+                                <select name="batch_status">
+                                    <option value="1" <?php if($row['center_status'] == '1'){ echo "selected"; } ?>>Active</option>
+                                    <option value="0" <?php if($row['center_status'] == '0'){ echo "selected"; } ?>>Inactive</option>	
+                                </select>	
+                            </div>	
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
