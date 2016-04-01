@@ -46,7 +46,7 @@
                                                 <?php echo $row->paid_amount; ?>
                                             </td>
                                             <td>Paid</td>
-                                            <td><?php echo date('d-m-Y h:m A', strtotime($row->paid_created_at)); ?></td>
+                                            <td><?php echo date('F d, Y h:m A', strtotime($row->paid_created_at)); ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
@@ -55,7 +55,7 @@
                                                     <ul class="dropdown-menu dropdown-default pull-right" role="menu">
                                                         <!-- VIEWING LINK -->
                                                         <li>
-                                                            <a href="<?php echo base_url('index.php?student/invoice/' . $row->fees_structure_id); ?>" >
+                                                            <a href="<?php echo base_url('index.php?student/invoice/' . $row->student_fees_id); ?>" >
 
                                                                 View Invoice
                                                             </a>

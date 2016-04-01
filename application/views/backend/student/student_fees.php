@@ -232,7 +232,6 @@
         $("#student_fees").validate({
         rules: {
              title:{required: true},
-             description: "required",
              date:"required",
              semester:"required",
              fees_structure:"required",
@@ -241,7 +240,6 @@
         },
         messages: {
             title: "Title is required",
-            description: "Description is required",
             date: "Date is required",
             semester:"Semester is required",
             fees_structure:"Fees structure is required",
