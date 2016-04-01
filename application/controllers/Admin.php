@@ -158,8 +158,34 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Course Management';
         $this->load->view('backend/index', $page_data);
     }
-
-    function get_cource_multiple($param = '') {
+    function check_course()
+    {
+        $data=$this->db->get_where('course',array('c_name'=>$this->input->post('course'),
+                            'degree_id'=>$this->input->post('degree')))->result();
+      
+        if(count($data) > 0)
+        {
+            echo "false";
+        }
+        else
+        {
+            echo "true";
+        }
+    }
+    function check_degree()
+    {
+        $data=$this->db->get_where('degree',array('d_name'=>$this->input->post('course')))->result();
+        if(count($data) > 0)
+        {
+            echo "false";
+        }
+        else
+        {
+            echo "true";
+        }
+    }
+    
+            function get_cource_multiple($param = '') {
         $did = implode(',', $this->input->post("degree"));
         $courceid = explode(',', $this->input->post("courseid"));
         $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();

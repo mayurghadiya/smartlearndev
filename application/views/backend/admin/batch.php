@@ -135,9 +135,11 @@
                                                 <select name="batch_status">
                                                     <option value="1">Active</option>
                                                     <option value="0">Inactive</option>	
-                                                </select>	
+                                                </select>
+                                                <lable class="error" id="error_lable_exist" style="color:red"></lable>
+                                            	
                                             </div>
-                                            <lable class="col-sm-3 control-label" id="error_lable_exist"></lable>
+                                             
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
@@ -178,7 +180,7 @@
                                     $('#batchform').submit();
                                      } else
                                          {
-                                             $("#error_lable_exist").val('Record is already present in the system');
+                                             $("#error_lable_exist").html('Record is already present in the system');
                                          return false;
                                      }
                     }
