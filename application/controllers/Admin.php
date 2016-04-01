@@ -116,7 +116,7 @@ class Admin extends CI_Controller {
       Auth : Brij  Dhami
       /******** */
 
-   function courses($param1 = '', $param2 = '') {
+    function courses($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
@@ -136,12 +136,11 @@ class Admin extends CI_Controller {
             $data['course_alias_id'] = $this->input->post('course_alias_id');
             $data['c_description'] = $this->input->post('c_description');
             $data['course_status'] = $this->status($this->input->post('course_status'));
-              $data['degree_id'] = $this->input->post('degree');
+            $data['degree_id'] = $this->input->post('degree');
             $this->db->where('course_id', $param2);
             $this->db->update('course', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
             redirect(base_url() . 'index.php?admin/courses/', 'refresh');
-            
         } else if ($param1 == 'edit') {
             $page_data['edit_data'] = $this->db->get_where('course', array(
                         'course_id' => $param2
@@ -159,21 +158,20 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Course Management';
         $this->load->view('backend/index', $page_data);
     }
-function get_cource_multiple($param='')
-        {
-           $did = $this->input->post("degree");
-            if($did!='default')
-            {
-            $cource =  $this->db->query("select * from course where degree_id in($did)")->result_array();
-         
-            $html = '<option value="default">Select Course</option>';              
-          foreach($cource as $c)
-          {
-             $html .='<option value="'.$c['course_id'].'">'.$c['c_name'].'</option>';
-          }
-           echo $html;    
-            }        
+
+    function get_cource_multiple($param = '') {
+        $did = $this->input->post("degree");
+        if ($did != 'default') {
+            $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
+
+            $html = '<option value="default">Select Course</option>';
+            foreach ($cource as $c) {
+                $html .='<option value="' . $c['course_id'] . '">' . $c['c_name'] . '</option>';
+            }
+            echo $html;
         }
+    }
+
     /*     * *MANAGE Events
       Auth : Brij  Dhami
       /******** */
@@ -409,9 +407,24 @@ function get_cource_multiple($param='')
         $page_data['page_title'] = 'Result Management';
         $this->load->view('backend/index', $page_data);
     }
+    
+    function get_recourse($d_id='')
+    {
+        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+        $this->db->where($where);
+        $batch = $this->db->get('course')->result_array();
+        echo '<option value="">Select course</option>';
+        foreach ($batch as $row) {
+            echo '<option value="' . $row['course_id'] . '">' . $row['c_name'] . '</option>';
+        }
+        
+    }
 
-    function get_batch($d_id) {
-        $batch = $this->db->get_where('batch', array('degree_id' => $d_id))->result_array();
+    function get_batch($c_id='',$d_id='') {
+        $where = "FIND_IN_SET('".$c_id."', course_id)";  
+        $where = "FIND_IN_SET('".$d_id."', degree_id)";  
+        $this->db->where($where);
+        $batch = $this->db->get('batch')->result_array();
         echo '<option value="">Select Batch</option>';
         foreach ($batch as $row) {
             echo '<option value="' . $row['b_id'] . '">' . $row['b_name'] . '</option>';
@@ -419,7 +432,7 @@ function get_cource_multiple($param='')
     }
 
     function get_sem($s_id) {
-        $sem = $this->db->get_where('semester', array('batch_id' => $s_id))->result_array();
+        $sem = $this->db->get('semester')->result_array();
         echo '<option value="">Select Semester</option>';
         foreach ($sem as $srow) {
             echo '<option value="' . $srow['s_id'] . '">' . $srow['s_name'] . '</option>';
@@ -450,7 +463,7 @@ function get_cource_multiple($param='')
         $query = $this->db->get();
         $file = FCPATH . 'event.humanDate.json.php';
         $result = json_encode($query->result());
-        
+
         //$result = ltrim($result, '[');
         //$result = rtrim($result, ']');
         //echo '<pre>';
@@ -471,7 +484,7 @@ function get_cource_multiple($param='')
         $line_i_am_looking_for = 2;
         $lines = file($file, FILE_IGNORE_NEW_LINES);
         $lines[$line_i_am_looking_for] = "\$_SESSION['username'] = '$name';\n";
-        file_put_contents($file, implode("\n", $lines));
+        //file_put_contents($file, implode("\n", $lines));
     }
 
     //Starting Herry Patel
@@ -641,76 +654,77 @@ function get_cource_multiple($param='')
         $out = array('assigned_module_list' => $assigned_module_list, 'full_module_list' => $full_module_list);
         echo json_encode($out);
     }
- //created by nikita 
-    function center($param1 = '', $param2 = '')
-    {
+
+    //created by nikita 
+    function center($param1 = '', $param2 = '') {
         if ($param1 == 'create') {
-                $data['center_name']  = $this->input->post('centername');
-                $data['name'] = $this->input->post('center_contactname');
-                $data['emailid'] = $this->input->post('email');
-                $data['contactno'] =$this->input->post('contactno');
-                $data['password'] =md5($this->input->post('password'));
-                $data['city'] =$this->input->post('city');
-                $data['zipcode'] =$this->input->post('zipcode');
-                $data['address'] =$this->input->post('address');
-                $data['setting_number'] =$this->input->post('settingno');
-                $data['real_password'] =$this->input->post('password');
-                $data['created_date'] =date("Y-m-d");
-                $data['center_status'] =1;				
-                    
-                $this->db->insert('center_user', $data);
-                $this->session->set_flashdata('flash_message' ,'data added successfully');
-                redirect(base_url() . 'index.php?admin/center/', 'refresh');
+            $data['center_name'] = $this->input->post('centername');
+            $data['name'] = $this->input->post('center_contactname');
+            $data['emailid'] = $this->input->post('email');
+            $data['contactno'] = $this->input->post('contactno');
+            $data['password'] = md5($this->input->post('password'));
+            $data['city'] = $this->input->post('city');
+            $data['zipcode'] = $this->input->post('zipcode');
+            $data['address'] = $this->input->post('address');
+            $data['setting_number'] = $this->input->post('settingno');
+            $data['real_password'] = $this->input->post('password');
+            $data['created_date'] = date("Y-m-d");
+            $data['center_status'] = 1;
+
+            $this->db->insert('center_user', $data);
+            $this->session->set_flashdata('flash_message', 'data added successfully');
+            redirect(base_url() . 'index.php?admin/center/', 'refresh');
         }
-        if ($param1 == 'do_update') {				
-                $data['center_name']  = $this->input->post('centername');
-                $data['name'] = $this->input->post('center_contactname');
-                $data['emailid'] = $this->input->post('email');
-                $data['contactno'] =$this->input->post('contactno');
-                $data['password'] =md5($this->input->post('password'));
-                $data['city'] =$this->input->post('city');
-                $data['zipcode'] =$this->input->post('zipcode');
-                $data['address'] =$this->input->post('address');
-                $data['setting_number'] =$this->input->post('settingno');
-                    
-                $this->db->where('center_id', $param2);
-                $this->db->update('center_user', $data);
-                $this->session->set_flashdata('flash_message' , get_phrase('data_updated'));
-                redirect(base_url() . 'index.php?admin/center/', 'refresh');
-                }
-                    
+        if ($param1 == 'do_update') {
+            $data['center_name'] = $this->input->post('centername');
+            $data['name'] = $this->input->post('center_contactname');
+            $data['emailid'] = $this->input->post('email');
+            $data['contactno'] = $this->input->post('contactno');
+            $data['password'] = md5($this->input->post('password'));
+            $data['city'] = $this->input->post('city');
+            $data['zipcode'] = $this->input->post('zipcode');
+            $data['address'] = $this->input->post('address');
+            $data['setting_number'] = $this->input->post('settingno');
+
+            $this->db->where('center_id', $param2);
+            $this->db->update('center_user', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            redirect(base_url() . 'index.php?admin/center/', 'refresh');
+        }
+
         if ($param1 == 'delete') {
-                $this->db->where('center_id',$param2);
-                $this->db->delete('center_user');
-                $this->session->set_flashdata('flash_message' , get_phrase('data_added_successfully'));
-                redirect(base_url() . 'index.php?admin/center/', 'refresh');
+            $this->db->where('center_id', $param2);
+            $this->db->delete('center_user');
+            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            redirect(base_url() . 'index.php?admin/center/', 'refresh');
         }
-            
-        $page_data['centeruser']    = $this->db->get('center_user')->result();
-        $page_data['page_name']  = 'center';
+
+        $page_data['centeruser'] = $this->db->get('center_user')->result();
+        $page_data['page_name'] = 'center';
         $page_data['page_title'] = 'Exam Center Management';
         $this->load->view('backend/index', $page_data);
     }
+
     // End Herry Patel
     //created by nikita 
-     function batch($param1 = '', $param2 = '') {
+    function batch($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
 
             $data['b_name'] = $this->input->post('b_name');
-            $data['degree_id'] = implode(',',$this->input->post('degree'));
-            $data['course_id'] =implode(',',$this->input->post('course'));
+            $data['degree_id'] = implode(',', $this->input->post('degree'));
+            $data['course_id'] = implode(',', $this->input->post('course'));
             $data['b_status'] = $this->status($this->input->post('batch_status'));
-            $data['created_date'] = date('Y-m-d');          
+            $data['created_date'] = date('Y-m-d');
             $this->db->insert('batch', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
             redirect(base_url() . 'index.php?admin/batch/', 'refresh');
         }
         if ($param1 == 'do_update') {
-            $data['b_name'] = $this->input->post('b_name');            
-           $data['degree_id'] = implode(',',$this->input->post('degree1'));
-            $data['course_id'] =implode(',',$this->input->post('course1'));
+            $data['b_name'] = $this->input->post('b_name');
+            $data['degree_id'] = implode(',', $this->input->post('degree1'));
+            $data['course_id'] = implode(',', $this->input->post('course1'));
             $data['b_status'] = $this->status($this->input->post('batch_status'));
             $this->db->where('b_id', $param2);
             $this->db->update('batch', $data);
@@ -724,7 +738,7 @@ function get_cource_multiple($param='')
             redirect(base_url() . 'index.php?admin/batch/', 'refresh');
         }
         $page_data['batches'] = $this->db->get('batch')->result_array();
-         $page_data['degree'] = $this->db->get_where('degree',array('d_status'=>1))->result_array();
+        $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result_array();
         $page_data['page_name'] = 'batch';
         $page_data['page_title'] = 'Batch Management';
         $this->load->view('backend/index', $page_data);
@@ -836,56 +850,52 @@ function get_cource_multiple($param='')
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
 
-            if ($_FILES['profilefile']['name']!='') {
-	
-		  $config['upload_path'] = 'uploads/student_image';
+            if ($_FILES['profilefile']['name'] != '') {
+
+                $config['upload_path'] = 'uploads/student_image';
                 $config['allowed_types'] = 'gif|jpg|png';
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
 
                 if (!$this->upload->do_upload('profilefile')) {
-                      $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/student/', 'refresh');
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/student/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['profile_photo'] = $file['file_name'];
-  		//$file_url = base_url().'uploads/project_file/'.$data['lm_filename'];
+                    //$file_url = base_url().'uploads/project_file/'.$data['lm_filename'];
                 }
 
-		/*
-                $ext_img = explode(".",$_FILES['profilefile']['name']);
-             $ext = strtolower(end($ext_img));
-            
-                $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                $ext_arr = explode("|",$config['allowed_types']);
-                
-                if(in_array($ext, $ext_arr))
-                {
-$config['file_name'] = date('dmYhis').'.'.$ext;
-                 $config['upload_path'] = 'uploads/student_image';
-                //$config['allowed_types'] = 'gif|jpg|png';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                $data['profile_photo'] = $config['file_name'];
-                 $this->upload->do_upload('profilefile');
+                /*
+                  $ext_img = explode(".",$_FILES['profilefile']['name']);
+                  $ext = strtolower(end($ext_img));
 
-                
-                }
-                else{
-                    
-                       //$data = array('msg' => $this->upload->display_errors());
-                     $this->session->set_flashdata("flash_message",'Invalid Image!');
-                     redirect(base_url() . 'index.php?admin/student/', 'refresh');
-                
-                }
-*/
-                
-                
-             
-            }
-            else{
-                
-                 $data['profile_photo'] = '';
+                  $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                  $ext_arr = explode("|",$config['allowed_types']);
+
+                  if(in_array($ext, $ext_arr))
+                  {
+                  $config['file_name'] = date('dmYhis').'.'.$ext;
+                  $config['upload_path'] = 'uploads/student_image';
+                  //$config['allowed_types'] = 'gif|jpg|png';
+                  $this->load->library('upload', $config);
+                  $this->upload->initialize($config);
+                  $data['profile_photo'] = $config['file_name'];
+                  $this->upload->do_upload('profilefile');
+
+
+                  }
+                  else{
+
+                  //$data = array('msg' => $this->upload->display_errors());
+                  $this->session->set_flashdata("flash_message",'Invalid Image!');
+                  redirect(base_url() . 'index.php?admin/student/', 'refresh');
+
+                  }
+                 */
+            } else {
+
+                $data['profile_photo'] = '';
             }
             $data['email'] = $this->input->post('email_id');
             $data['name'] = $this->input->post('name');
@@ -910,7 +920,7 @@ $config['file_name'] = date('dmYhis').'.'.$ext;
             $data['user_type'] = $this->input->post('usertype');
             $data['admission_type_id'] = $this->input->post('admissiontype');
             $data['std_status'] = 1;
- $data['std_degree'] =  $this->input->post('degree');
+            $data['std_degree'] = $this->input->post('degree');
             $data['created_date'] = date('Y-m-d');
             //roll no
             $this->db->insert('student', $data);
@@ -927,43 +937,36 @@ $config['file_name'] = date('dmYhis').'.'.$ext;
             redirect(base_url() . 'index.php?admin/student/', 'refresh');
         }
         if ($param1 == 'do_update') {
-             if ($_FILES['profilefile']['name'] != "") {
+            if ($_FILES['profilefile']['name'] != "") {
 
-                  
-                   
-                   
-                    $ext_img = explode(".",$_FILES['profilefile']['name']);
-             $ext = strtolower(end($ext_img));
-            
+
+
+
+                $ext_img = explode(".", $_FILES['profilefile']['name']);
+                $ext = strtolower(end($ext_img));
+
                 $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                $ext_arr = explode("|",$config['allowed_types']);
-                
-                if(in_array($ext, $ext_arr))
-                {
- 			if(file_exists("uploads/student_image/" . $this->input->post('txtoldfile')))
-                   {
-                    unlink("uploads/student_image/" . $this->input->post('txtoldfile'));
-                   }
-		$config['file_name'] = date('dmYhis').'.'.$ext;
-                 $config['upload_path'] = 'uploads/student_image';
-                //$config['allowed_types'] = 'gif|jpg|png';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                
-                 $this->upload->do_upload('profilefile');
+                $ext_arr = explode("|", $config['allowed_types']);
 
-                   
-                 $file = $this->upload->data();
-                 $data['profile_photo'] = $file['file_name'];  
-                   
-                }
-                else{
-                      $this->session->set_flashdata("flash_message",'Update failed. Invalid Image!');
-                     redirect(base_url() . 'index.php?admin/student/', 'refresh');
-                }
-                
-                
+                if (in_array($ext, $ext_arr)) {
+                    if (file_exists("uploads/student_image/" . $this->input->post('txtoldfile'))) {
+                        unlink("uploads/student_image/" . $this->input->post('txtoldfile'));
+                    }
+                    $config['file_name'] = date('dmYhis') . '.' . $ext;
+                    $config['upload_path'] = 'uploads/student_image';
+                    //$config['allowed_types'] = 'gif|jpg|png';
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
 
+                    $this->upload->do_upload('profilefile');
+
+
+                    $file = $this->upload->data();
+                    $data['profile_photo'] = $file['file_name'];
+                } else {
+                    $this->session->set_flashdata("flash_message", 'Update failed. Invalid Image!');
+                    redirect(base_url() . 'index.php?admin/student/', 'refresh');
+                }
             }
             $data['email'] = $this->input->post('email_id');
             $data['name'] = $this->input->post('name');
@@ -985,7 +988,7 @@ $config['file_name'] = date('dmYhis').'.'.$ext;
             $data['group_id'] = $this->input->post('group');
             $data['user_type'] = $this->input->post('usertype');
             $data['admission_type_id'] = $this->input->post('admissiontype');
- $data['std_degree'] =  $this->input->post('degree');
+            $data['std_degree'] = $this->input->post('degree');
 
             $this->db->where('std_id', $param2);
             $this->db->update('student', $data);
@@ -1009,8 +1012,8 @@ $config['file_name'] = date('dmYhis').'.'.$ext;
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             if ($_FILES['projectfile']['name'] != "") {
-              
-                
+
+
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
                 $this->load->library('upload', $config);
@@ -1018,18 +1021,15 @@ $config['file_name'] = date('dmYhis').'.'.$ext;
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('projectfile')) {
-                    $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/project/', 'refresh');
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/project/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['pm_filename'] = $file['file_name'];
- $file_url = base_url().'uploads/project_file/'.$data['pm_filename'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['pm_filename'];
                 }
-                 
-              
-            }
-            else{
-                
+            } else {
+
                 $file_url = '';
             }
             $data['pm_degree'] = $this->input->post('degree');
@@ -1040,10 +1040,10 @@ $config['file_name'] = date('dmYhis').'.'.$ext;
             $data['pm_desc'] = $this->input->post('description');
             $data['pm_dos'] = $this->input->post('dateofsubmission');
             $data['pm_status'] = 1;
-           // $data['pm_student_id'] = $this->input->post('student');
-		   $stud=implode(',',$this->input->post('student'));
-            $data['pm_student_id'] =$stud;
-$data['pm_course'] = $this->input->post('course');
+            // $data['pm_student_id'] = $this->input->post('student');
+            $stud = implode(',', $this->input->post('student'));
+            $data['pm_student_id'] = $stud;
+            $data['pm_course'] = $this->input->post('course');
             $data['created_date'] = date('Y-m-d');
 
 
@@ -1052,46 +1052,42 @@ $data['pm_course'] = $this->input->post('course');
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
         if ($param1 == 'do_update') {
-           /* if ($_FILES['projectfile']['name'] != "") {
+            /* if ($_FILES['projectfile']['name'] != "") {
 
-                unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
+              unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
+
+              $config['upload_path'] = 'uploads/project_file';
+              $config['allowed_types'] = '*';
+              $this->load->library('upload', $config);
+              $this->upload->initialize($config);
+
+              if (!$this->upload->do_upload('projectfile')) {
+              $data = array('msg' => $this->upload->display_errors());
+              } else {
+              $file = $this->upload->data();
+              $data['pm_filename'] = $file['file_name'];
+              }
+              } */
+
+
+            if ($_FILES['projectfile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
-                $config['allowed_types'] = '*';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-
-                if (!$this->upload->do_upload('projectfile')) {
-                    $data = array('msg' => $this->upload->display_errors());
-                } else {
-                    $file = $this->upload->data();
-                    $data['pm_filename'] = $file['file_name'];
-                }
-            }*/
-
-
- if ($_FILES['projectfile']['name'] != "") {
-
- $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('projectfile')) {
-                    $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/project/', 'refresh');
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/project/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['pm_filename'] = $file['file_name'];
- $file_url = base_url().'uploads/project_file/'.$data['pm_filename'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['pm_filename'];
                 }
-                 
-                 
-               
-            }
-            else{
-                
+            } else {
+
                 $file_url = $this->input->post('pageurl');
             }
 
@@ -1104,9 +1100,9 @@ $data['pm_course'] = $this->input->post('course');
             $data['pm_dos'] = $this->input->post('dateofsubmission1');
             $data['pm_status'] = 1;
             //$data['pm_student_id'] = $this->input->post('student');
-			 $stud=implode(',',$this->input->post('student'));
-            $data['pm_student_id'] =$stud;
-$data['pm_course'] = $this->input->post('course');
+            $stud = implode(',', $this->input->post('student'));
+            $data['pm_student_id'] = $stud;
+            $data['pm_course'] = $this->input->post('course');
 
             $this->db->where('pm_id', $param2);
             $this->db->update('project_manager', $data);
@@ -1121,14 +1117,14 @@ $data['pm_course'] = $this->input->post('course');
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
         $page_data['project'] = $this->db->get('project_manager')->result();
-		$this->db->select("ps.*,pm.*,s.* ");
+        $this->db->select("ps.*,pm.*,s.* ");
         $this->db->from('project_document_submission ps');
-        $this->db->join("project_manager pm","pm.pm_id=ps.project_id");
-        $this->db->join("student s","s.std_id=ps.student_id");
-        $page_data['submitedproject']=$this->db->get();
+        $this->db->join("project_manager pm", "pm.pm_id=ps.project_id");
+        $this->db->join("student s", "s.std_id=ps.student_id");
+        $page_data['submitedproject'] = $this->db->get();
         $page_data['degree'] = $this->db->get('degree')->result();
         $page_data['batch'] = $this->db->get('batch')->result();
- 	$page_data['course'] = $this->db->get('course')->result();
+        $page_data['course'] = $this->db->get('course')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['student'] = $this->db->get('student')->result();
         $page_data['page_name'] = 'project';
@@ -1142,7 +1138,7 @@ $data['pm_course'] = $this->input->post('course');
         if ($param1 == 'create') {
 
 
-		 if ($_FILES['libraryfile']['name'] != "") {
+            if ($_FILES['libraryfile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1151,17 +1147,16 @@ $data['pm_course'] = $this->input->post('course');
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('libraryfile')) {
-                    $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/library/', 'refresh');
-                    
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/library/', 'refresh');
                 } else {
                     $file = $this->upload->data();
-                   
- 			$data['lm_filename'] = $file['file_name'];
-                     $file_url = base_url().'uploads/project_file/'.$data['lm_filename'];
+
+                    $data['lm_filename'] = $file['file_name'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['lm_filename'];
                 }
-            }else{
-                
+            } else {
+
                 $file_url = '';
             }
 
@@ -1174,7 +1169,7 @@ $data['pm_course'] = $this->input->post('course');
             $data['lm_dos'] = $this->input->post('dateofsubmission');
             $data['lm_status'] = 1;
             $data['lm_student_id'] = $this->input->post('student');
- 		$data['lm_course'] =  $this->input->post('course');
+            $data['lm_course'] = $this->input->post('course');
             $data['created_date'] = date('Y-m-d');
 
 
@@ -1183,9 +1178,27 @@ $data['pm_course'] = $this->input->post('course');
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
         if ($param1 == 'do_update') {
-            /*if ($_FILES['libraryfile']['name'] != "") {
+            /* if ($_FILES['libraryfile']['name'] != "") {
 
-                unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
+              unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
+
+              $config['upload_path'] = 'uploads/project_file';
+              $config['allowed_types'] = '*';
+              $this->load->library('upload', $config);
+              $this->upload->initialize($config);
+
+              if (!$this->upload->do_upload('libraryfile')) {
+              $data = array('msg' => $this->upload->display_errors());
+              } else {
+              $file = $this->upload->data();
+              $data['lm_filename'] = $file['file_name'];
+              }
+              } */
+
+            if ($_FILES['libraryfile']['name'] != "") {
+                if (file_exists("uploads/project_file/" . $this->input->post('txtoldfile'))) {
+                    unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
+                }
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1193,36 +1206,15 @@ $data['pm_course'] = $this->input->post('course');
                 $this->upload->initialize($config);
 
                 if (!$this->upload->do_upload('libraryfile')) {
-                    $data = array('msg' => $this->upload->display_errors());
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/library/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['lm_filename'] = $file['file_name'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['lm_filename'];
                 }
-            }*/
-		
- if ($_FILES['libraryfile']['name'] != "") {
-                if(file_exists("uploads/project_file/" . $this->input->post('txtoldfile')))
-                {
-                unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
-                }
+            } else {
 
-                $config['upload_path'] = 'uploads/project_file';
-                $config['allowed_types'] = '*';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-
-                if (!$this->upload->do_upload('libraryfile')) {
-                      $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/library/', 'refresh');
-                } else {
-                    $file = $this->upload->data();
-                    $data['lm_filename'] = $file['file_name'];
-  		$file_url = base_url().'uploads/project_file/'.$data['lm_filename'];
-                }
-               
-            }
-            else{
-                
                 $file_url = $this->input->post('pageurl');
             }
 
@@ -1236,7 +1228,7 @@ $data['pm_course'] = $this->input->post('course');
             $data['lm_dos'] = $this->input->post('dateofsubmission1');
             $data['lm_status'] = 1;
             $data['lm_student_id'] = $this->input->post('student');
-	 	$data['lm_course'] =  $this->input->post('course');
+            $data['lm_course'] = $this->input->post('course');
 
             $this->db->where('lm_id', $param2);
             $this->db->update('library_manager', $data);
@@ -1264,7 +1256,7 @@ $data['pm_course'] = $this->input->post('course');
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-           if ($_FILES['participatefile']['name'] != "") {
+            if ($_FILES['participatefile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1274,20 +1266,19 @@ $data['pm_course'] = $this->input->post('course');
 
                 if (!$this->upload->do_upload('participatefile')) {
                     $dataerror = array('msg' => $this->upload->display_errors());
- 			redirect(base_url() . 'index.php?admin/participate/', 'refresh');
+                    redirect(base_url() . 'index.php?admin/participate/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['pp_filename'] = $file['file_name'];
- $file_url = base_url().'uploads/project_file/'.$data['pp_filename'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['pp_filename'];
                 }
-            }
-            else{
+            } else {
 
-                
+
                 $file_url = '';
-            }		
+            }
 
-               
+
 
             $data['pp_degree'] = $this->input->post('degree');
             $data['pp_title'] = $this->input->post('title');
@@ -1297,8 +1288,8 @@ $data['pm_course'] = $this->input->post('course');
             $data['pp_desc'] = $this->input->post('description');
             $data['pp_dos'] = $this->input->post('dateofsubmission');
             $data['pp_status'] = 1;
-           
-$data['pp_course'] = $this->input->post('course');
+
+            $data['pp_course'] = $this->input->post('course');
             $data['created_date'] = date('Y-m-d');
 
 
@@ -1307,7 +1298,7 @@ $data['pp_course'] = $this->input->post('course');
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
         if ($param1 == 'do_update') {
-             if ($_FILES['participatefile']['name'] != "") {
+            if ($_FILES['participatefile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1317,15 +1308,14 @@ $data['pp_course'] = $this->input->post('course');
 
                 if (!$this->upload->do_upload('participatefile')) {
                     $dataerror = array('msg' => $this->upload->display_errors());
- 			redirect(base_url() . 'index.php?admin/participate/', 'refresh');
+                    redirect(base_url() . 'index.php?admin/participate/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['pp_filename'] = $file['file_name'];
- $file_url = base_url().'uploads/project_file/'.$data['pp_filename'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['pp_filename'];
                 }
-            }
-            else{
-                
+            } else {
+
                 $file_url = $this->input->post('pageurl');
             }
             $data['pp_degree'] = $this->input->post('degree');
@@ -1335,10 +1325,10 @@ $data['pp_course'] = $this->input->post('course');
             $data['pp_semester'] = $this->input->post('semester');
             $data['pp_desc'] = $this->input->post('description');
             $data['pp_dos'] = $this->input->post('dateofsubmission1');
-$data['pp_course'] = $this->input->post('course');
+            $data['pp_course'] = $this->input->post('course');
             $data['pp_status'] = 1;
 
-           
+
 
             $this->db->where('pp_id', $param2);
             $this->db->update('participate_manager', $data);
@@ -1352,17 +1342,17 @@ $data['pp_course'] = $this->input->post('course');
             $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
-		       
-	/*$this->db->select("ps.*,s.* ");
-        $this->db->from('survey ps');
-        $this->db->join("student s","s.std_id=ps.student_id");
-        $page_data['survey']=$this->db->get();         
+
+        /* $this->db->select("ps.*,s.* ");
+          $this->db->from('survey ps');
+          $this->db->join("student s","s.std_id=ps.student_id");
+          $page_data['survey']=$this->db->get();
          */
-        
-         $this->db->select("ls.*,s.*");
+
+        $this->db->select("ls.*,s.*");
         $this->db->from('survey_list ls');
-        $this->db->join("student s","s.std_id=ls.student_id");
-        $page_data['survey']=$this->db->get()->result();
+        $this->db->join("student s", "s.std_id=ls.student_id");
+        $page_data['survey'] = $this->db->get()->result();
         $page_data['questions'] = $this->db->get('survey_question')->result();
 
         $page_data['participate'] = $this->db->get('participate_manager')->result();
@@ -1370,10 +1360,12 @@ $data['pp_course'] = $this->input->post('course');
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['student'] = $this->db->get('student')->result();
+        $page_data['course'] = $this->db->get('course')->result();
+
         $page_data['page_name'] = 'participate';
         $page_data['page_title'] = 'Participate Management';
-		$page_data['volunteer'] = $this->db->get('participate_student')->result_array();
-         $page_data['uploads'] = $this->db->get('student_upload')->result_array();
+        $page_data['volunteer'] = $this->db->get('participate_student')->result_array();
+        $page_data['uploads'] = $this->db->get('student_upload')->result_array();
         $this->load->view('backend/index', $page_data);
     }
 
@@ -1426,7 +1418,7 @@ $data['pp_course'] = $this->input->post('course');
             redirect(base_url(), 'refresh');
 
         if ($param1 == 'create') {
-		 if ($_FILES['assignmentfile']['name'] != "") {
+            if ($_FILES['assignmentfile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1435,21 +1427,19 @@ $data['pp_course'] = $this->input->post('course');
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('assignmentfile')) {
-                     $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
-                    
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
                 } else {
                     $file = $this->upload->data();
-                   
- 			$data['assign_filename'] = $file['file_name'];
-                     $file_url = base_url().'uploads/project_file/'.$data['assign_filename'];
+
+                    $data['assign_filename'] = $file['file_name'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['assign_filename'];
                 }
+            } else {
+                $data['assign_filename'] = '';
+                $file_url = '';
             }
-            else{
-                 $data['assign_filename'] = '';
-                 $file_url = '';
-            }
-            
+
 
             $data['course_id'] = $this->input->post('course');
             $data['assign_title'] = $this->input->post('title');
@@ -1460,32 +1450,32 @@ $data['pp_course'] = $this->input->post('course');
             $data['assign_dos'] = $this->input->post('submissiondate');
             $data['assign_status'] = 1;
             $data['created_date'] = date('Y-m-d');
- $data['assign_degree'] = $this->input->post('degree');
+            $data['assign_degree'] = $this->input->post('degree');
 
             $this->db->insert('assignment_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('assignment_added_successful'));
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         if ($param1 == 'do_update') {
-           /* if ($_FILES['assign_filename']['name'] != "") {
+            /* if ($_FILES['assign_filename']['name'] != "") {
 
-               
 
-                $config['upload_path'] = 'uploads/project_file';
-                $config['allowed_types'] = '*';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
 
-                if (!$this->upload->do_upload('assign_filename')) {
-                    $data = array('msg' => $this->upload->display_errors());
-                } else {
-                    $file = $this->upload->data();
-                    $data['assign_filename'] = $file['file_name'];
-                }
-$file_url ='';
-            }*/
+              $config['upload_path'] = 'uploads/project_file';
+              $config['allowed_types'] = '*';
+              $this->load->library('upload', $config);
+              $this->upload->initialize($config);
 
-		 if ($_FILES['assignmentfile']['name'] != "") {
+              if (!$this->upload->do_upload('assign_filename')) {
+              $data = array('msg' => $this->upload->display_errors());
+              } else {
+              $file = $this->upload->data();
+              $data['assign_filename'] = $file['file_name'];
+              }
+              $file_url ='';
+              } */
+
+            if ($_FILES['assignmentfile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1494,18 +1484,16 @@ $file_url ='';
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('assignmentfile')) {
-                     $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
-                    
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
                 } else {
                     $file = $this->upload->data();
-                   
- 			$data['assign_filename'] = $file['file_name'];
-                     $file_url = base_url().'uploads/project_file/'.$data['assign_filename'];
+
+                    $data['assign_filename'] = $file['file_name'];
+                    $file_url = base_url() . 'uploads/project_file/' . $data['assign_filename'];
                 }
-            }
-            else{
-                
+            } else {
+
                 $file_url = $this->input->post('assignmenturl');
             }
 
@@ -1517,7 +1505,7 @@ $file_url ='';
             $data['assign_sem'] = $this->input->post('semester');
             $data['assign_desc'] = $this->input->post('description');
             $data['assign_dos'] = $this->input->post('submissiondate1');
- $data['assign_degree'] = $this->input->post('degree');
+            $data['assign_degree'] = $this->input->post('degree');
             $data['assign_status'] = 1;
 
             $this->db->where('assign_id', $param2);
@@ -1532,15 +1520,15 @@ $file_url ='';
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         $page_data['assignment'] = $this->db->get('assignment_manager')->result();
-		$this->db->select("ass.*,am.*,s.* ");
+        $this->db->select("ass.*,am.*,s.* ");
         $this->db->from('assignment_submission ass');
-        $this->db->join("assignment_manager am","am.assign_id=ass.assign_id");
-        $this->db->join("student s","s.std_id=ass.student_id");
-        $page_data['submitedassignment']=$this->db->get();
+        $this->db->join("assignment_manager am", "am.assign_id=ass.assign_id");
+        $this->db->join("student s", "s.std_id=ass.student_id");
+        $page_data['submitedassignment'] = $this->db->get();
         $page_data['course'] = $this->db->get('course')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['batch'] = $this->db->get('batch')->result();
-		$page_data['degree'] = $this->db->get('degree')->result();
+        $page_data['degree'] = $this->db->get('degree')->result();
         $page_data['page_name'] = 'assignment';
         $page_data['page_title'] = 'Assignment Management';
         $this->load->view('backend/index', $page_data);
@@ -1550,27 +1538,24 @@ $file_url ='';
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-           if ($_FILES['resourcefile']['name'] != "") {
-               
- 		$config['upload_path'] = 'uploads/project_file';
+            if ($_FILES['resourcefile']['name'] != "") {
+
+                $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('resourcefile')) {
-                    $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
-                    
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['study_filename'] = $file['file_name'];
-                     $file_url = base_url().'uploads/project_file/'.$data['study_filename'];
-                } 
-               
-            }
-            else{
-                
+                    $file_url = base_url() . 'uploads/project_file/' . $data['study_filename'];
+                }
+            } else {
+
                 $file_url = '';
             }
             $data['study_degree'] = $this->input->post('degree');
@@ -1580,7 +1565,7 @@ $file_url ='';
             $data['study_sem'] = $this->input->post('semester');
             $data['study_desc'] = $this->input->post('description');
             $data['study_dos'] = $this->input->post('dateofsubmission');
-$data['study_course'] = $this->input->post('course');
+            $data['study_course'] = $this->input->post('course');
             $data['study_status'] = 1;
             $data['created_date'] = date('Y-m-d');
 
@@ -1589,8 +1574,8 @@ $data['study_course'] = $this->input->post('course');
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
         if ($param1 == 'do_update') {
-             if ($_FILES['resourcefile']['name'] != "") {
-                  
+            if ($_FILES['resourcefile']['name'] != "") {
+
 
                 $config['upload_path'] = 'uploads/project_file';
                 $config['allowed_types'] = '*';
@@ -1599,29 +1584,24 @@ $data['study_course'] = $this->input->post('course');
                 //$this->upload->set_allowed_types('*');	
 
                 if (!$this->upload->do_upload('resourcefile')) {
-                    $this->session->set_flashdata('flash_message',  "Invalid File!");
-                        redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
-                    
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $data['study_filename'] = $file['file_name'];
-                     $file_url = base_url().'uploads/project_file/'.$data['study_filename'];
-                } 
-               
-
-                
-            }
-            else{
+                    $file_url = base_url() . 'uploads/project_file/' . $data['study_filename'];
+                }
+            } else {
                 $file_url = $this->input->post('pageurl');
             }
             $data['study_degree'] = $this->input->post('degree');
             $data['study_title'] = $this->input->post('title');
             $data['study_batch'] = $this->input->post('batch');
-            $data['study_url'] =$file_url;
+            $data['study_url'] = $file_url;
             $data['study_sem'] = $this->input->post('semester');
             $data['study_desc'] = $this->input->post('description');
             $data['study_dos'] = $this->input->post('dateofsubmission1');
-$data['study_course'] = $this->input->post('course');
+            $data['study_course'] = $this->input->post('course');
             $data['study_status'] = 1;
 
             $this->db->where('study_id', $param2);
@@ -1639,7 +1619,7 @@ $data['study_course'] = $this->input->post('course');
         $page_data['studyresource'] = $this->db->get('study_resources')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
-		$page_data['course'] = $this->db->get('course')->result();
+        $page_data['course'] = $this->db->get('course')->result();
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['page_name'] = 'studyresource';
         $page_data['page_title'] = 'Study Resource Management';
@@ -1753,20 +1733,20 @@ $data['study_course'] = $this->input->post('course');
     /**
      * Set mail config
      */
-    function setemail($emails, $subject = '', $message = '', $cc, $attachment) {		
-			$config = Array(
-				'protocol' => 'smtp',
-				'smtp_host' => 'ssl://smtp.googlemail.com',
-				'smtp_port' => 465,
-				'smtp_user' => 'mayur.ghadiya@searchnative.in',
-				'smtp_pass' => 'the mayurz97375',
-				'mailtype'  => 'html', 
-				'charset'   => 'iso-8859-1'
-			);
-			$this->load->library('email', $config);
-			$this->email->set_newline("\r\n");
+    function setemail($emails, $subject = '', $message = '', $cc, $attachment) {
+        $config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'mayur.ghadiya@searchnative.in',
+            'smtp_pass' => 'the mayurz97375',
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1'
+        );
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
         //$this->load->library('email');
-		//$this->email->initialize($config);
+        //$this->email->initialize($config);
         $subject = $subject;
         $message = $message;
         foreach ($emails as $email) {
@@ -1956,31 +1936,41 @@ $data['study_course'] = $this->input->post('course');
         }
         if ($_POST) {
             if ($param1 == 'create') {
-$centerimplode=implode(',',$this->input->post('center'));
-                // check for validation
-                if ($this->form_validation->run('exam_insert_update') != FALSE) {
-                    $data = array(
-                        'em_name' => $this->input->post('exam_name', TRUE),
-                        'em_type' => $this->input->post('exam_type', TRUE),
-                        'total_marks' => $this->input->post('total_marks', TRUE),
-                        'passing_mark' => $this->input->post('passing_marks', TRUE),
-                        'em_year' => $this->input->post('year', TRUE),
-                        'degree_id' => $this->input->post('degree', TRUE),
-                        'course_id' => $this->input->post('course', TRUE),
-                        'batch_id' => $this->input->post('batch', TRUE),
-                        'em_semester' => $this->input->post('semester', TRUE),
-'center_id' => $centerimplode,
-                        'em_status' => $this->input->post('status', TRUE),
-                        'em_date' => $this->input->post('date', TRUE),
-                        'em_start_time' => $this->input->post('start_date_time', TRUE),
-                        'em_end_time' => $this->input->post('end_date_time', TRUE),
-                    );
-                    $this->Crud_model->insert_exam($data);
-                    $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
-                    redirect(base_url('index.php?admin/exam'));
+                //check for duplication
+                $is_record_present = $this->Crud_model->exam_duplication_check(
+                        $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $_POST['exam_name']);
+
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    $centerimplode = implode(',', $this->input->post('center'));
+                    // check for validation
+                    if ($this->form_validation->run('exam_insert_update') != FALSE) {
+                        $data = array(
+                            'em_name' => $this->input->post('exam_name', TRUE),
+                            'em_type' => $this->input->post('exam_type', TRUE),
+                            'total_marks' => $this->input->post('total_marks', TRUE),
+                            'passing_mark' => $this->input->post('passing_marks', TRUE),
+                            'em_year' => $this->input->post('year', TRUE),
+                            'degree_id' => $this->input->post('degree', TRUE),
+                            'course_id' => $this->input->post('course', TRUE),
+                            'batch_id' => $this->input->post('batch', TRUE),
+                            'em_semester' => $this->input->post('semester', TRUE),
+                            'center_id' => $centerimplode,
+                            'em_status' => $this->input->post('status', TRUE),
+                            'em_date' => $this->input->post('date', TRUE),
+                            'em_start_time' => $this->input->post('start_date_time', TRUE),
+                            'em_end_time' => $this->input->post('end_date_time', TRUE),
+                        );
+                        $this->Crud_model->insert_exam($data);
+                        $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
+                        redirect(base_url('index.php?admin/exam'));
+                    } else {
+                        $page_data['edit_error'] = validation_errors();
+                    }
                 }
             } elseif ($param1 == 'do_update') {
-$centerimplode=implode(',',$this->input->post('center'));
+                $centerimplode = implode(',', $this->input->post('center'));
                 //do validation
                 if ($this->form_validation->run('exam_insert_update') != FALSE) {
                     $data = array(
@@ -1991,7 +1981,7 @@ $centerimplode=implode(',',$this->input->post('center'));
                         'degree_id' => $this->input->post('degree', TRUE),
                         'course_id' => $this->input->post('course', TRUE),
                         'batch_id' => $this->input->post('batch', TRUE),
- 'center_id' => $centerimplode,
+                        'center_id' => $centerimplode,
                         'em_semester' => $this->input->post('semester', TRUE),
                         'em_status' => $this->input->post('status', TRUE),
                         'em_date' => $this->input->post('date', TRUE),
@@ -2014,7 +2004,7 @@ $centerimplode=implode(',',$this->input->post('center'));
         $page_data['degree'] = $this->Crud_model->get_all_degree();
         $page_data['course'] = $this->Crud_model->get_all_course();
         $page_data['semester'] = $this->Crud_model->get_all_semester();
-  $page_data['centerlist']=$this->db->get('center_user')->result();
+        $page_data['centerlist'] = $this->db->get('center_user')->result();
         $this->load->view('backend/index', $page_data);
     }
 
@@ -2552,7 +2542,7 @@ $centerimplode=implode(',',$this->input->post('center'));
                 'fees_structure_id' => $_POST['fees_structure']
             );
             $this->session->set_userdata($session);
-            
+
             redirect(base_url('index.php?admin/process_payment'));
         }
         $page_data['title'] = 'Make Payment';
@@ -2907,22 +2897,30 @@ $centerimplode=implode(',',$this->input->post('center'));
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                // do form validation
-                if ($this->form_validation->run('time_table_insert_update') != FALSE) {
-                    //create
-                    $this->Crud_model->exam_time_table_save(array(
-                        'degree_id' => $this->input->post('degree', TRUE),
-                        'course_id' => $this->input->post('course', TRUE),
-                        'batch_id' => $this->input->post('batch', TRUE),
-                        'semester_id' => $this->input->post('semester', TRUE),
-                        'exam_id' => $this->input->post('exam', TRUE),
-                        'subject_id' => $this->input->post('subject', TRUE),
-                        'exam_date' => $this->input->post('exam_date', TRUE),
-                        'exam_start_time' => $this->input->post('start_time', TRUE),
-                        'exam_end_time' => $this->input->post('end_time', TRUE),
-                    ));
-                    $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
-                    redirect(base_url('index.php?admin/exam_time_table'));
+                //check for duplication
+                $is_record_present = $this->Crud_model->exam_time_table_duplication(
+                        $_POST['exam'], $_POST['subject']);
+
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    // do form validation
+                    if ($this->form_validation->run('time_table_insert_update') != FALSE) {
+                        //create
+                        $this->Crud_model->exam_time_table_save(array(
+                            'degree_id' => $this->input->post('degree', TRUE),
+                            'course_id' => $this->input->post('course', TRUE),
+                            'batch_id' => $this->input->post('batch', TRUE),
+                            'semester_id' => $this->input->post('semester', TRUE),
+                            'exam_id' => $this->input->post('exam', TRUE),
+                            'subject_id' => $this->input->post('subject', TRUE),
+                            'exam_date' => $this->input->post('exam_date', TRUE),
+                            'exam_start_time' => $this->input->post('start_time', TRUE),
+                            'exam_end_time' => $this->input->post('end_time', TRUE),
+                        ));
+                        $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
+                        redirect(base_url('index.php?admin/exam_time_table'));
+                    }
                 }
             } elseif ($param1 == 'update') {
                 // do form validation
@@ -3002,7 +3000,7 @@ $centerimplode=implode(',',$this->input->post('center'));
 
             //subject details
             $subject_details = $this->Crud_model->exam_time_table_subject_list($exam_id);
-            
+
             //$subject_details = $this->Crud_model->exam_time_table_subject_list($exam_detail[0]->em_id);
             //student list
             $student_list = $this->Crud_model->student_list_by_course_semester($course_id, $semester_id);
@@ -3087,21 +3085,28 @@ $centerimplode=implode(',',$this->input->post('center'));
         if ($param1 == 'delete') {
             $this->db->where('fees_structure_id', $param2);
             $this->db->delete('fees_structure');
-
+            $this->session->set_flashdata('flash_message', 'Fees structure is successfully deleted.');
             redirect(base_url('index.php?admin/fees_structure'));
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                $this->Crud_model->fees_structure_save(array(
-                    'title' => $this->input->post('title', TRUE),
-                    'degree_id' => $this->input->post('degree', TRUE),
-                    'course_id' => $this->input->post('course', TRUE),
-                    'batch_id' => $this->input->post('batch', TRUE),
-                    'sem_id' => $this->input->post('semester', TRUE),
-                    'total_fee' => $this->input->post('fees', TRUE),
-                    'description' => $this->input->post('description', TRUE),
-                ));
-                $this->session->set_flashdata('message', 'Fees structure is added successfully.');
+                //check for duplication
+                $is_record_present = $this->Crud_model->fees_structure_duplication(
+                        $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $_POST['title']);
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present');
+                } else {
+                    $this->Crud_model->fees_structure_save(array(
+                        'title' => $this->input->post('title', TRUE),
+                        'degree_id' => $this->input->post('degree', TRUE),
+                        'course_id' => $this->input->post('course', TRUE),
+                        'batch_id' => $this->input->post('batch', TRUE),
+                        'sem_id' => $this->input->post('semester', TRUE),
+                        'total_fee' => $this->input->post('fees', TRUE),
+                        'description' => $this->input->post('description', TRUE),
+                    ));
+                    $this->session->set_flashdata('flash_message', 'Fees structure is successfully added.');
+                }
             } elseif ($param1 == 'update') {
                 $this->Crud_model->fees_structure_save(array(
                     'title' => $this->input->post('title', TRUE),
@@ -3109,7 +3114,7 @@ $centerimplode=implode(',',$this->input->post('center'));
                     'sem_id' => $this->input->post('semester', TRUE),
                     'total_fee' => $this->input->post('fees', TRUE),
                         ), $param2);
-                $this->session->set_flashdata('message', 'Fees structure is updated successfully.');
+                $this->session->set_flashdata('flash_message', 'Fees structure is successfully updated.');
             }
             redirect(base_url('index.php?admin/fees_structure'));
         }
@@ -3252,133 +3257,142 @@ $centerimplode=implode(',',$this->input->post('center'));
             <?php
         }
     }
-	
-	function truncate_table($table) {
-		$this->db->truncate($table);
-	}
-        
-        
-        // Mayur Panchal 21-3-2016
-    
-    function batchwisestudent()
-    {
-      $batch = $this->input->post("batch");
-      if( $batch!="" )
-      {
-             $datastudent = $this->db->get_where("student",array("std_batch"=>$batch,'std_status' => 1))->result();
-            //  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
-            $html ='<option value="">Select student</option>';
-            foreach ($datastudent as $rowstu) {                                        
-               $html .='<option value="'.$rowstu->std_id.'">'.$rowstu->name.'</option>';
-              }     
-      }    
-      else
-      {
-          $html ='<option value="">Select student</option>';          
-      }
-       echo  $html;
+
+    function truncate_table($table) {
+        $this->db->truncate($table);
     }
-    
-    function semwisestudent()
-    {
+
+    // Mayur Panchal 21-3-2016
+
+    function batchwisestudent() {
+        $batch = $this->input->post("batch");
+        if ($batch != "") {
+            $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1))->result();
+            //  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
+            $html = '<option value="">Select student</option>';
+            foreach ($datastudent as $rowstu) {
+                $html .='<option value="' . $rowstu->std_id . '">' . $rowstu->name . '</option>';
+            }
+        } else {
+            $html = '<option value="">Select student</option>';
+        }
+        echo $html;
+    }
+
+    function semwisestudent() {
         $batch = $this->input->post("batch");
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
-     
-               $datastudent = $this->db->get_where("student",array("std_batch"=>$batch,'std_status' => 1,"semester_id"=>$sem,'course_id'=>$course,'std_degree'=>$degree))->result();     
-                $html ='<option value="">Select student</option>';
-                foreach ($datastudent as $rowstu) 
-                {
-                    $html .='<option value="'.$rowstu->std_id.'">'.$rowstu->name.'</option>';
-                }
-        echo  $html;
+
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $html = '<option value="">Select student</option>';
+        foreach ($datastudent as $rowstu) {
+            $html .='<option value="' . $rowstu->std_id . '">' . $rowstu->name . '</option>';
+        }
+        echo $html;
     }
-    
-        
-        
-        function checkduplicate()
-        {
-            $email  = $this->input->post("email");
-          if(!empty( $email ))
-          {
-             $count  =  $this->db->get_where("student",array("email"=>$email))->num_rows();
-                if($count > 0)
-                {
-                    echo "false";
-                }
-                else
-                {
-                    echo "true";
-                }
-           }
-            
-        }
-        
-        function getstudentemail()
-        {
-            $eid=$this->input->post('eid');
-            $data=$this->db->get_where('student',array('email'=>$eid));
-            if($data->num_rows()>0)
-            {
+
+    function checkduplicate() {
+        $email = $this->input->post("email");
+        if (!empty($email)) {
+            $count = $this->db->get_where("student", array("email" => $email))->num_rows();
+            if ($count > 0) {
                 echo "false";
-            }
-            else
-            {
+            } else {
                 echo "true";
             }
-           // echo $data->num_rows();
         }
-        
-        function checksubject()
-        {
-            
-           $eid=$this->input->post('subname');
-           $subcode=$this->input->post('subcode');
-           $course=$this->input->post('course');
-           $semester = $this->input->post('semester');
-            $data=$this->db->get_where('subject_manager',array("sm_course_id"=>$course,"sm_sem_id"=>$semester,"subject_name"=>$eid,"subject_code"=>$subcode));
-            if($data->num_rows()>0)
-            {
-                echo "false";
-            }
-            else
-            {
-                echo "true";
-            } 
+    }
+
+    function getstudentemail() {
+        $eid = $this->input->post('eid');
+        $data = $this->db->get_where('student', array('email' => $eid));
+        if ($data->num_rows() > 0) {
+            echo "false";
+        } else {
+            echo "true";
         }
-        function checksubcode()
-        {
-            
-           $eid=$this->input->post('subcode');
-            $data=$this->db->get_where('subject_manager',array('subject_code'=>$eid));
-            if($data->num_rows()>0)
-            {
-                echo "false";
-            }
-            else
-            {
-                echo "true";
-            } 
+        // echo $data->num_rows();
+    }
+
+    function checksubject() {
+
+        $eid = $this->input->post('subname');
+        $subcode = $this->input->post('subcode');
+        $course = $this->input->post('course');
+        $semester = $this->input->post('semester');
+        $data = $this->db->get_where('subject_manager', array("sm_course_id" => $course, "sm_sem_id" => $semester, "subject_name" => $eid, "subject_code" => $subcode));
+        if ($data->num_rows() > 0) {
+            echo "false";
+        } else {
+            echo "true";
         }
-        
-        
-        function get_cource($param = '') {
+    }
+
+    function checksubcode() {
+
+        $eid = $this->input->post('subcode');
+        $data = $this->db->get_where('subject_manager', array('subject_code' => $eid));
+        if ($data->num_rows() > 0) {
+            echo "false";
+        } else {
+            echo "true";
+        }
+    }
+
+    /*      worked by mayur panchal 31-3-2016   *      */
+
+    function get_course($param = '') {
+        $did = $this->input->post("degree");
+
+        if ($did != '') {
+            $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+            $html = '<option value="">Select Course</option>';
+            foreach ($cource as $crs):
+                $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+            endforeach;
+            echo $html;
+        }
+    }
+
+    function get_batches($param = '') {
+        $cid = $this->input->post("course");
+        $did = $this->input->post("degree");
+        if ($cid != '') {
+
+            // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
+            $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
+            // echo $this->db->last_query();
+
+            $html = '<option value="">Select Batch</option>';
+
+            foreach ($batch as $btc):
+                $html .='<option value="' . $btc['b_id'] . '">' . $btc['b_name'] . '</option>';
+
+            endforeach;
+            echo $html;
+        }
+    }
+
+    /*  end 31-3-2016 */
+
+    function get_cource($param = '') {
 
         $did = $this->input->post("degree");
 
         if ($did != '') {
 
             if ($did == "All") {
-               
+                
             } else {
 
                 $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
 
                 $html = '<option value="">Select Course</option>';
-                if($param=='')
-                {
-                $html .= '<option value="All">All</option>';
+                if ($param == '') {
+                    $html .= '<option value="All">All</option>';
                 }
                 foreach ($cource as $crs):
                     $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
@@ -3388,46 +3402,45 @@ $centerimplode=implode(',',$this->input->post('center'));
             }
         }
     }
-        
-        function get_batchs($param='') {
+
+    function get_batchs($param = '') {
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
+        $html = '';
         if ($cid != '') {
             if ($cid == "All") {
-                
+                $html .= '<option value="All">All</option>';
             } else {
                 // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
                 $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
                 // echo $this->db->last_query();
 
                 $html = '<option value="">Select Batch</option>';
-                if($param=="")
-                {
-                $html .= '<option value="All">All</option>';
-                 }
+                if ($param == "") {
+                    $html .= '<option value="All">All</option>';
+                }
                 foreach ($batch as $btc):
                     $html .='<option value="' . $btc['b_id'] . '">' . $btc['b_name'] . '</option>';
 
                 endforeach;
-                echo $html;
             }
+            echo $html;
         }
     }
 
+    /* function get_cource_multiple($param='')
+      {
+      $did = $this->input->post("degree");
+      $cource =  $this->db->query("select * from course where degree_id in($did)")->result_array();
 
+      $html = '<option value="">Select Course</option>';
+      foreach($cource as $c)
+      {
+      $html .='<option value="'.$c['course_id'].'">'.$c['c_name'].'</option>';
+      }
+      echo $html;
+      } */
 
-	/* function get_cource_multiple($param='')
-        {
-            $did = $this->input->post("degree");
-            $cource =  $this->db->query("select * from course where degree_id in($did)")->result_array();
-         
-            $html = '<option value="">Select Course</option>';              
-          foreach($cource as $c)
-          {
-             $html .='<option value="'.$c['course_id'].'">'.$c['c_name'].'</option>';
-          }
-           echo $html;             
-        }*/
     /**
      * Course list from degree
      * @param int $degree_id
@@ -3479,75 +3492,61 @@ $centerimplode=implode(',',$this->input->post('center'));
         $subjects = $this->Crud_model->subject_list_from_course_and_semester($course, $semester);
 
         echo json_encode($subjects);
-    }    
-    
+    }
+
     /* worked by Mayur Panchal 29-3-2016 */
-    function confirmparticipate($param='')
-    {
-        if($param!='')
-        {
+
+    function confirmparticipate($param = '') {
+        if ($param != '') {
             $pp_id = $param;
 
-            $this->db->delete("participate_student",array("participate_student_id"=>$pp_id));
-              $this->session->set_flashdata('flash_message','disapprove successfully');  
-              redirect(base_url('index.php?admin/participate'));
-
+            $this->db->delete("participate_student", array("participate_student_id" => $pp_id));
+            $this->session->set_flashdata('flash_message', 'disapprove successfully');
+            redirect(base_url('index.php?admin/participate'));
         }
+    }
 
-    }  
+    function survey($param = '', $param2 = '') {
+        if ($param == 'create') {
 
 
-    function survey($param='',$param2='')
-    {
-    	if($param=='create')
-    	{
-    		
-
-    		$indata['question'] = $this->input->post('question');
-    		$indata['question_status'] = $this->input->post('status');
-    		$indata['question_description'] = $this->input->post('description');
-
-    		$this->db->insert("survey_question",$indata);
-    		$this->session->set_flashdata('flash_message',get_phrase('question_added_successfully'));
-    		 redirect(base_url('index.php?admin/participate'));
-    	}
-        if($param=='do_update')
-        {
-            if(!empty($param2))
-            {
             $indata['question'] = $this->input->post('question');
             $indata['question_status'] = $this->input->post('status');
             $indata['question_description'] = $this->input->post('description');
-            
-            $this->db->where("sq_id",$param2);
-            $this->db->update("survey_question",$indata);
-            $this->session->set_flashdata('flash_message',get_phrase('question_update_successfully'));
-            }
-             redirect(base_url('index.php?admin/participate'));
 
+            $this->db->insert("survey_question", $indata);
+            $this->session->set_flashdata('flash_message', get_phrase('question_added_successfully'));
+            redirect(base_url('index.php?admin/participate'));
         }
-        if($param=='delete')
-        {
-            if(!empty($param2))
-            {
-                $this->db->where("sq_id",$param2);
+        if ($param == 'do_update') {
+            if (!empty($param2)) {
+                $indata['question'] = $this->input->post('question');
+                $indata['question_status'] = $this->input->post('status');
+                $indata['question_description'] = $this->input->post('description');
+
+                $this->db->where("sq_id", $param2);
+                $this->db->update("survey_question", $indata);
+                $this->session->set_flashdata('flash_message', get_phrase('question_update_successfully'));
+            }
+            redirect(base_url('index.php?admin/participate'));
+        }
+        if ($param == 'delete') {
+            if (!empty($param2)) {
+                $this->db->where("sq_id", $param2);
                 $this->db->delete("survey_question");
-                 $this->session->set_flashdata('flash_message',get_phrase('question_delete_successfully'));   
-
+                $this->session->set_flashdata('flash_message', get_phrase('question_delete_successfully'));
             }
-        redirect(base_url('index.php?admin/participate'));
+            redirect(base_url('index.php?admin/participate'));
         }
 
-               /* $data['page_name'] = 'survey_form';
-                $data['page_title'] = 'Survey Question';
-               $this->session->set_flashdata('flash_message','question_added_successfully');
-          redirect(base_url().'index.php?admin/participate');      
-          */
+        /* $data['page_name'] = 'survey_form';
+          $data['page_title'] = 'Survey Question';
+          $this->session->set_flashdata('flash_message','question_added_successfully');
+          redirect(base_url().'index.php?admin/participate');
+         */
 
         //$this->load->view('backend/index', $data);
     }
-    
-    /* end  */
-    
 
+    /* end  */
 }

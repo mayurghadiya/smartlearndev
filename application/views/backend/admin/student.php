@@ -19,8 +19,8 @@
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
                     <h1>Student Management</h1>
-                    
-                    
+
+
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -84,7 +84,7 @@
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">                	
-                                    <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top',"enctype"=>"multipart/form-data")); ?>
+                                    <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
                                     <div class="padded">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Name<span style="color:red">*</span></label>
@@ -108,7 +108,7 @@
                                             <label class="col-sm-3 control-label">Email Id<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="email_id" id="email_id" onblur="return checkemail(this.value);"  />
-                                                 <span id="emailerror" style="color: red"></span>
+                                                <span id="emailerror" style="color: red"></span>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -162,8 +162,13 @@
                                                 </select>
                                             </div>
                                         </div>	
+<<<<<<< HEAD
                                          <div class="form-group">
                                             <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+=======
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Degree</label>
+>>>>>>> origin/master
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
                                                     <option value="">Select Degree</option>
@@ -178,8 +183,13 @@
                                                 </select>
                                             </div>
                                         </div>
+<<<<<<< HEAD
                                           <div class="form-group">
                                             <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+=======
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Course</label>
+>>>>>>> origin/master
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
@@ -210,7 +220,7 @@
                                                 </select>
                                             </div>
                                         </div>	
-                                      
+
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
@@ -306,32 +316,32 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-        $("#degree").change(function(){
-                var degree = $(this).val();
-                var dataString = "degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/student'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#course").html(response);
-                    }
-                });
-        });
-        
-         $("#course").change(function(){
-                var course = $(this).val();
-                 var degree = $("#degree").val();
-                var dataString = "course="+course+"&degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/student'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#batch").html(response);
-                    }
-                });
-        });
+                                                    $("#degree").change(function () {
+                                                        var degree = $(this).val();
+                                                        var dataString = "degree=" + degree;
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "<?php echo base_url() . 'index.php?admin/get_cource/student'; ?>",
+                                                            data: dataString,
+                                                            success: function (response) {
+                                                                $("#course").html(response);
+                                                            }
+                                                        });
+                                                    });
+
+                                                    $("#course").change(function () {
+                                                        var course = $(this).val();
+                                                        var degree = $("#degree").val();
+                                                        var dataString = "course=" + course + "&degree=" + degree;
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "<?php echo base_url() . 'index.php?admin/get_batchs/student'; ?>",
+                                                            data: dataString,
+                                                            success: function (response) {
+                                                                $("#batch").html(response);
+                                                            }
+                                                        });
+                                                    });
 
 
                                                     $.validator.setDefaults({
@@ -385,15 +395,15 @@
                                                                         {
                                                                             required: true,
                                                                             email_id: true,
-                                                                             remote: {
-                                                                                        url: "<?=base_url()?>index.php?admin/getstudentemail",
-                                                                                        type: "post",
-                                                                                        data: {
-                                                                                            eid: function() {
-                                                                                                return $( "#email_id" ).val();
-                                                                                            }
-                                                                                        }
+                                                                            remote: {
+                                                                                url: "<?= base_url() ?>index.php?admin/getstudentemail",
+                                                                                type: "post",
+                                                                                data: {
+                                                                                    eid: function () {
+                                                                                        return $("#email_id").val();
                                                                                     }
+                                                                                }
+                                                                            }
                                                                         },
                                                                 password: "required",
                                                                 gen: "required",
@@ -430,9 +440,8 @@
                                                                         },
                                                                 admissiontype: "required",
                                                                 profilefile: {
-                                                                    
                                                                     required: true,
-                                                                    extension:'gif|png|jpg|jpeg',
+                                                                    extension: 'gif|png|jpg|jpeg',
                                                                 }
                                                             },
                                                             messages: {
@@ -452,11 +461,17 @@
                                                                             character: "Enter valid name",
                                                                         },
                                                                 email_id: {
+<<<<<<< HEAD
                                                                     required: "Enter email id",
                                                                     email_id: "Enter valid email id",
                                                                     remote:"Email id already exists",
                                                                     
                                                                     
+=======
+                                                                    required: "Please enter email id",
+                                                                    email_id: "Please enter valid email id",
+                                                                    remote: "Email id already exists",
+>>>>>>> origin/master
                                                                 },
                                                                 password: "Enter password",
                                                                 gen: "Slect gender",
@@ -484,8 +499,13 @@
                                                                 semester:"Select semester",
                                                                 admissiontype: "Select admission type",
                                                                 profilefile: {
+<<<<<<< HEAD
                                                                     required:"Upload image",
                                                                     extension:"Upload valid file",
+=======
+                                                                    required: "Plese upload image",
+                                                                    extension: "Invalid File",
+>>>>>>> origin/master
                                                                 }
                                                             }
                                                         });

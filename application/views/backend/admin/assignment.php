@@ -60,7 +60,8 @@
                                                 <th><div>Degree</div></th>
                                                 <th><div>Course</div></th>												
                                                 <th><div>Batch</div></th>												
-                                                <th><div>Sem</div></th>												
+                                                <th><div>Semester</div></th>												
+                                                <th><div>Downloadable File</div></th>
                                                 <th><div>Date of submission</div></th>												
                                                 <th><div>Operation</div></th>											
                                             </tr>
@@ -109,7 +110,7 @@
                                                         }
                                                         ?>													
                                                     </td>	
-                                                    
+                                                    <td><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date('F d, Y',strtotime($row->assign_dos)); ?></td>	
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
@@ -159,12 +160,12 @@
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
                                                     <?php
-                                                    $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                                   /* $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
                                                         ?>
                                                         <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>
                                                         <?php
-                                                    }
+                                                    }*/
                                                     ?>
                                                 </select>
                                             </div>
@@ -175,12 +176,12 @@
                                                 <select name="batch" id="batch">
                                                     <option value="">Select batch</option>
                                                     <?php
-                                                    $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+                                                  /*  $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
                                                     foreach ($databatch as $row) {
                                                         ?>
                                                         <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
                                                         <?php
-                                                    }
+                                                    }*/
                                                     ?>
                                                 </select>
                                             </div>
@@ -324,14 +325,14 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
-        
+    <script type="text/javascript"> 
+         
         $("#degree").change(function(){
                 var degree = $(this).val();
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course").html(response);
@@ -345,7 +346,7 @@
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batch").html(response);
