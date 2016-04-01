@@ -113,7 +113,7 @@
                                             <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree[]" class="form-control" multiple>
-                                                    <option value="default">Select Degree</option>
+                                                    <option value="">Select Degree</option>
                                                         <?php foreach ($degree as $srow) { ?>
                                                         <option value="<?php echo $srow['d_id']; ?>"><?php echo $srow['d_name']; ?>
                                                         </option>
@@ -136,7 +136,8 @@
                                                     <option value="1">Active</option>
                                                     <option value="0">Inactive</option>	
                                                 </select>	
-                                            </div>	
+                                            </div>
+                                            <lable class="col-sm-3 control-label" id="error_lable_exist"></lable>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
@@ -158,25 +159,54 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-        $.validator.setDefaults({
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
+      $( "#batchform" ).submit(function( event ) {
+          if($("#degree").val()!=null & $("#course").val()!=null & $("#b_name").val()!="" )
+          { 
+         $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/check_batch'; ?>",
+                    dataType:'json',
+                   data:
+                        {
+                            'degree':$("#degree").val(),
+                            'course':$("#course").val(),
+                            'batch':$("#b_name").val(),
+                        }, 
+                                success:function(response){
+                                    if(response.length == 0){
+                                    $('#batchform').attr('validated',true);
+                                    $('#batchform').submit();
+                                     } else
+                                         {
+                                             $("#error_lable_exist").val('Record is already present in the system');
+                                         return false;
+                                     }
+                    }
+                });
+                    return false; 
+                    }
+        event.preventDefault();
+      });
+  
         
         $().ready(function () {
             
                  $("#degree").change(function(){
                 var degree = $(this).val();
-                var dataString = "degree="+degree;
+                  if(degree!="")
+                  {
                 $.ajax({
                     type:"POST",
                     url:"<?php echo base_url().'index.php?admin/get_cource_multiple/'; ?>",
-                    data:dataString,                   
+                   data:
+                        {
+                            'degree':degree,
+                        },                  
                     success:function(response){
                         $("#course").html(response);
                     }
                 });
+                }
         });
 
             $.validator.addMethod("valueNotEquals", function(value, element, arg){
