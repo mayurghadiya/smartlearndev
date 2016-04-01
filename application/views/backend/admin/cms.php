@@ -87,7 +87,7 @@
 													 <div class="form-group" id="ck-editor">					
 														<label class="col-sm-3 control-label">Page Content</label>
 															<div class="col-sm-7">		
-																<textarea name="c_description"  class="ckeditor" rows="3" required></textarea>
+																<textarea name="c_description"  class="ckeditor" data-rel="ckeditor" rows="3" required></textarea>
 															</div>														
 													</div> 
 													<div class="form-group">
@@ -116,41 +116,47 @@
 				</div>
 			<!-- row --> 
 		</div>
-		
-			<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script>
-			<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.validate.min.js"></script>
-			<script type="text/javascript" src='<?=$this->config->item('custom_plugin')?>ckeditor/ckeditor.js'></script>
-			<script type="text/javascript" src='<?=$this->config->item('custom_plugin')?>ckeditor/adapters/jquery.js'></script>
+		<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<!-- Specific Page Scripts Put Here -->
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/adapters/jquery.js"></script>
 
-				<!-- Specific Page Scripts END -->
-				<script type="text/javascript">
-				$(window).load(function() 
-				{
-				//CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
-				//CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
-					$('.ckeditor').ckeditor();
-				})
-				</script>
-				<script type="text/javascript">
-				$.validator.setDefaults({
-					submitHandler: function(form) {			
-						 form.submit();
-					}
-				});
-				
-				$().ready(function() {	
-					$("#cmsform").validate({		
-						rules: {
-							c_title: "required",
-							c_slug: "required"
-						},
-						messages: {
-							c_title: "Please enter CMS Name",
-							c_slug: "Please enter CMS Slug"
-						}
-					});
-				});
-				</script>
-				<?php //if($this->uri->segment(2) == 'cms' ) { ?>
-				
-				<?php //} ?>
+<!-- Specific Page Scripts END -->
+<script type="text/javascript">
+                                                        $(window).load(function ()
+                                                        {
+                                                            //CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
+                                                            //$('.ckeditor').ckeditor();                                                                
+                                                        })
+</script>
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+<script type="text/javascript">
+                                                        $.validator.setDefaults({
+                                                            submitHandler: function (form) {
+                                                                form.submit();
+                                                            }
+                                                        });
+
+                                                        $().ready(function () {
+                                                            $("#cmsform").validate({
+                                                                ignore: [],
+                                                                rules: {
+                                                                    content_data: {
+                                                                        required: function () {
+                                                                            CKEDITOR.instances.content_data.updateElement();
+                                                                        }
+                                                                    },
+                                                                    c_title: "required",
+                                                                    c_slug: "required",
+                                                                    c_description: "required",                                                                   
+
+                                                                },
+                                                                messages: {
+                                                                    c_title: "Please enter title",
+                                                                    c_slug: "Please select slug",
+                                                                    c_description: "Please enter description",                                                                   
+                                                                }
+                                                            });
+                                                        });
+</script>
