@@ -26,7 +26,7 @@ foreach ($edit_data as $row) {
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Page Slug</label>
                             <div class="col-sm-10 controls">
-                                <input type="text" class="form-control" name="c_slug" value="<?php echo $row['c_slug']; ?>" id="c_slug"/>
+                                <input type="text" class="form-control" required="" name="c_slug" value="<?php echo $row['c_slug']; ?>" id="c_slug"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -49,7 +49,7 @@ foreach ($edit_data as $row) {
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Page Content</label>
                             <div class="col-sm-10 controls">
-                                <textarea id="edit_content_data" name="edit_content_data" class="ckeditorcontent" rows="3" ><?php echo $row['c_description']; ?></textarea>
+                                <textarea id="edit_content_data" required="" name="edit_content_data" class="ckeditorcontent" rows="3" ><?php echo $row['c_description']; ?></textarea>
                             </div>
                         </div>             
                         <div class="form-group form-actions">
@@ -66,7 +66,7 @@ foreach ($edit_data as $row) {
     </div>
 </div>
 
-<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+
 
 <!-- Specific Page Scripts Put Here -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/ckeditor.js"></script>
@@ -81,7 +81,7 @@ foreach ($edit_data as $row) {
         $('.submit').on('click', function () {
             for (instance in CKEDITOR.instances)
                 CKEDITOR.instances[instance].updateElement();
-            $('#cmspage').submit();
+            $('#editcmsform').submit();
         });
 
     })
