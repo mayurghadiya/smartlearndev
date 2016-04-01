@@ -49,7 +49,7 @@ foreach ($edit_data as $row) {
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Page Content</label>
                             <div class="col-sm-10 controls">
-                                <textarea id="edit_content_data" required="" name="edit_content_data" class="ckeditorcontent" rows="3" ><?php echo $row['c_description']; ?></textarea>
+                                <textarea id="edit_content_data" required="" name="edit_content_data"  class="ckeditor" data-rel="ckeditor"  rows="3" ><?php echo $row['c_description']; ?></textarea>
                             </div>
                         </div>             
                         <div class="form-group form-actions">
@@ -98,11 +98,17 @@ foreach ($edit_data as $row) {
         $("#editcmsform").validate({
             rules: {
                 c_title: "required",
-                c_slug: "required"
+                c_slug: "required",
+                edit_content_data: {
+                     required: function () {
+                     CKEDITOR.instances.edit_content_data.updateElement();
+                     }
+                 },
             },
             messages: {
                 c_title: "Please enter CMS Name",
-                c_slug: "Please enter CMS Slug"
+                c_slug: "Please enter CMS Slug",
+                edit_content_data: "Please enter Page Content",
             }
         });
     });
