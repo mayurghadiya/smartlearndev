@@ -172,7 +172,20 @@ class Admin extends CI_Controller {
             echo "true";
         }
     }
-    function get_cource_multiple($param = '') {
+    function check_degree()
+    {
+        $data=$this->db->get_where('degree',array('d_name'=>$this->input->post('course')))->result();
+        if(count($data) > 0)
+        {
+            echo "false";
+        }
+        else
+        {
+            echo "true";
+        }
+    }
+    
+            function get_cource_multiple($param = '') {
         $did = implode(',', $this->input->post("degree"));
         $courceid = explode(',', $this->input->post("courseid"));
         $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
