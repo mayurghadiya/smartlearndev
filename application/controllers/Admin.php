@@ -846,7 +846,18 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Semester Management';
         $this->load->view('backend/index', $page_data);
     }
-
+    function check_semester()
+    {
+          $data=$this->db->get_where('semester',array('s_name'=>$this->input->post('semester')))->result();
+        if(count($data) > 0)
+        {
+            echo "false";
+        }
+        else
+        {
+            echo "true";
+        }
+    }
     function admission_type($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
