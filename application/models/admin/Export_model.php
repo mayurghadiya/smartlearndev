@@ -21,9 +21,8 @@ class Export_model extends CI_Model {
         //semester s
         //degree d
         //batch b
-        $this->db->select('em.em_name AS Exam Name, em.em_year AS Year, '
-                . 'em.total_marks AS Total Marks, em.passing_mark AS Passing Marks, '
-                . 'em.em_date AS Date, em.em_start_time AS Start Time, em.em_end_time AS End Time');
+        $this->db->select('em.em_name AS Exam Name, '
+                . 'em.total_marks AS Total Marks, em.passing_mark AS Passing Marks');
         $this->db->select('et.exam_type_name AS ExamType');
         $this->db->select('d.d_name AS Degree Name');
         $this->db->select('c.c_name AS Course Name, c.course_alias_id AS Course Alias');
@@ -46,7 +45,7 @@ class Export_model extends CI_Model {
     function event_manager() {
         //event_manager em
         $this->db->select('em.event_name AS Event Name, em.event_desc AS Description,'
-                . 'em.event_date AS Date');
+                . 'DATE_FORMAT(em.event_date, "%d %b %y") AS Date, TIME_FORMAT(em.event_date, "%h:%i%p") AS Time');
         $this->db->from('event_manager em');
         
         return $this->db->get();

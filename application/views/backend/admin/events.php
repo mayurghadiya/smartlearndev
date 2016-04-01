@@ -10,7 +10,6 @@
                         <li class="active">Event Managment</li>
                     </ul>
                     <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step=5  data-position="left">
-                        <div data-action="remove-navbar" data-original-title="Remove Navigation Bar Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-navbar-button menu"> <i class="fa fa-arrows-h"></i> </div>
                         <div data-action="remove-header" data-original-title="Remove Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-header-button menu"> <i class="fa fa-arrows-v"></i> </div>
                         <div data-action="fullscreen" data-original-title="Remove Navigation Bar and Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="fullscreen-button menu"> <i class="glyphicon glyphicon-fullscreen"></i> </div>
                     </div>
@@ -18,19 +17,19 @@
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Event Managment</h1>
+                    <h1>Event Manager</h1>
                 </div>
             </div>
+
             <div class="vd_content-section clearfix">
                 <div class="row">
-                    <div class="col-sm-12">								
+                    <div class="col-sm-12">
                         <!------CONTROL TABS START------>
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Event List
-                                </a>
-                            </li>
+                                   Event List
+                                </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     Add Event
@@ -40,9 +39,7 @@
                         <!------CONTROL TABS END------>
 
                         <div class="tab-content">
-                            <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">
-
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
@@ -72,10 +69,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <!----TABLE LISTING ENDS--->
 
-
-                            <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">                	
 <?php echo form_open(base_url() . 'index.php?admin/events/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'eventform', 'target' => '_top')); ?>
@@ -99,26 +93,50 @@
                                         </div>								
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Event</button>
+                                                <button type="submit" class="btn btn-info">Add event</button>
                                             </div>
                                         </div>
                                     </div>    
                                     </form>         
                                 </div>
-                                <!----CREATION FORM ENDS-->
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>              
-        </div>
-        <!-- row --> 
-    </div>
-    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
+            </div>
+            <!-- row --> 
 
-                                                                        $().ready(function () {
+        </div>
+        <!-- .vd_content-section --> 
+
+    </div>
+    <!-- .vd_content --> 
+</div>
+<!-- .vd_container --> 
+</div>
+<!-- .vd_content-wrapper --> 
+
+<!-- Middle Content End --> 
+
+
+<!-- Specific Page Scripts Put Here -->
+
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+<script type="text/javascript">
+     
+       $().ready(function () {
+           $('#datepicker-date').datepicker({
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true,
+                onSelect: function (datetext) {
+                    var d = new Date(); // for now
+                    datetext = datetext + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                    $('#datepicker-date').val(datetext);
+                },
+            });
                                                                             $("#eventform").validate({
                                                                                 rules: {
                                                                                     event_name: "required",
@@ -131,28 +149,5 @@
                                                                                     event_date: "Please Select Event Date"
                                                                                 }
                                                                             });
-                                                                        });
-    </script>
-    <script type="text/javascript">
-        /*$(window).load(function() 
-         {	"use strict";	
-         $( "#datepicker-date" ).datepicker({ 
-         dateFormat: 'dd M yy',
-         changeMonth: true,
-         changeYear: true
-     
-         });
-         });*/
-        $(function () {
-            $('#datepicker-date').datepicker({
-                dateFormat: 'yy-mm-dd',
-                changeMonth: true,
-                changeYear: true,
-                onSelect: function (datetext) {
-                    var d = new Date(); // for now
-                    datetext = datetext + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-                    $('#datepicker-date').val(datetext);
-                },
-            });
-        });
-    </script>
+                                                                        });                                  
+</script>
