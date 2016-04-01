@@ -63,3 +63,12 @@ Stack trace:
   thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
 ERROR - 2016-04-01 17:43:10 --> Severity: Notice --> Only variables should be assigned by reference /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 2469
 ERROR - 2016-04-01 17:43:11 --> Severity: Notice --> Only variables should be assigned by reference /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 2469
+ERROR - 2016-04-01 18:57:31 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/center/includes/header.php 152
+ERROR - 2016-04-01 18:58:28 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/center/includes/header.php 152
+ERROR - 2016-04-01 18:58:35 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/center/includes/header.php 152
+ERROR - 2016-04-01 18:58:50 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/center/includes/header.php 152
+ERROR - 2016-04-01 18:58:51 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/center/includes/header.php 152
+ERROR - 2016-04-01 19:03:21 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/center/includes/header.php 152
+ERROR - 2016-04-01 19:45:42 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 150
+ERROR - 2016-04-01 19:45:43 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 150
+ERROR - 2016-04-01 19:45:45 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 150

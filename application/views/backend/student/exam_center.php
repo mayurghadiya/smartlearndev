@@ -10,7 +10,7 @@
                         </div>
                     </div>
                     <div class="vd_content-section clearfix">
-                        
+                      
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel widget light-widget">
@@ -23,9 +23,13 @@
                                                     <option value="">Select exam</option>
                                                     <?php
                                                     foreach ($exam_listing as $row) {
-                                                        ?>
-                                                    <option value="<?= $row->em_id ?>"><?= $row->em_name ?></option>
-                                                        <?php
+                                                         $stdcl=$this->db->get_where('student_exam_center',array('exam_id'=>$row->em_id,'student_id'=>$this->session->userdata('std_id')))->result();
+                                                        if(empty($stdcl))
+                                                        {
+                                                            ?>
+                                                               <option value="<?= $row->em_id ?>"><?= $row->em_name ?></option>
+                                                            <?php
+                                                        }
                                                     }
                                                     ?>
                                                 </select>
@@ -59,7 +63,6 @@
                                                             <th><div>#</div></th>
                                                             <th><div>Exam Name</div></th>
                                                             <th><div>Center Name</div></th>
-                                                            <th><div>Action</div></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -86,11 +89,6 @@
                                                                 }
                                                             ?></td>
                                                             
-                                                            <td class="menu-action">
-                                                                <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_center/<?php echo $row->student_exam_center_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
-                                                            
-                                                                <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?student/exam_center/delete/<?php echo $row->student_exam_center_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
-                                                            </td>
                                                         </tr>
                                                         <?php endforeach; ?>	
                                                     </tbody>
@@ -99,10 +97,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                    
-                            </div>
-                                
-                                
+                            </div>   
                         </div>
                     </div>
                 </div>
@@ -151,8 +146,8 @@
              center: "required",
         },
         messages: {
-            exam: "Exam is required",
-            center: "Center is required",
+            exam: "Select exam",
+            center: "Select center",
         }
         });
         });
