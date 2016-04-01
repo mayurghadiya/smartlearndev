@@ -6,7 +6,7 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> </li>
+                        <li><a href="#">Home</a> </li>
                         <li><a href="#">Pages</a> </li>
                         <li class="active">Course Management</li>
                     </ul>
