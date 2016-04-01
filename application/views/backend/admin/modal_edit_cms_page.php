@@ -113,7 +113,7 @@ $semester = $this->db->get('semester')->result();
                             <label class="col-sm-2 control-label">Page Content</label>
                             <div class="col-sm-10 controls">												
                                 <div class="form-group">							
-                                    <textarea id="edit_content_data" required="" name="content_data" class="ckeditorcontent" rows="3" ><?php echo $edit_data->am_content; ?></textarea>
+                                    <textarea id="edit_content_data" required="" name="content_data" rows="3" ><?php echo $edit_data->am_content; ?></textarea>
 
                                 </div>
                             </div>

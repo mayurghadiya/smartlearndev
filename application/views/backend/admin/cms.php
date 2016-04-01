@@ -155,7 +155,7 @@
                                                                 messages: {
                                                                     c_title: "Please enter title",
                                                                     c_slug: "Please select slug",
-                                                                    c_description: "Please enter description",                                                                   
+                                                                    c_description: "Please enter Page Content",                                                                   
                                                                 }
                                                             });
                                                         });

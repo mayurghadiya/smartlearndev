@@ -55,20 +55,20 @@ $centerlist = $this->db->get('center_user')->result();
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Total Marks</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" required="" name="total_marks" id="total_marks" value="<?php echo $edit_data->total_marks; ?>"/>
+                                <input type="text" class="form-control" required="" name="total_marks" id="edit_total_marks" value="<?php echo $edit_data->total_marks; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Passing Marks</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" required="" name="passing_marks" id="total_marks" value="<?php echo $edit_data->passing_mark; ?>"/>
+                                <input type="text" class="form-control" required="" name="passing_marks" id="edit_passing_marks" value="<?php echo $edit_data->passing_mark; ?>"/>
                             </div>
                         </div>
                         <div class="form-group" style="display: none">
                             <label class="col-sm-3 control-label">Year</label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="year" id="year">
-                                    
+
                                     <?php for ($i = 2016; $i >= 2010; $i--) { ?>
                                         <option <?php echo $i; ?>
                                             <?php if ($edit_data->em_year == $i) echo 'selected'; ?>><?php echo $i; ?></option>
@@ -130,7 +130,7 @@ $centerlist = $this->db->get('center_user')->result();
                             <div class="col-sm-5">
                                 <?php
                                 $centerexplode = explode(',', $edit_data->center_id);
-                                 
+
                                 foreach ($centerlist as $row1) {
                                     if (in_array($row1->center_id, $centerexplode)) {
                                         in_array($row1->center_id, $centerexplode);
@@ -219,13 +219,12 @@ $centerlist = $this->db->get('center_user')->result();
                 course: "required",
                 batch: "required",
                 semester: "required",
-                total_marks: "required",
-                passing_marks: "required",
+                edit_total_marks: "required",
+                edit_passing_marks: "required",
                 status: "required",
                 date: "required",
                 start_date_time: "required",
-                end_date_time: "required",
-                total_marks: "required"
+                end_date_time: "required"
             },
             messages: {
                 exam_name: "Please enter Exam Name",
@@ -235,13 +234,12 @@ $centerlist = $this->db->get('center_user')->result();
                 course: "Please select course",
                 batch: "Please select batch",
                 semester: "Please select semester",
-                total_marks: "Please enter total marks",
-                passing_marks: "Please enter passing marks",
+                edit_total_marks: "Please enter total marks",
+                edit_passing_marks: "Please enter passing marks",
                 status: "Please select status",
                 date: "Please enter date",
                 start_date_time: "Please enter start date time",
-                end_date_time: "Please enter end date time",
-                total_marks: "Please enter total marks"
+                end_date_time: "Please enter end date time"
             }
         });
     });
@@ -308,5 +306,19 @@ $centerlist = $this->db->get('center_user')->result();
             })
         }
 
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#edit_total_marks').on('blur', function () {
+            var total_marks = $(this).val();
+            $('#edit_passing_marks').attr('max', total_marks);
+        });
+
+        $('#edit_passing_marks').on('focus', function () {
+            var total_marks = $('#edit_total_marks').val();
+            $(this).attr('max', total_marks);
+        })
     })
 </script>

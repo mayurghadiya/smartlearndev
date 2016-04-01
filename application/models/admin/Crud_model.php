@@ -848,4 +848,23 @@ class Crud_model extends CI_Model {
                 ))->row();
     }
 
+    /**
+     * Check duplication for cms pages
+     * @param int $degree
+     * @param int $course
+     * @param int $batch
+     * @param int $sem
+     * @param string $title
+     * @return object
+     */
+    function cms_page_duplication($degree, $course, $batch, $sem, $title) {
+        return $this->db->get_where('cms_pages', array(
+                    'degree_id' => $degree,
+                    'am_course' => $course,
+                    'am_batch' => $batch,
+                    'am_semester' => $sem,
+                    'am_title' => $title
+                ))->row();
+    }
+
 }
