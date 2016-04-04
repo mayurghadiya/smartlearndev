@@ -77,7 +77,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Degree</label>
+                            <label class="col-sm-3 control-label">Course</label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="degree" id="edit_degree">
                                     <option>Select</option>
@@ -89,7 +89,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course</label>
+                            <label class="col-sm-3 control-label">Branch</label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="course" id="edit_course">
                                     <option value="">Select</option>

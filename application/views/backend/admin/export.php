@@ -42,8 +42,8 @@
                                                     <option value="">Select</option>
                                                     <option value="<?php echo base_url('index.php?admin/export_csv/exam_manager'); ?>">Exam Manager</option>
                                                     <option value="<?php echo base_url('index.php?admin/export_csv/event_manager'); ?>">Event Manager</option>
-                                                    <option value="<?php echo base_url('index.php?admin/export_csv/course'); ?>">Course</option>
-                                                    <option value="<?php echo base_url('index.php?admin/export_csv/degree'); ?>">Degree</option>
+                                                    <option value="<?php echo base_url('index.php?admin/export_csv/course'); ?>">Branch</option>
+                                                    <option value="<?php echo base_url('index.php?admin/export_csv/degree'); ?>">Course</option>
                                                     <option value="<?php echo base_url('index.php?admin/export_csv/semester'); ?>">Semester</option>
                                                     <option value="<?php echo base_url('index.php?admin/export_csv/student'); ?>">Student</option>
                                                     <option value="exam_marks">Exam Marks</option>
@@ -57,7 +57,7 @@
                                             </div>
                                         </div> 
                                         <div id="main_degree" style="display: none;" class="form-group">
-                                            <label class="col-sm-3 control-label">Degree Name</label>
+                                            <label class="col-sm-3 control-label">Course</label>
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -68,7 +68,7 @@
                                             </div>
                                         </div>
                                         <div id="main_course" style="display: none;" class="form-group">
-                                            <label class="col-sm-3 control-label">Course Name</label>
+                                            <label class="col-sm-3 control-label">Branch</label>
                                             <div class="col-sm-5">
                                                 <select id="course" name="course" class="form-control">
                                                     

@@ -37,7 +37,7 @@ $semester = $this->db->get('semester')->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/update/' . $edit_data->exam_time_table_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-time-table', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Degree</label>
+                            <label class="col-sm-3 control-label">Course</label>
                             <div class="col-sm-7">
                                 <select name="degree" id="edit_degree" class="form-control" required="">
                                     <option value="">Select</option>
@@ -49,7 +49,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                  
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course Name</label>
+                            <label class="col-sm-3 control-label">Branch</label>
                             <div class="col-sm-7">
                                 <select name="course" id="edit_course" class="form-control" required="">
                                     <option value="">Select</option>
@@ -157,8 +157,8 @@ $semester = $this->db->get('semester')->result();
                 end_time: "required"
             },
             messages: {
-                degree: "Please select degree",
-                course: "Please select Course Name",
+                degree: "Please select course",
+                course: "Please select branch",
                 batch: "Please select batch",
                 semester: "Please select semester",
                 exam: "Please select exam",

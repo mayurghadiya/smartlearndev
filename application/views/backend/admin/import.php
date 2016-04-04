@@ -45,8 +45,8 @@
                                                 <select class="form-control" id="module" name="module">
                                                     <option value="">Select</option>
                                                     <option value="admission_type">Admission Type</option>
-                                                    <option value="course">Course</option>
-                                                    <option value="degree">Degree</option>
+                                                    <option value="course">Branch</option>
+                                                    <option value="degree">Course</option>
                                                     <option value="batch">Batch</option>
                                                     <option value="event_manager">Event Manager</option>
                                                     <option value="exam_manager">Exam Manager</option>
@@ -59,7 +59,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group" id="degree_main" style="display: none;">
-                                            <label class="col-sm-3 control-label">Degree</label>                                            
+                                            <label class="col-sm-3 control-label">Course</label>                                            
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -71,7 +71,7 @@
 
                                         </div>
                                         <div class="form-group" id="course_main" style="display: none;">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Branch</label>
 
                                             <div class="col-sm-5">
                                                 <select id="course" name="course" class="form-control">
@@ -144,8 +144,8 @@
                                     <h4>Download Demo sheet</h4>
                                     <br/>
                                     <ul>                                        
-                                        <li><a href="<?php echo base_url('index.php?admin/download_import/course'); ?>">Course</a></li>
-                                        <li><a href="<?php echo base_url('index.php?admin/download_import/degree'); ?>">Degree</a></li>
+                                        <li><a href="<?php echo base_url('index.php?admin/download_import/course'); ?>">Branch</a></li>
+                                        <li><a href="<?php echo base_url('index.php?admin/download_import/degree'); ?>">Course</a></li>
                                         <li><a href="<?php echo base_url('index.php?admin/download_import/admission_type'); ?>">Admission Type</a></li>
                                         <li><a href="<?php echo base_url('index.php?admin/download_import/batch'); ?>">Batch</a></li>
                                         <li><a href="<?php echo base_url('index.php?admin/download_import/event_manager'); ?>">Event Manager</a></li>
