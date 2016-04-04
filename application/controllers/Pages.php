@@ -31,4 +31,4 @@ class Pages extends CI_Controller {
     function chat_new() {
         $page_data['page_name'] = 'schat';        //$page_data['page_title'] = get_phrase('Chat');		$this->load->view('schat', $page_data);	}	
     }
-    
+}

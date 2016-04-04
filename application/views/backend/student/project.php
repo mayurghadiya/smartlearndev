@@ -6,12 +6,7 @@
                 <div class="vd_panel-header">
                     <h1><?php echo $page_title ?></h1>            
                 </div>
-                 <?php if($this->session->flashdata('flash_message')){  ?>
-             <div class="vd_title-section clearfix">
-              <h4><?php echo $this->session->flashdata('flash_message');   ?></h4>
-
-            </div>
-            <?php } ?>
+                
             </div>
             <div class="vd_content-section clearfix">
                 <?php
