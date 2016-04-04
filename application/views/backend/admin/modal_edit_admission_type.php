@@ -17,7 +17,7 @@
 					<div class="box-content">  
 						<?php echo form_open(base_url() . 'index.php?admin/admission_type/do_update/'.$row['at_id'] , array('class' => 'form-horizontal form-groups-bordered validate','id'=>'frmadmissiontypeedit','target'=>'_top'));?>
 						<div class="form-group">
-							<label class="col-sm-3 control-label">Admission Type Name</label>
+							<label class="col-sm-3 control-label">Admission Type Name<span style="color:red">*</span></label>
 							<div class="col-sm-5">
 								<input type="text" class="form-control" name="at_name" id="at_name" value="<?php echo $row['at_name'];?>"   />
 							</div>

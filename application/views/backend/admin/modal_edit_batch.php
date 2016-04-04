@@ -28,10 +28,10 @@ foreach ( $edit_data as $row):
                       $degree = $this->db->get('degree')->result_array();       
                       $course = $this->db->get('course')->result_array();
                     ?>
-                            <label class="col-sm-3 control-label"> Degree<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"> Course<span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="degree1" name="degree1[]" class="form-control" multiple>
-                                    <option value="">Select Degree</option>                                        
+                                    <option value="">Select Course</option>                                        
                                 <?php
                                 $d=explode(',',$row['degree_id']);
                                 foreach ($degree as $srow) 
@@ -56,7 +56,7 @@ foreach ( $edit_data as $row):
                             </div>	
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="course1" name="course1[]" class="form-control" multiple>
                               
@@ -106,8 +106,7 @@ foreach ( $edit_data as $row):
 <?php
 endforeach;
 ?>
-<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script>
-<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.validate.min.js"></script>
+
 <script type="text/javascript">
     
     $.validator.setDefaults({

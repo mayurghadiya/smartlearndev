@@ -78,7 +78,7 @@
 									<?php echo form_open(base_url() . 'index.php?admin/admission_type/create' , array('class' => 'form-horizontal form-groups-bordered validate','role'=>'form','id'=>'frmadmission_type','target'=>'_top'));?>
 									<div class="padded">
 										<div class="form-group">
-											<label class="col-sm-3 control-label">Admission Type Name</label>
+											<label class="col-sm-3 control-label">Admission Type Name<span style="color:red">*</span></label>
 											<div class="col-sm-5">
 												<input type="text" class="form-control" name="at_name" id="at_name" />
 											</div>

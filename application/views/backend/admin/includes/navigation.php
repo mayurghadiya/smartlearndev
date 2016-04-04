@@ -19,7 +19,7 @@
                 <li style="display:none;">
                     <a href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
-                        <span class="menu-text">User Managment</span>  
+                        <span class="menu-text">User Management</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
                     <div class="child-menu"  data-action="click-target">
@@ -55,9 +55,14 @@
                     </a>
                     <div class="child-menu"  data-action="click-target">
                         <ul>
+                             <li>
+                                <a href="<?php echo base_url(); ?>index.php?admin/degree"> 
+                                    <span class="menu-text">Course</span>  						
+                                </a> 
+                            </li>
                             <li>
                                 <a href="<?php echo base_url(); ?>index.php?admin/courses">
-                                    <span class="menu-text">Courses</span>  						
+                                    <span class="menu-text">Branch</span>  						
                                 </a> 
                             </li>	
                             <li>
@@ -65,11 +70,7 @@
                                     <span class="menu-text">Batch</span>  						
                                 </a> 
                             </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>index.php?admin/degree"> 
-                                    <span class="menu-text">Degree</span>  						
-                                </a> 
-                            </li>
+                           
                             <li>
                                 <a href="<?php echo base_url(); ?>index.php?admin/semester">
                                     <span class="menu-text">Semester</span>  						
