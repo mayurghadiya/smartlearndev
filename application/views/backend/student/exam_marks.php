@@ -152,7 +152,7 @@
                                                                 }
                                                                 ?>
                                                             </td>
-                                                            <td><?php if($row->mark_obtained > $exam_details->passing_mark) echo 'Pass'; else echo 'Fail'; ?></td>
+                                                            <td><?php if($row->mark_obtained >= $exam_details->passing_mark) echo 'Pass'; else echo 'Fail'; ?></td>
                                                             <td><?php echo ''; ?></td>
                                                             
                                                         </tr>
