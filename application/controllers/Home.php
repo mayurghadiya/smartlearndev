@@ -21,7 +21,16 @@ class Home extends CI_Controller {
             redirect(base_url() . 'index.php?admin/dashboard', 'refresh');
 
         if ($this->session->userdata('student_login') == 1)
-            redirect(base_url() . 'index.php?student/dashboard', 'refresh');
+        {
+            //echo $this->session->userdata('password_status');
+           if($this->session->userdata('password_status') == 0)
+           {
+                redirect(base_url() . 'index.php?student/change_password', 'refresh');
+         } 
+         else {
+              redirect(base_url() . 'index.php?student/dashboard', 'refresh');
+           }
+        }
         if ($this->session->userdata('subadmin_login') == 1) {
             redirect(base_url() . 'index.php?sub_admin/dashboard', 'refresh');
         }

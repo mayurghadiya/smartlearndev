@@ -33,8 +33,16 @@ class Login extends CI_Controller {
 			
             redirect(base_url() . 'index.php?admin/dashboard');
        
-        if ($this->session->userdata('student_login') == 1)
-            redirect(base_url() . 'index.php?student/dashboard');
+         if ($this->session->userdata('student_login') == 1)
+            {
+               if($this->session->userdata('password_status') == 0)
+               {
+                    redirect(base_url() . 'index.php?student/change_password', 'refresh');
+             } 
+             else {
+                  redirect(base_url() . 'index.php?student/dashboard', 'refresh');
+               }
+            }
 		
 		if ($this->session->userdata('subadmin_login') == 1) {
             redirect(base_url() . 'index.php?sub_admin/dashboard', 'refresh');
@@ -102,13 +110,14 @@ $center_credential = array('emailid' => $email, 'password' => $password, 'center
             $this->session->set_userdata('std_roll', $row->std_roll);
             $this->session->set_userdata('name', $row->name);
             $this->session->set_userdata('login_type', 'student');
-			$this->session->set_userdata('email', $row->email);
-			$this->session->set_userdata('user_type', '2');
-			$this->session->set_userdata('group_id', $row->group_id);
-			$this->session->set_userdata('online', '1');			
-			$update = array("online"=>'1');	
-			$this->db->where('std_id',$row->std_id);
-			$this->db->update('student',$update);
+            $this->session->set_userdata('email', $row->email);
+            $this->session->set_userdata('user_type', '2');
+            $this->session->set_userdata('group_id', $row->group_id);
+            $this->session->set_userdata('online', '1');	
+            $this->session->set_userdata('password_status',$row->password_status);
+            $update = array("online"=>'1');	
+            $this->db->where('std_id',$row->std_id);
+            $this->db->update('student',$update);
             return 'success';
         }
               

@@ -51,9 +51,29 @@ class Student extends CI_Controller {
         $this->db->update('student', $data);
         //echo $this->db->last_query();
         //die;
+        
         $page_data['page_name'] = 'dashboard';
         $page_data['page_title'] = 'Student Dashboard';
         //$page_data['chat'] = $this->chat_user();
+        $this->load->view('backend/index', $page_data);
+    }
+    function change_password($param1 = '', $param2 = '')
+    {
+        if ($this->session->userdata('student_login') != 1)
+            redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['password'] = md5($this->input->post('new_password'));
+            $data['real_pass'] = $this->input->post('new_password');
+            $data['password_status']=1;
+             $this->db->where('std_id', $this->session->userdata('std_id'));
+            $this->db->update('student');
+           $this->session->set_userdata('password_status',1);
+            $this->session->set_flashdata('flash_message', get_phrase('password_updated_successfully'));
+            redirect(base_url() . 'index.php?student/dashboard/', 'refresh');
+        }
+        
+        $page_data['page_name'] = 'changepassword';
+        $page_data['page_title'] = 'Change Password';
         $this->load->view('backend/index', $page_data);
     }
 
