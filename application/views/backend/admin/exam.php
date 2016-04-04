@@ -46,8 +46,8 @@
                                                 <th><div>#</div></th>
                                                 <th>Exam Name</th>
                                                 <th>Type</th>
-                                                <th>Degree</th>
                                                 <th>Course</th>
+                                                <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
                                                 <th>Center</th>
@@ -86,7 +86,7 @@
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_exam/<?php echo $row->em_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/exam/delete/<?php echo $row->em_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/exam/delete/<?php echo $row->em_id; ?>');" data-original-title="remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
 <?php } ?>
@@ -167,7 +167,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                            <label class="col-sm-3 control-label">Course</label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="degree" id="degree">
                                                     <option value="">Select</option>
@@ -178,7 +178,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Branch</label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="course" id="course">
 
@@ -302,8 +302,8 @@ $status_select_id = set_value('status');
                                                             exam_name: "Please enter Exam Name",
                                                             exam_type: "Please select Exam type",
                                                             year: "Please select year",
-                                                            degree: "Please select degree",
-                                                            course: "Please select course",
+                                                            degree: "Please select course",
+                                                            course: "Please select branch",
                                                             batch: "Please select batch",
                                                             semester: "Please select semester",
                                                             total_marks: "Please enter total marks",

@@ -59,6 +59,8 @@
                                                 <th><div>#</div></th>
                                                 <th>Student Name</th>
                                                 <th>Course</th>
+                                                <th>Branch</th>
+                                                <th>Batch</th>
                                                 <th>Semester</th>
                                                 <th>Paid Amount</th>
                                                 <th>Date</th>
@@ -71,7 +73,9 @@
                                                 <tr>
                                                     <td><?php echo $counter++; ?></td>
                                                     <td><?php echo $row->std_first_name . ' ' . $row->std_last_name; ?></td>
+                                                    <td><?php echo $row->d_name; ?></td>
                                                     <td><?php echo $row->c_name; ?></td>
+                                                    <td><?php echo $row->b_name; ?></td>
                                                     <td><?php echo $row->s_name; ?></td>
                                                     <td><?php echo $row->paid_amount; ?></td>
                                                     <td><?php echo date('F d, Y', strtotime(strtotime($row->paid_created_at))); ?></td>
@@ -107,6 +111,8 @@
                                         <th></th>
                                         <th></th>
                                         <th></th>
+                                        <th></th>
+                                        <th></th>
                                         </tfoot>
                                     </table>
                                 </div>
@@ -122,7 +128,7 @@
                                         <br/>
                                         <div class="padded">
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Degree</label>
+                                                <label class="col-sm-3 control-label">Course</label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="degree" id="degree" required="">
                                                         <option value="">Select</option>
@@ -133,7 +139,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course</label>
+                                                <label class="col-sm-3 control-label">Branch</label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="course" id="course" required="">
 

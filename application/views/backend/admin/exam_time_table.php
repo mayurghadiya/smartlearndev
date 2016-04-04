@@ -51,8 +51,8 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Degree</th>
                                                 <th>Course</th>
+                                                <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
                                                 <th>Exam</th>
@@ -80,7 +80,7 @@
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_exam_time_table/<?php echo $row->exam_time_table_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/exam_time_table/delete/<?php echo $row->exam_time_table_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/exam_time_table/delete/<?php echo $row->exam_time_table_id; ?>');" data-original-title="remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
                                                 <?php
@@ -110,7 +110,7 @@
                                             </div>                                            
                                         <?php } ?>
 										<div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree</label>
+                                            <label class="col-sm-3 control-label">Course</label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -121,7 +121,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course Name</label>
+                                            <label class="col-sm-3 control-label">Branch</label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course" class="form-control">
 
@@ -230,8 +230,8 @@
                                                                     end_time: "required"
                                                                 },
                                                                 messages: {
-                                                                    degree: "Please select degree",
-                                                                    course: "Please select Course Name",
+                                                                    degree: "Please select course",
+                                                                    course: "Please select branch",
                                                                     batch: "Please select batch",
                                                                     semester: "Please select semester",
                                                                     exam: "Please select exam",

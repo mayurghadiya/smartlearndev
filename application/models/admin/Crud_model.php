@@ -642,6 +642,8 @@ class Crud_model extends CI_Model {
                         ->join('student', 'student.std_id = student_fees.student_id')
                         ->join('course', 'course.course_id = student_fees.course_id')
                         ->join('semester', 'semester.s_id = student_fees.sem_id')
+                        ->join('degree', 'degree.d_id = stduent.std_degree')
+                        ->join('batch', 'batch.b_id = student.std_batch')
                         ->get()
                         ->result();
     }

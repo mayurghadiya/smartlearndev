@@ -226,7 +226,7 @@
                 <li>
                     <a href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon"><i class="fa fa-bar-chart-o"></i></span> 
-                        <span class="menu-text">Report Chart</span>  
+                        <span class="menu-text">Reports</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
                     <div class="child-menu"  data-action="click-target">

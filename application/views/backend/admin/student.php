@@ -107,7 +107,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Password<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="password" class="form-control" name="password" id="password" />
+                                                <input type="password" class="form-control" name="password" id="password" readonly value="1234"/>
                                             </div>
                                         </div>	
                                         <div class="form-group">
