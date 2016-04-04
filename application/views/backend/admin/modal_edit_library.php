@@ -17,10 +17,11 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/library/do_update/' . $row['lm_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditlibrary', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Degree *</label>
+                                <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select degree</option>
+                                        <option value="">Select Course</option>
+                                         <option value="All" <?php if($row['lm_degree']=="All"){ echo "selected=selected"; } ?>>All</option>
                                         <?php
                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                         foreach ($datadegree as $rowdegree) {
@@ -39,10 +40,11 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>	
                                 <div class="form-group">
-                                <label class="col-sm-3 control-label">Course *</label>
+                                <label class="col-sm-3 control-label">Branch <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course2">
-                                        <option value="">Select course</option>
+                                        <option value="">Select Branch</option>
+                                         <option value="All" <?php if($row['lm_course']=="All"){ echo "selected=selected"; } ?>>All</option>
                                         <?php
                                         $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                         foreach ($course as $crs) {
@@ -57,10 +59,11 @@ foreach ($edit_data as $row):
                             </div>
                             
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Batch *</label>
+                                <label class="col-sm-3 control-label">Batch <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="batch" id="batch2" onchange="get_student(this.value);"  >
                                         <option value="">Select batch</option>
+                                          <option value="All" <?php if($row['lm_batch']=="All"){ echo "selected=selected"; } ?>>All</option>
     <?php
     $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
     foreach ($databatch as $row1) {
@@ -79,10 +82,11 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>	
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Semester *</label>
+                                <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="semester" id="semester" onchange="get_students(this.value);">
+                                    <select name="semester" id="semester2" onchange="get_students(this.value);">
                                         <option value="">Select semester</option>
+                                        <option value="All" <?php if($row['lm_semester']=="All"){ echo "selected=selected"; } ?>>All</option>   
     <?php
     $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
     foreach ($datasem as $rowsem) {
@@ -103,14 +107,14 @@ foreach ($edit_data as $row):
                             
                            
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Title *</label>
+                                <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['lm_title']; ?>"/>
                                 </div>
                             </div>
 
                              <div class="form-group">
-                                <label class="col-sm-3 control-label">Date *</label>
+                                <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['lm_dos']; ?>"/>
                                 </div>
@@ -124,7 +128,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">File Upload *</label>
+                                <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="hidden" name="txtoldfile" id="txtoldfile" value="<?php echo $row['lm_filename']; ?>" />
 
@@ -134,7 +138,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info">Edit</button>
+                                    <button type="submit" class="submit btn btn-info">Update</button>
                                 </div>
                             </div>
                             </form>
@@ -189,15 +193,31 @@ endforeach;
     }
 
     
-    $("#degree2").change(function(){
+      $("#degree2").change(function(){
                 var degree = $(this).val();
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/library'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_cource/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                        if(degree=="All")
+                        {
+
+                             $("#batch2").val($("#batch2 option:eq(1)").val());
+                             $("#course2").val($("#course2 option:eq(1)").val());
+                              $("#semester2").val($("#semester2 option:eq(1)").val());
+                        /*$("#course2").html(response);
+                        $("#batch2").html(response);
+                        $("#semester2").prepend(response);
+                        
+                         $("#semester2").val($("#semester2 option:first").val());
+
+                         */
+                    }else{
                         $("#course2").html(response);
+                    }
+
                     }
                 });
         });
@@ -208,9 +228,10 @@ endforeach;
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/library'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                          $("#semester2").val($("#semester2 option:eq(1)").val());
                         $("#batch2").html(response);
                     }
                 });
