@@ -66,7 +66,7 @@
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_cms_page/<?php echo $row->am_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/cms_manager/delete/<?php echo $row->am_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/cms_manager/delete/<?php echo $row->am_id; ?>');" data-original-title="remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
                                                 <?php $counter++;
