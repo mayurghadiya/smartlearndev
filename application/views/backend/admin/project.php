@@ -135,10 +135,10 @@
 <?php echo form_open(base_url() . 'index.php?admin/project/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select degree</option>
+                                                    <option value="">Select Course</option>
 <?php
 $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
 foreach ($datadegree as $rowdegree) {
@@ -151,10 +151,10 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select Branch</option>
                                                     <?php
                                                  /*   $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
@@ -429,11 +429,11 @@ foreach ($datadegree as $rowdegree) {
                             required: true,                                                                          },
             },
             messages: {                                                                  
-                        degree: "Select degree",
-                        course:"Select course",
-                        batch: "Select batch",
-                        semester:"Select semester",                                                                           
-                        'student[]':"Select student",
+                        degree: "Select Course",
+                        course:"Select Branch",
+                        batch: "Select Batch",
+                        semester:"Select Semester",                                                                           
+                        'student[]':"Select Student",
                         dateofsubmission: "Select date of submission",
                         projectfile: {
                             required:"Upload file!",
