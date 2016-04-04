@@ -83,7 +83,7 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label" for="example-email">CVV</label>
                                             <div class="col-md-4">
-                                                <input type="password" id="cvv" name="cvv" class="form-control" parsley-trigger="change" required>
+                                                <input type="password" id="cvv" name="cvv" class="form-control" parsley-trigger="change" maxlength="3" required>
                                             </div>
                                         </div>
                                         <div class="form-group">	 
