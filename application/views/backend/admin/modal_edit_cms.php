@@ -71,8 +71,18 @@ foreach ($edit_data as $row) {
 <!-- Specific Page Scripts Put Here -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/adapters/jquery.js"></script>
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
 
 <!-- Specific Page Scripts END -->
+<!-- Specific Page Scripts END -->
+<script type="text/javascript">
+    $(window).ready(function ()
+    {
+        //CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
+        //$('.ckeditor').ckeditor();                                                                
+    })
+</script>
+
 <script type="text/javascript">
     $(document).ready(function ()
     {
@@ -81,7 +91,7 @@ foreach ($edit_data as $row) {
         $('.submit').on('click', function () {
             for (instance in CKEDITOR.instances)
                 CKEDITOR.instances[instance].updateElement();
-            $('#editcmsform').submit();
+            //$('#edit_cms_page').submit();
         });
 
     })
@@ -96,18 +106,20 @@ foreach ($edit_data as $row) {
 
     $().ready(function () {
         $("#editcmsform").validate({
+            ignore: [],
             rules: {
+                content_data: {
+                    required: function () {
+                        CKEDITOR.instances.edit_content_data.updateElement();
+                    }
+                },
                 c_title: "required",
                 c_slug: "required",
-                edit_content_data: {
-                     required: function () {
-                     CKEDITOR.instances.edit_content_data.updateElement();
-                     }
-                 },
+                edit_content_data: "required",
             },
             messages: {
-                c_title: "Please enter CMS Name",
-                c_slug: "Please enter CMS Slug",
+                c_title: "Please enter title",
+                c_slug: "Please select slug",
                 edit_content_data: "Please enter Page Content",
             }
         });
