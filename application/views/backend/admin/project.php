@@ -253,8 +253,8 @@ foreach ($datadegree as $rowdegree) {
                                                 <th><div>#</div></th>												
                                                 <th><div>Project Name</div></th>
                                                 <th><div>Student Name</div></th>                                                											
-                                                <th><div>Degree</div></th>	
-                                                <th><div>Course</div></th>
+                                                <th><div>Course</div></th>	
+                                                <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>
                                                
