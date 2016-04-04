@@ -11,8 +11,7 @@
                     <div class="vd_content-section clearfix">
 
                         <div class="row">
-                            <div class="col-sm-12">	
-                                <?php  if($this->session->flashdata('flash_message')){ echo $this->session->flashdata('flash_message'); }?>
+                            <div class="col-sm-12">	                             
                                  <?php echo form_open(base_url() . 'index.php?student/uploads/', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                         <div class="padded">											
                                             <div class="form-group">
