@@ -42,7 +42,8 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div>Title</div></th>											
-                                                <th><div>Degree</div></th>											
+                                                <th><div>Course</div></th>											
+                                                <th><div>Branch</div></th>											
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Downloadable File</div></th>											
@@ -58,33 +59,60 @@
                                                     <td><?php echo $row->lm_title; ?></td>	
                                                     <td>
                                                         <?php
+                                                         if ($row->lm_degree == "All") {
+                                                            echo "All";
+                                                        } else {
                                                         foreach ($degree as $deg) {
+                                                            
                                                             if ($deg->d_id == $row->lm_degree) {
                                                                 echo $deg->d_name;
                                                             }
                                                         }
+                                                        }
                                                         ?>
-                                                    </td>	
+                                                    </td>
                                                     <td>
                                                         <?php
+                                                        if ($row->lm_course == "All") {
+                                                            echo "All";
+                                                        } else {
+                                                            foreach ($course as $crs) {
+
+                                                                if ($crs->course_id == $row->lm_course) {
+                                                                    echo $crs->c_name;
+                                                                }
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php
+                                                         if ($row->lm_batch == "All") {
+                                                            echo "All";
+                                                        } else {
                                                         foreach ($batch as $bch) {
                                                             if ($bch->b_id == $row->lm_batch) {
                                                                 echo $bch->b_name;
                                                             }
                                                         }
+                                                        }
                                                         ?>
                                                     </td>	
                                                     <td>
                                                         <?php
+                                                         if ($row->lm_semester == "All") {
+                                                            echo "All";
+                                                        } else {
                                                         foreach ($semester as $sem) {
                                                             if ($sem->s_id == $row->lm_semester) {
                                                                 echo $sem->s_name;
                                                             }
                                                         }
+                                                        }
                                                         ?>
 
                                                     </td>	
-                                                    <td><a href="<?php echo $row->lm_url; ?>" download="" title="<?php echo $row->lm_filename; ?>"><i class="fa fa-download"></i></a></td>	
+                                                    <td><a href="<?php echo $row->lm_url; ?>" download="" target="_blank" title="<?php echo $row->lm_filename; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date('F d, Y',strtotime($row->lm_dos)); ?></td>	
 
                                                     <td class="menu-action">
@@ -107,14 +135,15 @@
 <?php echo form_open(base_url() . 'index.php?admin/library/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmlibrary', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree *</label>
+                                            <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select degree</option>
-<?php
-$datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
-foreach ($datadegree as $rowdegree) {
-    ?>
+                                                    <option value="">Select Course</option>
+                                                    <option value="All">All</option>
+                                                    <?php
+                                                    $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                                                    foreach ($datadegree as $rowdegree) {
+                                                        ?>
                                                         <option value="<?= $rowdegree->d_id ?>"><?= $rowdegree->d_name ?></option>
                                                         <?php
                                                     }
@@ -123,65 +152,67 @@ foreach ($datadegree as $rowdegree) {
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course *</label>
+                                            <label class="col-sm-3 control-label">Branch <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select Branch</option>
+                                                  <option value="All">All</option>
                                                     <?php
-                                                    $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                                    /*  
+                                                     * $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
                                                         ?>
-                                                        <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>
+                                                      <!--  <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>-->
+                                                        <?php
+                                                    }*/
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Batch <span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select name="batch" id="batch" onchange="get_student2(this.value);" >
+                                                    <option value="">Select batch</option>
+                                                    <option value="All">All</option>
+                                                    <?php
+                                                   /* $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
+                                                    foreach ($databatch as $row) {
+                                                        ?>
+                                                        <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
+                                                        <?php
+                                                    }*/
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>	
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select name="semester" id="semester" onchange="get_students2(this.value);">
+                                                    <option value="">Select Semester</option>
+                                                    <option value="All">All</option>
+                                                    <?php
+                                                    $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
+                                                    foreach ($datasem as $rowsem) {
+                                                        ?>
+                                                        <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
                                                         <?php
                                                     }
                                                     ?>
                                                 </select>
                                             </div>
                                         </div>
-                                        
-                                        
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch *</label>
-                                            <div class="col-sm-5">
-                                                <select name="batch" id="batch" onchange="get_student2(this.value);">
-                                                    <option value="">Select batch</option>
-<?php
-$databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
-foreach ($databatch as $row) {
-    ?>
-                                                        <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
-    <?php
-}
-?>
-                                                </select>
-                                            </div>
-                                        </div>	
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester *</label>
-                                            <div class="col-sm-5">
-                                                <select name="semester" id="semester"  onchange="get_students2(this.value);">
-                                                    <option value="">Select semester</option>
-<?php
-$datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-foreach ($datasem as $rowsem) {
-    ?>
-                                                        <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
-    <?php
-}
-?>
-                                                </select>
-                                            </div>
-                                        </div>
                                        
                                       
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Title *</label>
+                                            <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
                                         </div>
                                           <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date  *</label>
+                                            <label class="col-sm-3 control-label">Date  <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="dateofsubmission" id="dateofsubmission" />
                                             </div>
@@ -194,7 +225,7 @@ foreach ($datasem as $rowsem) {
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File Upload *</label>
+                                            <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="libraryfile" id="libraryfile" />
                                             </div>
@@ -220,32 +251,50 @@ foreach ($datasem as $rowsem) {
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
         
-          $("#degree").change(function(){
-                var degree = $(this).val();
-                var dataString = "degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/library'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#course").html(response);
-                    }
-                });
-        });
-        
-         $("#course").change(function(){
-                var course = $(this).val();
-                 var degree = $("#degree").val();
-                var dataString = "course="+course+"&degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/library'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#batch").html(response);
-                    }
-                });
-        });
+                       $("#degree").change(function () {
+                                                                    var degree = $(this).val();
+
+                                                                    var dataString = "degree=" + degree;
+                                                                    $.ajax({
+                                                                        type: "POST",
+                                                                        url: "<?php echo base_url() . 'index.php?admin/get_cource/'; ?>",
+                                                                        data: dataString,
+                                                                        success: function (response) {
+                                                                            if (degree == "All")
+                                                                            {
+                                                                                $("#batch").val($("#batch option:eq(1)").val());
+                                                                                $("#course").val($("#course option:eq(1)").val());
+                                                                                $("#semester").val($("#semester option:eq(1)").val());
+                                                                                //  $("#course")..val($("#semester option:second").val());
+                                                                                // $("#semester").prepend(response);
+                                                                                // $('#semester option:selected').text();
+
+
+                                                                            } else {
+
+
+                                                                                $("#course").html(response);
+                                                                            }
+                                                                        }
+
+                                                                    });
+
+                                                                });
+
+                                                                $("#course").change(function () {
+                                                                    var course = $(this).val();
+                                                                    var degree = $("#degree").val();
+                                                                    var dataString = "course=" + course + "&degree=" + degree;
+                                                                    $.ajax({
+                                                                        type: "POST",
+                                                                        url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
+                                                                        data: dataString,
+                                                                        success: function (response) {
+                                                                              $("#semester").val($("#semester option:eq(1)").val());
+                                                                            $("#batch").html(response);
+                                                                        }
+                                                                    });
+                                                                });
         
         
         function get_student2(batch, semester = '') {

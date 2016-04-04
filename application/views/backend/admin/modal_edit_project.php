@@ -88,7 +88,7 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="semester"  id="semester"  onchange="get_students(this.value);">
+                                    <select name="semester"  id="semester2"  onchange="get_students(this.value);">
                                         <option value="">Select semester</option>
                                 <?php
                                 $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
@@ -121,30 +121,25 @@ foreach ($edit_data as $row):
                                 
                                 <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                     <select name="student[]" id="student2" multiple>
-                                        <option value="">Select student</option>
+                                   <div id="student2">
                                         <?php
                                         $stu=explode(',',$row['pm_student_id']);
                                         
-                                        $datastudent = $this->db->get_where('student', array('std_degree'=>$row['pm_degree'],
-                                                                                            'course_id'=>$row['pm_course'],
-                                                                                             'std_batch'=>$row['pm_batch'],
-                                                                                              'semester_id'=>$row['pm_semester']))->result();
-//                                       
-                                        echo $this->db->last_query();
+                                        $datastudent = $this->db->get_where('student', 
+                                                array('std_degree'=>$row['pm_degree'],
+                                                    'course_id'=>$row['pm_course'],
+                                                    'std_batch'=>$row['pm_batch'],
+                                                    'semester_id'=>$row['pm_semester']))->result();
+                                       
                                         foreach ($datastudent as $rowstu) {
                                              if(in_array($rowstu->std_id, $stu)) {
                                                 ?>
-                                                <option value="<?= $rowstu->std_id ?>" selected><?= $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
-            <?php
-        } else {
-            ?>
-                                                <option value="<?= $rowstu->std_id ?>"><?= $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
-            <?php
-        }
-    }
-    ?>
-                                    </select>
+                                    <input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" checked=""><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?> <br>                                               
+                                     <?php     } else { ?>
+                                    <input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" ><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?><br>
+                                    <?php        }    }    ?>
+                                   </div>
+
                                 </div>
                             </div>
                             <div class="form-group">
@@ -196,10 +191,15 @@ endforeach;
 <script type="text/javascript">
     
     function get_student(batch, semester = '') {
+       var batch = $("#batch2").val();
+        var course = $("#course2").val();
+         var degree = $("#degree2").val();
+         var semester = $("#semester2").val();
+           var param = '<?php echo $param2; ?>';
         $.ajax({
-           url: '<?php echo base_url(); ?>index.php?admin/batchwisestudent/',
+           url: '<?php echo base_url(); ?>index.php?admin/batchwisestudentcheckbox/'+param,
            type: 'POST',
-           data: {'batch':batch},
+          data:{'batch':batch,'sem':semester,'course':course,'degree':degree},
            success: function(content){
                $("#student2").html(content);
            }
@@ -208,11 +208,14 @@ endforeach;
     
     function get_students(sem)
     {
-        var batch = $("#batch2").val();
+       
+       var batch = $("#batch2").val();
         var course = $("#course2").val();
          var degree = $("#degree2").val();
+         var param = '<?php echo $param2; ?>';
+         
          $.ajax({
-           url: '<?php echo base_url(); ?>index.php?admin/semwisestudent/',
+           url: '<?php echo base_url(); ?>index.php?admin/checkboxstudent/'+param,
            type: 'POST',
            data: {'batch':batch,'sem':sem,'course':course,'degree':degree},
            success: function(content){
@@ -234,6 +237,7 @@ endforeach;
                     data:dataString,                   
                     success:function(response){
                         $("#course2").html(response);
+                        $("#student2").html('');
                     }
                 });
         });
@@ -248,6 +252,7 @@ endforeach;
                     data:dataString,                   
                     success:function(response){
                         $("#batch2").html(response);
+                        $("#student2").html('');
                     }
                 });
         });

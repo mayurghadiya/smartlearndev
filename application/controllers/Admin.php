@@ -1292,6 +1292,7 @@ class Admin extends CI_Controller {
         }
         $page_data['library'] = $this->db->get('library_manager')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
+        $page_data['course'] = $this->db->get('course')->result();
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['student'] = $this->db->get('student')->result();
@@ -3624,7 +3625,84 @@ class Admin extends CI_Controller {
          */
 
         //$this->load->view('backend/index', $data);
-    }
-
+    }  
+    
     /* end  */
+    
+    /* checkboxstudent 4-4-2016 Mayur Panchal */
+    function checkboxstudent($param='')
+    {
+        
+         $batch = $this->input->post("batch");
+        $sem = $this->input->post("sem");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+       $html ='';
+       if($param!='')
+       {
+           $edit_data = $this->db->get_where('project_manager', array('pm_id' => $param))->result_array();
+           $student = $edit_data[0]['pm_student_id'];
+           $std  = explode(",",$student);
+           
+       }
+        foreach ($datastudent as $rowstu) {
+             //$rowstu->std_id . . $rowstu->name;
+            if(isset($std))
+            {
+                if(in_array($rowstu->std_id,$std))
+                {
+                $html .='<input type="checkbox" name="student[]" value="'.$rowstu->std_id.'" checked="">'.$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name.'<br>';
+                }
+                else{
+                $html .='<input type="checkbox" name="student[]" value="'.$rowstu->std_id.'">'.$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name.'<br>';
+                }
+            }
+            else{
+                 $html .='<input type="checkbox" name="student[]" value="'.$rowstu->std_id.'">'.$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name.'<br>';
+            }
+        }
+        echo $html;
+    }
+    
+    function batchwisestudentcheckbox($param='')
+    {
+          $batch = $this->input->post("batch");
+        $sem = $this->input->post("sem");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+         $html ='';
+         if($param!='')
+       {
+           $edit_data = $this->db->get_where('project_manager', array('pm_id' => $param))->result_array();
+           $student = $edit_data[0]['pm_student_id'];
+           $std  = explode(",",$student);
+           
+       }
+        if ($batch != "") {
+            $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1,'course_id' => $course, 'std_degree' => $degree))->result();
+            //  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
+         
+            foreach ($datastudent as $rowstu) {
+               if(isset($std))
+            {
+                if(in_array($rowstu->std_id,$std))
+                {
+                $html .='<input type="checkbox" name="student[]" value="'.$rowstu->std_id.'" checked="">'.$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name.'<br>';
+                }
+                else{
+                $html .='<input type="checkbox" name="student[]" value="'.$rowstu->std_id.'">'.$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name.'<br>';
+                }
+            }
+            else{
+                 $html .='<input type="checkbox" name="student[]" value="'.$rowstu->std_id.'">'.$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name.'<br>';
+            }
+            }
+        } else {
+         
+        }
+        echo $html;
+        
+    }
 }

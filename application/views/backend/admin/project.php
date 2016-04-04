@@ -15,13 +15,7 @@
                 <div class="vd_panel-header no-subtitle">
                     <h1>Project Management</h1>
                 </div>
-            </div>
-            <?php if($this->session->flashdata('flash_message')){  ?>
-             <div class="vd_title-section clearfix">
-              <h4><?php echo $this->session->flashdata('flash_message');   ?></h4>
-
-            </div>
-            <?php } ?>
+            </div>           
             <div class="vd_content-section clearfix">
                 <div class="row">
                     <div class="col-sm-12">								
@@ -52,8 +46,8 @@
                                                 <th><div>#</div></th>											
                                                 <th><div>Project Title</div></th>
                                                  <th><div>Student Name</div></th>											
-                                                <th><div>Degree</div></th>	
-                                                <th><div>Course</div></th>
+                                                <th><div>Course</div></th>	
+                                                <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>
                                                  <th><div>Downloadable File</div></th>
@@ -214,17 +208,10 @@ foreach ($datadegree as $rowdegree) {
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <select name="student[]" id="student" multiple="">
+                                                <div id="student"></div>
+                                                <!--<select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
-                                                    <?php
-                                                  /*  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
-                                                    foreach ($datastudent as $rowstu) {
-                                                        ?>
-                                                        <option value="<?= $rowstu->std_id ?>"><?=$rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name ?></option>
-    <?php
-}*/
-?>
-                                                </select>
+                                                                                                  </select>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -370,10 +357,14 @@ foreach ($datadegree as $rowdegree) {
         });
         
         function get_student2(batch, semester = '') {
+         var batch = $("#batch").val();
+        var course = $("#course").val();
+         var degree = $("#degree").val();
+         var semester = $("#semester").val();
         $.ajax({
-           url: '<?php echo base_url(); ?>index.php?admin/batchwisestudent/',
+           url: '<?php echo base_url(); ?>index.php?admin/batchwisestudentcheckbox/',
            type: 'POST',
-           data: {'batch':batch},
+          data:{'batch':batch,'sem':semester,'course':course,'degree':degree},
            success: function(content){
                $("#student").html(content);
            }
@@ -386,7 +377,7 @@ foreach ($datadegree as $rowdegree) {
         var course = $("#course").val();
          var degree = $("#degree").val();
          $.ajax({
-           url: '<?php echo base_url(); ?>index.php?admin/semwisestudent/',
+           url: '<?php echo base_url(); ?>index.php?admin/checkboxstudent/',
            type: 'POST',
            data: {'batch':batch,'sem':sem,'course':course,'degree':degree},
            success: function(content){
