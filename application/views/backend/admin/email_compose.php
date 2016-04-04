@@ -51,7 +51,7 @@
                                 <form class="form-horizontal" role="form" action="" method="post" 
                                       enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Degree</label>
+                                        <label class="col-sm-3 control-label">Course</label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="degree" name="degree" required="">
                                                 <option value="">Select</option>
@@ -62,11 +62,11 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Course</label>
+                                        <label class="col-sm-3 control-label">Branch</label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="course" name="course" required="">
 
-                                                <option value="all">All Course</option>
+                                                <option value="all">All</option>
                                             </select>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@
                                         <div class="col-sm-5">
                                             <select class="form-control" id="batch" name="batch" required="">
 
-                                                <option value="all">All Batch</option>
+                                                <option value="all">All</option>
                                             </select>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                                         <label class="col-sm-3 control-label">Semester</label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="semester" name="semester">
-                                                <option value="all">All Semester</option>     
+                                                <option value="all">All</option>     
                                                 <?php foreach ($semester as $row) { ?>
                                                     <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
                                                 <?php } ?>

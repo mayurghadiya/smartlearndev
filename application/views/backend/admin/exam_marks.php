@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Degree</label>
+                                                <label>Course</label>
                                                 <select id="degree" name="degree" class="form-control">
                                                     <option value="">Select</option>
                                                     <?php foreach ($degree as $row) { ?>
@@ -39,7 +39,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Course</label>
+                                                <label>Branch</label>
                                                 <select id="course" name="course" class="form-control">
 
                                                 </select>
@@ -51,7 +51,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Select Semester</label>
+                                                <label>Semester</label>
                                                 <select id="semester" name="semester" class="form-control">
                                                     <option value="">Select</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -96,8 +96,8 @@
                                                         <th>Exam Name</th>
                                                         <th>Total Marks</th>
                                                         <th>Passing Marks</th>
-                                                        <th>Degree</th>
                                                         <th>Course</th>
+                                                        <th>Branch</th>
                                                         <th>Batch</th>
                                                         <th>Semester</th>
                                                     </tr>
