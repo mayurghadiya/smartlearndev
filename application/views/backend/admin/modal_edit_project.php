@@ -18,10 +18,10 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/project/do_update/' . $row['pm_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select degree</option>
+                                        <option value="">Select Course</option>
                                         <?php
                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                         foreach ($datadegree as $rowdegree) {
@@ -41,10 +41,10 @@ foreach ($edit_data as $row):
                             </div>
                             
                              <div class="form-group">
-                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course2">
-                                        <option value="">Select course</option>
+                                        <option value="">Select Branch</option>
                                         <?php
                                         $course = $this->db->get_where('course', array('course_status' => 1,'degree_id'=>$row['pm_degree']))->result();
                                         foreach ($course as $crs) {
@@ -300,11 +300,11 @@ endforeach;
                         },
             },
             messages: {
-                degree: "Select degree",
-                course:"Select course",
-                batch: "Select batch",
-                semester:"Select semester", 
-               'student[]':"Select student",
+                degree: "Select Course",
+                course:"Select Branch",
+                batch: "Select Batch",
+                semester:"Select Semester", 
+               'student[]':"Select Student",
                 dateofsubmission1: "Select date of submission",
                 pageurl:
                         {
