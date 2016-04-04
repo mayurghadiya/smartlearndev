@@ -120,13 +120,12 @@
                                 id: id,
                     },
                     success: function (result) {
+                        option="<option>Select exam center</option>";
                         for (var i = 0; i < result.length; i++)
                         {
-                            for (var j = 0; j < result[i].length; j++)
-                            {
-                                option += "<option value='" + result[i][j].center_id + "' >" + result[i][j].center_name + "</option>";
-                            }
+                            option += "<option value='" + result[i].center_id + "' >" + result[i].center_name + "</option>";
                         }
+                         $("#center").empty();
                         $("#center").append(option);
                     }
                 });
