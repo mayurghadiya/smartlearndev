@@ -23,10 +23,10 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                              <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
-                                                    <option value="">Select Degree</option>
+                                                    <option value="">Select Course</option>
                                                     <?php
                                                     $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                     foreach ($degree as $dgr) {
@@ -39,10 +39,10 @@ foreach ($edit_data as $row):
                                             </div>
                                         </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course2">
-                                        <option value="">Select course</option>
+                                        <option value="">Select Branch</option>
                                         <?php
                                         $course = $this->db->get_where('course', array('course_status' => 1,'degree_id'=>$row['assign_degree']))->result();
                                         foreach ($course as $crs) {
@@ -203,10 +203,10 @@ endforeach;
                 },
             },
             messages: {
-                degree:"Select degree",
-                course: "Select course",
-                batch: "Select batch",
-                semester: "Select semester",
+                degree:"Select Course",
+                course: "Select Branch",
+                batch: "Select Batch",
+                semester: "Select Semester",
                 submissiondate: "Select date of submission",
                 title:
                         {
