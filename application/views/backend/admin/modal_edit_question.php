@@ -17,20 +17,20 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/survey/do_update/' . $edit_data[0]['sq_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditquestion', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                            <label class="col-sm-3 control-label">Question *</label>
+                                            <label class="col-sm-3 control-label">Question <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="question" value="<?php echo $edit_data[0]['question']; ?>" id="question" />
                                             </div>
                                         </div>
                                        
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Short Description *</label>
+                                            <label class="col-sm-3 control-label">Short Description <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="description" id="description"><?php echo $edit_data[0]['question_description']; ?></textarea>
                                             </div>
                                         </div>
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
+                                            <label class="col-sm-3 control-label">Status <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="radio" id="status" name="status" value="1" <?php if($edit_data[0]['question_status']=="1"){ echo "checked=checked"; } ?> >Active
                                                  <input type="radio" id="status" name="status" value="0" <?php if($edit_data[0]['question_status']=="0"){ echo "checked=checked"; } ?> > Deactive
