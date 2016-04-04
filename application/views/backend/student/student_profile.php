@@ -8,7 +8,7 @@
     </div>
     <div class="vd_banner vd_bg-white clearfix pd-20">
         <div class="panel widget light-widget">
-            <form class="form-horizontal" action="" id="student_profile" role="form" method="post">
+            <form class="form-horizontal" action="" id="student_profile" role="form" method="post" enctype="multipart/form-data">
                 <div  class="panel-body">
                     <h2 class="mgbt-xs-20"> Profile: <span class="font-semibold"><?php echo ucwords($profile->std_first_name . ' ' . $profile->std_last_name); ?></span> </h2>
                     <br/>
@@ -93,7 +93,7 @@
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input type="password" required="" name="password" value="" placeholder="password">
+                                            <input type="password" name="password" value="" placeholder="password">
                                         </div>
                                         <!-- col-xs-12 --> 
                                     </div>
@@ -135,6 +135,18 @@
 
                             <hr />
                             <h3 class="mgbt-xs-15">Profile Setting</h3>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Profile Pic</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="file" name="userfile" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">First Name</label>
                                 <div class="col-sm-9 controls">
@@ -362,25 +374,6 @@ $('form textarea').attr('readonly', 'readonly');
 <!-- validation -->
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-<script type="text/javascript">
-      $.validator.setDefaults({
-      submitHandler: function (form) {
-       form.submit();
-       }
-       });
-        $().ready(function () {
-        $("#student_profile").validate({
-        rules: {
-             new_password:{required: true},
-             confirm_password: "required",
-        },
-        messages: {
-            new_password: "New password is required",
-            confirm_password: "Confirm password is required",
-        }
-        });
-        });
-    </script>
 
     
 

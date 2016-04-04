@@ -183,18 +183,15 @@ class Student extends CI_Controller {
         foreach ($center_explode as $cen) {
             $data1[] = $this->db->get_where('center_user', array('center_id' => $cen))->result();
         }
-        $datacen=array();
-        foreach($data1 as $cc)
-        {
-            foreach($cc as $c)
-            {
-               $sittingcount=$this->db->get_where('student_exam_center',array('center_id'=>$c->center_id))->result();
-               if($c->setting_number>count($sittingcount))
-               {
-                   $datacen[]=$c;
-               }
+        $datacen = array();
+        foreach ($data1 as $cc) {
+            foreach ($cc as $c) {
+                $sittingcount = $this->db->get_where('student_exam_center', array('center_id' => $c->center_id))->result();
+                if ($c->setting_number > count($sittingcount)) {
+                    $datacen[] = $c;
+                }
             }
-        }      
+        }
         echo json_encode($datacen);
     }
 
@@ -837,23 +834,39 @@ class Student extends CI_Controller {
             $old_password = $_POST['password'];
             $new_password = $_POST['new_password'];
             $confirm_password = $_POST['confirm_password'];
-            $student = $this->Student_model->student_details($this->session->userdata('student_id'));
-            if ($old_password == $student->real_pass) {
-                if ($new_password == $confirm_password) {
-                    //update password
-                    $id = $student->std_id;
-                    $data = array(
-                        'password' => hash('md5', $new_password),
-                        'real_pass' => $new_password
-                    );
-                    $this->Student_model->update_password($data, $id);
-                    $this->session->set_flashdata('message', 'Password is successfully changed.');
-                    redirect(base_url('index.php?student/profile'));
+            if ($old_password != '' && $new_password != '' && $confirm_password != '') {
+                $student = $this->Student_model->student_details($this->session->userdata('student_id'));
+                if ($old_password == $student->real_pass) {
+                    if ($new_password == $confirm_password) {
+                        //update password
+                        $id = $student->std_id;
+                        $data = array(
+                            'password' => hash('md5', $new_password),
+                            'real_pass' => $new_password
+                        );
+                        $this->Student_model->update_password($data, $id);
+                        $this->session->set_flashdata('message', 'Password is successfully changed.');
+                        redirect(base_url('index.php?student/profile'));
+                    } else {
+                        $page_data['error'] = 'Password is mismatched.';
+                    }
                 } else {
-                    $page_data['error'] = 'Password is mismatched.';
+                    $page_data['error'] = 'Invalid old password';
                 }
-            } else {
-                $page_data['error'] = 'Invalid old password';
+            }
+
+            //change profile pic
+            if ($_FILES['userfile']['name'] != '') {
+                $path = FCPATH . 'uploads/student_image/';
+                if(move_uploaded_file($_FILES['userfile']['tmp_name'], $path . $this->session->userdata('student_id') .'.jpg')){
+                    echo 'uploaded';
+                }
+                $this->db->where('std_id', $this->session->userdata('student_id'));
+                $this->db->update('student', array(
+                    'profile_photo' => $this->session->userdata('student_id') . '.jpg'
+                ));
+                $this->session->set_flashdata('message', 'Profile pic is changed');
+                redirect(base_url('index.php?student/profile'));
             }
         }
         $page_data['title'] = 'Student Profile';
@@ -1447,41 +1460,38 @@ class Student extends CI_Controller {
     }
 
     function participate($param1 = '', $param2 = '') {
-        
-        if($param1=="create")
-            {
-               
- $survey= $this->db->get_where('survey_question',array('question_status'=>'1'))->result();
- $count  =1;
 
-                foreach($survey as $res )
-                {
-                    
-                   // echo $count;
-                        $question[] = $this->input->post('question_id'.$count);
-                        $field[] = $this->input->post('Field'.$count);
-                        $que = implode(",",$question);
-                        $status = implode(",",$field);
-                        $count++;                
+        if ($param1 == "create") {
 
-                }
+            $survey = $this->db->get_where('survey_question', array('question_status' => '1'))->result();
+            $count = 1;
 
-                $data['sq_id'] = $que;
-                $data['survey_status'] = $status;
-              
-                $data['student_id']  = $this->session->userdata('std_id');  +        
-                $this->db->insert('survey_list', $data);
-                $this->session->set_flashdata('flash_message' , get_phrase('survey_added_successfully'));
-                redirect(base_url() . 'index.php?student/participate', 'refresh'); 
+            foreach ($survey as $res) {
+
+                // echo $count;
+                $question[] = $this->input->post('question_id' . $count);
+                $field[] = $this->input->post('Field' . $count);
+                $que = implode(",", $question);
+                $status = implode(",", $field);
+                $count++;
             }
-            $std = $this->session->userdata('std_id');
-            //$page_data['survey']= $this->db->get_where('survey',array('student_id'=>$std,'created_date'=>date('Y')))->result();
-            $page_data['survey']= $this->db->get_where('survey_question',array('question_status'=>'1'))->result();
-            $page_data['page_name']  = 'participate';
-            $page_data['page_title'] = 'Survey Application Form';
-            $page_data['param'] = $param1;
-            $this->load->view('backend/index', $page_data);
-       
+
+            $data['sq_id'] = $que;
+            $data['survey_status'] = $status;
+
+            $data['student_id'] = $this->session->userdata('std_id');
+            +
+                    $this->db->insert('survey_list', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('survey_added_successfully'));
+            redirect(base_url() . 'index.php?student/participate', 'refresh');
+        }
+        $std = $this->session->userdata('std_id');
+        //$page_data['survey']= $this->db->get_where('survey',array('student_id'=>$std,'created_date'=>date('Y')))->result();
+        $page_data['survey'] = $this->db->get_where('survey_question', array('question_status' => '1'))->result();
+        $page_data['page_name'] = 'participate';
+        $page_data['page_title'] = 'Survey Application Form';
+        $page_data['param'] = $param1;
+        $this->load->view('backend/index', $page_data);
     }
 
     function participate_attend($param = '') {
