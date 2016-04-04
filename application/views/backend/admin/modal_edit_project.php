@@ -55,7 +55,7 @@ foreach ($edit_data as $row):
                                             } else {
                                                 ?>
                                                 <option value="<?= $crs->course_id ?>" ><?= $crs->c_name ?></option>
-                                                <?php
+                                                <?php 
                                             }
                                         }
                                         ?>
