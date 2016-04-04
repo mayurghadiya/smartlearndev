@@ -17,10 +17,10 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/participate/do_update/' . $row['pp_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Degree *</label>
+                                <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select Degree</option>
+                                        <option value="">Select Course</option>
                                         <option value="All" <?php if($row['pp_degree']=="All"){ echo "selected=selected"; } ?>>All</option>
                                         <?php
                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -41,10 +41,10 @@ foreach ($edit_data as $row):
                             </div>
                             
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course *</label>
+                                <label class="col-sm-3 control-label">Branch <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course2">
-                                        <option value="">Select Course</option>
+                                        <option value="">Select Branch</option>
                                          <option value="All" <?php if($row['pp_course']=="All"){ echo "selected=selected"; } ?>>All</option>
                                         <?php
                                         $course = $this->db->get_where('course', array('course_status' => 1))->result();
@@ -66,7 +66,7 @@ foreach ($edit_data as $row):
                             
                             
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Batch *</label>
+                                <label class="col-sm-3 control-label">Batch <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="batch" id="batch2" onchange="get_sem(this.value);">
                                         <option value="">Select batch</option>
@@ -89,7 +89,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>	
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Semester *</label>
+                                <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="semester" id="semester2"  onchange="get_students(this.value);">   
                                     <option value="" >Select Semester</option> 
@@ -113,13 +113,13 @@ foreach ($edit_data as $row):
                             </div>
                             
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Participate Title *</label>
+                                <label class="col-sm-3 control-label">Participate Title <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['pp_title']; ?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Date  *</label>
+                                <label class="col-sm-3 control-label">Date  <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['pp_dos']; ?>"/>
                                 </div>
@@ -171,6 +171,7 @@ endforeach;
                              $("#batch2").val($("#batch2 option:eq(1)").val());
                              $("#course2").val($("#course2 option:eq(1)").val());
                               $("#semester2").val($("#semester2 option:eq(1)").val());
+                              
                         /*$("#course2").html(response);
                         $("#batch2").html(response);
                         $("#semester2").prepend(response);
@@ -195,6 +196,7 @@ endforeach;
                     url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                          $("#semester2").val($("#semester2 option:eq(1)").val());
                         $("#batch2").html(response);
                     }
                 });
@@ -311,8 +313,8 @@ alert('123');
                      },
             },
             messages: {
-                degree: "Please select degree",
-                 course:"Please select course",
+                degree: "Please select course",
+                 course:"Please select branch",
                 batch: "Please select batch",
                 semester: "Please select semester",
                 student: "Please select student",

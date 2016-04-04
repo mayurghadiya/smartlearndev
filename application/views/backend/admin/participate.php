@@ -66,8 +66,8 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div>Participate Title </div></th>											
-                                                <th><div>Degree</div></th>											
-                                                <th><div>Course</div></th>
+                                                <th><div>Course</div></th>											
+                                                <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Downloadable File</div></th>											
@@ -165,10 +165,10 @@
                                     <?php echo form_open(base_url() . 'index.php?admin/participate/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree *</label>
+                                            <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select degree</option>
+                                                    <option value="">Select Course</option>
                                                     <option value="All">All</option>
                                                     <?php
                                                     $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -182,10 +182,10 @@
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course *</label>
+                                            <label class="col-sm-3 control-label">Branch <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select Branch</option>
                                                   <option value="All">All</option>
                                                     <?php
                                                     /*  
@@ -200,7 +200,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch *</label>
+                                            <label class="col-sm-3 control-label">Batch <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="batch" id="batch" onchange="get_student2(this.value);" >
                                                     <option value="">Select batch</option>
@@ -217,7 +217,7 @@
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester *</label>
+                                            <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester" onchange="get_students2(this.value);">
                                                     <option value="">Select Semester</option>
@@ -234,13 +234,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Participate Title *</label>
+                                            <label class="col-sm-3 control-label">Participate Title <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date  *</label>
+                                            <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="dateofsubmission" id="dateofsubmission" />
                                             </div>
@@ -254,7 +254,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File Upload *</label>
+                                            <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="participatefile" id="participatefile" />
                                             </div>
@@ -283,20 +283,20 @@
 
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Question *</label>
+                                            <label class="col-sm-3 control-label">Question <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="question" id="question" />
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Short Description *</label>
+                                            <label class="col-sm-3 control-label">Short Description <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="description" id="description"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
+                                            <label class="col-sm-3 control-label">Status <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="radio" id="status" name="status" value="1" >Active
                                                 <input type="radio" id="status" name="status" value="0" > Deactive
@@ -332,8 +332,8 @@
                                                 <tr>
                                                     <th><div>#</div></th>                                           
                                                     <th><div>Student Name</div></th>       
-                                                    <th><div>Degree</div></th>
                                                     <th><div>Course</div></th>
+                                                    <th><div>Branch</div></th>
                                                     <th><div>Batch</div></th>											
                                                     <th><div>Semester</div></th>	
                                                     <th><div>Question</div></th>  
@@ -476,8 +476,8 @@
                                                 <th><div>Student Name</div></th>	
                                                 <th><div>Participate Title</div></th>
                                                 <th><div>Comment</div></th>
-                                                <th><div>Degree</div></th>											
-                                                <th><div>Course</div></th>
+                                                <th><div>Course</div></th>											
+                                                <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>
 
                                                 <th><div>Semester</div></th>											
@@ -541,8 +541,8 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div>Student Name</div></th>	                                               
-                                                <th><div>Degree</div></th>											
-                                                <th><div>Course</div></th>
+                                                <th><div>Course</div></th>											
+                                                <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>
 
                                                 <th><div>Semester</div></th>											
@@ -653,6 +653,7 @@
                                                                         url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
                                                                         data: dataString,
                                                                         success: function (response) {
+                                                                              $("#semester").val($("#semester option:eq(1)").val());
                                                                             $("#batch").html(response);
                                                                         }
                                                                     });
@@ -745,8 +746,8 @@
                                                                                     },
                                                                         },
                                                                         messages: {
-                                                                            degree: "Please select degree",
-                                                                            course: "Please select course",
+                                                                            degree: "Please select course",
+                                                                            course: "Please select branch",
                                                                             batch: "Please select batch",
                                                                             semester: "Please select semester",
                                                                             dateofsubmission: "Please select date of submission",
