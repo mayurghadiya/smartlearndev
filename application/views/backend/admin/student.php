@@ -156,10 +156,10 @@
                                             </div>
                                         </div>	
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select Degree</option>
+                                                    <option value="">Select Course</option>
                                                     <?php
                                                     $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                     foreach ($degree as $dgr) {
@@ -172,7 +172,7 @@
                                             </div>
                                         </div>
                                           <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select course</option>
