@@ -1228,7 +1228,7 @@ class Admin extends CI_Controller {
             $data['lm_desc'] = $this->input->post('description');
             $data['lm_dos'] = $this->input->post('dateofsubmission');
             $data['lm_status'] = 1;
-            $data['lm_student_id'] = $this->input->post('student');
+          //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
             $data['created_date'] = date('Y-m-d');
 
@@ -1287,7 +1287,7 @@ class Admin extends CI_Controller {
             $data['lm_desc'] = $this->input->post('description');
             $data['lm_dos'] = $this->input->post('dateofsubmission1');
             $data['lm_status'] = 1;
-            $data['lm_student_id'] = $this->input->post('student');
+          //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
 
             $this->db->where('lm_id', $param2);
