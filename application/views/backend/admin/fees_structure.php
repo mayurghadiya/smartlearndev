@@ -7,7 +7,7 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a> </li>
                         <li><a href="#">Pages</a> </li>
-                        <li class="active">Fees Management</li>
+                        <li class="active">Fee Management</li>
                     </ul>                  
                 </div>
             </div>
@@ -23,11 +23,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Fees Structure List
+                                    Fee Structure List
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Fees Structure
+                                    Add Fee Structure
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -42,11 +42,11 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Title</th>
-                                                <th>Degree</th>
-                                                <th>Course Name</th>
+                                                <th>Course</th>
+                                                <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
-                                                <th>Fees</th>
+                                                <th>Fee</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -88,7 +88,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Degree</label>
+                                                <label class="col-sm-3 control-label">Course</label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="degree" name="degree">
                                                         <option value="">Select</option>
@@ -99,7 +99,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course Name</label>
+                                                <label class="col-sm-3 control-label">Branch</label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="course" name="course">
 
@@ -115,7 +115,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Semester Name</label>
+                                                <label class="col-sm-3 control-label">Semester</label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="semester" name="semester">
                                                         <option value="">Select</option>
@@ -126,9 +126,33 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Fees</label>
+                                                <label class="col-sm-3 control-label">Fee</label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="fees" class="form-control" name="fees"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Start Date</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="start_date" class="form-control datepicker" name="start_date"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">End Date</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="end_date" class="form-control datepicker" name="end_date"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Expiry Date</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="expiry_date" class="form-control datepicker" name="expiry_date"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Penalty</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="penalty" class="form-control" name="penalty"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -174,18 +198,26 @@
                                                                             required: true,
                                                                             currency: ['$', false]
                                                                         },
-                                                                        title: "required"
+                                                                        title: "required",
+                                                                        start_date: "required",
+                                                                        end_date: "required",
+                                                                        expiry_date: "required",
+                                                                        penalty: "required"
                                                                     },
                                                                     messages: {
-                                                                        degree: "Please select degree",
-                                                                        course: "Please select Course Name",
-                                                                        semester: "Please select semester name",
+                                                                        degree: "Please select course",
+                                                                        course: "Please select branch",
+                                                                        semester: "Please select semester",
                                                                         batch: "Please select batch",
                                                                         fees: {
-                                                                            required: "Please Enter  Fees",
+                                                                            required: "Please Enter  Fee",
                                                                             currency: "Please Enter Valid Amount"
                                                                         },
-                                                                        title: "Please enter title"
+                                                                        title: "Please enter title",
+                                                                        start_date: "Please enter start date",
+                                                                        end_date: "Please enter end date",
+                                                                        expiry_date: "Please enter expiry date",
+                                                                        penalty: "Please enter penalty"
                                                                     }
                                                                 });
                                                             });
@@ -241,4 +273,35 @@
         }
 
     })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#start_date").datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date(),
+            onClose: function (selectedDate) {
+                $("#end_date").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#end_date").datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+            onClose: function (selectedDate) {
+                $("#start_date").datepicker("option", "maxDate", selectedDate);
+                $("#expiry_date").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $('#expiry_date').datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,            
+        });
+
+    })
+    //minDate: new Date(),
+
 </script>
