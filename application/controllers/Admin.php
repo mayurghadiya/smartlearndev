@@ -159,34 +159,28 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Course Management';
         $this->load->view('backend/index', $page_data);
     }
-    function check_course()
-    {
-        $data=$this->db->get_where('course',array('c_name'=>$this->input->post('course'),
-                            'degree_id'=>$this->input->post('degree')))->result();
-      
-        if(count($data) > 0)
-        {
+
+    function check_course() {
+        $data = $this->db->get_where('course', array('c_name' => $this->input->post('course'),
+                    'degree_id' => $this->input->post('degree')))->result();
+
+        if (count($data) > 0) {
             echo "false";
-        }
-        else
-        {
+        } else {
             echo "true";
         }
     }
-    function check_degree()
-    {
-        $data=$this->db->get_where('degree',array('d_name'=>$this->input->post('course')))->result();
-        if(count($data) > 0)
-        {
+
+    function check_degree() {
+        $data = $this->db->get_where('degree', array('d_name' => $this->input->post('course')))->result();
+        if (count($data) > 0) {
             echo "false";
-        }
-        else
-        {
+        } else {
             echo "true";
         }
     }
-    
-            function get_cource_multiple($param = '') {
+
+    function get_cource_multiple($param = '') {
         $did = implode(',', $this->input->post("degree"));
         $courceid = explode(',', $this->input->post("courseid"));
         $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
@@ -200,14 +194,13 @@ class Admin extends CI_Controller {
         }
         echo $html;
     }
-    
-    function check_batch()
-    {   
-       $degree=implode(',',$this->input->post("degree")) ;
-       $course=implode(',',$this->input->post("course"));
-       $batchname=$this->input->post('batch');
-       $data = $this->db->query("select * from batch where degree_id in($degree) and course_id in($course) and b_name=$batchname")->result_array();
-       echo json_encode($data);
+
+    function check_batch() {
+        $degree = implode(',', $this->input->post("degree"));
+        $course = implode(',', $this->input->post("course"));
+        $batchname = $this->input->post('batch');
+        $data = $this->db->query("select * from batch where degree_id in($degree) and course_id in($course) and b_name=$batchname")->result_array();
+        echo json_encode($data);
     }
 
     /*     * *MANAGE Events
@@ -222,18 +215,18 @@ class Admin extends CI_Controller {
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
-           
+
             $this->db->insert('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
         if ($param1 == 'do_update') {
-            echo '<pre>';            
+            echo '<pre>';
             $data['event_name'] = $this->input->post('event_name');
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
-            
+
             $this->db->where('event_id', $param2);
             $this->db->update('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
@@ -503,7 +496,7 @@ class Admin extends CI_Controller {
         $query = $this->db->get();
         $file = FCPATH . 'event.humanDate.json.php';
         $result = json_encode($query->result());
-        
+
         write_file($file, $result);
     }
 
@@ -846,30 +839,25 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Semester Management';
         $this->load->view('backend/index', $page_data);
     }
-    function check_semester()
-    {
-          $data=$this->db->get_where('semester',array('s_name'=>$this->input->post('semester')))->result();
-        if(count($data) > 0)
-        {
+
+    function check_semester() {
+        $data = $this->db->get_where('semester', array('s_name' => $this->input->post('semester')))->result();
+        if (count($data) > 0) {
             echo "false";
-        }
-        else
-        {
+        } else {
             echo "true";
         }
     }
-    function check_admission_type()
-    {
-        $data=$this->db->get_where('admission_type',array('at_name'=>$this->input->post('admission_type')))->result();
-        if(count($data) > 0)
-        {
+
+    function check_admission_type() {
+        $data = $this->db->get_where('admission_type', array('at_name' => $this->input->post('admission_type')))->result();
+        if (count($data) > 0) {
             echo "false";
-        }
-        else
-        {
+        } else {
             echo "true";
         }
     }
+
     function admission_type($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
@@ -1228,7 +1216,7 @@ class Admin extends CI_Controller {
             $data['lm_desc'] = $this->input->post('description');
             $data['lm_dos'] = $this->input->post('dateofsubmission');
             $data['lm_status'] = 1;
-          //  $data['lm_student_id'] = $this->input->post('student');
+            //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
             $data['created_date'] = date('Y-m-d');
 
@@ -1287,7 +1275,7 @@ class Admin extends CI_Controller {
             $data['lm_desc'] = $this->input->post('description');
             $data['lm_dos'] = $this->input->post('dateofsubmission1');
             $data['lm_status'] = 1;
-          //  $data['lm_student_id'] = $this->input->post('student');
+            //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
 
             $this->db->where('lm_id', $param2);
@@ -3032,7 +3020,7 @@ class Admin extends CI_Controller {
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
+            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3050,7 +3038,7 @@ class Admin extends CI_Controller {
         foreach ($subjects as $row) {
             ?>
             <option value="<?php echo $row->sm_id; ?>"
-                    <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
+            <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
             <!--echo "<option value={$row->sm_id}>{$row->subject_name}  (Code: {$row->subject_code})</option>";-->
             <?php
         }
@@ -3174,15 +3162,26 @@ class Admin extends CI_Controller {
                         'sem_id' => $this->input->post('semester', TRUE),
                         'total_fee' => $this->input->post('fees', TRUE),
                         'description' => $this->input->post('description', TRUE),
+                        'fee_start_date' => $this->input->post('start_date', TRUE),
+                        'fee_end_date' => $this->input->post('end_date', TRUE),
+                        'fee_expiry_date' => $this->input->post('expiry_date', TRUE),
+                        'penalty' => $this->input->post('penalty', TRUE)
                     ));
                     $this->session->set_flashdata('flash_message', 'Fees structure is successfully added.');
                 }
             } elseif ($param1 == 'update') {
                 $this->Crud_model->fees_structure_save(array(
                     'title' => $this->input->post('title', TRUE),
+                    'degree_id' => $this->input->post('degree', TRUE),
                     'course_id' => $this->input->post('course', TRUE),
+                    'batch_id' => $this->input->post('edit_batch', TRUE),
                     'sem_id' => $this->input->post('semester', TRUE),
                     'total_fee' => $this->input->post('fees', TRUE),
+                    'fee_start_date' => $this->input->post('start_date', TRUE),
+                    'fee_end_date' => $this->input->post('end_date', TRUE),
+                    'fee_expiry_date' => $this->input->post('expiry_date', TRUE),
+                    'penalty' => $this->input->post('penalty', TRUE),
+                    'description' => $this->input->post('description', TRUE),
                         ), $param2);
                 $this->session->set_flashdata('flash_message', 'Fees structure is successfully updated.');
             }
@@ -3399,17 +3398,15 @@ class Admin extends CI_Controller {
             echo "true";
         }
     }
-    
-    function checksubjects()
-    {
-         $eid = $this->input->post('subname');
+
+    function checksubjects() {
+        $eid = $this->input->post('subname');
         $subcode = $this->input->post('subcode');
         $course = $this->input->post('course');
         $semester = $this->input->post('semester');
         $data = $this->db->get_where('subject_manager', array("sm_course_id" => $course, "sm_sem_id" => $semester, "subject_name" => $eid, "subject_code" => $subcode))->result_array();
-       echo json_encode($data);
+        echo json_encode($data);
     }
-    
 
     function checksubcode() {
 

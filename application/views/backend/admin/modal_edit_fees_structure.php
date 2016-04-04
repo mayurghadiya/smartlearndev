@@ -17,22 +17,22 @@ $batch = $this->db->query($query)->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Edit Fees Structure
+                    Edit Fee Structure
                 </div>
             </div>
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
-                        <?php echo form_open(base_url() . 'index.php?admin/fees_structure/update/' . $edit_data->fees_structure_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'feesstructure', 'target' => '_top')); ?>
+                        <?php echo form_open(base_url() . 'index.php?admin/fees_structure/update/' . $edit_data->fees_structure_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editfeesstructure', 'target' => '_top')); ?>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Title</label>
                             <div class="col-sm-7">
-                                <input type="text" id="title" name="title" class="form-control"
+                                <input type="text" id="edit_title" name="title" class="form-control"
                                        value="<?php echo $edit_data->title; ?>" required=""/>
                             </div>
                         </div>                  
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Degree</label>
+                            <label class="col-sm-3 control-label">Course</label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_degree" name="degree" required="">
                                     <option value="">Select</option>
@@ -44,7 +44,7 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course Name</label>
+                            <label class="col-sm-3 control-label">Branch</label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_course" name="course" required="">
                                     <option value="">Select</option>
@@ -68,7 +68,7 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester Name</label>
+                            <label class="col-sm-3 control-label">Semester</label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_semester" name="semester" required="">
                                     <option value="">Select</option>
@@ -80,14 +80,48 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Fees</label>
+                            <label class="col-sm-3 control-label">Fee</label>
                             <div class="col-sm-7">                                        
-                                <input type="text" id="fees" class="form-control" name="fees" required=""
+                                <input type="text" id="edit_fees" class="form-control" name="fees" required=""
                                        value="<?php echo $edit_data->total_fee; ?>"/>                                               
                             </div>
                         </div>	
                         <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-5">
+                            <label class="col-sm-3 control-label">Start Date</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="edit_start_date" class="form-control datepicker" name="start_date"
+                                       value="<?php echo $edit_data->fee_start_date; ?>"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">End Date</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="edit_end_date" class="form-control datepicker" name="end_date"
+                                       value="<?php echo $edit_data->fee_end_date; ?>"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Expiry Date</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="edit_expiry_date" class="form-control datepicker" name="expiry_date"
+                                       value="<?php echo $edit_data->fee_expiry_date; ?>"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Penalty</label>
+                            <div class="col-sm-7">
+                                <input type="text" id="edit_penalty" class="form-control" name="penalty"
+                                       value="<?php echo $edit_data->penalty; ?>"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Description</label>
+                            <div class="col-sm-7">
+                                <textarea id="description" name="description" class="form-control"><?php echo $edit_data->description; ?></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-7">
                                 <button type="submit" class="submit btn btn-info">Edit</button>
                             </div>
                         </div>
@@ -100,12 +134,41 @@ $batch = $this->db->query($query)->result();
 </div>
 
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-<script type="text/javascript">
+
+<script>
     $.validator.setDefaults({
         submitHandler: function (form) {
-            var form = document.getElementsByTagName("form");
             form.submit();
         }
+    });
+
+    $().ready(function () {
+        $("#editfeesstructure").validate({
+            rules: {
+                edit_title: "required",
+                edit_degree: "required",
+                edit_course: "required",
+                edit_batch: "required",
+                edit_semester: "required",
+                edit_fees: "required",
+                start_date: "required",
+                end_date: "required",
+                expiry_date: "required",
+                penalty: "required"
+            },
+            messages: {
+                edit_title: "Please enter title",
+                edit_degree: "Please select course",
+                edit_course: "Please select branch",
+                edit_batch: "Please select batch",
+                edit_semester: "Please select semester",
+                edit_fees: "Please enter fee",
+                start_date: "Please enter start date",
+                end_date: "Please enter end date",
+                expiry_date: "Please enter expiry date",
+                penalty: "Please enter penalty"
+            }
+        });
     });
 </script>
 
@@ -159,4 +222,35 @@ $batch = $this->db->query($query)->result();
         }
 
     })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#edit_start_date").datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date(),
+            onClose: function (selectedDate) {
+                $("#edit_end_date").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $("#edit_end_date").datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+            onClose: function (selectedDate) {
+                $("#edit_start_date").datepicker("option", "maxDate", selectedDate);
+                $("#edit_expiry_date").datepicker("option", "minDate", selectedDate);
+            }
+        });
+        $('#edit_expiry_date').datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+        });
+
+    })
+    //minDate: new Date(),
+
 </script>
