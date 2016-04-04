@@ -10,24 +10,24 @@
         <div class="container">
             <div class="vd_content clearfix">
                 <div class="row">  
-                   <?php echo form_open(base_url() . 'index.php?student/changepassword/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmchangepassword', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
+                   <?php echo form_open(base_url() . 'index.php?student/change_password/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmchangepassword', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
                         <div class="padded">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Current Password<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="current_password" id="current_password" />
+                                    <input type="password" class="form-control" name="current_password" id="current_password" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">New Password<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="new_password" id="new_password" />
+                                    <input type="password" class="form-control" name="new_password" id="new_password" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Confirm Password<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="confirm_password" id="confirm_password" />
+                                    <input type="password" class="form-control" name="confirm_password" id="confirm_password" />
                                 </div>
                             </div>
                             <div class="form-group">
