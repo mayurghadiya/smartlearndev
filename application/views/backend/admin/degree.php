@@ -7,13 +7,13 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a> </li>
                         <li><a href="#">Pages</a> </li>
-                        <li class="active">Degree Management</li>
+                        <li class="active">Course Management</li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Degree Management</h1>
+                    <h1>Course Management</h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -23,11 +23,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Degree List
+                                    Course List
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Degree
+                                    Add Course
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -41,7 +41,7 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Degree Name</th>
+                                                <th>Course Name</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -79,7 +79,7 @@
 <?php echo form_open(base_url() . 'index.php?admin/degree/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'degreeform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree Name<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="d_name" id="d_name"/>
                                             </div>
@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Degree</button>
+                                                <button type="submit" class="btn btn-info">Add Course</button>
                                             </div>
                                         </div>
                                         </form>               
