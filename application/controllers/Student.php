@@ -1511,7 +1511,7 @@ class Student extends CI_Controller {
             $data['p_status'] = $this->input->post('p_status');
             $data['comment'] = $this->input->post('comment');
             $this->db->insert("participate_student", $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', get_phrase('participation_successfully'));
             redirect(base_url() . 'index.php?student/dashboard', 'refresh');
         }
         $page_data['page_name'] = 'participate_form';
