@@ -131,12 +131,12 @@
 	  <nav class="">
 		  <div class="container-fluid">
 				<ul class="nav navbar-nav">
+                                    <li><a href="<?php echo base_url('index.php?student/dashboard'); ?>">Dashboard</a></li>
 				 <?php
 				$news_conent		=	$this->db->get_where('cms_manager' , array('c_status' => 1) )->result_array();
 				 foreach($news_conent as $row):?>	
-					<li><a href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
+                                    <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
 					<?php endforeach;?>
-					<li><a href="#">Contact Us</a></li>
 				</ul>
 		  </div>
 	</nav>

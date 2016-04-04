@@ -863,7 +863,7 @@ class Student extends CI_Controller {
                 }
                 $this->db->where('std_id', $this->session->userdata('student_id'));
                 $this->db->update('student', array(
-                    'profile_photo' => $this->session->userdata('student_id') . '.jpg'
+                    'profile_photo' => $this->session->userdata('student_id') . '.jpg '
                 ));
                 $this->session->set_flashdata('message', 'Profile pic is changed');
                 redirect(base_url('index.php?student/profile'));
