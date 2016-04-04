@@ -104,6 +104,7 @@ class Admin extends CI_Controller {
         // echo $numOfDraws;
         //$page_data['calender_json'] = $this->calendar_json();
         $this->calendar_json();
+        //exit;
         //var_dump($page_data['calender_json']);
         $page_data['chat'] = $this->chat_user();
 
@@ -217,19 +218,22 @@ class Admin extends CI_Controller {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-
             $data['event_name'] = $this->input->post('event_name');
+            $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
-            $data['event_date'] = $this->input->post('event_date');
-
+            $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
+           
             $this->db->insert('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
         if ($param1 == 'do_update') {
+            echo '<pre>';            
             $data['event_name'] = $this->input->post('event_name');
+            $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
-            $data['event_date'] = $this->input->post('event_date');
+            $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
+            
             $this->db->where('event_id', $param2);
             $this->db->update('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
@@ -493,17 +497,13 @@ class Admin extends CI_Controller {
 
     function calendar_json() {
         $this->load->helper('file');
-        $this->db->select('event_date AS date, event_name AS title, event_desc AS description');
+        $this->db->select('event_date AS date, event_name AS title, event_location AS Location, event_desc AS description');
+        $this->db->select('DATE_FORMAT(event_date, "%d %b %Y") AS event_start_date, TIME_FORMAT(event_date, "%h:%i %p") AS event_start_time');
         $this->db->from('event_manager');
         $query = $this->db->get();
         $file = FCPATH . 'event.humanDate.json.php';
         $result = json_encode($query->result());
-
-        //$result = ltrim($result, '[');
-        //$result = rtrim($result, ']');
-        //echo '<pre>';
-        //var_dump($result);
-        //var_dump($result);
+        
         write_file($file, $result);
     }
 
