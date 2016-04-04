@@ -10,6 +10,19 @@
   <script type="text/javascript" src="js/excanvas.js"></script>      
 <![endif]-->
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>bootstrap.min.js"></script> 
+<script src="<?php echo base_url(); ?>assets/js/jquery.toaster.js"></script>
+<script>
+<?php
+$message = $this->session->flashdata('flash_message');
+if($message != '') { ?>
+$.toaster({ 
+	priority : 'success', 
+	title : 'Success! ', 
+	message : '<?php echo $message; ?>',
+	timeOut: 5000
+});
+<?php } ?>
+ </script>
 <script type="text/javascript" src='<?=$this->config->item('custom_plugin')?>jquery-ui/jquery-ui.custom.min.js'></script>
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
