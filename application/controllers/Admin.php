@@ -925,33 +925,6 @@ class Admin extends CI_Controller {
                     //$file_url = base_url().'uploads/project_file/'.$data['lm_filename'];
                 }
 
-                /*
-                  $ext_img = explode(".",$_FILES['profilefile']['name']);
-                  $ext = strtolower(end($ext_img));
-
-                  $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                  $ext_arr = explode("|",$config['allowed_types']);
-
-                  if(in_array($ext, $ext_arr))
-                  {
-                  $config['file_name'] = date('dmYhis').'.'.$ext;
-                  $config['upload_path'] = 'uploads/student_image';
-                  //$config['allowed_types'] = 'gif|jpg|png';
-                  $this->load->library('upload', $config);
-                  $this->upload->initialize($config);
-                  $data['profile_photo'] = $config['file_name'];
-                  $this->upload->do_upload('profilefile');
-
-
-                  }
-                  else{
-
-                  //$data = array('msg' => $this->upload->display_errors());
-                  $this->session->set_flashdata("flash_message",'Invalid Image!');
-                  redirect(base_url() . 'index.php?admin/student/', 'refresh');
-
-                  }
-                 */
             } else {
 
                 $data['profile_photo'] = '';
@@ -981,25 +954,38 @@ class Admin extends CI_Controller {
             $data['std_status'] = 1;
             $data['std_degree'] = $this->input->post('degree');
             $data['created_date'] = date('Y-m-d');
+            $data['password_status']=0;
             //roll no
             $this->db->insert('student', $data);
             $lastid = $this->db->insert_id();
             $rollno = date('Y');
             $rollno.=$this->db->get_where('course', array('course_id' => $this->input->post('course')))->row()->course_alias_id;
-            ;
             $rollno.='-' . $lastid;
             $updaterollno['std_roll'] = $rollno;
             $this->db->where('std_id', $lastid);
             $this->db->update('student', $updaterollno);
             //end roll no
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
-            redirect(base_url() . 'index.php?admin/student/', 'refresh');
+            //email
+            $msg="Hello,<br>"
+                    . "Your username is [".$data['email'].
+                    "]<br>Password is [12345]";
+                    $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
+                   $this->email->to( $data['email']);
+                 //  $this->email->cc('mayur.ghadiya@searchnative.in');
+                   $this->email->subject('Login credential');
+                   $this->email->message($msg);
+                  
+                   if ($this->email->send()) {
+                      $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+                        redirect(base_url() . 'index.php?admin/student/', 'refresh');
+                   } else {
+                       show_error($this->email->print_debugger());
+                   }
+            //end email
+           
         }
         if ($param1 == 'do_update') {
             if ($_FILES['profilefile']['name'] != "") {
-
-
-
 
                 $ext_img = explode(".", $_FILES['profilefile']['name']);
                 $ext = strtolower(end($ext_img));
