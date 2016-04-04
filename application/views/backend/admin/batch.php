@@ -42,8 +42,8 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Batch Name</th>
-                                                <th>Degree</th>
                                                 <th>Course</th>
+                                                <th>Branch</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -105,10 +105,10 @@
                                             </div>
                                         </div>	
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree[]" class="form-control" multiple>
-                                                    <option value="">Select Degree</option>
+                                                    <option value="">Select Course</option>
                                                         <?php foreach ($degree as $srow) { ?>
                                                         <option value="<?php echo $srow['d_id']; ?>"><?php echo $srow['d_name']; ?>
                                                         </option>
@@ -117,7 +117,7 @@
                                             </div>	
                                         </div>
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="course" name="course[]" class="form-control" multiple>
                                                                                                         
