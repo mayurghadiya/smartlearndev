@@ -1459,7 +1459,7 @@ class Student extends CI_Controller {
               
                 $data['student_id']  = $this->session->userdata('std_id');  +        
                 $this->db->insert('survey_list', $data);
-                $this->session->set_flashdata('flash_message' , get_phrase('data_added_successfully'));
+                $this->session->set_flashdata('flash_message' , get_phrase('survey_added_successfully'));
                 redirect(base_url() . 'index.php?student/participate', 'refresh'); 
             }
             $std = $this->session->userdata('std_id');
