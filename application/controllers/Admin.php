@@ -189,7 +189,7 @@ class Admin extends CI_Controller {
         $did = implode(',', $this->input->post("degree"));
         $courceid = explode(',', $this->input->post("courseid"));
         $cource = $this->db->query("select * from course where degree_id in($did)")->result_array();
-        $html = '<option value="default">Select Course</option>';
+        $html = '<option value="default">Select Branch</option>';
         foreach ($cource as $c) {
             if (in_array($c['course_id'], $courceid)) {
                 $html .='<option value="' . $c['course_id'] . '" selected>' . $c['c_name'] . '</option>';
