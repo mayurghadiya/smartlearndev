@@ -181,8 +181,20 @@ class Student extends CI_Controller {
         $center_explode = explode(',', $data[0]->center_id);
 
         foreach ($center_explode as $cen) {
-            $datacen[] = $this->db->get_where('center_user', array('center_id' => $cen))->result();
+            $data1[] = $this->db->get_where('center_user', array('center_id' => $cen))->result();
         }
+        $datacen=array();
+        foreach($data1 as $cc)
+        {
+            foreach($cc as $c)
+            {
+               $sittingcount=$this->db->get_where('student_exam_center',array('center_id'=>$c->center_id))->result();
+               if($c->setting_number>count($sittingcount))
+               {
+                   $datacen[]=$c;
+               }
+            }
+        }      
         echo json_encode($datacen);
     }
 
