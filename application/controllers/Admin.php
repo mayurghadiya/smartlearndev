@@ -1486,8 +1486,37 @@ class Admin extends CI_Controller {
             $data['assign_status'] = 1;
             $data['created_date'] = date('Y-m-d');
             $data['assign_degree'] = $this->input->post('degree');
-
+            
             $this->db->insert('assignment_manager', $data);
+            $assign_degree= $data['assign_degree'];
+            $assign_sem= $data['assign_sem'];
+            $assign_batch= $data['assign_batch'];
+            $course_id= $data['course_id'];
+            $this->db->where('std_batch',$assign_batch);
+            $this->db->where('semester_id',$assign_sem);
+            $this->db->where('std_degree',$assign_degree);
+            $this->db->where('course_id',$course_id);
+            $students = $this->db->get('student')->result();
+            $std_ids = '';
+            foreach($students as $std)
+            {
+              $id = $std->std_id;
+              
+              
+              $std_id[] = $id;
+              //  $student_id = implode(",",$id);
+               // $std_ids[] =$student_id;
+            }
+            $student_ids = implode(",",$std_id);
+            $this->db->where("notification_type","assignment_manager");
+            $res =$this->db->get("notification_type")->result();
+            $res[0]->notification_type_id;
+            // $res = $this->db->get_where("notification_type",array("notification_type"=>"assignment_manager"))->result();
+            //echo $res[0]['notification_type_id'];
+            die;
+           //$this->db->insert();
+            
+            
             $this->session->set_flashdata('flash_message', get_phrase('assignment_added_successful'));
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
