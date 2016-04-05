@@ -62,7 +62,7 @@
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_semester_list/<?php echo $row['s_id']; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/semester/delete/<?php echo $row['s_id']; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/semester/delete/<?php echo $row['s_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
 <?php endforeach; ?>						
