@@ -3292,7 +3292,9 @@ class Admin extends CI_Controller {
     function create_private_broadcast() {
         $this->db->insert('broadcast_and_streaming', array(
             'title' => $_POST['title'],
+            'degree_id' => $_POST['degree'],
             'course' => $_POST['course'],
+            'batch' => $_POST['batch'],
             'semester' => $_POST['semester'],
             'url_link' => $_POST['url_link'],
             'is_active' => 1
