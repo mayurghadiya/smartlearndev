@@ -250,6 +250,7 @@ foreach ($datadegree as $rowdegree) {
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
+                                                 <input type="checkbox" name="checkall" id="checkAll"  >Check All<br>
                                                 <div id="student"></div>
                                                 <!--<select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
@@ -412,6 +413,12 @@ foreach ($datadegree as $rowdegree) {
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
+      
+    $("#checkAll").change(function () {
+    $("input:checkbox").prop('checked', $(this).prop("checked"));
+});
+
+        
            $("#sub_courses").change(function(){
                 var degree = $(this).val();
                 
