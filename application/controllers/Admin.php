@@ -3844,4 +3844,32 @@ class Admin extends CI_Controller {
         
           
     }
+    function getactivity()
+    {
+        
+         $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+            $data['course'] = $this->db->get('course')->result();
+            $data['semester'] = $this->db->get('semester')->result();
+            $data['batch'] = $this->db->get('batch')->result();
+            $data['degree'] = $this->db->get('degree')->result();
+            $data['student'] = $this->db->get('student')->result();
+            
+        $this->db->select("sl.*,s.* ");
+        $this->db->from('participate_student sl');        
+        $this->db->join("student s", "s.std_id=sl.student_id");
+        $this->db->where("s.course_id",$course);
+            $this->db->where("s.std_batch",$batch);
+            $this->db->where("s.std_degree",$degree);
+            $this->db->where("s.semester_id",$semester);
+              $data['volunteer'] = $this->db->get()->result_array();
+
+           $this->load->view("backend/admin/getactivity",$data);
+            
+        
+        
+          
+    }
 }
