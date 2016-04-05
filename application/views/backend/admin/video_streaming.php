@@ -170,7 +170,7 @@
                                                             <td><?php echo $mul->s_name; ?></td>
                                                             <td>
                                                                 <button onclick="window.open('<?php echo base_url(); ?>index.php?video_streaming#<?php echo $mul->url_link; ?>')">View Streaming</button>
-                                                                <button session_id="<?php echo $mul->title; ?>" class="multicaststartstop_tab">Start</button>
+                                                                
                                                             </td>
                                                         </tr>                                                    
                                                     <?php } ?>
@@ -615,7 +615,9 @@
                     // broadcast
                     var form_data = {
                         title: $('#broadcast-name').val(),
+                        degree: 'all',
                         course: 'all',
+                        batch: 'all',
                         semester: 'all',
                         url_link: result[1]
                     };
