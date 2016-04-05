@@ -69,7 +69,7 @@
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                      <option value="All">All</option>
-                                                    <option value="All">All</option>
+                                                  
                                                     <?php foreach ($semester as $row) { ?>
                                                         <option value="<?php echo $row->s_id; ?>"
                                                                ><?php echo $row->s_name; ?></option>
@@ -342,10 +342,11 @@
                     success:function(response){
                         if(degree=='All')
                         {
+                            $("#branches").html(response);
                              $("#batches").val($("#batches option:eq(1)").val());
                              $("#branches").val($("#branches option:eq(1)").val());
                              $("#semesters").val($("#semesters option:eq(1)").val());
-                            $("#branches").append(response);
+                            
                         }
                         else{
                             $("#branches").append(response);
@@ -374,9 +375,10 @@
                     success:function(response){
                          if(course=='All')
                         {
+                             $("#batches").html(response);
                              $("#batches").val($("#batches option:eq(1)").val());                            
                              $("#semesters").val($("#semesters option:eq(1)").val());
-                            $("#batches").append(response);
+                           
                         }
                         else{
                            $("#batches").append(response);

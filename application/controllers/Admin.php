@@ -3765,26 +3765,65 @@ class Admin extends CI_Controller {
     }
     function getlibrary($param='')
     {
-        if($param='allassignment')
-        {
+       
             $degree = $this->input->post('degree');
             $course = $this->input->post('course');
             $batch = $this->input->post('batch');
             $semester = $this->input->post("semester");
                $data['course'] = $this->db->get('course')->result();
-        $data['semester'] = $this->db->get('semester')->result();
-        $data['batch'] = $this->db->get('batch')->result();
-        $data['degree'] = $this->db->get('degree')->result();
-            $this->db->where("lm_course",$course);
-            $this->db->where("lm_batch",$batch);
-            $this->db->where("lm_degree",$degree);
-            $this->db->where("lm_semester",$semester);
-          $data['param'] = $param;
-            $data['library'] = $this->db->get('library_manager')->result();
+            $data['semester'] = $this->db->get('semester')->result();
+            $data['batch'] = $this->db->get('batch')->result();
+            $data['degree'] = $this->db->get('degree')->result();
+             if($degree=="All")
+           {
+             
+               
+                 $data['library'] = $this->db->get('library_manager')->result();
+               
+           }
+           else{
+               if($course=="All")
+               {
+                     $this->db->where("lm_degree",$degree);
+                  $data['library'] = $this->db->get('library_manager')->result();
+                     
+               }
+               else{
+                   if($batch=='All')
+                   {
+                     $this->db->where("lm_course",$course);
+                     $this->db->where("lm_degree",$degree);
+                   $data['library'] = $this->db->get('library_manager')->result();
+                       
+                   }
+                   else{
+                       if($semester=="All")
+                       {
+                            $this->db->where("lm_batch",$batch);
+                        $this->db->where("lm_course",$course);
+                     $this->db->where("lm_degree",$degree);
+                    $data['library'] = $this->db->get('library_manager')->result();
+                       }else{
+                           $this->db->where("lm_semester",$semester);
+                           $this->db->where("lm_batch",$batch);
+                        $this->db->where("lm_course",$course);
+                     $this->db->where("lm_degree",$degree);
+                    $data['library'] = $this->db->get('library_manager')->result();
+                           
+                       }
+                       
+                   }
+                   
+               }
+               
+               
+           }
+       
+            
             
             $this->load->view("backend/admin/getlibrary",$data);
             
-        }
+       
         
         
     }
@@ -3999,6 +4038,12 @@ class Admin extends CI_Controller {
          $did = $this->input->post("degree");
 
             if ($did != '') {
+                if($did=='All')
+                {
+                     echo ' <option value="">Select Branch</option>
+                   <option value="All">All</option>';
+                }
+                else{
                 $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
                $html = '';
                 foreach ($cource as $crs):
@@ -4006,6 +4051,7 @@ class Admin extends CI_Controller {
 
                 endforeach;
                 echo $html;
+                }
             }
     }
     function batch_filter($param = '') {
@@ -4016,11 +4062,14 @@ class Admin extends CI_Controller {
             // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
         if($cid=="All")
         {
-            $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id)")->result_array();
+            //$batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id)")->result_array();
+           // $batch = '';
+            echo ' <option value="">Select Batch</option>
+                   <option value="All">All</option>';
         }
         else{
             $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
-        }
+        
             
             // echo $this->db->last_query();           
 
@@ -4029,6 +4078,7 @@ class Admin extends CI_Controller {
 
             endforeach;
             echo $html;
+        }
         }
     }
 }
