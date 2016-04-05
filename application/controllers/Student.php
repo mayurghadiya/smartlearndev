@@ -55,7 +55,7 @@ class Student extends CI_Controller {
             //echo $this->session->userdata('password_status');
            if($this->session->userdata('password_status') == 0)
            {
-               $page_data['page_name'] = 'dashboard';
+               $page_data['page_name'] = 'change_password';
          } 
          else {
                $page_data['page_name'] = 'dashboard';
@@ -821,32 +821,56 @@ class Student extends CI_Controller {
     /**
      * Student profile
      */
-    function manage_profile() {
+    function manage_profile($param1="",$param2="") {
         $this->load->model('Student/Student_model');
         $page_data['error'] = '';
-        if ($_POST) {
-            //update password
-            $old_password = $_POST['password'];
-            $new_password = $_POST['new_password'];
-            $confirm_password = $_POST['confirm_password'];
-            $student = $this->Student_model->student_details($this->session->userdata('student_id'));
-            if ($old_password == $student->real_pass) {
-                if ($new_password == $confirm_password) {
-                    //update password
-                    $id = $student->std_id;
-                    $data = array(
-                        'password' => hash('md5', $new_password),
-                        'real_pass' => $new_password
-                    );
-                    $this->Student_model->update_password($data, $id);
-                    $this->session->set_flashdata('message', 'Password is successfully changed.');
-                    redirect(base_url('index.php?student/profile'));
+        if($param1=="update")
+        {
+             if ($_FILES['userfile']['name'] != "") {
+
+                $ext_img = explode(".", $_FILES['userfile']['name']);
+                $ext = strtolower(end($ext_img));
+
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $ext_arr = explode("|", $config['allowed_types']);
+
+                if (in_array($ext, $ext_arr)) {
+                    if (file_exists("uploads/student_image/" . $this->input->post('txtoldfile'))) {
+                        unlink("uploads/student_image/" . $this->input->post('txtoldfile'));
+                    }
+                    $config['file_name'] = date('dmYhis') . '.' . $ext;
+                    $config['upload_path'] = 'uploads/student_image';
+                    //$config['allowed_types'] = 'gif|jpg|png';
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+
+                    $this->upload->do_upload('userfile');
+                    $file = $this->upload->data();
+                    $data['profile_photo'] = $file['file_name'];
                 } else {
-                    $page_data['error'] = 'Password is mismatched.';
+                    $this->session->set_flashdata("flash_message", 'Update failed. Invalid Image!');
+                    redirect(base_url() . 'index.php?admin/student/', 'refresh');
                 }
-            } else {
-                $page_data['error'] = 'Invalid old password';
             }
+            else
+            {
+                 $data['profile_photo'] = $this->input->post('txtoldfile');
+            }
+            
+            $data['email'] = $this->input->post('email_id');
+            $data['std_first_name'] = $this->input->post('f_name');
+            $data['std_last_name'] = $this->input->post('l_name');
+            $data['std_gender'] = $this->input->post('gen');
+            $data['std_birthdate'] = $this->input->post('birthdate1');
+            $data['std_marital'] = $this->input->post('maritalstatus');
+            $data['std_about'] = $this->input->post('std_about');
+            $data['std_mobile'] = $this->input->post('mobileno');
+            $data['address'] = $this->input->post('address');
+            $data['city'] = $this->input->post('city');
+            $data['zip'] = $this->input->post('zip');
+            $data['std_fb'] = $this->input->post('facebook');
+            $data['std_twitter'] = $this->input->post('twitter');
+
         }
         $page_data['title'] = 'Student Profile';
         $page_data['page_name'] = 'student_profile';
