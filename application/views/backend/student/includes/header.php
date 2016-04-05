@@ -74,47 +74,48 @@
                  <div class="col-sm-7 col-xs-12">
               		<div class="vd_mega-menu-wrapper">
                     	<div class="vd_mega-menu pull-right">
-            				<ul class="mega-ul">
-								<li id="top-menu-1"  class="one-icon mega-li"> 
-									<span id="et-info-phone" >Toll Free: <a href="tel:+123456789">+91 123.456.789</a></span>
-								</li>
+                            <ul class="mega-ul">
+                                <li id="top-menu-1"  class="one-icon mega-li"> 
+                                        <span id="et-info-phone" >Toll Free: <a href="tel:+123456789">+91 123.456.789</a></span>
+                                </li>
 
-								<li id="top-menu-2"  class="one-icon mega-li"> 
-								  <a href="<?php echo base_url();?>index.php?admin/email" class="mega-link" data-action="click-trigger">
-									<span class="mega-icon"><i class="fa fa-globe"></i></span> 
-									<span class="badge vd_bg-red">
-									<?php $new_mail	=$this->db->get_where('email' , array('read' => 0,'email_to' => $this->session->userdata('email')) )->result_array();
-									echo count($new_mail); ?></span>        
-								  </a>    
-								</li> 
-								<li id="top-menu-profile" class="profile mega-li"> 
-								<?php 
-								if ($this->session->userdata('student_login') == 1) {  ?>
-									<a href="#" class="mega-link"  data-action="click-trigger"> 
-										<span  class="mega-image">
-											<img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('student' , $this->session->userdata('std_id'));?>" alt="...">             
-										</span>
-										<span class="mega-name">
-											<?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
-										</span>
-									</a> 
-									<div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">
-										<div class="child-menu"> 
-											<div class="content-list content-menu">
-												<ul class="list-wrapper pd-lr-10">
-													<li> <a href="<?php echo base_url(); ?>index.php?student/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
-													<li> <a href="<?php echo base_url();?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
-												</ul>
-											</div> 
-										</div> 
-									</div>
-								<?php
-									} else {	
-								?>
-									<a href="<?php base_url() ?>index.php">Login</a>
-									<?php } ?>
-								</li> 
-							</ul>
+                                <li id="top-menu-2"  class="one-icon mega-li"> 
+                                  <a href="<?php echo base_url();?>index.php?admin/email" class="mega-link" data-action="click-trigger">
+                                    <span class="mega-icon"><i class="fa fa-globe"></i></span> 
+                                    <span class="badge vd_bg-red">
+                                    <?php $new_mail	=$this->db->get_where('email' , array('read' => 0,'email_to' => $this->session->userdata('email')) )->result_array();
+                                    echo count($new_mail); ?></span>        
+                                  </a>    
+                                </li> 
+                                <li id="top-menu-profile" class="profile mega-li"> 
+                                <?php 
+                                if ($this->session->userdata('student_login') == 1) {  ?>
+                                    <a href="#" class="mega-link"  data-action="click-trigger"> 
+                                        <span  class="mega-image">
+                                                <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('student' , $this->session->userdata('std_id'));?>" alt="...">             
+                                        </span>
+                                        <span class="mega-name">
+                                                <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
+                                        </span>
+                                    </a> 
+                                    <div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">
+                                        <div class="child-menu"> 
+                                            <div class="content-list content-menu">
+                                                <ul class="list-wrapper pd-lr-10">
+                                                    <li> <a href="<?php echo base_url(); ?>index.php?student/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+                                                    <li> <a href="<?php echo base_url(); ?>index.php?student/change_password"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Change Password</div> </a> </li>
+                                                    <li> <a href="<?php echo base_url();?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
+                                                </ul>
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                <?php
+                                        } else {	
+                                ?>
+                                        <a href="<?php base_url() ?>index.php">Login</a>
+                                        <?php } ?>
+                                </li> 
+                            </ul>
 						<!-- Head menu search form ends -->                         
                         </div>
                     </div>
@@ -128,18 +129,18 @@
       </div>
       <!-- vd_primary-menu-wrapper -->
       
-	  <nav class="">
-		  <div class="container-fluid">
-				<ul class="nav navbar-nav">
-                                    <li><a href="<?php echo base_url('index.php?student/dashboard'); ?>">Dashboard</a></li>
-				 <?php
-				$news_conent		=	$this->db->get_where('cms_manager' , array('c_status' => 1) )->result_array();
-				 foreach($news_conent as $row):?>	
-                                    <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
-					<?php endforeach;?>
-				</ul>
-		  </div>
-	</nav>
+        <nav class="">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="<?php echo base_url('index.php?student/dashboard'); ?>">Dashboard</a></li>
+                 <?php
+                $news_conent		=	$this->db->get_where('cms_manager' , array('c_status' => 1) )->result_array();
+                 foreach($news_conent as $row):?>	
+                    <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
+                        <?php endforeach;?>
+                </ul>
+            </div>
+      </nav>
   </header>
   <!-- Header Ends -->
 		
