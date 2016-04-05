@@ -42,7 +42,8 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div>Title</div></th>											
-                                                <th><div>Degree</div></th>											
+                                                <th><div>Course</div></th>
+                                                <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Downloadable File</div></th>											
@@ -124,10 +125,10 @@
                                         </div>	
                                         
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course *</label>
+                                            <label class="col-sm-3 control-label">Branch *</label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select Branch</option>
                                                     <?php
                                                     $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
