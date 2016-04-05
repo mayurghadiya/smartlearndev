@@ -16,12 +16,7 @@
                     <h1>Assignment Management</h1>                    
                 </div>
             </div>
-            <?php if($this->session->flashdata('flash_message')){  ?>
-             <div class="vd_title-section clearfix">
-              <h4><?php echo $this->session->flashdata('flash_message');   ?></h4>
-
-            </div>
-            <?php } ?>
+           
             <div class="vd_content-section clearfix">
                 <div class="row">
                     <div class="col-sm-12">								
@@ -45,15 +40,57 @@
 
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
-                            <div class="tab-pane box active" id="list">								
-                                <div class="panel-body table-responsive">
+                            <div class="tab-pane box active" id="list">		
+                                
+                                <div class="panel-body">
+                                    <form action="#" method="post" id="searchform">
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Course</label>
+                                                <select id="courses" name="degree" class="form-control">
+                                                    <option value="">Select</option>
+                                                    <?php foreach ($degree as $row) { ?>
+                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Branch</label>
+                                                <select id="branches" name="course" class="form-control">
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Batch</label>
+                                                <select id="batches" name="batch" class="form-control">
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Select Semester</label>
+                                                <select id="semesters" name="semester" class="form-control">
+                                                    <option value="">Select</option>
+                                                    <?php foreach ($semester as $row) { ?>
+                                                        <option value="<?php echo $row->s_id; ?>"
+                                                               ><?php echo $row->s_name; ?></option>
+                                                            <?php } ?>
+                                                </select>
+                                            </div>
+                                     
+                                <div class="form-group col-sm-2">
+                                    <div class="form-group">
+                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    </div>
+                                </div>
+                                    </form>
+                                 </div>
+                               <div class="panel-body table-responsive" id="getresponse">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>												
                                                 <th><div>Assignment Name</div></th>
-                                                <th><div>Degree</div></th>
-                                                <th><div>Course</div></th>												
+                                                <th><div>Course</div></th>
+                                                <th><div>Branch</div></th>												
                                                 <th><div>Batch</div></th>												
                                                 <th><div>Semester</div></th>												
                                                 <th><div>Downloadable File</div></th>
@@ -110,14 +147,16 @@
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/assignment/delete/<?php echo $row->assign_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/assignment/delete/<?php echo $row->assign_id; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
                                                     </td>	
                                                 </tr>
 <?php endforeach; ?>						
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
+                                </div>    
+                             </div>
+                           
+                            
                             <!----TABLE LISTING ENDS--->
 
 
@@ -133,10 +172,10 @@
                                             </div>
                                         </div>
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select Degree</option>
+                                                    <option value="">Select Course</option>
                                                     <?php
                                                     $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                     foreach ($degree as $dgr) {
@@ -150,10 +189,10 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select Branch</option>
                                                     <?php
                                                    /* $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
@@ -169,7 +208,7 @@
                                             <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="batch" id="batch">
-                                                    <option value="">Select batch</option>
+                                                    <option value="">Select Batch</option>
                                                     <?php
                                                   /*  $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
                                                     foreach ($databatch as $row) {
@@ -185,7 +224,7 @@
                                             <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
-                                                    <option value="">Select semester</option>
+                                                    <option value="">Select Semester</option>
                                                     <?php
                                                     $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
                                                     foreach ($datasem as $rowsem) {
@@ -236,15 +275,56 @@
                             
                             
                                  <div class="tab-pane box" id="submitedlist">	
-                               <div class="panel-body table-responsive">
+                                     <div class="panel-body">
+                                    <form action="#" method="post" id="sub_searchform">
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Course</label>
+                                                <select id="sub_courses" name="degree" class="form-control">
+                                                    <option value="">Select</option>
+                                                    <?php foreach ($degree as $row) { ?>
+                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Branch</label>
+                                                <select id="sub_branches" name="course" class="form-control">
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Batch</label>
+                                                <select id="sub_batches" name="batch" class="form-control">
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Select Semester</label>
+                                                <select id="sub_semesters" name="semester" class="form-control">
+                                                    <option value="">Select</option>
+                                                    <?php foreach ($semester as $row) { ?>
+                                                        <option value="<?php echo $row->s_id; ?>"
+                                                               ><?php echo $row->s_name; ?></option>
+                                                            <?php } ?>
+                                                </select>
+                                            </div>
+                                     
+                                <div class="form-group col-sm-2">
+                                    <div class="form-group">
+                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    </div>
+                                </div>
+                                    </form>
+                                 </div>
+                                     <div class="panel-body table-responsive" id="getsubmit">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
                                         <tr>
                                             <th><div>#</div></th>												
                                             <th><div>Assignment Name</div></th>
                                             <th><div>Student Name</div></th>
-                                             <th><div>Degree</div></th>
-                                            <th><div>Course</div></th>												
+                                             <th><div>Course</div></th>
+                                            <th><div>Branch</div></th>												
                                             <th><div>Batch</div></th>												
                                             <th><div>Sem</div></th>	
                                             <th><div>Submitted date</div></th>	
@@ -311,6 +391,7 @@
                                     </table>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,7 +402,74 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript"> 
-         
+        
+         $("#sub_courses").change(function(){
+                var degree = $(this).val();
+                
+                var dataString = "degree="+degree;
+                $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
+                    data:dataString,                   
+                    success:function(response){
+                        $("#sub_branches").html(response);
+                    }
+                });
+        });
+         $("#sub_branches").change(function(){
+                //var course = $(this).val();
+                // var degree = $("#degree").val();
+                var degree = $("#sub_courses").val();
+                var course = $("#sub_branches").val();
+                var dataString = "course="+course+"&degree="+degree;
+                $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
+                    data:dataString,                   
+                    success:function(response){
+                        $("#sub_batches").html(response);
+                    }
+                });
+        });
+        $("#sub_searchform").submit(function(){
+            var degree =  $("#sub_courses").val();
+           var course =  $("#sub_branches").val();
+           var batch =  $("#sub_batches").val();
+            var semester = $("#sub_semesters").val();
+            $.ajax({
+                type:"POST",
+                url:"<?php echo base_url(); ?>index.php?admin/getsubmitted/submitted",
+                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
+                success:function(response)
+                {
+                    $("#getsubmit").html(response);
+                }
+                
+                
+            });
+             return false;
+            
+            
+        });
+        
+         $("#searchform").submit(function(){
+           var degree =  $("#courses").val();
+           var course =  $("#branches").val();
+           var batch =  $("#batches").val();
+            var semester = $("#semesters").val();
+            $.ajax({
+                type:"POST",
+                url:"<?php echo base_url(); ?>index.php?admin/getassignment/allassignment",
+                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
+                success:function(response)
+                {
+                    $("#getresponse").html(response);
+                }
+                
+                
+            });
+             return false;
+         });
         $("#degree").change(function(){
                 var degree = $(this).val();
                 var dataString = "degree="+degree;
@@ -331,6 +479,35 @@
                     data:dataString,                   
                     success:function(response){
                         $("#course").html(response);
+                    }
+                });
+        });
+        
+         $("#courses").change(function(){
+                var degree = $(this).val();
+                
+                var dataString = "degree="+degree;
+                $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
+                    data:dataString,                   
+                    success:function(response){
+                        $("#branches").html(response);
+                    }
+                });
+        });
+         $("#branches").change(function(){
+                //var course = $(this).val();
+                // var degree = $("#degree").val();
+                var degree = $("#courses").val();
+                var course = $("#branches").val();
+                var dataString = "course="+course+"&degree="+degree;
+                $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
+                    data:dataString,                   
+                    success:function(response){
+                        $("#batches").html(response);
                     }
                 });
         });
@@ -393,10 +570,10 @@
 
             },
             messages: {
-                degree:"Select degree",
-                course: "Select course",
-                batch: "Select batch",
-                semester: "Select semester",
+                degree:"Select Course",
+                course: "Select Branch",
+                batch: "Select Batch",
+                semester: "Select Semester",
                 submissiondate: "Select date of submission",
                 assignmenturl:
                         {

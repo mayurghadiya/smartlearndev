@@ -3693,4 +3693,72 @@ class Admin extends CI_Controller {
         echo $html;
         
     }
+    
+    function getsubmitted($param='')
+    {
+        if($param=='submitted')
+        {
+           
+            $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+               $data['course'] = $this->db->get('course')->result();
+        $data['semester'] = $this->db->get('semester')->result();
+        $data['batch'] = $this->db->get('batch')->result();
+        $data['degree'] = $this->db->get('degree')->result();
+         //   $this->db->where("course_id",$course);
+         //   $this->db->where("assign_batch",$batch);
+          //  $this->db->where("assign_degree",$degree);
+         //   $this->db->where("assign_sem",$semester);
+          
+            //$data['assignment'] = $this->db->get('assignment_manager')->result();
+            
+             $this->db->select("ass.*,am.*,s.* ");
+        $this->db->from('assignment_submission ass');
+        $this->db->join("assignment_manager am", "am.assign_id=ass.assign_id");
+        $this->db->join("student s", "s.std_id=ass.student_id");
+         $this->db->where("am.course_id",$course);
+            $this->db->where("am.assign_batch",$batch);
+            $this->db->where("am.assign_degree",$degree);
+            $this->db->where("am.assign_sem",$semester);
+        $data['submitedassignment'] = $this->db->get()->result();
+        
+          //echo $this->db->last_query();  
+            
+              $data['param'] = $param;
+           $this->load->view("backend/admin/getassignment",$data);
+            
+      
+            
+        }
+        
+    }
+    
+    
+    function getassignment($param='')
+    {
+        if($param='allassignment')
+        {
+            $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+               $data['course'] = $this->db->get('course')->result();
+        $data['semester'] = $this->db->get('semester')->result();
+        $data['batch'] = $this->db->get('batch')->result();
+        $data['degree'] = $this->db->get('degree')->result();
+            $this->db->where("course_id",$course);
+            $this->db->where("assign_batch",$batch);
+            $this->db->where("assign_degree",$degree);
+            $this->db->where("assign_sem",$semester);
+          $data['param'] = $param;
+            $data['assignment'] = $this->db->get('assignment_manager')->result();
+            
+            $this->load->view("backend/admin/getassignment",$data);
+            
+        }
+        
+        
+    }
 }
