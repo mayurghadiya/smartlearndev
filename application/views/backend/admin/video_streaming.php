@@ -64,7 +64,7 @@
                                         <section class="experiment">
                                             <div class="form-horizontal">                                                
                                                 <div class="form-group" id="private-broadcast-degree">
-                                                    <label class="col-sm-3 control-label">Degree*</label>
+                                                    <label class="col-sm-3 control-label">Course*</label>
                                                     <div class="col-sm-5">
                                                         <select id="degree" class="form-control" name="private-broadcast-degree">
                                                             <option value="">Select</option>
@@ -76,7 +76,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-course">
-                                                    <label class="col-sm-3 control-label">Course*</label>
+                                                    <label class="col-sm-3 control-label">Branch*</label>
                                                     <div class="col-sm-5">
                                                         <select id="course" class="form-control" name="private-broadcast-course">
                                                             <option value="">Select</option>
@@ -98,7 +98,7 @@
                                                     <div class="col-sm-5">
                                                         <select id="semester" class="form-control" name="private-broadcast-course">
                                                             <option value="">Select</option>
-                                                            <option value="all">All Semester</option>
+                                                            <option value="all">All</option>
                                                             <?php foreach ($semester as $row) { ?>
                                                                 <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
                                                             <?php } ?>
@@ -594,16 +594,18 @@
                     // insert via ajax
                     var form_data = {
                         title: $('#broadcast-name').val(),
+                        degree: $('#degree').val(),
                         course: $('#course').val(),
+                        batch: $('#batch').val(),
                         semester: $('#semester').val(),
                         url_link: result[1]
                     };
-                    console.log(form_data);
                     $.ajax({
                         url: '<?php echo base_url(); ?>index.php?video_streaming/create_private_broadcast',
                         type: 'post',
                         data: form_data,
                         success: function () {
+                            console.log(form_data);
                             alert('live streaming is created');
                         }
                     })
@@ -707,7 +709,7 @@
 
             if (degree == '') {
                 $('#degree_error').css('display', 'inline');
-                $('#degree_error').text('Please select degree');
+                $('#degree_error').text('Please select course');
                 return false;
             } else {
                 $('#degree_error').css('display', 'none');
@@ -717,7 +719,7 @@
 
             if (course == '') {
                 $('#course_error').css('display', 'inline');
-                $('#course_error').text('Please select course');
+                $('#course_error').text('Please select branch');
                 return false;
             } else {
                 $('#course_error').css('display', 'none');

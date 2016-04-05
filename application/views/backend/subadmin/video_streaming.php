@@ -69,49 +69,56 @@
 <!-- just copy this <section> and next script -->
                                         <section class="experiment">
                                             <div class="form-horizontal">
+
                                                 <div class="form-group" id="private-broadcast-degree">
-                                                    <label class="col-sm-3 control-label">Degree</label>
+                                                    <label class="col-sm-3 control-label">Course*</label>
                                                     <div class="col-sm-5">
                                                         <select id="degree" class="form-control" name="private-broadcast-degree">
-                                                            <option>Select</option>
-                                                            <?php
-                                                            foreach($degree as $row) { ?>
-                                                            <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                            <option value="">Select</option>
+                                                            <?php foreach ($degree as $row) { ?>
+                                                                <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                             <?php } ?>
                                                         </select>
+                                                        <label style="display:none; color: red" id="degree_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-course">
-                                                    <label class="col-sm-3 control-label">Course</label>
+                                                    <label class="col-sm-3 control-label">Branch*</label>
                                                     <div class="col-sm-5">
                                                         <select id="course" class="form-control" name="private-broadcast-course">
-                                                            
+                                                            <option value="">Select</option>
                                                         </select>
+                                                        <label style="display:none; color: red" id="course_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-batch">
-                                                    <label class="col-sm-3 control-label">Batch</label>
+                                                    <label class="col-sm-3 control-label">Batch*</label>
                                                     <div class="col-sm-5">
                                                         <select id="batch" class="form-control" name="private-broadcast-batch">
-                                                            
+                                                            <option value="">Select</option>
                                                         </select>
+                                                        <label style="display:none; color: red" id="batch_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-semester">
-                                                    <label class="col-sm-3 control-label">Semester</label>
+                                                    <label class="col-sm-3 control-label">Semester*</label>
                                                     <div class="col-sm-5">
                                                         <select id="semester" class="form-control" name="private-broadcast-course">
-                                                            <option value="all">All Semester</option>
+                                                            <option value="">Select</option>
+                                                            <option value="all">All</option>
                                                             <?php foreach ($semester as $row) { ?>
                                                                 <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
                                                             <?php } ?>
                                                         </select>
+                                                        <label style="display:none; color: red" id="sem_error"></label>
                                                     </div>
                                                 </div>
+
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Live Broadcast</label>
+                                                    <label class="col-sm-3 control-label">Live Broadcast*</label>
                                                     <div class="col-sm-5">
                                                         <input id="broadcast-name" type="text" class="form-control" placeholder="live streaming for all batch and course" name="title"/>
+                                                        <label style="display:none; color: red" id="name_error"></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -243,6 +250,21 @@
                                             var roomsList = document.getElementById('rooms-list');
 
                                             document.getElementById('setup-new-broadcast').onclick = function () {
+
+                                                //broadcast
+                                                var current_url = window.location.href;
+                                                var result = current_url.split("#");
+
+                                                if (result.length == 2) {
+                                                    //multicast
+                                                    if (!multicast_validation()) {
+                                                        return false;
+                                                    }
+                                                } else {
+                                                    if (!validate_streaming()) {
+                                                        return false;
+                                                    }
+                                                }
                                                 this.disabled = true;
 
 
@@ -336,25 +358,32 @@
 
                                                 }
                                                 $('#setup-new-broadcast').on('click', function () {
+
                                                     if (result.length == 2) {
+                                                        if (!multicast_validation())
+                                                            return false;
                                                         // private
                                                         // insert via ajax
                                                         var form_data = {
                                                             title: $('#broadcast-name').val(),
+                                                            degree: $('#degree').val(),
                                                             course: $('#course').val(),
+                                                            batch: $('#batch').val(),
                                                             semester: $('#semester').val(),
                                                             url_link: result[1]
                                                         };
-                                                        console.log(form_data);
                                                         $.ajax({
                                                             url: '<?php echo base_url(); ?>index.php?video_streaming/create_private_broadcast',
                                                             type: 'post',
                                                             data: form_data,
                                                             success: function () {
+                                                                console.log(form_data);
                                                                 alert('live streaming is created');
                                                             }
                                                         })
                                                     } else {
+                                                        if (!validate_streaming())
+                                                            return false;
                                                         // broadcast
                                                         var form_data = {
                                                             title: $('#broadcast-name').val(),
@@ -381,6 +410,7 @@
         $(document).ready(function () {
             //course by degree
             $('#degree').on('change', function () {
+
                 var course_id = $('#course').val();
                 var degree_id = $(this).val();
 
@@ -389,7 +419,7 @@
                 $('#course').append('<option value="">Select</option>');
                 var degree_id = $(this).val();
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?admin/course_list_from_degree/' + degree_id,
+                    url: '<?php echo base_url(); ?>index.php?video_streaming/course_list_from_degree/' + degree_id,
                     type: 'get',
                     success: function (content) {
                         var course = jQuery.parseJSON(content);
@@ -413,7 +443,7 @@
                 //remove all element from batch
                 $('#batch').find('option').remove().end();
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?admin/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
+                    url: '<?php echo base_url(); ?>index.php?video_streaming/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
                     type: 'get',
                     success: function (content) {
                         $('#batch').append('<option value="">Select</option>');
@@ -428,3 +458,77 @@
 
         })
     </script>
+
+    <script>
+        function validate_streaming() {
+            var name = $('#broadcast-name').val();
+            if (name == '') {
+                $('#name_error').css('display', 'inline');
+                $('#name_error').text('Please enter broadcast name');
+                return false;
+            } else {
+                $('#name_error').css('display', 'none');
+                $('#name_error').text('');
+                return true;
+            }
+        }
+
+        function multicast_validation() {
+            var name = $('#broadcast-name').val();
+            var degree = $('#degree').val();
+            var course = $('#course').val();
+            var batch = $('#batch').val();
+            var sem = $('#semester').val();
+
+            if (degree == '') {
+                $('#degree_error').css('display', 'inline');
+                $('#degree_error').text('Please select degree');
+                return false;
+            } else {
+                $('#degree_error').css('display', 'none');
+                $('#degree_error').text('');
+                //return true;
+            }
+
+            if (course == '') {
+                $('#course_error').css('display', 'inline');
+                $('#course_error').text('Please select course');
+                return false;
+            } else {
+                $('#course_error').css('display', 'none');
+                $('#course_error').text('');
+                //return true;
+            }
+
+            if (batch == '') {
+                $('#batch_error').css('display', 'inline');
+                $('#batch_error').text('Please select batch');
+                return false;
+            } else {
+                $('#batch_error').css('display', 'none');
+                $('#batch_error').text('');
+                //return true;
+            }
+
+            if (sem == '') {
+                $('#sem_error').css('display', 'inline');
+                $('#sem_error').text('Please select semester');
+                return false;
+            } else {
+                $('#sem_error').css('display', 'none');
+                $('#sem_error').text('');
+                //return true;
+            }
+
+            if (name == '') {
+                $('#name_error').css('display', 'inline');
+                $('#name_error').text('Please enter broadcast name');
+                return false;
+            } else {
+                $('#name_error').css('display', 'none');
+                $('#name_error').text('');
+                return true;
+            }
+        }
+    </script>
+
