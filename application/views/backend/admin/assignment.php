@@ -287,7 +287,7 @@
                                                         <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                     <?php } ?>
                                                 </select>
-                                            </div>
+                                            </div> 
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="sub_branches" name="course" class="form-control">
