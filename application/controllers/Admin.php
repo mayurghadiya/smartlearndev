@@ -3897,4 +3897,114 @@ class Admin extends CI_Controller {
              
         
     }
+    
+    function getstudyresource()
+    {
+        $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+            $data['course'] = $this->db->get('course')->result();
+            $data['semester'] = $this->db->get('semester')->result();
+            $data['batch'] = $this->db->get('batch')->result();
+            $data['degree'] = $this->db->get('degree')->result();
+            $data['student'] = $this->db->get('student')->result();
+            
+           if($degree=="All")
+           {
+             
+               
+                 $data['studyresource'] = $this->db->get('study_resources')->result();
+               
+           }
+           else{
+               if($course=="All")
+               {
+                     $this->db->where("study_degree",$degree);
+                     $data['studyresource'] = $this->db->get('study_resources')->result();
+                     
+               }
+               else{
+                   if($batch=='All')
+                   {
+                     $this->db->where("study_course",$course);
+                     $this->db->where("study_degree",$degree);
+                     $data['studyresource'] = $this->db->get('study_resources')->result();
+                       
+                   }
+                   else{
+                       if($semester=="All")
+                       {
+                            $this->db->where("study_batch",$batch);
+                        $this->db->where("study_course",$course);
+                     $this->db->where("study_degree",$degree);
+                     $data['studyresource'] = $this->db->get('study_resources')->result();
+                       }else{
+                           $this->db->where("study_sem",$semester);
+                           $this->db->where("study_batch",$batch);
+                        $this->db->where("study_course",$course);
+                     $this->db->where("study_degree",$degree);
+                     $data['studyresource'] = $this->db->get('study_resources')->result();
+                           
+                       }
+                       
+                   }
+                   
+               }
+               
+               
+           }
+           
+      // $this->db->where("study_course",$course);
+         // $this->db->or_where('study_course >', 'All'); 
+       //     $this->db->where("study_batch",$batch);
+           //  $this->db->or_where('study_batch >', 'All'); 
+      //      $this->db->where("study_degree",$degree);
+        //     $this->db->or_where('study_degree >', 'All'); 
+        //    $this->db->where("study_sem",$semester);
+          //   $this->db->or_where('study_sem >', 'All'); 
+         //     $data['studyresource'] = $this->db->get('study_resources')->result();
+                //$page_data['studyresource'] = $this->db->get('study_resources')->result();
+
+           $this->load->view("backend/admin/getstudyresource",$data);
+        
+    }
+    
+    function course_filter($param = '')
+    {
+         $did = $this->input->post("degree");
+
+            if ($did != '') {
+                $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+               $html = '';
+                foreach ($cource as $crs):
+                    $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+                endforeach;
+                echo $html;
+            }
+    }
+    function batch_filter($param = '') {
+        $cid = $this->input->post("course");
+        $did = $this->input->post("degree");
+        if ($cid != '') {
+        $html = '';
+            // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
+        if($cid=="All")
+        {
+            $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id)")->result_array();
+        }
+        else{
+            $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
+        }
+            
+            // echo $this->db->last_query();           
+
+            foreach ($batch as $btc):
+                $html .='<option value="' . $btc['b_id'] . '">' . $btc['b_name'] . '</option>';
+
+            endforeach;
+            echo $html;
+        }
+    }
 }
