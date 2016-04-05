@@ -48,6 +48,43 @@ class Video_streaming extends CI_Controller {
             'url_link' => $url,
             'is_active' => $is_active
         ));
+        
+        if($_POST['degree'] == 'all') {
+            //send to all
+            $students = $this->db->get('student')->result();
+            $message = "Live straming broadcast was created for all students at " . date('F d, Y');
+            $message .= " and its details listed below. ";
+            $message .= "<br/>Stream Name: " . $_POST['title'];
+            $message .= "<br/>Date: " . date('F d, Y h:i A');
+            $message .= "<br/><br/><a href=" . base_url('index.php?login') . ">Click here </a> to login.";
+        } else {
+            //filter
+            $students = $this->db->select()
+                    ->from('student')
+                    ->join('degree', 'degree.d_id = student.std_degree')
+                    ->join('course', 'course.course_id = student.course_id')
+                    ->join('batch', 'batch.b_id = student.std_batch')
+                    ->join('semester', 'semester.s_id = student.semester_id')
+                    ->where('student.std_degree', $_POST['degree'])
+                    ->where('student.course_id', $_POST['course'])
+                    ->where('student.std_batch', $_POST['batch'])
+                    ->where('student.semester_id', $_POST['semester'])
+                    ->get()
+                    ->result();
+            $message = "Live streaming multicast created on " . date('F d, Y');
+            $message .= ". And its details is listed below";
+            $message .= "<br/>Title: " . $_POST['title'];
+            $message .= "<br/>Course: " . $students[0]->d_name;
+            $message .= "<br/>Branch: " . $students[0]->c_name;
+            $message .= "<br/>Batch: " . $students[0]->b_name;
+            $message .= "<br/>Semester: " . $students[0]->s_name;
+            $message .= "<br/>Date: " . date('F d, Y h:i A');
+            $message .= "<br/><br/><a href=" . base_url('index.php?login') . ">Click here </a> to login.";
+        }
+        $this->load->helper('notification');
+        $subject = 'Live Video Streaming and Conference';
+        
+        video_streaming_email_notification($students, $subject, $message);
     }
 
     function assign_live_stream() {
