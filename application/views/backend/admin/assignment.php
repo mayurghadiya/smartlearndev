@@ -77,7 +77,9 @@
                                             </div>
                                      
                                 <div class="form-group col-sm-2">
-                                    <div class="form-group">
+                                    <div class="form-group col-sm-2">
+                                        <label>&nbsp;</label>
+                                        
                                     <button type="submit" class="submit btn btn-info">Search</button>
                                     </div>
                                 </div>
@@ -310,7 +312,8 @@
                                             </div>
                                      
                                 <div class="form-group col-sm-2">
-                                    <div class="form-group">
+                                    <div class="form-group col-sm-2">
+                                        <label>&nbsp;</label>
                                     <button type="submit" class="submit btn btn-info">Search</button>
                                     </div>
                                 </div>
