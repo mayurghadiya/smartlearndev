@@ -3635,6 +3635,7 @@ class Admin extends CI_Controller {
            $std  = explode(",",$student);
            
        }
+       
         foreach ($datastudent as $rowstu) {
              //$rowstu->std_id . . $rowstu->name;
             if(isset($std))
@@ -3668,10 +3669,11 @@ class Admin extends CI_Controller {
            $std  = explode(",",$student);
            
        }
+        
         if ($batch != "") {
             $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1,'course_id' => $course, 'std_degree' => $degree))->result();
             //  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
-         
+       
             foreach ($datastudent as $rowstu) {
                if(isset($std))
             {
