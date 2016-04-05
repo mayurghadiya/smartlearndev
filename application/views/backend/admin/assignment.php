@@ -451,8 +451,6 @@
                 
             });
              return false;
-            
-            
         });
         
          $("#searchform").submit(function(){

@@ -3763,7 +3763,31 @@ class Admin extends CI_Controller {
         
         
     }
-    
+    function getlibrary($param='')
+    {
+        if($param='allassignment')
+        {
+            $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+               $data['course'] = $this->db->get('course')->result();
+        $data['semester'] = $this->db->get('semester')->result();
+        $data['batch'] = $this->db->get('batch')->result();
+        $data['degree'] = $this->db->get('degree')->result();
+            $this->db->where("lm_course",$course);
+            $this->db->where("lm_batch",$batch);
+            $this->db->where("lm_degree",$degree);
+            $this->db->where("lm_semester",$semester);
+          $data['param'] = $param;
+            $data['library'] = $this->db->get('library_manager')->result();
+            
+            $this->load->view("backend/admin/getlibrary",$data);
+            
+        }
+        
+        
+    }
     
      function getprojects($param='')
     {
