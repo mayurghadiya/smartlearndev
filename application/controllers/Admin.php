@@ -3415,7 +3415,7 @@ class Admin extends CI_Controller {
 
         if ($did != '') {
             $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
-            $html = '<option value="">Select Course</option>';
+            $html = '<option value="">Select Branch</option>';
             foreach ($cource as $crs):
                 $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
 
@@ -3457,7 +3457,7 @@ class Admin extends CI_Controller {
 
                 $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
 
-                $html = '<option value="">Select Course</option>';
+                $html = '<option value="">Select Branch</option>';
                 if ($param == '') {
                     $html .= '<option value="All">All</option>';
                 }
@@ -3837,6 +3837,88 @@ class Admin extends CI_Controller {
           $this->load->view("backend/admin/getprojects",$data);
         }
         
+        
+    }
+    
+    function getsurvey()
+    {
+        
+         $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+            $data['course'] = $this->db->get('course')->result();
+            $data['semester'] = $this->db->get('semester')->result();
+            $data['batch'] = $this->db->get('batch')->result();
+            $data['degree'] = $this->db->get('degree')->result();
+            $data['student'] = $this->db->get('student')->result();
+            
+        $this->db->select("sl.*,s.* ");
+        $this->db->from('survey_list sl');        
+        $this->db->join("student s", "s.std_id=sl.student_id");
+        $this->db->where("s.course_id",$course);
+            $this->db->where("s.std_batch",$batch);
+            $this->db->where("s.std_degree",$degree);
+            $this->db->where("s.semester_id",$semester);
+              $data['survey'] = $this->db->get()->result();
+
+           $this->load->view("backend/admin/getsurvey",$data);
+            
+        
+        
+          
+    }
+    function getactivity()
+    {
+        
+         $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+            $data['course'] = $this->db->get('course')->result();
+            $data['semester'] = $this->db->get('semester')->result();
+            $data['batch'] = $this->db->get('batch')->result();
+            $data['degree'] = $this->db->get('degree')->result();
+            $data['student'] = $this->db->get('student')->result();
+            
+        $this->db->select("sl.*,s.* ");
+        $this->db->from('participate_student sl');        
+        $this->db->join("student s", "s.std_id=sl.student_id");
+        $this->db->where("s.course_id",$course);
+            $this->db->where("s.std_batch",$batch);
+            $this->db->where("s.std_degree",$degree);
+            $this->db->where("s.semester_id",$semester);
+              $data['volunteer'] = $this->db->get()->result_array();
+
+           $this->load->view("backend/admin/getactivity",$data);
+            
+        
+        
+          
+    }
+    function getuploads()
+    {
+         $degree = $this->input->post('degree');
+            $course = $this->input->post('course');
+            $batch = $this->input->post('batch');
+            $semester = $this->input->post("semester");
+            $data['course'] = $this->db->get('course')->result();
+            $data['semester'] = $this->db->get('semester')->result();
+            $data['batch'] = $this->db->get('batch')->result();
+            $data['degree'] = $this->db->get('degree')->result();
+            $data['student'] = $this->db->get('student')->result();
+            
+        $this->db->select("sl.*,s.* ");
+        $this->db->from('student_upload sl');        
+        $this->db->join("student s", "s.std_id=sl.std_id");
+        $this->db->where("s.course_id",$course);
+            $this->db->where("s.std_batch",$batch);
+            $this->db->where("s.std_degree",$degree);
+            $this->db->where("s.semester_id",$semester);
+              $data['uploads'] = $this->db->get()->result_array();
+
+           $this->load->view("backend/admin/getuploads",$data);
+             
         
     }
 }
