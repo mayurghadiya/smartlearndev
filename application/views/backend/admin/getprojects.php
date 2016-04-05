@@ -77,12 +77,12 @@
                                                    
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_project/<?php echo $row->pm_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/project/delete/<?php echo $row->pm_id; ?>');" data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/project/delete/<?php echo $row->pm_id; ?>');" title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
                                                        
                                                     </td>	
                                                 </tr>
                                                     <?php endforeach; ?>						
-                                        </tbody>
+                                        </tbody> 
                                     </table>
                                 </div>
 <?php }
@@ -90,74 +90,71 @@ if($param=='submitted'){?>
 <div class="panel-body table-responsive" id="getsubmit">
                                     <table class="table table-striped" id="data-tabless">
                                         <thead>
-                                        <tr>
-                                            <th><div>#</div></th>												
-                                            <th><div>Assignment Name</div></th>
-                                            <th><div>Student Name</div></th>
-                                             <th><div>Course</div></th>
-                                            <th><div>Branch</div></th>												
-                                            <th><div>Batch</div></th>												
-                                            <th><div>Sem</div></th>	
-                                            <th><div>Submitted date</div></th>	
-                                            <th><div>Comment</div></th>
-                                            <th><div>Action</div></th>												                                            
-                                        </tr>
+                                            <tr>
+                                                <th><div>#</div></th>												
+                                                <th><div>Project Name</div></th>
+                                                <th><div>Student Name</div></th>                                                											
+                                                <th><div>Course</div></th>	
+                                                <th><div>Branch</div></th>
+                                                <th><div>Batch</div></th>											
+                                                <th><div>Semester</div></th>
+                                               
+                                                <th><div>Submitted date</div></th>
+                                                <th><div>Comment</div></th>
+                                                <th><div>Action</div></th>												                                            
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $count = 1;
-                                            foreach ($submitedassignment as $rowsub):
+                                            <?php
+                                            $count = 1;
+                                            foreach ($submitedproject as $rowsub):
                                                 ?>
-                                                <tr>
-                                                    <td><?php echo $count++; ?></td>
-                                                    <td><?php echo $rowsub->assign_title; ?></td>
-                                                    <td><?php echo $rowsub->name; ?></td>
-                                                    <td><?php foreach($degree as $dgr): 
-                                                        if($dgr->d_id==$rowsub->assign_degree):
-                                                            
-                                                            echo $dgr->d_name;
-                                                        endif;
-                                                        
-                                                    
-                                                        endforeach;
-                                                    ?></td>
-                                                    <td>
-                                                    <?php 
-                                                            foreach($course as $crs)
-                                                            {
-                                                                    if($crs->course_id==$rowsub->course_id)
-                                                                    {
-                                                                            echo $crs->c_name;
-                                                                    }
+                                            <tr>
+                                                <td><?php echo $count++; ?></td>
+                                                <td><?php echo $rowsub->pm_title; ?></td>
+                                                <td><?php  echo $rowsub->std_first_name.'&nbsp'.$rowsub->std_last_name. ', '; ?></td>	
+                                              <td>
+                                                        <?php
+                                                        foreach ($degree as $deg) {
+                                                            if ($deg->d_id == $rowsub->pm_degree) {
+                                                                echo $deg->d_name;
                                                             }
-                                                    ?>
-                                                    </td>
-                                                    <td>
-                                                    <?php 
-                                                            foreach($batch as $bch)
-                                                            {
-                                                                    if($bch->b_id==$rowsub->assign_batch)
-                                                                    {
-                                                                            echo $bch->b_name;
-                                                                    }
-                                                            }
-                                                    ?>
-                                                    </td>
-                                                    <td>
-                                                    <?php 
-                                                            foreach($semester as $sem)
-                                                            {
-                                                                    if($sem->s_id==$rowsub->assign_sem)
-                                                                    {
-                                                                            echo $sem->s_name;
-                                                                    }
-                                                            }														
-                                                    ?>													
+                                                        }
+                                                        ?>
                                                     </td>	
-                                                    <td><?php echo date('F d, Y',strtotime($rowsub->submited_date)); ?></td>	
-                                                    <td><?php echo $rowsub->comment; ?></td>
-                                                   <td><a href="uploads/project_file/<?php echo $rowsub->document_file;?>" download="" title="<?php echo  $rowsub->document_file;?>"><i class="fa fa-download"></i></a></td>                      	
-                                                </tr>
-                                            <?php endforeach; ?>						
+                                                     <td>
+                                                        <?php
+                                                        foreach ($course as $crs) {
+                                                            if ($crs->course_id == $rowsub->pm_course) {
+                                                                echo $crs->c_name;
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php
+                                                        foreach ($batch as $bch) {
+                                                            if ($bch->b_id == $rowsub->pm_batch) {
+                                                                echo $bch->b_name;
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </td>	
+                                                    <td>
+                                                        <?php
+                                                        foreach ($semester as $sem) {
+                                                            if ($sem->s_id == $rowsub->pm_semester) {
+                                                                echo $sem->s_name;
+                                                            }
+                                                        }
+                                                        ?>
+
+                                                    </td>	
+                                                <td><?php echo date("F d, Y",strtotime($rowsub->dos)); ?></td>	
+                                                <td><?php echo $rowsub->description; ?></td>
+                                                <td><a href="uploads/project_file/<?php echo $rowsub->document_file; ?>" download="" title="<?php echo $rowsub->document_file; ?>"><i class="fa fa-download"></i></a></td>                                                    	
+                                            </tr>
+<?php endforeach; ?>						
                                         </tbody>
                                     </table>
                                 </div>

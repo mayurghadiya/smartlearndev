@@ -92,9 +92,9 @@
                                 </a> 
                             </li>
  <li>
-                                <a href="<?php echo base_url(); ?>index.php?admin/center">
+                              <!--  <a href="<?php echo base_url(); ?>index.php?admin/center">
                                     <span class="menu-text">Exam Center</span>  						
-                                </a> 
+                                </a>--> 
                             </li>	
                         </ul> 
                     </div>

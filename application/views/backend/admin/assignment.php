@@ -77,7 +77,9 @@
                                             </div>
                                      
                                 <div class="form-group col-sm-2">
-                                    <div class="form-group">
+                                    <div class="form-group col-sm-2">
+                                        <label>&nbsp;</label>
+                                        
                                     <button type="submit" class="submit btn btn-info">Search</button>
                                     </div>
                                 </div>
@@ -285,7 +287,7 @@
                                                         <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                     <?php } ?>
                                                 </select>
-                                            </div>
+                                            </div> 
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="sub_branches" name="course" class="form-control">
@@ -310,7 +312,8 @@
                                             </div>
                                      
                                 <div class="form-group col-sm-2">
-                                    <div class="form-group">
+                                    <div class="form-group col-sm-2">
+                                        <label>&nbsp;</label>
                                     <button type="submit" class="submit btn btn-info">Search</button>
                                     </div>
                                 </div>

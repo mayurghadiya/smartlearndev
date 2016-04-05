@@ -121,6 +121,7 @@ foreach ($edit_data as $row):
                                 
                                 <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
+                                    <input type="checkbox" name="checkall" id="checkAll2"  >Check All<br>
                                    <div id="student2">
                                         <?php
                                         $stu=explode(',',$row['pm_student_id']);
@@ -189,7 +190,9 @@ foreach ($edit_data as $row):
 endforeach;
 ?>
 <script type="text/javascript">
-    
+      $("#checkAll2").change(function () {
+    $("input:checkbox").prop('checked', $(this).prop("checked"));
+});
     function get_student(batch, semester = '') {
        var batch = $("#batch2").val();
         var course = $("#course2").val();
