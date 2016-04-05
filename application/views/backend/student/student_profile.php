@@ -8,7 +8,7 @@
     </div>
     <div class="vd_banner vd_bg-white clearfix pd-20">
         <div class="panel widget light-widget">
-            <form class="form-horizontal" action="base_url() . 'index.php?student/manage_profile/update" id="frmstudent_profile" role="form" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="" id="frmstudent_profile" role="form" method="post" enctype="multipart/form-data">
                 <div  class="panel-body">
                     <h2 class="mgbt-xs-20"> Profile: <span class="font-semibold"><?php echo ucwords($profile->std_first_name . ' ' . $profile->std_last_name); ?></span> </h2>
                     <br/>
