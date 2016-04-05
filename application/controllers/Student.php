@@ -870,7 +870,11 @@ class Student extends CI_Controller {
             $data['zip'] = $this->input->post('zip');
             $data['std_fb'] = $this->input->post('facebook');
             $data['std_twitter'] = $this->input->post('twitter');
-
+            
+              $this->db->where('std_id', $this->session->userdata('std_id'));
+            $this->db->update('student', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            redirect(base_url() . 'index.php?student/manage_profile', 'refresh');
         }
         $page_data['title'] = 'Student Profile';
         $page_data['page_name'] = 'student_profile';
