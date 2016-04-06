@@ -44,23 +44,23 @@
 
                                         <input type="hidden" name="amount" value="<?php echo $this->session->userdata('payment_data')['fees']; ?>" />
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Card Number</label>
+                                            <label class="col-md-3 control-label">Card Number<span style="color:red">*</span></label>
                                             <div class="col-md-4">
                                                 <input type="text" id="card_number" class="form-control" name="card_number" required="">
                                                 <p id="card_status_details" class="hidden-md hidden-sm hidden-xs hidden-lg"></p>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label">Card Holder Name</label>
+                                            <label class="col-md-3 control-label">Card Holder Name<span style="color:red">*</span></label>
                                             <div class="col-md-4">
                                                 <input type="text" id="card_holder_name" name="card_holder_name" class="form-control" parsley-trigger="change" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-email">Expiry Date</label>
+                                            <label class="col-md-3 control-label" for="example-email">Expiry Date<span style="color:red">*</span></label>
                                             <div class="col-md-2">
                                                 <select id="month" name="month" class="form-control" parsley-trigger="change" required>
-                                                    <option value="">Select month</option>
+                                                    <option value="">Select month<span style="color:red">*</span></option>
                                                     <?php
                                                     for ($i = 1; $i < 13; $i++)
                                                         print("<option value=" . date('m', strtotime('01.' . $i . '.2001')) . ">" . date('M', strtotime('01.' . $i . '.2001')) . "(" . date('m', strtotime('01.' . $i . '.2001')) . ")</option>");
@@ -69,7 +69,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <select id="year" name="year" class="form-control" parsley-trigger="change" required>
-                                                    <option value="">Select Year</option>
+                                                    <option value="">Select Year<span style="color:red">*</span></option>
                                                     <?php
                                                     $cur_year = date('Y');
                                                     ?>
@@ -81,7 +81,7 @@
                                             </div>	                                                
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="example-email">CVV</label>
+                                            <label class="col-md-3 control-label" for="example-email">CVV<span style="color:red">*</span></label>
                                             <div class="col-md-4">
                                                 <input type="password" id="cvv" name="cvv" class="form-control" parsley-trigger="change" maxlength="3" required>
                                             </div>

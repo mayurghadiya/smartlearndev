@@ -10,7 +10,7 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a> </li>
                         <li><a href="#">Pages</a> </li>
-                        <li class="active"><?php echo $page_title;?></li>
+                        <li class="active"><?php echo $page_title; ?></li>
                     </ul>                  
                 </div>
             </div>
@@ -40,7 +40,7 @@
                             <div class="tab-pane box active" id="list">
 
                                 <div class="panel-body table-responsive">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="exam-data-tables">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
@@ -50,7 +50,6 @@
                                                 <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
-                                                <th>Center</th>
                                                 <th>Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -70,26 +69,15 @@
                                                     <td><?php echo $row->c_name; ?></td>
                                                     <td><?php echo $row->b_name; ?></td>
                                                     <td><?php echo $row->s_name; ?></td>
-                                                    <td><?php
-                                                        $this->db->get('center_user')->result();
-                                                        $centerexplode = explode(',', $row->center_id);
-                                                        foreach ($centerexplode as $cen) {
-                                                            $cenlist[] = $this->db->get_where('center_user', array('center_id' => $cen))->result();
-                                                        }
-                                                        foreach ($cenlist as $cc) {
-                                                            foreach ($cc as $c) {
-                                                                echo $c->center_name . "<br>";
-                                                            }
-                                                        }
-                                                        ?></td>
-                                                    <td><?php echo date('F d, Y', strtotime($row->em_date)); ?></td>
+
+                                                    <td><?php echo date('m/d/Y', strtotime($row->em_date)); ?></td>
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_exam/<?php echo $row->em_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
                                                         <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/exam/delete/<?php echo $row->em_id; ?>');" data-original-title="remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
-<?php } ?>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -100,53 +88,53 @@
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">                	
-<?php echo form_open(base_url() . 'index.php?admin/exam/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'examform', 'target' => '_top')); ?>
+                                    <?php echo form_open(base_url() . 'index.php?admin/exam/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'examform', 'target' => '_top')); ?>
                                     <div class="padded">
-<?php
-$validation_error = validation_errors();
-if ($validation_error != '') {
-    ?>
+                                        <?php
+                                        $validation_error = validation_errors();
+                                        if ($validation_error != '') {
+                                            ?>
                                             <div class="alert alert-danger">
                                                 <button class="close" data-dismiss="alert">&times;</button>
-                                            <?php echo $validation_error; ?>
+                                                <?php echo $validation_error; ?>
                                             </div>
                                             <script>
                                                 $(document).ready(function () {
                                                     $('#add_exam').click();
                                                 });
                                             </script>
-<?php } ?>
+                                        <?php } ?>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Exam Name</label>
+                                            <label class="col-sm-3 control-label">Exam Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="exam_name" id="exam_name"
                                                        value="<?php echo set_value('exam_name'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Exam Type</label>
+                                            <label class="col-sm-3 control-label">Exam Type<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="exam_type" id="exam_type">
-<?php
-$exam_type_id = set_value('exam_type');
-?>
+                                                    <?php
+                                                    $exam_type_id = set_value('exam_type');
+                                                    ?>
                                                     <option value="">Select</option>
                                                     <?php foreach ($exam_type as $row) { ?>
                                                         <option value="<?php echo $row->exam_type_id; ?>"
-                                                        <?php if ($row->exam_type_id == $exam_type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
-                                                    <?php } ?>
+                                                                <?php if ($row->exam_type_id == $exam_type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
+                                                            <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Total Marks</label>
+                                            <label class="col-sm-3 control-label">Total Marks<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="total_marks" id="total_marks"
                                                        value="<?php echo set_value('total_marks'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Passing Marks</label>
+                                            <label class="col-sm-3 control-label">Passing Marks<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="passing_marks" id="passing_marks"
                                                        value="<?php echo set_value('total_marks'); ?>"/>
@@ -156,29 +144,29 @@ $exam_type_id = set_value('exam_type');
                                             <label class="col-sm-3 control-label">Year</label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="year" id="year">
-<?php
-$year = set_value('year');
-?>
-<?php for ($i = 2016; $i >= 2010; $i--) { ?>
+                                                    <?php
+                                                    $year = set_value('year');
+                                                    ?>
+                                                    <?php for ($i = 2016; $i >= 2010; $i--) { ?>
                                                         <option value="<?php echo $i; ?>"
-                                                        <?php if ($year == $i) echo 'selected'; ?>><?php echo $i; ?></option>
+                                                                <?php if ($year == $i) echo 'selected'; ?>><?php echo $i; ?></option>
+                                                            <?php } ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select class="form-control" name="degree" id="degree">
+                                                    <option value="">Select</option>
+                                                    <?php foreach ($degree as $row) { ?>
+                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
-                                            <div class="col-sm-5">
-                                                <select class="form-control" name="degree" id="degree">
-                                                    <option value="">Select</option>
-<?php foreach ($degree as $row) { ?>
-                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
-<?php } ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Branch</label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="course" id="course">
 
@@ -186,7 +174,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="batch" id="batch">
 
@@ -194,38 +182,28 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester</label>
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="semester" id="semester">
-<?php
-$semester_select_id = set_value('semester');
-?>
+                                                    <?php
+                                                    $semester_select_id = set_value('semester');
+                                                    ?>
                                                     <option value="">Select</option>
                                                     <?php foreach ($semester as $row) { ?>
                                                         <option value="<?php echo $row->s_id; ?>"
-                                                        <?php if ($row->s_id == $semester_select_id) echo 'selected'; ?>><?php echo $row->s_name; ?></option>
-                                                    <?php } ?>
+                                                                <?php if ($row->s_id == $semester_select_id) echo 'selected'; ?>><?php echo $row->s_name; ?></option>
+                                                            <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
+
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Center</label>
-                                            <div class="col-sm-5">
-                                                <select class="form-control" name="center[]" id="center" multiple>
-                                                    <option value="">Select</option>
-<?php foreach ($centerlist as $row) { ?>
-                                                        <option value="<?php echo $row->center_id; ?>"><?php echo $row->center_name; ?></option>
-<?php } ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
+                                            <label class="col-sm-3 control-label">Status<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="status" id="status">
-<?php
-$status_select_id = set_value('status');
-?>
+                                                    <?php
+                                                    $status_select_id = set_value('status');
+                                                    ?>
                                                     <option value="">Select</option>
                                                     <option value="1" <?php if ($status_select_id == '1') echo 'selected'; ?>>Active</option>
                                                     <option value="0" <?php if ($status_select_id == '0') echo 'selected'; ?>>In-active</option>
@@ -233,23 +211,23 @@ $status_select_id = set_value('status');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date</label>
+                                            <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" name="date" id="date" class="form-control datepicker-normal"
                                                        value="<?php echo set_value('date'); ?>"/>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Start Date/Time</label>
+                                        <div class="form-group" style="display: none;">
+                                            <label class="col-sm-3 control-label">Start Date/Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="datetime-local" name="start_date_time" id="start_date_time" class="form-control"
+                                                <input type="text" name="start_date_time" id="start_date_time" class="form-control"
                                                        value="<?php echo set_value('start_date_time'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">End Date/Time</label>
+                                            <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="datetime-local" name="end_date_time" id="end_date_time" class="form-control"
+                                                <input type="text" name="end_date_time" id="end_date_time" class="form-control"
                                                        value="<?php echo set_value('end_date_time'); ?>"/>
                                             </div>
                                         </div>
@@ -326,9 +304,21 @@ $status_select_id = set_value('status');
             $(".datepicker-normal").datepicker({
                 dateFormat: 'dd M yy',
                 changeMonth: true,
-                changeYear: true
-
+                changeYear: true,
+                minDate: new Date(),
+                onClose: function (selectedDate) {
+                    $("#end_date_time").datepicker("option", "minDate", selectedDate);
+                }
             });
+            $("#end_date_time").datepicker({
+                dateFormat: 'dd M yy',
+                changeMonth: true,
+                changeYear: true,
+                minDate: new Date(),
+                onClose: function (selectedDate) {
+                    $(".datepicker-normal").datepicker("option", "maxDate", selectedDate);
+                }
+            })
         });
 
     </script>
@@ -392,10 +382,27 @@ $status_select_id = set_value('status');
                 $('#passing_marks').attr('max', total_marks);
                 $('#passing_marks').attr('required', '');
             });
-            
-            $('#passing_marks').on('focus',function(){
+
+            $('#passing_marks').on('focus', function () {
                 var total_marks = $('#total_marks').val();
                 $(this).attr('max', total_marks);
+            })
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            $('#exam-data-tables').dataTable({
+                "order": [[7, "desc"]]
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#date').on('change', function () {
+                $('#start_date_time').val($(this).val());
             })
         })
     </script>

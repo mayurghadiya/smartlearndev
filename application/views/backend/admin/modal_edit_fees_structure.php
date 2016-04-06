@@ -25,14 +25,14 @@ $batch = $this->db->query($query)->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/fees_structure/update/' . $edit_data->fees_structure_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editfeesstructure', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Title</label>
+                            <label class="col-sm-3 control-label">Title<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="edit_title" name="title" class="form-control"
                                        value="<?php echo $edit_data->title; ?>" required=""/>
                             </div>
                         </div>                  
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course</label>
+                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_degree" name="degree" required="">
                                     <option value="">Select</option>
@@ -44,7 +44,7 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch</label>
+                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_course" name="course" required="">
                                     <option value="">Select</option>
@@ -56,7 +56,7 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch</label>
+                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="edit_batch" id="edit_batch">
                                     <option value="">Select</option>
@@ -68,7 +68,7 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester</label>
+                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_semester" name="semester" required="">
                                     <option value="">Select</option>
@@ -80,35 +80,35 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Fee</label>
+                            <label class="col-sm-3 control-label">Fee<span style="color:red">*</span></label>
                             <div class="col-sm-7">                                        
                                 <input type="text" id="edit_fees" class="form-control" name="fees" required=""
                                        value="<?php echo $edit_data->total_fee; ?>"/>                                               
                             </div>
                         </div>	
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Start Date</label>
+                            <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="edit_start_date" class="form-control datepicker" name="start_date"
                                        value="<?php echo $edit_data->fee_start_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">End Date</label>
+                            <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="edit_end_date" class="form-control datepicker" name="end_date"
                                        value="<?php echo $edit_data->fee_end_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Expiry Date</label>
+                            <label class="col-sm-3 control-label">Expiry Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="edit_expiry_date" class="form-control datepicker" name="expiry_date"
                                        value="<?php echo $edit_data->fee_expiry_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Penalty</label>
+                            <label class="col-sm-3 control-label">Penalty<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="edit_penalty" class="form-control" name="penalty"
                                        value="<?php echo $edit_data->penalty; ?>"/>

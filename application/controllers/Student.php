@@ -452,8 +452,10 @@ class Student extends CI_Controller {
                 student_exam_list($student_details->course_id, $student_details->semester_id);
         $page_data['page_name'] = 'exam_listing';
         $page_data['page_title'] = 'Exam Listing';
-        clear_notification('exam_manager', $this->session->userdata('student_id'));        
+        clear_notification('exam_manager', $this->session->userdata('student_id'));  
+        clear_notification('exam_time_table', $this->session->userdata('student_id')); 
         unset($this->session->userdata('notifications')['exam_manager']);
+        unset($this->session->userdata('notifications')['exam_time_table']);
         $this->load->view('backend/index', $page_data);
     }
 
@@ -488,6 +490,8 @@ class Student extends CI_Controller {
         $page_data['student_marks'] = $this->Student_model->student_marks($student_details->std_id, $exam_id);
         $page_data['exam_listing'] = $this->Student_model->
                 student_exam_list($student_details->course_id, $student_details->semester_id);
+        clear_notification('marks_manager', $this->session->userdata('student_id'));
+        unset($this->session->userdata('notifications')['marks_manaher']);
         $this->load->view('backend/index', $page_data);
     }
 

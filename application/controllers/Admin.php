@@ -26,6 +26,7 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
+        $this->load->helper('notification');
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
@@ -942,6 +943,7 @@ class Admin extends CI_Controller {
             $data['std_degree'] = $this->input->post('degree');
             $data['created_date'] = date('Y-m-d');
             $data['password_status'] = 0;
+            $data['user_type']=1;
             //roll no
             $this->db->insert('student', $data);
             $lastid = $this->db->insert_id();
@@ -1001,6 +1003,7 @@ class Admin extends CI_Controller {
             }
             $data['email'] = $this->input->post('email_id');
             $data['password'] = md5($this->input->post('password'));
+            $data['real_pass'] = $this->input->post('password');
             $data['name'] = $this->input->post('name');
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
@@ -2264,7 +2267,7 @@ class Admin extends CI_Controller {
                 if (count($is_record_present)) {
                     $this->session->set_flashdata('flash_message', 'Data is already present.');
                 } else {
-                    $centerimplode = implode(',', $this->input->post('center'));
+                   
                     // check for validation
                     if ($this->form_validation->run('exam_insert_update') != FALSE) {
                         $data = array(
@@ -2277,7 +2280,7 @@ class Admin extends CI_Controller {
                             'course_id' => $this->input->post('course', TRUE),
                             'batch_id' => $this->input->post('batch', TRUE),
                             'em_semester' => $this->input->post('semester', TRUE),
-                            'center_id' => $centerimplode,
+                           
                             'em_status' => $this->input->post('status', TRUE),
                             'em_date' => $this->input->post('date', TRUE),
                             'em_start_time' => $this->input->post('start_date_time', TRUE),
@@ -2292,7 +2295,7 @@ class Admin extends CI_Controller {
                     }
                 }
             } elseif ($param1 == 'do_update') {
-                $centerimplode = implode(',', $this->input->post('center'));
+               
                 //do validation
                 if ($this->form_validation->run('exam_insert_update') != FALSE) {
                     $data = array(
@@ -2303,7 +2306,7 @@ class Admin extends CI_Controller {
                         'degree_id' => $this->input->post('degree', TRUE),
                         'course_id' => $this->input->post('course', TRUE),
                         'batch_id' => $this->input->post('batch', TRUE),
-                        'center_id' => $centerimplode,
+                       
                         'em_semester' => $this->input->post('semester', TRUE),
                         'em_status' => $this->input->post('status', TRUE),
                         'em_date' => $this->input->post('date', TRUE),
@@ -2486,7 +2489,7 @@ class Admin extends CI_Controller {
                     $course_id = $_POST['course_detail'];
                     $semester_id = $_POST['sem_detail'];
                     $subjects = $this->Crud_model->exam_subjects($exam_id);
-
+                    
                     $exam_subject = array();
                     foreach ($subjects as $row) {
                         array_push($exam_subject, $row->subject_name);
@@ -2499,8 +2502,8 @@ class Admin extends CI_Controller {
                             ),
                             'subject' => $exam_subject
                         );
-                        $data = $result;
-
+                        $data = $result;                       
+                        
                         import_exam_marks($data, $where);
                     }
                     //exit;
@@ -3250,6 +3253,9 @@ class Admin extends CI_Controller {
                             'exam_start_time' => $this->input->post('start_time', TRUE),
                             'exam_end_time' => $this->input->post('end_time', TRUE),
                         ));
+                        $insert_id = $this->db->insert_id();
+                        create_notification('exam_time_table', $_POST['degree'], $_POST['course'], 
+                                $_POST['batch'], $_POST['semester'], $insert_id);
                         $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
                         redirect(base_url('index.php?admin/exam_time_table'));
                     }
@@ -3369,10 +3375,14 @@ class Admin extends CI_Controller {
                             'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
                             'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
                         ));
+                            $insert_id = $this->db->insert_id();
+                        create_notification('marks_manager', $student_list[$i - 1]->std_degree, 
+                                $student_list[$i-1]->course_id, $student_list[$i-1]->std_batch, 
+                                $student_list[$i-1]->semester_id, $insert_id, $student_list[$i-1]->std_id);
                     }
                 }
             }
-            $this->session->set_userdata('message', 'Marks is successfully updated.');
+            $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
             redirect(base_url('index.php?admin/marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
         }
         $page_data['course_id'] = '';

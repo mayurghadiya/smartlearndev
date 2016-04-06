@@ -13,7 +13,7 @@
                 <li> <a href="#" target="_blank"> <div class="menu-icon"><i class=" fa fa-envelope"></i></div> <div class="menu-text">Admission for next Semester</div> </a> </li>								
                 <li> 
                     <a href="<?php echo base_url('index.php?student/fee_record'); ?>" target="_blank"> 
-                        <div class="menu-text"> Fee Record</div> 
+                        <div class="menu-text"> Student Payment Record</div> 
                     </a> 
                 </li>
                 <li> <a href="<?php echo base_url('index.php?student/student_fees'); ?>" target="_blank"> 

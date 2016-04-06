@@ -12,34 +12,34 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                     <?php echo form_open(base_url() . 'index.php?admin/events/do_update/' . $row['event_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editevent', 'target' => '_top', 'role' => 'form')); ?>
                     <div class="form-group">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Event Name</label>
+                            <label class="col-sm-3 control-label">Event Name<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" name="event_name" id="event_name" value="<?php echo $row['event_name']; ?>"/>
                             </div>
                         </div>    
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Event Location</label>
+                            <label class="col-sm-3 control-label">Event Location<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="event_location" class="form-control" name="event_location" 
                                        value="<?php echo $row['event_location']; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Description</label>
+                            <label class="col-sm-3 control-label">Description<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <textarea name="event_desc" rows="4"><?php echo $row['event_desc']; ?></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Event Date</label>
+                            <label class="col-sm-3 control-label">Event Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" id="datepicker-date123" class="form-control" name="event_date" value="<?php echo date('d F Y', strtotime($row['event_date'])); ?>"/>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Event Time</label>
+                            <label class="col-sm-3 control-label">Event Time<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="time" id="event_time" class="form-control" name="event_time" 
                                        value="<?php echo date('H:i', strtotime($row['event_date'])); ?>"/>
@@ -68,7 +68,8 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
         $("#datepicker-date123").datepicker({
             dateFormat: 'dd M yy',
             changeMonth: true,
-            changeYear: true
+            changeYear: true,
+            minDate: new Date()
 
         });
         $("#editevent").validate({

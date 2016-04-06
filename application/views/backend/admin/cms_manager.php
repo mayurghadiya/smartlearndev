@@ -43,8 +43,8 @@
                                                 <th><div>#</div></th>
                                                 <th>Title</th>
                                                 <th>URL</th>                                                
-                                                <th>Degree</th>
                                                 <th>Course</th>
+                                                <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
                                                 <th>Action</th>
@@ -83,7 +83,7 @@
                                           action="<?php echo base_url('index.php?admin/cms_manager/create'); ?>" role="form">
                                         <div class="row">
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label">Degree</label>
+                                                <label class="col-sm-4 control-label">Course</label>
                                                 <div class="col-sm-5 controls">
                                                     <select id="degree" name="degree" class="form-control">
                                                         <option value="">Select</option>
@@ -96,7 +96,7 @@
                                         </div><!--./row-->
                                         <div class="row">
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label">Course</label>
+                                                <label class="col-sm-4 control-label">Branch<span style="color:red">*</span></label>
                                                 <div class="col-sm-5 controls">
                                                     <select id="course" name="course" class="form-control">
 
@@ -108,7 +108,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Select Batch</label>
+                                                        <label class="col-sm-4 control-label">Batch<span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select name="batch" id="batch" class="form-control">
 
@@ -123,7 +123,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Select Semester</label>
+                                                        <label class="col-sm-4 control-label">Semester<span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select id="semester" name="semester" class="form-control">
                                                                 <option value="">Select</option>
@@ -142,7 +142,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Page Title</label>
+                                                        <label class="col-sm-4 control-label">Page Title<span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <input id="page_title" name="page_title" type="text" placeholder="Page Title">
                                                         </div>
@@ -154,7 +154,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Page Slug</label>
+                                                        <label class="col-sm-4 control-label">Page Slug<span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <input id="page_slug" name="page_slug" type="text" placeholder="Page Slug">
                                                         </div>
@@ -166,7 +166,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Content Type</label>
+                                                        <label class="col-sm-4 control-label">Content Type<span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select class="form-control" id="content_type" name="content_type" id="content_type">
                                                                 <option value="">Select</option>
@@ -182,7 +182,7 @@
                                         <div class="row" id="ck-editor">
                                             <div class="col-sm-12 col-xs-12">	
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label">Page Content</label>
+                                                    <label class="col-sm-4 control-label">Page Content<span style="color:red">*</span></label>
                                                     <div class="col-sm-7 controls">												
                                                         <div class="form-group">							
                                                             <textarea id="content_data" name="content_data" class="ckeditor" data-rel="ckeditor" rows="3" ></textarea>
@@ -264,8 +264,8 @@
 
                                                                     },
                                                                     messages: {
-                                                                        degree: "Please select degree",
-                                                                        course: "Please select course",
+                                                                        degree: "Please select course",
+                                                                        course: "Please select branch",
                                                                         batch: "Please select batch",
                                                                         //year: "Please select year",
                                                                         page_title: "Please enter page title",

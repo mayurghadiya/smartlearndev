@@ -34,14 +34,14 @@ $centerlist = $this->db->get('center_user')->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/exam/do_update/' . $edit_data->em_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-form', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam Name</label>
+                            <label class="col-sm-3 control-label">Exam Name<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" name="exam_name" id="exam_name"
                                        value="<?php echo $edit_data->em_name; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam Type</label>
+                            <label class="col-sm-3 control-label">Exam Type<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" name="exam_type" id="exam_type" required="">
                                     <option value="">Select</option>
@@ -53,13 +53,13 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Total Marks</label>
+                            <label class="col-sm-3 control-label">Total Marks<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" required="" name="total_marks" id="edit_total_marks" value="<?php echo $edit_data->total_marks; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Passing Marks</label>
+                            <label class="col-sm-3 control-label">Passing Marks<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" required="" name="passing_marks" id="edit_passing_marks" value="<?php echo $edit_data->passing_mark; ?>"/>
                             </div>
@@ -77,7 +77,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course</label>
+                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="degree" id="edit_degree">
                                     <option>Select</option>
@@ -89,7 +89,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch</label>
+                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="course" id="edit_course">
                                     <option value="">Select</option>
@@ -101,7 +101,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch</label>
+                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="batch" id="edit_batch">
                                     <option value="">Select</option>
@@ -114,7 +114,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester</label>
+                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="semester" id="edit_semester">
                                     <option value="">Select</option>
@@ -125,38 +125,9 @@ $centerlist = $this->db->get('center_user')->result();
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Center</label>
-                            <div class="col-sm-5">
-                                <?php
-                                $centerexplode = explode(',', $edit_data->center_id);
 
-                                foreach ($centerlist as $row1) {
-                                    if (in_array($row1->center_id, $centerexplode)) {
-                                        in_array($row1->center_id, $centerexplode);
-                                    }
-                                }
-                                ?>
-                                <select class="form-control" name="center[]" id="center" multiple>
-                                    <option value="">Select</option>
-                                    <?php
-                                    foreach ($centerlist as $row) {
-                                        if (in_array($row->center_id, $centerexplode)) {
-                                            ?>
-                                            <option value="<?php echo $row->center_id; ?>" selected><?php echo $row->center_name; ?></option>
-                                            <?php
-                                        } else {
-                                            ?>
-                                            <option value="<?php echo $row->center_id; ?>"><?php echo $row->center_name; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Status</label>
+                            <label class="col-sm-3 control-label">Status<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="status" id="status">
                                     <option value="">Select</option>
@@ -168,23 +139,23 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Date</label>
+                            <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" required="" id="datepicker-date123" name="date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Start Date/Time</label>
+                        <div class="form-group" style="display: none;">
+                            <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
-                                <input type="datetime-local" name="start_date_time" id="start_date_time" class="form-control"
+                                <input type="text" name="start_date_time" id="edit_start_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_start_time; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">End Date/Time</label>
+                            <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
-                                <input type="datetime-local" required="" name="end_date_time" id="end_date_time" class="form-control"
+                                <input type="text" required="" name="end_date_time" id="edit_end_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_end_time; ?>"/>
                             </div>
                         </div>	
@@ -251,9 +222,21 @@ $centerlist = $this->db->get('center_user')->result();
         $(".datepicker-normal-edit").datepicker({
             dateFormat: 'dd M yy',
             changeMonth: true,
-            changeYear: true
+            changeYear: true,
+            onClose: function (selectedDate) {
+                $("#edit_end_date_time").datepicker("option", "minDate", selectedDate);
+            }
 
         });
+        $("#edit_end_date_time").datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date(),
+            onClose: function (selectedDate) {
+                $(".datepicker-normal-edit").datepicker("option", "maxDate", selectedDate);
+            }
+        })
     });
 </script>
 
@@ -319,6 +302,14 @@ $centerlist = $this->db->get('center_user')->result();
         $('#edit_passing_marks').on('focus', function () {
             var total_marks = $('#edit_total_marks').val();
             $(this).attr('max', total_marks);
+        })
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#datepicker-date123').on('change', function () {
+            $('#edit_start_date_time').val($(this).val());
         })
     })
 </script>

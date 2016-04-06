@@ -128,7 +128,7 @@
                                         <br/>
                                         <div class="padded">
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course</label>
+                                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="degree" id="degree" required="">
                                                         <option value="">Select</option>
@@ -139,7 +139,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Branch</label>
+                                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="course" id="course" required="">
 
@@ -147,7 +147,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Batch</label>
+                                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="batch" id="batch" required="">
 
@@ -155,7 +155,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Semester</label>
+                                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="semester" id="semester" required="">
                                                         <option value="">Select</option>
@@ -166,7 +166,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Student</label>
+                                                <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select style="width: 100%;" class="student form-control" id="student" name="student" required="">
 
@@ -174,7 +174,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Fees Structure</label>
+                                                <label class="col-sm-3 control-label">Fees Structure<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="fees_structure" name="fees_structure" required="">
 
@@ -182,7 +182,7 @@
                                                 </div>
                                             </div>
                                             <div id="main_total_fees" class="form-group" style="display: none;">
-                                                <label class="col-sm-3 control-label">Total Fees</label>
+                                                <label class="col-sm-3 control-label">Total Fees<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" name="total_fees" id="total_fees" class="form-control" readonly=""/>
                                                 </div>
@@ -194,13 +194,13 @@
                                                 </div>
                                             </div>
                                             <div id="main_due_amount" class="form-group" style="display: none;">
-                                                <label class="col-sm-3 control-label">Due Amount</label>
+                                                <label class="col-sm-3 control-label">Due Amount<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" name="due_amount" id="due_amount" class="form-control" readonly=""/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Amount</label>
+                                                <label class="col-sm-3 control-label">Amount<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" name="fees" id="fees" class="form-control" placeholder="In dollar" required=""/>
                                                 </div>
@@ -256,7 +256,7 @@
                 fees_structure:"required",
             },
             messages: {
-                course: "Please select Course Name",
+                course: "Please select course Name",
                 student: "Please select student",
                 fees: "Please enter fees",
                 semester: "Please select semester",

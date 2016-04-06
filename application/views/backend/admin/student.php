@@ -353,7 +353,7 @@
                                                         }, 'Please enter a valid character.');
 
                                                         jQuery.validator.addMethod("zip_code", function (value, element) {
-                                                            return this.optional(element) || /^[0-9]{6}$/.test(value);
+                                                            return this.optional(element) || /^[0-9]+$/.test(value);
                                                         }, 'Please enter a valid zip code.');
 
 

@@ -32,7 +32,9 @@
     <link href="<?=$this->config->item('custom_plugin')?>isotope/css/isotope.css" rel="stylesheet" type="text/css">
     <link href="<?=$this->config->item('custom_plugin')?>pnotify/css/jquery.pnotify.css" media="screen" rel="stylesheet" type="text/css">    
 	<link href="<?=$this->config->item('custom_plugin')?>google-code-prettify/prettify.css" rel="stylesheet" type="text/css"> 
-   
+        <link href="<?php echo base_url(); ?>assets/plugins/dataTables/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url(); ?>assets/plugins/dataTables/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css">    
+
          
     <link href="<?=$this->config->item('custom_plugin')?>mCustomScrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
     <link href="<?=$this->config->item('custom_plugin')?>tagsInput/jquery.tagsinput.css" rel="stylesheet" type="text/css">

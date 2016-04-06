@@ -48,10 +48,10 @@ class Login extends CI_Controller {
             redirect(base_url() . 'index.php?sub_admin/dashboard', 'refresh');
         }
         
-        if ($this->session->userdata('centeruser_login') == 1) {
-              
-            redirect(base_url() . 'index.php?center_user/dashboard','refresh');
-        }
+//        if ($this->session->userdata('centeruser_login') == 1) {
+//              
+//            redirect(base_url() . 'index.php?center_user/dashboard','refresh');
+//        }
       
         $this->load->view('backend/login');
     }
@@ -122,19 +122,19 @@ $center_credential = array('emailid' => $email, 'password' => $password, 'center
         }
               
          //check for center user
-	$query = $this->db->get_where('center_user', $center_credential);
-        if ($query->num_rows() > 0) {
-            $row = $query->row();
-
-            $this->session->set_userdata('centeruser_login', '1');
-            $this->session->set_userdata('center_id', $row->center_id);
-            $this->session->set_userdata('center_user_id', $row->center_id);
-             $this->session->set_userdata('login_user_id', $row->center_id);
-            $this->session->set_userdata('name', $row->name);
-            $this->session->set_userdata('email', $row->emailid);
-            $this->session->set_userdata('login_type', 'center');
-            return 'success';
-        }		
+//	$query = $this->db->get_where('center_user', $center_credential);
+//        if ($query->num_rows() > 0) {
+//            $row = $query->row();
+//
+//            $this->session->set_userdata('centeruser_login', '1');
+//            $this->session->set_userdata('center_id', $row->center_id);
+//            $this->session->set_userdata('center_user_id', $row->center_id);
+//             $this->session->set_userdata('login_user_id', $row->center_id);
+//            $this->session->set_userdata('name', $row->name);
+//            $this->session->set_userdata('email', $row->emailid);
+//            $this->session->set_userdata('login_type', 'center');
+//            return 'success';
+//        }		
 		//check for sub admin
         $query = $this->db->get_where('sub_admin', $credential);
         if ($query->num_rows() > 0) {
