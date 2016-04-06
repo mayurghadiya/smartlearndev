@@ -61,7 +61,7 @@
     
     <!-- Custom CSS -->
     <link href="<?=$this->config->item('asset')?>custom/custom.css" rel="stylesheet" type="text/css">
-	
+	<!--<link href="<?=$this->config->item('css_path')?>dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">    -->
     <!-- Head SCRIPTS -->
      <script type="text/javascript" src="<?=$this->config->item('js_path')?>modernizr.js"></script> 
     <script type="text/javascript" src="<?=$this->config->item('js_path')?>mobile-detect.min.js"></script> 
