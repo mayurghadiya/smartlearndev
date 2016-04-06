@@ -1607,6 +1607,8 @@ class Student extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('participation_successfully'));
             redirect(base_url() . 'index.php?student/dashboard', 'refresh');
         }
+         clear_notification('participate_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['participate_manager']);
         $page_data['page_name'] = 'participate_form';
         $page_data['page_title'] = 'Participate Form';
         $this->load->view('backend/index', $page_data);
