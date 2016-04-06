@@ -17,7 +17,7 @@ foreach ($edit_data as $row):
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/studyresource/do_update/' . $row['study_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Degree *</label>
+                                <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
                                         <option value="">Select degree</option>
@@ -40,7 +40,7 @@ foreach ($edit_data as $row):
                             </div>
                             
                             <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course *</label>
+                                            <label class="col-sm-3 control-label">Branch <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
 
                                                 <select name="course" id="course2">
@@ -58,7 +58,7 @@ foreach ($edit_data as $row):
                                             </div>
                                         </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Batch *</label>
+                                <label class="col-sm-3 control-label">Batch <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="batch" id="batch2">
                                         <option value="">Select batch</option>
@@ -80,7 +80,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>	
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Semester *</label>
+                                <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="semester" id="semester">
                                         <option value="">Select semester</option>
@@ -102,13 +102,13 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                                 <div class="form-group">
-                                <label class="col-sm-3 control-label">Title *</label>
+                                <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['study_title']; ?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Date *</label>
+                                <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['study_dos']; ?>"/>
                                 </div>
@@ -117,7 +117,7 @@ foreach ($edit_data as $row):
                           
                             <input type="hidden" class="form-control" name="pageurl" id="pageurl" value="<?php echo $row['study_url']; ?>" />
                              <div class="form-group">
-                                <label class="col-sm-3 control-label">File Upload *</label>
+                                <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="hidden" name="txtoldfile" id="txtoldfile" value="<?php echo $row['study_filename']; ?>" />
                                     <input type="file" class="form-control" name="resourcefile" id="resourcefile" />
