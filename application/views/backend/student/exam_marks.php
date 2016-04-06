@@ -128,23 +128,29 @@
                                                                 //echo $grade;
                                                                 //exit;
                                                                 switch($grade) {
-                                                                    case $grade > 90:
+                                                                    case $grade >= 80  && $grade <= 100:
                                                                         echo 'A+';
                                                                         break;
-                                                                    case $grade > 85:
+                                                                    case $grade >= 75 && $grade < 80:
                                                                         echo 'A';
                                                                         break;
-                                                                    case $grade > 76:
+                                                                    case $grade >= 70 && $grade < 75:
                                                                         echo 'B+';
                                                                         break;
-                                                                    case $grade > 71:
-                                                                        echo 'B';
+                                                                    case $grade >= 65 && $grade < 70 :
+                                                                        echo 'B-';
                                                                         break;
-                                                                    case $grade > 60:
-                                                                        echo 'C';
+                                                                    case $grade >= 60 && $grade < 65:
+                                                                        echo 'C+';
+                                                                        break;
+                                                                    case $grade >= 50 && $grade < 60:
+                                                                        echo 'C-';
+                                                                        break;
+                                                                    case $grade >= 40 && $grade < 50:
+                                                                        echo 'D+';
                                                                         break;
                                                                     case $grade > $exam_details->passing_mark:
-                                                                        echo 'D';
+                                                                        echo 'D-';
                                                                         break;
                                                                     default:
                                                                         echo 'F';
