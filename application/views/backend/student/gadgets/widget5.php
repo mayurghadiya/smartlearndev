@@ -15,11 +15,7 @@
                                 <div class="menu-text">Listing</div> 
                             </a> 
                         </li>-->
-                        <li>
-                            <a href="<?php echo base_url('index.php?student/exam_center'); ?>" target="_blank"> <div class="menu-icon"><i class=" fa fa-envelope"></i></div> 
-                                <div class="menu-text">Online Centre Bookings</div> 
-                            </a> 
-                        </li>
+                      
                     </ul>
                 </div>
             </div>

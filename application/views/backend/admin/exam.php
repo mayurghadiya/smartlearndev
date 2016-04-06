@@ -50,7 +50,6 @@
                                                 <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
-                                                <th>Center</th>
                                                 <th>Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -70,18 +69,7 @@
                                                     <td><?php echo $row->c_name; ?></td>
                                                     <td><?php echo $row->b_name; ?></td>
                                                     <td><?php echo $row->s_name; ?></td>
-                                                    <td><?php
-                                                        $this->db->get('center_user')->result();
-                                                        $centerexplode = explode(',', $row->center_id);
-                                                        foreach ($centerexplode as $cen) {
-                                                            $cenlist[] = $this->db->get_where('center_user', array('center_id' => $cen))->result();
-                                                        }
-                                                        foreach ($cenlist as $cc) {
-                                                            foreach ($cc as $c) {
-                                                                echo $c->center_name . "<br>";
-                                                            }
-                                                        }
-                                                        ?></td>
+                                                    
                                                     <td><?php echo date('F d, Y', strtotime($row->em_date)); ?></td>
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_exam/<?php echo $row->em_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
@@ -208,17 +196,7 @@ $semester_select_id = set_value('semester');
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Center</label>
-                                            <div class="col-sm-5">
-                                                <select class="form-control" name="center[]" id="center" multiple>
-                                                    <option value="">Select</option>
-<?php foreach ($centerlist as $row) { ?>
-                                                        <option value="<?php echo $row->center_id; ?>"><?php echo $row->center_name; ?></option>
-<?php } ?>
-                                                </select>
-                                            </div>
-                                        </div>
+                                       
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Status</label>
                                             <div class="col-sm-5">

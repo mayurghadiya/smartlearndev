@@ -8,7 +8,7 @@
     </div>
     <div class="vd_banner vd_bg-white clearfix pd-20">
         <div class="panel widget light-widget">
-            <form class="form-horizontal" action="" id="frmstudent_profile" role="form" method="post" enctype="multipart/form-data">
+            <form class="form-horizontal" action="" id="student_profile" role="form" method="post">
                 <div  class="panel-body">
                     <h2 class="mgbt-xs-20"> Profile: <span class="font-semibold"><?php echo ucwords($profile->std_first_name . ' ' . $profile->std_last_name); ?></span> </h2>
                     <br/>
@@ -17,9 +17,8 @@
                             <div class="form-group">
                                 <div class="col-xs-12">
                                     <div class="form-img text-center mgbt-xs-15"> 
-                                        
                                         <?php if($profile->profile_photo != ""){ ?>    
-                                        <img alt="example image" src="<?php echo base_url('uploads/student_image/'.$profile->profile_photo);?>"> </div>
+                                        <img alt="example image" src="<?php echo $this->crud_model->get_image_url('student' , $this->session->userdata('std_id'));?>"> </div>
                                         <?php } else{?>
                                         <img alt="example image" src="<?php echo base_url('uploads/user.jpg');?>"> </div>
                                         <?php }?>
@@ -27,6 +26,10 @@
                                     <div>
                                         <table class="table table-striped table-hover">
                                             <tbody>
+                                              <!--<tr>
+                                                <td style="width:60%;">Status</td>
+                                                <td><span class="label label-success">Active</span></td>
+                                              </tr>-->
                                                 <tr>
                                                     <td>Register Since</td>
                                                     <td><?php echo date('d-m-Y', strtotime($profile->Joining_date)); ?></td>
@@ -85,20 +88,53 @@
                             </div>
                             <!-- form-group -->
 
-                            <hr />
-                            <h3 class="mgbt-xs-15">Profile Setting</h3>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Profile Pic</label>
+                                <label class="col-sm-3 control-label">Password</label>
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input type="file" name="userfile" class="form-control">
+                                            <input type="password" required="" name="password" value="" placeholder="password">
                                         </div>
+                                        <!-- col-xs-12 --> 
                                     </div>
                                     <!-- row --> 
                                 </div>
                                 <!-- col-sm-10 --> 
                             </div>
+                            <!-- form-group -->
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">New Password</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="password" name="new_password" value="" placeholder="password">
+                                        </div>
+                                        <!-- col-xs-12 --> 
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
+                            <!-- form-group -->
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Confirm Password</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="password" name="confirm_password" value="" placeholder="password">
+                                        </div>
+                                        <!-- col-xs-12 --> 
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
+                            <!-- form-group -->
+
+                            <hr />
+                            <h3 class="mgbt-xs-15">Profile Setting</h3>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">First Name</label>
                                 <div class="col-sm-9 controls">
@@ -186,7 +222,7 @@
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input readonly type="text" name="degree" value="<?php echo $profile->d_name; ?>" class="form-control"/>
+                                            <input type="text" name="degree" value="<?php echo $profile->d_name; ?>" class="form-control"/>
                                         </div>
                                     </div>
                                     <!-- row --> 
@@ -201,7 +237,7 @@
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input readonly type="text" name="course" value="<?php echo $profile->c_name; ?>" class="form-control"/>
+                                            <input type="text" name="course" value="<?php echo $profile->c_name; ?>" class="form-control"/>
                                         </div>
                                     </div>
                                     <!-- row --> 
@@ -215,7 +251,7 @@
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input readonly type="text" name="batch" value="<?php echo $profile->b_name; ?>" class="form-control"/>
+                                            <input type="text" name="batch" value="<?php echo $profile->b_name; ?>" class="form-control"/>
                                         </div>
                                     </div>
                                     <!-- row --> 
@@ -228,7 +264,7 @@
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
-                                            <input readonly type="text" name="batch" value="<?php echo $profile->s_id; ?>" class="form-control"/>
+                                            <input type="text" name="batch" value="<?php echo $profile->s_id; ?>" class="form-control"/>
                                         </div>
                                     </div>
                                     <!-- row --> 
@@ -317,9 +353,34 @@
     </div>
 </div>
 
+<script>
+$('form input[type="text"]').attr('readonly', 'readonly');
+$('form input[type="email"]').attr('readonly', 'readonly');
+$('form textarea').attr('readonly', 'readonly');
+//$('form input[type="radio"]').attr('readonly', 'readonly');
+</script>
 <!-- validation -->
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+<script type="text/javascript">
+      $.validator.setDefaults({
+      submitHandler: function (form) {
+       form.submit();
+       }
+       });
+        $().ready(function () {
+        $("#student_profile").validate({
+        rules: {
+             new_password:{required: true},
+             confirm_password: "required",
+        },
+        messages: {
+            new_password: "New password is required",
+            confirm_password: "Confirm password is required",
+        }
+        });
+        });
+    </script>
 
     
 
@@ -331,6 +392,8 @@
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true
+
             });
         });
+
     </script>
