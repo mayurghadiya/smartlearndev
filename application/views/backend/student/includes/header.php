@@ -138,8 +138,6 @@
                                                                                         <div class="menu-text"> New Project was added.
                                                                                         </div> 
                                                                                     </a> 
-                                                                                </li>
-<<<<<<< HEAD
                                                                             <?php } ?>
                                                                                  <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
                                                                                 <li> 
