@@ -1674,5 +1674,18 @@ class Student extends CI_Controller {
         $page_data['page_title'] = 'Student Fees Record';
         $this->load->view('backend/index', $page_data);
     }
+    function studyresources()
+    { 
+        clear_notification('study_resources', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['study_resources']);
+        redirect(base_url() . 'index.php?student/dashboard/', 'refresh');
+    }
+    function digitallibrary()
+    {
+        
+      clear_notification('library_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['library_manager']);
+        redirect(base_url() . 'index.php?student/dashboard/', 'refresh');  
+    }
 
 }
