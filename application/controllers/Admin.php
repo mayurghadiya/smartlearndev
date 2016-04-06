@@ -2261,7 +2261,7 @@ class Admin extends CI_Controller {
                     $course_id = $_POST['course_detail'];
                     $semester_id = $_POST['sem_detail'];
                     $subjects = $this->Crud_model->exam_subjects($exam_id);
-
+                    
                     $exam_subject = array();
                     foreach ($subjects as $row) {
                         array_push($exam_subject, $row->subject_name);
@@ -2274,8 +2274,8 @@ class Admin extends CI_Controller {
                             ),
                             'subject' => $exam_subject
                         );
-                        $data = $result;
-
+                        $data = $result;                       
+                        
                         import_exam_marks($data, $where);
                     }
                     //exit;
@@ -3147,10 +3147,14 @@ class Admin extends CI_Controller {
                             'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
                             'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
                         ));
+                            $insert_id = $this->db->insert_id();
+                        create_notification('marks_manager', $student_list[$i - 1]->std_degree, 
+                                $student_list[$i-1]->course_id, $student_list[$i-1]->std_batch, 
+                                $student_list[$i-1]->semester_id, $insert_id, $student_list[$i-1]->std_id);
                     }
                 }
             }
-            $this->session->set_userdata('message', 'Marks is successfully updated.');
+            $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
             redirect(base_url('index.php?admin/marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
         }
         $page_data['course_id'] = '';

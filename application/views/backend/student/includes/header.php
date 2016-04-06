@@ -140,7 +140,16 @@
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
-                                                                            <?php } ?>                                                                                
+                                                                            <?php } ?> 
+                                                                                <?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
+                                                                                <li> 
+                                                                                    <a href="<?php echo base_url('index.php?student/exam_marks'); ?>"> 
+                                                                                        <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
+                                                                                        <div class="menu-text"> Exam marks was added.
+                                                                                        </div> 
+                                                                                    </a> 
+                                                                                </li>
+                                                                            <?php } ?>  
 
                                                                         </ul>
                                                                     </div>
