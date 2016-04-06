@@ -1663,6 +1663,82 @@ class Admin extends CI_Controller {
             $data['created_date'] = date('Y-m-d');
 
             $this->db->insert('study_resources', $data);
+             $last_id = $this->db->insert_id();
+            $batch = $data['study_batch'];
+            $degree = $data['study_degree'];
+            $semester =  $data['study_sem'];
+            $course = $data['study_course'];
+            if($degree=='All')
+            {
+               $students = $this->db->get('student')->result();
+            }
+            else{
+                if($course=='All')
+                {
+                 $this->db->where('std_degree', $degree);
+                $students = $this->db->get('student')->result();
+                }
+                else{
+                    if($batch=='All')
+                    {
+                        $this->db->where('std_degree', $degree);
+                        $this->db->where('course_id', $course);
+                         $students = $this->db->get('student')->result();
+                    }
+                    else{
+                        if($semester=='All')
+                        {
+                        $this->db->where('std_batch', $batch);
+                        $this->db->where('std_degree', $degree);
+                        $this->db->where('course_id', $course);
+                         $students = $this->db->get('student')->result();
+                        }
+                        else{
+                             $this->db->where('std_batch', $batch);
+                            $this->db->where('std_degree', $degree);
+                            $this->db->where('course_id', $course);
+                            $this->db->where('semester_id', $semester);
+                             $students = $this->db->get('student')->result();
+                        }
+                    }
+                    
+                }
+            }
+            
+               
+             
+            
+           
+          
+            
+            $std_ids = '';
+            foreach ($students as $std) {
+                $id = $std->std_id;
+
+
+                $std_id[] = $id;
+                //  $student_id = implode(",",$id);
+                // $std_ids[] =$student_id;
+            }
+            if($std_id!='')
+            {
+            $student_ids = implode(",", $std_id);
+            }else{
+                $student_ids = '';
+            }
+            $this->db->where("notification_type", "study_resources");
+            $res = $this->db->get("notification_type")->result();
+            if ($res != '') { 
+                $notification_id = $res[0]->notification_type_id;
+                $notify['notification_type_id'] = $notification_id;
+                $notify['student_ids'] = $student_ids;
+                $notify['degree_id'] = $degree;
+                $notify['course_id'] = $course;
+                $notify['batch_id'] = $batch;
+                $notify['semester_id'] = $semester;
+                $notify['data_id'] = $last_id;
+                $this->db->insert("notification", $notify);
+            }
             $this->session->set_flashdata('flash_message', get_phrase('studyresource_added_successfully'));
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
