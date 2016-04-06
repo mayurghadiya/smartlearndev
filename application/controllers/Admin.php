@@ -3928,14 +3928,24 @@ class Admin extends CI_Controller {
             //$rowstu->std_id . . $rowstu->name;
             if (isset($std)) {
                 if (in_array($rowstu->std_id, $std)) {
-                    $html .='<input type="checkbox" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                    $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
                 } else {
-                    $html .='<input type="checkbox" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                    $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
                 }
             } else {
-                $html .='<input type="checkbox" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
             }
         }
+        $html.='<script type="text/javascript">';
+        $html .="function uncheck()
+    {
+         if($('.checkbox1:checked').length == $('.checkbox1').length){
+            $('#select_all').prop('checked',true);
+        }else{
+            $('#select_all').prop('checked',false);
+        }
+    }";
+        $html .='</script>';
         echo $html;
     }
 
@@ -3958,17 +3968,27 @@ class Admin extends CI_Controller {
             foreach ($datastudent as $rowstu) {
                 if (isset($std)) {
                     if (in_array($rowstu->std_id, $std)) {
-                        $html .='<input type="checkbox" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                        $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
                     } else {
-                        $html .='<input type="checkbox" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                        $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
                     }
                 } else {
-                    $html .='<input type="checkbox" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                    $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
                 }
             }
         } else {
             
         }
+         $html.='<script type="text/javascript">';
+        $html .="function uncheck()
+    {
+         if($('.checkbox1:checked').length == $('.checkbox1').length){
+            $('#select_all').prop('checked',true);
+        }else{
+            $('#select_all').prop('checked',false);
+        }
+    }";
+        $html .='</script>';
         echo $html;
     }
 
