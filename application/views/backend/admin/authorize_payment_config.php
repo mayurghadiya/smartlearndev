@@ -48,14 +48,14 @@
                                               ?>
                                         <input type="hidden" name="config_id" value="<?php if (isset($config)) echo $config->id; ?>" />
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">Login ID</label>
+                                            <label class="col-md-2 control-label">Login ID<span style="color:red">*</span></label>
                                             <div class="col-md-5">
                                                 <input type="text" id="login_id" class="form-control" name="login_id"
                                                        value="<?php if (isset($config)) echo $config->login_id; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label" for="example-email">Trasaction Key</label>
+                                            <label class="col-md-2 control-label" for="example-email">Trasaction Key<span style="color:red">*</span></label>
                                             <div class="col-md-5">
                                                 <input type="text" id="transaction_key" name="transaction_key" class="form-control"
                                                        value="<?php if (isset($config)) echo $config->transaction_key; ?>">
@@ -63,7 +63,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label" for="example-email">Success Url</label>
+                                            <label class="col-md-2 control-label" for="example-email">Success Url<span style="color:red">*</span></label>
                                             <div class="col-md-5">
                                                 <input type="text" id="success_url" name="success_url" class="form-control"
                                                        value="<?php if (isset($config)) echo $config->success_url; ?>">
@@ -71,7 +71,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label" for="example-email">Failure Url</label>
+                                            <label class="col-md-2 control-label" for="example-email">Failure Url<span style="color:red">*</span></label>
                                             <div class="col-md-5">
                                                 <input type="text" id="failure_url" name="failure_url" class="form-control"
                                                        value="<?php if (isset($config)) echo $config->failure_url; ?>">
@@ -79,7 +79,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label" for="example-email">Cancel Url</label>
+                                            <label class="col-md-2 control-label" for="example-email">Cancel Url<span style="color:red">*</span></label>
                                             <div class="col-md-5">
                                                 <input type="text" id="cancel_url" name="cancel_url" class="form-control"
                                                        value="<?php if (isset($config)) echo $config->cancel_url; ?>">

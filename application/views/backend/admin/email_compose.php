@@ -424,3 +424,21 @@
     $(".student-multiple").select2();
     $('.student-multiple').css('width', '100%');
 </script>
+
+<script>
+$(document).ready(function(){
+    $('#student').on('change',function(){
+        var student_id = $(this).val();
+        if(student_id == 'all') {
+            $(this).empty();
+            $(this).append('<option value="all" selected>All Student</option>');
+        }else {
+            var degree_id = $('#degree').val();
+            var course = $('#course').val();
+            var batch = $('#batch').val();
+            var semester = $('#semester').val();
+            course_semester_student(course, semester);
+        }
+    })
+})
+</script>

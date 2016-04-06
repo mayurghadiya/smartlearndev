@@ -29,7 +29,7 @@ $semester = $this->db->get('semester')->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Edit Exam Time Table
+                    Edit Exam Schedule
                 </div>
             </div>
             <div class="panel-body">
@@ -37,7 +37,7 @@ $semester = $this->db->get('semester')->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/update/' . $edit_data->exam_time_table_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-time-table', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course</label>
+                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="degree" id="edit_degree" class="form-control" required="">
                                     <option value="">Select</option>
@@ -49,7 +49,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                  
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch</label>
+                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="course" id="edit_course" class="form-control" required="">
                                     <option value="">Select</option>
@@ -61,7 +61,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch</label>
+                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="batch" id="edit_batch" class="form-control" required="">
                                     <option value="">Select</option>
@@ -73,7 +73,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester</label>
+                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_semester" name="semester" required="">
                                     <option value="">Select</option>
@@ -85,7 +85,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam</label>
+                            <label class="col-sm-3 control-label">Exam<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_exam" name="exam" required="">
                                     <option value="">Select</option>
@@ -93,7 +93,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Subject</label>
+                            <label class="col-sm-3 control-label">Subject<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_subject" name="subject" required="">
                                     <option value="">Select</option>
@@ -101,21 +101,21 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div> 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Date</label>
+                            <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" required=""  name="exam_date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Start Time</label>
+                            <label class="col-sm-3 control-label">Start Time<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="time" id="start_time" class="form-control" name="start_time"
                                        value="<?php echo $edit_data->exam_start_time; ?>" required=""/>
                             </div>	
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">End Time</label>
+                            <label class="col-sm-3 control-label">End Time<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="time" id="end_time" class="form-control" name="end_time"
                                        value="<?php echo $edit_data->exam_end_time ?>" required=""/>

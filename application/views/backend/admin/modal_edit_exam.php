@@ -34,14 +34,14 @@ $centerlist = $this->db->get('center_user')->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/exam/do_update/' . $edit_data->em_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-form', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam Name</label>
+                            <label class="col-sm-3 control-label">Exam Name<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" name="exam_name" id="exam_name"
                                        value="<?php echo $edit_data->em_name; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam Type</label>
+                            <label class="col-sm-3 control-label">Exam Type<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" name="exam_type" id="exam_type" required="">
                                     <option value="">Select</option>
@@ -53,13 +53,13 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Total Marks</label>
+                            <label class="col-sm-3 control-label">Total Marks<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" required="" name="total_marks" id="edit_total_marks" value="<?php echo $edit_data->total_marks; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Passing Marks</label>
+                            <label class="col-sm-3 control-label">Passing Marks<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" required="" name="passing_marks" id="edit_passing_marks" value="<?php echo $edit_data->passing_mark; ?>"/>
                             </div>
@@ -77,7 +77,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course</label>
+                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="degree" id="edit_degree">
                                     <option>Select</option>
@@ -89,7 +89,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch</label>
+                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="course" id="edit_course">
                                     <option value="">Select</option>
@@ -101,7 +101,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch</label>
+                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="batch" id="edit_batch">
                                     <option value="">Select</option>
@@ -114,7 +114,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester</label>
+                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="semester" id="edit_semester">
                                     <option value="">Select</option>
@@ -127,7 +127,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>
                         
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Status</label>
+                            <label class="col-sm-3 control-label">Status<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="status" id="status">
                                     <option value="">Select</option>
@@ -139,21 +139,21 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Date</label>
+                            <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" required="" id="datepicker-date123" name="date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Start Date/Time</label>
+                            <label class="col-sm-3 control-label">Start Date/Time<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="datetime-local" name="start_date_time" id="start_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_start_time; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">End Date/Time</label>
+                            <label class="col-sm-3 control-label">End Date/Time<span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="datetime-local" required="" name="end_date_time" id="end_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_end_time; ?>"/>
