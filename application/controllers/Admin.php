@@ -943,6 +943,7 @@ class Admin extends CI_Controller {
             $data['std_degree'] = $this->input->post('degree');
             $data['created_date'] = date('Y-m-d');
             $data['password_status'] = 0;
+            $data['user_type']=1;
             //roll no
             $this->db->insert('student', $data);
             $lastid = $this->db->insert_id();

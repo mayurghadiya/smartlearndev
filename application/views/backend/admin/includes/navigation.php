@@ -16,7 +16,7 @@
                         <span class="menu-badge"></span>
                     </a> 
                 </li>
-                <li style="display:none;">
+                <li >
                     <a href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
                         <span class="menu-text">User Management</span>  
@@ -34,7 +34,7 @@
                                     <span class="menu-text">List Groups</span>  
                                 </a>
                             </li>
-                            <li>
+                          <!--  <li>
                                 <a href="<?php echo base_url(); ?>index.php?admin/assign_module">
                                     <span class="menu-text">Assign Module</span>  
                                 </a>
@@ -43,10 +43,11 @@
                                 <a href="<?php echo base_url(); ?>index.php?admin/list_module">
                                     <span class="menu-text">List Module</span>  
                                 </a>
-                            </li>			
+                            </li>-->			
                         </ul>   
                     </div>
                 </li> 
+                
                 <li>
                     <a href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
