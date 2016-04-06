@@ -2036,7 +2036,7 @@ class Admin extends CI_Controller {
                 if (count($is_record_present)) {
                     $this->session->set_flashdata('flash_message', 'Data is already present.');
                 } else {
-                    $centerimplode = implode(',', $this->input->post('center'));
+                   
                     // check for validation
                     if ($this->form_validation->run('exam_insert_update') != FALSE) {
                         $data = array(
@@ -2049,7 +2049,7 @@ class Admin extends CI_Controller {
                             'course_id' => $this->input->post('course', TRUE),
                             'batch_id' => $this->input->post('batch', TRUE),
                             'em_semester' => $this->input->post('semester', TRUE),
-                            'center_id' => $centerimplode,
+                           
                             'em_status' => $this->input->post('status', TRUE),
                             'em_date' => $this->input->post('date', TRUE),
                             'em_start_time' => $this->input->post('start_date_time', TRUE),
@@ -2064,7 +2064,7 @@ class Admin extends CI_Controller {
                     }
                 }
             } elseif ($param1 == 'do_update') {
-                $centerimplode = implode(',', $this->input->post('center'));
+               
                 //do validation
                 if ($this->form_validation->run('exam_insert_update') != FALSE) {
                     $data = array(
@@ -2075,7 +2075,7 @@ class Admin extends CI_Controller {
                         'degree_id' => $this->input->post('degree', TRUE),
                         'course_id' => $this->input->post('course', TRUE),
                         'batch_id' => $this->input->post('batch', TRUE),
-                        'center_id' => $centerimplode,
+                       
                         'em_semester' => $this->input->post('semester', TRUE),
                         'em_status' => $this->input->post('status', TRUE),
                         'em_date' => $this->input->post('date', TRUE),
