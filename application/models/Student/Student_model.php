@@ -335,7 +335,7 @@ class Student_model extends CI_Model {
                             'exam_manager.course_id' => $course,
                             'exam_manager.em_semester' => $semeseter
                         ))
-                        ->order_by('exam_manager.created_date', 'DESC')
+                        ->order_by('exam_manager.em_start_time', 'DESC')
                         ->get()
                         ->result();
     }
