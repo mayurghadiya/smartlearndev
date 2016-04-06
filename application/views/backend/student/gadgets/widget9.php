@@ -12,7 +12,34 @@
                                       foreach ($library as $lbr):
                                               ?>
                                               
-                                              <li><a href="<?php echo $lbr['lm_url'];  ?>" download=""><?php echo $lbr['lm_title']; ?></a></li>
+                                              <li><a href="<?php echo $lbr['lm_url'];  ?>" download=""><?php echo $lbr['lm_title']; ?></a>
+                                              
+                                              <?php
+                                                $std_id = $this->session->userdata('std_id');
+                                                $study_id = $lbr['lm_id'];
+                                               $noti = $this->db->query("SELECT * FROM notification WHERE notification_type_id='4' AND FIND_IN_SET('".$std_id."',student_ids) AND data_id='".$study_id."'")->result_array();
+                                                                                             
+                                               
+                                               if(!empty($noti))
+                                               {
+                                               $student_ids  = $noti[0]['student_ids'];
+                                               
+                                               }else{
+                                               $student_ids = '';
+                                               }
+                                                if(isset($this->session->userdata('notifications')['library_manager'])){ ?>
+                                                <?php 
+                                                if($student_ids!='')
+                                                {
+                                                    $student_ids = explode(",",$student_ids);
+                                                  //  print_r($student_ids);
+                                                if(in_array($std_id,$student_ids)){ ?>
+                                                <img style="margin-top: 5px;" src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
+                                                <?php } 
+                                                }?>
+                                                <?php } 
+                                                ?>
+                                              </li>
                                               <?php endforeach; ?>
 						
 					</div>
