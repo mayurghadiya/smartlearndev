@@ -59,12 +59,12 @@
                 
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" style="text-align:center;">Are you sure to delete this information ?</h4>
+                    <h4 class="modal-title" style="text-align:center;">Are you sure to remove this information ?</h4>
                 </div>
                 
                 
                 <div class="modal-footer" style="margin:0px; border-top:0px; text-align:center;">
-                    <a href="#" class="btn btn-danger" id="delete_link"><?php echo get_phrase('delete');?></a>
+                    <a href="#" class="btn btn-danger" id="delete_link"><?php echo get_phrase('remove');?></a>
                     <button type="button" class="btn btn-info" data-dismiss="modal"><?php echo get_phrase('cancel');?></button>
                 </div>
             </div>
