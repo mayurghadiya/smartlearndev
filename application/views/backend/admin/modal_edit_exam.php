@@ -125,36 +125,7 @@ $centerlist = $this->db->get('center_user')->result();
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Center</label>
-                            <div class="col-sm-5">
-                                <?php
-                                $centerexplode = explode(',', $edit_data->center_id);
-
-                                foreach ($centerlist as $row1) {
-                                    if (in_array($row1->center_id, $centerexplode)) {
-                                        in_array($row1->center_id, $centerexplode);
-                                    }
-                                }
-                                ?>
-                                <select class="form-control" name="center[]" id="center" multiple>
-                                    <option value="">Select</option>
-                                    <?php
-                                    foreach ($centerlist as $row) {
-                                        if (in_array($row->center_id, $centerexplode)) {
-                                            ?>
-                                            <option value="<?php echo $row->center_id; ?>" selected><?php echo $row->center_name; ?></option>
-                                            <?php
-                                        } else {
-                                            ?>
-                                            <option value="<?php echo $row->center_id; ?>"><?php echo $row->center_name; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
+                        
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Status<span style="color:red">*</span></label>
                             <div class="col-sm-7">

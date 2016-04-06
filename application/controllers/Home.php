@@ -34,9 +34,9 @@ class Home extends CI_Controller {
         if ($this->session->userdata('subadmin_login') == 1) {
             redirect(base_url() . 'index.php?sub_admin/dashboard', 'refresh');
         }
-        if ($this->session->userdata('centeruser_login') == 1) {
-            redirect(base_url() . 'index.php?center_user/dashboard', 'refresh');
-        }
+//        if ($this->session->userdata('centeruser_login') == 1) {
+//            redirect(base_url() . 'index.php?center_user/dashboard', 'refresh');
+//        }
         $this->load->view('backend/front');
     }
 
