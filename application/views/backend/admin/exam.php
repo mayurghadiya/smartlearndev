@@ -105,14 +105,14 @@ if ($validation_error != '') {
                                             </script>
 <?php } ?>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Exam Name</label>
+                                            <label class="col-sm-3 control-label">Exam Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="exam_name" id="exam_name"
                                                        value="<?php echo set_value('exam_name'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Exam Type</label>
+                                            <label class="col-sm-3 control-label">Exam Type<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="exam_type" id="exam_type">
 <?php
@@ -127,14 +127,14 @@ $exam_type_id = set_value('exam_type');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Total Marks</label>
+                                            <label class="col-sm-3 control-label">Total Marks<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="total_marks" id="total_marks"
                                                        value="<?php echo set_value('total_marks'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Passing Marks</label>
+                                            <label class="col-sm-3 control-label">Passing Marks<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="passing_marks" id="passing_marks"
                                                        value="<?php echo set_value('total_marks'); ?>"/>
@@ -155,7 +155,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="degree" id="degree">
                                                     <option value="">Select</option>
@@ -166,7 +166,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Branch</label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="course" id="course">
 
@@ -174,7 +174,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="batch" id="batch">
 
@@ -182,7 +182,7 @@ $year = set_value('year');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester</label>
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="semester" id="semester">
 <?php
@@ -198,7 +198,7 @@ $semester_select_id = set_value('semester');
                                         </div>
                                        
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
+                                            <label class="col-sm-3 control-label">Status<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="status" id="status">
 <?php
@@ -211,21 +211,21 @@ $status_select_id = set_value('status');
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date</label>
+                                            <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" name="date" id="date" class="form-control datepicker-normal"
                                                        value="<?php echo set_value('date'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Start Date/Time</label>
+                                            <label class="col-sm-3 control-label">Start Date/Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="datetime-local" name="start_date_time" id="start_date_time" class="form-control"
                                                        value="<?php echo set_value('start_date_time'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">End Date/Time</label>
+                                            <label class="col-sm-3 control-label">End Date/Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="datetime-local" name="end_date_time" id="end_date_time" class="form-control"
                                                        value="<?php echo set_value('end_date_time'); ?>"/>
