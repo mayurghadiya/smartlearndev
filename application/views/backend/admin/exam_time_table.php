@@ -252,7 +252,8 @@
             $(".datepicker-normal").datepicker({
                 dateFormat: 'dd M yy',
                 changeMonth: true,
-                changeYear: true
+                changeYear: true,
+                minDate: new Date()
 
             });
         });

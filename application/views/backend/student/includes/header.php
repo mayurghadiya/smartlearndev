@@ -113,11 +113,12 @@
                                                                                 </li>
                                                                             <?php } ?>
 
-                                                                            <?php if (isset($this->session->userdata('notifications')['exam_manager'])) { ?>
+                                                                            <?php if (isset($this->session->userdata('notifications')['exam_manager']) ||
+                                                                                    isset($this->session->userdata('notifications')['exam_time_table'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/exam_listing'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                        <div class="menu-text"> New exam was added.
+                                                                                        <div class="menu-text"> New exam or exam schedule was added.
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
@@ -139,7 +140,7 @@
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
-                                                                            <?php } ?>
+                                                                            <?php } ?>                                                                                
 
                                                                         </ul>
                                                                     </div>
