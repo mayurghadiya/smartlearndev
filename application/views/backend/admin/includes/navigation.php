@@ -207,17 +207,12 @@
                             </li>              
                             <li>
                                 <a href="<?php echo base_url(); ?>index.php?admin/exam_time_table">
-                                    <span class="menu-text">Exam Time Table</span>  
+                                    <span class="menu-text">Exam Schedule</span>  
                                 </a>
                             </li>   
                             <li>
                                 <a href="<?php echo base_url('index.php?admin/marks'); ?>">
                                     <span class="menu-text">Marks</span>  
-                                </a>
-                            </li> 
-                            <li>
-                                <a href="<?php echo base_url(); ?>index.php?admin/exam_result">
-                                    <span class="menu-text">Results</span>  
                                 </a>
                             </li> 	
                         </ul>   

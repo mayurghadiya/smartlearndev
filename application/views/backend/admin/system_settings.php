@@ -53,31 +53,31 @@
                                         </div>
                                         <div class="panel-body">                    
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">System Name</label>
+                                                <label  class="col-sm-3 control-label">System Name<span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="system_name" id="system_name" value="<?php echo $this->db->get_where('system_setting', array('type' => 'system_name'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">phone</label>
+                                                <label  class="col-sm-3 control-label">Phone<span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="phone" id="system_phone" value="<?php echo $this->db->get_where('system_setting', array('type' => 'phone'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">Paypal Email</label>
+                                                <label  class="col-sm-3 control-label">Paypal Email<span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="paypal_email" id="paypal_email" value="<?php echo $this->db->get_where('system_setting', array('type' => 'paypal_email'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">Currency</label>
+                                                <label  class="col-sm-3 control-label">Currency<span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="currency" id="currency" value="<?php echo $this->db->get_where('system_setting', array('type' => 'currency'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">System Email</label>
+                                                <label  class="col-sm-3 control-label">System Email<span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="system_email" id="system_email" value="<?php echo $this->db->get_where('system_setting', array('type' => 'system_email'))->row()->description; ?>">
                                                 </div>

@@ -64,7 +64,7 @@
                                         <section class="experiment">
                                             <div class="form-horizontal">                                                
                                                 <div class="form-group" id="private-broadcast-degree">
-                                                    <label class="col-sm-3 control-label">Course*</label>
+                                                    <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <select id="degree" class="form-control" name="private-broadcast-degree">
                                                             <option value="">Select</option>
@@ -76,7 +76,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-course">
-                                                    <label class="col-sm-3 control-label">Branch*</label>
+                                                    <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <select id="course" class="form-control" name="private-broadcast-course">
                                                             <option value="">Select</option>
@@ -85,7 +85,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-batch">
-                                                    <label class="col-sm-3 control-label">Batch*</label>
+                                                    <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <select id="batch" class="form-control" name="private-broadcast-batch">
                                                             <option value="">Select</option>
@@ -94,7 +94,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group" id="private-broadcast-semester">
-                                                    <label class="col-sm-3 control-label">Semester*</label>
+                                                    <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <select id="semester" class="form-control" name="private-broadcast-course">
                                                             <option value="">Select</option>
@@ -108,7 +108,7 @@
                                                 </div>
                                                 
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Live Broadcast*</label>
+                                                    <label class="col-sm-3 control-label">Live Broadcast<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <input id="broadcast-name" type="text" class="form-control" placeholder="live streaming for all batch and course" name="title"/>
                                                         <label style="display:none; color: red" id="name_error"></label>

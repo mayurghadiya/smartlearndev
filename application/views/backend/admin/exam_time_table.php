@@ -110,7 +110,7 @@
                                             </div>                                            
                                         <?php } ?>
 										<div class="form-group">
-                                            <label class="col-sm-3 control-label">Course</label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -121,7 +121,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Branch</label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course" class="form-control">
 
@@ -129,7 +129,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="batch" id="batch">
 
@@ -137,7 +137,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester</label>
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="semester" name="semester">
                                                     <option value="">Select</option>
@@ -148,7 +148,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Exam</label>
+                                            <label class="col-sm-3 control-label">Exam<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="exam" name="exam">
 
@@ -156,7 +156,7 @@
                                             </div>
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Subject</label>
+                                            <label class="col-sm-3 control-label">Subject<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="subject" name="subject">
 
@@ -164,26 +164,26 @@
                                             </div>
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date</label>
+                                            <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" id="exam_date" class="form-control datepicker-normal" name="exam_date"/>
                                             </div>	
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Start Time</label>
+                                            <label class="col-sm-3 control-label">Start Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="time" id="start_time" class="form-control timepicker" name="start_time"/>
                                             </div>	
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">End Time</label>
+                                            <label class="col-sm-3 control-label">End Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="time" id="end_time" class="form-control timepicker" name="end_time"/>
                                             </div>	
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Time Table</button>
+                                                <button type="submit" class="btn btn-info">Add Exam Schedule</button>
                                             </div>
                                         </div>
                                         </form>               

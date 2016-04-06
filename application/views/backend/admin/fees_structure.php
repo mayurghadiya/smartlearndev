@@ -82,13 +82,13 @@
                                         <br/>
                                         <div class="padded">
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Title</label>
+                                                <label class="col-sm-3 control-label">Title<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="title" name="title" class="form-control"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course</label>
+                                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="degree" name="degree">
                                                         <option value="">Select</option>
@@ -99,7 +99,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Branch</label>
+                                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="course" name="course">
 
@@ -107,7 +107,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Batch</label>
+                                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="batch" name="batch">
 
@@ -115,7 +115,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Semester</label>
+                                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="semester" name="semester">
                                                         <option value="">Select</option>
@@ -126,31 +126,31 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Fee</label>
+                                                <label class="col-sm-3 control-label">Fee<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="fees" class="form-control" name="fees"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Start Date</label>
+                                                <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="start_date" class="form-control datepicker" name="start_date"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">End Date</label>
+                                                <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="end_date" class="form-control datepicker" name="end_date"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Expiry Date</label>
+                                                <label class="col-sm-3 control-label">Expiry Date<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="expiry_date" class="form-control datepicker" name="expiry_date"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Penalty</label>
+                                                <label class="col-sm-3 control-label">Penalty<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="penalty" class="form-control" name="penalty"/>
                                                 </div>
