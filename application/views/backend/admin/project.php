@@ -250,7 +250,7 @@ foreach ($datadegree as $rowdegree) {
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                 <input type="checkbox" name="checkall" id="checkAll"  >Check All<br>
+                                                 <input type="checkbox" name="checkall" id="select_all"  >Check All<br>
                                                 <div id="student"></div>
                                                 <!--<select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
@@ -294,7 +294,7 @@ foreach ($datadegree as $rowdegree) {
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Course</label>
                                                 <select id="sub_courses" name="degree" class="form-control">
-                                                    <option value="">Select</option>
+                                                     <option value="">Select Course</option>
                                                     <?php foreach ($degree as $row) { ?>
                                                         <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                     <?php } ?>
@@ -303,19 +303,21 @@ foreach ($datadegree as $rowdegree) {
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="sub_branches" name="course" class="form-control">
+                                                    <option value="">Select Branch</option>
 
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Batch</label>
                                                 <select id="sub_batches" name="batch" class="form-control">
+                                                    <option value="">Select Batch</option>
 
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Select Semester</label>
                                                 <select id="sub_semesters" name="semester" class="form-control">
-                                                    <option value="">Select</option>
+                                                    <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
                                                         <option value="<?php echo $row->s_id; ?>"
                                                                ><?php echo $row->s_name; ?></option>
@@ -332,7 +334,7 @@ foreach ($datadegree as $rowdegree) {
                                     </form>
                                  </div>
                                 <div class="panel-body table-responsive" id="getsubmit">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="data-tabless">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>												
@@ -631,4 +633,22 @@ foreach ($datadegree as $rowdegree) {
             }
         });
     });
+    </script>
+        </script>
+ <script type="text/javascript">
+    $(document).ready(function(){
+    $('#select_all').on('click',function(){
+        if(this.checked){
+            $('.checkbox1').each(function(){
+                this.checked = true;
+            });
+        }else{
+             $('.checkbox1').each(function(){
+                this.checked = false;
+            });
+        }
+    });
+    
+});
+    
     </script>

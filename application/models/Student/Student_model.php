@@ -6,9 +6,9 @@ if (!defined('BASEPATH'))
 class Student_model extends CI_Model {
 
     function __construct() {
-       parent::__construct();
-		$this->load->database();
-		$this->load->library('session');
+        parent::__construct();
+        $this->load->database();
+        $this->load->library('session');
     }
 
     function clear_cache() {
@@ -208,69 +208,64 @@ class Student_model extends CI_Model {
     }
 
     ////////STUDY MATERIAL//////////
-    function save_study_material_info()
-    {
-        $data['timestamp']   = strtotime($this->input->post('timestamp'));
-        $data['title'] 		 = $this->input->post('title');
+    function save_study_material_info() {
+        $data['timestamp'] = strtotime($this->input->post('timestamp'));
+        $data['title'] = $this->input->post('title');
         $data['description'] = $this->input->post('description');
-        $data['file_name'] 	 = $_FILES["file_name"]["name"];
-        $data['file_type'] 	 = $this->input->post('file_type');
-        $data['class_id'] 	 = $this->input->post('class_id');
-        
-        $this->db->insert('document',$data);
-        
-        $document_id            = $this->db->insert_id();
+        $data['file_name'] = $_FILES["file_name"]["name"];
+        $data['file_type'] = $this->input->post('file_type');
+        $data['class_id'] = $this->input->post('class_id');
+
+        $this->db->insert('document', $data);
+
+        $document_id = $this->db->insert_id();
         move_uploaded_file($_FILES["file_name"]["tmp_name"], "uploads/document/" . $_FILES["file_name"]["name"]);
     }
-    
-    function select_study_material_info()
-    {
+
+    function select_study_material_info() {
         $this->db->order_by("timestamp", "desc");
-        return $this->db->get('document')->result_array(); 
+        return $this->db->get('document')->result_array();
     }
-    
-    function select_study_material_info_for_student()
-    {
+
+    function select_study_material_info_for_student() {
         $student_id = $this->session->userdata('student_id');
-        $class_id   = $this->db->get_where('student', array('student_id' => $student_id))->row()->class_id;
+        $class_id = $this->db->get_where('student', array('student_id' => $student_id))->row()->class_id;
         $this->db->order_by("timestamp", "desc");
         return $this->db->get_where('document', array('class_id' => $class_id))->result_array();
     }
-    
-    function update_study_material_info($document_id)
-    {
-        $data['timestamp']      = strtotime($this->input->post('timestamp'));
-        $data['title'] 		= $this->input->post('title');
-        $data['description']    = $this->input->post('description');
-        $data['class_id'] 	= $this->input->post('class_id');
-        
-        $this->db->where('document_id',$document_id);
-        $this->db->update('document',$data);
+
+    function update_study_material_info($document_id) {
+        $data['timestamp'] = strtotime($this->input->post('timestamp'));
+        $data['title'] = $this->input->post('title');
+        $data['description'] = $this->input->post('description');
+        $data['class_id'] = $this->input->post('class_id');
+
+        $this->db->where('document_id', $document_id);
+        $this->db->update('document', $data);
     }
-    
-    function delete_study_material_info($document_id)
-    {
-        $this->db->where('document_id',$document_id);
+
+    function delete_study_material_info($document_id) {
+        $this->db->where('document_id', $document_id);
         $this->db->delete('document');
     }
-    
+
     ////////private message//////
     function send_new_private_message() {
-        $message    = $this->input->post('message');
-        $timestamp  = strtotime(date("Y-m-d H:i:s"));
+        $message = $this->input->post('message');
+        $timestamp = strtotime(date("Y-m-d H:i:s"));
 
-        $reciever   = $this->input->post('reciever');
-        $sender     = $this->session->userdata('login_type') . '-' . $this->session->userdata('login_user_id');
+        $reciever = $this->input->post('reciever');
+        $sender = $this->session->userdata('login_type') . '-' . $this->session->userdata('login_user_id');
 
         //check if the thread between those 2 users exists, if not create new thread
         $num1 = $this->db->get_where('message_thread', array('sender' => $sender, 'reciever' => $reciever))->num_rows();
         $num2 = $this->db->get_where('message_thread', array('sender' => $reciever, 'reciever' => $sender))->num_rows();
 
         if ($num1 == 0 && $num2 == 0) {
-            $message_thread_code                        = substr(md5(rand(100000000, 20000000000)), 0, 15);
+            $message_thread_code = substr(md5(rand(100000000, 20000000000)), 0, 15);
             $data_message_thread['message_thread_code'] = $message_thread_code;
-            $data_message_thread['sender']              = $sender;
-            $data_message_thread['reciever']            = $reciever;
+            $data_message_thread['sender'] = $sender;
+            $data_message_thread['reciever'] = $reciever;
             $this->db->insert('message_thread', $data_message_thread);
         }
         if ($num1 > 0)
@@ -279,10 +274,10 @@ class Student_model extends CI_Model {
             $message_thread_code = $this->db->get_where('message_thread', array('sender' => $reciever, 'reciever' => $sender))->row()->message_thread_code;
 
 
-        $data_message['message_thread_code']    = $message_thread_code;
-        $data_message['message']                = $message;
-        $data_message['sender']                 = $sender;
-        $data_message['timestamp']              = $timestamp;
+        $data_message['message_thread_code'] = $message_thread_code;
+        $data_message['message'] = $message;
+        $data_message['sender'] = $sender;
+        $data_message['timestamp'] = $timestamp;
         $this->db->insert('message', $data_message);
 
         // notify email to email reciever
@@ -292,15 +287,15 @@ class Student_model extends CI_Model {
     }
 
     function send_reply_message($message_thread_code) {
-        $message    = $this->input->post('message');
-        $timestamp  = strtotime(date("Y-m-d H:i:s"));
-        $sender     = $this->session->userdata('login_type') . '-' . $this->session->userdata('login_user_id');
+        $message = $this->input->post('message');
+        $timestamp = strtotime(date("Y-m-d H:i:s"));
+        $sender = $this->session->userdata('login_type') . '-' . $this->session->userdata('login_user_id');
 
 
-        $data_message['message_thread_code']    = $message_thread_code;
-        $data_message['message']                = $message;
-        $data_message['sender']                 = $sender;
-        $data_message['timestamp']              = $timestamp;
+        $data_message['message_thread_code'] = $message_thread_code;
+        $data_message['message'] = $message;
+        $data_message['sender'] = $sender;
+        $data_message['timestamp'] = $timestamp;
         $this->db->insert('message', $data_message);
 
         // notify email to email reciever
@@ -314,8 +309,7 @@ class Student_model extends CI_Model {
         $this->db->where('message_thread_code', $message_thread_code);
         $this->db->update('message', array('read_status' => 1));
     }
-	
-	
+
     function count_unread_message_of_thread($message_thread_code) {
         $unread_message_counter = 0;
         $current_user = $this->session->userdata('login_type') . '-' . $this->session->userdata('login_user_id');
@@ -326,8 +320,8 @@ class Student_model extends CI_Model {
         }
         return $unread_message_counter;
     }
-	
-	/**
+
+    /**
      * Student exam list
      * @param string $course
      * @param string $semeseter
@@ -341,7 +335,7 @@ class Student_model extends CI_Model {
                             'exam_manager.course_id' => $course,
                             'exam_manager.em_semester' => $semeseter
                         ))
-                        ->order_by('exam_manager.created_date', 'DESC')
+                        ->order_by('exam_manager.em_start_time', 'DESC')
                         ->get()
                         ->result();
     }
@@ -419,7 +413,8 @@ class Student_model extends CI_Model {
                         ->from('fees_structure')
                         ->where(array(
                             'course_id' => $course_id,
-                            'sem_id' => $semester
+                            'sem_id' => $semester,
+                            'fee_expiry_date >= ' => date('d M Y')
                         ))
                         ->get()
                         ->result();
@@ -552,4 +547,5 @@ class Student_model extends CI_Model {
                         ->get()
                         ->row();
     }
+
 }

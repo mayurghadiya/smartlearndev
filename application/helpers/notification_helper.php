@@ -167,7 +167,7 @@ if (!function_exists('create_notification')) {
      * @param string $semester
      * @param int $data_id
      */
-    function create_notification($notification_type, $degree, $course, $batch, $semester, $data_id) {
+    function create_notification($notification_type, $degree, $course, $batch, $semester, $data_id, $student_id = '') {
         $CI = & get_instance();
 
         $students = $CI->db->select()
@@ -183,22 +183,35 @@ if (!function_exists('create_notification')) {
                     'notification_type' => $notification_type
                 ))->row();
 
-        $student_ids = '';
-        foreach ($students as $row) {
-            $student_ids .= $row->std_id . ',';
-        }
-        $student_ids = rtrim($student_ids, ',');
+        if ($notification_type == 'marks_manager') {
+            //insert into db
+            $CI->db->insert('notification', array(
+                'notification_type_id' => $notification_type->notification_type_id,
+                'student_ids' => $student_id,
+                'degree_id' => $degree,
+                'course_id' => $course,
+                'batch_id' => $batch,
+                'semester_id' => $semester,
+                'data_id' => $data_id
+            ));
+        } else {
+            $student_ids = '';
+            foreach ($students as $row) {
+                $student_ids .= $row->std_id . ',';
+            }
+            $student_ids = rtrim($student_ids, ',');
 
-        //insert into db
-        $CI->db->insert('notification', array(
-            'notification_type_id' => $notification_type->notification_type_id,
-            'student_ids' => $student_ids,
-            'degree_id' => $degree,
-            'course_id' => $course,
-            'batch_id' => $batch,
-            'semester_id' => $semester,
-            'data_id' => $data_id
-        ));
+            //insert into db
+            $CI->db->insert('notification', array(
+                'notification_type_id' => $notification_type->notification_type_id,
+                'student_ids' => $student_ids,
+                'degree_id' => $degree,
+                'course_id' => $course,
+                'batch_id' => $batch,
+                'semester_id' => $semester,
+                'data_id' => $data_id
+            ));
+        }
     }
 
 }
@@ -222,7 +235,7 @@ if (!function_exists('show_notification')) {
             $sql .= "WHERE notification_type_id = $notification_id ";
             $sql .= "AND FIND_IN_SET($student_id, student_ids) ";
             $result = $CI->db->query($sql)->num_rows();
-            if ($result) {                
+            if ($result) {
                 $notifications[$type->notification_type] = $result;
                 $total_notification++;
             }

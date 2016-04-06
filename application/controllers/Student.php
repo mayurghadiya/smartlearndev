@@ -490,6 +490,8 @@ class Student extends CI_Controller {
         $page_data['student_marks'] = $this->Student_model->student_marks($student_details->std_id, $exam_id);
         $page_data['exam_listing'] = $this->Student_model->
                 student_exam_list($student_details->course_id, $student_details->semester_id);
+        clear_notification('marks_manager', $this->session->userdata('student_id'));
+        unset($this->session->userdata('notifications')['marks_manaher']);
         $this->load->view('backend/index', $page_data);
     }
 
@@ -1609,6 +1611,8 @@ class Student extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('participation_successfully'));
             redirect(base_url() . 'index.php?student/dashboard', 'refresh');
         }
+         clear_notification('participate_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['participate_manager']);
         $page_data['page_name'] = 'participate_form';
         $page_data['page_title'] = 'Participate Form';
         $this->load->view('backend/index', $page_data);
@@ -1675,6 +1679,19 @@ class Student extends CI_Controller {
         $page_data['page_name'] = 'fees_record';
         $page_data['page_title'] = 'Student Fees Record';
         $this->load->view('backend/index', $page_data);
+    }
+    function studyresources()
+    { 
+        clear_notification('study_resources', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['study_resources']);
+        redirect(base_url() . 'index.php?student/dashboard/', 'refresh');
+    }
+    function digitallibrary()
+    {
+        
+      clear_notification('library_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['library_manager']);
+        redirect(base_url() . 'index.php?student/dashboard/', 'refresh');  
     }
 
 }

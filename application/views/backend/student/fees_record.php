@@ -2,7 +2,7 @@
     <div class="vd_head-section clearfix"></div>
     <div class="vd_title-section clearfix">
         <div class="vd_panel-header">
-            <h1>Student Fees Record</h1>
+            <h1>Student Payment Records</h1>
         </div>
     </div>
     <div class="row">
@@ -14,7 +14,7 @@
                     <ul class="nav nav-tabs bordered">
                         <li class="active">
                             <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                Fees Record
+                                Student Payment Records
                             </a></li>
                     </ul>
                     <!------CONTROL TABS END------>

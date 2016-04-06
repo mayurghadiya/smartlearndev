@@ -211,23 +211,23 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" name="date" id="date" class="form-control datepicker-normal"
                                                        value="<?php echo set_value('date'); ?>"/>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="display: none;">
                                             <label class="col-sm-3 control-label">Start Date/Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="datetime-local" name="start_date_time" id="start_date_time" class="form-control"
+                                                <input type="text" name="start_date_time" id="start_date_time" class="form-control"
                                                        value="<?php echo set_value('start_date_time'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">End Date/Time<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="datetime-local" name="end_date_time" id="end_date_time" class="form-control"
+                                                <input type="text" name="end_date_time" id="end_date_time" class="form-control"
                                                        value="<?php echo set_value('end_date_time'); ?>"/>
                                             </div>
                                         </div>
@@ -304,9 +304,21 @@
             $(".datepicker-normal").datepicker({
                 dateFormat: 'dd M yy',
                 changeMonth: true,
-                changeYear: true
-
+                changeYear: true,
+                minDate: new Date(),
+                onClose: function (selectedDate) {
+                    $("#end_date_time").datepicker("option", "minDate", selectedDate);
+                }
             });
+            $("#end_date_time").datepicker({
+                dateFormat: 'dd M yy',
+                changeMonth: true,
+                changeYear: true,
+                minDate: new Date(),
+                onClose: function (selectedDate) {
+                    $(".datepicker-normal").datepicker("option", "maxDate", selectedDate);
+                }
+            })
         });
 
     </script>
@@ -382,7 +394,15 @@
         $(document).ready(function () {
             "use strict";
             $('#exam-data-tables').dataTable({
-                "order": [[ 7, "desc" ]]
+                "order": [[7, "desc"]]
             });
         });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#date').on('change', function () {
+                $('#start_date_time').val($(this).val());
+            })
+        })
     </script>
