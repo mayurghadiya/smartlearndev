@@ -35,10 +35,10 @@ $semester = $this->db->get('semester')->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/cms_manager/update/' . $edit_data->am_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit_cms_page', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Degree</label>
+                            <label class="col-sm-2 control-label">Course<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select id="edit_degree" required="" name="degree" class="form-control">
-                                    <option value="">Select Degree</option>
+                                    <option value="">Select</option>
                                     <?php foreach ($degree as $d) { ?>
                                         <option value="<?php echo $d->d_id; ?>"
                                                 <?php if ($d->d_id == $edit_data->d_id) echo 'selected'; ?>><?php echo $d->d_name; ?></option>
@@ -48,7 +48,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Course</label>
+                            <label class="col-sm-2 control-label">Branch<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select id="edit_course" required="" name="course" class="form-control">
                                     <option value="">Select</option>
@@ -61,7 +61,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Batch</label>
+                            <label class="col-sm-2 control-label">Batch<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select name="batch" required="" id="edit_batch" class="form-control">
                                     <option value="">Select</option>
@@ -73,7 +73,7 @@ $semester = $this->db->get('semester')->result();
                             </div>	
                         </div>                 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Semester</label>
+                            <label class="col-sm-2 control-label">Semester<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select id="semester" required="" name="semester" class="form-control">
                                     <option value="">Select</option>
@@ -86,21 +86,21 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Title</label>
+                            <label class="col-sm-2 control-label">Page Title<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input id="page_title" required="" name="page_title" type="text" placeholder="Page Title" 
                                        value="<?php echo $edit_data->am_title; ?>">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Slug</label>
+                            <label class="col-sm-2 control-label">Page Slug<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input id="page_slug" required="" name="page_slug" type="text" placeholder="Page Slug"
                                        value="<?php echo $edit_data->am_url; ?>">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Content Type</label>
+                            <label class="col-sm-2 control-label">Content Type<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select class="form-control" required="" id="content_type" required="" name="content_type" id="content_type">
                                     <option value="">Select</option>
@@ -110,7 +110,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Content</label>
+                            <label class="col-sm-2 control-label">Page Content<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">												
                                 <div class="form-group">							
                                     <textarea id="edit_content_data" required="" name="content_data" rows="3" ><?php echo $edit_data->am_content; ?></textarea>
@@ -151,6 +151,7 @@ $semester = $this->db->get('semester')->result();
                         CKEDITOR.instances.content_data.updateElement();
                     }
                 },
+                degree: "required",
                 course: "required",
                 batch: "required",
                 //year: "required",
@@ -162,7 +163,8 @@ $semester = $this->db->get('semester')->result();
 
             },
             messages: {
-                course: "Please select course",
+                degree: "Please select course",
+                course: "Please select branch",
                 batch: "Please select batch",
                 //year: "Please select year",
                 page_title: "Please enter page title",

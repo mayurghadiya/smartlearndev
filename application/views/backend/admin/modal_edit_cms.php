@@ -18,13 +18,13 @@ foreach ($edit_data as $row) {
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/cms/do_update/' . $row['c_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editcmsform', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Title</label>
+                            <label class="col-sm-2 control-label">Page Title<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input type="text" class="form-control" name="c_title" value="<?php echo $row['c_title']; ?>" id="c_title" required />
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Slug</label>
+                            <label class="col-sm-2 control-label">Page Slug<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input type="text" class="form-control" required="" name="c_slug" value="<?php echo $row['c_slug']; ?>" id="c_slug"/>
                             </div>
@@ -47,7 +47,7 @@ foreach ($edit_data as $row) {
                             </div>
                         </div>	
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Content</label>
+                            <label class="col-sm-2 control-label">Page Content<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <textarea id="edit_content_data" required="" name="edit_content_data"  class="ckeditor" data-rel="ckeditor"  rows="3" ><?php echo $row['c_description']; ?></textarea>
                             </div>
