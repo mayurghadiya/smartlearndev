@@ -250,7 +250,7 @@ foreach ($datadegree as $rowdegree) {
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                 <input type="checkbox" name="checkall" id="checkAll"  >Check All<br>
+                                                 <input type="checkbox" name="checkall" id="select_all"  >Check All<br>
                                                 <div id="student"></div>
                                                 <!--<select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
@@ -631,4 +631,22 @@ foreach ($datadegree as $rowdegree) {
             }
         });
     });
+    </script>
+        </script>
+ <script type="text/javascript">
+    $(document).ready(function(){
+    $('#select_all').on('click',function(){
+        if(this.checked){
+            $('.checkbox1').each(function(){
+                this.checked = true;
+            });
+        }else{
+             $('.checkbox1').each(function(){
+                this.checked = false;
+            });
+        }
+    });
+    
+});
+    
     </script>
