@@ -25,6 +25,9 @@ class Student extends CI_Controller {
         $this->load->helper('smiley');
         if ($this->session->userdata('student_login') != 1)
             redirect(base_url() . 'index.php?login', 'refresh');
+        $this->load->helper('notification');
+        $notification = show_notification($this->session->userdata('student_id'));
+        $this->session->set_userdata('notifications', $notification);
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet** */
@@ -55,7 +58,7 @@ class Student extends CI_Controller {
             //echo $this->session->userdata('password_status');
            if($this->session->userdata('password_status') == 0)
            {
-               $page_data['page_name'] = 'change_password';
+               $page_data['page_name'] = 'changepassword';
          } 
          else {
                $page_data['page_name'] = 'dashboard';
@@ -260,7 +263,7 @@ class Student extends CI_Controller {
         $page_data['examlist'] = $this->db->get('exam_manager')->result();
         $page_data['center'] = $this->db->get('center_user')->result();
         $page_data['page_name'] = 'exam_center';
-        $page_data['page_title'] = 'Exam center';
+        $page_data['page_title'] = 'Exam center';        
         $this->load->view('backend/index', $page_data);
     }
 
@@ -299,6 +302,8 @@ class Student extends CI_Controller {
         $page_data['page_name'] = 'assignment';
         $page_data['param'] = $param1;
         $page_data['page_title'] = 'Assignment List';
+         clear_notification('assignment_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['assignment_manager']);
         $this->load->view('backend/index', $page_data);
     }
 
@@ -340,6 +345,7 @@ class Student extends CI_Controller {
     }
 
     function project($param1 = '', $param2 = '') {
+        
         if ($param1 == 'create') {
             if ($_FILES['projectfile']['name'] != "") {
                 $config['upload_path'] = 'uploads/project_file';
@@ -410,6 +416,8 @@ class Student extends CI_Controller {
             $page_data['page_name'] = 'project';
             $page_data['page_title'] = 'Project List';
             $page_data['param'] = $param1;
+              clear_notification('project_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['project_manager']);
             $this->load->view('backend/index', $page_data);
         }
         if ($param1 == "video") {
@@ -444,6 +452,8 @@ class Student extends CI_Controller {
                 student_exam_list($student_details->course_id, $student_details->semester_id);
         $page_data['page_name'] = 'exam_listing';
         $page_data['page_title'] = 'Exam Listing';
+        clear_notification('exam_manager', $this->session->userdata('student_id'));        
+        unset($this->session->userdata('notifications')['exam_manager']);
         $this->load->view('backend/index', $page_data);
     }
 
@@ -531,6 +541,8 @@ class Student extends CI_Controller {
         $page_data['fees_record'] = $this->Student_model->fees_record($this->session->userdata('login_user_id'));
         $page_data['page_name'] = 'student_fees';
         $page_data['page_title'] = 'Student Fees';
+        clear_notification('fees_structure', $this->session->userdata('student_id'));
+        unset($this->session->userdata('notifications')['fees_structure']);
         $this->load->view('backend/index', $page_data);
     }
 

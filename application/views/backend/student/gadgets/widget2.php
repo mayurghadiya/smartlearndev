@@ -16,7 +16,14 @@
                         <div class="menu-text"> Fee Record</div> 
                     </a> 
                 </li>
-                <li> <a href="<?php echo base_url('index.php?student/student_fees'); ?>" target="_blank"> <div class="menu-icon"><i class=" icon-lock"></i></div> <div class="menu-text">Pay Online</div> </a> </li>
+                <li> <a href="<?php echo base_url('index.php?student/student_fees'); ?>" target="_blank"> 
+                        <div class="menu-icon"><i class=" icon-lock"></i></div> 
+                        <div class="menu-text">Pay Online 
+                            <?php
+                            if(isset($this->session->userdata('notifications')['fees_structure'])){ ?>
+                            <img style="margin-top: 5px;" src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
+                            <?php } ?>
+                        </div> </a> </li>
                             <?php
                             $student_detail = $this->db->get_where('student', array(
                                         'std_id' => $this->session->userdata('login_user_id')

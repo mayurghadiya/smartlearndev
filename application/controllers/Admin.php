@@ -1077,9 +1077,30 @@ class Admin extends CI_Controller {
             $data['pm_student_id'] = $stud;
             $data['pm_course'] = $this->input->post('course');
             $data['created_date'] = date('Y-m-d');
-
+            
 
             $this->db->insert('project_manager', $data);
+            $last_id = $this->db->insert_id();
+             $this->db->where("notification_type","project_manager");
+            $res =$this->db->get("notification_type")->result();
+            if($res!='')
+            {
+           $notification_id =  $res[0]->notification_type_id;
+            $notify['notification_type_id']=$notification_id;
+            $notify['student_ids']=$data['pm_student_id'];
+            $notify['degree_id']=$data['pm_degree'];
+            $notify['course_id']= $data['pm_course'];
+            $notify['batch_id']=$data['pm_batch'];
+            $notify['semester_id']=$data['pm_semester'];
+            $notify['data_id']=$last_id;
+            $this->db->insert("notification",$notify);
+           }
+           
+         //   $degree = $data['pm_degree'];
+         //   $course = $data['pm_course'];
+         //   $batch = $data['pm_batch'];
+          //  $semester = $data['pm_semester'];            
+          //  create_notification('project_manager',$degree ,$course,$batch,$semester, $last_id);
             $this->session->set_flashdata('flash_message', get_phrase('project_added_successful'));
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
