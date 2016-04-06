@@ -74,30 +74,30 @@
 <?php echo form_open(base_url() . 'index.php?admin/events/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'eventform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Name</label>
+                                            <label class="col-sm-3 control-label">Event Name<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="event_name" value=""/>
                                             </div>
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Location</label>
+                                            <label class="col-sm-3 control-label">Event Location<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" id="event_location" class="form-control" name="event_location" value=""/>
                                             </div>
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Description</label>
+                                            <label class="col-sm-3 control-label">Description<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <textarea name="event_desc" rows="3"></textarea>									</div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Date</label>
+                                            <label class="col-sm-3 control-label">Event Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" id="datepicker-date" class="form-control" name="event_date" value=""/>
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Time</label>
+                                            <label class="col-sm-3 control-label">Event Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="time" id="event_time" class="form-control" name="event_time" value=""/>
                                             </div>
@@ -142,6 +142,7 @@
                                                                     dateFormat: 'dd M yy',
                                                                     changeMonth: true,
                                                                     changeYear: true,
+                                                                    minDate: new Date(),
                                                                     onSelect: function (datetext) {
                                                                         var d = new Date(); // for now
                                                                     },
@@ -155,9 +156,9 @@
                                                                         event_time: "required"
                                                                     },
                                                                     messages: {
-                                                                        event_name: "Please Enter Event Name",
-                                                                        event_desc: "Please Enter Event Description",
-                                                                        event_date: "Please Select Event Date",
+                                                                        event_name: "Please enter event name",
+                                                                        event_desc: "Please enter event description",
+                                                                        event_date: "Please select event date",
                                                                         event_location: "Please enter event location",
                                                                         event_time: "Please enter event time"
                                                                     }
