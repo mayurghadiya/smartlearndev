@@ -7,7 +7,14 @@
                     <ul class="list-wrapper pd-lr-10">
                         <li> 
                             <a href="<?php echo base_url('index.php?student/exam_listing'); ?>" target="_parent">  
-                                <div class="menu-text">Schedule</div> 
+                                <div class="menu-text">Schedule 
+                                <?php
+                                if(isset($this->session->userdata('notifications')['exam_manager']) || 
+                                        isset($this->session->userdata('notifications')['exam_time_table'])) { ?>
+                                    <img src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
+                                    <?php }
+                                ?>
+                                </div> 
                             </a> 
                         </li>
 <!--                        <li> 

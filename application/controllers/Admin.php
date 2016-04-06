@@ -26,6 +26,7 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
+        $this->load->helper('notification');
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
@@ -3024,6 +3025,9 @@ class Admin extends CI_Controller {
                             'exam_start_time' => $this->input->post('start_time', TRUE),
                             'exam_end_time' => $this->input->post('end_time', TRUE),
                         ));
+                        $insert_id = $this->db->insert_id();
+                        create_notification('exam_time_table', $_POST['degree'], $_POST['course'], 
+                                $_POST['batch'], $_POST['semester'], $insert_id);
                         $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
                         redirect(base_url('index.php?admin/exam_time_table'));
                     }

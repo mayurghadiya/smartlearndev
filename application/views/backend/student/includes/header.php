@@ -113,11 +113,12 @@
                                                                                 </li>
                                                                             <?php } ?>
 
-                                                                            <?php if (isset($this->session->userdata('notifications')['exam_manager'])) { ?>
+                                                                            <?php if (isset($this->session->userdata('notifications')['exam_manager']) ||
+                                                                                    isset($this->session->userdata('notifications')['exam_time_table'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/exam_listing'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                        <div class="menu-text"> New exam was added.
+                                                                                        <div class="menu-text"> New exam or exam schedule was added.
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
@@ -139,7 +140,7 @@
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
-                                                                            <?php } ?>
+                                                                            <?php } ?>                                                                                
 
                                                                         </ul>
                                                                     </div>
@@ -161,7 +162,7 @@
                                                                     <div class="child-menu"> 
                                                                         <div class="content-list content-menu">
                                                                             <ul class="list-wrapper pd-lr-10">
-                                                                                <li> <a href="<?php echo base_url(); ?>index.php?admin/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+                                                                                <li> <a href="<?php echo base_url(); ?>index.php?student/profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
                                                                                 <li> <a href="<?php echo base_url(); ?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
                                                                             </ul>
                                                                         </div> 
