@@ -4135,5 +4135,9 @@ class Admin extends CI_Controller {
             }
         }
     }
+    
+    function demo() {
+        echo 'hello';
+    }
 
 }
