@@ -275,8 +275,8 @@ endforeach;
                 },
             },
             messages: {
-                degree: "Please select degree",
-                course:"Please select course",
+                degree: "Please select Course",
+                course:"Please select Branch",
                 batch: "Please select batch",
                 semester: "Please select semester",
                 student: "Please select student",
