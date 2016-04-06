@@ -161,7 +161,7 @@
                                                                     <div class="child-menu"> 
                                                                         <div class="content-list content-menu">
                                                                             <ul class="list-wrapper pd-lr-10">
-                                                                                <li> <a href="<?php echo base_url(); ?>index.php?admin/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+                                                                                <li> <a href="<?php echo base_url(); ?>index.php?student/profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
                                                                                 <li> <a href="<?php echo base_url(); ?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
                                                                             </ul>
                                                                         </div> 
