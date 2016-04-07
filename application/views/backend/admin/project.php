@@ -173,7 +173,10 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">                	
+                                <div class="box-content">  
+<div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>                                      
 <?php echo form_open(base_url() . 'index.php?admin/project/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">

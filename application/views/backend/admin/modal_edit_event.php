@@ -8,6 +8,9 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
     <div class="panel-body">
         <div class="tab-pane box active" id="edit">
             <div class="box-content">
+                 <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>  
                 <?php foreach ($edit_data as $row): ?>
                     <?php echo form_open(base_url() . 'index.php?admin/events/do_update/' . $row['event_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editevent', 'target' => '_top', 'role' => 'form')); ?>
                     <div class="form-group">
