@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Neon Admin Panel" />
 <meta name="author" content="" />
-<title>Login | Smart Learn</title>
+<title>Login | Learning Management System</title>
 <link rel="stylesheet" href="assets/login/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
 <link rel="stylesheet" href="assets/login/css/font-icons/entypo/css/entypo.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
@@ -50,7 +50,7 @@ var baseurl = '<?php echo base_url();?>';
     
     <div class="login-content">
       <div class="login-form-inner">
-        <h2 class="form-title" >Smart Learn</h2>
+        <h3 class="form-title" >Learning Management System</h3>
         <div class="sep text-center"><img src="assets/login/images/login-sep.png" class="img-responsive" width="295" height="8"/></div>
         <div class="form-login-error">
           <h3>Invalid login</h3>
