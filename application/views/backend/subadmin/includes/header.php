@@ -138,7 +138,7 @@
 											<img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('admin' , $this->session->userdata('admin_id'));?>" alt="...">             
 										</span>
 										<span class="mega-name">
-											<?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
+											Sub Admin <i class="fa fa-caret-down fa-fw"></i> 
 										</span>
 									</a> 
 									<div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">
