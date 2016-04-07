@@ -514,7 +514,7 @@ class Student_model extends CI_Model {
     function student_details($student_id) {
         return $this->db->select('student.*, student.created_date AS Joining_date, course.*, semester.*, batch.*, degree.*')
                         ->from('student')
-                        ->join('course', 'course.course_id = course.course_id')
+                        ->join('course', 'course.course_id = student.course_id')
                         ->join('semester', 'semester.s_id = student.semester_id')
                         ->join('batch', 'batch.b_id = student.std_batch')
                         ->join('degree', 'degree.d_id = student.std_degree')
