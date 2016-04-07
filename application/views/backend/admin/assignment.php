@@ -444,6 +444,8 @@
            var course =  $("#sub_branches").val();
            var batch =  $("#sub_batches").val();
             var semester = $("#sub_semesters").val();
+             if($("#sub_courses").val()!="" & $("#sub_branches").val()!="" & $("#sub_batches").val()!="" & $("#sub_semesters").val()!="")
+            {
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getsubmitted/submitted",
@@ -455,6 +457,7 @@
                 
                 
             });
+            }
              return false;
         });
         

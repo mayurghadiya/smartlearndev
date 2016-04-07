@@ -271,7 +271,7 @@
                                         </div>   
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date *</label>
+                                            <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="dateofsubmission" id="dateofsubmission" />
                                             </div>
@@ -284,7 +284,7 @@
                                             </div>
                                         </div>-->
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File Upload *</label>
+                                            <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="resourcefile" id="resourcefile" />
                                             </div>
