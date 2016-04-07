@@ -44,7 +44,7 @@
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Course</label>
                                                 <select id="courses" name="degree" class="form-control">
-                                                    <option value="">Select</option>
+                                                    <option value="">Select Course</option>
                                                     <?php foreach ($degree as $row) { ?>
                                                         <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
                                                     <?php } ?>
@@ -53,19 +53,19 @@
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="branches" name="course" class="form-control">
-
+  <option value="">Select Branch</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Batch</label>
                                                 <select id="batches" name="batch" class="form-control">
-
+  <option value="">Select Batch</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Select Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
-                                                    <option value="">Select</option>
+                                                    <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
                                                         <option value="<?php echo $row->s_id; ?>"
                                                                ><?php echo $row->s_name; ?></option>
