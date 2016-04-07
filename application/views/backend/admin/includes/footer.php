@@ -200,12 +200,21 @@ $.toaster({
 		$("#create_group").validate({
 			rules: {
 				group_name: "required",				
-				user_type: "required",				'user_role[]': "required",
+				user_type: "required",				
+                                'user_role[]': "required",
+                                degree: "required",
+                                course: "required",
+                                batch: "required",
+                                semester: "required",
 			},
 			messages: {
-				group_name: "Please enter group name",				
-				user_type: "Please select user type",
-				'user_role[]': "Please select user",			
+				group_name: "Enter group name",				
+				user_type: "Select user type",
+				'user_role[]': "Select user",	
+                                degree: "Select course",
+                                course: "Select branch",
+                                batch: "Select batch",
+                                semester: "Select semester",
 			}
 		});
 		});
