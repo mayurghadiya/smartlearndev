@@ -114,10 +114,10 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                  <div class="form-group">
-                                            <label class="col-sm-3 control-label">Degree<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
-                                                    <option value="">Select Degree</option>
+                                                    <option value="">Select course</option>
                                                     <?php
                                                     $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                     foreach ($degree as $dgr) {
@@ -131,10 +131,10 @@ foreach ($edit_data as $row):
                                         </div>
                                 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                    <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <select name="course" id="course2">
-                                            <option value="">Select course</option>
+                                            <option value="">Select branch</option>
                                             <?php
                                             $datacourse = $this->db->get_where('course', array('course_status' => 1))->result();
                                             foreach ($datacourse as $rowcourse) {
@@ -154,10 +154,10 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                                    <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <select name="batch" id="batch2">
-                                            <option value="">Select branch</option>
+                                            <option value="">Select batch</option>
                                             <?php
                                             $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
                                             foreach ($databatch as $row1) {

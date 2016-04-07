@@ -156,6 +156,7 @@
     <script type="text/javascript">
     
         $(document).ready(function () {
+         
             $("#courseform").validate({
                 rules: {
                     c_name: 

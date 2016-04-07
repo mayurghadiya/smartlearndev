@@ -54,7 +54,15 @@ $.toaster({
 <script type="text/javascript">
 	$(document).ready(function() {
 		"use strict";				
-		$('#data-tables').dataTable();
+		$('#data-tables').DataTable( {
+             aoColumnDefs: [
+                {
+                   bSortable: false,
+                   aTargets: [ -1 ]
+                }
+              ]
+        } );
+
 	} );
 </script>
 	<script type="text/javascript" src="<?php echo base_url();?>assets/js/multiselect.min.js"></script>

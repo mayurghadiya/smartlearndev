@@ -47,7 +47,7 @@
                                                 <th><div>#</div></th>											
                                                 <th><div>Subject Name</div></th>											
                                                 <th><div>Subject Code</div></th>											
-                                                <th><div>Course</div></th>											
+                                                <th><div>Branch</div></th>											
                                                 <th><div>Semester</div></th>									
                                                 <th><div>Operation</div></th>											
                                             </tr>
@@ -111,10 +111,10 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select branch</option>
 <?php
 $course = $this->db->get_where('course', array('course_status' => 1))->result();
 foreach ($course as $crs) {
@@ -131,10 +131,10 @@ foreach ($course as $crs) {
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
                                                     <option value="">Select semester</option>
-<?php
-$datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-foreach ($datasem as $rowsem) {
-    ?>
+                                                        <?php
+                                                        $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
+                                                        foreach ($datasem as $rowsem) {
+                                                            ?>
                                                         <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
                                                         <?php
                                                     }

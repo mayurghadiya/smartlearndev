@@ -487,11 +487,11 @@
                 }
             },
             messages: {
-                degree: "Please select degree",
-                course: "Please select course",
-                batch: "Please select batch",
-                semester: "Please select semester",
-                student: "Please select student",
+                degree: "Please select Course",
+                course: "Please select Branch",
+                batch: "Please select Batch",
+                semester: "Please select Semester",
+                student: "Please select Student",
                 dateofsubmission: "Please select date",
                 libraryfile: {
                     required: "Please upload file",
