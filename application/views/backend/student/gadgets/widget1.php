@@ -32,20 +32,29 @@
         var events = {
             <?php foreach($event as $eve) :
                 $event_date = date("m-d-Y",strtotime($eve->event_date));
+            $event_date_time = $eve->event_date;
             $event_name = $eve->event_name;
             $event_location = $eve->event_location;
             $event_desc = $eve->event_desc;
             $student = '';
+            $role = '';
             if($eve->group_id!='')
             {
                $res = $this->db->get_where("group",array('g_id'=>$eve->group_id))->result();
                $role = $res[0]->user_role;
                $student = explode(",",$role);
+              
+               $std_id = $this->session->userdata('std_id');
+               if(in_array($std_id,$student))
+               {
+                   ?>
+                '<?php echo $event_date; ?>' : [{content: '<?php echo $event_date_time;  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
+              <?php  }
             }
-            $std_id = $this->session->userdata('std_id');
-           // if($std_id,$student)
+            else{
             ?>
-    '<?php echo $event_date; ?>' : [{content: '<?php echo $event_date; echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
+    '<?php echo $event_date; ?>' : [{content: '<?php echo $event_date_time;  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
+            <?php } ?>
     <?php endforeach; ?>
 },
 t = new Date(),
