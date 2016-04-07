@@ -319,7 +319,7 @@
                 changeYear: true,
                 minDate: new Date(),
                 onClose: function (selectedDate) {
-                    $(".datepicker-normal").datepicker("option", "maxDate", selectedDate);
+                    //$(".datepicker-normal").datepicker("option", "maxDate", new Date());
                 }
             })
         });

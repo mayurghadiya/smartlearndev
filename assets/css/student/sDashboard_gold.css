@@ -253,29 +253,29 @@ nav { background:#FFF;}
 }
 .vd_panel-menu {  margin-top:1px !important;}
 .vd_panel-menu .menu i { color:#FFF; margin-top:0px !important; }
-.vd_panel-menu .menu:hover i { color:#a87fc6 !important; background-color:transparent; }
-.vd_panel-menu .menu.active i { color:#a87fc6 !important; background-color:transparent; }
+.vd_panel-menu .menu:hover i { color:#ffba00 !important; background-color:transparent; }
+.vd_panel-menu .menu.active i { color:#ffba00 !important; background-color:transparent; }
  
 .mega-ul { padding-left:0px; left:0px; text-align:left; border-bottom:0px solid #F5F5F5; padding-bottom:10px;}
 iframe body { background-color: transparent !important;}
-.widget-iframe .widget-iframe body { background-color: #a87fc6 !important;}
+.widget-iframe .widget-iframe body { background-color: #ffba00 !important;}
 .widget-iframe .form-group { margin-bottom:0px;}
-.sDashboardWidget { border:1px solid #a87fc6;}
-.sDashboardWidgetHeader { background-color: #a87fc6; }
-#id1 .sDashboardWidgetHeader { background-color:#a87fc6 ;}
-#id2 .sDashboardWidgetHeader { background-color: #a87fc6 ;}
-#id3 .sDashboardWidgetHeader { background-color: #a87fc6 ; }
-#id4 .sDashboardWidgetHeader { background-color: #a87fc6 ;}
-#id5 .sDashboardWidgetHeader { background-color:#a87fc6 ;}
-#id6 .sDashboardWidgetHeader { background-color:#a87fc6 ;}
-#id7 .sDashboardWidgetHeader { background-color: #a87fc6 ; }
-#id1 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id2 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id3 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id4 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id5 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id6 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id7 .sDashboardWidget { border:1px solid #a87fc6 ;}
+.sDashboardWidget { border:1px solid #ffba00;}
+.sDashboardWidgetHeader { background-color:#ffba00; }
+#id1 .sDashboardWidgetHeader { background-color:#ffba00;}
+#id2 .sDashboardWidgetHeader { background-color:#ffba00;}
+#id3 .sDashboardWidgetHeader { background-color:#ffba00; }
+#id4 .sDashboardWidgetHeader { background-color:#ffba00;}
+#id5 .sDashboardWidgetHeader { background-color:#ffba00;}
+#id6 .sDashboardWidgetHeader { background-color:#ffba00;}
+#id7 .sDashboardWidgetHeader { background-color:#ffba00; }
+#id1 .sDashboardWidget { border:1px solid #ffba00;}
+#id2 .sDashboardWidget { border:1px solid #ffba00;}
+#id3 .sDashboardWidget { border:1px solid #ffba00;}
+#id4 .sDashboardWidget { border:1px solid #ffba00;}
+#id5 .sDashboardWidget { border:1px solid #ffba00;}
+#id6 .sDashboardWidget { border:1px solid #ffba00;}
+#id7 .sDashboardWidget { border:1px solid #ffba00;}
 /*#id1 .widget-iframe .widget-iframe body { background-color: #FFF !important;}
 #id1 .widget-iframe .form-group { margin-bottom:0px;}
 #id1 .sDashboardWidgetHeader { background-color: #8b96d3; }
@@ -299,6 +299,8 @@ iframe body { background-color: transparent !important;}
 #id006 .sDashboardWidget { border:1px solid #e78989;}
 #id007 .sDashboardWidget { border:1px solid #aed581;}
 #id45 .sDashboardWidget { border:1px solid #fed041;}*/
+
+
 
 
 
