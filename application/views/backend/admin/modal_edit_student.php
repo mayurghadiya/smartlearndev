@@ -15,6 +15,9 @@ foreach ($edit_data as $row):
                 <div class="panel-body">
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
+                             <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
                             <form name="frmstudentedit" id="frmstudentedit" method="post" action="<?=base_url()?>index.php?admin/student/do_update/<?php echo $row['std_id']?>" enctype="multipart/form-data" class="form-horizontal form-groups-bordered validate"> 
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Name<span style="color:red">*</span></label>

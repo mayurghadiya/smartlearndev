@@ -15,6 +15,9 @@
 			<div class="panel-body">
 				<div class="tab-pane box" id="add" style="padding: 5px">
 					<div class="box-content">  
+                                             <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
 						<?php echo form_open(base_url() . 'index.php?admin/admission_type/do_update/'.$row['at_id'] , array('class' => 'form-horizontal form-groups-bordered validate','id'=>'frmadmissiontypeedit','target'=>'_top'));?>
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Admission Type Name<span style="color:red">*</span></label>
