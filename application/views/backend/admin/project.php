@@ -252,6 +252,7 @@ foreach ($datadegree as $rowdegree) {
                                             <div class="col-sm-5">
                                                  <input type="checkbox" name="checkall" id="select_all"  >Check All<br>
                                                 <div id="student"></div>
+                                                <label class="error" for="student[]"></label>
                                                 <!--<select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
                                                                                                   </select>-->
