@@ -1,7 +1,7 @@
    <!-- Middle Content Start -->
 
   <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar.css">
-  <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar_theme_responsive.css">
+  <link rel="stylesheet" href="<?=$this->config->item('css_path')?>event_css/eventCalendar_theme_responsive_student.css">
  <script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery.js"></script> 
  <style>
 /*.eventCalendar-slider, .eventCalendar-details{width:48% !important;}
@@ -268,11 +268,15 @@
 				}
 
 				for (; i < 7; i++) {
-					daysList.push('<li class="eventCalendar-day-header">'+moment()._locale._weekdaysShort[i]+'</li>');
+                                             var srtstr = moment()._locale._weekdaysShort[i];
+                                                var shmatches = srtstr.match(/\b(\w)/g); 
+					daysList.push('<li class="eventCalendar-day-header">'+shmatches+'</li>');
 
 					if (i === 6 && eventsOpts.startWeekOnMonday) {
 						// print sunday header
-						daysList.push('<li class="eventCalendar-day-header">'+moment()._locale._weekdaysShort[0]+'</li>');
+                                                var mystr = moment()._locale._weekdaysShort[0];
+                                                var matches = mystr.match(/\b(\w)/g); 
+						daysList.push('<li class="eventCalendar-day-header">'+matches+'</li>');
 					}
 
 				}
