@@ -8,9 +8,9 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
     <div class="panel-body">
         <div class="tab-pane box active" id="edit">
             <div class="box-content">
-                 <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div>  
+                <div class="">
+                    <span style="color:red">* is mandatory field</span> 
+                </div>  
                 <?php foreach ($edit_data as $row): ?>
                     <?php echo form_open(base_url() . 'index.php?admin/events/do_update/' . $row['event_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editevent', 'target' => '_top', 'role' => 'form')); ?>
                     <div class="form-group">
@@ -48,6 +48,22 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                                        value="<?php echo date('H:i', strtotime($row['event_date'])); ?>"/>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Group</label>
+                            <div class="col-sm-7">
+                                <select class="form-control" name="group">
+                                    <?php 
+                                    $group = $this->db->get('group')->result();
+                                    ?>
+                                    <option>Select</option>
+                                    <?php foreach ($group as $gp) { ?>
+                                        <option value="<?php echo $gp->g_id; ?>"
+                                                <?php if($gp->g_id == $row['group_id']) echo 'selected'; ?>><?php echo $gp->group_name; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>	
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-7">
