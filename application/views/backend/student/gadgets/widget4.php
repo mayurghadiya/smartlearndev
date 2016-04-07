@@ -14,7 +14,7 @@
                                               foreach($studyresource as $row):
                                               ?>
                                               
-                                              <li>  <a href="<?php echo $row['study_url'];?>" download="" title="<?php echo $row['study_desc']; ?>"><?php echo $row['study_title']; ?></a>                  
+                                              <li>  <a href="<?php echo $row['study_url'];?>" download="" title="<?php echo $row['study_desc']; ?>" target="_blank"><?php echo $row['study_title']; ?></a>                  
                                                   <?php
                                                 $std_id = $this->session->userdata('std_id');
                                                 $study_id = $row['study_id'];
