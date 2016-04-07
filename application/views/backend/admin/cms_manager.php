@@ -79,6 +79,9 @@
                             <div class="tab-pane box" id="add">
                                 <br/>
                                 <div class="box-content">
+                                    <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>   
                                     <form class="form-horizontal form-groups-bordered validate" id="admissionform" method="post" 
                                           action="<?php echo base_url('index.php?admin/cms_manager/create'); ?>" role="form">
                                         <div class="row">

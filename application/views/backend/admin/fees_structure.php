@@ -76,7 +76,10 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">                	
+                                <div class="box-content">    
+                                <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>                                       
                                     <form class="form-horizontal form-groups-bordered validate" id="feesstructure" 
                                           action="<?php echo base_url('index.php?admin/fees_structure/create'); ?>" method="post" role="form">
                                         <br/>
