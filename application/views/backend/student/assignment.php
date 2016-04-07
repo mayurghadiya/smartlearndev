@@ -132,7 +132,7 @@
                                                 <tr>
                                                     <td><?php echo $count++;?></td>
                                                     <td><?php echo $srow->assign_title;?></td>	
-                                                     <td><?php echo $srow->submited_date;?></td>	
+                                                     <td><?php echo date("F d, Y",strtotime($srow->submited_date));?></td>	
                                                       <td><?php echo $srow->document_file;?></td>
                                                        <td> 
                                                       <a href="uploads/project_file/<?php echo $srow->assign_filename; ?>" download="" title="<?php echo  $srow->document_file;?>"><i class="fa fa-download"></i></a>
