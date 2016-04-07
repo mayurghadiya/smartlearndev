@@ -345,14 +345,14 @@
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="branches" name="course" class="form-control">
-                                                     <option>Select Branch</option>
+                                                    <option value="">Select Branch</option>
 
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Batch</label>
                                                 <select id="batches" name="batch" class="form-control">
-                                                        <option>Select Batch</option>
+                                                        <option  value="">Select Batch</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
@@ -530,14 +530,14 @@
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="sub_branches" name="course" class="form-control">
-                                                    <option>Select Branch</option>
+                                                    <option value="">Select Branch</option>
 
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Batch</label>
                                                 <select id="sub_batches" name="batch" class="form-control">
-                                                     <option>Select Batch</option>
+                                                     <option value="">Select Batch</option>
 
                                                 </select>
                                             </div>
@@ -640,14 +640,14 @@
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="upd_branches" name="course" class="form-control">
-                                                     <option>Select Branch</option>
+                                                    <option value="">Select Branch</option>
 
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Batch</label>
                                                 <select id="upd_batches" name="batch" class="form-control">
-                                                     <option>Select Batch</option>
+                                                     <option value="">Select Batch</option>
 
                                                 </select>
                                             </div>
@@ -780,6 +780,8 @@
            var course =  $("#upd_branches").val();
            var batch =  $("#upd_batches").val();
             var semester = $("#upd_semesters").val();
+            if($("#upd_courses").val()!="" & $("#upd_branches").val()!="" & $("#upd_batches").val()!="" & $("#upd_semesters").val()!="")
+            {
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getuploads/",
@@ -791,6 +793,24 @@
                 
                 
             });
+            }else{
+                    $("#upd_searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
+            
+            }
              return false;
             
             
@@ -828,6 +848,8 @@
            var course =  $("#sub_branches").val();
            var batch =  $("#sub_batches").val();
             var semester = $("#sub_semesters").val();
+            if($("#sub_courses").val()!="" & $("#sub_branches").val()!="" & $("#sub_batches").val()!="" & $("#sub_semesters").val()!="")
+            {
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getactivity/",
@@ -839,6 +861,23 @@
                 
                 
             });
+            }else{
+                          $("#sub_searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
+            }
              return false;
             
             
@@ -849,6 +888,8 @@ $("#searchform").submit(function(){
            var course =  $("#branches").val();
            var batch =  $("#batches").val();
             var semester = $("#semesters").val();
+            if($("#courses").val()!="" & $("#branches").val()!="" & $("#batches").val()!="" & $("#semesters").val()!="")
+            {
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getsurvey/",
@@ -860,6 +901,23 @@ $("#searchform").submit(function(){
                 
                 
             });
+             } else{
+                          $("#searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
+            }
              return false;
          });
 $("#courses").change(function(){

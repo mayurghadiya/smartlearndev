@@ -458,6 +458,23 @@
                 
             });
             }
+            else{
+                          $("#sub_searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
+            }
              return false;
         });
         
@@ -480,6 +497,22 @@
                 
                 
             });
+            }else{
+                          $("#searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
             }
              return false;
          });
