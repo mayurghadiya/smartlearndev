@@ -63,9 +63,6 @@
                                                                     <span>Participate</span></label>
                                                             </li>
 
-                                                            <span>Participate</span></label>
-                                                            </li>
-
                                                         </ul>
                                                     </div>
                                                 </div>
