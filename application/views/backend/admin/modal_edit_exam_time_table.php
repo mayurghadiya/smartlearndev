@@ -35,6 +35,9 @@ $semester = $this->db->get('semester')->result();
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
+                        <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/update/' . $edit_data->exam_time_table_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-time-table', 'target' => '_top')); ?>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
