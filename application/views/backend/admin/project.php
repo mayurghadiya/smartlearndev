@@ -400,7 +400,7 @@ foreach ($datadegree as $rowdegree) {
                                                 <td><?php echo $rowsub->description; ?></td>
                                                 <td><a href="uploads/project_file/<?php echo $rowsub->document_file; ?>" download="" title="<?php echo $rowsub->document_file; ?>"><i class="fa fa-download"></i></a></td>                                                    	
                                             </tr>
-<?php endforeach; ?>						
+<?php endforeach; ?>			 			
                                         </tbody>
                                     </table>
                                 </div>
