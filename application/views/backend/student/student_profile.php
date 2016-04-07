@@ -231,7 +231,7 @@
                             <!-- form-group -->
                             
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Degree</label>
+                                <label class="col-sm-3 control-label">Course</label>
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
@@ -246,7 +246,7 @@
                             <!-- form-group -->
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course</label>
+                                <label class="col-sm-3 control-label">Branch</label>
                                 <div class="col-sm-9 controls">
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">

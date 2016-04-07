@@ -1693,5 +1693,19 @@ class Student extends CI_Controller {
         unset($this->session->userdata('notifications')['library_manager']);
         redirect(base_url() . 'index.php?student/dashboard/', 'refresh');  
     }
+    
+    function check_password()
+    {
+        $currentpassword=$this->input->post('currentpassword');
+        $data=$this->db->get_where('student',array('std_id'=>$this->session->userdata('std_id')))->result();
+        if($data[0]->real_pass==$currentpassword)
+        {
+            echo 'true';
+        }
+        else
+        {
+            echo 'false';
+        }
+    }
 
 }
