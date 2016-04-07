@@ -9,8 +9,6 @@
                         <div class="menu-text">Profile</div> 
                     </a> 
                 </li>
-                <li> <a href="#" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. " target="_blank"> <div class="menu-icon"><i class=" icon-trophy"></i></div> <div class="menu-text">Guidelines</div> </a> </li>
-                <li> <a href="#" target="_blank"> <div class="menu-icon"><i class=" fa fa-envelope"></i></div> <div class="menu-text">Admission for next Semester</div> </a> </li>								
                 <li> 
                     <a href="<?php echo base_url('index.php?student/fee_record'); ?>" target="_blank"> 
                         <div class="menu-text"> Student Payment Record</div> 

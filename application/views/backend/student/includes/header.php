@@ -150,41 +150,9 @@
                                                                                     </a> 
                                                                                 </li>
                                                                             <?php } ?> 
-                                                                                <?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
-                                                                                <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/exam_marks'); ?>"> 
-                                                                                        <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                        <div class="menu-text"> Exam marks was added.
-                                                                                        </div> 
-                                                                                    </a> 
-                                                                                </li>
-                                                                            <?php } ?>  
-                                                                                 <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
-                                                                                <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/volunteer'); ?>"> 
-                                                                                        <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                        <div class="menu-text"> New Participate was added.
-                                                                                        </div> 
-                                                                                    </a> 
-                                                                                </li>
-                                                                            <?php } ?>
-                                                                                 <?php if (isset($this->session->userdata('notifications')['study_resources'])) { ?>
-                                                                                <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/studyresources'); ?>"> 
-                                                                                        <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                        <div class="menu-text"> New Study Resources was added.
-                                                                                        </div> 
-                                                                                    </a> 
-                                                                                </li>
-                                                                            <?php } ?>
-                                                                                 <?php if (isset($this->session->userdata('notifications')['library_manager'])) { ?>
-                                                                                <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/digitallibrary'); ?>"> 
-                                                                                        <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
-                                                                                        <div class="menu-text"> New Digital Library was added.
-                                                                                        </div> 
-                                                                                    </a> 
-                                                                            <?php } ?>
+                                                                                
+                                                                               
+                                                                                 
                                                                                  <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/volunteer'); ?>"> 
