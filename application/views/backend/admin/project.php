@@ -246,6 +246,7 @@ foreach ($datadegree as $rowdegree) {
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
+                                            <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
@@ -582,7 +583,37 @@ foreach ($datadegree as $rowdegree) {
         }
     });
 
-
+$( "#frmproject" ).submit(function( event ) {
+          if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
+          { 
+         $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/checkprjects'; ?>",
+                    dataType:'json',
+                   data:
+                        {
+                            'degree':$("#degree").val(),
+                            'course':$("#course").val(),
+                            'batch':$("#batch").val(),
+                            'semester':$("#semester").val(),
+                            'title':$("#title").val(),
+                        }, 
+                                success:function(response){
+                                    if(response.length == 0){
+                                         $("#error_lable_exist").html('');
+                                    $('#frmproject').attr('validated',true);
+                                    $('#frmproject').submit();
+                                     } else
+                                         {
+                                             $("#error_lable_exist").html('Project is already present in the system');
+                                         return false;
+                                     }
+                    }
+                });
+                    return false; 
+                    }
+        event.preventDefault();
+      });
     $().ready(function () {
         $("#dateofsubmission").datepicker({
             minDate:0
