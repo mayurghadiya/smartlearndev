@@ -32,11 +32,13 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">
-                                <div class="box-content">   
-                                    <br/>                  
+                                <div class="box-content"> 
+                                     <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>              
                                     <form id="exportform" class="form-horizontal validate" action="#" method="post">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Select Module</label>
+                                            <label class="col-sm-3 control-label">Module<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="export_module" class="form-control" name="module_name" required="">
                                                     <option value="">Select</option>
