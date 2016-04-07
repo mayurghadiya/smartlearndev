@@ -15,6 +15,9 @@ foreach ( $edit_data as $row):
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
+                         <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
                 <?php echo form_open(base_url() . 'index.php?admin/batch/do_update/'.$row['b_id'] , array('class' => 'form-horizontal form-groups-bordered validate','id'=>'batchformedit','target'=>'_top'));?>
                         <input type="hidden" name="courseid" id="courseid" value="<?php echo $row['course_id']?>">
                         <div class="form-group">
