@@ -216,7 +216,7 @@ class Admin extends CI_Controller {
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
-
+            $data['group_id'] = $this->input->post('group');
             $this->db->insert('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
@@ -227,7 +227,7 @@ class Admin extends CI_Controller {
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
-
+            $data['group_id'] = $this->input->post('group');
             $this->db->where('event_id', $param2);
             $this->db->update('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
@@ -236,6 +236,7 @@ class Admin extends CI_Controller {
             $page_data['edit_data'] = $this->db->get_where('event_manager', array(
                         'event_id' => $param2
                     ))->result_array();
+            $page_data['group'] = $this->db->get('group')->result();
         }
         if ($param1 == 'delete') {
             $this->db->where('event_id', $param2);
@@ -244,6 +245,7 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
         $page_data['events'] = $this->db->get('event_manager')->result_array();
+        $page_data['group'] = $this->db->get('group')->result();
         $page_data['page_name'] = 'events';
         $page_data['page_title'] = 'Event Management';
         $this->load->view('backend/index', $page_data);
