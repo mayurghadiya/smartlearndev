@@ -4,7 +4,7 @@
 		<!--<hr/>-->
 		<div class="vd_title-section clearfix">
             <div class="vd_panel-header">
-              <h1>Gadgets Management</h1>
+              <h1>Student View</h1>
              </div>
           </div>
 		  
