@@ -38,6 +38,9 @@
                             <div class="tab-pane box active" id="list">
 
                                 <div class="panel-body">
+                                     <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
                                     <form id="restoreform" class="form-horizontal form-groups-bordered validate" role="form" action="" method="post" 
                                           enctype="multipart/form-data">
                                         <div class="form-group">

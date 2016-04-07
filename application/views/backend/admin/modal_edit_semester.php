@@ -14,7 +14,9 @@ foreach ( $edit_data as $row):
             	</div>
             </div>
 			<div class="panel-body">
-				
+				 <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
                 <?php echo form_open(base_url() . 'index.php?admin/semester/do_update/'.$row['sem_id'] , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
                   	<div class="form-group">                       
 						<label class="col-sm-3 control-label"><?php echo get_phrase('teacher');?></label>

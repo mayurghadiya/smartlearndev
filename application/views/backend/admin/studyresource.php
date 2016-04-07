@@ -187,7 +187,10 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">                	
+                                <div class="box-content">  
+                                <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>                                       
 <?php echo form_open(base_url() . 'index.php?admin/studyresource/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                          <div class="form-group">
@@ -261,14 +264,14 @@
                                         </div>
 
                                           <div class="form-group">
-                                            <label class="col-sm-3 control-label">Title *</label>
+                                            <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
                                         </div>   
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Date *</label>
+                                            <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="dateofsubmission" id="dateofsubmission" />
                                             </div>
@@ -281,7 +284,7 @@
                                             </div>
                                         </div>-->
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File Upload *</label>
+                                            <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="resourcefile" id="resourcefile" />
                                             </div>

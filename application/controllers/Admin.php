@@ -1277,7 +1277,7 @@ class Admin extends CI_Controller {
            
           
             
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
@@ -1474,7 +1474,7 @@ class Admin extends CI_Controller {
            
           
             
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
@@ -1871,7 +1871,7 @@ class Admin extends CI_Controller {
            
           
             
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
@@ -3977,7 +3977,7 @@ class Admin extends CI_Controller {
         }
 
         if ($batch != "") {
-            $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, 'course_id' => $course, 'std_degree' => $degree))->result();
+            $datastudent = $this->db->get_where("student", array("std_batch" => $batch,'semester_id'=>$sem, 'std_status' => 1, 'course_id' => $course, 'std_degree' => $degree))->result();
             //  $datastudent = $this->db->get_where('student', array('std_status' => 1))->result();
 
             foreach ($datastudent as $rowstu) {
@@ -4398,6 +4398,33 @@ class Admin extends CI_Controller {
             }
         }
     }
+    function checkprjects()
+    {
+        $degree = $this->input->post('degree');
+        $course = $this->input->post('course');
+        $batch = $this->input->post('batch');
+        $semester = $this->input->post('semester');
+        $title = $this->input->post('title');
+      $data =  $this->db->get_where('project_manager',array('pm_degree'=>$degree,
+                                                        'pm_course'=>$course,
+                                    'pm_title'=>$title,
+                                    'pm_batch'=>$batch,'pm_semester'=>$semester))->result_array();
+         echo json_encode($data);
+    }
     
+    function checkassignments()
+    {
+        $degree = $this->input->post('degree');
+        $course = $this->input->post('course');
+        $batch = $this->input->post('batch');
+        $semester = $this->input->post('semester');
+        $title = $this->input->post('title');
+      $data =  $this->db->get_where('assignment_manager',array('assign_degree'=>$degree,
+                                                        'course_id'=>$course,
+                                    'assign_title'=>$title,
+                                    'assign_batch'=>$batch,'assign_sem'=>$semester))->result_array();
+         echo json_encode($data);
+        
+    }
 
 }

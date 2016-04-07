@@ -51,6 +51,15 @@
             current_password:
                 {
                     required: true,
+                     remote: {
+                              url: "<?php echo base_url().'index.php?student/check_password'; ?>",
+                              type: "post",
+                              data: {
+                                 currentpassword: function() {
+                                  return $( "#current_password" ).val();
+                                },
+                              }
+                            }
                 },
             new_password:
                 {
@@ -59,12 +68,14 @@
             confirm_password:
                 {
                    required: true,
+                   equalTo: "#new_password",
                 },
         },
         messages: {
             current_password:
                 {
                     required: "Enter current password",
+                    remote:"Enter valid password",
                 },
                 new_password:
                 {
@@ -73,6 +84,7 @@
                 confirm_password:
                 {
                    required: "Enter confirm password",
+                   equalTo:"Confirm password is not valid",
                 },
         }
     });

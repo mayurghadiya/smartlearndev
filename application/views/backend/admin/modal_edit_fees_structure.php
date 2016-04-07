@@ -22,7 +22,10 @@ $batch = $this->db->query($query)->result();
             </div>
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
-                    <div class="box-content">  
+                    <div class="box-content"> 
+                        <div class="">
+                            <span style="color:red">* is mandatory field</span> 
+                        </div>   
                         <?php echo form_open(base_url() . 'index.php?admin/fees_structure/update/' . $edit_data->fees_structure_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editfeesstructure', 'target' => '_top')); ?>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Title<span style="color:red">*</span></label>

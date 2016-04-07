@@ -16,6 +16,9 @@ foreach ($edit_data as $row) {
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
+                         <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>  
                         <?php echo form_open(base_url() . 'index.php?admin/cms/do_update/' . $row['c_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editcmsform', 'target' => '_top')); ?>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Page Title<span style="color:red">*</span></label>

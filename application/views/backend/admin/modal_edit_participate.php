@@ -15,6 +15,9 @@ foreach ($edit_data as $row):
                 <div class="panel-body">
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
+                            <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>  
                             <?php echo form_open(base_url() . 'index.php?admin/participate/do_update/' . $row['pp_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>

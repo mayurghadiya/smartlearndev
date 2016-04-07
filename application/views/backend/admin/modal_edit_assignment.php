@@ -9,12 +9,15 @@ foreach ($edit_data as $row):
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        Edit Project
+                        Edit Assignment
                     </div>
                 </div>
                 <div class="panel-body">
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
+                            <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>   
                             <?php echo form_open(base_url() . 'index.php?admin/assignment/do_update/' . $row['assign_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Assignment Title<span style="color:red">*</span></label>

@@ -9,15 +9,18 @@
           <div class="vd_content-section clearfix">
             <div class="row">
               <div class="col-sm-12">
+                  <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>  
 				<?php echo form_open(base_url() . 'index.php?admin/create_group/create' , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top','id'=>'create_group'));?>
 						<div class="form-group">
-							<label class="col-sm-4 control-label">Group Name</label>
+							<label class="col-sm-4 control-label">Group Name<span style="color:red">*</span></label>
 							<div class="col-sm-7 controls">
 							  <input type="text" class="width-50" placeholder="Group Name" name="group_name">
 							  <span class="help-inline"></span> </div>
 						  </div>
                             <div class="form-group">
-                                <label class="col-sm-4 control-label">Type of Users</label>
+                                <label class="col-sm-4 control-label">Type of Users<span style="color:red">*</span></label>
                                 <div class="col-sm-7 controls">
                                     <select id="user_type" onchange="return get_user(this.value)" name="user_type" class="width-50" style="width:100%;" >
                                     <option value="">Select User Type</option>

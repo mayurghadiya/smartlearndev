@@ -123,7 +123,9 @@
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">                	
-
+                                <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>  
                                     <form id="makepayment" class="form-horizontal form-groups-bordered validate" action="" method="post" role="form">
                                         <br/>
                                         <div class="padded">
