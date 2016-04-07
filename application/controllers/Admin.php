@@ -1277,7 +1277,7 @@ class Admin extends CI_Controller {
            
           
             
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
@@ -1474,7 +1474,7 @@ class Admin extends CI_Controller {
            
           
             
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
@@ -1871,7 +1871,7 @@ class Admin extends CI_Controller {
            
           
             
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
