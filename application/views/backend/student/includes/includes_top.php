@@ -7,7 +7,19 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 		<!-- load the dashboard css -->
-		<link href="<?=$this->config->item('css_path')?>student/sDashboard.css" rel="stylesheet">
+		<?php 
+				$skin = $this->db->get_where('system_setting' , array('type' => 'skin_colour'))->row()->description;
+				if($skin == 'theme_green.min.css'){  ?>
+					  <link href="<?=$this->config->item('css_path')?>student/sDashboard_green.css" rel="stylesheet">
+				<?php }elseif($skin == 'theme_blue.min.css'){ ?>
+					  <link href="<?=$this->config->item('css_path')?>student/sDashboard_blue.css" rel="stylesheet">
+				<?php }elseif($skin == 'theme_gold.min.css'){  ?>
+					  <link href="<?=$this->config->item('css_path')?>student/sDashboard_gold.css" rel="stylesheet">
+				<?php } else { ?>
+					  <link href="<?=$this->config->item('css_path')?>student/sDashboard.css" rel="stylesheet">			
+				<?php } ?>     
+		
+		
 
 		<!-- load gitter css -->
 		

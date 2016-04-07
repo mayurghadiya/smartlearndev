@@ -1476,7 +1476,7 @@ th.visible-lg, td.visible-lg { display: table-cell!important }
 }
 @media (max-width:767px) {
 .hidden-xs { display: none!important }
-.sDashboard li { max-width:100%;}
+.sDashboard li {max-width:100%;}
 }
 @media (min-width:768px) and (max-width:991px) {
 .hidden-sm { display: none!important }
