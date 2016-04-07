@@ -182,13 +182,13 @@
                                     <div class="row mgbt-xs-0">
                                         <div class="col-xs-9">
                                             <span class="vd_radio radio-info">
-                                                <input type="radio" value="option3" id="optionsRadios3" name="gender"
+                                                <input disabled="" type="radio" value="option3" id="optionsRadios3" name="gender"
                                                        <?php if ($profile->std_gender == 'Male') echo 'checked' ?>>
                                                 <label for="optionsRadios3"> Male </label>
                                             </span>
                                             <span class="vd_radio  radio-danger" > 
 
-                                                <input type="radio" value="option4" id="optionsRadios4" name="gender"
+                                                <input disabled="" type="radio" value="option4" id="optionsRadios4" name="gender"
                                                        <?php if ($profile->std_gender == 'Female') echo 'checked' ?>>
                                                 <label for="optionsRadios4"> Female </label>
                                             </span> 
