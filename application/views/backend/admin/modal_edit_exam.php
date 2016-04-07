@@ -237,7 +237,7 @@ $centerlist = $this->db->get('center_user')->result();
             changeYear: true,
             minDate: new Date(),
             onClose: function (selectedDate) {
-                $(".datepicker-normal-edit").datepicker("option", "maxDate", selectedDate);
+                //$(".datepicker-normal-edit").datepicker("option", "maxDate", selectedDate);
             }
         })
     });
