@@ -525,7 +525,7 @@ class Admin extends CI_Controller {
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $data['group_name'] = $this->input->post('group_name');
-            $data['user_type'] = $this->input->post('user_type');
+            $data['user_type'] = 1;
             $data['user_role'] = implode(',', $this->input->post('user_role'));
             //print_r($data); die;
             $check_already_exist_name = $this->db->get_where('group', array('group_name' => $this->input->post('group_name')))->row();
@@ -3921,7 +3921,20 @@ class Admin extends CI_Controller {
     }
 
     /* end  */
-
+    //nikita 
+    function get_group_student()
+    {
+        $batch = $this->input->post("batch");
+        $sem = $this->input->post("sem");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result_array();
+      
+         foreach ($datastudent as $row) {
+                 $html .='<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';
+            }
+        echo $html;
+    }
     /* checkboxstudent 4-4-2016 Mayur Panchal */
 
     function checkboxstudent($param = '') {
