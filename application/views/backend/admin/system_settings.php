@@ -41,6 +41,7 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="system">
+                               
                                 <?php echo form_open(base_url() . 'index.php?admin/system_settings/do_update', array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'systemform', 'target' => '_top', 'enctype' => 'multipart/form-data'));
                                 ?>
                                 <div class="col-md-12">					
@@ -51,7 +52,10 @@
                                                 System Setting
                                             </div>
                                         </div>
-                                        <div class="panel-body">                    
+                                        <div class="panel-body">  
+                                             <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
                                             <div class="form-group">
                                                 <label  class="col-sm-3 control-label">System Name<span style="color:red">*</span></label>
                                                 <div class="col-sm-9">

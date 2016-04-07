@@ -37,10 +37,13 @@
                             <div class="tab-pane box active" id="list">
 
                                 <div class="panel-body">
+                                     <div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>
                                     <form id="importform" class="myimportform form-horizontal form-groups-bordered validate" role="form" method="post" action="" 
                                           enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Module</label>
+                                            <label class="col-sm-3 control-label">Module<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="module" name="module">
                                                     <option value="">Select</option>
@@ -116,7 +119,7 @@
 
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File</label>
+                                            <label class="col-sm-3 control-label">File<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="userfile" id="userfile"/>
                                             </div>
