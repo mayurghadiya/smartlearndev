@@ -12,7 +12,7 @@
                                       foreach ($library as $lbr):
                                               ?>
                                               
-                                              <li><a href="<?php echo $lbr['lm_url'];  ?>" download=""><?php echo $lbr['lm_title']; ?></a>
+                                              <li><a  download=""  href="<?php echo $lbr['lm_url'];  ?>" ><?php echo $lbr['lm_title']; ?></a>
                                               
                                               <?php
                                                 $std_id = $this->session->userdata('std_id');
