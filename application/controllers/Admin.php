@@ -1672,7 +1672,7 @@ class Admin extends CI_Controller {
             $this->db->where('std_degree', $assign_degree);
             $this->db->where('course_id', $course_id);
             $students = $this->db->get('student')->result();
-            $std_ids = '';
+            $std_id = '';
             foreach ($students as $std) {
                 $id = $std->std_id;
 
@@ -1681,7 +1681,12 @@ class Admin extends CI_Controller {
                 //  $student_id = implode(",",$id);
                 // $std_ids[] =$student_id;
             }
+            if($std_id!='')
+            {
             $student_ids = implode(",", $std_id);
+            }else{
+                $student_ids = '';
+            }
             $this->db->where("notification_type", "assignment_manager");
             $res = $this->db->get("notification_type")->result();
             if ($res != '') {
