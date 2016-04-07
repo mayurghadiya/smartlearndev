@@ -36,7 +36,7 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                                             
                                           
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Participate Title</label>
+                                                <label class="col-sm-3 control-label">Participate Title <span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="pp_id" name="pp_id">
                                                         <option value="<?php  ?>" > Select  </option>
@@ -55,7 +55,7 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                                              
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Date Of Participate</label>
+                                                <label class="col-sm-3 control-label">Date Of Participate </label>
                                                 <div class="col-sm-5">
                                                     <input type="text" class="form-control" name="dos" readonly="" value="<?php if(!empty($res)){ echo $res[0]['pp_dos']; } ?>" id="dos" />
                                                 </div>
