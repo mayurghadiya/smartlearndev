@@ -62,7 +62,10 @@
 
 <!-- just copy this <section> and next script -->
                                         <section class="experiment">
-                                            <div class="form-horizontal">                                                
+                                            <div class="form-horizontal">  
+                                                 <div class="">
+                                                    <span style="color:red">* is mandatory field</span> 
+                                                </div>  
                                                 <div class="form-group" id="private-broadcast-degree">
                                                     <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
