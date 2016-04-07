@@ -411,6 +411,7 @@ class Student extends CI_Controller {
             // $page_data['project'] = $this->db->get_where('project_manager', array("pm_student_id" => $this->session->userdata('std_id')))->result();
             $page_data['degree'] = $this->db->get('degree')->result();
             $page_data['batch'] = $this->db->get('batch')->result();
+             $page_data['course'] = $this->db->get('course')->result();
             $page_data['semester'] = $this->db->get('semester')->result();
             $page_data['student'] = $this->db->get('student')->result();
             $page_data['page_name'] = 'project';

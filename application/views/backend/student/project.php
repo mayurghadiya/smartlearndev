@@ -36,7 +36,8 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div>Project Title</div></th>											
-                                                <th><div>Degree</div></th>											
+                                                <th><div>Course</div></th>											
+                                                <th><div>Branch</div></th>											
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Date of submission</div></th>	
@@ -60,6 +61,17 @@
                                                             ?>
                                                 </td>	
                                                 <td>
+                                                           <?php 
+                                                            foreach($course as $crs)
+                                                            {
+                                                                    if($crs->course_id==$row->pm_course)
+                                                                    {
+                                                                            echo $crs->c_name;
+                                                                    }
+                                                            }
+                                                    ?>
+                                                </td>
+                                                 <td>
                                                             <?php
                                                             foreach ($batch as $bch) {
                                                                 if ($bch->b_id == $row->pm_batch) {
@@ -67,7 +79,7 @@
                                                                 }
                                                             }
                                                             ?>
-                                                </td>	
+                                                </td>
                                                 <td>
                                                             <?php
                                                             foreach ($semester as $sem) {
