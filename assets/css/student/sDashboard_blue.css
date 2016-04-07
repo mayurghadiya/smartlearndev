@@ -260,22 +260,22 @@ nav { background:#FFF;}
 iframe body { background-color: transparent !important;}
 .widget-iframe .widget-iframe body { background-color: #a87fc6 !important;}
 .widget-iframe .form-group { margin-bottom:0px;}
-.sDashboardWidget { border:1px solid #a87fc6;}
-.sDashboardWidgetHeader { background-color: #a87fc6; }
-#id1 .sDashboardWidgetHeader { background-color:#a87fc6 ;}
-#id2 .sDashboardWidgetHeader { background-color: #a87fc6 ;}
-#id3 .sDashboardWidgetHeader { background-color: #a87fc6 ; }
-#id4 .sDashboardWidgetHeader { background-color: #a87fc6 ;}
-#id5 .sDashboardWidgetHeader { background-color:#a87fc6 ;}
-#id6 .sDashboardWidgetHeader { background-color:#a87fc6 ;}
-#id7 .sDashboardWidgetHeader { background-color: #a87fc6 ; }
-#id1 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id2 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id3 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id4 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id5 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id6 .sDashboardWidget { border:1px solid #a87fc6 ;}
-#id7 .sDashboardWidget { border:1px solid #a87fc6 ;}
+.sDashboardWidget { border:1px solid #42c0fb;}
+.sDashboardWidgetHeader { background-color: #42c0fb; }
+#id1 .sDashboardWidgetHeader { background-color:#42c0fb;}
+#id2 .sDashboardWidgetHeader { background-color:#42c0fb;}
+#id3 .sDashboardWidgetHeader { background-color:#42c0fb; }
+#id4 .sDashboardWidgetHeader { background-color:#42c0fb;}
+#id5 .sDashboardWidgetHeader { background-color:#42c0fb;}
+#id6 .sDashboardWidgetHeader { background-color:#42c0fb;}
+#id7 .sDashboardWidgetHeader { background-color:#42c0fb; }
+#id1 .sDashboardWidget { border:1px solid #42c0fb;}
+#id2 .sDashboardWidget { border:1px solid #42c0fb;}
+#id3 .sDashboardWidget { border:1px solid #42c0fb;}
+#id4 .sDashboardWidget { border:1px solid #42c0fb;}
+#id5 .sDashboardWidget { border:1px solid #42c0fb;}
+#id6 .sDashboardWidget { border:1px solid #42c0fb;}
+#id7 .sDashboardWidget { border:1px solid #42c0fb;}
 /*#id1 .widget-iframe .widget-iframe body { background-color: #FFF !important;}
 #id1 .widget-iframe .form-group { margin-bottom:0px;}
 #id1 .sDashboardWidgetHeader { background-color: #8b96d3; }
@@ -299,6 +299,7 @@ iframe body { background-color: transparent !important;}
 #id006 .sDashboardWidget { border:1px solid #e78989;}
 #id007 .sDashboardWidget { border:1px solid #aed581;}
 #id45 .sDashboardWidget { border:1px solid #fed041;}*/
+
 
 
 
