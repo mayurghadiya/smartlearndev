@@ -105,7 +105,6 @@
                                                     <div class="col-sm-5">
                                                         <select id="semester" class="form-control" name="private-broadcast-course">
                                                             <option value="">Select</option>
-                                                            <option value="all">All</option>
                                                             <?php foreach ($semester as $row) { ?>
                                                                 <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
                                                             <?php } ?>
