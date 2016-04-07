@@ -33,10 +33,10 @@ foreach ($edit_data as $row):
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="course" id="course">
-                                        <option value="">Select course</option>
+                                        <option value="">Select branch</option>
                                         <?php
                                         $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                         foreach ($course as $crs) {
@@ -92,8 +92,7 @@ foreach ($edit_data as $row):
     <?php
 endforeach;
 ?>
-<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
-<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+
 <script type="text/javascript">
     $.validator.setDefaults({
         submitHandler: function (form) {
@@ -129,11 +128,11 @@ endforeach;
                                             semester: function() {
 
                                                 return $( "#semester" ).val();
-                                            }
+                                            },
                                         }
                                     }
 
-                    }
+                    },
             },
             messages: {
                 subname: "Enter subject name",

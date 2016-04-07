@@ -459,6 +459,8 @@ foreach ($datadegree as $rowdegree) {
            var course =  $("#sub_branches").val();
            var batch =  $("#sub_batches").val();
             var semester = $("#sub_semesters").val();
+            if($("#sub_courses").val()!="" & $("#sub_branches").val()!="" & $("#sub_batches").val()!="" & $("#sub_semesters").val()!="")
+            {
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getprojects/submitted",
@@ -470,6 +472,23 @@ foreach ($datadegree as $rowdegree) {
                 
                 
             });
+            } else{
+                          $("#sub_searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
+            }
              return false;
             
             
@@ -479,6 +498,8 @@ foreach ($datadegree as $rowdegree) {
            var course =  $("#branches").val();
            var batch =  $("#batches").val();
             var semester = $("#semesters").val();
+             if($("#courses").val()!="" & $("#branches").val()!="" & $("#batches").val()!="" & $("#semesters").val()!="")
+            {
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getprojects/allproject",
@@ -490,6 +511,23 @@ foreach ($datadegree as $rowdegree) {
                 
                 
             });
+            } else{
+                          $("#searchform").validate({
+                                                                rules: {
+                                                                    degree:"required",
+                                                                    course:"required",
+                                                                    batch:"required",
+                                                                    semester:"required",
+                                                                    
+                                                                },
+                                                                messages:{
+                                                                    degree:"select course",
+                                                                    course:"select branch",
+                                                                    batch:"select batch",
+                                                                    semester:"select semester",
+                                                                }
+                                                            });
+            }
              return false;
          });
          $("#courses").change(function(){
