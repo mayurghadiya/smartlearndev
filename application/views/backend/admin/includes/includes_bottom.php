@@ -11,7 +11,7 @@
             <div class="row">
               <div class=" col-xs-12">
                 <div class="copyright">
-                  	Copyright &copy; <?php echo date("Y"); ?> Lore Brain. All Rights Reserved 
+                    Copyright &copy; <?php echo date("Y"); ?> <a href="http://searchnative.in/hosting/loreBrain/">Lore Brain</a>. All Rights Reserved 
                 </div>
               </div>
             </div><!-- row -->
