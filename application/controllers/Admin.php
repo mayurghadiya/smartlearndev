@@ -3822,7 +3822,7 @@ class Admin extends CI_Controller {
             echo $html;
         }
     }
-    function get_semester()
+    function get_semester($param='')
     {
         $cid = $this->input->post("course");
         $course =$this->db->get_where('course',array('course_id'=>$cid))->result_array();
@@ -3843,6 +3843,35 @@ class Admin extends CI_Controller {
            $option .="<option value=".$s['s_id'].">".$s['s_name']."</option>";
        }
        echo $option;
+    }
+    function get_semesterall()
+    {
+        
+          $cid = $this->input->post("course");
+          
+          
+              
+        $course =$this->db->get_where('course',array('course_id'=>$cid))->result_array();
+      
+        $semexplode=explode(',',$course[0]['semester_id']);
+        $semester=$this->db->get('semester')->result_array();
+
+        foreach($semester as $sem)
+        {
+            if(in_array($sem['s_id'],$semexplode))
+            {
+                $semdata[]=$sem;
+            }
+        }
+        $option="<option value=''>Select semester</option>";
+        $option .="<option value='All'>All</option>";
+        
+       foreach($semdata as $s )
+       {
+           $option .="<option value=".$s['s_id'].">".$s['s_name']."</option>";
+       }
+       echo $option;
+       
     }
 
     /* function get_cource_multiple($param='')
