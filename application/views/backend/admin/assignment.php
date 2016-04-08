@@ -325,7 +325,7 @@
                                     </form>
                                  </div>
                                      <div class="panel-body table-responsive" id="getsubmit">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="data-tabless">
                                         <thead>
                                         <tr>
                                             <th><div>#</div></th>												
@@ -668,3 +668,18 @@
         });
     });
     </script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		"use strict";				
+		$('#data-tabless').DataTable( {
+             aoColumnDefs: [
+                {
+                   bSortable: false,
+                   aTargets: [ -1 ]
+                }
+              ]
+        } );
+
+	} );
+</script>

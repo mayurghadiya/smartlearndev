@@ -725,3 +725,17 @@ $( "#frmproject" ).submit(function( event ) {
 });
     
     </script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		"use strict";				
+		$('#data-tabless').DataTable( {
+             aoColumnDefs: [
+                {
+                   bSortable: false,
+                   aTargets: [ -1 ]
+                }
+              ]
+        } );
+
+	} );
+</script>

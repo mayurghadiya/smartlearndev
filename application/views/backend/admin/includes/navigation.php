@@ -350,18 +350,5 @@
             <!-- Head menu search form ends -->         
         </div>             
     </div>
-    <div class="navbar-spacing clearfix">
-    </div>
-    <div class="vd_menu vd_navbar-bottom-widget">
-        <ul>
-            <li>
-                <a href="<?php echo base_url(); ?>index.php?login/logout">
-                    <span class="menu-icon"><i class="fa fa-sign-out"></i></span>          
-                    <span class="menu-text">Logout</span>             
-                </a>
-
-            </li>
-        </ul>
-    </div>     
 </div>    
 <!-- Middle Content Start -->

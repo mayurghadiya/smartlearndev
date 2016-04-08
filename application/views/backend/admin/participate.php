@@ -561,7 +561,7 @@
                                 </div>
                                     </form>
                                 <div class="panel-body table-responsive" id="getsubmit">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="data-tablessearch">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
@@ -671,7 +671,7 @@
                                 </div>
                                     </form>
                                 <div class="panel-body table-responsive" id="upd_getsubmit">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="data-tablesupd">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
@@ -1104,3 +1104,32 @@ $("#courses").change(function(){
 
 
     </script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		"use strict";				
+		$('#data-tablessearch').DataTable( {
+             aoColumnDefs: [
+                {
+                   bSortable: false,
+                   aTargets: [ -1 ]
+                }
+              ]
+        } );
+
+	} );
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		"use strict";				
+		$('#data-tablesupd').DataTable( {
+             aoColumnDefs: [
+                {
+                   bSortable: false,
+                   aTargets: [ -1 ]
+                }
+              ]
+        } );
+
+	} );
+</script>
