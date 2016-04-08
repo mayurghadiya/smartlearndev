@@ -766,7 +766,52 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-          $("#upd_courses").change(function(){
+         $("#upd_searchform").validate({
+            rules: {
+                degree:"required",
+                course:"required",
+                batch:"required",
+                semester:"required",
+
+            },
+            messages:{
+                degree:"select course",
+                course:"select branch",
+                batch:"select batch",
+                semester:"select semester",
+            }
+        }); 
+        $("#sub_searchform").validate({
+                  rules: {
+                      degree:"required",
+                      course:"required",
+                      batch:"required",
+                      semester:"required",
+                  },
+                  messages:{
+                      degree:"select course",
+                      course:"select branch",
+                      batch:"select batch",
+                      semester:"select semester",
+                  }
+              });
+               $("#searchform").validate({
+                      rules: {
+                          degree:"required",
+                          course:"required",
+                          batch:"required",
+                          semester:"required",
+
+                      },
+                      messages:{
+                          degree:"select course",
+                          course:"select branch",
+                          batch:"select batch",
+                          semester:"select semester",
+                      }
+                  });
+    
+    $("#upd_courses").change(function(){
                 var degree = $(this).val();
                 
                 var dataString = "degree="+degree;
@@ -813,21 +858,21 @@
                 
             });
             }else{
-                    $("#upd_searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                $("#upd_searchform").validate({
+                    rules: {
+                        degree:"required",
+                        course:"required",
+                        batch:"required",
+                        semester:"required",
+
+                    },
+                    messages:{
+                        degree:"select course",
+                        course:"select branch",
+                        batch:"select batch",
+                        semester:"select semester",
+                    }
+                });
             
             }
              return false;
@@ -881,21 +926,20 @@
                 
             });
             }else{
-                          $("#sub_searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                $("#sub_searchform").validate({
+                  rules: {
+                      degree:"required",
+                      course:"required",
+                      batch:"required",
+                      semester:"required",
+                  },
+                  messages:{
+                      degree:"select course",
+                      course:"select branch",
+                      batch:"select batch",
+                      semester:"select semester",
+                  }
+              });
             }
              return false;
             
@@ -921,21 +965,21 @@ $("#searchform").submit(function(){
                 
             });
              } else{
-                          $("#searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                $("#searchform").validate({
+                      rules: {
+                          degree:"required",
+                          course:"required",
+                          batch:"required",
+                          semester:"required",
+
+                      },
+                      messages:{
+                          degree:"select course",
+                          course:"select branch",
+                          batch:"select batch",
+                          semester:"select semester",
+                      }
+                  });
             }
              return false;
          });
@@ -967,168 +1011,168 @@ $("#courses").change(function(){
                     }
                 });
         });
-                                                                $("#degree").change(function () {
-                                                                    var degree = $(this).val();
+        $("#degree").change(function () {
+            var degree = $(this).val();
 
-                                                                    var dataString = "degree=" + degree;
-                                                                    $.ajax({
-                                                                        type: "POST",
-                                                                        url: "<?php echo base_url() . 'index.php?admin/get_cource/'; ?>",
-                                                                        data: dataString,
-                                                                        success: function (response) {
-                                                                            if (degree == "All")
-                                                                            {
-                                                                                $("#batch").val($("#batch option:eq(1)").val());
-                                                                                $("#course").val($("#course option:eq(1)").val());
-                                                                                $("#semester").val($("#semester option:eq(1)").val());
-                                                                                //  $("#course")..val($("#semester option:second").val());
-                                                                                // $("#semester").prepend(response);
-                                                                                // $('#semester option:selected').text();
-
-
-                                                                            } else {
+            var dataString = "degree=" + degree;
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url() . 'index.php?admin/get_cource/'; ?>",
+                data: dataString,
+                success: function (response) {
+                    if (degree == "All")
+                    {
+                        $("#batch").val($("#batch option:eq(1)").val());
+                        $("#course").val($("#course option:eq(1)").val());
+                        $("#semester").val($("#semester option:eq(1)").val());
+                        //  $("#course")..val($("#semester option:second").val());
+                        // $("#semester").prepend(response);
+                        // $('#semester option:selected').text();
 
 
-                                                                                $("#course").html(response);
-                                                                            }
-                                                                        }
-
-                                                                    });
-
-                                                                });
-
-                                                                $("#course").change(function () {
-                                                                    var course = $(this).val();
-                                                                    var degree = $("#degree").val();
-                                                                    var dataString = "course=" + course + "&degree=" + degree;
-                                                                    $.ajax({
-                                                                        type: "POST",
-                                                                        url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
-                                                                        data: dataString,
-                                                                        success: function (response) {
-                                                                             $.ajax({
-                                                                                type:"POST",
-                                                                                url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
-                                                                                data:{'course':course},                   
-                                                                                success:function(response1){
-                                                                                    $("#semester").html(response1);
-                                                                                     $("#semester").val($("#semester option:eq(1)").val());
-                                                                                }
-                                                                                });
-                                                                              $("#semester").val($("#semester option:eq(1)").val());
-                                                                            $("#batch").html(response);
-                                                                        }
-                                                                    });
-                                                                });
+                    } else {
 
 
+                        $("#course").html(response);
+                    }
+                }
 
-                                                                function get_student2(batch, semester = '') {
-                                                                    $.ajax({
-                                                                        url: '<?php echo base_url(); ?>index.php?admin/batchwisestudent/',
-                                                                        type: 'POST',
-                                                                        data: {'batch': batch},
-                                                                        success: function (content) {
-                                                                            $("#student").html(content);
-                                                                        }
-                                                                    });
-                                                                }
+            });
 
-                                                                function get_students2(sem)
-                                                                {
-                                                                    var batch = $("#batch").val();
-                                                                    var course = $("#course").val();
-                                                                    var degree = $("#degree").val();
-                                                                    $.ajax({
-                                                                        url: '<?php echo base_url(); ?>index.php?admin/semwisestudent/',
-                                                                        type: 'POST',
-                                                                        data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
-                                                                        success: function (content) {
-                                                                            //alert(content);
-                                                                            $("#student").html(content);
-                                                                        }
-                                                                    });
+        });
+
+        $("#course").change(function () {
+            var course = $(this).val();
+            var degree = $("#degree").val();
+            var dataString = "course=" + course + "&degree=" + degree;
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
+                data: dataString,
+                success: function (response) {
+                     $.ajax({
+                        type:"POST",
+                        url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
+                        data:{'course':course},                   
+                        success:function(response1){
+                            $("#semester").html(response1);
+                             $("#semester").val($("#semester option:eq(1)").val());
+                        }
+                        });
+                      $("#semester").val($("#semester option:eq(1)").val());
+                    $("#batch").html(response);
+                }
+            });
+        });
 
 
-                                                                }
+
+        function get_student2(batch, semester = '') {
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/batchwisestudent/',
+                type: 'POST',
+                data: {'batch': batch},
+                success: function (content) {
+                    $("#student").html(content);
+                }
+            });
+        }
+
+        function get_students2(sem)
+        {
+            var batch = $("#batch").val();
+            var course = $("#course").val();
+            var degree = $("#degree").val();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/semwisestudent/',
+                type: 'POST',
+                data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+                success: function (content) {
+                    //alert(content);
+                    $("#student").html(content);
+                }
+            });
 
 
+        }
 
 
 
 
 
 
-                                                                $.validator.setDefaults({
-                                                                    submitHandler: function (form) {
-                                                                        form.submit();
-                                                                    }
-                                                                });
 
-                                                                $().ready(function () {
-                                                                
-                                                                 $("#frmsurvey").validate({
-                                                                    rules: {
-                                                                        question: "required",
-                                                                        description: "required",
-                                                                        status: "required"
-                                                                    },
-                                                                    messages: {
-                                                                        question: "enter question",
-                                                                        description: "enter description",
-                                                                        status: "select status"
-                                                                    },
-                                                                });
 
-                                                                    $("#dateofsubmission").datepicker({
-                                                                        minDate: 0
-                                                                    });
-                                                                    jQuery.validator.addMethod("character", function (value, element) {
-                                                                        return this.optional(element) || /^[A-z]+$/.test(value);
-                                                                    }, 'Please enter a valid character.');
+        $.validator.setDefaults({
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
 
-                                                                    jQuery.validator.addMethod("url", function (value, element) {
-                                                                        return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
-                                                                    }, 'Please enter a valid URL.');
+        $().ready(function () {
 
-                                                                    $("#frmparticipate").validate({
-                                                                        rules: {
-                                                                            degree: "required",
-                                                                            course: "required",
-                                                                            batch: "required",
-                                                                            semester: "required",
-                                                                            dateofsubmission: "required",
-                                                                            participatefile: {
-                                                                                required: true,
-                                                                                extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt',
-                                                                            },
-                                                                            title:
-                                                                                    {
-                                                                                        required: true,
-                                                                                    },
-                                                                        },
-                                                                        messages: {
-                                                                            degree: "Please select course",
-                                                                            course: "Please select branch",
-                                                                            batch: "Please select batch",
-                                                                            semester: "Please select semester",
-                                                                            dateofsubmission: "Please select date of submission",
-                                                                            participatefile: {
-                                                                                required: "Please select participate file",
-                                                                                extension: 'Please upload valid file',
-                                                                            },
-                                                                            title:
-                                                                                    {
-                                                                                        required: "Please enter title",
-                                                                                    },
-                                                                        },
-                                                                    });
-                                                                });
-                                                                
-                                                                $(document).ready(function () {
-                                                                "use strict";
-                                                                $('#data-tabless').dataTable();
-                                                            });
+         $("#frmsurvey").validate({
+            rules: {
+                question: "required",
+                description: "required",
+                status: "required"
+            },
+            messages: {
+                question: "enter question",
+                description: "enter description",
+                status: "select status"
+            },
+        });
+
+            $("#dateofsubmission").datepicker({
+                minDate: 0
+            });
+            jQuery.validator.addMethod("character", function (value, element) {
+                return this.optional(element) || /^[A-z]+$/.test(value);
+            }, 'Please enter a valid character.');
+
+            jQuery.validator.addMethod("url", function (value, element) {
+                return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
+            }, 'Please enter a valid URL.');
+
+            $("#frmparticipate").validate({
+                rules: {
+                    degree: "required",
+                    course: "required",
+                    batch: "required",
+                    semester: "required",
+                    dateofsubmission: "required",
+                    participatefile: {
+                        required: true,
+                        extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt',
+                    },
+                    title:
+                            {
+                                required: true,
+                            },
+                },
+                messages: {
+                    degree: "Please select course",
+                    course: "Please select branch",
+                    batch: "Please select batch",
+                    semester: "Please select semester",
+                    dateofsubmission: "Please select date of submission",
+                    participatefile: {
+                        required: "Please select participate file",
+                        extension: 'Please upload valid file',
+                    },
+                    title:
+                            {
+                                required: "Please enter title",
+                            },
+                },
+            });
+        });
+
+        $(document).ready(function () {
+        "use strict";
+        $('#data-tabless').dataTable();
+        });
 
 
     </script>
