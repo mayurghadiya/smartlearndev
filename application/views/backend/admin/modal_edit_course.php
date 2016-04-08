@@ -47,20 +47,20 @@ foreach ( $edit_data as $row):
                         </div>	
                     </div>
                             <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select id="semester" name="semester[]" class="form-control" multiple>
-                                                    <option value="">--- Select Semester ---</option>
-                                                        <?php 
-                                                          $semexplode=explode(',',$row['semester_id']);
-                                                         $semesters = $this->db->get('semester')->result_array();
-                                                        foreach ($semesters as $srow) { ?>
-                                                        <option value="<?php echo $srow['s_id']; ?>" <?php  if (in_array($srow['s_id'],$semexplode)) { echo "selected";}?>><?php echo $srow['s_name']; ?>
-                                                        </option>
-                                                        <?php } ?>
-                                                </select>
-                                            </div>	
-                                        </div>          
+                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                            <div class="col-sm-5">
+                                <select id="semester" name="semester[]" class="form-control" multiple>
+                                    <option value="">--- Select Semester ---</option>
+                                        <?php 
+                                          $semexplode=explode(',',$row['semester_id']);
+                                         $semesters = $this->db->get('semester')->result_array();
+                                        foreach ($semesters as $srow) { ?>
+                                        <option value="<?php echo $srow['s_id']; ?>" <?php  if (in_array($srow['s_id'],$semexplode)) { echo "selected";}?>><?php echo $srow['s_name']; ?>
+                                        </option>
+                                        <?php } ?>
+                                </select>
+                            </div>	
+                        </div>          
                          <div class="form-group">
                        <label class="col-sm-3 control-label">Description</label>
                         <div class="col-sm-5">
