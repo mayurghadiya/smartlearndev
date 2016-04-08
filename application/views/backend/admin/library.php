@@ -410,6 +410,15 @@
                     url:"<?php echo base_url().'index.php?admin/batch_filter/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                         $.ajax({
+                        type:"POST",
+                        url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
+                        data:{'course':course},                   
+                        success:function(response1){
+                            $("#semesters").html(response1);
+                             $("#semesters").val($("#semesters option:eq(1)").val());
+                        }
+                        });
                          if(course=='All')
                         {
                               $("#batches").html(response);

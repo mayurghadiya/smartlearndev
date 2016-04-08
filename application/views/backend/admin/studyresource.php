@@ -365,7 +365,7 @@
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/course_filter/'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/searchallcourse/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         if(degree=='All')
@@ -377,7 +377,7 @@
                             
                         }
                         else{
-                            $("#branches").append(response);
+                            $("#branches").html(response);
                             
                         }
                     }
@@ -401,6 +401,15 @@
                     url:"<?php echo base_url().'index.php?admin/batch_filter/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                        $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
+                    data:{'course':course},                   
+                    success:function(response1){
+                        $("#semesters").html(response1);
+                         $("#semesters").val($("#semesters option:eq(1)").val());
+                    }
+                    });
                          if(course=='All')
                         {
                              $("#batches").html(response);
@@ -456,7 +465,20 @@
                                                                         url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
                                                                         data: dataString,
                                                                         success: function (response) {
-                                                                              $("#semester").val($("#semester option:eq(1)").val());
+                                                                             $.ajax({
+                                                                        type: "POST",
+                                                                        url: "<?php echo base_url() . 'index.php?admin/get_semesterall/'; ?>",
+                                                                        data: {'course':course},
+                                                                        success: function (response1) {
+                                                                            $("#semester").html(response1);
+                                                                           
+                                                                                  $("#semester").val($("#semester option:eq(1)").val());
+                                                                           
+                                                                        } 
+                                                                        });
+                                                                       
+                                                                            
+                                                                            
                                                                             $("#batch").html(response);
                                                                         }
                                                                     });

@@ -3849,13 +3849,18 @@ class Admin extends CI_Controller {
         
           $cid = $this->input->post("course");
           
-          
+          if($cid=='All')
+          {
+               $course =$this->db->get('course')->result_array();
+          }
+          else{
               
         $course =$this->db->get_where('course',array('course_id'=>$cid))->result_array();
+          }
       
         $semexplode=explode(',',$course[0]['semester_id']);
         $semester=$this->db->get('semester')->result_array();
-
+$semdata = '';
         foreach($semester as $sem)
         {
             if(in_array($sem['s_id'],$semexplode))
@@ -4512,6 +4517,25 @@ class Admin extends CI_Controller {
                                     'assign_batch'=>$batch,'assign_sem'=>$semester))->result_array();
          echo json_encode($data);
         
+    }
+    
+    function searchallcourse()
+    {
+         $did = $this->input->post("degree");
+         echo ' <option value="">Select Branch</option>';
+         echo '<option value="All">All</option>';
+        if ($did != '') {
+            
+                $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+           
+                $html = '';
+                foreach ($cource as $crs):
+                    $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+                endforeach;
+                echo $html;
+           
+        }
     }
 
 }

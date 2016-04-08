@@ -192,16 +192,13 @@ endforeach;
                                success:function(response){
 
                                    $("#semester2").html(response);
-                                   if(course=='All')
-                                    {
-                                        $("#semester2").val($("#semester2 option:eq(1)").val());
-                                    }
+                                   $("#semester2").val($("#semester2 option:eq(1)").val());
                                }
                            });
                            if(course=='All')
                         {
                              $("#batch2").val($("#batch2 option:eq(0)").val());
-                            $("#semester2").val($("#semester2 option:eq(1)").val());
+                            
                         }
                     }
                 });
