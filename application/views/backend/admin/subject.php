@@ -118,10 +118,10 @@
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select branch</option>
-<?php
-$course = $this->db->get_where('course', array('course_status' => 1))->result();
-foreach ($course as $crs) {
-    ?>
+                                                    <?php
+                                                    $course = $this->db->get_where('course', array('course_status' => 1))->result();
+                                                    foreach ($course as $crs) {
+                                                        ?>
                                                         <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>
                                                         <?php
                                                     }
@@ -134,14 +134,7 @@ foreach ($course as $crs) {
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
                                                     <option value="">Select semester</option>
-                                                        <?php
-                                                        $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-                                                        foreach ($datasem as $rowsem) {
-                                                            ?>
-                                                        <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
+                                                    
                                                 </select>
                                                  <lable class="error" id="error_lable_exist" style="color:red"></lable>
                                             </div>
@@ -197,6 +190,19 @@ foreach ($course as $crs) {
                     }
         event.preventDefault();
       });
+       $("#course").change(function () {
+        var course = $(this).val();
+        var degree = $("#degree").val();
+        var dataString = "course=" + course;
+        $.ajax({
+            type: "POST",
+            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+            data: dataString,
+            success: function (response) {
+                $("#semester").html(response);
+            }
+        });
+    });
         
         $(document).ready(function(){
         $("#subname").change(function(){ 
@@ -209,30 +215,29 @@ foreach ($course as $crs) {
               $('#semester').val($("#semester option:eq(0)").val());
         });
         });
-                                                        $.validator.setDefaults({
-                                                            submitHandler: function (form) {
-                                                                form.submit();
-                                                            }
-                                                        });
+        $.validator.setDefaults({
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
 
-                                                        $().ready(function () {
+        $().ready(function () {
 
-                                                            $("#frmsubject").validate({
-                                                                rules: {
-                                                                    
-                                                                      subname:"required",                                                                  
-                                                                    subcode:"required",
-                                                                    course:"required",
-                                                                    semester:"required"
-                                                                },
-                                                                messages: {
-                                                                  
-                                                                subname: "Enter subject name",
-                                                                 subcode: "Enter subject code",                                                                  
-                                                                    course: "Select course",
-                                                                    semester: "Select semester",
-                                                                        
-                                                                }
-                                                            });
-                                                        });
+            $("#frmsubject").validate({
+                rules: {
+
+                      subname:"required",                                                                  
+                    subcode:"required",
+                    course:"required",
+                    semester:"required"
+                },
+                messages: {
+
+                subname: "Enter subject name",
+                 subcode: "Enter subject code",                                                                  
+                    course: "Select course",
+                    semester: "Select semester",
+                }
+            });
+        });
     </script>
