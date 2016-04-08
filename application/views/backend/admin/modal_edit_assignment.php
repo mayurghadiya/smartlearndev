@@ -154,7 +154,7 @@ endforeach;
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_cource/edit'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course2").html(response);
