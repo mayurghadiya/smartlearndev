@@ -565,6 +565,14 @@ foreach ($datadegree as $rowdegree) {
                     data:dataString,                   
                     success:function(response){
                         $("#batches").html(response);
+                         $.ajax({
+                                    type:"POST",
+                                    url:"<?php echo base_url().'index.php?admin/get_semester/'; ?>",
+                                    data:{'course':course},                   
+                                    success:function(response){
+                                        $("#semesters").html(response);
+                                    }
+                                });
                     }
                 });
         });
@@ -592,6 +600,14 @@ foreach ($datadegree as $rowdegree) {
                     data:dataString,                   
                     success:function(response){
                         $("#batch").html(response);
+                        $.ajax({
+                                    type:"POST",
+                                    url:"<?php echo base_url().'index.php?admin/get_semester/'; ?>",
+                                    data:{'course':course},                   
+                                    success:function(response){
+                                        $("#semester").html(response);
+                                    }
+                                });
                     }
                 });
         });
