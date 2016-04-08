@@ -55,7 +55,7 @@
                                         </li>                                                                                   
                                         <li class="buttons ">
                                              <label class="desc" ></label>
-                                            <div><input type="submit" id="saveForm" name="saveForm" class="btTxt submit" value="Add Survey"></div>
+                                            <div><input type="submit" id="saveForm" name="saveForm" class="btn btn-info" value="Add Survey"></div>
                                         </li>
                                     </ul>
                                 </form>
