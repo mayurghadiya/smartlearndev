@@ -835,6 +835,14 @@
                     url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                            data: {'course':course},
+                            success: function (response1) {
+                                $("#upd_semesters").html(response1);
+                            }
+                        });
                         $("#upd_batches").html(response);
                     }
                 });
@@ -903,6 +911,14 @@
                     url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                            data: {'course':course},
+                            success: function (response1) {
+                                $("#sub_semesters").html(response1);
+                            }
+                        });
                         $("#sub_batches").html(response);
                     }
                 });
@@ -1007,6 +1023,14 @@ $("#courses").change(function(){
                     url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                         $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                            data: {'course':course},
+                            success: function (response1) {
+                                $("#semesters").html(response1);
+                            }
+                        });
                         $("#batches").html(response);
                     }
                 });
