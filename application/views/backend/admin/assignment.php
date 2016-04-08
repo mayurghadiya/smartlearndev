@@ -414,6 +414,35 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript"> 
         
+         $("#sub_searchform").validate({
+                rules: {
+                    degree:"required",
+                    course:"required",
+                    batch:"required",
+                    semester:"required",
+                },
+                messages:{
+                    degree:"select course",
+                    course:"select branch",
+                    batch:"select batch",
+                    semester:"select semester",
+                }
+            });
+            $("#searchform").validate({
+             rules: {
+                 degree:"required",
+                 course:"required",
+                 batch:"required",
+                 semester:"required",
+             },
+             messages:{
+                 degree:"select course",
+                 course:"select branch",
+                 batch:"select batch",
+                 semester:"select semester",
+             }
+         });
+                        
          $("#sub_courses").change(function(){
                 var degree = $(this).val();
                 
@@ -471,21 +500,21 @@
             });
             }
             else{
-                          $("#sub_searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                    $("#sub_searchform").validate({
+                      rules: {
+                          degree:"required",
+                          course:"required",
+                          batch:"required",
+                          semester:"required",
+
+                      },
+                      messages:{
+                          degree:"select course",
+                          course:"select branch",
+                          batch:"select batch",
+                          semester:"select semester",
+                      }
+                  });
             }
              return false;
         });
@@ -510,21 +539,20 @@
                 
             });
             }else{
-                          $("#searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                    $("#searchform").validate({
+                          rules: {
+                              degree:"required",
+                              course:"required",
+                              batch:"required",
+                              semester:"required",
+                          },
+                          messages:{
+                              degree:"select course",
+                              course:"select branch",
+                              batch:"select batch",
+                              semester:"select semester",
+                          }
+                      });
             }
              return false;
          });
