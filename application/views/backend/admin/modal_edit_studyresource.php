@@ -106,7 +106,7 @@ foreach ($edit_data as $row):
                                             }
                                         }
                                         ?>
-                                    </select>
+                                    </select> 
                                 </div>
                             </div>
                                 <div class="form-group">
