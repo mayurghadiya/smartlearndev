@@ -430,7 +430,21 @@ foreach ($datadegree as $rowdegree) {
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-      
+      $("#searchform").validate({
+                            rules: {
+                                degree:"required",
+                                course:"required",
+                                batch:"required",
+                                semester:"required",
+
+                            },
+                            messages:{
+                                degree:"select course",
+                                course:"select branch",
+                                batch:"select batch",
+                                semester:"select semester",
+                            }
+                        });
     $("#checkAll").change(function () {
     $("input:checkbox").prop('checked', $(this).prop("checked"));
 });
@@ -523,20 +537,20 @@ foreach ($datadegree as $rowdegree) {
             });
             } else{
                           $("#searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                            rules: {
+                                degree:"required",
+                                course:"required",
+                                batch:"required",
+                                semester:"required",
+
+                            },
+                            messages:{
+                                degree:"select course",
+                                course:"select branch",
+                                batch:"select batch",
+                                semester:"select semester",
+                            }
+                        });
             }
              return false;
          });
