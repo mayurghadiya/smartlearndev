@@ -36,12 +36,29 @@
                         <!------CONTROL TABS END------>
 
                         <div class="tab-content">
+                            <br/>
+                            <div class="form-group col-sm-2 validating">
+                                <label>Course</label>
+                                <input id="filter3" class="filter-rows" type="text" name="filter" data-filter="3"/>
+                            </div>
+                            <div class="form-group col-sm-2 validating">
+                                <label>Branch</label>
+                                <input id="filter4" class="filter-rows form-control" type="text" name="branch_filter" data-filter="4"/>
+                            </div>
+                            <div class="form-group col-sm-2 validating">
+                                <label>Batch</label>
+                                <input id="filter5" class="filter-rows form-control" type="text" name="filter" data-filter="5"/>
+                            </div>
+                            <div class="form-group col-sm-2 validating">
+                                <label>Semester</label>
+                                <input id="filter6" class="filter-rows form-control" type="text" name="filter" data-filter="6"/>
+                            </div>
                             <!----TABLE LISTING STARTS-->
-                            <div class="tab-pane box active" id="list">     
+                            <div class="tab-pane box active" id="list">   
                                 
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="exam-data-tables">
-                                        <thead>                                            
+                                        <thead> 
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Exam Name</th>
@@ -55,6 +72,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
                                             <?php
                                             $counter = 0;
                                             foreach ($exams as $row) {
@@ -395,10 +413,33 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            "use strict";
-            $('#exam-data-tables').DataTable({
+            "use strict";            
+            var t = $('#exam-data-tables').DataTable({
                 "order": [[7, "desc"]],
+                "columnDefs": [{
+                        "searchable": false,
+                        "orderable": false,
+                        "targets": 0
+                    }],
+                 "dom": '<"top"i>rt<"bottom"flp><"clear">'
             });
+
+            t.on('order.dt search.dt', function () {
+                t.column(0, {search: 'applied', order: 'applied'}).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+
+            $('.filter-rows').on('keyup', function () {
+                var filter_id = $(this).attr('data-filter');                
+                columnFilter(filter_id);
+            })
+
+            function columnFilter(i) {
+                $('#exam-data-tables').DataTable().column(i).search(
+                        $('#filter'+i).val()
+                        ).draw();
+            }
         });
     </script>
 
@@ -409,3 +450,9 @@
             })
         })
     </script>
+    
+    <style>
+        #exam-data-tables_info, #exam-data-tables_filter{
+            display: none;
+        }
+    </style>

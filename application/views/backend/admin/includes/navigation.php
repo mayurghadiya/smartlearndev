@@ -128,7 +128,12 @@
                                 <a href="<?php echo base_url('index.php?admin/marks'); ?>">
                                     <span class="menu-text">Marks</span>  
                                 </a>
-                            </li> 	
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url('index.php?admin/grade'); ?>">
+                                    <span class="menu-text">Grade</span>  
+                                </a>
+                            </li>                            
                         </ul>   
                     </div>
                 </li>  
@@ -252,7 +257,7 @@
                         </ul>
                     </div>
                 </li>	
-                
+
                 <li> 
                     <a href="<?php echo base_url('index.php?video_streaming'); ?>">
                         <span class="menu-icon entypo-icon"><i class="fa fa-desktop"></i></span>
@@ -260,7 +265,7 @@
                         <span class="menu-badge"></span>
                     </a>          
                 </li>
-                
+
                 <li>
                     <a href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon entypo-icon"><i class="fa fa-envelope"></i></span> 

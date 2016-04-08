@@ -868,5 +868,29 @@ class Crud_model extends CI_Model {
                     'am_title' => $title
                 ))->row();
     }
+    
+    /**
+     * Get all grade
+     * @return array
+     */
+    function grade() {
+        return $this->db->get('grade')->result();
+    }
+    
+    /**
+     * Insert or update grade
+     * @param int $id
+     * @param array $data
+     */
+    function save_grade($data, $id = NULL) {
+        if($id == NULL) {
+            //create
+            $this->db->insert('grade', $data);
+        } else {
+            //update
+            $this->db->where('grade_id', $id);
+            $this->db->update('grade', $data);
+        }
+    }
 
 }
