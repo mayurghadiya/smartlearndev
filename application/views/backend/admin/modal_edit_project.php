@@ -259,6 +259,14 @@ endforeach;
                     success:function(response){
                         $("#batch2").html(response);
                         $("#student2").html('');
+                        $.ajax({
+                                type:"POST",
+                                url:"<?php echo base_url().'index.php?admin/get_semester/'; ?>",
+                                data:{'course':course},                   
+                                success:function(response1){
+                                    $("#semester2").html(response1);
+                                }
+                            });
                     }
                 });
         });
