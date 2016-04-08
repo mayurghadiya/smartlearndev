@@ -41,7 +41,10 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">		
-                                
+                                <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                            </div>
                                 <div class="panel-body">
                                     <form action="#" method="post" id="searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -85,6 +88,7 @@
                                 </div>
                                     </form>
                                  </div>
+                                </div>
                                <div class="panel-body table-responsive" id="getresponse">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
@@ -281,6 +285,10 @@
                             
                             
                                  <div class="tab-pane box" id="submitedlist">	
+                                       <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                            </div>
                                      <div class="panel-body">
                                     <form action="#" method="post" id="sub_searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -324,6 +332,7 @@
                                 </div>
                                     </form>
                                  </div>
+                                       </div>
                                      <div class="panel-body table-responsive" id="getsubmit">
                                     <table class="table table-striped" id="data-tabless">
                                         <thead>
