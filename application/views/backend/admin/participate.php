@@ -1006,6 +1006,15 @@ $("#courses").change(function(){
                                                                         url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
                                                                         data: dataString,
                                                                         success: function (response) {
+                                                                             $.ajax({
+                                                                                type:"POST",
+                                                                                url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
+                                                                                data:{'course':course},                   
+                                                                                success:function(response1){
+                                                                                    $("#semester").html(response1);
+                                                                                     $("#semester").val($("#semester option:eq(1)").val());
+                                                                                }
+                                                                                });
                                                                               $("#semester").val($("#semester option:eq(1)").val());
                                                                             $("#batch").html(response);
                                                                         }
