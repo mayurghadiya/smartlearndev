@@ -189,7 +189,7 @@
                                             <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select branch</option>
                                                     <?php
                                                     $datacourse = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($datacourse as $rowcourse) {
@@ -222,15 +222,7 @@
                                             <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
-                                                    <option value="">Select semester</option>
-                                                    <?php
-                                                    $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-                                                    foreach ($datasem as $rowsem) {
-                                                        ?>
-                                                        <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
+                                                   
                                                 </select>
                                             </div>
                                         </div>
@@ -336,6 +328,15 @@
                                                             data: dataString,
                                                             success: function (response) {
                                                                 $("#batch").html(response);
+                                                                
+                                                                    $.ajax({
+                                                                       type: "POST",
+                                                                       url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                                                                       data: dataString,
+                                                                       success: function (response1) {
+                                                                           $("#semester").html(response1);
+                                                                       }
+                                                                   });
                                                             }
                                                         });
                                                     });
