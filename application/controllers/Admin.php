@@ -3778,7 +3778,29 @@ class Admin extends CI_Controller {
             }
         }
     }
+    
+    function get_courcestudy($param = '') {
 
+        $did = $this->input->post("degree");
+
+        if ($did != '') {
+
+           
+
+                $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+
+                $html = '<option value="">Select Branch</option>';
+                if ($param == '') {
+                    $html .= '<option value="All">All</option>';
+                }
+                foreach ($cource as $crs):
+                    $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+                endforeach;
+                echo $html;
+           
+        }
+    }
     function get_batchs($param = '') {
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
