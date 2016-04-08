@@ -225,7 +225,6 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
         if ($param1 == 'do_update') {
-            echo '<pre>';
             $data['event_name'] = $this->input->post('event_name');
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
@@ -2297,7 +2296,7 @@ class Admin extends CI_Controller {
                             'em_end_time' => $this->input->post('end_date_time', TRUE),
                         );
                         $this->Crud_model->insert_exam($data);
-                        $this->exam_email_notification($_POST);
+                        //$this->exam_email_notification($_POST);
                         $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
                         redirect(base_url('index.php?admin/exam'));
                     } else {
