@@ -135,7 +135,7 @@ foreach ($edit_data as $row):
                            
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info">Update</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
                                 </div>
                             </div>
                             </form>
