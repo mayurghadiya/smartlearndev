@@ -11,7 +11,7 @@
                             <img style="margin-top: 5px;" src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
                             <?php } ?>
                              </div> </a> </li>
-                      <li> <a href="<?php echo base_url(); ?>index.php?student/assignment/submited_assignment" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Submited Assignment List</div> </a> </li>
+                      <li> <a href="<?php echo base_url(); ?>index.php?student/assignment/submited_assignment" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Submitted Assignment List</div> </a> </li>
                  <!--   <li> <a href="<?php echo base_url(); ?>index.php?student/assignment/offline" target<!--="_blank"> <d<!--iv class="menu-icon"><i class=" icon-trophy"></i></div> <div class="menu-text">Offline</div> </a> </li>-->
                    
                     </ul>

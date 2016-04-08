@@ -63,7 +63,7 @@ color:#5E656B
 .btn-lg { padding: 11px 19px }
 .btn-sm { padding: 5px 10px }
 .btn-xs { font-size: 11px; padding: 4px 8px }
-.btn.vd_bg-green:hover, .btn.vd_green:hover { background-color: #66c066 !important; color: #FFF !important }
+.btn.vd_bg-green:hover, .btn.vd_green:hover { background-color: #66c066 !important; color: #FFF !important; border-color:#fff !important; }
 .btn.vd_bg-red:hover, .btn.vd_red:hover { background-color: #f74a13 !important; color: #FFF !important }
 .btn.vd_bg-blue:hover, .btn.vd_blue:hover { background-color: #1e6189 !important; color: #FFF !important }
 .btn.vd_bg-yellow:hover, .btn.vd_yellow:hover { background-color: #f79013 !important; color: #FFF !important }
@@ -742,7 +742,7 @@ color:#CCCCCC
 .vd_linkedin { color: #2e8cc2 !important }
 .vd_googleplus { color: #cf1900 !important }
 .vd_bg-red { background-color: #7ccd7c  !important }
-.vd_bg-green { background-color: #7ccd7c !important }
+.vd_bg-green { background-color: #7ccd7c !important; border-color:#7ccd7c !important;  }
 .vd_bg-yellow { background-color: #f89c2c !important }
 .vd_bg-blue { background-color: #23709e !important }
 .vd_bg-white { background-color: #fff !important }

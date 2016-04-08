@@ -3,9 +3,9 @@
 		<div class="vd_head-section clearfix"></div>
 		<!--<hr/>-->
 		<div class="vd_title-section clearfix">
-            <div class="vd_panel-header">
+<!--            <div class="vd_panel-header">
               <h1>Student View</h1>
-             </div>
+             </div>-->
           </div>
 		  
 		  <ul class="mega-ul">   
