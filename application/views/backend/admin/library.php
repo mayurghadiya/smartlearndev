@@ -69,7 +69,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label>Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                      <option value="All">All</option>
