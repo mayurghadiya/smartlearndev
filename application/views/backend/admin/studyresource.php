@@ -36,10 +36,7 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">	
-                                 <div class="tab-pane box" id="submitedlist">	
-                                      <div class="tab-pane box active" id="list">		
-                             
-<div class="panel panel-default">
+                                <div class="panel panel-default">
 <div class="panel-heading">
 
 </div>
@@ -93,7 +90,8 @@
                                 </div>
                                     </form>
                                  </div>
-</div>
+                                </div>
+                                
                                 <div class="panel-body table-responsive" id="getresponse">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
