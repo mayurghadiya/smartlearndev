@@ -264,7 +264,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Participate</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Add Participate</button>
                                             </div>
                                         </div>
                                         </form>               
@@ -313,7 +313,7 @@
 
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Question</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Add Question</button>
                                             </div>
                                         </div>
                                     </div>
@@ -331,6 +331,10 @@
                             
                             <div class="tab-pane box" id="survey">		
                                 <div class="tab-pane box" id="list">
+                                      <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                            </div>
                                      <div class="panel-body">
                                     <form action="#" method="post" id="searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -356,7 +360,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label>Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -370,11 +374,12 @@
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
                                         
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
                                  </div>
+                                      </div>
                                     <div class="panel-body table-responsive" id="getresponse">
                                         <table class="table table-striped" id="data-tabless">
                                             <thead>
@@ -517,6 +522,11 @@
 
 
                             <div class="tab-pane box" id="listing">	
+                                 <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                            </div>
+                                <div class="panel-body">
                                 <form action="#" method="post" id="sub_searchform">
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Course</label>
@@ -542,7 +552,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label> Semester</label>
                                                 <select id="sub_semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -556,10 +566,12 @@
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
                                         
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
+                                </div>
+                                 </div>
                                 <div class="panel-body table-responsive" id="getsubmit">
                                     <table class="table table-striped" id="data-tablessearch">
                                         <thead>
@@ -627,6 +639,11 @@
                             </div>
 
                             <div class="tab-pane box" id="uploads">
+                                 <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                            </div>
+                                <div class="panel-body">
                                 <form action="#" method="post" id="upd_searchform">
                                             <div class="form-group col-sm-2 validating">
                                                 <label>Course</label>
@@ -652,7 +669,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label> Semester</label>
                                                 <select id="upd_semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -666,10 +683,12 @@
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
                                         
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
+                                </div>
+                                 </div>
                                 <div class="panel-body table-responsive" id="upd_getsubmit">
                                     <table class="table table-striped" id="data-tablesupd">
                                         <thead>

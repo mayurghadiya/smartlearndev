@@ -42,7 +42,7 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                                         
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Update</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Update</button>
                                             </div>
                                         </div>
                             
