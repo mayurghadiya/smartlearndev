@@ -1574,7 +1574,7 @@ class Admin extends CI_Controller {
 
 
             $this->db->insert('subject_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', get_phrase('subject_added_successfully'));
             redirect(base_url() . 'index.php?admin/subject/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1588,13 +1588,13 @@ class Admin extends CI_Controller {
 
             $this->db->where('sm_id', $param2);
             $this->db->update('subject_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('subject_updated_successfully'));
             redirect(base_url() . 'index.php?admin/subject/', 'refresh');
         }
         if ($param1 == 'delete') {
             $this->db->where('sm_id', $param2);
             $this->db->delete('subject_manager');
-            $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('subject_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/subject/', 'refresh');
         }
         $page_data['subject'] = $this->db->get('subject_manager')->result();
