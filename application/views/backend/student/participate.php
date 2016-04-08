@@ -34,7 +34,7 @@
                                                   $count = 1;
                                                  foreach($survey as $rows): ?>
                                                     <tr>
-                                                        <th><?php echo $rows->question; ?> </label></th>
+                                                        <th><?php echo $rows->question; ?> <span style="color:red">*</span> </label></th>
                                                         <input  type="hidden" name="question_id<?php echo $count; ?>" value="<?php echo $rows->sq_id; ?>">
                                                         <td title="Very Dissatisfied">
                                                             <input type="radio" id="Field1_1" name="Field<?php echo $count; ?>" tabindex="1" value="1">
