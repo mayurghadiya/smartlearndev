@@ -144,6 +144,14 @@
             data: dataString,
             success: function (response) {
                 $("#batch").html(response);
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                    data: dataString,
+                    success: function (response1) {
+                        $("#semester").html(response1);
+                    }
+                });
             }
         });
     });
