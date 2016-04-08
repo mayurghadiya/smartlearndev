@@ -37,8 +37,8 @@
 
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
-                            <div class="tab-pane box active" id="list">
-
+                            <div class="tab-pane box active" id="list">     
+                                
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="exam-data-tables">
                                         <thead>                                            
@@ -398,7 +398,7 @@
             "use strict";
             $('#exam-data-tables').DataTable({
                 "order": [[7, "desc"]],
-            });            
+            });
         });
     </script>
 

@@ -181,7 +181,7 @@ $semester = $this->db->get('semester')->result();
             dateFormat: 'dd M yy',
             changeMonth: true,
             changeYear: true
-
+            
         });
     });
 </script>
