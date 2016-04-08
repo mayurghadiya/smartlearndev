@@ -475,6 +475,14 @@ foreach ($datadegree as $rowdegree) {
                     data:dataString,                   
                     success:function(response){
                         $("#sub_batches").html(response);
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                            data: dataString,
+                            success: function (response1) {
+                                $("#sub_semesters").html(response1);
+                            }
+                        });
                     }
                 });
         });
