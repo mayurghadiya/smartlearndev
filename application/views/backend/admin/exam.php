@@ -41,7 +41,7 @@
 
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="exam-data-tables">
-                                        <thead>
+                                        <thead>                                            
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Exam Name</th>
@@ -88,9 +88,9 @@
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">    
-<div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div>                                     
+                                    <div class="">
+                                        <span style="color:red">* is mandatory field</span> 
+                                    </div>                                     
                                     <?php echo form_open(base_url() . 'index.php?admin/exam/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'examform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <?php
@@ -254,50 +254,50 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-                                                $.validator.setDefaults({
-                                                    submitHandler: function (form) {
-                                                        form.submit();
+                                            $.validator.setDefaults({
+                                                submitHandler: function (form) {
+                                                    form.submit();
+                                                }
+                                            });
+
+                                            $().ready(function () {
+                                                $("#examform").validate({
+                                                    rules: {
+                                                        exam_name: "required",
+                                                        exam_type: "required",
+                                                        year: "required",
+                                                        degree: "required",
+                                                        course: "required",
+                                                        batch: "required",
+                                                        semester: "required",
+                                                        total_marks: "required",
+                                                        passing_marks: {
+                                                            required: true
+                                                        },
+                                                        status: "required",
+                                                        date: "required",
+                                                        start_date_time: "required",
+                                                        end_date_time: "required"
+                                                    },
+                                                    messages: {
+                                                        exam_name: "Please enter Exam Name",
+                                                        exam_type: "Please select Exam type",
+                                                        year: "Please select year",
+                                                        degree: "Please select course",
+                                                        course: "Please select branch",
+                                                        batch: "Please select batch",
+                                                        semester: "Please select semester",
+                                                        total_marks: "Please enter total marks",
+                                                        passing_marks: {
+                                                            required: "Please enter passing marks"
+                                                        },
+                                                        status: "Please select status",
+                                                        date: "Please enter date",
+                                                        start_date_time: "Please enter start date time",
+                                                        end_date_time: "Please enter end date time"
                                                     }
                                                 });
-
-                                                $().ready(function () {
-                                                    $("#examform").validate({
-                                                        rules: {
-                                                            exam_name: "required",
-                                                            exam_type: "required",
-                                                            year: "required",
-                                                            degree: "required",
-                                                            course: "required",
-                                                            batch: "required",
-                                                            semester: "required",
-                                                            total_marks: "required",
-                                                            passing_marks: {
-                                                                required: true
-                                                            },
-                                                            status: "required",
-                                                            date: "required",
-                                                            start_date_time: "required",
-                                                            end_date_time: "required"
-                                                        },
-                                                        messages: {
-                                                            exam_name: "Please enter Exam Name",
-                                                            exam_type: "Please select Exam type",
-                                                            year: "Please select year",
-                                                            degree: "Please select course",
-                                                            course: "Please select branch",
-                                                            batch: "Please select batch",
-                                                            semester: "Please select semester",
-                                                            total_marks: "Please enter total marks",
-                                                            passing_marks: {
-                                                                required: "Please enter passing marks"
-                                                            },
-                                                            status: "Please select status",
-                                                            date: "Please enter date",
-                                                            start_date_time: "Please enter start date time",
-                                                            end_date_time: "Please enter end date time"
-                                                        }
-                                                    });
-                                                });
+                                            });
     </script>
 
     <script type="text/javascript">
@@ -396,9 +396,9 @@
     <script type="text/javascript">
         $(document).ready(function () {
             "use strict";
-            $('#exam-data-tables').dataTable({
-                "order": [[7, "desc"]]
-            });
+            $('#exam-data-tables').DataTable({
+                "order": [[7, "desc"]],
+            });            
         });
     </script>
 
