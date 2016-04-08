@@ -62,7 +62,13 @@
 
                                                                     <span>Participate</span></label>
                                                             </li>
+                                                            <li>
+                                                                <label>
+                                                                    <input type="checkbox" name="event" value="event"
+                                                                           <?php if (isset($from['event'])) echo 'checked'; ?>>
 
+                                                                    <span>Event</span></label>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -111,7 +117,8 @@
                                                                             <?php } ?>
 
                                                                             <?php if (isset($this->session->userdata('notifications')['exam_manager']) ||
-                                                                                    isset($this->session->userdata('notifications')['exam_time_table'])) { ?>
+                                                                                    isset($this->session->userdata('notifications')['exam_time_table'])) {
+                                                                                ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/exam_listing'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -120,7 +127,7 @@
                                                                                     </a> 
                                                                                 </li>
                                                                             <?php } ?>
-                                                                             <?php if (isset($this->session->userdata('notifications')['assignment_manager'])) { ?>
+<?php if (isset($this->session->userdata('notifications')['assignment_manager'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/assignment/assignment_list'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -129,7 +136,7 @@
                                                                                     </a> 
                                                                                 </li>
                                                                             <?php } ?>
-                                                                                 <?php if (isset($this->session->userdata('notifications')['project_manager'])) { ?>
+<?php if (isset($this->session->userdata('notifications')['project_manager'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/project/submission'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -138,7 +145,7 @@
                                                                                     </a> 
                                                                                 </li>
                                                                             <?php } ?> 
-                                                                                <?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
+<?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/exam_marks'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -146,11 +153,11 @@
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
-                                                                            <?php } ?> 
-                                                                                
-                                                                               
-                                                                                 
-                                                                                 <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
+<?php } ?> 
+
+
+
+<?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/volunteer'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -159,7 +166,7 @@
                                                                                     </a> 
                                                                                 </li>
                                                                             <?php } ?>
-                                                                                 <?php if (isset($this->session->userdata('notifications')['study_resources'])) { ?>
+<?php if (isset($this->session->userdata('notifications')['study_resources'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/studyresources'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -168,7 +175,7 @@
                                                                                     </a> 
                                                                                 </li>
                                                                             <?php } ?>
-                                                                                 <?php if (isset($this->session->userdata('notifications')['library_manager'])) { ?>
+<?php if (isset($this->session->userdata('notifications')['library_manager'])) { ?>
                                                                                 <li> 
                                                                                     <a href="<?php echo base_url('index.php?student/digitallibrary'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
@@ -176,7 +183,7 @@
                                                                                         </div> 
                                                                                     </a> 
                                                                                 </li>
-                                                                            <?php } ?>
+<?php } ?>
 
                                                                         </ul>
                                                                     </div>
@@ -185,13 +192,13 @@
                                                         </div>  
                                                         </li> 
                                                         <li id="top-menu-profile" class="profile mega-li"> 
-                                                            <?php if ($this->session->userdata('student_login') == 1) { ?>
+<?php if ($this->session->userdata('student_login') == 1) { ?>
                                                                 <a href="#" class="mega-link"  data-action="click-trigger"> 
                                                                     <span  class="mega-image">
                                                                         <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('student', $this->session->userdata('std_id')); ?>" alt="...">             
                                                                     </span>
                                                                     <span class="mega-name">
-                                                                        <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
+    <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
                                                                     </span>
                                                                 </a> 
                                                                 <div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">
@@ -208,7 +215,7 @@
                                                             } else {
                                                                 ?>
                                                                 <a href="<?php base_url() ?>index.php">Login</a>
-                                                            <?php } ?>
+<?php } ?>
                                                         </li> 
                                                         </ul>
                                                         <!-- Head menu search form ends -->                         
@@ -233,7 +240,7 @@
                                                             foreach ($news_conent as $row):
                                                                 ?>	
                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
-                                                            <?php endforeach; ?>
+<?php endforeach; ?>
                                                         </ul>
                                                     </div>
                                                 </nav>
@@ -251,7 +258,7 @@
                                                         $gochat = "chatuser" . $sess;
                                                         $gochat = base64_encode($gochat);
                                                         ?>
-                                                        <a class='btn btn-info chat-button' target="_blank"  href='<?php echo base_url(); ?>chat?index.php?act=<?php echo $gochat; ?>'><i class="fa fa-comment"></i>Go To Chat<?php // include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat2/lhc_web/index.php');       ?>
+                                                        <a class='btn btn-info chat-button' target="_blank"  href='<?php echo base_url(); ?>chat?index.php?act=<?php echo $gochat; ?>'><i class="fa fa-comment"></i>Go To Chat<?php // include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat2/lhc_web/index.php');        ?>
                                                         </a>
 
                                                         <div class='chat-link-box'>
@@ -273,7 +280,7 @@
 
 //require_once($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat2/lhc_web/index.php'); 
                                                                 ?> 
-                                                                <?php //include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat/lhc_web/design/defaulttheme/tpl/pagelayouts/userchat.php');  ?>
+<?php //include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat/lhc_web/design/defaulttheme/tpl/pagelayouts/userchat.php');   ?>
 
 
                                                                 <?php //echo $_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat/lhc_web/index.php';

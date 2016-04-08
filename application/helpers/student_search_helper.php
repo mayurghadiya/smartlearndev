@@ -38,8 +38,10 @@ if (!function_exists('global_search')) {
                     $result['exam'] = exam_search($search_query);
                 if (isset($from['assignment']))
                     $result['assignment'] = assignment_search($search_query);
-                if(isset($from['participate']))
+                if (isset($from['participate']))
                     $result['participate'] = participate_search($search_query);
+                if (isset($from['event']))
+                    $result['event'] = event_search($search_query);
                 break;
             default :
                 //global search
@@ -49,6 +51,7 @@ if (!function_exists('global_search')) {
                 //$result['batch'] = batch_search($search_query);
                 $result['assignment'] = assignment_search($search_query);
                 $result['participate'] = participate_search($search_query);
+                $result['event'] = event_search($search_query);
         }
 
         return $result;
@@ -195,6 +198,7 @@ if (!function_exists('assignment_search')) {
 }
 
 if (!function_exists('participate_search')) {
+
     /**
      * Participate search
      * @param string $search_query
@@ -203,10 +207,10 @@ if (!function_exists('participate_search')) {
     function participate_search($search_query) {
         $CI = & get_instance();
         $CI->load->database();
-        
+
         $batch = $CI->db->list_fields('participate_manager');
         $CI->db->select();
-        $CI->db->from('participate_manager');        
+        $CI->db->from('participate_manager');
         $CI->db->join('semester', 'semester.s_id = participate_manager.pp_semester');
         $CI->db->join('student', 'student.std_id = participate_manager.pp_student_id');
         $CI->db->join('course', 'course.course_id = student.course_id');
@@ -214,6 +218,30 @@ if (!function_exists('participate_search')) {
             $CI->db->or_like("participate_manager.{$field}", $search_query, 'after');
         }
         $CI->db->where('student.std_id', $CI->session->userdata('student_id'));
+        $result = $CI->db->get();
+
+        return $result->result();
+    }
+
+}
+
+if (!function_exists('event_search')) {
+
+    /**
+     * Event search
+     * @param string $search_query
+     * @return array
+     */
+    function event_search($search_query) {
+        $CI = & get_instance();
+        $CI->load->database();
+
+        $event = $CI->db->list_fields('event_manager');
+        $CI->db->select();
+        $CI->db->from('event_manager');
+        foreach ($event as $field) {
+            $CI->db->or_like("event_manager.{$field}", $search_query, 'after');
+        }
         $result = $CI->db->get();
 
         return $result->result();
