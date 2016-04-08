@@ -360,7 +360,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label>Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -552,7 +552,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label> Semester</label>
                                                 <select id="sub_semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -669,7 +669,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label> Semester</label>
                                                 <select id="upd_semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
