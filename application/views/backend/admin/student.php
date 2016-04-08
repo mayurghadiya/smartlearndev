@@ -222,7 +222,7 @@
                                             <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
-                                                   
+                                                    <option value="">Select semester</option>
                                                 </select>
                                             </div>
                                         </div>
