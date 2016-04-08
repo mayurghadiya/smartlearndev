@@ -234,7 +234,16 @@ endforeach;
                     url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
                     data:dataString,                   
                     success:function(response){
-                          $("#semester2").val($("#semester2 option:eq(1)").val());
+                                $.ajax({
+                                type:"POST",
+                                url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
+                                data:{'course':course},                   
+                                success:function(response1){
+                                 $("#semester2").html(response1);
+                                 $("#semester2").val($("#semester2 option:eq(1)").val());
+                                }
+                                });
+                         // $("#semester2").val($("#semester2 option:eq(1)").val());
                         $("#batch2").html(response);
                     }
                 });
