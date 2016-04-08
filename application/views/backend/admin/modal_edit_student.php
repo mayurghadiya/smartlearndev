@@ -182,7 +182,7 @@ foreach ($edit_data as $row):
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
-                                        <select name="semester" id="semester">
+                                        <select name="semester" id="semester1">
                                             <option value="">Select semester</option>
                                             <?php
                                             $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
@@ -194,7 +194,6 @@ foreach ($edit_data as $row):
                                                 } else {
                                                     ?>
                                                     <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
-
                                                     <?php
                                                 }
                                             }
@@ -312,6 +311,14 @@ endforeach;
                     data:dataString,                   
                     success:function(response){
                         $("#batch2").html(response);
+                        $.ajax({
+                                type: "POST",
+                                url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                                data: dataString,
+                                success: function (response1) {
+                                    $("#semester1").html(response1);
+                                }
+                            });
                     }
                 });
         });
