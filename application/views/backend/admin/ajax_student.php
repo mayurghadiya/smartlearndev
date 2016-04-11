@@ -1,4 +1,16 @@
- <div class="vd_title-section clearfix">
+ <script>
+<?php
+$message = $this->session->flashdata('flash_message');
+if($message != '') { ?>
+$.toaster({ 
+	priority : 'success', 
+	title : 'Success! ', 
+	message : '<?php echo $message; ?>',
+	timeOut: 5000
+});
+<?php } ?>
+ </script> 
+<div class="vd_title-section clearfix">
     <div class="">
         <h1><?php echo count($datastudent)." students found"?></h1>
     </div>
