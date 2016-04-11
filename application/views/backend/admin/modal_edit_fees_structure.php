@@ -4,6 +4,11 @@ $degree = $this->db->get('degree')->result();
 $course = $this->db->get_where('course', array(
             'degree_id' => $edit_data->degree_id
         ))->result();
+$semester_detail = $this->db->get_where('course', array(
+            'course_id' => $edit_data->course_id
+        ))->row();
+$semester = explode(',', $semester_detail->semester_id);
+$this->db->where_in('s_id', $semester);
 $semester = $this->db->get('semester')->result();
 
 $query = "SELECT * FROM batch ";
@@ -204,6 +209,7 @@ $batch = $this->db->query($query)->result();
             var degree_id = $('#edit_degree').val();
             var course_id = $(this).val();
             batch_from_degree_and_course(degree_id, course_id);
+            get_semester_from_branch(course_id);
         })
 
         //find batch from degree and course
@@ -223,6 +229,23 @@ $batch = $this->db->query($query)->result();
                 }
             })
         }
+
+        //get semester from brach
+        function get_semester_from_branch(branch_id) {
+            $('#edit_semester').find('option').remove().end();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                type: 'get',
+                success: function (content) {
+                    $('#edit_semester').append('<option value="">Select</option>');
+                    var semester = jQuery.parseJSON(content);
+                    $.each(semester, function (key, value) {
+                        $('#edit_semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                    })
+                }
+            })
+        }
+
 
     })
 </script>
