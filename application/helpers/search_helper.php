@@ -62,6 +62,7 @@ if (!function_exists('global_search')) {
                 $result['assignment'] = assignment_search($search_query);
                 $result['participate'] = participate_search($search_query);
                 $result['degree'] = degree_search($search_query);
+                $result['event'] = event_search($search_query);
         }
 
         return $result;
