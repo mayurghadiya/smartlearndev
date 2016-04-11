@@ -629,7 +629,7 @@
                                                             echo $user[0]['s_name'];
                                                         }
                                                         ?></td>	
-                                                <td><a href="<?php echo base_url(); ?>index.php?admin/confirmparticipate/<?php echo $rows['participate_student_id']; ?>" class="btn btn-info">Disapprove</a></td>	                                                    
+                                                <td><a href="<?php echo base_url(); ?>index.php?admin/confirmparticipate/<?php echo $rows['participate_student_id']; ?>" class="btn btn-info vd_bg-green">Disapprove</a></td>	                                                    
 
                                                 </tr>
 <?php endforeach; ?>						

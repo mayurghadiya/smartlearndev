@@ -148,7 +148,7 @@
                                                     <td><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date('F d, Y',strtotime($row->assign_dos)); ?></td>	
                                                     <td class="menu-action">
-                                                        <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn  menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
                                                         <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/assignment/delete/<?php echo $row->assign_id; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
                                                     </td>	
@@ -321,7 +321,7 @@
                                 <div class="form-group col-sm-2">
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
