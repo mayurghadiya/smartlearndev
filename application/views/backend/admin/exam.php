@@ -35,27 +35,40 @@
                         </ul>
                         <!------CONTROL TABS END------>
 
-                        <div class="tab-content">
-                            <br/>
-                            <div class="form-group col-sm-2 validating">
-                                <label>Course</label>
-                                <input id="filter3" class="filter-rows" type="text" name="filter" data-filter="3"/>
-                            </div>
-                            <div class="form-group col-sm-2 validating">
-                                <label>Branch</label>
-                                <input id="filter4" class="filter-rows form-control" type="text" name="branch_filter" data-filter="4"/>
-                            </div>
-                            <div class="form-group col-sm-2 validating">
-                                <label>Batch</label>
-                                <input id="filter5" class="filter-rows form-control" type="text" name="filter" data-filter="5"/>
-                            </div>
-                            <div class="form-group col-sm-2 validating">
-                                <label>Semester</label>
-                                <input id="filter6" class="filter-rows form-control" type="text" name="filter" data-filter="6"/>
-                            </div>
+                        <div class="tab-content">                            
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">   
-                                
+                                <br/>
+                                <div class="form-group col-sm-2">
+                                    <label>Course</label>
+                                    <select class="form-control filter-rows" id="filter3" data-filter="3" data-type="course">
+                                        <option value="">All</option>
+                                        <?php foreach ($degree as $row) { ?>
+                                            <option value="<?php echo $row->d_name; ?>"
+                                                    data-id="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label>Branch</label>
+                                    <select id="filter4" name="branch" data-filter="4" class="form-control filter-rows" data-type="branch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label>Batch</label>
+                                    <select id="filter5" name="batch" data-filter="5" class="form-control filter-rows" data-type="batch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>                                
+                                <div class="form-group col-sm-2">
+                                    <label> Semester</label>
+                                    <select id="filter6" name="semester" data-filter="6" class="form-control filter-rows" data-type="semester">
+                                        <option value="">All</option>
+
+                                    </select>
+                                </div>
+                                <label style="margin-left: 40px; margin-top: 30px;">OR</label>
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="exam-data-tables">
                                         <thead> 
@@ -105,7 +118,7 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">    
+                                <div class="box-content">                                       
                                     <div class="">
                                         <span style="color:red">* is mandatory field</span> 
                                     </div>                                     
@@ -206,14 +219,7 @@
                                             <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="semester" id="semester">
-                                                    <?php
-                                                    $semester_select_id = set_value('semester');
-                                                    ?>
-                                                    <option value="">Select</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                                <?php if ($row->s_id == $semester_select_id) echo 'selected'; ?>><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -277,7 +283,6 @@
                                                     form.submit();
                                                 }
                                             });
-
                                             $().ready(function () {
                                                 $("#examform").validate({
                                                     rules: {
@@ -341,7 +346,6 @@
                 }
             })
         });
-
     </script>
 
     <script>
@@ -350,7 +354,6 @@
             $('#degree').on('change', function () {
                 var course_id = $('#course').val();
                 var degree_id = $(this).val();
-
                 //remove all present element
                 $('#course').find('option').remove().end();
                 $('#course').append('<option value="">Select</option>');
@@ -367,12 +370,12 @@
                 })
                 batch_from_degree_and_course(degree_id, course_id);
             });
-
             //batch from course and degree
             $('#course').on('change', function () {
                 var degree_id = $('#degree').val();
                 var course_id = $(this).val();
                 batch_from_degree_and_course(degree_id, course_id);
+                get_semester_from_branch(course_id);
             })
 
             //find batch from degree and course
@@ -393,6 +396,22 @@
                 })
             }
 
+            //get semester from brach
+            function get_semester_from_branch(branch_id) {
+                $('#semester').find('option').remove().end();
+                $.ajax({
+                    url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                    type: 'get',
+                    success: function (content) {
+                        $('#semester').append('<option value="">Select</option>');
+                        var semester = jQuery.parseJSON(content);
+                        $.each(semester, function (key, value) {
+                            $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                        })
+                    }
+                })
+            }
+
         })
     </script>
 
@@ -403,7 +422,6 @@
                 $('#passing_marks').attr('max', total_marks);
                 $('#passing_marks').attr('required', '');
             });
-
             $('#passing_marks').on('focus', function () {
                 var total_marks = $('#total_marks').val();
                 $(this).attr('max', total_marks);
@@ -413,36 +431,33 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            "use strict";            
-            var t = $('#exam-data-tables').DataTable({
+            "use strict";
+            $('#exam-data-tables').dataTable({
                 "order": [[7, "desc"]],
-                "columnDefs": [{
-                        "searchable": false,
-                        "orderable": false,
-                        "targets": 0
-                    }],
-                 "dom": '<"top"i>rt<"bottom"flp><"clear">'
+                "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
             });
 
-            t.on('order.dt search.dt', function () {
-                t.column(0, {search: 'applied', order: 'applied'}).nodes().each(function (cell, i) {
-                    cell.innerHTML = i + 1;
-                });
-            }).draw();
+            $('.filter-rows').on('change', function () {
+                var filter_id = $(this).attr('data-filter');
+                filter_column(filter_id);
+            });
 
-            $('.filter-rows').on('keyup', function () {
-                var filter_id = $(this).attr('data-filter');                
-                columnFilter(filter_id);
-            })
-
-            function columnFilter(i) {
-                $('#exam-data-tables').DataTable().column(i).search(
-                        $('#filter'+i).val()
+            function filter_column(filter_id) {
+                $('#exam-data-tables').DataTable().column(filter_id).search(
+                        $('#filter' + filter_id).val()
                         ).draw();
             }
         });
     </script>
-
+    
+    <style>
+        #exam-data-tables_filter{
+            margin-top: -50px;
+        }
+    </style>
+    
     <script>
         $(document).ready(function () {
             $('#date').on('change', function () {
@@ -450,9 +465,3 @@
             })
         })
     </script>
-    
-    <style>
-        #exam-data-tables_info, #exam-data-tables_filter{
-            display: none;
-        }
-    </style>

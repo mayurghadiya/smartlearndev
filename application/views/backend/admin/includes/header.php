@@ -97,7 +97,13 @@
                                                                     <input type="checkbox" name="participate" value="participate"
                                                                            <?php if (isset($from['participate'])) echo 'checked'; ?>>
                                                                     <span>Participate</span></label>
-							  </li>							  	
+							  </li>
+							  <li>
+								<label>
+                                                                    <input type="checkbox" name="center" value="center"
+                                                                           <?php if (isset($from['center'])) echo 'checked'; ?>>
+								  <span>Exam Center</span></label>
+                                                            </li>	
 							</ul>
 						  </div>
 						</div>

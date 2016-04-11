@@ -12,14 +12,14 @@
         <div class="vd_content clearfix">
             <div class="vd_head-section clearfix">
                 <div class="vd_head-section clearfix">
-                <div class="vd_panel-header">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Exam Schedule</li>
-                    </ul>                  
+                    <div class="vd_panel-header">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a> </li>
+                            <li><a href="#">Pages</a> </li>
+                            <li class="active">Exam Schedule</li>
+                        </ul>                  
+                    </div>
                 </div>
-            </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
@@ -97,13 +97,13 @@
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">  
-<div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div>                                     
+                                    <div class="">
+                                        <span style="color:red">* is mandatory field</span> 
+                                    </div>                                     
                                     <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'exam_time_table_form', 'target' => '_top')); ?>
                                     <br/>
                                     <div class="padded">
-										<?php
+                                        <?php
                                         $validation_error = validation_errors();
                                         if ($validation_error != '') {
                                             ?>
@@ -112,7 +112,7 @@
                                                 <p><?php echo $validation_error; ?></p>
                                             </div>                                            
                                         <?php } ?>
-										<div class="form-group">
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree" class="form-control">
@@ -144,9 +144,7 @@
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="semester" name="semester">
                                                     <option value="">Select</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
-                                                    <?php } ?>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -202,7 +200,7 @@
         <!-- row --> 
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
-   <?php if ($validation_error != '') { ?> 
+    <?php if ($validation_error != '') { ?> 
         <script>
                                                             $(document).ready(function () {
                                                                 $('#add_time_table').click();
@@ -300,6 +298,7 @@
                 batch_from_degree_and_course(degree_id, course_id);
                 exam_list_from_degree_and_course(degree_id, course_id, batch_id, semester);
                 subject_list(course_id, semester);
+                get_semester_from_branch(course_id);
             })
 
             //exam list from degree, course, batch, and sem
@@ -359,13 +358,29 @@
             function subject_list(course, semester) {
                 $('#subject').find('option').remove().end();
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?admin/subject_list_from_course_and_semester/'+course+'/'+semester,
+                    url: '<?php echo base_url(); ?>index.php?admin/subject_list_from_course_and_semester/' + course + '/' + semester,
                     type: 'get',
                     success: function (content) {
                         $('#subject').append('<option value="">Select</option>');
                         var subject = jQuery.parseJSON(content);
                         $.each(subject, function (key, value) {
-                            $('#subject').append('<option value='+value.sm_id+'>'+value.subject_name+'</option>');
+                            $('#subject').append('<option value=' + value.sm_id + '>' + value.subject_name + '</option>');
+                        })
+                    }
+                })
+            }
+
+            //get semester from brach
+            function get_semester_from_branch(branch_id) {
+                $('#semester').find('option').remove().end();
+                $.ajax({
+                    url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                    type: 'get',
+                    success: function (content) {
+                        $('#semester').append('<option value="">Select</option>');
+                        var semester = jQuery.parseJSON(content);
+                        $.each(semester, function (key, value) {
+                            $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
                         })
                     }
                 })

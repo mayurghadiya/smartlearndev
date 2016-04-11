@@ -23,7 +23,9 @@ foreach ($edit_data as $row):
                                 <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select degree</option>
+                                        <option value="">Select Course</option>
+                                        
+                                        <option value="All" <?php if($row['study_degree']=="All"){ echo "selected=selected"; } ?> >All</option>
                                         <?php
                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                         foreach ($datadegree as $rowdegree) {
@@ -47,7 +49,8 @@ foreach ($edit_data as $row):
                                             <div class="col-sm-5">
 
                                                 <select name="course" id="course2">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select Branch</option>
+                                                     <option value="All" <?php if($row['study_course']=="All"){ echo "selected=selected"; } ?> >All</option>
                                                     <?php
                                                      $course = $this->db->get_where('course', array('course_status' => 1))->result();
                                                     foreach ($course as $crs) {
@@ -65,6 +68,7 @@ foreach ($edit_data as $row):
                                 <div class="col-sm-5">
                                     <select name="batch" id="batch2">
                                         <option value="">Select batch</option>
+                                        <option value="All" <?php if($row['study_batch']=="All"){ echo "selected=selected"; } ?> >All</option>
                                         <?php
                                         $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
                                         foreach ($databatch as $row1) {
@@ -87,6 +91,7 @@ foreach ($edit_data as $row):
                                 <div class="col-sm-5">
                                     <select name="semester" id="semester">
                                         <option value="">Select semester</option>
+                                          <option value="All" <?php if($row['study_sem']=="All"){ echo "selected=selected"; } ?> >All</option>
     <?php
     $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
     foreach ($datasem as $rowsem) {
@@ -135,7 +140,7 @@ foreach ($edit_data as $row):
                            
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info">Update</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
                                 </div>
                             </div>
                             </form>
@@ -154,10 +159,17 @@ endforeach;
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/study'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_courcestudy/'; ?>",
                     data:dataString,                   
                     success:function(response){
+                       
                         $("#course2").html(response);
+                         if(degree=='All')
+                        {
+                               $("#batch2").val($("#batch2 option:eq(1)").val());
+                             $("#course2").val($("#course2 option:eq(1)").val());
+                              $("#semester2").val($("#semester2 option:eq(1)").val());
+                        }
                     }
                 });
         });
@@ -168,10 +180,29 @@ endforeach;
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/study'; ?>",
+                    url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batch2").html(response);
+                        
+                          $.ajax({
+                               type:"POST",
+                               url:"<?php echo base_url().'index.php?admin/get_semesterall/all'; ?>",
+                               data:{'course':course},                   
+                               success:function(response){
+
+                                   $("#semester2").html(response);
+                                   if(course=='All')
+                                    {
+                                        $("#semester2").val($("#semester2 option:eq(1)").val());
+                                    }
+                               }
+                           });
+                           if(course=='All')
+                        {
+                             $("#batch2").val($("#batch2 option:eq(0)").val());
+                            $("#semester2").val($("#semester2 option:eq(1)").val());
+                        }
                     }
                 });
         });

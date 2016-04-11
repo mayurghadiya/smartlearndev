@@ -3,15 +3,15 @@
     <div class="vd_container">
         <div class="vd_content clearfix">
             <div class="vd_head-section clearfix">
-               <div class="vd_head-section clearfix">
-                <div class="vd_panel-header">
-                    <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Exam Marks</li>
-                    </ul>                  
+                <div class="vd_head-section clearfix">
+                    <div class="vd_panel-header">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a> </li>
+                            <li><a href="#">Pages</a> </li>
+                            <li class="active">Exam Marks</li>
+                        </ul>                  
+                    </div>
                 </div>
-            </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
@@ -53,11 +53,7 @@
                                             <div class="form-group col-sm-4 validating">
                                                 <label>Semester</label>
                                                 <select id="semester" name="semester" class="form-control">
-                                                    <option value="">Select</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                                <?php if ($row->s_id == $semester_id) echo 'selected'; ?>><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
+                                                    <option value="">Select</option>                                                    
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
@@ -275,6 +271,7 @@
                         var degree_id = $('#degree').val();
                         var course_id = $(this).val();
                         batch_from_degree_and_course(degree_id, course_id);
+                        get_semester_from_branch(course_id);
                     })
 
                     //find batch from degree and course
@@ -290,6 +287,22 @@
                                 console.log(batch);
                                 $.each(batch, function (key, value) {
                                     $('#batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                                })
+                            }
+                        })
+                    }
+
+                    //get semester from brach
+                    function get_semester_from_branch(branch_id) {
+                        $('#semester').find('option').remove().end();
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                            type: 'get',
+                            success: function (content) {
+                                $('#semester').append('<option value="">Select</option>');
+                                var semester = jQuery.parseJSON(content);
+                                $.each(semester, function (key, value) {
+                                    $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
                                 })
                             }
                         })

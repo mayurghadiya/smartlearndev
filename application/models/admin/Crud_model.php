@@ -892,5 +892,21 @@ class Crud_model extends CI_Model {
             $this->db->update('grade', $data);
         }
     }
+    
+    /**
+     * Get semesters from branch
+     * @param int $branch_id
+     */
+    function get_semesters_of_branch($branch_id){
+        $course = $this->get_course_details($branch_id);
+        $sem_ids = explode(',', $course->semester_id);
+        $semester = $this->db->select()
+                ->from('semester')
+                ->where_in('s_id', $sem_ids)
+                ->get()
+                ->result();
+        
+        return $semester;
+    }
 
 }

@@ -180,7 +180,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info">Edit</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Edit</button>
                                 </div>
                             </div>
                             </form>
@@ -259,6 +259,14 @@ endforeach;
                     success:function(response){
                         $("#batch2").html(response);
                         $("#student2").html('');
+                        $.ajax({
+                                type:"POST",
+                                url:"<?php echo base_url().'index.php?admin/get_semester/'; ?>",
+                                data:{'course':course},                   
+                                success:function(response1){
+                                    $("#semester2").html(response1);
+                                }
+                            });
                     }
                 });
         });

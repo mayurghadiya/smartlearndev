@@ -35,7 +35,7 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="course" id="course">
+                                    <select name="course" id="course1">
                                         <option value="">Select branch</option>
                                         <?php
                                         $course = $this->db->get_where('course', array('course_status' => 1))->result();
@@ -57,13 +57,13 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="semester" id="semester">
+                                    <select name="semester" id="semester1">
                                         <option value="">Select semester</option>
-    <?php
-    $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-    foreach ($datasem as $rowsem) {
-        if ($rowsem->s_id == $row['sm_sem_id']) {
-            ?>
+                                            <?php
+                                            $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
+                                            foreach ($datasem as $rowsem) {
+                                                if ($rowsem->s_id == $row['sm_sem_id']) {
+                                                    ?>
                                                 <option value="<?= $rowsem->s_id ?>" selected><?= $rowsem->s_name ?></option>
                                                 <?php
                                             } else {
@@ -100,7 +100,19 @@ endforeach;
             form.submit();
         }
     });
-
+$("#course1").change(function () {
+        var course = $(this).val();
+        var degree = $("#degree").val();
+        var dataString = "course=" + course;
+        $.ajax({
+            type: "POST",
+            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+            data: dataString,
+            success: function (response) {
+                $("#semester1").html(response);
+            }
+        });
+    });
     $().ready(function () {
         $("#frmeditsubject").validate({
             rules: {

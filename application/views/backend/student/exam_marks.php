@@ -53,8 +53,8 @@
                                                 </b>
                                             </h3>
                                             <p>
-                                                <strong>Student Roll Number : </strong> 
-                                                <?php echo $student_detail->std_roll; ?>
+                                                <strong>Student ID : </strong> 
+                                                <?php echo $student_detail->std_id; ?>
                                             </p>
                                             <p>
                                                 <strong>Batch :   </strong> 

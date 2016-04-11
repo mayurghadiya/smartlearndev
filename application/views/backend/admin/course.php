@@ -46,6 +46,7 @@
                                                 <th>Branch Name</th>
                                                 <th>ID</th>
                                                 <th>Course</th>
+                                                <th>Semester</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -64,6 +65,16 @@
                                                             }
                                                         }
                                                         ?></td>
+                                                <td>
+                                                    <?php
+                                                    $semexplode=explode(',',$row['semester_id']);
+                                                        foreach ($semesters as $sem) {
+                                                            if (in_array($sem['s_id'],$semexplode)) {
+                                                                echo $sem['s_name']."<br> ";
+                                                            }
+                                                        }
+                                                        ?>
+                                                </td>
                                                 <td class="text-center">
                                                         <?php if ($row['course_status'] == '1') { ?>
                                                     <span class="label label-success">Active</span>
@@ -117,7 +128,18 @@
                                                 <input type="text" class="form-control" name="course_alias_id" id="course_alias_id"/>
                                             </div>
                                         </div>
-                                        
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select id="semester" name="semester[]" class="form-control" multiple>
+                                                    <option value="">--- Select Semester ---</option>
+                                                        <?php foreach ($semesters as $srow) { ?>
+                                                        <option value="<?php echo $srow['s_id']; ?>"><?php echo $srow['s_name']; ?>
+                                                        </option>
+                                                        <?php } ?>
+                                                </select>
+                                            </div>	
+                                        </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Description</label>
                                             <div class="col-sm-5">	

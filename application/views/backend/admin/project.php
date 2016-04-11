@@ -39,10 +39,10 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">
-                                <div class="panel panel-default">
-<div class="panel-heading">
+                                 <div class="panel panel-default">
+                            <div class="panel-heading">
 
-</div>
+                            </div>
                                 <div class="panel-body">
                                     <form action="#" method="post" id="searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -67,7 +67,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label> Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -80,12 +80,12 @@
                                 <div class="form-group col-sm-2">
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
                                  </div>
-                                </div>
+                                 </div>
                                 <div class="panel-body table-responsive" id="getresponse">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
@@ -288,7 +288,7 @@ foreach ($datadegree as $rowdegree) {
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Project</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Add Project</button>
                                             </div>
                                         </div>
                                         </form>               
@@ -300,9 +300,9 @@ foreach ($datadegree as $rowdegree) {
                              <!----Project Detail Nikita patel 23-3-2016-->
                             <div class="tab-pane box" id="submitedassignment">	
                                  <div class="panel panel-default">
-<div class="panel-heading">
+                            <div class="panel-heading">
 
-</div>
+                            </div>
                                 <div class="panel-body">
                                     <form action="#" method="post" id="sub_searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -342,7 +342,7 @@ foreach ($datadegree as $rowdegree) {
                                 <div class="form-group col-sm-2">
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
@@ -430,7 +430,21 @@ foreach ($datadegree as $rowdegree) {
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-      
+      $("#searchform").validate({
+                            rules: {
+                                degree:"required",
+                                course:"required",
+                                batch:"required",
+                                semester:"required",
+
+                            },
+                            messages:{
+                                degree:"select course",
+                                course:"select branch",
+                                batch:"select batch",
+                                semester:"select semester",
+                            }
+                        });
     $("#checkAll").change(function () {
     $("input:checkbox").prop('checked', $(this).prop("checked"));
 });
@@ -461,6 +475,14 @@ foreach ($datadegree as $rowdegree) {
                     data:dataString,                   
                     success:function(response){
                         $("#sub_batches").html(response);
+                        $.ajax({
+                            type: "POST",
+                            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                            data: dataString,
+                            success: function (response1) {
+                                $("#sub_semesters").html(response1);
+                            }
+                        });
                     }
                 });
         });
@@ -523,20 +545,20 @@ foreach ($datadegree as $rowdegree) {
             });
             } else{
                           $("#searchform").validate({
-                                                                rules: {
-                                                                    degree:"required",
-                                                                    course:"required",
-                                                                    batch:"required",
-                                                                    semester:"required",
-                                                                    
-                                                                },
-                                                                messages:{
-                                                                    degree:"select course",
-                                                                    course:"select branch",
-                                                                    batch:"select batch",
-                                                                    semester:"select semester",
-                                                                }
-                                                            });
+                            rules: {
+                                degree:"required",
+                                course:"required",
+                                batch:"required",
+                                semester:"required",
+
+                            },
+                            messages:{
+                                degree:"select course",
+                                course:"select branch",
+                                batch:"select batch",
+                                semester:"select semester",
+                            }
+                        });
             }
              return false;
          });
@@ -565,6 +587,14 @@ foreach ($datadegree as $rowdegree) {
                     data:dataString,                   
                     success:function(response){
                         $("#batches").html(response);
+                         $.ajax({
+                                    type:"POST",
+                                    url:"<?php echo base_url().'index.php?admin/get_semester/'; ?>",
+                                    data:{'course':course},                   
+                                    success:function(response){
+                                        $("#semesters").html(response);
+                                    }
+                                });
                     }
                 });
         });
@@ -592,6 +622,14 @@ foreach ($datadegree as $rowdegree) {
                     data:dataString,                   
                     success:function(response){
                         $("#batch").html(response);
+                        $.ajax({
+                                    type:"POST",
+                                    url:"<?php echo base_url().'index.php?admin/get_semester/'; ?>",
+                                    data:{'course':course},                   
+                                    success:function(response){
+                                        $("#semester").html(response);
+                                    }
+                                });
                     }
                 });
         });

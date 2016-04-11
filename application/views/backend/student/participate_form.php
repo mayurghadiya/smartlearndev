@@ -29,7 +29,7 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                             <div class="tab-content">
                                 <!----TABLE LISTING STARTS-->
                                 <div class="tab-pane box active" id="list">	
-                                    <?php //if($this->session->flashdata('flash_message')){ echo $this->session->flashdata('flash_message'); } ?>
+                                    <?php if($this->session->flashdata('flash_message')){ echo $this->session->flashdata('flash_message'); } ?>
                                         <div class="box-content">                	
     <?php echo form_open(base_url() . 'index.php?student/volunteer/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                         <div class="padded">											

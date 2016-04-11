@@ -122,23 +122,25 @@ class Admin extends CI_Controller {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-
+            $semimplode = implode(',', $this->input->post('semester'));
             $data['c_name'] = $this->input->post('c_name');
             $data['course_alias_id'] = $this->input->post('course_alias_id');
             $data['c_description'] = $this->input->post('c_description');
             $data['course_status'] = $this->status($this->input->post('course_status'));
             $data['degree_id'] = $this->input->post('degree');
+            $data['semester_id'] = $semimplode;
             $this->db->insert('course', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
             redirect(base_url() . 'index.php?admin/courses/', 'refresh');
         }
         if ($param1 == 'do_update') {
-
+            $semimplode = implode(',', $this->input->post('semester'));
             $data['c_name'] = $this->input->post('c_name');
             $data['course_alias_id'] = $this->input->post('course_alias_id');
             $data['c_description'] = $this->input->post('c_description');
             $data['course_status'] = $this->status($this->input->post('course_status'));
             $data['degree_id'] = $this->input->post('degree');
+            $data['semester_id'] = $semimplode;
             $this->db->where('course_id', $param2);
             $this->db->update('course', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
@@ -156,6 +158,7 @@ class Admin extends CI_Controller {
         }
         $page_data['degree'] = $this->db->get('degree')->result_array();
         $page_data['courses'] = $this->db->get('course')->result_array();
+        $page_data['semesters'] = $this->db->get('semester')->result_array();
         $page_data['page_name'] = 'course';
         $page_data['page_title'] = 'Course Management';
         $this->load->view('backend/index', $page_data);
@@ -2230,6 +2233,7 @@ class Admin extends CI_Controller {
             //delete
             $this->db->where('em_id', $param2);
             $this->db->delete('exam_manager');
+            delete_notification('exam_manager', $param2);
             $this->session->set_flashdata('flash_message', 'Exam is successfully deleted.');
             redirect(base_url('index.php?admin/exam'));
         }
@@ -2261,8 +2265,10 @@ class Admin extends CI_Controller {
                             'em_end_time' => $this->input->post('end_date_time', TRUE),
                         );
                         $this->Crud_model->insert_exam($data);
+                        $insert_id = $this->db->insert_id();
                         //$this->exam_email_notification($_POST);
                         $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
+                        create_notification('exam_manager', $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $insert_id);
                         redirect(base_url('index.php?admin/exam'));
                     } else {
                         $page_data['edit_error'] = validation_errors();
@@ -3200,6 +3206,7 @@ class Admin extends CI_Controller {
             //delete
             $this->db->where('exam_time_table_id', $param2);
             $this->db->delete('exam_time_table');
+            delete_notification('exam_time_table', $param2);
             $this->session->set_flashdata('flash_message', 'Exam time table deleted successfully');
             redirect(base_url('index.php?admin/exam_time_table'));
         }
@@ -3740,6 +3747,28 @@ class Admin extends CI_Controller {
         }
     }
 
+    function get_courcestudy($param = '') {
+
+        $did = $this->input->post("degree");
+
+        if ($did != '') {
+
+
+
+            $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+
+            $html = '<option value="">Select Branch</option>';
+            if ($param == '') {
+                $html .= '<option value="All">All</option>';
+            }
+            foreach ($cource as $crs):
+                $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+            endforeach;
+            echo $html;
+        }
+    }
+
     function get_batchs($param = '') {
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
@@ -3748,10 +3777,7 @@ class Admin extends CI_Controller {
             if ($cid == "All") {
                 $html .= '<option value="All">All</option>';
             } else {
-                // $cource = $this->db->get_where("batch",array("degree_id"=>$cid))->result_array();
                 $batch = $this->db->query("SELECT * FROM batch WHERE FIND_IN_SET('" . $did . "',degree_id) AND FIND_IN_SET('" . $cid . "',course_id)")->result_array();
-                // echo $this->db->last_query();
-
                 $html = '<option value="">Select Batch</option>';
                 if ($param == "") {
                     $html .= '<option value="All">All</option>';
@@ -3763,6 +3789,50 @@ class Admin extends CI_Controller {
             }
             echo $html;
         }
+    }
+
+    function get_semester($param = '') {
+        $cid = $this->input->post("course");
+        $course = $this->db->get_where('course', array('course_id' => $cid))->result_array();
+
+        $semexplode = explode(',', $course[0]['semester_id']);
+        $semester = $this->db->get('semester')->result_array();
+
+        foreach ($semester as $sem) {
+            if (in_array($sem['s_id'], $semexplode)) {
+                $semdata[] = $sem;
+            }
+        }
+        $option = "<option value=''>Select semester</option>";
+        foreach ($semdata as $s) {
+            $option .="<option value=" . $s['s_id'] . ">" . $s['s_name'] . "</option>";
+        }
+        echo $option;
+    }
+
+    function get_semesterall() {
+
+        $cid = $this->input->post("course");
+
+
+
+        $course = $this->db->get_where('course', array('course_id' => $cid))->result_array();
+
+        $semexplode = explode(',', $course[0]['semester_id']);
+        $semester = $this->db->get('semester')->result_array();
+
+        foreach ($semester as $sem) {
+            if (in_array($sem['s_id'], $semexplode)) {
+                $semdata[] = $sem;
+            }
+        }
+        $option = "<option value=''>Select semester</option>";
+        $option .="<option value='All'>All</option>";
+
+        foreach ($semdata as $s) {
+            $option .="<option value=" . $s['s_id'] . ">" . $s['s_name'] . "</option>";
+        }
+        echo $option;
     }
 
     /* function get_cource_multiple($param='')
@@ -4429,16 +4499,23 @@ class Admin extends CI_Controller {
             }
             redirect(base_url('index.php?admin/grade'));
         }
-        if($param1 === 'delete') {
+        if ($param1 === 'delete') {
             $this->db->where('grade_id', $param2);
             $this->db->delete('grade');
             $this->session->set_flashdata('flash_message', 'Grade is successfully deleted.');
-            
+
             redirect(base_url('index.php?admin/grade'));
         }
         $page_data['page_name'] = 'grade';
         $page_data['grade'] = $this->Crud_model->grade();
         $this->load->view('backend/index', $page_data);
+    }
+
+    function get_semesters_of_branch($branch_id = '') {
+        $this->load->model('admin/Crud_model');
+        $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
+
+        echo json_encode($semester);
     }
 
 }

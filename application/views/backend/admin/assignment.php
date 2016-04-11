@@ -41,11 +41,10 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">		
-                             
-<div class="panel panel-default">
-<div class="panel-heading">
+                                <div class="panel panel-default">
+                            <div class="panel-heading">
 
-</div>
+                            </div>
                                 <div class="panel-body">
                                     <form action="#" method="post" id="searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -73,10 +72,7 @@
                                                 <label>Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                               ><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
+                                                    
                                                 </select>
                                             </div>
                                      
@@ -84,13 +80,12 @@
                                     <div class="form-group col-sm-2">
                                         <label>&nbsp;</label>
                                         
-                                    <button type="submit" class="submit btn btn-info">Search</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
                                     </div>
                                 </div>
                                     </form>
                                  </div>
-</div>
-                                
+                                </div>
                                <div class="panel-body table-responsive" id="getresponse">
                                     <table class="table table-striped" id="data-tables">
                                         <thead>
@@ -275,7 +270,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Assignment</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Add Assignment</button>
                                             </div>
                                         </div>
                                         </form>               
@@ -287,12 +282,10 @@
                             
                             
                                  <div class="tab-pane box" id="submitedlist">	
-                                      <div class="tab-pane box active" id="list">		
-                             
-<div class="panel panel-default">
-<div class="panel-heading">
+                                       <div class="panel panel-default">
+                            <div class="panel-heading">
 
-</div>
+                            </div>
                                      <div class="panel-body">
                                     <form action="#" method="post" id="sub_searchform">
                                             <div class="form-group col-sm-2 validating">
@@ -321,10 +314,7 @@
                                                 <label>Select Semester</label>
                                                 <select id="sub_semesters" name="semester" class="form-control">
                                                     <option value="">Select Semester</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                               ><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
+                                                    
                                                 </select>
                                             </div>
                                      
@@ -336,7 +326,7 @@
                                 </div>
                                     </form>
                                  </div>
-</div>
+                                       </div>
                                      <div class="panel-body table-responsive" id="getsubmit">
                                     <table class="table table-striped" id="data-tabless">
                                         <thead>
@@ -449,6 +439,15 @@
                     data:dataString,                   
                     success:function(response){
                         $("#sub_batches").html(response);
+                        
+                            $.ajax({
+                               type: "POST",
+                               url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                               data: dataString,
+                               success: function (response1) {
+                                   $("#sub_semesters").html(response1);
+                               }
+                           });
                     }
                 });
         });
@@ -567,6 +566,15 @@
                     data:dataString,                   
                     success:function(response){
                         $("#batches").html(response);
+                        
+                        $.ajax({
+                           type: "POST",
+                           url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                           data: dataString,
+                           success: function (response1) {
+                               $("#semesters").html(response1);
+                           }
+                       });
                     }
                 });
         });
@@ -581,6 +589,15 @@
                     data:dataString,                   
                     success:function(response){
                         $("#batch").html(response);
+                        
+                        $.ajax({
+                           type: "POST",
+                           url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                           data: dataString,
+                           success: function (response1) {
+                               $("#semester").html(response1);
+                           }
+                       });
                     }
                 });
         });
