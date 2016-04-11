@@ -12,14 +12,14 @@ $edit_data = $this->db->select()
 $exam_type = $this->db->get('exam_type')->result();
 $degree = $this->db->get('degree')->result();
 $course = $this->db->get_where('course', array(
-            'degree_id' => $edit_data->degree_id
-        ))->result();
+    'degree_id' => $edit_data->degree_id
+))->result();
 $query = "SELECT * FROM batch ";
 $query .= "WHERE FIND_IN_SET($edit_data->degree_id, degree_id) ";
 $query .= "AND FIND_IN_SET($edit_data->course_id, course_id)";
 $batch = $this->db->query($query)->result();
-
-$course = $this->db->get('course')->result();
+$semester = explode(',',$edit_data->semester_id);
+$this->db->where_in('s_id', $semester);
 $semester = $this->db->get('semester')->result();
 ?>
 
@@ -36,8 +36,8 @@ $semester = $this->db->get('semester')->result();
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                         <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div> 
+                            <span style="color:red">* is mandatory field</span> 
+                        </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/update/' . $edit_data->exam_time_table_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-time-table', 'target' => '_top')); ?>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
@@ -261,6 +261,7 @@ $semester = $this->db->get('semester')->result();
             var degree_id = $('#edit_degree').val();
             var course_id = $(this).val();
             batch_from_degree_and_course(degree_id, course_id);
+            get_semester_from_branch(course_id);
         })
 
         //find batch from degree and course
@@ -276,6 +277,22 @@ $semester = $this->db->get('semester')->result();
                     console.log(batch);
                     $.each(batch, function (key, value) {
                         $('#edit_batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                    })
+                }
+            })
+        }
+
+        //get semester from brach
+        function get_semester_from_branch(branch_id) {
+            $('#edit_semester').find('option').remove().end();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                type: 'get',
+                success: function (content) {
+                    $('#edit_semester').append('<option value="">Select</option>');
+                    var semester = jQuery.parseJSON(content);
+                    $.each(semester, function (key, value) {
+                        $('#edit_semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
                     })
                 }
             })

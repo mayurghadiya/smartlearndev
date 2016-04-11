@@ -14,8 +14,13 @@ $query = "SELECT * FROM batch ";
 $query .= "WHERE FIND_IN_SET($edit_data->degree_id, degree_id) ";
 $query .= "AND FIND_IN_SET($edit_data->course_id, course_id)";
 $batch = $this->db->query($query)->result();
-$course = $this->db->get('course')->result();
+$course = $this->db->get_where('course', array(
+    'degree_id' => $edit_data->degree_id
+))->result();
+$semester = explode(',',$edit_data->semester_id);
+$this->db->where_in('s_id', $semester);
 $semester = $this->db->get('semester')->result();
+
 $centerlist = $this->db->get('center_user')->result();
 ?>
 
@@ -246,13 +251,13 @@ $centerlist = $this->db->get('center_user')->result();
 <script>
     $(document).ready(function () {
         //course by degree
-        $('#degree').on('change', function () {
-            var course_id = $('#course').val();
+        $('#edit_degree').on('change', function () {
+            var course_id = $('#edit_course').val();
             var degree_id = $(this).val();
 
             //remove all present element
-            $('#course').find('option').remove().end();
-            $('#course').append('<option value="">Select</option>');
+            $('#edit_course').find('option').remove().end();
+            $('#edit_course').append('<option value="">Select</option>');
             var degree_id = $(this).val();
             $.ajax({
                 url: '<?php echo base_url(); ?>index.php?admin/course_list_from_degree/' + degree_id,
@@ -260,7 +265,7 @@ $centerlist = $this->db->get('center_user')->result();
                 success: function (content) {
                     var course = jQuery.parseJSON(content);
                     $.each(course, function (key, value) {
-                        $('#course').append('<option value=' + value.course_id + '>' + value.c_name + '</option>');
+                        $('#edit_course').append('<option value=' + value.course_id + '>' + value.c_name + '</option>');
                     })
                 }
             })
@@ -268,29 +273,46 @@ $centerlist = $this->db->get('center_user')->result();
         });
 
         //batch from course and degree
-        $('#course').on('change', function () {
-            var degree_id = $('#degree').val();
+        $('#edit_course').on('change', function () {
+            var degree_id = $('#edit_degree').val();
             var course_id = $(this).val();
             batch_from_degree_and_course(degree_id, course_id);
+            get_semester_from_branch(course_id);
         })
 
         //find batch from degree and course
         function batch_from_degree_and_course(degree_id, course_id) {
             //remove all element from batch
-            $('#batch').find('option').remove().end();
+            $('#edit_batch').find('option').remove().end();
             $.ajax({
                 url: '<?php echo base_url(); ?>index.php?admin/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
                 type: 'get',
                 success: function (content) {
-                    $('#batch').append('<option value="">Select</option>');
+                    $('#edit_batch').append('<option value="">Select</option>');
                     var batch = jQuery.parseJSON(content);
                     console.log(batch);
                     $.each(batch, function (key, value) {
-                        $('#batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                        $('#edit_batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
                     })
                 }
             })
         }
+        
+        //get semester from brach
+            function get_semester_from_branch(branch_id) {
+                $('#edit_semester').find('option').remove().end();
+                $.ajax({
+                    url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                    type: 'get',
+                    success: function (content) {
+                        $('#edit_semester').append('<option value="">Select</option>');
+                        var semester = jQuery.parseJSON(content);
+                        $.each(semester, function (key, value) {
+                            $('#edit_semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                        })
+                    }
+                })
+            }
 
     })
 </script>

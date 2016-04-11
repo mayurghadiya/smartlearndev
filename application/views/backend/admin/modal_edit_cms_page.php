@@ -18,6 +18,8 @@ $query = "SELECT * FROM batch ";
 $query .= "WHERE FIND_IN_SET($edit_data->d_id, degree_id) ";
 $query .= "AND FIND_IN_SET($edit_data->am_course, course_id)";
 $batch = $this->db->query($query)->result();
+$semester = explode(',', $edit_data->semester_id);
+$this->db->where_in('s_id', $semester);
 $semester = $this->db->get('semester')->result();
 ?>
 
@@ -75,7 +77,7 @@ $semester = $this->db->get('semester')->result();
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Semester<span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
-                                <select id="semester" required="" name="semester" class="form-control">
+                                <select id="edit_semester" required="" name="semester" class="form-control">
                                     <option value="">Select</option>
                                     <?php foreach ($semester as $row) { ?>
                                         <option value="<?php echo $row->s_id; ?>"
@@ -220,6 +222,7 @@ $semester = $this->db->get('semester')->result();
             var degree_id = $('#edit_degree').val();
             var course_id = $(this).val();
             batch_from_degree_and_course(degree_id, course_id);
+            get_semester_from_branch(course_id);
         })
 
         //find batch from degree and course
@@ -235,6 +238,22 @@ $semester = $this->db->get('semester')->result();
                     console.log(batch);
                     $.each(batch, function (key, value) {
                         $('#edit_batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                    })
+                }
+            })
+        }
+
+        //get semester from brach
+        function get_semester_from_branch(branch_id) {
+            $('#edit_semester').find('option').remove().end();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                type: 'get',
+                success: function (content) {
+                    $('#edit_semester').append('<option value="">Select</option>');
+                    var semester = jQuery.parseJSON(content);
+                    $.each(semester, function (key, value) {
+                        $('#edit_semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
                     })
                 }
             })
