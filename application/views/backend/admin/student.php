@@ -355,31 +355,6 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-        $( "#btnsubmit" ).click(function() {
-           
-       var degree = $("#filterdegree").val();
-        var course = $("#filtercourse").val();
-        var batch = $("#filterbatch").val();
-        var sem = $("#filtersemester").val();
-        $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_filter_student/',
-            type: 'POST',
-            
-            data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
-            success: function (content) {
-                $("#filterdata").html(content);
-                $("#dtbl").hide();
-                $('#data-tables').DataTable( {
-             aoColumnDefs: [
-                {
-                   bSortable: false,
-                   aTargets: [ -1 ]
-                }
-              ]
-        } );
-            }
-        });
-      });
         
         
 $("#degree").change(function () {
@@ -464,7 +439,54 @@ $.validator.setDefaults({
     }
 });
 
-$().ready(function () {
+$(document).ready(function () {
+
+        var form = $( "#frmstudentlist" );
+        
+        $( "#btnsubmit" ).click(function() {
+            $("#frmstudentlist").validate({
+        rules: {
+            filterdegree:"required",
+            filtercourse:"required",
+            filterbatch:"required",
+            filtersemester:"required", 
+        },
+        messages: {            
+            filterdegree:"Select degree",
+            filtercourse:"Select course",
+            filterbatch:"Select batch",
+            filtersemester:"Select semester",
+        }
+    });
+
+        if(form.valid()==true)
+        {
+            var degree = $("#filterdegree").val();
+            var course = $("#filtercourse").val();
+            var batch = $("#filterbatch").val();
+            var sem = $("#filtersemester").val();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/get_filter_student/',
+                type: 'POST',
+
+                data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+                success: function (content) {
+                    $("#filterdata").html(content);
+                    $("#dtbl").hide();
+                    $('#data-tables').DataTable( {
+                 aoColumnDefs: [
+                    {
+                       bSortable: false,
+                       aTargets: [ -1 ]
+                    }
+                  ]
+            } );
+                }
+            });
+        }
+      });
+        
+
     $("#birthdate").datepicker({
         maxDate: 0
     });
@@ -483,8 +505,7 @@ $().ready(function () {
     jQuery.validator.addMethod("zip_code", function (value, element) {
         return this.optional(element) || /^[0-9]+$/.test(value);
     }, 'Please enter a valid zip code.');
-
-
+    
     $("#frmstudent").validate({
         rules: {
             name:
