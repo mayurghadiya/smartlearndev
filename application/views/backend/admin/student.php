@@ -33,10 +33,75 @@
                         <!------CONTROL TABS END------>
 
                         <div class="tab-content">
+                            
                             <!----TABLE LISTING STARTS-->
-                            <div class="tab-pane box active" id="list">								
-                                <div class="panel-body table-responsive">
-                                    <table class="table table-striped" id="data-tables">
+                            <div class="tab-pane box active" id="list">	
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="">
+                                            <span style="color:red">* is mandatory field</span> 
+                                        </div>  
+                                        <form id="frmstudentlist" name="frmfilterlist" action="#" enctype="multipart/form-data" class="form-horizontal form-groups-bordered validate">
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                                <div class="col-sm-5">
+                                                    <select name="filterdegree" id="filterdegree" >
+                                                        <option value="">Select Course</option>
+                                                        <?php
+                                                        $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                                                        foreach ($datadegree as $rowdegree) {
+                                                            ?>
+                                                            <option value="<?= $rowdegree->d_id ?>"><?= $rowdegree->d_name ?></option>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                            </div>	
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                                                <div class="col-sm-5">
+                                                    <select name="filtercourse" id="filtercourse" >
+                                                        <option value="">Select Branch</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
+                                                <div class="col-sm-5">
+                                                    <select name="filterbatch" id="filterbatch">
+                                                        <option value="">Select batch</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>	
+                                            <div class="form-group">
+                                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                                                <div class="col-sm-5">
+                                                    <select name="filtersemester" id="filtersemester" >
+                                                        <option value="">Select semester</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-3 col-sm-5">
+                                                    <button type="button" class="btn vd_btn vd_bg-green" id="btnsubmit">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                              
+                                <div class="panel-body table-responsive" >
+                                      <div id="filterdata" >
+                                          
+                                       </div>
+                                    <div id="dtbl">
+                                    <table class="table table-striped"  id="data-tables">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>												
@@ -80,6 +145,7 @@
                                             <?php endforeach; ?>						
                                         </tbody>
                                     </table>
+                                    </div>
                                 </div>
                             </div>
                             <!----TABLE LISTING ENDS--->
@@ -189,15 +255,7 @@
                                             <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
-                                                    <option value="">Select branch</option>
-                                                    <?php
-                                                    $datacourse = $this->db->get_where('course', array('course_status' => 1))->result();
-                                                    foreach ($datacourse as $rowcourse) {
-                                                        ?>
-                                                        <option value="<?= $rowcourse->course_id ?>"><?= $rowcourse->c_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
+                                                    <option value="">Select Branch</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -205,15 +263,7 @@
                                             <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="batch" id="batch">
-                                                    <option value="">Select batch</option>
-                                                    <?php
-                                                    $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
-                                                    foreach ($databatch as $row) {
-                                                        ?>
-                                                        <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
+                                                   <option value="">Select Batch</option>
                                                 </select>
                                             </div>
                                         </div>	
@@ -305,196 +355,259 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript">
-                                                    $("#degree").change(function () {
-                                                        var degree = $(this).val();
-                                                        var dataString = "degree=" + degree;
-                                                        $.ajax({
-                                                            type: "POST",
-                                                            url: "<?php echo base_url() . 'index.php?admin/get_cource/student'; ?>",
-                                                            data: dataString,
-                                                            success: function (response) {
-                                                                $("#course").html(response);
-                                                            }
-                                                        });
-                                                    });
+        $( "#btnsubmit" ).click(function() {
+           
+       var degree = $("#filterdegree").val();
+        var course = $("#filtercourse").val();
+        var batch = $("#filterbatch").val();
+        var sem = $("#filtersemester").val();
+        $.ajax({
+            url: '<?php echo base_url(); ?>index.php?admin/get_filter_student/',
+            type: 'POST',
+            
+            data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+            success: function (content) {
+                $("#filterdata").html(content);
+                $("#dtbl").hide();
+                $('#data-tables').DataTable( {
+             aoColumnDefs: [
+                {
+                   bSortable: false,
+                   aTargets: [ -1 ]
+                }
+              ]
+        } );
+            }
+        });
+      });
+        
+        
+$("#degree").change(function () {
+    var degree = $(this).val();
+    var dataString = "degree=" + degree;
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url() . 'index.php?admin/get_cource/student'; ?>",
+        data: dataString,
+        success: function (response) {
+            $("#course").html(response);
+        }
+    });
+});
 
-                                                    $("#course").change(function () {
-                                                        var course = $(this).val();
-                                                        var degree = $("#degree").val();
-                                                        var dataString = "course=" + course + "&degree=" + degree;
-                                                        $.ajax({
-                                                            type: "POST",
-                                                            url: "<?php echo base_url() . 'index.php?admin/get_batchs/student'; ?>",
-                                                            data: dataString,
-                                                            success: function (response) {
-                                                                $("#batch").html(response);
-                                                                
-                                                                    $.ajax({
-                                                                       type: "POST",
-                                                                       url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
-                                                                       data: dataString,
-                                                                       success: function (response1) {
-                                                                           $("#semester").html(response1);
-                                                                       }
-                                                                   });
-                                                            }
-                                                        });
-                                                    });
+$("#course").change(function () {
+    var course = $(this).val();
+    var degree = $("#degree").val();
+    var dataString = "course=" + course + "&degree=" + degree;
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url() . 'index.php?admin/get_batchs/student'; ?>",
+        data: dataString,
+        success: function (response) {
+            $("#batch").html(response);
+
+                $.ajax({
+                   type: "POST",
+                   url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                   data: dataString,
+                   success: function (response1) {
+                       $("#semester").html(response1);
+                   }
+               });
+        }
+    });
+});
+
+$("#filterdegree").change(function () {
+    var degree = $(this).val();
+    var dataString = "degree=" + degree;
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url() . 'index.php?admin/get_cource/student'; ?>",
+        data: dataString,
+        success: function (response) {
+            $("#filtercourse").html(response);
+        }
+    });
+});
+
+$("#filtercourse").change(function () {
+    var course = $(this).val();
+    var degree = $("#filterdegree").val();
+    var dataString = "course=" + course + "&degree=" + degree;
+    $.ajax({
+        type: "POST",
+        url: "<?php echo base_url() . 'index.php?admin/get_batchs/student'; ?>",
+        data: dataString,
+        success: function (response) {
+            $("#filterbatch").html(response);
+
+                $.ajax({
+                   type: "POST",
+                   url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                   data: dataString,
+                   success: function (response1) {
+                       $("#filtersemester").html(response1);
+                   }
+               });
+        }
+    });
+});
 
 
-                                                    $.validator.setDefaults({
-                                                        submitHandler: function (form) {
+$.validator.setDefaults({
+    submitHandler: function (form) {
 
-                                                            //  filecheck(img);
-                                                            form.submit();
+        //  filecheck(img);
+        form.submit();
 
-                                                        }
-                                                    });
+    }
+});
 
-                                                    $().ready(function () {
-                                                        $("#birthdate").datepicker({
-                                                            maxDate: 0
-                                                        });
+$().ready(function () {
+    $("#birthdate").datepicker({
+        maxDate: 0
+    });
 
-                                                        jQuery.validator.addMethod("mobile_no", function (value, element) {
-                                                            return this.optional(element) || /^[0-9-+]+$/.test(value);
-                                                        }, 'Please enter a valid contact no.');
-                                                        jQuery.validator.addMethod("email_id", function (value, element) {
-                                                            return this.optional(element) || /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(value);
-                                                        }, 'Please enter a valid email address.');
+    jQuery.validator.addMethod("mobile_no", function (value, element) {
+        return this.optional(element) || /^[0-9-+]+$/.test(value);
+    }, 'Please enter a valid contact no.');
+    jQuery.validator.addMethod("email_id", function (value, element) {
+        return this.optional(element) || /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(value);
+    }, 'Please enter a valid email address.');
 
-                                                        jQuery.validator.addMethod("character", function (value, element) {
-                                                            return this.optional(element) || /^[A-z ]+$/.test(value);
-                                                        }, 'Please enter a valid character.');
+    jQuery.validator.addMethod("character", function (value, element) {
+        return this.optional(element) || /^[A-z ]+$/.test(value);
+    }, 'Please enter a valid character.');
 
-                                                        jQuery.validator.addMethod("zip_code", function (value, element) {
-                                                            return this.optional(element) || /^[0-9]+$/.test(value);
-                                                        }, 'Please enter a valid zip code.');
+    jQuery.validator.addMethod("zip_code", function (value, element) {
+        return this.optional(element) || /^[0-9]+$/.test(value);
+    }, 'Please enter a valid zip code.');
 
 
-                                                        $("#frmstudent").validate({
-                                                            rules: {
-                                                                name:
-                                                                        {
-                                                                            required: true,
-                                                                            character: true,
-                                                                        },
-                                                                f_name:
-                                                                        {
-                                                                            required: true,
-                                                                            character: true,
-                                                                        },
-                                                                l_name:
-                                                                        {
-                                                                            required: true,
-                                                                            character: true,
-                                                                        },
-                                                                email_id:
-                                                                        {
-                                                                            required: true,
-                                                                            email_id: true,
-                                                                            remote: {
-                                                                                url: "<?= base_url() ?>index.php?admin/getstudentemail",
-                                                                                type: "post",
-                                                                                data: {
-                                                                                    eid: function () {
-                                                                                        return $("#email_id").val();
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        },
-                                                                password: "required",
-                                                                gen: "required",
-                                                                birthdate: "required",
-                                                                mobileno:
-                                                                        {
-                                                                            required: true,
-                                                                            maxlength: 11,
-                                                                            mobile_no: true,
-                                                                            minlength: 10,
-                                                                        },
-                                                                city:
-                                                                        {
-                                                                            required: true,
-                                                                            character: true,
-                                                                        },
-                                                                zip:
-                                                                        {
-                                                                            required: true,
-                                                                            zip_code: true,
-                                                                        },
-                                                                address:"required",
-                                                                degree:"required",
-                                                                course:"required",
-                                                                batch:"required",
-                                                                semester:"required",
-                                                                facebook:
-                                                                        {
-                                                                            url2: true,
-                                                                        },
-                                                                twitter:
-                                                                        {
-                                                                            url2: true,
-                                                                        },
-                                                                admissiontype: "required",
-                                                                profilefile: {
-                                                                    required: true,
-                                                                    extension: 'gif|png|jpg|jpeg',
-                                                                }
-                                                            },
-                                                            messages: {
-                                                                name:
-                                                                        {
-                                                                            required: "Enter name",
-                                                                            character: "Enter valid name",
-                                                                        },
-                                                                f_name:
-                                                                        {
-                                                                            required: "Enter first name",
-                                                                            character: "Enter valid name",
-                                                                        },
-                                                                l_name:
-                                                                        {
-                                                                            required: "Enter last name",
-                                                                            character: "Enter valid name",
-                                                                        },
-                                                                email_id: {
-                                                                    required: "Enter email id",
-                                                                    email_id: "Enter valid email id",
-                                                                    remote:"Email id already exists",
-                                                                    
-                                                                    
-                                                                },
-                                                                password: "Enter password",
-                                                                gen: "Slect gender",
-                                                                birthdate: "Select birthdate",
-                                                                mobileno:
-                                                                        {
-                                                                            required: "Enter mobile no",
-                                                                            maxlength: "Enter maximum 10 digit number",
-                                                                            mobile_no: "Enter valid mobile number",
-                                                                            minlength: "Enter minimum 10 digit number",
-                                                                        },
-                                                                city:
-                                                                        {
-                                                                            required: "Enter city",
-                                                                            character: "Enter valid city name",
-                                                                        },
-                                                                address:"Enter address",
-                                                                zip:
-                                                                        {
-                                                                            required: "Enter zip code",
-                                                                        },
-                                                                degree:"Select degree",
-                                                                course:"Select course",
-                                                                batch:"Select batch",
-                                                                semester:"Select semester",
-                                                                admissiontype: "Select admission type",
-                                                                profilefile: {
-                                                                    required:"Upload image",
-                                                                    extension:"Upload valid file",
-                                                                }
-                                                            }
-                                                        });
-                                                    });
+    $("#frmstudent").validate({
+        rules: {
+            name:
+                    {
+                        required: true,
+                        character: true,
+                    },
+            f_name:
+                    {
+                        required: true,
+                        character: true,
+                    },
+            l_name:
+                    {
+                        required: true,
+                        character: true,
+                    },
+            email_id:
+                    {
+                        required: true,
+                        email_id: true,
+                        remote: {
+                            url: "<?= base_url() ?>index.php?admin/getstudentemail",
+                            type: "post",
+                            data: {
+                                eid: function () {
+                                    return $("#email_id").val();
+                                }
+                            }
+                        }
+                    },
+            password: "required",
+            gen: "required",
+            birthdate: "required",
+            mobileno:
+                    {
+                        required: true,
+                        maxlength: 11,
+                        mobile_no: true,
+                        minlength: 10,
+                    },
+            city:
+                    {
+                        required: true,
+                        character: true,
+                    },
+            zip:
+                    {
+                        required: true,
+                        zip_code: true,
+                    },
+            address:"required",
+            degree:"required",
+            course:"required",
+            batch:"required",
+            semester:"required",
+            facebook:
+                    {
+                        url2: true,
+                    },
+            twitter:
+                    {
+                        url2: true,
+                    },
+            admissiontype: "required",
+            profilefile: {
+                required: true,
+                extension: 'gif|png|jpg|jpeg',
+            }
+        },
+        messages: {
+            name:
+                    {
+                        required: "Enter name",
+                        character: "Enter valid name",
+                    },
+            f_name:
+                    {
+                        required: "Enter first name",
+                        character: "Enter valid name",
+                    },
+            l_name:
+                    {
+                        required: "Enter last name",
+                        character: "Enter valid name",
+                    },
+            email_id: {
+                required: "Enter email id",
+                email_id: "Enter valid email id",
+                remote:"Email id already exists",
+
+
+            },
+            password: "Enter password",
+            gen: "Slect gender",
+            birthdate: "Select birthdate",
+            mobileno:
+                    {
+                        required: "Enter mobile no",
+                        maxlength: "Enter maximum 10 digit number",
+                        mobile_no: "Enter valid mobile number",
+                        minlength: "Enter minimum 10 digit number",
+                    },
+            city:
+                    {
+                        required: "Enter city",
+                        character: "Enter valid city name",
+                    },
+            address:"Enter address",
+            zip:
+                    {
+                        required: "Enter zip code",
+                    },
+            degree:"Select degree",
+            course:"Select course",
+            batch:"Select batch",
+            semester:"Select semester",
+            admissiontype: "Select admission type",
+            profilefile: {
+                required:"Upload image",
+                extension:"Upload valid file",
+            }
+        }
+    });
+});
     </script>
