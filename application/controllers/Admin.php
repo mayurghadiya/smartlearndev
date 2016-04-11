@@ -1607,7 +1607,7 @@ class Admin extends CI_Controller {
 
     function assignment($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
-        redirect(base_url(), 'refresh');
+            redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             if ($_FILES['assignmentfile']['name'] != "") {
 
@@ -1959,7 +1959,7 @@ class Admin extends CI_Controller {
         if ($_POST) {
             $filename = '';
             $attachments = array();
-            if ($_FILES) {
+            if ($_FILES['userfile']['name'][0] != '') {
                 $files = $_FILES;
                 $cpt = count($_FILES['userfile']['name']);
                 for ($i = 0; $i < $cpt; $i++) {
@@ -2066,9 +2066,11 @@ class Admin extends CI_Controller {
         }
         $this->email->subject($subject);
         $this->email->message($message);
-        //$files = array('D:\unit testing.docx', 'D:\vtiger trial version features.docx');
-        foreach ($attachments as $row) {
-            $this->email->attach($row);
+        //$files = array('D:\unit testing.docx', 'D:\vtiger trial version features.docx');        
+        if (count($attachments)) {
+            foreach ($attachments as $row) {
+                $this->email->attach($row);
+            }
         }
         if ($this->email->send()) {
             echo 'Email send.';
