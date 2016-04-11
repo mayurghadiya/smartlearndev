@@ -1,3 +1,9 @@
+ <div class="vd_title-section clearfix">
+    <div class="">
+        <h1><?php echo count($datastudent)." students found"?></h1>
+    </div>
+</div>
+   <br>
 <table class="table table-striped"  id="data-tables">
 <thead>
     <tr>
