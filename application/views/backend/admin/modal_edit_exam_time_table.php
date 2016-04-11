@@ -106,7 +106,7 @@ $semester = $this->db->get('semester')->result();
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
-                                <input type="text" required=""  name="exam_date" class="form-control datepicker-normal-edit"
+                                <input readonly="" type="text" required=""  name="exam_date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
                             </div>
                         </div>

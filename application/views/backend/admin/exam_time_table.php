@@ -167,7 +167,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="text" id="exam_date" class="form-control datepicker-normal" name="exam_date"/>
+                                                <input readonly="" type="text" id="exam_date" class="form-control datepicker-normal" name="exam_date"/>
                                             </div>	
                                         </div>
                                         <div class="form-group">

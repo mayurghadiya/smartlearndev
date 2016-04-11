@@ -239,21 +239,21 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="text" name="date" id="date" class="form-control datepicker-normal"
+                                                <input readonly="" type="text" name="date" id="date" class="form-control datepicker-normal"
                                                        value="<?php echo set_value('date'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group" style="display: none;">
                                             <label class="col-sm-3 control-label">Start Date/Time<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="text" name="start_date_time" id="start_date_time" class="form-control"
+                                                <input readonly="" type="text" name="start_date_time" id="start_date_time" class="form-control"
                                                        value="<?php echo set_value('start_date_time'); ?>"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="text" name="end_date_time" id="end_date_time" class="form-control"
+                                                <input readonly="" type="text" name="end_date_time" id="end_date_time" class="form-control"
                                                        value="<?php echo set_value('end_date_time'); ?>"/>
                                             </div>
                                         </div>

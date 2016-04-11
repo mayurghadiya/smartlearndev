@@ -149,21 +149,21 @@ $centerlist = $this->db->get('center_user')->result();
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
-                                <input type="text" required="" id="datepicker-date123" name="date" class="form-control datepicker-normal-edit"
+                                <input readonly="" type="text" required="" id="datepicker-date123" name="date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group" style="display: none;">
                             <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
-                                <input type="text" name="start_date_time" id="edit_start_date_time" class="form-control"
+                                <input readonly="" type="text" name="start_date_time" id="edit_start_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_start_time; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
                             <div class="col-sm-7">
-                                <input type="text" required="" name="end_date_time" id="edit_end_date_time" class="form-control"
+                                <input readonly="" type="text" required="" name="end_date_time" id="edit_end_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_end_time; ?>"/>
                             </div>
                         </div>	
