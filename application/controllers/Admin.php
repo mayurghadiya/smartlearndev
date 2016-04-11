@@ -3985,6 +3985,7 @@ $semdata = '';
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
         $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+          $this->session->set_flashdata('flash_message', get_phrase(count($data['datastudent']).' records found.'));
         $this->load->view("backend/admin/ajax_student", $data);
     }
     /* checkboxstudent 4-4-2016 Mayur Panchal */
