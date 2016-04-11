@@ -53,7 +53,7 @@
             }
             else{
             ?>
-    '<?php echo $event_date; ?>' : [{content: '<?php echo date("m d, Y h:i:s A",$event_date_time));  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
+    '<?php echo $event_date; ?>' : [{content: '<?php echo date("m d, Y h:i:s A",strtotime($event_date_time));  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
             <?php } ?>
     <?php endforeach; ?>
 },
