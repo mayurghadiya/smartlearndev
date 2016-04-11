@@ -100,11 +100,7 @@
                                                     <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <select id="semester" class="form-control" name="private-broadcast-course">
-                                                            <option value="">Select</option>
-                                                            <option value="all">All</option>
-                                                            <?php foreach ($semester as $row) { ?>
-                                                                <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
+                                                            
                                                         </select>
                                                         <label style="display:none; color: red" id="sem_error"></label>
                                                     </div>
@@ -668,6 +664,7 @@
                 var degree_id = $('#degree').val();
                 var course_id = $(this).val();
                 batch_from_degree_and_course(degree_id, course_id);
+                get_semester_from_branch(course_id);
             })
 
             //find batch from degree and course
@@ -683,6 +680,22 @@
                         console.log(batch);
                         $.each(batch, function (key, value) {
                             $('#batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                        })
+                    }
+                })
+            }
+            
+            //get semester from brach
+            function get_semester_from_branch(branch_id) {
+                $('#semester').find('option').remove().end();
+                $.ajax({
+                    url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                    type: 'get',
+                    success: function (content) {
+                        $('#semester').append('<option value="">Select</option>');
+                        var semester = jQuery.parseJSON(content);
+                        $.each(semester, function (key, value) {
+                            $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
                         })
                     }
                 })

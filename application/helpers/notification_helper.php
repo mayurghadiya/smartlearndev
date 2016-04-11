@@ -277,13 +277,48 @@ if (!function_exists('clear_notification')) {
         $CI = & get_instance();
 
         $notification_id = get_notification_type($notification_name);
-        
+
         $sql = "UPDATE notification ";
         $sql .= "SET student_ids = ";
         $sql .= "TRIM(BOTH ',' FROM REPLACE(CONCAT(',', student_ids, ','), ',$student_id,', ',')) ";
         $sql .= "WHERE notification_type_id = $notification_id";
         $CI->db->query($sql);
-        
     }
 
+}
+
+if (!function_exists('delete_notification')) {
+
+    /**
+     * Delete notification
+     * @param string $notification_type
+     * @param int $data_id
+     */
+    function delete_notification($notification_type, $data_id) {
+        $CI = & get_instance();
+        $notification_id = get_notification_type($notification_type);
+        $CI->db->where(array(
+            'notification_type_id' => $notification_id,
+            'data_id' => $data_id
+        ));
+        $CI->db->delete('notification');
+        //unset($CI->session->userdata('notifications')[$notification_type]);
+    }
+
+}
+
+if(!function_exists('check_notification')){
+    function check_notification($type) {
+        $CI = & get_instance();
+        $student_id = $CI->session->userdata('student_id');
+        $notification_id = get_notification_type($type);
+        
+        $sql = "SELECT notification_id FROM notification ";
+        $sql .= "WHERE FIND_IN_SET($student_id, student_ids) ";
+        $sql .= "AND notification_type_id = $notification_id";
+        
+        $result = $CI->db->query($sql)->num_rows();
+        
+        return $result;
+    }
 }

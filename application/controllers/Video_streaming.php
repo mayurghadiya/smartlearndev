@@ -84,7 +84,7 @@ class Video_streaming extends CI_Controller {
         $this->load->helper('notification');
         $subject = 'Live Video Streaming and Conference';
         
-        video_streaming_email_notification($students, $subject, $message);
+        //video_streaming_email_notification($students, $subject, $message);
     }
 
     function assign_live_stream() {

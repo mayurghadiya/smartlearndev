@@ -70,7 +70,8 @@
                                                     </td>
                                                 </tr>
                                                 <?php $counter++;
-                                            } ?>
+                                            }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -80,8 +81,8 @@
                                 <br/>
                                 <div class="box-content">
                                     <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div>   
+                                        <span style="color:red">* is mandatory field</span> 
+                                    </div>   
                                     <form class="form-horizontal form-groups-bordered validate" id="admissionform" method="post" 
                                           action="<?php echo base_url('index.php?admin/cms_manager/create'); ?>" role="form">
                                         <div class="row">
@@ -129,10 +130,7 @@
                                                         <label class="col-sm-4 control-label">Semester<span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select id="semester" name="semester" class="form-control">
-                                                                <option value="">Select</option>
-                                                                <?php foreach ($semester as $row) { ?>
-                                                                    <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
-<?php } ?>
+
                                                             </select>
                                                             <div id="test"></div>
                                                         </div>
@@ -232,53 +230,53 @@
 
 <!-- Specific Page Scripts END -->
 <script type="text/javascript">
-                                                            $(window).load(function ()
-                                                            {
-                                                                //CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
-                                                                //$('.ckeditor').ckeditor();                                                                
-                                                            })
+                                                        $(window).load(function ()
+                                                        {
+                                                            //CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
+                                                            //$('.ckeditor').ckeditor();                                                                
+                                                        })
 </script>
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
 <script type="text/javascript">
-                                                            $.validator.setDefaults({
-                                                                submitHandler: function (form) {
-                                                                    form.submit();
+                                                        $.validator.setDefaults({
+                                                            submitHandler: function (form) {
+                                                                form.submit();
+                                                            }
+                                                        });
+
+                                                        $().ready(function () {
+                                                            $("#admissionform").validate({
+                                                                ignore: [],
+                                                                rules: {
+                                                                    content_data: {
+                                                                        required: function () {
+                                                                            CKEDITOR.instances.content_data.updateElement();
+                                                                        }
+                                                                    },
+                                                                    degree: "required",
+                                                                    course: "required",
+                                                                    batch: "required",
+                                                                    //year: "required",
+                                                                    page_title: "required",
+                                                                    semester: "required",
+                                                                    page_slug: "required",
+                                                                    content_type: "required",
+                                                                    //content_data: "required"
+
+                                                                },
+                                                                messages: {
+                                                                    degree: "Please select course",
+                                                                    course: "Please select branch",
+                                                                    batch: "Please select batch",
+                                                                    //year: "Please select year",
+                                                                    page_title: "Please enter page title",
+                                                                    semester: "Please select semester",
+                                                                    page_slug: "Please enter page slug",
+                                                                    content_type: "Please enter content type",
+                                                                    content_data: "Please enter content"
                                                                 }
                                                             });
-
-                                                            $().ready(function () {
-                                                                $("#admissionform").validate({
-                                                                    ignore: [],
-                                                                    rules: {
-                                                                        content_data: {
-                                                                            required: function () {
-                                                                                CKEDITOR.instances.content_data.updateElement();
-                                                                            }
-                                                                        },
-                                                                        degree: "required",
-                                                                        course: "required",
-                                                                        batch: "required",
-                                                                        //year: "required",
-                                                                        page_title: "required",
-                                                                        semester: "required",
-                                                                        page_slug: "required",
-                                                                        content_type: "required",
-                                                                        //content_data: "required"
-
-                                                                    },
-                                                                    messages: {
-                                                                        degree: "Please select course",
-                                                                        course: "Please select branch",
-                                                                        batch: "Please select batch",
-                                                                        //year: "Please select year",
-                                                                        page_title: "Please enter page title",
-                                                                        semester: "Please select semester",
-                                                                        page_slug: "Please enter page slug",
-                                                                        content_type: "Please enter content type",
-                                                                        content_data: "Please enter content"
-                                                                    }
-                                                                });
-                                                            });
+                                                        });
 </script>
 
 <script>
@@ -311,6 +309,7 @@
             var degree_id = $('#degree').val();
             var course_id = $(this).val();
             batch_from_degree_and_course(degree_id, course_id);
+            course_semester(course_id);
         })
 
         //find batch from degree and course
@@ -329,6 +328,22 @@
                     })
                 }
             })
+        }
+
+        //get all semester of course
+        function course_semester(course_id) {
+            $('#semester').find('option').remove().end();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + course_id,
+                type: 'get',
+                success: function (content) {
+                    $('#semester').append('<option value="">Select</option>');
+                    var semester = jQuery.parseJSON(content);
+                    $.each(semester, function (key, value) {
+                        $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                    });
+                }
+            });
         }
 
     })

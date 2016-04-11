@@ -162,5 +162,10 @@ a.chat-button {
  
 }
 
+.vd_menu{
+    min-height: 520px !important;
+    
+}
+
 .bootstrap-switch .bootstrap-switch-handle-off,
 .bootstrap-switch.bootstrap-switch-yellow.bootstrap-switch-mini.bootstrap-switch-animate .bootstrap-switch-container span{height: auto !important; }

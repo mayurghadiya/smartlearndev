@@ -8,21 +8,29 @@
                         <li> 
                             <a href="<?php echo base_url('index.php?student/exam_listing'); ?>" target="_parent">  
                                 <div class="menu-text">Schedule 
-                                <?php
-                                if(isset($this->session->userdata('notifications')['exam_manager']) || 
-                                        isset($this->session->userdata('notifications')['exam_time_table'])) { ?>
-                                    <img src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
+                                    <?php
+                                    if (!check_notification('exam_manager') || check_notification('exam_time_table')) {
+                                        unset($this->session->userdata('notifications')['exam_manager']);
+                                        unset($this->session->userdata('notifications')['exam_time_table']);
+                                    }
+                                    ?>
+                                    <?php
+                                    if (isset($this->session->userdata('notifications')['exam_manager']) ||
+                                            isset($this->session->userdata('notifications')['exam_time_table'])) {
+                                        ?>
+
+                                        <img src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
                                     <?php }
-                                ?>
+                                    ?>
                                 </div> 
                             </a> 
                         </li>
-<!--                        <li> 
-                            <a href="<?php echo base_url('index.php?student/exam_listing'); ?>" target="_parent"> 
-                                <div class="menu-text">Listing</div> 
-                            </a> 
-                        </li>-->
-                      
+                        <!--                        <li> 
+                                                    <a href="<?php echo base_url('index.php?student/exam_listing'); ?>" target="_parent"> 
+                                                        <div class="menu-text">Listing</div> 
+                                                    </a> 
+                                                </li>-->
+
                     </ul>
                 </div>
             </div>
