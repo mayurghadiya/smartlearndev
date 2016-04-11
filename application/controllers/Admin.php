@@ -27,7 +27,6 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
-        ini_set('display_errors','on');
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
