@@ -67,7 +67,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-7">
-                            <button type="submit" class="btn btn-info">Update</button>
+                            <button type="submit" class="btn btn-info vd_bg-green">Update</button>
                         </div>
                     </div>
                     </form>

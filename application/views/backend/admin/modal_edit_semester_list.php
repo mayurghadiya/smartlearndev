@@ -9,7 +9,7 @@
         	<div class="panel-heading">
             	<div class="panel-title" >
             		<i class="entypo-plus-circled"></i>
-					Edit Batch
+					Edit Semester
 				</div>
 			</div>
 			<div class="panel-body">
@@ -36,7 +36,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-5">
-								<button type="submit" class="submit btn btn-info">Edit</button>
+								<button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
 							</div>
 						</div>
 					</form>

@@ -169,7 +169,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>	
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
-                                <button type="submit" class="submit btn btn-info">Edit</button>
+                                <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
                             </div>
                         </div>
                     </div> 

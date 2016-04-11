@@ -105,7 +105,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Submit</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Submit</button>
                                             </div>
                                         </div>
                                     </form>
