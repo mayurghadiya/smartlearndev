@@ -86,10 +86,10 @@ foreach ($edit_data as $row):
                                     </select>
                                 </div>
                             </div>	
-                            <div class="form-group">
+                            <div class="form-group"> 
                                 <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="semester" id="semester">
+                                    <select name="semester" id="semester2">
                                         <option value="">Select semester</option>
                                           <option value="All" <?php if($row['study_sem']=="All"){ echo "selected=selected"; } ?> >All</option>
     <?php
@@ -106,7 +106,7 @@ foreach ($edit_data as $row):
                                             }
                                         }
                                         ?>
-                                    </select>
+                                    </select> 
                                 </div>
                             </div>
                                 <div class="form-group">
@@ -192,16 +192,13 @@ endforeach;
                                success:function(response){
 
                                    $("#semester2").html(response);
-                                   if(course=='All')
-                                    {
-                                        $("#semester2").val($("#semester2 option:eq(1)").val());
-                                    }
+                                   $("#semester2").val($("#semester2 option:eq(1)").val());
                                }
                            });
                            if(course=='All')
                         {
                              $("#batch2").val($("#batch2 option:eq(0)").val());
-                            $("#semester2").val($("#semester2 option:eq(1)").val());
+                            
                         }
                     }
                 });

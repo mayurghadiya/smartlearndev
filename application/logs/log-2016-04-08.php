@@ -1,6 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ERROR - 2016-04-08 10:14:35 --> Severity: Warning --> mysqli::real_connect(): (HY000/1130): Host '192.168.1.28' is not allowed to connect to this MariaDB server /opt/lampp/htdocs/smartlearndev/system/database/drivers/mysqli/mysqli_driver.php 135
 ERROR - 2016-04-08 10:14:35 --> Unable to connect to the database
 ERROR - 2016-04-08 10:15:18 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(1, degree_id) AND FIND_IN_SET(, course_id)
@@ -452,6 +453,8 @@ ERROR - 2016-04-08 15:37:48 --> Severity: Notice --> Undefined property: Admin::
 ERROR - 2016-04-08 15:37:48 --> Severity: error --> Exception: Call to a member function grade() on null /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 4449
 ERROR - 2016-04-08 15:37:48 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
 =======
+=======
+>>>>>>> b933519203383ca2935127e9a54e28bfb4af66f3
 ERROR - 2016-04-08 10:29:14 --> Severity: Warning --> mysqli::real_connect(): (HY000/1130): Host '192.168.1.37' is not allowed to connect to this MariaDB server /opt/lampp/htdocs/smartlearndev/system/database/drivers/mysqli/mysqli_driver.php 135
 ERROR - 2016-04-08 10:29:14 --> Unable to connect to the database
 ERROR - 2016-04-08 10:29:48 --> Severity: Warning --> mysqli::real_connect(): (HY000/1130): Host '192.168.1.37' is not allowed to connect to this MariaDB server /opt/lampp/htdocs/smartlearndev/system/database/drivers/mysqli/mysqli_driver.php 135
@@ -683,12 +686,23 @@ ERROR - 2016-04-08 11:26:06 --> Severity: Notice --> Uninitialized string offset
 ERROR - 2016-04-08 12:33:59 --> Severity: Notice --> Undefined index: semester_id /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3808
 ERROR - 2016-04-08 12:33:59 --> Severity: error --> Exception: Cannot use object of type mysqli as array /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3812
 ERROR - 2016-04-08 12:33:59 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+<<<<<<< HEAD
 >>>>>>> 84ad7e254974a86ae12cba32879daf48bf0d126d
+=======
 Stack trace:
 #0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
 #1 [internal function]: _exception_handler(Object(Error))
 #2 {main}
   thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-08 12:35:03 --> Severity: error --> Exception: Cannot use object of type mysqli as array /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3812
+ERROR - 2016-04-08 12:35:03 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+>>>>>>> b933519203383ca2935127e9a54e28bfb4af66f3
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+<<<<<<< HEAD
 <<<<<<< HEAD
 ERROR - 2016-04-08 15:38:20 --> Severity: Notice --> Undefined variable: page_name /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php 29
 ERROR - 2016-04-08 15:38:20 --> Severity: Warning --> include(admin/.php): failed to open stream: No such file or directory /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php 29
@@ -1244,8 +1258,13 @@ Stack trace:
 #1 [internal function]: _exception_handler(Object(Error))
 #2 {main}
   thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+=======
+>>>>>>> b933519203383ca2935127e9a54e28bfb4af66f3
 ERROR - 2016-04-08 13:46:36 --> Severity: Notice --> Undefined variable: semdata /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3820
 ERROR - 2016-04-08 13:46:36 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3820
 ERROR - 2016-04-08 13:46:46 --> Severity: Notice --> Undefined variable: semdata /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3820
 ERROR - 2016-04-08 13:46:46 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3820
+<<<<<<< HEAD
 >>>>>>> 84ad7e254974a86ae12cba32879daf48bf0d126d
+=======
+>>>>>>> b933519203383ca2935127e9a54e28bfb4af66f3

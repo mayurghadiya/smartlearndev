@@ -18,7 +18,6 @@
 	<meta name="description" content="Smart School system - Searchnative" />
 	<meta name="author" content="Creativeitem" />
 	
-	
 
 	<?php include $account_type.'/includes/'.'includes_top.php';?>
 	

@@ -365,7 +365,6 @@ class Student_model extends CI_Model {
                         ->from('exam_time_table')
                         ->join('subject_manager', 'subject_manager.sm_id = exam_time_table.subject_id')
                         ->where('exam_time_table.exam_id', $exam_id)
-                        ->order_by('exam_time_table.exam_date', 'ASC')
                         ->get()
                         ->result();
     }

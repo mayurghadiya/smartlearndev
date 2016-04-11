@@ -144,59 +144,19 @@
             data: dataString,
             success: function (response) {
                 $("#batch").html(response);
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                    data: dataString,
+                    success: function (response1) {
+                        $("#semester").html(response1);
+                    }
+                });
             }
         });
     });
 
-    
-
-//    $(function () {
-//        // bind change event to select
-//        $('#dropclass').on('change', function () {
-//            // var url = $(this).val(); // get selected value
-//            var classId = $(this).val();
-//            if (classId) { // require a URL
-//                window.location = "<?php echo base_url('/index.php?admin/group/'); ?>/" + classId;
-//            }
-//            return false;
-//        });
-//    });
-//    function get_user(user_id) {
-//        $("#test").append('<input type="hidden" name="user_type" value="' + user_id + '">');
-//        $.ajax({
-//            url: '<?php echo base_url(); ?>index.php?admin/get_user/' + user_id,
-//            success: function (response)
-//            {
-//                jQuery('#multiselect').html(response);
-//            }
-//        });
-//    }
-//    function get_group_ajax(group_id) {
-//
-//        $.ajax({
-//            url: '<?php echo base_url(); ?>index.php?admin/get_group_ajax/' + group_id,
-//            success: function (response)
-//            {
-//                jQuery('#group_listing').html(response);
-//            }
-//        });
-//    }
 });
-//function get_student2(batch, semester = '') {
-//        var batch = $("#batch").val();
-//        var course = $("#course").val();
-//        var degree = $("#degree").val();
-//        var semester = $("#semester").val();
-//        $.ajax({
-//            url: '<?php echo base_url(); ?>index.php?admin/get_group_student/',
-//            type: 'POST',
-//            dataType:'json',
-//            data: {'batch': batch, 'sem': semester, 'course': course, 'degree': degree},
-//            success: function (content) {
-//               $("#multiselect").html(content);
-//            }
-//        });
-//    }
 
     function get_students2(sem)
     {

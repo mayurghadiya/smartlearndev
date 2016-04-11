@@ -46,7 +46,7 @@
                                         <?php foreach ($degree as $row) { ?>
                                             <option value="<?php echo $row->d_name; ?>"
                                                     data-id="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
-                                        <?php } ?>
+                                                <?php } ?>
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-2">
@@ -71,7 +71,7 @@
                                 <label style="margin-left: 40px; margin-top: 30px;">OR</label>
                                 <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="exam-data-tables">
-                                        <thead> 
+                                        <thead>
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Exam Name</th>
@@ -85,7 +85,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             <?php
                                             $counter = 0;
                                             foreach ($exams as $row) {
@@ -438,7 +437,6 @@
                         "<'row'<'col-sm-12'tr>>" +
                         "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
             });
-
             $('.filter-rows').on('change', function () {
                 var filter_id = $(this).attr('data-filter');
                 filter_column(filter_id);
@@ -451,13 +449,13 @@
             }
         });
     </script>
-    
+
     <style>
         #exam-data-tables_filter{
             margin-top: -50px;
         }
     </style>
-    
+
     <script>
         $(document).ready(function () {
             $('#date').on('change', function () {

@@ -27,6 +27,7 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+        ini_set('display_errors','on');
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
@@ -1574,7 +1575,7 @@ class Admin extends CI_Controller {
 
 
             $this->db->insert('subject_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', get_phrase('subject_added_successfully'));
             redirect(base_url() . 'index.php?admin/subject/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1588,13 +1589,13 @@ class Admin extends CI_Controller {
 
             $this->db->where('sm_id', $param2);
             $this->db->update('subject_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('subject_updated_successfully'));
             redirect(base_url() . 'index.php?admin/subject/', 'refresh');
         }
         if ($param1 == 'delete') {
             $this->db->where('sm_id', $param2);
             $this->db->delete('subject_manager');
-            $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('subject_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/subject/', 'refresh');
         }
         $page_data['subject'] = $this->db->get('subject_manager')->result();
@@ -3814,13 +3815,16 @@ class Admin extends CI_Controller {
 
         $cid = $this->input->post("course");
 
+        if ($cid == 'All') {
+            $course = $this->db->get('course')->result_array();
+        } else {
 
-
-        $course = $this->db->get_where('course', array('course_id' => $cid))->result_array();
+            $course = $this->db->get_where('course', array('course_id' => $cid))->result_array();
+        }
 
         $semexplode = explode(',', $course[0]['semester_id']);
         $semester = $this->db->get('semester')->result_array();
-
+        $semdata = '';
         foreach ($semester as $sem) {
             if (in_array($sem['s_id'], $semexplode)) {
                 $semdata[] = $sem;
@@ -3971,6 +3975,16 @@ class Admin extends CI_Controller {
         echo $html;
     }
 
+    function get_filter_student() {
+        $batch = $this->input->post("batch");
+        $sem = $this->input->post("sem");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+        $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $this->session->set_flashdata('flash_message', get_phrase(count($data['datastudent']) . ' records found.'));
+        $this->load->view("backend/admin/ajax_student", $data);
+    }
+
     /* checkboxstudent 4-4-2016 Mayur Panchal */
 
     function checkboxstudent($param = '') {
@@ -4000,15 +4014,6 @@ class Admin extends CI_Controller {
                 $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
             }
         }
-        $html.='<script type="text/javascript">';
-        $html .="function uncheck()
-    {
-         if($('.checkbox1:checked').length == $('.checkbox1').length){
-            $('#select_all').prop('checked',true);
-        }else{
-            $('#select_all').prop('checked',false);
-        }
-    }";
         $html .='</script>';
         echo $html;
     }
@@ -4040,20 +4045,7 @@ class Admin extends CI_Controller {
                     $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
                 }
             }
-        } else {
-            
         }
-        $html.='<script type="text/javascript">';
-        $html .="function uncheck()
-    {
-         if($('.checkbox1:checked').length == $('.checkbox1').length){
-            $('#select_all').prop('checked',true);
-        }else{
-            $('#select_all').prop('checked',false);
-        }
-    }";
-        $html .='</script>';
-        echo $html;
     }
 
     function getsubmitted($param = '') {
@@ -4509,6 +4501,23 @@ class Admin extends CI_Controller {
         $page_data['page_name'] = 'grade';
         $page_data['grade'] = $this->Crud_model->grade();
         $this->load->view('backend/index', $page_data);
+    }
+
+    function searchallcourse() {
+        $did = $this->input->post("degree");
+        echo ' <option value="">Select Branch</option>';
+        echo '<option value="All">All</option>';
+        if ($did != '') {
+
+            $cource = $this->db->get_where("course", array("degree_id" => $did))->result_array();
+
+            $html = '';
+            foreach ($cource as $crs):
+                $html .='<option value="' . $crs['course_id'] . '">' . $crs['c_name'] . '</option>';
+
+            endforeach;
+            echo $html;
+        }
     }
 
     function get_semesters_of_branch($branch_id = '') {

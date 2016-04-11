@@ -48,12 +48,12 @@
                if(in_array($std_id,$student))
                {
                    ?>
-                '<?php echo $event_date; ?>' : [{content: '<?php echo $event_date_time;  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
+                '<?php echo $event_date; ?>' : [{content: '<?php echo date("F d, Y h:i:s A",strtotime($event_date_time));  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
               <?php  }
             }
             else{
             ?>
-    '<?php echo $event_date; ?>' : [{content: '<?php echo $event_date_time;  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
+    '<?php echo $event_date; ?>' : [{content: '<?php echo date("F d, Y h:i:s A",strtotime($event_date_time));  echo "<br/>"; echo $event_name; echo "<br/>"; echo $event_location; echo "<br/>"; echo $event_desc; ?>', allDay: true}],   
             <?php } ?>
     <?php endforeach; ?>
 },
