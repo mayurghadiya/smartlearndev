@@ -120,7 +120,7 @@
 
                                                 <div class="form-group">
                                                     <div class="col-sm-offset-3 col-sm-5">
-                                                        <button id="setup-new-broadcast" class="btn btn-success">Setup New Broadcast</button>
+                                                        <button id="setup-new-broadcast" class="btn btn-success vd_bg-green">Setup New Broadcast</button>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">

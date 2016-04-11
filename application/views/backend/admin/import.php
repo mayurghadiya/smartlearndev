@@ -131,7 +131,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
                                                 <a style="display: none;" id="show_download" class="btn btn-warning">Download Sample File</a>
-                                                <button type="submit" class="btn btn-info">Upload</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Upload</button>
                                             </div>
                                         </div>
                                     </form>

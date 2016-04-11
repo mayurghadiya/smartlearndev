@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button id="export" type="submit" class="btn btn-info">Export</button>
+                                                <button id="export" type="submit" class="btn btn-info vd_bg-green">Export</button>
                                             </div>
                                         </div>
                                     </form>
