@@ -48,6 +48,7 @@
                                                     <th><div>Sem</div></th>												
                                                     <th><div>Date of submission</div></th>
                                                     <th><div>Description</div></th>
+                                                    <th><div>Downloadable file</div></th>                                                    
                                                     <th><div>Action</div></th>
                                                 </tr>
                                             </thead>
@@ -92,9 +93,10 @@
                                                     <td><?php echo  date("F d, Y",strtotime($row->assign_dos));?></td>		
                                                     	
                                                     <td><?php echo  $row->assign_desc;?></td>
+                                                    <td> <a href="uploads/project_file/<?php echo $row->assign_filename; ?>" download="" title="<?php echo  $row->assign_filename;?>"><i class="fa fa-download"></i></a></td>
                                                     <td> 
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_submit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="Submit Assignment" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-plus"></i></a>
-                                                    <a href="uploads/project_file/<?php echo $row->assign_filename; ?>" download="" title="<?php echo  $row->assign_filename;?>"><i class="fa fa-download"></i></a>
+                                                   
                                                     </td>
                                                 </tr>
                                                 <?php endforeach;?>						
