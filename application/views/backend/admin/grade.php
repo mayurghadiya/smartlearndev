@@ -43,29 +43,14 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-<<<<<<< HEAD
-                                                <th>Grade Name</th>
-                                                <th>From Marks</th>
-                                                <th>To Marks</th>
-=======
                                                 <th>Grade</th>
-                                                <th>From Mark</th>
-                                                <th>To Mark</th>
+                                                <th>From Percentage</th>
+                                                <th>To Percentage</th>
                                                 <th>Description</th>
->>>>>>> 127278cd9e666639d44ecc46d7e0abe506a18d57
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-<<<<<<< HEAD
-                                            <?php $counter = 1; ?>
-                                            <?php foreach ($grade as $row) { ?>
-                                                <tr>
-                                                    <td><?php echo $counter++; ?></td>
-                                                    <td><?php echo $row->grade_name; ?></td>
-                                                    <td><?php echo $row->from_marks; ?></td>
-                                                    <td><?php echo $row->to_marks; ?></td>
-=======
                                             <?php
                                             $count = 1;
                                             foreach ($grade as $row):
@@ -76,18 +61,13 @@
                                                     <td><?php echo $row->from_marks; ?></td>     
                                                     <td><?php echo $row->to_marks; ?></td>
                                                     <td><?php echo $row->comment; ?></td>
->>>>>>> 127278cd9e666639d44ecc46d7e0abe506a18d57
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_grade/<?php echo $row->grade_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
                                                         <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/grade/delete/<?php echo $row->grade_id; ?>');" data-original-title="remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
-<<<<<<< HEAD
-                                            <?php } ?>
-=======
-                                            <?php endforeach; ?>						
->>>>>>> 127278cd9e666639d44ecc46d7e0abe506a18d57
+                                            <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -100,46 +80,7 @@
                                 <div class="box-content"> 
                                     <div class="">
                                         <span style="color:red">* is mandatory field</span> 
-                                    </div>                                    
-<<<<<<< HEAD
-                                    <?php echo form_open(base_url() . 'index.php?admin/grade/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'grade-form', 'target' => '_top')); ?>
-                                    <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Grade Name<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input id="grade_name" class="form-control" type="text" name="grade_name"/>
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">From Marks<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="from_marks" id="from_marks"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">To Marks<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="to_marks" id="to_marks"/>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Description</label>
-                                            <div class="col-sm-5">	
-                                                <div class="chat-message-box">
-                                                    <textarea name="description" id="description" rows="3" class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info">Add Grade</button>
-                                            </div>
-                                        </div>                                              
-                                    </div>  
-                                    </form>         
-=======
+                                    </div>   
                                     <?php echo form_open(base_url() . 'index.php?admin/grade/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'gradeform', 'target' => '_top')); ?>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">Grade Name<span style="color:red">*</span></label>
@@ -148,13 +89,13 @@
                                         </div>	
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">From Marks<span style="color:red">*</span></label>
+                                        <label class="col-sm-3 control-label">From Percentage<span style="color:red">*</span></label>
                                         <div class="col-sm-5">
                                             <input type="number" class="form-control" name="from_marks" id="from_marks" min="0"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">To Marks<span style="color:red">*</span></label>
+                                        <label class="col-sm-3 control-label">To Percentage<span style="color:red">*</span></label>
                                         <div class="col-sm-5">
                                             <input type="number" class="form-control" name="to_marks" id="to_marks"/>
                                         </div>
@@ -175,7 +116,6 @@
                                         </div>
                                     </div> 
                                     </form>
->>>>>>> 127278cd9e666639d44ecc46d7e0abe506a18d57
                                 </div>
                                 <!----CREATION FORM ENDS-->
                             </div>
@@ -191,22 +131,6 @@
     <script type="text/javascript">
 
                                                         $(document).ready(function () {
-
-<<<<<<< HEAD
-                                                            $("#grade-form").validate({
-                                                                rules: {
-                                                                    grade_name: "required",
-                                                                    from_marks: "required",
-                                                                    to_marks: "required",
-                                                                },
-                                                                messages: {
-                                                                    grade_name: "Please enter grade name",
-                                                                    from_marks: "Please enter from marks",
-                                                                    to_marks: "Please enter to marks",
-                                                                },
-                                                            });
-                                                        });
-=======
                                                             $("#gradeform").validate({
                                                                 rules: {
                                                                     grade_name: "required",
@@ -215,19 +139,18 @@
                                                                 },
                                                                 messages: {
                                                                     grade_name: "Please enter grade name",
-                                                                    from_marks: "Please enter valid grade marks",
-                                                                    to_marks: "Please enter valid grade marks"
+                                                                    from_marks: "Please enter valid grade number percentage",
+                                                                    to_marks: "Please enter valid grade number percentage"
                                                                 },
                                                             });
                                                         });
     </script>
-    
+
     <script>
-    $(document).ready(function(){
-        $('#from_marks').on('blur',function(){
-            $('#to_marks').attr('min', $(this).val());
-            $('#to_marks').attr('required', 'required');
-        });
-    })
->>>>>>> 127278cd9e666639d44ecc46d7e0abe506a18d57
+        $(document).ready(function () {
+            $('#from_marks').on('blur', function () {
+                $('#to_marks').attr('min', $(this).val());
+                $('#to_marks').attr('required', 'required');
+            });
+        })
     </script>

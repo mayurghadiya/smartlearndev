@@ -125,40 +125,24 @@
                                                             <td>
                                                                 <?php
                                                                 $grade = $percentage;
-                                                                //echo $grade;
-                                                                //exit;
-                                                                switch($grade) {
-                                                                    case $grade >= 80  && $grade <= 100:
-                                                                        echo 'A+';
-                                                                        break;
-                                                                    case $grade >= 75 && $grade < 80:
-                                                                        echo 'A';
-                                                                        break;
-                                                                    case $grade >= 70 && $grade < 75:
-                                                                        echo 'B+';
-                                                                        break;
-                                                                    case $grade >= 65 && $grade < 70 :
-                                                                        echo 'B-';
-                                                                        break;
-                                                                    case $grade >= 60 && $grade < 65:
-                                                                        echo 'C+';
-                                                                        break;
-                                                                    case $grade >= 50 && $grade < 60:
-                                                                        echo 'C-';
-                                                                        break;
-                                                                    case $grade >= 40 && $grade < 50:
-                                                                        echo 'D+';
-                                                                        break;
-                                                                    case $grade > $exam_details->passing_mark:
-                                                                        echo 'D-';
-                                                                        break;
-                                                                    default:
-                                                                        echo 'F';
-                                                                        //$is_failed = TRUE;
-                                                                }
+                                                                $grade = (int) (100 * $row->mark_obtained) / $exam_details->total_marks;
+                                                                $grade_data = $this->db->select()
+                                                                        ->from('grade')
+                                                                        ->where('from_marks >= ', $grade)
+                                                                        ->order_by('from_marks', 'ASC')
+                                                                        ->limit(1)
+                                                                        ->get()
+                                                                        ->row();
+                                                                $is_pass = TRUE;
+                                                                if($grade_data->from_marks < $exam_details->passing_mark)
+                                                                    $is_pass = FALSE;
+                                                                else {
+                                                                    echo $grade_data->grade_name;
+                                                                    $is_pass = TRUE;
+                                                                }                                                                    
                                                                 ?>
                                                             </td>
-                                                            <td><?php if($row->mark_obtained >= $exam_details->passing_mark) echo 'Pass'; else echo 'Fail'; ?></td>
+                                                            <td><?php if($is_pass) echo 'Pass'; else echo 'Fail'; ?></td>
                                                             <td><?php echo ''; ?></td>
                                                             
                                                         </tr>

@@ -23,16 +23,16 @@ foreach ($edit_data as $row){}
                         </div>	
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">From Marks<span style="color:red">*</span></label>
+                        <label class="col-sm-3 control-label">From Percentage<span style="color:red">*</span></label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="from_marks" id="edit_from_marks"
+                            <input type="number" class="form-control" name="from_marks" id="edit_from_marks"
                                    value="<?php echo $row['from_marks']; ?>"/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">To Marks<span style="color:red">*</span></label>
+                        <label class="col-sm-3 control-label">To Percentage<span style="color:red">*</span></label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="to_marks" id="edit_to_marks"
+                            <input type="number" class="form-control" name="to_marks" id="edit_to_marks"
                                    value="<?php echo $row['to_marks']; ?>"/>
                         </div>
                     </div>
@@ -69,8 +69,8 @@ foreach ($edit_data as $row){}
                 },
                 messages: {
                     grade_name: "Please enter grade name",
-                    from_marks: "Please enter valid marks",
-                    to_marks: "Please enter valid marks",
+                    from_marks: "Please enter valid number percentage",
+                    to_marks: "Please enter valid number percentage",
                 },
             });
         });
