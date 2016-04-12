@@ -128,7 +128,12 @@
                                 <a href="<?php echo base_url('index.php?admin/marks'); ?>">
                                     <span class="menu-text">Marks</span>  
                                 </a>
-                            </li> 	
+                            </li> 
+                            <li>
+                                <a href="<?php echo base_url('index.php?admin/grade'); ?>">
+                                    <span class="menu-text">Exam Grade</span>  
+                                </a>
+                            </li>
                         </ul>   
                     </div>
                 </li>  

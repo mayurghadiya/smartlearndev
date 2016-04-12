@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
 
 //custom datatable filtering
 $(document).ready(function () {
-    var base_url = 'http://192.168.1.28/smartlearndev/';
+    
     $('.filter-rows').on('change', function () {
         var data_type = $(this).attr('data-type');
         var data_id = $('option:selected', this).attr('data-id');

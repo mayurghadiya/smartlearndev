@@ -43,6 +43,9 @@ $.toaster({
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>pnotify/js/jquery.pnotify.min.js"></script>
 
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>theme.js"></script>
+<script type="text/javascript"> 
+    var base_url ="<?php echo base_url(); ?>";  
+</script>
 <script type="text/javascript" src="<?=$this->config->item('asset')?>custom/custom.js"></script>
  
 <!-- Specific Page Scripts Put Here -->
