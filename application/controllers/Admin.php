@@ -959,9 +959,9 @@ class Admin extends CI_Controller {
             $this->db->update('student', $updaterollno);
             //end roll no
             //email
-            $msg = "Hello,<br>"
-                    . "Your username is [" . $data['email'] .
-                    "]<br>Password is [12345]";
+
+            $data['rollno']=$rollno;
+            $msg=$this->load->view("backend/admin/emailmessage",$data,true);
             $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
             $this->email->to($data['email']);
             //  $this->email->cc('mayur.ghadiya@searchnative.in');
@@ -970,6 +970,7 @@ class Admin extends CI_Controller {
 
             if ($this->email->send()) {
                 $this->session->set_flashdata('flash_message', get_phrase('student_added_successfully'));
+           
                 redirect(base_url() . 'index.php?admin/student/', 'refresh');
             } else {
                 show_error($this->email->print_debugger());
