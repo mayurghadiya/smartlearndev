@@ -9,7 +9,7 @@
                 
                 <div class="custom-calendar-wrap">
                     <div id="custom-inner" class="custom-inner">
-                        <div class="custom-header clearfix">
+                        <div class="custom-header clearfix newcolor">
                             <nav>
                                 <span id="custom-prev" class="custom-prev"></span>
                                 <span id="custom-next" class="custom-next"></span>

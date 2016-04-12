@@ -1172,6 +1172,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('pm_id', $param2);
             $this->db->delete('project_manager');
+            delete_notification('project_manager', $param2);
             $this->session->set_flashdata('flash_message', get_phrase('project_deleted_successful'));
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
@@ -1364,6 +1365,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('lm_id', $param2);
             $this->db->delete('library_manager');
+            delete_notification('library_manager', $param2);
             $this->session->set_flashdata('flash_message', get_phrase('library_deleted'));
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
@@ -1531,6 +1533,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('pp_id', $param2);
             $this->db->delete('participate_manager');
+             delete_notification('participate_manager', $param2);
             $this->session->set_flashdata('flash_message', get_phrase('participate_deleted'));
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
@@ -1751,6 +1754,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('assign_id', $param2);
             $this->db->delete('assignment_manager');
+            delete_notification('assignment_manager', $param2);
             $this->session->set_flashdata('flash_message', get_phrase('assignment_deleted'));
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
@@ -1907,6 +1911,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('study_id', $param2);
             $this->db->delete('study_resources');
+            delete_notification('study_resources', $param2);
             $this->session->set_flashdata('flash_message', get_phrase('studyresource_deleted'));
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
@@ -4007,6 +4012,15 @@ class Admin extends CI_Controller {
                 $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
             }
         }
+         $html.='<script type="text/javascript">';
+        $html .="function uncheck()
+    {
+         if($('.checkbox1:checked').length == $('.checkbox1').length){
+            $('#select_all').prop('checked',true);
+        }else{
+            $('#select_all').prop('checked',false);
+        }
+    }";
         $html .='</script>';
         echo $html;
     }

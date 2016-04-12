@@ -630,37 +630,7 @@
                 });
         });
         
-        $( "#frmassignment" ).submit(function( event ) {
-          if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
-          { 
-         $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/checkassignments'; ?>",
-                    dataType:'json',
-                   data:
-                        {
-                            'degree':$("#degree").val(),
-                            'course':$("#course").val(),
-                            'batch':$("#batch").val(),
-                            'semester':$("#semester").val(),
-                            'title':$("#title").val(),
-                        }, 
-                                success:function(response){
-                                    if(response.length == 0){
-                                         $("#error_lable_exist").html('');
-                                    $('#frmproject').attr('validated',true);
-                                    $('#frmproject').submit();
-                                     } else
-                                         {
-                                             $("#error_lable_exist").html('Assignment is already present in the system');
-                                         return false;
-                                     }
-                    }
-                });
-                    return false; 
-                    }
-        event.preventDefault();
-      });
+       
         
     $.validator.setDefaults({
         submitHandler: function (form) {
