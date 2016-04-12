@@ -91,13 +91,13 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">From Marks<span style="color:red">*</span></label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" name="from_marks" id="from_marks"/>
+                                            <input type="number" class="form-control" name="from_marks" id="from_marks" min="0"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">To Marks<span style="color:red">*</span></label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" name="to_marks" id="to_marks"/>
+                                            <input type="number" class="form-control" name="to_marks" id="to_marks"/>
                                         </div>
                                     </div>
 
@@ -140,9 +140,18 @@
                                                                 },
                                                                 messages: {
                                                                     grade_name: "Please enter grade name",
-                                                                    from_marks: "Please enter from grade marks",
-                                                                    to_marks: "Please enter to grade marks"
+                                                                    from_marks: "Please enter valid grade marks",
+                                                                    to_marks: "Please enter valid grade marks"
                                                                 },
                                                             });
                                                         });
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+        $('#from_marks').on('blur',function(){
+            $('#to_marks').attr('min', $(this).val());
+            $('#to_marks').attr('required', 'required');
+        });
+    })
     </script>
