@@ -508,8 +508,9 @@ if (!function_exists('import_student')) {
             if ($course && $batch && $semester && $degree && $admission_type) {
                 // course, batch, and semester are already present in db
                 // insert new student                
-                $data['name'] = $data['std_first_name'] . ' ' . $data['std_last_name'];                $data['admission_type_id'] = $admission_type->at_id;
-                
+                $data['name'] = $data['std_first_name'] . ' ' . $data['std_last_name'];
+                $data['admission_type_id'] = $admission_type->at_id;
+
                 $data['std_batch'] = $batch->b_id;
                 $data['semester_id'] = $semester->s_id;
                 $data['course_id'] = $course->course_id;
@@ -555,12 +556,19 @@ if (!function_exists('import_exam_marks')) {
                             'mm_exam_id' => $exam->em_id,
                             'mm_std_id' => $student->std_id
                         ))->row();
+
+
                 if (count($marks)) {
                     //update
                     foreach ($where['subject'] as $row) {
+
                         $subject = $CI->db->get_where('subject_manager', array(
                                     'subject_name' => $row
                                 ))->row();
+                        //check for marks greater then total marks
+                        if ($exam->total_marks < (int) $data["{$subject->subject_name}"]) {
+                            continue;
+                        }
                         $insert_data = array(
                             'mm_std_id' => $student->std_id,
                             'mm_subject_id' => $subject->sm_id,
@@ -579,10 +587,14 @@ if (!function_exists('import_exam_marks')) {
                 } else {
                     //insert
                     foreach ($where['subject'] as $row) {
-
                         $subject = $CI->db->get_where('subject_manager', array(
                                     'subject_name' => $row
                                 ))->row();
+
+                        //check for marks greater then total marks
+                        if ($exam->total_marks < (int) $data[$subject->subject_name]) {
+                            continue;
+                        }
                         $insert_data = array(
                             'mm_std_id' => $student->std_id,
                             'mm_subject_id' => $subject->sm_id,
@@ -823,7 +835,7 @@ if (!function_exists('exam_time_table_import')) {
             if (!count($exam_time_table)) {
                 $data['exam_date'] = date('d M Y', strtotime($data['exam_date']));
                 $data['exam_start_time'] = date('H:i', strtotime($data['exam_start_time']));
-                $data['exam_end_time']= date('H:i', strtotime($data['exam_end_time']));
+                $data['exam_end_time'] = date('H:i', strtotime($data['exam_end_time']));
                 $data['exam_id'] = $where['time_table']['exam_id'];
                 $data['subject_id'] = $subject->sm_id;
 
