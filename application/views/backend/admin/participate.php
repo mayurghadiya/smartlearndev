@@ -1231,10 +1231,6 @@ $("#courses").change(function(){
                         ).draw();
             }
         });
-         $(document).ready(function() {
-		"use strict";				
-		$('#data-tablesupd').dataTable();
-	} );
     </script>
 
     <style>
@@ -1262,6 +1258,10 @@ $("#courses").change(function(){
                         ).draw();
             }
         });
+           $(document).ready(function() {
+		"use strict";				
+		$('#data-tablesupd').dataTable();
+	});
     </script>
 
     <style>
