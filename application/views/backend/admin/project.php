@@ -717,8 +717,7 @@ $( "#frmproject" ).submit(function( event ) {
       });
     $().ready(function () {
         $("#dateofsubmission").datepicker({
-            minDate:0,
-            dateFormat: 'M d, Y'
+            minDate:0           
         });
         jQuery.validator.addMethod("character", function (value, element) {
             return this.optional(element) || /^[A-z ]+$/.test(value);
