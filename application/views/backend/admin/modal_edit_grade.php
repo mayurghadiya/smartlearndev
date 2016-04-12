@@ -25,14 +25,14 @@ foreach ($edit_data as $row){}
                     <div class="form-group">
                         <label class="col-sm-3 control-label">From Marks<span style="color:red">*</span></label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="from_marks" id="from_marks"
+                            <input type="text" class="form-control" name="from_marks" id="edit_from_marks"
                                    value="<?php echo $row['from_marks']; ?>"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">To Marks<span style="color:red">*</span></label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="to_marks" id="to_marks"
+                            <input type="text" class="form-control" name="to_marks" id="edit_to_marks"
                                    value="<?php echo $row['to_marks']; ?>"/>
                         </div>
                     </div>
@@ -69,9 +69,18 @@ foreach ($edit_data as $row){}
                 },
                 messages: {
                     grade_name: "Please enter grade name",
-                    from_marks: "Please enter from marks",
-                    to_marks: "Please enter to marks",
+                    from_marks: "Please enter valid marks",
+                    to_marks: "Please enter valid marks",
                 },
             });
         });
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+        $('#edit_from_marks').on('blur',function(){
+            $('#edit_to_marks').attr('min', $(this).val());
+            $('#edit_to_marks').attr('required', 'required');
+        });
+    })
     </script>
