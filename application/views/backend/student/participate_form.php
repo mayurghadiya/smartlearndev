@@ -80,7 +80,7 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                                            
                                             <div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-5">
-                                                    <button type="submit" class="btn btn-info">Submit</button>
+                                                    <button type="submit" class="btn btn-info vd_bg-green">Submit</button>
                                                 </div>
                                             </div>
                                             </form>               
