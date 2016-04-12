@@ -91,3 +91,9 @@ ERROR - 2016-04-12 11:52:12 --> Severity: Notice --> Undefined variable: gochat 
 ERROR - 2016-04-12 11:52:12 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
 ERROR - 2016-04-12 11:52:49 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
 ERROR - 2016-04-12 11:52:50 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 11:55:36 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 11:55:37 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 11:55:40 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 11:55:40 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 11:55:58 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 11:55:58 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
