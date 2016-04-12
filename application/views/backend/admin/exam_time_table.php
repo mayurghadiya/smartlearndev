@@ -1,11 +1,5 @@
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
-<!-- polyfiller file to detect and load polyfills -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-<script>
-    webshims.setOptions('waitReady', false);
-    webshims.setOptions('forms-ext', {types: 'date'});
-    webshims.polyfill('forms forms-ext');
-</script>
+<link rel="stylesheet" href="http://bootstrapformhelpers.com/assets/css/bootstrap-formhelpers.min.css"/>
+<link rel="stylesheet" href="http://bootstrapformhelpers.com/assets/css/boot.css?=129132"/>
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -167,7 +161,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input readonly="" type="text" id="exam_date" class="form-control datepicker-normal" name="exam_date"/>
+                                                <input type="date" id="exam_date" class="form-control" name="exam_date"/>
                                             </div>	
                                         </div>
                                         <div class="form-group">
@@ -387,3 +381,7 @@
             }
         })
     </script>
+    
+    <script src="http://bootstrapformhelpers.com/assets/js/bootstrap.min.js"></script>
+    <script src="http://bootstrapformhelpers.com/assets/js/bootstrap-formhelpers.min.js"></script>
+    <script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4df14df26c87e5bd"></script>
