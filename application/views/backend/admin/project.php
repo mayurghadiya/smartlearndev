@@ -144,7 +144,7 @@
 
                                                     </td>
                                                     <td> <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
-                                                    <td><?php echo date("F d, Y",strtotime($row->pm_dos)); ?></td>	
+                                                    <td><?php echo date_formats($row->pm_dos); ?></td>	
                                                    
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_project/<?php echo $row->pm_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
@@ -395,7 +395,7 @@ foreach ($datadegree as $rowdegree) {
                                                         ?>
 
                                                     </td>	
-                                                <td><?php echo date("F d, Y",strtotime($rowsub->dos)); ?></td>	
+                                                <td><?php echo date_formats($rowsub->dos); ?></td>	
                                                 <td><?php echo $rowsub->description; ?></td>
                                                 <td><a href="uploads/project_file/<?php echo $rowsub->document_file; ?>" download="" title="<?php echo $rowsub->document_file; ?>"><i class="fa fa-download"></i></a></td>                                                    	
                                             </tr>

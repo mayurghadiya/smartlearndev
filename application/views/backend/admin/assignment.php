@@ -132,7 +132,7 @@
                                                         ?>													
                                                     </td>	
                                                     <td><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
-                                                    <td><?php echo date('F d, Y',strtotime($row->assign_dos)); ?></td>	
+                                                    <td><?php echo date_formats($row->assign_dos); ?></td>	
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn  menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
@@ -379,7 +379,7 @@
                                                             }														
                                                     ?>													
                                                     </td>	
-                                                    <td><?php echo date('F d, Y',strtotime($rowsub->submited_date)); ?></td>	
+                                                    <td><?php echo date_formats($rowsub->submited_date); ?></td>	
                                                     <td><?php echo $rowsub->comment; ?></td>
                                                    <td><a href="uploads/project_file/<?php echo $rowsub->document_file;?>" download="" title="<?php echo  $rowsub->document_file;?>"><i class="fa fa-download"></i></a></td>                      	
                                                 </tr>

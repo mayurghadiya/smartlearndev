@@ -27,8 +27,15 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+        $this->load->helper('date_format');
+        
     }
-
+    
+    function checkdate()
+    {
+        $date= "11-10-1994 7:24:00";
+        echo datetime_formats($date);
+    }
     /*     * *default functin, redirects to login page if no admin logged in yet	
       Auth : Brij  Dhami
       /******** */

@@ -5,6 +5,7 @@ $edit_data =$this->db->get_where('survey_list sl',array('survey_id' => $param2))
 $question = explode(",",$edit_data[0]->sq_id);
 $status = explode(",",$edit_data[0]->survey_status);
 $data=array_combine($question,$status);
+$this->load->helper("date_format");
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -20,7 +21,7 @@ $data=array_combine($question,$status);
                     <div class="box-content">  
                         <div class="panel-body table-responsive">
                                     <table class="table table-striped" id="data-tables">
-                                        <h5>Date : <?php echo date('F d, Y h:i:s A',strtotime($edit_data[0]->cdate)); ?></h5>
+                                        <h5>Date : <?php echo datetime_formats($edit_data[0]->cdate); ?></h5>
                                          <thead>
                                             <tr>
                                                 <th>Student Name</th>
