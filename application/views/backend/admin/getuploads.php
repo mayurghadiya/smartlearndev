@@ -1,5 +1,5 @@
 <div class="panel-body table-responsive" id="upd_getsubmit">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="data-tablesupd">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
@@ -63,14 +63,10 @@
                                     </table>
                                 </div>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		"use strict";				
-		$('#data-tables').dataTable();
-	} );
+<script type="text/javascript">	
         $(document).ready(function() {
 		"use strict";				
-		$('#data-tabless').dataTable();
+		$('#data-tablesupd').dataTable();
 	} );
 </script>
             
