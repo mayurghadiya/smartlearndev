@@ -2127,6 +2127,7 @@ class Admin extends CI_Controller {
         $data['inbox'] = admin_inbox();
         $data['title'] = 'Inbox';
         $data['content'] = 'backend/admin/email_inbox';
+        //$data['page_name'] = 
         $this->load->view('backend/admin/includes/email_template', $data);
     }
 
