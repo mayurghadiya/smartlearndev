@@ -2783,12 +2783,12 @@ class Admin extends CI_Controller {
             case 'course':
                 //download course csv
                 $result = $this->Export_model->course();
-                csv_from_result($result, 'Course');
+                csv_from_result($result, 'Branch');
                 break;
             case 'degree':
                 //download degree csv
                 $result = $this->Export_model->degree();
-                csv_from_result($result, 'Degree');
+                csv_from_result($result, 'Course');
                 break;
             case 'semester':
                 //download semester csv
