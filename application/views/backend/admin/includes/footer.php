@@ -54,7 +54,7 @@ $.toaster({
 <!-- Specific Page Scripts END -->
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>dataTables/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>dataTables/dataTables.bootstrap.js"></script>
-
+	<script src="assets/js/neon-custom.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		"use strict";				

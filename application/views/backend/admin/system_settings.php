@@ -1,4 +1,7 @@
- 
+<link rel="stylesheet" href="assets/css/neon-core.css">
+<link rel="stylesheet" href="assets/css/neon-theme.css">
+<link rel="stylesheet" href="assets/css/neon-forms.css">
+
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -135,9 +138,12 @@
                                                     <article class="album">
                                                         <header>
                                                             <a href="#" id="theme.min.css">
-                                                                Default
+                                                                <img src="<?php echo base_url().'assets/images/system_img/default.png' ?>" />
                                                             </a>
-
+                                                            <a id="theme.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>
                                                         </header>
                                                     </article>
                                                 </div>
@@ -145,9 +151,12 @@
                                                     <article class="album">
                                                         <header>
                                                             <a href="#" id="theme_gold.min.css">
-                                                                Gold
+                                                                <img src="<?php echo base_url().'assets/images/system_img/gold.png' ?>" />
                                                             </a>
-
+                                                            <a id="theme_gold.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>
                                                         </header>
                                                     </article>
                                                 </div>
@@ -155,18 +164,25 @@
                                                     <article class="album">
                                                         <header>
                                                             <a href="#" id="theme_blue.min.css">
-                                                                Blue
+                                                                <img src="<?php echo base_url().'assets/images/system_img/blue.png' ?>"   />
                                                             </a>
-
+                                                               <a id="theme_blue.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>  
                                                         </header>
                                                     </article>
                                                 </div>
-                                                <div class="col-sm-4">
-                                                    <article class="album">
+                                                <div class="col-sm-4" >
+                                                    <article class="album last">
                                                         <header>
                                                             <a href="#" id="theme_green.min.css">
-                                                                Green
-                                                            </a>													
+                                                                  <img src="<?php echo base_url().'assets/images/system_img/green.png' ?>"   />
+                                                            </a>
+                                                             <a id="theme_green.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>
                                                         </header>
                                                     </article>
                                                 </div>									   
