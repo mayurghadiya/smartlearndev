@@ -58,9 +58,9 @@ class Export_model extends CI_Model {
     function course() {
         //course c
         //degree d
-        $this->db->select('c.c_name AS Course Name, c.course_alias_id AS CourseAlias, '
+        $this->db->select('c.c_name AS Branch Name, c.course_alias_id AS Branch ID, '
                 . 'c.c_description AS Description');
-        $this->db->select('d.d_name AS Degree Name');
+        $this->db->select('d.d_name AS Course Name');
         $this->db->from('course AS c');
         $this->db->join('degree AS d', 'd.d_id = c.degree_id');
         
@@ -73,7 +73,7 @@ class Export_model extends CI_Model {
      */
     function degree() {
         //degree d
-        $this->db->select('d.d_name AS Degree Name');
+        $this->db->select('d.d_name AS Course Name');
         $this->db->from('degree d');
         
         return $this->db->get();
