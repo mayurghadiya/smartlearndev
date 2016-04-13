@@ -2617,12 +2617,12 @@ class Admin extends CI_Controller {
                 exam_manager();
                 break;
             case 'course':
-                $this->import_demo_sheet_download_config('Course');
+                $this->import_demo_sheet_download_config('Branch');
                 //import_export_helper function
                 course();
                 break;
             case 'degree':
-                $this->import_demo_sheet_download_config('Degree');
+                $this->import_demo_sheet_download_config('Course');
                 degree();
                 break;
             case 'admission_type':
