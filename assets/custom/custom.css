@@ -172,3 +172,8 @@ a.chat-button {
 .child-menu > ul > li.selectednavmenu {
     background: #ccc none repeat scroll 0 0;
 }
+.nav-expandmenu{
+    display: block;
+}
+
+.vd_menu > ul >li > div.active{ display: block; }
