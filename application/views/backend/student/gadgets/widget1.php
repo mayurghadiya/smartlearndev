@@ -12,7 +12,9 @@
 					  <link href="<?=$this->config->item('css_path')?>student/event_blue.css" rel="stylesheet">
 				<?php }
                                 if($skin == 'theme_gold.min.css'){  ?>
-					  <link href="<?=$this->config->item('css_path')?>student/event_gold.css" rel="stylesheet">				
+					  <link href="<?=$this->config->item('css_path')?>student/event_gold.css" rel="stylesheet">
+				<?php } else { ?>
+					  <link href="<?=$this->config->item('css_path')?>student/event_default.css" rel="stylesheet">			
 				<?php } ?>     
 		
 		
