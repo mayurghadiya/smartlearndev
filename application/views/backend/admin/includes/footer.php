@@ -10,7 +10,7 @@
   <script type="text/javascript" src="js/excanvas.js"></script>      
 <![endif]-->
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>bootstrap.min.js"></script>
-
+	<script src="assets/js/neon-api.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.toaster.js"></script>
 <script>
 <?php
@@ -54,7 +54,6 @@ $.toaster({
 <!-- Specific Page Scripts END -->
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>dataTables/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>dataTables/dataTables.bootstrap.js"></script>
-
 <script type="text/javascript">
 	$(document).ready(function() {
 		"use strict";				
