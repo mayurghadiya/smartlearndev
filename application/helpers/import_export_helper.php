@@ -11,9 +11,9 @@ if (!function_exists('course')) {
     function course() {
         $handle = fopen('php://output', 'w');
         fputcsv($handle, array(
+            'Branch Name',
+            'Branch Alias',
             'Course Name',
-            'Course Alias',
-            'Degree Name',
             'Description'
         ));
         fclose($handle);
@@ -29,7 +29,7 @@ if (!function_exists('degree')) {
     function degree() {
         $handle = fopen('php://output', 'w');
         fputcsv($handle, array(
-            'Degree Name',
+            'Course Name',
         ));
         fclose($handle);
     }
