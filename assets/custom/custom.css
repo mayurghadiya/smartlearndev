@@ -172,17 +172,3 @@ a.chat-button {
 .child-menu > ul > li.active {
     background: #ccc none repeat scroll 0 0;
 }
-/*.gallery-env article.album header img{
-    background-clip:padding-box;
-    border-radius:3px 3px 0 0;
-    display :block;
-    height: auto;
-    line-height: 1;
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
-}
-.album.last {
-    margin-top: 50px;
-    margin-bottom: 30px;
-}*/
