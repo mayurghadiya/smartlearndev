@@ -71,3 +71,9 @@
 	box-shadow: 0 1px rgba(255,255,255,0.9);
 	margin-bottom: 30px;
 }
+.fc-calendar .fc-row > div.fc-content:hover:after{
+	color: #000;
+}
+.fc-calendar .fc-row > div.fc-today.fc-content:hover:after{
+	color: #000;
+}
