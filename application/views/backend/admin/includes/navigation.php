@@ -18,38 +18,38 @@
                     </a>
                     <div class="child-menu"  data-action="click-target" <?php if($page_name=="degree" || $page_name=="course" || $page_name=="batch" || $page_name=="semesterlist" || $page_name=="admission_type" || $page_name=="student"  || $page_name=="subject"){ ?> style="display: block" <?php } ?>>
                         <ul>
-                            <li <?php if($page_name=="degree"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="degree"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/degree"> 
                                     <span class="menu-text">Course</span>  						
                                 </a> 
                             </li>
-                            <li <?php if($page_name=="course"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="course"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/courses">
                                     <span class="menu-text">Branch</span>  						
                                 </a> 
                             </li>	
-                            <li <?php if($page_name=="batch"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="batch"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/batch">
                                     <span class="menu-text">Batch</span>  						
                                 </a> 
                             </li>
 
-                            <li <?php if($page_name=="semesterlist"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="semesterlist"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/semester">
                                     <span class="menu-text">Semester</span>  						
                                 </a> 
                             </li>	
-                            <li  <?php if($page_name=="admission_type"){ ?> class="active" <?php } ?>> 
+                            <li  <?php if($page_name=="admission_type"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url(); ?>index.php?admin/admission_type">
                                     <span class="menu-text">Admission Type</span>  						
                                 </a> 
                             </li>
-                            <li <?php if($page_name=="student"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="student"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/student"> 
                                     <span class="menu-text">Student</span>  						
                                 </a> 
                             </li>	
-                            <li <?php if($page_name=="subject"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="subject"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/subject">
                                     <span class="menu-text">Subject</span>  						
                                 </a> 
@@ -70,34 +70,34 @@
                     </a>
                     <div class="child-menu"   data-action="click-target"  <?php if($page_name=="events" || $page_name=="assignment" || $page_name=="project" || $page_name=="participate" || $page_name=="studyresource"  || $page_name=="library"){ ?> style="display: block;" <?php } ?>>
                         <ul class="clearfix">   
-                            <li  <?php if($page_name=="events"){ ?> class="active" <?php } ?>>
+                            <li  <?php if($page_name=="events"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/events">
                                     <span class="menu-text">Events</span>  
                                 </a>
                             </li>
-                            <li <?php if($page_name=="assignment"){ ?> class="active" <?php } ?>> 
+                            <li <?php if($page_name=="assignment"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/assignment'); ?>">
                                     <span class="menu-text">Assignments</span> 
                                     <span class="menu-badge"></span>
                                 </a>          
                             </li>
-                            <li  <?php if($page_name=="studyresource"){ ?> class="active" <?php } ?>> 
+                            <li  <?php if($page_name=="studyresource"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/studyresource'); ?>">
                                     <span class="menu-text">Study Resources</span> 
                                     <span class="menu-badge"></span>
                                 </a>          
                             </li>   
-                            <li   <?php if($page_name=="project"){ ?> class="active" <?php } ?>>					
+                            <li   <?php if($page_name=="project"){ ?> class="selectednavmenu" <?php } ?>>					
                                 <a href="<?php echo base_url('index.php?admin/project'); ?>">
                                     <span class="menu-text">Project/Synopsis</span>  						
                                 </a>
                             </li>
-                            <li  <?php if($page_name=="library"){ ?> class="active" <?php } ?>>							
+                            <li  <?php if($page_name=="library"){ ?> class="selectednavmenu" <?php } ?>>							
                                 <a href="<?php echo base_url('index.php?admin/library'); ?>">
                                     <span class="menu-text">Digital Library</span>  
                                 </a>
                             </li>
-                            <li <?php if($page_name=="participate"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="participate"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url('index.php?admin/participate'); ?>">
                                     <span class="menu-text">Participate</span>  
                                 </a>
@@ -114,22 +114,22 @@
                     </a>
                     <div class="child-menu" data-action="click-target" <?php if($page_name=="exam" || $page_name=="exam_time_table" || $page_name=="exam_marks" || $page_name=="grade"){ ?> style="display: block" <?php }?>>
                         <ul>
-                            <li <?php if($page_name=="exam"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="exam"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/exam">
                                     <span class="menu-text">Exam</span>  
                                 </a>
                             </li>              
-                            <li <?php if($page_name=="exam_time_table"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="exam_time_table"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/exam_time_table">
                                     <span class="menu-text">Exam Schedule</span>  
                                 </a>
                             </li>   
-                            <li <?php if($page_name=="exam_marks"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="exam_marks"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url('index.php?admin/marks'); ?>">
                                     <span class="menu-text">Marks</span>  
                                 </a>
                             </li> 
-                            <li <?php if($page_name=="grade"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="grade"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url('index.php?admin/grade'); ?>">
                                     <span class="menu-text">Exam Grade</span>  
                                 </a>
@@ -146,12 +146,12 @@
                     </a>
                     <div class="child-menu" data-action="click-target" <?php if($page_name=="cms_manager" || $page_name=="cms" ) { ?> style="display: block" <?php } ?>>
                         <ul class="clearfix">          
-                            <li <?php if($page_name=="cms_manager"){ ?> class="active" <?php } ?>> 
+                            <li <?php if($page_name=="cms_manager"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/cms_manager'); ?>">
                                     <span class="menu-text">CMS Dynamic Pages</span>
                                 </a>          
                             </li>
-                            <li <?php if($page_name=="cms"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="cms"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/cms">
                                     <span class="menu-text">CMS Static Pages</span>  
                                 </a>
@@ -168,13 +168,13 @@
                     </a>
                     <div class="child-menu" data-action="click-target" <?php if($page_name=="fees_structure" || $page_name=="make_payment"){ ?> style="display: block" <?php } ?>>
                         <ul class="clearfix">          
-                            <li <?php if($page_name=="fees_structure"){ ?> class="active" <?php } ?>> 
+                            <li <?php if($page_name=="fees_structure"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/fees_structure'); ?>">
                                     <span class="menu-text">Fees Structure</span> 
                                     <span class="menu-badge"></span>
                                 </a>          
                             </li>
-                            <li <?php if($page_name=="make_payment"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="make_payment"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url('index.php?admin/make_payment'); ?>">
                                     <span class="menu-text">Make Payment</span>  
                                 </a>
@@ -191,7 +191,7 @@
                     </a>
                     <div class="child-menu"  data-action="click-target" <?php if($page_name=="report_chart" || $page_name=="report_chart_exam") { ?> style="display: block" <?php } ?>>
                         <ul>
-                            <li <?php if($page_name=="report_chart"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="report_chart"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/report_chart/student">
                                     <span class="menu-text">Student</span>  
                                 </a>
@@ -225,7 +225,7 @@
                                     <span class="menu-badge"></span>
                                 </a>          
                             </li>
-                            <li <?php if($page_name=="restore"){ ?> class="active" <?php } ?>> 
+                            <li <?php if($page_name=="restore"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/restore'); ?>">
                                     <span class="menu-text">Restore</span> 
                                     <span class="menu-badge"></span>
@@ -242,13 +242,13 @@
                     </a>
                     <div class="child-menu" data-action="click-target"  <?php if($page_name=="import" || $page_name=="export"){?> style="display: block" <?php  } ?>>
                         <ul class="clearfix">
-                            <li  <?php if($page_name=="import"){ ?> class="active" <?php } ?>> 
+                            <li  <?php if($page_name=="import"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/import'); ?>">
                                     <span class="menu-text">Import</span> 
                                     <span class="menu-badge"></span>
                                 </a>          
                             </li>
-                            <li  <?php if($page_name=="export"){ ?> class="active" <?php } ?>> 
+                            <li  <?php if($page_name=="export"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/export'); ?>">
                                     <span class="menu-text">Export</span> 
                                     <span class="menu-badge"></span>
@@ -298,12 +298,12 @@
                     </a>
                     <div class="child-menu"  data-action="click-target" <?php if($page_name=="create_group" || $page_name=="list_group"){ ?> style="display: block" <?php } ?>>
                         <ul>
-                            <li <?php if($page_name=="create_group"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="create_group"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/create_group">
                                     <span class="menu-text">Create Groups</span>  
                                 </a>
                             </li>
-                            <li <?php if($page_name=="list_group"){ ?> class="active" <?php } ?>>
+                            <li <?php if($page_name=="list_group"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/list_group">
                                     <span class="menu-text">List Groups</span>  
                                 </a>
@@ -330,12 +330,12 @@
                     </a>
                     <div class="child-menu" data-action="click-target" <?php if($page_name=="system_settings" || $page_name=="authorize_payment_config"){ ?> style="display: block" <?php } ?>>
                         <ul class="clearfix">          
-                            <li  <?php if($page_name=="system_settings"){ ?> class="active" <?php } ?>>
+                            <li  <?php if($page_name=="system_settings"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/system_settings">
                                     <span class="menu-text">General Settings</span>  
                                 </a>
                             </li>
-                            <li <?php if($page_name=="authorize_payment_config"){ ?> class="active" <?php } ?>> 
+                            <li <?php if($page_name=="authorize_payment_config"){ ?> class="selectednavmenu" <?php } ?>> 
                                 <a href="<?php echo base_url('index.php?admin/authorize_payment_config'); ?>">
                                     <span class="menu-text">Authorize.net Config</span> 
                                     <span class="menu-badge"></span>

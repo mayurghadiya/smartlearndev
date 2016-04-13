@@ -169,6 +169,6 @@ a.chat-button {
 
 .bootstrap-switch .bootstrap-switch-handle-off,
 .bootstrap-switch.bootstrap-switch-yellow.bootstrap-switch-mini.bootstrap-switch-animate .bootstrap-switch-container span{height: auto !important; }
-.child-menu > ul > li.active {
+.child-menu > ul > li.selectednavmenu {
     background: #ccc none repeat scroll 0 0;
 }
