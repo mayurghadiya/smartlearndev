@@ -109,7 +109,7 @@
                                             <label class="col-sm-3 control-label">Group</label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="group">
-                                                    <option>Select</option>
+                                                    <option value="">Select</option>
                                                     <?php
                                                     foreach($group as $row) { ?>
                                                     <option value="<?php echo $row->g_id; ?>"><?php echo $row->group_name; ?></option>
