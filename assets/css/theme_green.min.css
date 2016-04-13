@@ -1291,3 +1291,7 @@ footer .vd_bottom { /*background-color: #252525;*/ background-image: linear-grad
 #front-1-banner .word-3 { top: 178px; left: 870px }
 .example-icon .append-icon:hover { font-size: 32px; background: rgba(0,0,0,0.8); color: #FFF; padding: 10px; position: absolute; z-index: 4; text-align: center; width: 55px }
 .logo img {}
+.eventCalendar-daysList li.eventCalendar-dayWithEvents a{ background: #7CCD7C !important; color:#FFFFFF; }
+#et-info-phone > a {
+    color: #7CCD7C !important;
+}
