@@ -60,8 +60,8 @@ if (!function_exists('batch')) {
         $handle = fopen('php://output', 'w');
         fputcsv($handle, array(
             'Batch Name',
-            'Degree Name',
-            'Course Name'
+            'Course Name',
+            'Branch Name'
         ));
         fclose($handle);
     }
@@ -98,8 +98,8 @@ if (!function_exists('exam_manager')) {
             'Total Marks',
             'Passing Marks',
             'Exam Type',
-            'Degree Name',
             'Course Name',
+            'Branch Name',
             'Batch',
             'Semester'
         ));
@@ -117,8 +117,8 @@ if (!function_exists('fees_structure')) {
         $handle = fopen('php://output', 'w');
         fputcsv($handle, array(
             'Title',
-            'Degree Name',
             'Course Name',
+            'Branch Name',
             'Batch Name',
             'Semester',
             'Fees'
