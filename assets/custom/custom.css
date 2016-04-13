@@ -153,7 +153,7 @@ a.chat-button {
   font-size: 16px;
   display: block;
   position: fixed;
-  right: 35px;
+  right: 50px;
   bottom: 0px;
   text-decoration:none;  
   transition: transform 0.25s;
