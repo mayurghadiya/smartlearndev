@@ -475,6 +475,10 @@ jQuery(document).ready(function($)
 				$(this).parent().children('[data-action^="click-target"]').slideDown('fast',  function(){    if ($('.navbar-menu').outerHeight() < $('.navbar-menu .vd_menu').outerHeight() + $('.navbar-spacing ').outerHeight()){calculateContentHeight()};
 			
 				});	
+                                $(this).parent().siblings().children('[data-action^="click-trigger"]').removeClass('open');	
+				$(this).parent().siblings().children('[data-action^="click-target"]').slideUp('fast',  function(){//calculateContentHeight(); 
+				    
+					});
 				
 				
 			// if this is open			
