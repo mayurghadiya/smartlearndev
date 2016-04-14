@@ -184,6 +184,7 @@
          
             $("#courseform").validate({
                 rules: {
+                    degree:  "required",
                     c_name: 
                         {
                             required:true,
@@ -200,17 +201,18 @@
                               }
                             }
                         },
+                    'semester[]':"required",
                     course_alias_id: "required",
-                    degree:  "required",
                 },
                 messages: {
+                    degree: "Select course",
                     c_name: 
                     {
-                        required:"Enter course name",
+                        required:"Enter branch name",
                         remote:"Record is already present in the system",
                     },
-                    course_alias_id: "Enter course id",
-                    degree: "Select degree",
+                    'semester[]':"Select semester",
+                    course_alias_id: "Enter branch id",
                 },
             });
         });

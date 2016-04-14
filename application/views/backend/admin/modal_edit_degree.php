@@ -66,8 +66,8 @@ endforeach;
                 degree_status: "required",
             },
             messages: {
-                d_name: "Degree name",
-                degree_status: "Degree status",
+                d_name: "Enter course name",
+                degree_status: "Select status",
             }
         });
     });

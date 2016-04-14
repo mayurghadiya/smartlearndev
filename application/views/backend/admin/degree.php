@@ -146,11 +146,11 @@
                 messages: {
                     d_name:
                     {
-                         required:"Enter degree name",
+                         required:"Enter course name",
                         remote:"Record is already present in the system",
                     },
                     
-                    degree_status: "Degree status",
+                    degree_status: "Select status",
                 }
             });
         });

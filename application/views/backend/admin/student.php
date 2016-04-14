@@ -452,8 +452,8 @@ $(document).ready(function () {
             filtersemester:"required", 
         },
         messages: {            
-            filterdegree:"Select degree",
-            filtercourse:"Select course",
+            filterdegree:"Select course",
+            filtercourse:"Select branch",
             filterbatch:"Select batch",
             filtersemester:"Select semester",
         }
@@ -619,8 +619,8 @@ $(document).ready(function () {
                     {
                         required: "Enter zip code",
                     },
-            degree:"Select degree",
-            course:"Select course",
+            degree:"Select course",
+            course:"Select branch",
             batch:"Select batch",
             semester:"Select semester",
             admissiontype: "Select admission type",
