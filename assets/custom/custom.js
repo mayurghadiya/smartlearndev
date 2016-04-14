@@ -118,5 +118,24 @@ $(document).ready(function () {
             }
         });
     }
+    
+//    $(".vd_menu > ul >li > a").hover(function() {        
+//              $(this).next('div').stop(true, true).slideDown("slow");
+//              
+//
+//      // $(".vd_menu > ul >li > div").hide();    
+//        //   $(this).toggleClass('closed');
+//             // $(this).next('div').slideDown();    
+//              //  $(this).find('ul').toggle();
+//          //      $(this).siblings('li').find('ul').hide();
+//              $(this).next('div > ul').slideDown();    
+//              //$(this).next('div ul').slideToggle();
+//              
+//                 
+//      //  $(this).parent().find('.child-menu').css({"display":"none"});
+//  // $(this).parent().find('.child-menu').css({"display":"block"});
+//},function(){
+//     $(this).next('div').slideUp();    
+//});
 });
 
