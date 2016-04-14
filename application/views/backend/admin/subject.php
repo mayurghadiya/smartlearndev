@@ -235,7 +235,7 @@
 
                 subname: "Enter subject name",
                  subcode: "Enter subject code",                                                                  
-                    course: "Select course",
+                    course: "Select branch",
                     semester: "Select semester",
                 }
             });

@@ -232,13 +232,13 @@
                     b_name: "Enter batch name",
                     'degree[]': 
                             {
-                                 valueNotEquals: "Select degree",
-                                 required:"Select degree",
+                                 valueNotEquals: "Select course",
+                                 required:"Select course",
                             },
                     'course[]': 
                     {
-                         valueNotEquals: "Select course",
-                         required:"Select course",
+                         valueNotEquals: "Select branch",
+                         required:"Select branch",
                     },
                     batch_status: "Select status",
                 }

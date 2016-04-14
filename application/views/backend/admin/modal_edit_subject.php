@@ -149,7 +149,7 @@ $("#course1").change(function () {
             messages: {
                 subname: "Enter subject name",
                 subcode: "Enter subject code",
-                course: "Select course",
+                course: "Select branch",
                 semester: {
                         required:"Select semester",
                         remote:"subject already exists in this course and semester",
