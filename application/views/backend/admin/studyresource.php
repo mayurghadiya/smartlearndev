@@ -484,6 +484,7 @@
 
                                                         $().ready(function () {
                                                              $("#dateofsubmission").datepicker({
+                                                                dateFormat: ' MM dd, yy', 
                                                                 minDate: 0
                                                             });
                                                            

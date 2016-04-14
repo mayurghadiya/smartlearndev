@@ -1131,6 +1131,7 @@ $("#courses").change(function(){
         });
 
             $("#dateofsubmission").datepicker({
+                dateFormat: ' MM dd, yy',
                 minDate: 0
             });
             jQuery.validator.addMethod("character", function (value, element) {

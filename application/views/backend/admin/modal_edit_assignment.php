@@ -193,6 +193,7 @@ endforeach;
 
     $().ready(function () {
         $("#submissiondate1").datepicker({
+            dateFormat: ' MM dd, yy',
             minDate: 0
         });
 
