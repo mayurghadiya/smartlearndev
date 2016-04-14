@@ -453,8 +453,9 @@ jQuery(document).ready(function($)
 			}			
 			// check if not children of click-target then slideup
 			if ( $(this).parent().parent().parent().data("action") != "click-target" && $(this).parent().parent().parent().parent().parent().data("action") != "click-target"    )  {
-				$('[data-action^="click-target"]').slideUp('fast',  function(){ //calculateContentHeight();														
-					});				
+				//$('[data-action^="click-target"]').slideUp('fast',  function(){ 
+                                    //calculateContentHeight();														
+				//	});				
 			} else{
 			// check if children of click-target then slideup all the parent kids
 				$(this).parent().siblings().children('[data-action^="click-trigger"]').removeClass('open');	
@@ -482,7 +483,6 @@ jQuery(document).ready(function($)
 				// check if children of click-target then slideup				
 				//if ($(this).parent().parent().parent().data("action") == "click-target"){
 					$(this).parent().children('[data-action^="click-target"]').slideUp('fast',  function(){
-						
 					});				
 				//}				
 			}
@@ -494,7 +494,7 @@ jQuery(document).ready(function($)
 		$(document).click(function(event) {
 			 if (( $(event.target).closest('[data-action^="click-trigger"]').get(0) == null ) && ( $(event.target).closest('[data-action^="click-target"]').get(0) == null ) && ( $(event.target).closest('[data-action^="expand-all"]').get(0) == null)) { 
 				// $('[data-action^="click-target"]').hide();
-				 $('[data-action^="click-trigger"]').removeClass('open');	
+				// $('[data-action^="click-trigger"]').removeClass('open');	
 	 			 $('body').removeClass('expand-all');				 			 
 				 calculateContentHeight();
 			}			
