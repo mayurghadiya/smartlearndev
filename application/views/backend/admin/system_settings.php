@@ -232,7 +232,10 @@
         skin = this.id;
         $.ajax({
             url: '<?php echo base_url(); ?>index.php?admin/system_settings/change_skin/' + skin,
-            success: window.location = '<?php echo base_url(); ?>index.php?admin/system_settings/'
+            success: function()
+            {
+                window.location = '<?php echo base_url(); ?>index.php?admin/system_settings/';
+            }
         });
     });
 </script>
