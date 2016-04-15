@@ -446,6 +446,25 @@ jQuery(document).ready(function($)
 		   Used: < data-action="click-trigger" >
 		         < data-action="click-target" >		   
 		*/			
+//               $(function() {
+//   $('[data-action^="click-trigger"]').hover(function() {
+//      // Hide all open sub-menus
+//      $('[data-action^="click-trigger1"]').removeClass('open');
+//      $('div.child-menu').slideUp('1000').css({'display':'none'});
+//      
+//      
+//      // Show only this menu item's sub-menu
+//      $(this).addClass('open');
+//      $(this).next('div.child-menu').slideDown('1000').css({'display':'block'});
+//      if($(this).next('div.child-menu').hover(function(){
+//          
+//          
+//      })){
+//          $(this).addClass('open');
+//          $(this).next('div.child-menu').slideDown('1000').css({'display':'block'});
+//      }
+//   });
+//});
 		$('[data-action^="click-trigger"]').click(function(e) {
 			e.preventDefault();
 			if ($(this).parent().hasClass("hover-trigger") && $(this).siblings().hasClass("hover-target")){
