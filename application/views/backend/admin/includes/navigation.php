@@ -123,7 +123,7 @@
                                 <a href="<?php echo base_url(); ?>index.php?admin/exam_time_table">
                                     <span class="menu-text">Exam Schedule</span>  
                                 </a>
-                            </li>   
+                            </li>
                             <li>
                                 <a href="<?php echo base_url('index.php?admin/marks'); ?>">
                                     <span class="menu-text">Marks</span>  
@@ -134,6 +134,21 @@
                                     <span class="menu-text">Exam Grade</span>  
                                 </a>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>index.php?admin/remedial_exam">
+                                    <span class="menu-text">Remedial Exam</span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>index.php?admin/remedial_exam_schedule">
+                                    <span class="menu-text">Remedial Exam Schedule</span>  
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>index.php?admin/remedial_exam_marks">
+                                    <span class="menu-text">Remedial Exam Marks</span>  
+                                </a>
+                            </li>                            
                         </ul>   
                     </div>
                 </li>  
@@ -257,7 +272,7 @@
                         </ul>
                     </div>
                 </li>	
-                
+
                 <li> 
                     <a href="<?php echo base_url('index.php?video_streaming'); ?>">
                         <span class="menu-icon entypo-icon"><i class="fa fa-desktop"></i></span>
@@ -265,7 +280,7 @@
                         <span class="menu-badge"></span>
                     </a>          
                 </li>
-                
+
                 <li>
                     <a href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon entypo-icon"><i class="fa fa-envelope"></i></span> 

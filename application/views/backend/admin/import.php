@@ -37,9 +37,9 @@
                             <div class="tab-pane box active" id="list">
 
                                 <div class="panel-body">
-                                     <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div>
+                                    <div class="">
+                                        <span style="color:red">* is mandatory field</span> 
+                                    </div>
                                     <form id="importform" class="myimportform form-horizontal form-groups-bordered validate" role="form" method="post" action="" 
                                           enctype="multipart/form-data">
                                         <div class="form-group">
@@ -195,7 +195,7 @@
 <script>
     function get_exam_list(course_id, semester_id) {
         $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_exam_list/' + course_id + '/' + semester_id,
+            url: '<?php echo base_url(); ?>index.php?admin/all_exam_list/' + course_id + '/' + semester_id,
             type: 'get',
             success: function (content) {
                 console.log(content);
@@ -253,7 +253,22 @@
 
         $('#show_download').on('click', function () {
             var exam_id = $('#exam').val();
-            location.href = '<?php echo base_url(); ?>index.php?admin/download_marks_csv_sample/' + exam_id;
+            var exam_type = '';
+            //exam details
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/exam_details/' + exam_id,
+                type: 'get',
+                success: function (content) {
+                    var exam_data = jQuery.parseJSON(content);
+                    exam_type = exam_data[0].exam_ref_name;
+                    if (exam_type == 'remedial') {
+                        location.href = '<?php echo base_url(); ?>index.php?admin/remedial_exam_csv_sample/' + exam_id;
+                    } else {
+                        location.href = '<?php echo base_url(); ?>index.php?admin/download_marks_csv_sample/' + exam_id;
+                    }
+                }
+            });
+
         })
     });
 </script>

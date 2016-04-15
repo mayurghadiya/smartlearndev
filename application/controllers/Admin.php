@@ -1533,7 +1533,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('pp_id', $param2);
             $this->db->delete('participate_manager');
-             delete_notification('participate_manager', $param2);
+            delete_notification('participate_manager', $param2);
             $this->session->set_flashdata('flash_message', get_phrase('participate_deleted'));
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
@@ -2476,7 +2476,7 @@ class Admin extends CI_Controller {
                         $where = array(
                             'marks' => array(
                                 'mm_exam_id' => $exam_id,
-                                'mm_std_id' => $result['Student Roll No']
+                                'mm_std_id' => $result['Student ID']
                             ),
                             'subject' => $exam_subject
                         );
@@ -3270,10 +3270,49 @@ class Admin extends CI_Controller {
      * Get exam list by course name and semester
      * @param type $course_id
      * @param type $semester_id
+     * 
      */
     function get_exam_list($course_id = '', $semester_id = '', $time_table = '') {
         $this->load->model('admin/Crud_model');
         $exam_detail = $this->Crud_model->get_exam_list($course_id, $semester_id);
+        echo "<option value=''>Select</option>";
+        foreach ($exam_detail as $row) {
+            ?>
+            <option value="<?php echo $row->em_id ?>"
+                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
+            <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
+            <?php
+        }
+    }
+
+    /**
+     * All exam lists
+     * @param string $course_id
+     * @param string $semester_id
+     * @param string $time_table
+     */
+    function all_exam_list($course_id = '', $semester_id = '', $time_table = '') {
+        $this->load->model('admin/Crud_model');
+        $exam_detail = $this->Crud_model->all_exam_list($course_id, $semester_id);
+        echo "<option value=''>Select</option>";
+        foreach ($exam_detail as $row) {
+            ?>
+            <option value="<?php echo $row->em_id ?>"
+                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ') - ' . ucfirst($row->exam_ref_name); ?></option>
+            <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
+            <?php
+        }
+    }
+
+    /**
+     * Get remedial exam list
+     * @param string $course_id
+     * @param string $semester_id
+     * @param string $time_table
+     */
+    function get_remedial_exam_list($course_id = '', $semester_id = '', $time_table = '') {
+        $this->load->model('admin/Crud_model');
+        $exam_detail = $this->Crud_model->get_remedial_exam_list($course_id, $semester_id);
         echo "<option value=''>Select</option>";
         foreach ($exam_detail as $row) {
             ?>
@@ -3884,9 +3923,9 @@ class Admin extends CI_Controller {
      * @param int $batch
      * @param int $semester
      */
-    function exam_list_from_degree_and_course($degree, $course, $batch, $semester) {
+    function exam_list_from_degree_and_course($degree, $course, $batch, $semester, $type = '') {
         $this->load->model('admin/Crud_model');
-        $exam_list = $this->Crud_model->exam_list_from_degree_and_course($degree, $course, $batch, $semester);
+        $exam_list = $this->Crud_model->exam_list_from_degree_and_course($degree, $course, $batch, $semester, $type);
 
         echo json_encode($exam_list);
     }
@@ -4012,7 +4051,7 @@ class Admin extends CI_Controller {
                 $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
             }
         }
-         $html.='<script type="text/javascript">';
+        $html.='<script type="text/javascript">';
         $html .="function uncheck()
     {
          if($('.checkbox1:checked').length == $('.checkbox1').length){
@@ -4527,11 +4566,286 @@ class Admin extends CI_Controller {
         }
     }
 
+    /**
+     * Get all semesters of the branch
+     * @param string $branch_id
+     */
     function get_semesters_of_branch($branch_id = '') {
         $this->load->model('admin/Crud_model');
         $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
 
         echo json_encode($semester);
+    }
+
+    /**
+     * Remedial exam
+     * @param string $param1
+     * @param string $param2
+     */
+    function remedial_exam($param1 = '', $param2 = '') {
+        $this->load->model('admin/Crud_model');
+        if ($_POST) {
+            if ($param1 == 'create') {
+                //create
+                $this->Crud_model->save_remedial_exam(array(
+                    'em_name' => $_POST['exam_name'],
+                    'em_type' => $_POST['exam_type'],
+                    'em_year' => $_POST['year'],
+                    'degree_id' => $_POST['degree'],
+                    'course_id' => $_POST['course'],
+                    'batch_id' => $_POST['batch'],
+                    'em_semester' => $_POST['semester'],
+                    'em_status' => $_POST['status'],
+                    'em_date' => $_POST['date'],
+                    'passing_mark' => $_POST['passing_marks'],
+                    'total_marks' => $_POST['total_marks'],
+                    'em_start_time' => $_POST['start_date_time'],
+                    'em_end_time' => $_POST['end_date_time'],
+                    'exam_ref_name' => 'remedial',
+                    'exam_ref_id' => $_POST['exam_list'],
+                ));
+                $this->session->set_flashdata('flash_message', 'Remedial exam is successfully added.');
+            } elseif ($param1 == 'update') {
+                //update
+                echo '<pre>';
+                var_dump($_POST);
+                exit;
+                $this->Crud_model->save_remedial_exam(array(
+                    'em_name' => $_POST['exam_name'],
+                    'em_type' => $_POST['exam_type'],
+                    'em_year' => $_POST['year'],
+                    'degree_id' => $_POST['degree'],
+                    'course_id' => $_POST['course'],
+                    'batch_id' => $_POST['batch'],
+                    'em_semester' => $_POST['semester'],
+                    'em_status' => $_POST['status'],
+                    'em_date' => $_POST['date'],
+                    'passing_mark' => $_POST['passing_marks'],
+                    'total_marks' => $_POST['total_marks'],
+                    'em_start_time' => $_POST['start_date_time'],
+                    'em_end_time' => $_POST['end_date_time'],
+                    'exam_ref_name' => 'remedial',
+                    'exam_ref_id' => $_POST['exam_list'],
+                        ), $param2);
+                $this->session->set_flashdata('flash_message', 'Remedial exam successfully updated.');
+            }
+
+            redirect(base_url('index.php?admin/remedial_exam'));
+        }
+        $page_data['page_name'] = 'remedial_exam';
+        $page_data['page_title'] = 'Remedial Exam';
+        $page_data['exams'] = $this->Crud_model->remedial_exam_list();
+        $page_data['exam_type'] = $this->Crud_model->get_all_exam_type();
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['course'] = $this->Crud_model->get_all_course();
+        $page_data['semester'] = $this->Crud_model->get_all_semester();
+        $page_data['centerlist'] = $this->db->get('center_user')->result();
+        $this->load->view('backend/index', $page_data);
+    }
+
+    /**
+     * Remedial exam schedule
+     * @param string $param1
+     * @param string $param2
+     */
+    function remedial_exam_schedule($param1 = '', $param2 = '') {
+        $this->load->model('admin/Crud_model');
+        if ($param1 == 'delete') {
+            //delete
+            $this->db->where('exam_time_table_id', $param2);
+            $this->db->delete('exam_time_table');
+            delete_notification('exam_time_table', $param2);
+            $this->session->set_flashdata('flash_message', 'Exam time table deleted successfully');
+            redirect(base_url('index.php?admin/exam_time_table'));
+        }
+        if ($_POST) {
+            if ($param1 == 'create') {
+                //check for duplication
+                $is_record_present = $this->Crud_model->exam_time_table_duplication(
+                        $_POST['exam'], $_POST['subject']);
+
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present.');
+                } else {
+                    // do form validation
+                    if ($this->form_validation->run('time_table_insert_update') != FALSE) {
+                        //create
+                        $this->Crud_model->exam_time_table_save(array(
+                            'degree_id' => $this->input->post('degree', TRUE),
+                            'course_id' => $this->input->post('course', TRUE),
+                            'batch_id' => $this->input->post('batch', TRUE),
+                            'semester_id' => $this->input->post('semester', TRUE),
+                            'exam_id' => $this->input->post('exam', TRUE),
+                            'subject_id' => $this->input->post('subject', TRUE),
+                            'exam_date' => $this->input->post('exam_date', TRUE),
+                            'exam_start_time' => $this->input->post('start_time', TRUE),
+                            'exam_end_time' => $this->input->post('end_time', TRUE),
+                        ));
+                        $insert_id = $this->db->insert_id();
+                        create_notification('exam_time_table', $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $insert_id);
+                        $this->session->set_flashdata('flash_message', 'Time table is added successfully.');
+                        redirect(base_url('index.php?admin/remedial_exam_schedule'));
+                    }
+                }
+            } elseif ($param1 == 'update') {
+                // do form validation
+                if ($this->form_validation->run('time_table_insert_update') != FALSE) {
+                    //update
+                    $this->Crud_model->exam_time_table_save(array(
+                        'degree_id' => $this->input->post('degree', TRUE),
+                        'course_id' => $this->input->post('course', TRUE),
+                        'batch_id' => $this->input->post('batch', TRUE),
+                        'exam_id' => $this->input->post('exam', TRUE),
+                        'subject_id' => $this->input->post('subject', TRUE),
+                        'exam_date' => $this->input->post('exam_date', TRUE),
+                        'exam_start_time' => $this->input->post('start_time', TRUE),
+                        'exam_end_time' => $this->input->post('end_time', TRUE),
+                            ), $param2);
+                    $this->session->set_flashdata('flash_message', 'Time table updated successfully');
+                    redirect(base_url('index.php?admin/remedial_exam_schedule'));
+                }
+            }
+        }
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['course'] = $this->Crud_model->get_all_course();
+        $page_data['semester'] = $this->Crud_model->get_all_semester();
+        $page_data['time_table'] = $this->Crud_model->remedial_exam_schedule();
+        $page_data['title'] = 'Remedial Exam Schedule';
+        $page_data['page_name'] = 'remedial_exam_time_table';
+        $this->load->view('backend/index', $page_data);
+    }
+
+    /**
+     * Get exam list details
+     * @param string $course
+     * @param string $branch
+     * @param string $batch
+     * @param string $semester
+     */
+    function get_exam_list_data($course, $branch, $batch, $semester, $type = '') {
+        $this->load->model('admin/Crud_model');
+        $exam_list = $this->Crud_model->get_exam_list_data($course, $branch, $batch, $semester, $type);
+
+        echo json_encode($exam_list);
+    }
+
+    /**
+     * Single exam details
+     * @param string $exam_id
+     */
+    function exam_details($exam_id = '') {
+        $this->load->model('admin/Crud_model');
+        $exam_details = $this->Crud_model->single_exam_detail($exam_id);
+
+        echo json_encode($exam_details);
+    }
+
+    /**
+     * Exam types
+     * @param string $type_id
+     */
+    function exam_types($type_id) {
+        $this->load->model('admin/Crud_model');
+        $exam_type = $this->Crud_model->exam_types();
+        echo '<option value="">Select</option>';
+        foreach ($exam_type as $row) {
+            ?>
+            <option value="<?php echo $row->exam_type_id; ?>"
+                    <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
+            <?php
+        }
+    }
+
+    /**
+     * Remedial exam marks
+     */
+    function remedial_exam_marks($course_id = '', $semester_id = '', $exam_id = '') {
+        $this->load->model('admin/Crud_model');
+        if ($_POST) {
+            //exam details
+            $exam_detail = $this->Crud_model->exam_detail($exam_id);
+
+            //failed student list
+            $student_list = $this->Crud_model->remedial_exam_student_list($_POST['recent_exam_id'], $_POST['recent_exam_passing_marks']);
+
+            $counter = 1;
+            foreach ($student_list as $student) {
+                //POST name convention
+                //counter_studentID_examID_subjectID
+                //find failed subjects
+                $subject_details = $this->Crud_model->remedial_exam_student_subject($_POST['recent_exam_id'], $student->std_id, $_POST['recent_exam_passing_marks']);
+
+                foreach ($subject_details as $subject) {
+                    //check for marks with current exam
+                    $where = array(
+                        'mm_std_id' => $student->std_id,
+                        'mm_subject_id' => $subject->mm_subject_id,
+                        'mm_exam_id' => $exam_id,
+                    );
+                    $marks = $this->Crud_model->student_exam_mark($where);
+
+                    //if count then update else insert
+                    if (count($marks)) {
+                        //update current exam marks                        
+                        $this->Crud_model->mark_update(array(
+                            'mm_std_id' => $student->std_id,
+                            'mm_subject_id' => $subject->mm_subject_id,
+                            'mm_exam_id' => $exam_id,
+                            'mark_obtained' => $_POST["mark_{$counter}_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
+                            'mm_remarks' => $_POST["remark_{$counter}_{$student->std_id}_{$exam_id}"],
+                                ), $where);
+                    } else {
+                        //inert new marks
+                        $this->Crud_model->mark_insert(array(
+                            'mm_std_id' => $student->std_id,
+                            'mm_subject_id' => $subject->mm_subject_id,
+                            'mm_exam_id' => $exam_id,
+                            'mark_obtained' => $_POST["mark_{$counter}_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
+                            'mm_remarks' => $_POST["remark_{$counter}_{$student->std_id}_{$exam_id}"],
+                        ));
+                    }
+                }
+                $counter++;
+            }
+
+            $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+            redirect(base_url('index.php?admin/remedial_exam_marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
+        }
+        $page_data['course_id'] = '';
+        $page_data['semester_id'] = '';
+        $page_data['exam_id'] = '';
+        $page_data['student_list'] = array();
+        $page_data['subject_details'] = array();
+        $page_data['exam_detail'] = array();
+
+        if ($course_id != '' && $semester_id != '' && $exam_id != '') {
+            //assign variable
+            $page_data['course_id'] = $course_id;
+            $page_data['semester_id'] = $semester_id;
+            $page_data['exam_id'] = $exam_id;
+
+            //exam details
+            $page_data['exam_detail'] = $this->Crud_model->exam_detail($exam_id);
+
+            //subject details
+            $page_data['subject_details'] = $this->Crud_model->exam_time_table_subject_list($exam_id);
+
+            //student list
+            $page_data['student_list'] = $this->Crud_model->student_list_by_course_semester($course_id, $semester_id);
+        }
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['course'] = $this->Crud_model->get_all_course();
+        $page_data['semester'] = $this->Crud_model->get_all_semester();
+        $page_data['time_table'] = $this->Crud_model->time_table();
+        $page_data['title'] = 'Remedial Exam Marks';
+        $page_data['page_name'] = 'remedial_exam_marks';
+        $this->load->view('backend/index', $page_data);
+    }
+
+    function remedial_exam_csv_sample($exam_id = '') {
+        $this->load->helper('import_export_helper');
+        $this->import_demo_sheet_download_config('Remedial Exam Marks');
+        remedial_exam_marks($exam_id);
     }
 
 }

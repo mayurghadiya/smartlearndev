@@ -8,14 +8,14 @@
                         <ul class="breadcrumb">
                             <li><a href="#">Home</a> </li>
                             <li><a href="#">Pages</a> </li>
-                            <li class="active">Exam Schedule</li>
+                            <li class="active">Remedial Exam Schedule</li>
                         </ul>                  
                     </div>
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Exam Schedule</h1>
+                    <h1>Remedial Exam Schedule</h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -25,11 +25,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Exam Schedule List
+                                    Remedial Exam Schedule List
                                 </a></li>
                             <li>
                                 <a id="add_time_table" href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Exam Schedule
+                                    Add Remedial Exam Schedule
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -334,7 +334,7 @@
             function exam_list_from_degree_and_course(d_id, c_id, b_id, s_id) {
                 $('#exam').find('option').remove().end();
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?admin/exam_list_from_degree_and_course/' + d_id + '/' + c_id + '/' + b_id + '/' + s_id + '/reguler',
+                    url: '<?php echo base_url(); ?>index.php?admin/get_exam_list_data/' + d_id + '/' + c_id + '/' + b_id + '/' + s_id + '/remedial',
                     type: 'get',
                     success: function (content) {
                         $('#exam').append('<option value="">Select</option>');

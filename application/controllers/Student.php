@@ -54,38 +54,35 @@ class Student extends CI_Controller {
         $this->db->update('student', $data);
         //echo $this->db->last_query();
         //die;
-      
-            //echo $this->session->userdata('password_status');
-           if($this->session->userdata('password_status') == 0)
-           {
-               $page_data['page_name'] = 'changepassword';
-         } 
-         else {
-               $page_data['page_name'] = 'dashboard';
-           }
-      
+        //echo $this->session->userdata('password_status');
+        if ($this->session->userdata('password_status') == 0) {
+            $page_data['page_name'] = 'changepassword';
+        } else {
+            $page_data['page_name'] = 'dashboard';
+        }
+
         $page_data['page_title'] = 'Student Dashboard';
         //$page_data['chat'] = $this->chat_user();
         $this->load->view('backend/index', $page_data);
     }
-    function change_password($param1 = '', $param2 = '')
-    {
+
+    function change_password($param1 = '', $param2 = '') {
         if ($this->session->userdata('student_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $data['password'] = md5($this->input->post('new_password'));
             $data['real_pass'] = $this->input->post('new_password');
-            $data['password_status']=1;
-            
+            $data['password_status'] = 1;
+
             $this->db->where('std_id', $this->session->userdata('std_id'));
-            $this->db->update('student',$data);
-            
-           $this->session->set_userdata('password_status',1);
+            $this->db->update('student', $data);
+
+            $this->session->set_userdata('password_status', 1);
             $this->session->set_flashdata('flash_message', get_phrase('password_updated_successfully'));
-         
+
             redirect(base_url() . 'index.php?student/dashboard/', 'refresh');
         }
-        
+
         $page_data['page_name'] = 'changepassword';
         $page_data['page_title'] = 'Change Password';
         $this->load->view('backend/index', $page_data);
@@ -263,7 +260,7 @@ class Student extends CI_Controller {
         $page_data['examlist'] = $this->db->get('exam_manager')->result();
         $page_data['center'] = $this->db->get('center_user')->result();
         $page_data['page_name'] = 'exam_center';
-        $page_data['page_title'] = 'Exam center';        
+        $page_data['page_title'] = 'Exam center';
         $this->load->view('backend/index', $page_data);
     }
 
@@ -302,7 +299,7 @@ class Student extends CI_Controller {
         $page_data['page_name'] = 'assignment';
         $page_data['param'] = $param1;
         $page_data['page_title'] = 'Assignment List';
-         clear_notification('assignment_manager', $this->session->userdata('student_id'));        
+        clear_notification('assignment_manager', $this->session->userdata('student_id'));
         unset($this->session->userdata('notifications')['assignment_manager']);
         $this->load->view('backend/index', $page_data);
     }
@@ -345,7 +342,7 @@ class Student extends CI_Controller {
     }
 
     function project($param1 = '', $param2 = '') {
-        
+
         if ($param1 == 'create') {
             if ($_FILES['projectfile']['name'] != "") {
                 $config['upload_path'] = 'uploads/project_file';
@@ -411,14 +408,14 @@ class Student extends CI_Controller {
             // $page_data['project'] = $this->db->get_where('project_manager', array("pm_student_id" => $this->session->userdata('std_id')))->result();
             $page_data['degree'] = $this->db->get('degree')->result();
             $page_data['batch'] = $this->db->get('batch')->result();
-             $page_data['course'] = $this->db->get('course')->result(); 
+            $page_data['course'] = $this->db->get('course')->result();
             $page_data['semester'] = $this->db->get('semester')->result();
             $page_data['student'] = $this->db->get('student')->result();
             $page_data['page_name'] = 'project';
             $page_data['page_title'] = 'Project List';
             $page_data['param'] = $param1;
-              clear_notification('project_manager', $this->session->userdata('student_id'));        
-        unset($this->session->userdata('notifications')['project_manager']);
+            clear_notification('project_manager', $this->session->userdata('student_id'));
+            unset($this->session->userdata('notifications')['project_manager']);
             $this->load->view('backend/index', $page_data);
         }
         if ($param1 == "video") {
@@ -451,10 +448,60 @@ class Student extends CI_Controller {
                 ))->row();
         $page_data['exam_listing'] = $this->Student_model->
                 student_exam_list($student_details->course_id, $student_details->semester_id);
+
+        //check for time table
+        $student_id = $this->session->userdata('student_id');
+        foreach ($page_data['exam_listing'] as $exam) {
+            $is_pass = TRUE;
+            //find exam schedule
+            $exam_schedule = $this->Student_model->exam_schedule($exam->em_id);
+
+            //find marks
+            $exam_marks = $this->Student_model->student_marks($student_id, $exam->em_id);
+
+            //check for pass or fail
+            foreach ($exam_marks as $mark) {
+                if ($mark->mark_obtained < $exam->passing_mark) {
+                    $is_pass = FALSE;
+                    break;
+                }
+            }
+
+            //find remedial exams if fail
+            if (!$is_pass) {
+                $remedial_exam = $this->Student_model->remedial_exam_list($exam->em_id);
+
+                foreach ($remedial_exam as $remedial) {
+                    $is_remedial_exam_pass = FALSE;
+                    array_push($page_data['exam_listing'], $remedial);
+                    //check for exam schedule
+                    $remedial_exam_schedule = $this->Student_model->exam_schedule($remedial->em_id);
+
+                    foreach ($remedial_exam_schedule as $schedule) {
+                        //check for marks
+                        $marks = $this->Student_model->student_marks($student_id, $remedial->em_id);
+
+                        //check for pass or fail
+                        foreach ($marks as $m) {
+                            if ($m->mark_obtained >= $remedial->passing_mark) {
+                                $is_remedial_exam_pass = TRUE;
+                            } else {
+                                $is_remedial_exam_pass = FALSE;
+                                break;
+                            }
+                        }
+                        if (!$is_remedial_exam_pass)
+                            break;
+                    }
+                    if ($is_remedial_exam_pass)
+                        break;
+                }
+            }
+        }
         $page_data['page_name'] = 'exam_listing';
         $page_data['page_title'] = 'Exam Listing';
-        clear_notification('exam_manager', $this->session->userdata('student_id'));  
-        clear_notification('exam_time_table', $this->session->userdata('student_id')); 
+        clear_notification('exam_manager', $this->session->userdata('student_id'));
+        clear_notification('exam_time_table', $this->session->userdata('student_id'));
         unset($this->session->userdata('notifications')['exam_manager']);
         unset($this->session->userdata('notifications')['exam_time_table']);
         $this->load->view('backend/index', $page_data);
@@ -479,6 +526,7 @@ class Student extends CI_Controller {
      */
     function exam_marks($exam_id = '') {
         $this->load->model('Student/Student_model');
+        $student_id = $this->session->userdata('student_id');
         $page_data['page_name'] = 'exam_marks';
         $page_data['page_title'] = 'Exam Marks';
         $page_data['exam_id'] = $exam_id;
@@ -491,6 +539,56 @@ class Student extends CI_Controller {
         $page_data['student_marks'] = $this->Student_model->student_marks($student_details->std_id, $exam_id);
         $page_data['exam_listing'] = $this->Student_model->
                 student_exam_list($student_details->course_id, $student_details->semester_id);
+
+        $student_id = $this->session->userdata('student_id');
+        foreach ($page_data['exam_listing'] as $exam) {
+            $is_pass = TRUE;
+            //find exam schedule
+            $exam_schedule = $this->Student_model->exam_schedule($exam->em_id);
+
+            //find marks
+            $exam_marks = $this->Student_model->student_marks($student_id, $exam->em_id);
+
+            //check for pass or fail
+            foreach ($exam_marks as $mark) {
+                if ($mark->mark_obtained < $exam->passing_mark) {
+                    $is_pass = FALSE;
+                    break;
+                }
+            }
+
+            //find remedial exams if fail
+            if (!$is_pass) {
+                $remedial_exam = $this->Student_model->remedial_exam_list($exam->em_id);
+
+                foreach ($remedial_exam as $remedial) {
+                    $is_remedial_exam_pass = FALSE;
+                    array_push($page_data['exam_listing'], $remedial);
+                    //check for exam schedule
+                    $remedial_exam_schedule = $this->Student_model->exam_schedule($remedial->em_id);
+
+                    foreach ($remedial_exam_schedule as $schedule) {
+                        //check for marks
+                        $marks = $this->Student_model->student_marks($student_id, $remedial->em_id);
+
+                        //check for pass or fail
+                        foreach ($marks as $m) {
+                            if ($m->mark_obtained >= $remedial->passing_mark) {
+                                $is_remedial_exam_pass = TRUE;
+                            } else {
+                                $is_remedial_exam_pass = FALSE;
+                                break;
+                            }
+                        }
+                        if (!$is_remedial_exam_pass)
+                            break;
+                    }
+                    if ($is_remedial_exam_pass)
+                        break;
+                }
+            }
+        }
+
         clear_notification('marks_manager', $this->session->userdata('student_id'));
         unset($this->session->userdata('notifications')['marks_manaher']);
         $this->load->view('backend/index', $page_data);
@@ -838,12 +936,11 @@ class Student extends CI_Controller {
     /**
      * Student profile
      */
-    function manage_profile($param1="",$param2="") {
+    function manage_profile($param1 = "", $param2 = "") {
         $this->load->model('Student/Student_model');
         $page_data['error'] = '';
-        if($param1=="update")
-        {
-             if ($_FILES['userfile']['name'] != "") {
+        if ($param1 == "update") {
+            if ($_FILES['userfile']['name'] != "") {
 
                 $ext_img = explode(".", $_FILES['userfile']['name']);
                 $ext = strtolower(end($ext_img));
@@ -868,12 +965,10 @@ class Student extends CI_Controller {
                     $this->session->set_flashdata("flash_message", 'Update failed. Invalid Image!');
                     redirect(base_url() . 'index.php?admin/student/', 'refresh');
                 }
+            } else {
+                $data['profile_photo'] = $this->input->post('txtoldfile');
             }
-            else
-            {
-                 $data['profile_photo'] = $this->input->post('txtoldfile');
-            }
-            
+
             $data['email'] = $this->input->post('email_id');
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
@@ -887,8 +982,8 @@ class Student extends CI_Controller {
             $data['zip'] = $this->input->post('zip');
             $data['std_fb'] = $this->input->post('facebook');
             $data['std_twitter'] = $this->input->post('twitter');
-            
-              $this->db->where('std_id', $this->session->userdata('std_id'));
+
+            $this->db->where('std_id', $this->session->userdata('std_id'));
             $this->db->update('student', $data);
             $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
             redirect(base_url() . 'index.php?student/manage_profile', 'refresh');
@@ -934,7 +1029,7 @@ class Student extends CI_Controller {
             //change profile pic
             if ($_FILES['userfile']['name'] != '') {
                 $path = FCPATH . 'uploads/student_image/';
-                if(move_uploaded_file($_FILES['userfile']['tmp_name'], $path . $this->session->userdata('student_id') .'.jpg')){
+                if (move_uploaded_file($_FILES['userfile']['tmp_name'], $path . $this->session->userdata('student_id') . '.jpg')) {
                     echo 'uploaded';
                 }
                 $this->db->where('std_id', $this->session->userdata('student_id'));
@@ -1612,7 +1707,7 @@ class Student extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('participation_successfully'));
             redirect(base_url() . 'index.php?student/dashboard', 'refresh');
         }
-         clear_notification('participate_manager', $this->session->userdata('student_id'));        
+        clear_notification('participate_manager', $this->session->userdata('student_id'));
         unset($this->session->userdata('notifications')['participate_manager']);
         $page_data['page_name'] = 'participate_form';
         $page_data['page_title'] = 'Participate Form';
@@ -1681,30 +1776,26 @@ class Student extends CI_Controller {
         $page_data['page_title'] = 'Student Fees Record';
         $this->load->view('backend/index', $page_data);
     }
-    function studyresources()
-    { 
-        clear_notification('study_resources', $this->session->userdata('student_id'));        
+
+    function studyresources() {
+        clear_notification('study_resources', $this->session->userdata('student_id'));
         unset($this->session->userdata('notifications')['study_resources']);
         redirect(base_url() . 'index.php?student/dashboard/', 'refresh');
     }
-    function digitallibrary()
-    {
-        
-      clear_notification('library_manager', $this->session->userdata('student_id'));        
+
+    function digitallibrary() {
+
+        clear_notification('library_manager', $this->session->userdata('student_id'));
         unset($this->session->userdata('notifications')['library_manager']);
-        redirect(base_url() . 'index.php?student/dashboard/', 'refresh');  
+        redirect(base_url() . 'index.php?student/dashboard/', 'refresh');
     }
-    
-    function check_password()
-    {
-        $currentpassword=$this->input->post('currentpassword');
-        $data=$this->db->get_where('student',array('std_id'=>$this->session->userdata('std_id')))->result();
-        if($data[0]->real_pass==$currentpassword)
-        {
+
+    function check_password() {
+        $currentpassword = $this->input->post('currentpassword');
+        $data = $this->db->get_where('student', array('std_id' => $this->session->userdata('std_id')))->result();
+        if ($data[0]->real_pass == $currentpassword) {
             echo 'true';
-        }
-        else
-        {
+        } else {
             echo 'false';
         }
     }

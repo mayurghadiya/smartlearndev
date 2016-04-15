@@ -51,7 +51,7 @@ if (!function_exists('backup_restore_table_ignore_list')) {
      */
     function backup_restore_table_ignore_list() {
         $CI = & get_instance();
-        $ignore_table_list = array('admin', 'ci_sessions', 'cms_manager', 'language', 'system_setting', 'system_setting_sl');
+        $ignore_table_list = array('admin', 'ci_sessions', 'cms_manager', 'language', 'system_setting');
 
         return $ignore_table_list;
     }

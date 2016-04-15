@@ -20,12 +20,12 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Select Exam</label>
-                                            <div class="col-sm-5">
+                                            <div class="col-sm-7">
                                                 <select class="form-control" id="exam" name="exam">
                                                     <option value="">Select</option>
                                                     <?php foreach ($exam_listing as $row) { ?>
                                                         <option value="<?php echo $row->em_id; ?>"
-                                                                <?php if ($exam_id == $row->em_id) echo 'selected'; ?>><?php echo $row->em_name; ?></option>
+                                                                <?php if ($exam_id == $row->em_id) echo 'selected'; ?>><?php echo $row->s_name . ' -- '.  $row->em_name . ' -- ' . $row->exam_ref_name; ?></option>
                                                             <?php } ?>
                                                 </select>
                                             </div>
@@ -74,7 +74,7 @@
                         <!--Start display all exam results block for students wise-->
                         <div class="box box-primary">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Academic Year : 2015-16</h3>
+                                <h3 class="box-title">Academic Year : <?php echo date('Y'); ?></h3>
                             </div><!--/box-header-->
                             <div class="box-body">
                                 <div class="box box-warning box-solid">
@@ -103,51 +103,61 @@
                                                             <th>Results</th>
                                                             <th>Remarks</th>
                                                         </tr>
-                                                        <?php 
+                                                        <?php
                                                         $counter = 1;
                                                         $total_marks = 0;
                                                         $obtained_marks = 0;
                                                         $is_failed = FALSE;
-                                                        foreach ($student_marks as $row) { ?>
-                                                        <tr>
-                                                            <td><?php echo $counter++; ?></td>
-                                                            <td><?php echo $row->subject_code; ?></td>
-                                                            <td><?php echo $row->subject_name; ?></td>
-                                                            <td><?php echo $exam_details->total_marks; ?></td>
-                                                            <?php $total_marks += $exam_details->total_marks; ?>
-                                                            <td><?php echo $exam_details->passing_mark; ?></td>
-                                                            <td><?php echo $row->mark_obtained; ?></td>
-                                                            <?php if($row->mark_obtained < $exam_details->passing_mark) $is_failed = TRUE; ?>
-                                                            <?php $obtained_marks += $row->mark_obtained; ?>
-                                                            <?php
-                                                            $percentage = ($row->mark_obtained * 100) / $exam_details->total_marks;
+                                                        foreach ($student_marks as $row) {
+                                                            $is_number = is_numeric($row->mark_obtained);
+                                                            if(!$is_number)
+                                                                continue;
                                                             ?>
-                                                            <td>
+                                                            <tr>
+                                                                <td><?php echo $counter++; ?></td>
+                                                                <td><?php echo $row->subject_code; ?></td>
+                                                                <td><?php echo $row->subject_name; ?></td>
+                                                                <td><?php echo $exam_details->total_marks; ?></td>
+                                                                <?php $total_marks += $exam_details->total_marks; ?>
+                                                                <td><?php echo $exam_details->passing_mark; ?></td>
+                                                                <td><?php echo $row->mark_obtained; ?></td>
+                                                                <?php if ($row->mark_obtained < $exam_details->passing_mark) $is_failed = TRUE; ?>
+                                                                <?php $obtained_marks += $row->mark_obtained; ?>
                                                                 <?php
-                                                                $grade = $percentage;
-                                                                $grade = (int) (100 * $row->mark_obtained) / $exam_details->total_marks;
-                                                                $grade_data = $this->db->select()
-                                                                        ->from('grade')
-                                                                        ->where('from_marks >= ', $grade)
-                                                                        ->order_by('from_marks', 'ASC')
-                                                                        ->limit(1)
-                                                                        ->get()
-                                                                        ->row();
-                                                                $is_pass = TRUE;
-                                                                if($grade_data->from_marks < $exam_details->passing_mark)
-                                                                    $is_pass = FALSE;
-                                                                else {
-                                                                    echo $grade_data->grade_name;
-                                                                    $is_pass = TRUE;
-                                                                }                                                                    
+                                                                $percentage = ($row->mark_obtained * 100) / $exam_details->total_marks;
                                                                 ?>
-                                                            </td>
-                                                            <td><?php if($is_pass) echo 'Pass'; else echo 'Fail'; ?></td>
-                                                            <td><?php echo ''; ?></td>
-                                                            
-                                                        </tr>
-                                                        <?php } ?>
-                                                        
+                                                                <td>
+                                                                    <?php
+                                                                    $grade = $percentage;
+                                                                    $grade = (int) (100 * $row->mark_obtained) / $exam_details->total_marks;
+                                                                    $grade_data = $this->db->select()
+                                                                            ->from('grade')
+                                                                            ->where('from_marks >= ', $grade)
+                                                                            ->order_by('from_marks', 'ASC')
+                                                                            ->limit(1)
+                                                                            ->get()
+                                                                            ->row();
+                                                                    $is_pass = TRUE;
+
+                                                                    if ($row->mark_obtained < $exam_details->passing_mark) {
+                                                                        echo 'F';
+                                                                        $is_pass = FALSE;
+                                                                    } else {
+                                                                        echo $grade_data->grade_name;
+                                                                        $is_pass = TRUE;
+                                                                    }
+                                                                    ?>
+                                                                </td>
+                                                                <td><?php if ($is_pass)
+                                                                echo 'Pass';
+                                                            else
+                                                                echo 'Fail';
+                                                            ?></td>
+                                                                <td><?php echo ''; ?></td>
+
+                                                            </tr>
+    <?php } ?>
+
                                                     </tbody>
                                                 </table>
                                             </div><!--/box-body-->
@@ -163,14 +173,13 @@
                                                         <strong>Total Percentages Marks : </strong><?php echo number_format((($obtained_marks * 100) / $total_marks), 2, '.', ''); ?>%</div>
                                                     <div class="col-sm-3">
                                                         <strong>Results : </strong>
-                                                        <?php
-                                                        if(!$is_failed) { ?>
-                                                        <span class="label label-success">Pass</span>    
+                                                        <?php if (!$is_failed) { ?>
+                                                            <span class="label label-success">Pass</span>    
                                                         <?php } else { ?>
                                                             <span class="label label-danger">Failed</span>
-                                                        <?php }
-                                                        ?>
-                                                        
+    <?php }
+    ?>
+
                                                     </div>
                                                 </div>
                                             </div><!--/box-footer-->
@@ -180,7 +189,7 @@
                                 </div><!--/box-->
                             </div><!--/box-body-->
                         </div><!--/box-->
-                    <?php } ?>
+<?php } ?>
 
                 </div>
             </div>

@@ -331,9 +331,11 @@ class Student_model extends CI_Model {
         return $this->db->select()
                         ->from('exam_manager')
                         ->join('exam_type', 'exam_type.exam_type_id = exam_manager.em_type')
+                        ->join('semester', 'semester.s_id = exam_manager.em_semester')
                         ->where(array(
                             'exam_manager.course_id' => $course,
-                            'exam_manager.em_semester' => $semeseter
+                            'exam_manager.em_semester' => $semeseter,
+                            'exam_manager.exam_ref_name' => 'reguler'
                         ))
                         ->order_by('exam_manager.em_start_time', 'DESC')
                         ->get()
@@ -546,6 +548,41 @@ class Student_model extends CI_Model {
                         ->where('am_id', $id)
                         ->get()
                         ->row();
+    }
+
+    /**
+     * Remedial exam list
+     * @param int $reguler_exam_id
+     * @return array
+     */
+    function remedial_exam_list($reguler_exam_id) {
+        return $this->db->select()
+                        ->from('exam_manager')
+                        ->join('exam_type', 'exam_type.exam_type_id = exam_manager.em_type')
+                        ->join('semester', 'semester.s_id = exam_manager.em_semester')
+                        ->where(array(
+                            'exam_manager.exam_ref_id' => $reguler_exam_id
+                        ))
+                        ->order_by('exam_manager.em_start_time', 'DESC')
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Remedial exam schedule
+     * @param string $exam
+     * @param string $subject
+     * @return array
+     */
+    function remedial_exam_schedule($exam, $subject) {
+        return $this->db->select()
+                        ->from('exam_time_table')
+                        ->join('exam_manager', 'exam_manager.em_id = exam_time_table.exam_id')
+                        ->join('subject_manager', 'subject_manager.sm_id = exam_time_table.subject_id')
+                        ->where('exam_time_table.subject_id', $subject)
+                        ->where('exam_time_table.exam_id', $exam)
+                        ->get()
+                        ->result();
     }
 
 }

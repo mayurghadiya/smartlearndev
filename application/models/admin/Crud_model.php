@@ -476,7 +476,37 @@ class Crud_model extends CI_Model {
     function get_exam_list($course_id, $semester_id) {
         return $this->db->get_where('exam_manager', array(
                             'course_id' => $course_id,
-                            'em_semester' => $semester_id
+                            'em_semester' => $semester_id,
+                            'exam_ref_name' => 'reguler'
+                        ))
+                        ->result();
+    }
+    
+    /**
+     * All exam list
+     * @param int $course_id
+     * @param int $semester_id
+     * @return array
+     */
+    function all_exam_list($course_id, $semester_id) {
+        return $this->db->get_where('exam_manager', array(
+                            'course_id' => $course_id,
+                            'em_semester' => $semester_id,
+                        ))
+                        ->result();
+    }
+
+    /**
+     * Get remedial exam list
+     * @param int $course_id
+     * @param int $semester_id
+     * @return array
+     */
+    function get_remedial_exam_list($course_id, $semester_id) {
+        return $this->db->get_where('exam_manager', array(
+                            'course_id' => $course_id,
+                            'em_semester' => $semester_id,
+                            'exam_ref_name' => 'remedial'
                         ))
                         ->result();
     }
@@ -763,12 +793,13 @@ class Crud_model extends CI_Model {
      * @param int $semester
      * @return array
      */
-    function exam_list_from_degree_and_course($degree, $course, $batch, $semester) {
+    function exam_list_from_degree_and_course($degree, $course, $batch, $semester, $type) {
         return $this->db->get_where('exam_manager', array(
                     'degree_id' => $degree,
                     'course_id' => $course,
                     'batch_id' => $batch,
-                    'em_semester' => $semester
+                    'em_semester' => $semester,
+                    'exam_ref_name' => $type
                 ))->result();
     }
 
@@ -868,7 +899,7 @@ class Crud_model extends CI_Model {
                     'am_title' => $title
                 ))->row();
     }
-    
+
     /**
      * Get all grade
      * @return array
@@ -876,14 +907,14 @@ class Crud_model extends CI_Model {
     function grade() {
         return $this->db->get('grade')->result();
     }
-    
+
     /**
      * Insert or update grade
      * @param int $id
      * @param array $data
      */
     function save_grade($data, $id = NULL) {
-        if($id == NULL) {
+        if ($id == NULL) {
             //create
             $this->db->insert('grade', $data);
         } else {
@@ -892,12 +923,12 @@ class Crud_model extends CI_Model {
             $this->db->update('grade', $data);
         }
     }
-    
+
     /**
      * Get semesters from branch
      * @param int $branch_id
      */
-    function get_semesters_of_branch($branch_id){
+    function get_semesters_of_branch($branch_id) {
         $course = $this->get_course_details($branch_id);
         $sem_ids = explode(',', $course->semester_id);
         $semester = $this->db->select()
@@ -905,8 +936,127 @@ class Crud_model extends CI_Model {
                 ->where_in('s_id', $sem_ids)
                 ->get()
                 ->result();
-        
+
         return $semester;
+    }
+
+    /**
+     * Get exam list by course, branch, batch, semester
+     * @param string $course
+     * @param string $branch
+     * @param string $batch
+     * @param string $semester
+     * @return array
+     */
+    function get_exam_list_data($course, $branch, $batch, $semester, $type) {
+        return $this->db->get_where('exam_manager', array(
+                    'degree_id' => $course,
+                    'course_id' => $branch,
+                    'batch_id' => $batch,
+                    'em_semester' => $semester,
+                    'exam_ref_name' => $type
+                ))->result();
+    }
+
+    /**
+     * Exam types
+     * @return array
+     */
+    function exam_types() {
+        return $this->db->select()
+                        ->from('exam_type')
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Save remedial exam 
+     * @param array $data
+     * @param string $id
+     * @return int
+     */
+    function save_remedial_exam($data, $id = NULL) {
+        $insert_id = 0;
+        if ($id == NULL) {
+            //insert
+            $this->db->insert('exam_manager', $data);
+            $insert_id = $this->db->insert_id();
+        } else {
+            //update
+            $this->db->where('em_id', $id);
+            $this->db->update('exam_manager', $data);
+            $insert_id = $this->db->insert_id();
+        }
+
+        return $insert_id;
+    }
+
+    /**
+     * Remedial exam lists
+     * @return array
+     */
+    function remedial_exam_list() {
+        return $this->db->select('exam_manager.*, exam_type.*, course.*, semester.*, batch.*, degree.*')
+                        ->from('exam_manager')
+                        ->join('exam_type', 'exam_type.exam_type_id = exam_manager.em_type')
+                        ->join('course', 'course.course_id = exam_manager.course_id')
+                        ->join('semester', 'semester.s_id = exam_manager.em_semester')
+                        ->join('batch', 'batch.b_id = exam_manager.batch_id')
+                        ->join('degree', 'degree.d_id = exam_manager.degree_id')
+                        ->where('exam_manager.exam_ref_name', 'remedial')
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Remedial exam schedule
+     * @return array
+     */
+    function remedial_exam_schedule() {
+        return $this->db->select()
+                        ->from('exam_time_table')
+                        ->join('exam_manager', 'exam_manager.em_id = exam_time_table.exam_id')
+                        ->join('subject_manager', 'subject_manager.sm_id = exam_time_table.subject_id')
+                        ->join('course', 'course.course_id = exam_manager.course_id')
+                        ->join('semester', 'semester.s_id = exam_manager.em_semester')
+                        ->join('batch', 'batch.b_id = exam_time_table.batch_id')
+                        ->join('degree', 'degree.d_id = exam_time_table.degree_id')
+                        ->where('exam_manager.exam_ref_name', 'remedial')
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Remedial exam student list
+     * @param int $exam_id
+     * @param int $passing Passing marks for an exam
+     * @return array
+     */
+    function remedial_exam_student_list($exam_id, $passing_marks) {
+        return $this->db->select()
+                        ->from('marks_manager')
+                        ->join('student', 'student.std_id = marks_manager.mm_std_id')
+                        ->where(array(
+                            'mm_exam_id' => $exam_id,
+                            'mark_obtained < ' => $passing_marks
+                        ))->group_by('marks_manager.mm_std_id')->get()->result();
+    }
+    
+    /**
+     * Failed student subject list
+     * @param int $exam_id
+     * @param int $student_id
+     * @param int $passing_marks
+     * @return array
+     */
+    function remedial_exam_student_subject($exam_id, $student_id, $passing_marks) {
+        return $this->db->select()
+                ->from('marks_manager')
+                ->where(array(
+                    'mm_std_id' => $student_id,
+                    'mm_exam_id' => $exam_id,
+                    'mark_obtained < '=>$passing_marks
+                ))->get()->result();
     }
 
 }

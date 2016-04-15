@@ -169,7 +169,7 @@ if (!function_exists('exam_marks')) {
                 ))->row();
 
         $column_array = array(
-            'Student Roll No', 'Student Name'
+            'Student ID', 'Student Roll No', 'Student Name'
         );
         foreach ($subjects as $row) {
             array_push($column_array, $row->subject_name);
@@ -189,6 +189,7 @@ if (!function_exists('exam_marks')) {
         //foreach()
         foreach ($students as $std) {
             $student_mark = array();
+            array_push($student_mark, $std->std_id);
             array_push($student_mark, $std->std_roll);
             array_push($student_mark, $std->std_first_name . ' ' . $std->std_last_name);
             foreach ($subjects as $row) {
@@ -206,6 +207,122 @@ if (!function_exists('exam_marks')) {
 
 
         //fputcsv($handle, $student_mark);
+
+        fclose($handle);
+    }
+
+}
+
+if (!function_exists('remedial_exam_marks')) {
+
+    /**
+     * Remedial exam msrks csv
+     * @param string $exam_id
+     */
+    function remedial_exam_marks($exam_id = '') {
+        $handle = fopen('php://output', 'w');
+        $CI = & get_instance();
+
+        //current exam details
+        $current_exam = $CI->db->select()
+                        ->from('exam_manager')
+                        ->where(array(
+                            'em_id' => $exam_id
+                        ))->get()->row();
+
+        //current exam schedule
+        $current_exam_schedule = $CI->db->select()
+                ->from('subject_manager')
+                ->join('exam_time_table', 'exam_time_table.subject_id = subject_manager.sm_id')
+                ->where('exam_time_table.exam_id', $exam_id)
+                ->get()
+                ->result();
+
+        //recent exam details
+        $recent_exam = $CI->db->select()
+                        ->from('exam_manager')
+                        ->where(array(
+                            'em_id < ' => $current_exam->em_id,
+                            'em_id' => $current_exam->exam_ref_id
+                        ))->order_by('em_id', 'ASC')->limit(1)->get()->row();
+
+        //recent exam schedule
+        $recent_exam_schedule = $CI->db->select()
+                ->from('subject_manager')
+                ->join('exam_time_table', 'exam_time_table.subject_id = subject_manager.sm_id')
+                ->where('exam_time_table.exam_id', $recent_exam->em_id)
+                ->get()
+                ->result();
+
+        //exam students list
+        $students = $CI->db->select()
+                ->from('student')
+                ->join('exam_manager', 'exam_manager.course_id = student.course_id')
+                ->where('exam_manager.em_id', $recent_exam->em_id)
+                ->where('student.course_id', $recent_exam->course_id)
+                ->where('student.semester_id', $recent_exam->em_semester)
+                ->get()
+                ->result();
+
+        //csv columns
+        $colums = array(
+            'Student ID',
+            'Student Roll No',
+            'Student Name'
+        );
+        //add subject as column in csv
+        foreach ($current_exam_schedule as $row) {
+            array_push($colums, $row->subject_name);
+        }
+        fputcsv($handle, $colums);
+
+        //csv data rows
+        $csv_data = array();
+        foreach ($students as $student) {
+            //check previus for previous exam fail student
+            foreach ($recent_exam_schedule as $rec_schedule) {
+                $result = $CI->db->select()
+                                ->from('marks_manager')
+                                ->where(array(
+                                    'mm_std_id' => $student->std_id,
+                                    'mm_subject_id' => $rec_schedule->sm_id,
+                                    'mm_exam_id' => $recent_exam->em_id,
+                                    'mark_obtained < ' => $recent_exam->passing_mark
+                                ))->get()->row();
+                if (count($result)) {
+                    array_push($csv_data, $student->std_id);
+                    array_push($csv_data, $student->std_roll);
+                    array_push($csv_data, $student->std_first_name . ' ' . $student->std_last_name);
+                    //add student id and name to csv row
+                    //array_push($csv_data, $student->std_roll);
+                    //array_push($csv_data, $student->std_first_name);
+                    //subject list
+                    foreach ($current_exam_schedule as $cur_schedule) {
+                        if ($cur_schedule->sm_id == $rec_schedule->sm_id) {
+                            //check for marks
+                            $marks = $CI->db->select()
+                                            ->from('marks_manager')
+                                            ->where(array(
+                                                'mm_std_id' => $student->std_id,
+                                                'mm_subject_id' => $cur_schedule->sm_id,
+                                                'mm_exam_id' => $current_exam->em_id
+                                            ))->get()->row();
+
+                            if (count($marks)) {
+                                array_push($csv_data, $marks->mark_obtained);
+                            } else {
+                                array_push($csv_data, '');
+                            }
+                        } else {
+                            array_push($csv_data, '--');
+                        }
+                    }
+                }
+            }
+            fputcsv($handle, $csv_data);
+            $csv_data = array();
+        }
+
 
         fclose($handle);
     }
@@ -539,11 +656,10 @@ if (!function_exists('import_exam_marks')) {
         $CI->load->database();
         $insert_id = 0;
         //check for roll
-
+        
         $student = $CI->db->get_where('student', array(
-                    'std_roll' => $where['marks']['mm_std_id']
-                ))->row();
-
+                    'std_id' => $where['marks']['mm_std_id']
+                ))->row(); 
         if (count($student)) {
             //check for exam
             $exam = $CI->db->get_where('exam_manager', array(
@@ -561,12 +677,14 @@ if (!function_exists('import_exam_marks')) {
                 if (count($marks)) {
                     //update
                     foreach ($where['subject'] as $row) {
+                        
 
                         $subject = $CI->db->get_where('subject_manager', array(
                                     'subject_name' => $row
                                 ))->row();
+                        
                         //check for marks greater then total marks
-                        if ($exam->total_marks < (int) $data["{$subject->subject_name}"]) {
+                        if (($exam->total_marks < (int) $data["{$subject->subject_name}"]) && is_numeric($data["{$subject->subject_name}"])) {
                             continue;
                         }
                         $insert_data = array(
