@@ -45,8 +45,9 @@ $.toaster({
 <script type="text/javascript"> 
     var base_url ="<?php echo base_url(); ?>";  
 </script>
-<script type="text/javascript" src="<?=$this->config->item('asset')?>custom/custom2.js"></script>
+ <script type="text/javascript" src="<?php echo base_url().'assets/custom/custom2.js' ?>"></script>
 <script type="text/javascript" src="<?=$this->config->item('asset')?>custom/custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url().'assets/custom/custom3.js' ?>"></script>
  
 <!-- Specific Page Scripts Put Here -->
  <script src="<?=$this->config->item('js_path')?>simplecalendar.js" type="text/javascript"></script>
