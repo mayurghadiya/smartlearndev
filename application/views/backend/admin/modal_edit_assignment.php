@@ -20,7 +20,7 @@ foreach ($edit_data as $row):
                                 </div>   
                             <?php echo form_open(base_url() . 'index.php?admin/assignment/do_update/' . $row['assign_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Assignment Title<span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Assignment Name<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title" value="<?php echo $row['assign_title']; ?>" />
                                 </div>
