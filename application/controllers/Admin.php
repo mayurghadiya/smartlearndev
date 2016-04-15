@@ -30,12 +30,6 @@ class Admin extends CI_Controller {
         $this->load->helper('date_format');
         
     }
-    
-    function checkdate()
-    {
-        $date= "11-10-1994 7:24:00";
-        echo datetime_formats($date);
-    }
     /*     * *default functin, redirects to login page if no admin logged in yet	
       Auth : Brij  Dhami
       /******** */
