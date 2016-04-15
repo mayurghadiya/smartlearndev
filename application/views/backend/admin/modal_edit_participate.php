@@ -9,7 +9,7 @@ foreach ($edit_data as $row):
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        Edit Library
+                        Edit Participate
                     </div>
                 </div>
                 <div class="panel-body">
@@ -288,6 +288,7 @@ alert('123');
     $().ready(function () {
 
         $("#dateofsubmission1").datepicker({
+            dateFormat: ' MM dd, yy',
             minDate:0
         });
         jQuery.validator.addMethod("character", function (value, element) {

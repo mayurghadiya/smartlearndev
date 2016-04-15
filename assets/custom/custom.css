@@ -153,7 +153,7 @@ a.chat-button {
   font-size: 16px;
   display: block;
   position: fixed;
-  right: 35px;
+  right: 50px;
   bottom: 0px;
   text-decoration:none;  
   transition: transform 0.25s;
@@ -169,3 +169,11 @@ a.chat-button {
 
 .bootstrap-switch .bootstrap-switch-handle-off,
 .bootstrap-switch.bootstrap-switch-yellow.bootstrap-switch-mini.bootstrap-switch-animate .bootstrap-switch-container span{height: auto !important; }
+.child-menu > ul > li.selectednavmenu {
+    background: #ccc none repeat scroll 0 0;
+}
+.nav-expandmenu{
+    display: block;
+}
+
+.vd_menu > ul >li > div.active{ display: block; }

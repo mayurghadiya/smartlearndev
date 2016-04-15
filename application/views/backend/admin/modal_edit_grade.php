@@ -8,7 +8,7 @@ foreach ($edit_data as $row){}
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    <?php echo get_phrase('edit_student'); ?>
+                    <?php echo get_phrase('edit_grade'); ?>
                 </div>
             </div>
             <div class="panel-body">
@@ -48,7 +48,7 @@ foreach ($edit_data as $row){}
 
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-7">
-                            <button type="submit" class="btn btn-info">Edit Grade</button>
+                            <button type="submit" class="btn btn-info vd_bg-green">Update Grade</button>
                         </div>
                     </div>                                              
                 </div>    

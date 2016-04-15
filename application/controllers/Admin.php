@@ -27,8 +27,9 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+        $this->load->helper('date_format');
+        
     }
-
     /*     * *default functin, redirects to login page if no admin logged in yet	
       Auth : Brij  Dhami
       /******** */
@@ -959,9 +960,9 @@ class Admin extends CI_Controller {
             $this->db->update('student', $updaterollno);
             //end roll no
             //email
-            $msg = "Hello,<br>"
-                    . "Your username is [" . $data['email'] .
-                    "]<br>Password is [12345]";
+
+            $data['rollno']=$rollno;
+            $msg=$this->load->view("backend/admin/emailmessage",$data,true);
             $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
             $this->email->to($data['email']);
             //  $this->email->cc('mayur.ghadiya@searchnative.in');
@@ -970,6 +971,7 @@ class Admin extends CI_Controller {
 
             if ($this->email->send()) {
                 $this->session->set_flashdata('flash_message', get_phrase('student_added_successfully'));
+           
                 redirect(base_url() . 'index.php?admin/student/', 'refresh');
             } else {
                 show_error($this->email->print_debugger());
@@ -2119,6 +2121,7 @@ class Admin extends CI_Controller {
         $data['inbox'] = admin_inbox();
         $data['title'] = 'Inbox';
         $data['content'] = 'backend/admin/email_inbox';
+        //$data['page_name'] = 
         $this->load->view('backend/admin/includes/email_template', $data);
     }
 
@@ -2608,12 +2611,12 @@ class Admin extends CI_Controller {
                 exam_manager();
                 break;
             case 'course':
-                $this->import_demo_sheet_download_config('Course');
+                $this->import_demo_sheet_download_config('Branch');
                 //import_export_helper function
                 course();
                 break;
             case 'degree':
-                $this->import_demo_sheet_download_config('Degree');
+                $this->import_demo_sheet_download_config('Course');
                 degree();
                 break;
             case 'admission_type':
@@ -2774,12 +2777,12 @@ class Admin extends CI_Controller {
             case 'course':
                 //download course csv
                 $result = $this->Export_model->course();
-                csv_from_result($result, 'Course');
+                csv_from_result($result, 'Branch');
                 break;
             case 'degree':
                 //download degree csv
                 $result = $this->Export_model->degree();
-                csv_from_result($result, 'Degree');
+                csv_from_result($result, 'Course');
                 break;
             case 'semester':
                 //download semester csv

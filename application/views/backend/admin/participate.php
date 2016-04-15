@@ -141,7 +141,7 @@
 
                                                     </td>	
                                                     <td><a href="<?php echo $row->pp_url; ?>" download="" title="<?php echo $row->pp_filename; ?>" ><i class="fa fa-download"></i></a></td>	
-                                                    <td><?php  echo date('F d, Y', strtotime($row->pp_dos)); ?></td>	
+                                                    <td><?php  echo date_formats($row->pp_dos); ?></td>	
 
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_participate/<?php echo $row->pp_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
@@ -331,57 +331,39 @@
                             
                             <div class="tab-pane box" id="survey">		
                                 <div class="tab-pane box" id="list">
-                                      <div class="panel panel-default">
-                            <div class="panel-heading">
-
-                            </div>
-                                     <div class="panel-body">
-                                    <form action="#" method="post" id="searchform">
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Course</label>
-                                                <select id="courses" name="degree" class="form-control">
-                                                    <option value="">Select Course</option>
-                                                    <?php foreach ($degree as $row) { ?>
-                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
-                                                    <?php } ?>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Branch</label>
-                                                <select id="branches" name="course" class="form-control">
-                                                    <option value="">Select Branch</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Batch</label>
-                                                <select id="batches" name="batch" class="form-control">
-                                                        <option  value="">Select Batch</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Semester</label>
-                                                <select id="semesters" name="semester" class="form-control">
-                                                    <option value="">Select Semester</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                               ><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
-                                                </select>
-                                            </div>
-                                     
-                                <div class="form-group col-sm-2">
-                                    <div class="form-group col-sm-2">
-                                        <label>&nbsp;</label>
-                                        
-                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
-                                    </div>
+                                             <div class="form-group col-sm-2">
+                                    <label>Course</label>
+                                    <select class="form-control pfilter-rows" id="pfilter2" data-filter="2" data-type="course">
+                                        <option value="">All</option>
+                                        <?php foreach ($degree as $row) { ?>
+                                            <option value="<?php echo $row->d_name; ?>"
+                                                    data-id="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                <?php } ?>
+                                    </select>
                                 </div>
-                                    </form>
-                                 </div>
-                                      </div>
+                                <div class="form-group col-sm-2">
+                                    <label>Branch</label>
+                                    <select id="pfilter3" name="branch" data-filter="3" class="form-control pfilter-rows" data-type="branch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label>Batch</label>
+                                    <select id="pfilter4" name="batch" data-filter="4" class="form-control pfilter-rows" data-type="batch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>                                
+                                <div class="form-group col-sm-2">
+                                    <label> Semester</label>
+                                    <select id="pfilter5" name="semester" data-filter="5" class="form-control pfilter-rows" data-type="semester">
+                                        <option value="">All</option>
+
+                                    </select>
+                                </div>
+                                 <label style="margin-left: 40px; margin-top: 30px;">OR</label>
+                              
                                     <div class="panel-body table-responsive" id="getresponse">
-                                        <table class="table table-striped" id="data-tabless">
+                                        <table class="table table-striped" id="survey-table">
                                             <thead>
                                                 <tr>
                                                     <th><div>#</div></th>                                           
@@ -522,58 +504,40 @@
 
 
                             <div class="tab-pane box" id="listing">	
-                                 <div class="panel panel-default">
-                            <div class="panel-heading">
-
-                            </div>
-                                <div class="panel-body">
-                                <form action="#" method="post" id="sub_searchform">
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Course</label>
-                                                <select id="sub_courses" name="degree" class="form-control">
-                                                    <option value="">Select</option>
-                                                    <?php foreach ($degree as $row) { ?>
-                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
-                                                    <?php } ?>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Branch</label>
-                                                <select id="sub_branches" name="course" class="form-control">
-                                                    <option value="">Select Branch</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Batch</label>
-                                                <select id="sub_batches" name="batch" class="form-control">
-                                                     <option value="">Select Batch</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label> Semester</label>
-                                                <select id="sub_semesters" name="semester" class="form-control">
-                                                    <option value="">Select Semester</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                               ><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
-                                                </select>
-                                            </div>
-                                     
+                                 <div class="form-group col-sm-2">
+                                    <label>Course</label>
+                                    <select class="form-control filter-rows" id="filter4" data-filter="4" data-type="course">
+                                        <option value="">All</option>
+                                        <?php foreach ($degree as $row) { ?>
+                                            <option value="<?php echo $row->d_name; ?>"
+                                                    data-id="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                <?php } ?>
+                                    </select>
+                                </div>
                                 <div class="form-group col-sm-2">
-                                    <div class="form-group col-sm-2">
-                                        <label>&nbsp;</label>
-                                        
-                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
-                                    </div>
+                                    <label>Branch</label>
+                                    <select id="filter5" name="branch" data-filter="5" class="form-control filter-rows" data-type="branch">
+                                        <option value="">All</option>
+                                    </select>
                                 </div>
-                                    </form>
+                                <div class="form-group col-sm-2">
+                                    <label>Batch</label>
+                                    <select id="filter6" name="batch" data-filter="6" class="form-control filter-rows" data-type="batch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>                                
+                                <div class="form-group col-sm-2">
+                                    <label> Semester</label>
+                                    <select id="filter7" name="semester" data-filter="7" class="form-control filter-rows" data-type="semester">
+                                        <option value="">All</option>
+
+                                    </select>
                                 </div>
-                                 </div>
+                                <label style="margin-left: 40px; margin-top: 30px;">OR</label>
+                                
+                                 
                                 <div class="panel-body table-responsive" id="getsubmit">
-                                    <table class="table table-striped" id="data-tablessearch">
+                                    <table class="table table-striped" id="data-tables-activity">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
@@ -583,7 +547,6 @@
                                                 <th><div>Course</div></th>											
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>
-
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Participate Status</div></th>											
                                             </tr>
@@ -639,58 +602,40 @@
                             </div>
 
                             <div class="tab-pane box" id="uploads">
-                                 <div class="panel panel-default">
-                            <div class="panel-heading">
-
-                            </div>
-                                <div class="panel-body">
-                                <form action="#" method="post" id="upd_searchform">
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Course</label>
-                                                <select id="upd_courses" name="degree" class="form-control">
-                                                    <option value="">Select Course</option>
-                                                    <?php foreach ($degree as $row) { ?>
-                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
-                                                    <?php } ?>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Branch</label>
-                                                <select id="upd_branches" name="course" class="form-control">
-                                                    <option value="">Select Branch</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label>Batch</label>
-                                                <select id="upd_batches" name="batch" class="form-control">
-                                                     <option value="">Select Batch</option>
-
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-2 validating">
-                                                <label> Semester</label>
-                                                <select id="upd_semesters" name="semester" class="form-control">
-                                                    <option value="">Select Semester</option>
-                                                    <?php foreach ($semester as $row) { ?>
-                                                        <option value="<?php echo $row->s_id; ?>"
-                                                               ><?php echo $row->s_name; ?></option>
-                                                            <?php } ?>
-                                                </select>
-                                            </div>
-                                     
-                                <div class="form-group col-sm-2">
-                                    <div class="form-group col-sm-2">
-                                        <label>&nbsp;</label>
-                                        
-                                    <button type="submit" class="submit btn btn-info vd_bg-green">Search</button>
-                                    </div>
-                                </div>
-                                    </form>
-                                </div>
-                                 </div>
+                             
                                 <div class="panel-body table-responsive" id="upd_getsubmit">
-                                    <table class="table table-striped" id="data-tablesupd">
+                                <div class="form-group col-sm-2">
+                                    <label>Course</label>
+                                    <select class="form-control ufilter-rows" id="ufilter2" data-filter="2" data-type="course">
+                                        <option value="">All</option>
+                                        <?php foreach ($degree as $row) { ?>
+                                            <option value="<?php echo $row->d_name; ?>"
+                                                    data-id="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label>Branch</label>
+                                    <select id="ufilter3" name="branch" data-filter="3" class="form-control ufilter-rows" data-type="branch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label>Batch</label>
+                                    <select id="ufilter4" name="batch" data-filter="4" class="form-control ufilter-rows" data-type="batch">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>                                
+                                <div class="form-group col-sm-2">
+                                    <label> Semester</label>
+                                    <select id="ufilter5" name="semester" data-filter="5" class="form-control ufilter-rows" data-type="semester">
+                                        <option value="">All</option>
+
+                                    </select>
+                                </div>
+                                 <label style="margin-left: 40px; margin-top: 30px;">OR</label>
+  
+                                    <table class="table table-striped" id="uploaded-table">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
@@ -698,7 +643,6 @@
                                                 <th><div>Course</div></th>											
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>
-
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Download</div></th>											                                                
 
@@ -724,7 +668,6 @@
                                                 <tr>
                                                     <td><?php echo $countsu++; ?></td>	
                                                     <td><?php echo $user1[0]['name']; ?></td>	
-
                                                     <td><?php
                                                         if (isset($user1[0]['d_name'])) {
                                                             echo $user1[0]['d_name'];
@@ -1149,6 +1092,7 @@ $("#courses").change(function(){
         });
 
             $("#dateofsubmission").datepicker({
+                dateFormat: ' MM dd, yy',
                 minDate: 0
             });
             jQuery.validator.addMethod("character", function (value, element) {
@@ -1229,3 +1173,122 @@ $("#courses").change(function(){
 
 	} );
 </script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            $('#data-tables-activity').dataTable({
+                "order": [[7, "desc"]],
+                "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
+            });
+            $('.filter-rows').on('change', function () {
+                var filter_id = $(this).attr('data-filter');
+                filter_column(filter_id);
+            });
+
+            function filter_column(filter_id) {
+                $('#data-tables-activity').DataTable().column(filter_id).search(
+                        $('#filter' + filter_id).val()
+                        ).draw();
+            }
+        });
+    </script>
+
+    <style>
+        #data-tables-activity_filter{
+            margin-top: -50px;
+        }
+    </style>
+<script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            $('#upload-data-table').dataTable({
+                "order": [[7, "desc"]],
+                "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
+            });
+            $('.sfilter-rows').on('change', function () {
+                var filter_id = $(this).attr('data-filter');
+                filter_column(filter_id);
+            });
+
+            function filter_column(filter_id) {
+                $('#upload-data-table').DataTable().column(filter_id).search(
+                        $('#filter' + filter_id).val()
+                        ).draw();
+            }
+        });
+           $(document).ready(function() {
+		"use strict";				
+		$('#data-tablesupd').dataTable();
+	});
+    </script>
+
+    <style>
+        #upload-data-table_filter{
+            margin-top: -50px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            $('#survey-table').dataTable({
+                "order": [[7, "desc"]],
+                "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
+            });
+            $('.pfilter-rows').on('change', function () {
+                var filter_id = $(this).attr('data-filter');
+                filter_column(filter_id);
+            });
+
+            function filter_column(filter_id) {
+                $('#survey-table').DataTable().column(filter_id).search(
+                        $('#pfilter' + filter_id).val()
+                        ).draw();
+            }
+        });
+           $(document).ready(function() {
+		"use strict";				
+		$('#survey-table').dataTable();
+	});
+    </script>
+
+    <style>
+        #survey-table_filter{
+            margin-top: -50px;
+        }
+    </style>
+  <script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            $('#uploaded-table').dataTable({
+                "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
+            });
+            $('.ufilter-rows').on('change', function () {
+                var filter_id = $(this).attr('data-filter');
+                filter_column(filter_id);
+            });
+
+            function filter_column(filter_id) {
+                $('#uploaded-table').DataTable().column(filter_id).search(
+                        $('#ufilter' + filter_id).val()
+                        ).draw();
+            }
+        });
+           $(document).ready(function() {
+		"use strict";				
+		$('#uploaded-table').dataTable();
+	});
+    </script>
+
+    <style>
+        #uploaded-table_filter{
+            margin-top: -50px;
+        }
+    </style>

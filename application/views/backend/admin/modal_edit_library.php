@@ -110,7 +110,7 @@ foreach ($edit_data as $row):
                             
                            
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Library Name <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['lm_title']; ?>"/>
                                 </div>
@@ -256,6 +256,7 @@ endforeach;
         }
     });
     $("#dateofsubmission1").datepicker({
+    dateFormat: ' MM dd, yy',
     minDate:0
     });
     jQuery.validator.addMethod("character", function (value, element) {

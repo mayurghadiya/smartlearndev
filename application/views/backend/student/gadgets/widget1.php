@@ -2,6 +2,22 @@
              <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/calendar.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/custom_2.css" />
+        <?php 
+				$skin = $this->db->get_where('system_setting' , array('type' => 'skin_colour'))->row()->description;
+                             
+				if($skin == 'theme_green.min.css'){  ?>
+					  <link href="<?=$this->config->item('css_path')?>student/event_green.css" rel="stylesheet">
+				<?php }
+                                elseif($skin == 'theme_blue.min.css'){ ?>
+					  <link href="<?=$this->config->item('css_path')?>student/event_blue.css" rel="stylesheet">
+				<?php }
+                                elseif($skin == 'theme_gold.min.css'){  ?>
+					  <link href="<?=$this->config->item('css_path')?>student/event_gold.css" rel="stylesheet">
+				<?php } else { ?>
+					  <link href="<?=$this->config->item('css_path')?>student/event_default.css" rel="stylesheet">			
+				<?php } ?>     
+		
+		
         <script src="<?php echo base_url() ?>assets/std_event/js/modernizr.custom.63321.js"></script>
         <?php 
         ?>

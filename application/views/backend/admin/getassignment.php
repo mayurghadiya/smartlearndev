@@ -138,7 +138,7 @@ if($param=='submitted'){?>
                                                             }														
                                                     ?>													
                                                     </td>	
-                                                    <td><?php echo date('F d, Y',strtotime($rowsub->submited_date)); ?></td>	
+                                                    <td><?php echo date_formats($rowsub->submited_date); ?></td>	
                                                     <td><?php echo $rowsub->comment; ?></td>
                                                    <td><a href="uploads/project_file/<?php echo $rowsub->document_file;?>" download="" title="<?php echo  $rowsub->document_file;?>"><i class="fa fa-download"></i></a></td>                      	
                                                 </tr>

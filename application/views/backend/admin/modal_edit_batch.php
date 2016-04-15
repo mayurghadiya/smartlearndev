@@ -159,13 +159,13 @@ endforeach;
                 b_name: "Please enter batch Name",
                'degree1[]': 
                             {
-                                 valueNotEquals: "Select degree",
-                                 required:"Select degree",
+                                 valueNotEquals: "Select course",
+                                 required:"Select course",
                             },
                     'course1[]': 
                     {
-                         valueNotEquals: "Select course",
-                         required:"Select course",
+                         valueNotEquals: "Select branch",
+                         required:"Select branch",
                     },
                     batch_status: "Select status",
             }

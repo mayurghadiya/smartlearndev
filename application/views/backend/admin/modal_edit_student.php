@@ -434,8 +434,8 @@ required: true,
                         {
                             required: "Enter zip code",
                         },
-                        degree:"Select degree",
-                        course:"Select course",
+                        degree:"Select course",
+                        course:"Select branch",
                         batch:"Select batch",
                         semester:"Select semester",
                          

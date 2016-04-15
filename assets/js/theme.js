@@ -446,6 +446,25 @@ jQuery(document).ready(function($)
 		   Used: < data-action="click-trigger" >
 		         < data-action="click-target" >		   
 		*/			
+//               $(function() {
+//   $('[data-action^="click-trigger"]').hover(function() {
+//      // Hide all open sub-menus
+//      $('[data-action^="click-trigger1"]').removeClass('open');
+//      $('div.child-menu').slideUp('1000').css({'display':'none'});
+//      
+//      
+//      // Show only this menu item's sub-menu
+//      $(this).addClass('open');
+//      $(this).next('div.child-menu').slideDown('1000').css({'display':'block'});
+//      if($(this).next('div.child-menu').hover(function(){
+//          
+//          
+//      })){
+//          $(this).addClass('open');
+//          $(this).next('div.child-menu').slideDown('1000').css({'display':'block'});
+//      }
+//   });
+//});
 		$('[data-action^="click-trigger"]').click(function(e) {
 			e.preventDefault();
 			if ($(this).parent().hasClass("hover-trigger") && $(this).siblings().hasClass("hover-target")){
@@ -453,8 +472,9 @@ jQuery(document).ready(function($)
 			}			
 			// check if not children of click-target then slideup
 			if ( $(this).parent().parent().parent().data("action") != "click-target" && $(this).parent().parent().parent().parent().parent().data("action") != "click-target"    )  {
-				$('[data-action^="click-target"]').slideUp('fast',  function(){ //calculateContentHeight();														
-					});				
+				//$('[data-action^="click-target"]').slideUp('fast',  function(){ 
+                                    //calculateContentHeight();														
+				//	});				
 			} else{
 			// check if children of click-target then slideup all the parent kids
 				$(this).parent().siblings().children('[data-action^="click-trigger"]').removeClass('open');	
@@ -474,6 +494,10 @@ jQuery(document).ready(function($)
 				$(this).parent().children('[data-action^="click-target"]').slideDown('fast',  function(){    if ($('.navbar-menu').outerHeight() < $('.navbar-menu .vd_menu').outerHeight() + $('.navbar-spacing ').outerHeight()){calculateContentHeight()};
 			
 				});	
+                                $(this).parent().siblings().children('[data-action^="click-trigger"]').removeClass('open');	
+				$(this).parent().siblings().children('[data-action^="click-target"]').slideUp('fast',  function(){//calculateContentHeight(); 
+				    
+					});
 				
 				
 			// if this is open			
@@ -482,7 +506,6 @@ jQuery(document).ready(function($)
 				// check if children of click-target then slideup				
 				//if ($(this).parent().parent().parent().data("action") == "click-target"){
 					$(this).parent().children('[data-action^="click-target"]').slideUp('fast',  function(){
-						
 					});				
 				//}				
 			}
@@ -493,8 +516,8 @@ jQuery(document).ready(function($)
 		// Click outside click-target			
 		$(document).click(function(event) {
 			 if (( $(event.target).closest('[data-action^="click-trigger"]').get(0) == null ) && ( $(event.target).closest('[data-action^="click-target"]').get(0) == null ) && ( $(event.target).closest('[data-action^="expand-all"]').get(0) == null)) { 
-				 $('[data-action^="click-target"]').hide();
-				 $('[data-action^="click-trigger"]').removeClass('open');	
+				// $('[data-action^="click-target"]').hide();
+				// $('[data-action^="click-trigger"]').removeClass('open');	
 	 			 $('body').removeClass('expand-all');				 			 
 				 calculateContentHeight();
 			}			

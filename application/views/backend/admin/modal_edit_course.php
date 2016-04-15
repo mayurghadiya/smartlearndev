@@ -90,26 +90,28 @@ foreach ( $edit_data as $row):
 endforeach;
 ?>
 <script type="text/javascript">
-	$.validator.setDefaults({
-		submitHandler: function(form) {			
-			 form.submit();
-		}
-	});
+    $.validator.setDefaults({
+            submitHandler: function(form) {			
+                     form.submit();
+            }
+    });
 
-	$(document).ready(function() {	
-		$("#frmcourseedit").validate({		
-			rules: {
-				c_name: "required",
-				course_alias_id: "required",
-				  degree:  "required",
-			},
-			messages: {
-                            c_name: "Enter course name",
-                            course_alias_id: "Enter course id",
-                            degree: "Select degree",
-			}
-		});
-	});
-	</script>
+    $(document).ready(function() {	
+            $("#frmcourseedit").validate({		
+                    rules: {
+                            c_name: "required",
+                            course_alias_id: "required",
+                              degree:  "required",
+                              'semester[]':"required",
+                    },
+                    messages: {
+                        c_name: "Enter branch name",
+                        course_alias_id: "Enter branch id",
+                        degree: "Select course",
+                        'semester[]':"Select semester",
+                    }
+            });
+    });
+</script>
         
         

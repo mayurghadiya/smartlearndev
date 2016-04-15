@@ -1,4 +1,7 @@
- 
+<link rel="stylesheet" href="assets/css/neon-core.css">
+<link rel="stylesheet" href="assets/css/neon-theme.css">
+<link rel="stylesheet" href="assets/css/neon-forms.css">
+
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -127,49 +130,76 @@
                                                 Theme Setting
                                             </div>
                                         </div>
+                                        <?php 
+                                        $skin_colour = "";
+                                        foreach($settings as $set){
+                                        if($set['type']=="skin_colour"){
+                                           $skin_colour=$set['description'];
+                                        } 
+                                        
+                                        }
+                                        
+                                        ?>
 
                                         <div class="panel-body">
 
                                             <div class="gallery-env">
+                                                <div class="row">
                                                 <div class="col-sm-4">
                                                     <article class="album">
                                                         <header>
-                                                            <a href="#" id="theme.min.css">
-                                                                Default
+                                                            <a href="#" id="theme.min.css" <?php if($skin_colour=="theme.min.css"){?> style="opacity: 0.3" <?php } ?>>
+                                                                <img src="<?php echo base_url().'assets/images/system_img/default.png' ?>"  />
                                                             </a>
-
+                                                            <a id="theme.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>
                                                         </header>
                                                     </article>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <article class="album">
                                                         <header>
-                                                            <a href="#" id="theme_gold.min.css">
-                                                                Gold
+                                                            <a href="#" id="theme_gold.min.css" <?php if($skin_colour=="theme_gold.min.css"){?> style="opacity: 0.3;" <?php } ?>>
+                                                                <img src="<?php echo base_url().'assets/images/system_img/gold.png' ?>" />
                                                             </a>
-
+                                                            <a id="theme_gold.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>
                                                         </header>
                                                     </article>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <article class="album">
                                                         <header>
-                                                            <a href="#" id="theme_blue.min.css">
-                                                                Blue
+                                                            <a href="#" id="theme_blue.min.css"  <?php if($skin_colour=="theme_blue.min.css"){?> style="opacity: 0.3" <?php } ?>>
+                                                                <img src="<?php echo base_url().'assets/images/system_img/blue.png' ?>"   />
                                                             </a>
-
+                                                               <a id="theme_blue.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>  
                                                         </header>
                                                     </article>
                                                 </div>
-                                                <div class="col-sm-4">
-                                                    <article class="album">
+                                                </div>
+                                                <div class="row">
+                                                <div class="col-sm-4" >
+                                                    <article class="album last">
                                                         <header>
-                                                            <a href="#" id="theme_green.min.css">
-                                                                Green
-                                                            </a>													
+                                                            <a href="#" id="theme_green.min.css"  <?php if($skin_colour=="theme_green.min.css"){?> style="opacity: 0.3" <?php } ?>>
+                                                                  <img src="<?php echo base_url().'assets/images/system_img/green.png' ?>"   />
+                                                            </a>
+                                                             <a id="theme_green.min.css" class="album-options" href="#">
+                                                            <i class="entypo-check"></i>
+                                                            Select Theme
+                                                            </a>
                                                         </header>
                                                     </article>
-                                                </div>									   
+                                                </div>	
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +246,10 @@
         skin = this.id;
         $.ajax({
             url: '<?php echo base_url(); ?>index.php?admin/system_settings/change_skin/' + skin,
-            success: window.location = '<?php echo base_url(); ?>index.php?admin/system_settings/'
+            success: function()
+            {
+                window.location = '<?php echo base_url(); ?>index.php?admin/system_settings/';
+            }
         });
     });
 </script>

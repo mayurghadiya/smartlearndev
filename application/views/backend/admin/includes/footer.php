@@ -9,8 +9,7 @@
 <!--[if lt IE 9]>
   <script type="text/javascript" src="js/excanvas.js"></script>      
 <![endif]-->
-<script type="text/javascript" src="<?=$this->config->item('js_path')?>bootstrap.min.js"></script>
-
+<script type="text/javascript" src="<?=$this->config->item('js_path')?>bootstrap.min.js"></script>	
 <script src="<?php echo base_url(); ?>assets/js/jquery.toaster.js"></script>
 <script>
 <?php
@@ -43,14 +42,18 @@ $.toaster({
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>pnotify/js/jquery.pnotify.min.js"></script>
 
 <script type="text/javascript" src="<?=$this->config->item('js_path')?>theme.js"></script>
+<script type="text/javascript"> 
+    var base_url ="<?php echo base_url(); ?>";  
+</script>
+ <script type="text/javascript" src="<?php echo base_url().'assets/custom/custom2.js' ?>"></script>
 <script type="text/javascript" src="<?=$this->config->item('asset')?>custom/custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url().'assets/custom/custom3.js' ?>"></script>
  
 <!-- Specific Page Scripts Put Here -->
  <script src="<?=$this->config->item('js_path')?>simplecalendar.js" type="text/javascript"></script>
 <!-- Specific Page Scripts END -->
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>dataTables/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?=$this->config->item('custom_plugin')?>dataTables/dataTables.bootstrap.js"></script>
-
 <script type="text/javascript">
 	$(document).ready(function() {
 		"use strict";				

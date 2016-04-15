@@ -6836,3 +6836,6 @@ dd-content,
 .custom-handler .dd-item button + .dd-handle + .dd-content {
   padding-left: 50px;
 }
+.album.last {
+    margin-top: 50px;
+}

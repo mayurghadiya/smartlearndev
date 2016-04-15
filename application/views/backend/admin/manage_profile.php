@@ -282,7 +282,7 @@
                     </div>
                     <!-- panel-body -->
                     <div class="pd-20">
-                      <button class="btn vd_btn vd_bg-green col-md-offset-3"><span class="menu-icon"><i class="fa fa-fw fa-check"></i></span> Edit</button>
+                      <button class="btn vd_btn vd_bg-green col-md-offset-3"><span class="menu-icon"><i class="fa fa-fw fa-check"></i></span> Update</button>
                     </div>
                   </form>
                 </div>
