@@ -1295,3 +1295,6 @@ footer .vd_bottom { /*background-color: #252525;*/ background-image: linear-grad
 #et-info-phone > a {
     color: #ffba00 !important;
 }
+.vd_menu ul li a:hover + .child-menu{  transition-delay: 1s;  display: block !important;     
+}
+.vd_menu ul li div.child-menu:hover { transition-delay: 1s;  display: block !important; }
