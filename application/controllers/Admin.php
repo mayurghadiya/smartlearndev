@@ -324,7 +324,7 @@ class Admin extends CI_Controller {
             $data['description'] = $param2;
             $this->db->where('type', 'skin_colour');
             $this->db->update('system_setting', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('theme_selected'));
+            $this->session->set_flashdata('flash_message', get_phrase('theme_updated_successfully'));
             redirect(base_url() . 'index.php?admin/system_settings/', 'refresh');
         }
         $page_data['page_name'] = 'system_settings';
