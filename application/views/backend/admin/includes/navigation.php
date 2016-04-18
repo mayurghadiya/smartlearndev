@@ -107,12 +107,12 @@
                 </li>	
 
                 <li>
-                    <a href="javascript:void(0);" data-action="click-trigger" <?php if($page_name=="exam" || $page_name=="exam_time_table" || $page_name=="exam_marks" || $page_name=="grade" || $page_name=="remedial_exam" || $page_name=="remedial_exam_schedule" || $page_name=="remedial_exam_marks"){ ?> class="open" <?php }?>>
+                    <a href="javascript:void(0);" data-action="click-trigger" <?php if($page_name=="exam" || $page_name=="exam_time_table" || $page_name=="exam_marks" || $page_name=="grade" || $page_name=="remedial_exam" || $page_name=="remedial_exam_time_table" || $page_name=="remedial_exam_marks"){ ?> class="open" <?php }?>>
                         <span class="menu-icon"><i class="fa fa-th-list"></i></span> 
                         <span class="menu-text">Examinations</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
-                    <div class="child-menu" data-action="click-target" <?php if($page_name=="exam" || $page_name=="exam_time_table" || $page_name=="exam_marks" || $page_name=="grade" || $page_name=="remedial_exam" || $page_name=="remedial_exam_schedule" || $page_name=="remedial_exam_marks"){ ?> style="display: block" <?php }?>>
+                    <div class="child-menu" data-action="click-target" <?php if($page_name=="exam" || $page_name=="exam_time_table" || $page_name=="exam_marks" || $page_name=="grade" || $page_name=="remedial_exam" || $page_name=="remedial_exam_time_table" || $page_name=="remedial_exam_marks"){ ?> style="display: block" <?php }?>>
                         <ul>
                             <li <?php if($page_name=="exam"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/exam">
@@ -139,7 +139,7 @@
                                     <span class="menu-text">Remedial Exam</span>  
                                 </a>
                             </li>
-                            <li <?php if($page_name=="remedial_exam_schedule"){ ?> class="selectednavmenu" <?php } ?>>
+                            <li <?php if($page_name=="remedial_exam_time_table"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/remedial_exam_schedule">
                                     <span class="menu-text">Remedial Exam Schedule</span>  
                                 </a>
