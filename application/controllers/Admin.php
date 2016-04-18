@@ -222,7 +222,7 @@ class Admin extends CI_Controller {
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
             $data['group_id'] = $this->input->post('group');
             $this->db->insert('event_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', get_phrase('event_added_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -233,7 +233,7 @@ class Admin extends CI_Controller {
             $data['group_id'] = $this->input->post('group');
             $this->db->where('event_id', $param2);
             $this->db->update('event_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('event_updated_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         } else if ($param1 == 'edit') {
             $page_data['edit_data'] = $this->db->get_where('event_manager', array(
@@ -244,7 +244,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('event_id', $param2);
             $this->db->delete('event_manager');
-            $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('event_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
         $page_data['events'] = $this->db->get('event_manager')->result_array();
@@ -317,7 +317,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'upload_logo') {
             move_uploaded_file($_FILES['userfile']['tmp_name'], 'uploads/logo.png');
 
-            $this->session->set_flashdata('flash_message', get_phrase('settings_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('settings_updated_successfully'));
             redirect(base_url() . 'index.php?admin/system_settings/', 'refresh');
         }
         if ($param1 == 'change_skin') {
@@ -362,7 +362,7 @@ class Admin extends CI_Controller {
 
 
             $this->db->insert('cms_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', get_phrase('cms_page_added_successfully'));
             redirect(base_url() . 'index.php?admin/cms/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -373,7 +373,7 @@ class Admin extends CI_Controller {
             $data['c_status'] = $this->status($this->input->post('c_status'));
             $this->db->where('c_id', $param2);
             $this->db->update('cms_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('cms_page_updated_successfully'));
             redirect(base_url() . 'index.php?admin/cms/', 'refresh');
         } else if ($param1 == 'edit') {
             $page_data['edit_data'] = $this->db->get_where('cms_manager', array(
@@ -383,7 +383,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'delete') {
             $this->db->where('c_id', $param2);
             $this->db->delete('cms_manager');
-            $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('cms_page_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/cms/', 'refresh');
         }
         $page_data['cms'] = $this->db->get('cms_manager')->result_array();
@@ -538,7 +538,7 @@ class Admin extends CI_Controller {
                 $this->session->set_flashdata('flash_message', get_phrase('group_name_already_exist.'));
             } else {
                 $this->db->insert('group', $data);
-                $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+                $this->session->set_flashdata('flash_message', get_phrase('group_added_successfully'));
             }
             redirect(base_url() . 'index.php?admin/create_group', 'refresh');
         }
@@ -557,7 +557,7 @@ class Admin extends CI_Controller {
             $data['user_role'] = implode(',', $this->input->post('user_role'));
             $this->db->where('g_id', $this->input->post('group_name'));
             $this->db->update('group', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('data_updated_successfully'));
+            $this->session->set_flashdata('flash_message', get_phrase('group_updated_successfully'));
             redirect(base_url() . 'index.php?admin/list_group', 'refresh');
         }
         if ($param1 == 'delete') {
@@ -568,7 +568,7 @@ class Admin extends CI_Controller {
             $this->db->where('group_id', $this->input->post('group_name_delete'));
             $this->db->delete('assign_module');
 
-            $this->session->set_flashdata('flash_message', get_phrase('data_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('group_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/list_group', 'refresh');
         }
         $page_data['user_role'] = $param1;
@@ -1360,7 +1360,7 @@ class Admin extends CI_Controller {
 
             $this->db->where('lm_id', $param2);
             $this->db->update('library_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('library_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('library_updated_successfully'));
 
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
@@ -1368,7 +1368,7 @@ class Admin extends CI_Controller {
             $this->db->where('lm_id', $param2);
             $this->db->delete('library_manager');
             delete_notification('library_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('library_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('library_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
         $page_data['library'] = $this->db->get('library_manager')->result();
@@ -1536,7 +1536,7 @@ class Admin extends CI_Controller {
             $this->db->where('pp_id', $param2);
             $this->db->delete('participate_manager');
             delete_notification('participate_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('participate_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('participate_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
 
@@ -1750,14 +1750,14 @@ class Admin extends CI_Controller {
 
             $this->db->where('assign_id', $param2);
             $this->db->update('assignment_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('assignment_updated'));
+            $this->session->set_flashdata('flash_message', get_phrase('assignment_updated_successfully'));
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         if ($param1 == 'delete') {
             $this->db->where('assign_id', $param2);
             $this->db->delete('assignment_manager');
             delete_notification('assignment_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('assignment_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('assignment_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         $page_data['assignment'] = $this->db->get('assignment_manager')->result();
@@ -1914,7 +1914,7 @@ class Admin extends CI_Controller {
             $this->db->where('study_id', $param2);
             $this->db->delete('study_resources');
             delete_notification('study_resources', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('studyresource_deleted'));
+            $this->session->set_flashdata('flash_message', get_phrase('studyresource_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
         $page_data['studyresource'] = $this->db->get('study_resources')->result();
