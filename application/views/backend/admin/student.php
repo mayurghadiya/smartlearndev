@@ -89,7 +89,7 @@
 
                                             <div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-5">
-                                                    <button type="button" class="btn vd_btn vd_bg-green" id="btnsubmit">Submit</button>
+                                                    <button type="button" class="btn vd_btn vd_bg-green" id="btnsubmit">Search</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -100,7 +100,7 @@
                                       <div id="filterdata" >
                                           
                                        </div>
-                                    <div id="dtbl">
+                                 <!--   <div id="dtbl">
                                     <table class="table table-striped"  id="data-tables">
                                         <thead>
                                             <tr>
@@ -145,7 +145,7 @@
                                             <?php endforeach; ?>						
                                         </tbody>
                                     </table>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <!----TABLE LISTING ENDS--->
@@ -472,7 +472,7 @@ $(document).ready(function () {
                 data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
                 success: function (content) {
                     $("#filterdata").html(content);
-                    $("#dtbl").hide();
+                   // $("#dtbl").hide();
                     $('#data-tables').DataTable( {
                  aoColumnDefs: [
                     {
