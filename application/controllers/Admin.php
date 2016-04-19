@@ -4850,5 +4850,25 @@ class Admin extends CI_Controller {
         $this->import_demo_sheet_download_config('Remedial Exam Marks');
         remedial_exam_marks($exam_id);
     }
+    
+    function display(){
+        $page_data['title'] = 'demo';
+        $page_data['page_name'] = 'assign_data';
+        $this->load->view('backend/index', $page_data);
+    }
+    function get_data()
+    {
+        
+        $results = $this->db->get('assignment_manager')->result_array();
+            $data = array();
+        foreach ($results  as $r) {
+            array_push($data, array(
+                $r['assign_id'],
+                $r['assign_title'],
+                $r['assign_batch']));
+        }
+ 
+        echo json_encode(array('data' => $data));
+    }
 
 }
