@@ -5,8 +5,8 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> </li>
-                        <li><a href="pages-custom-product.html">Pages</a> </li>
+                        <li><a href="<?php echo base_url(); ?>">Home</a> </li>
+                        <li><a href="#">Pages</a> </li>
                         <li class="active"><?php echo $page_title ?></li>
                     </ul>
                     
@@ -48,7 +48,7 @@
                                                     <th><div>Sem</div></th>												
                                                     <th><div>Date of submission</div></th>
                                                     <th><div>Description</div></th>
-                                                    <th><div>Downloadable file</div></th>                                                    
+                                                    <th><div>File</div></th>                                                    
                                                     <th><div>Action</div></th>
                                                 </tr>
                                             </thead>
@@ -125,7 +125,7 @@
                                                     <th><div>Assignment Name</div></th>												
                                                     <th><div>Submitted Date</div></th>												
                                                     <th><div>Document Name</div></th>	
-                                                    <th><div>Action</div></th>
+                                                    <th><div>File</div></th>
 
                                                 </tr>
                                             </thead>
@@ -136,7 +136,7 @@
                                                     <td><?php echo $srow->assign_title;?></td>	
                                                      <td><?php echo date("F d, Y",strtotime($srow->submited_date));?></td>	
                                                       <td><?php echo $srow->document_file;?></td>
-                                                       <td> 
+                                                       <td > 
                                                       <a href="uploads/project_file/<?php echo $srow->assign_filename; ?>" download="" title="<?php echo  $srow->document_file;?>"><i class="fa fa-download"></i></a>
                                                     </td>
                                                    </tr>
