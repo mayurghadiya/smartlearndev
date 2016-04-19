@@ -3,12 +3,23 @@
     <div class="">
         <div class="vd_content clearfix">
             <div class="vd_title-section clearfix">
+            
+                <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                        <li><a href="<?php echo base_url(); ?>">Home</a> </li>
+                        <li><a href="#">Pages</a> </li>
+                        <li class="active"><?php echo $page_title ?></li>
+                    </ul>
+                    
+                </div>
+            
                 <div class="vd_panel-header">
                     <h1><?php echo $page_title ?></h1>            
                 </div>
                 
             </div>
             <div class="vd_content-section clearfix">
+                
                 <?php
                 if ($param == "submission") {
                     ?>
@@ -41,7 +52,8 @@
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
                                                 <th><div>Date of submission</div></th>	
-                                                <th>Action</th>
+                                                <th><div>File</div></th>	
+                                                <th >Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -93,9 +105,11 @@
 
                                                 <td><?php echo date('F d, Y',strtotime($row->pm_dos)); ?></td>	
                                                 <td>
-                                               <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
+                                               <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a>
+                                                </td>
                                                 <td>
-                                                    <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_submit_project/<?php echo $row->pm_id; ?>');" data-original-title="Submit Project" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a></td>					
+                                                    <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_submit_project/<?php echo $row->pm_id; ?>');" data-original-title="Submit Project" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
+                                                </td>					
                                                     
                                             </tr>
     <?php endforeach; ?>						
