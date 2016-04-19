@@ -81,10 +81,9 @@
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>
-                                                 <th><div>Downloadable File</div></th>
-                                                <th><div>Date of submission</div></th>											
-                                               											
-                                                <th><div>Operation</div></th>											
+                                                 <th><div>File</div></th>
+                                                <th><div>Date of submission</div></th>						
+                                                <th><div>Action</div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -143,7 +142,7 @@
                                                         ?>
 
                                                     </td>
-                                                    <td> <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
+                                                    <td id="downloadedfile"> <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
                                                     <td><?php echo date_formats($row->pm_dos); ?></td>	
                                                    
                                                     <td class="menu-action">
@@ -325,10 +324,9 @@ foreach ($datadegree as $rowdegree) {
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>
-                                               
                                                 <th><div>Submitted date</div></th>
                                                 <th><div>Comment</div></th>
-                                                <th><div>Action</div></th>												                                            
+                                                <th><div>File</div></th>												                                            
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -379,7 +377,7 @@ foreach ($datadegree as $rowdegree) {
                                                     </td>	
                                                 <td><?php echo date_formats($rowsub->dos); ?></td>	
                                                 <td><?php echo $rowsub->description; ?></td>
-                                                <td><a href="uploads/project_file/<?php echo $rowsub->document_file; ?>" download="" title="<?php echo $rowsub->document_file; ?>"><i class="fa fa-download"></i></a></td>                                                    	
+                                                <td id="downloadedfile"><a href="uploads/project_file/<?php echo $rowsub->document_file; ?>" download="" title="<?php echo $rowsub->document_file; ?>"><i class="fa fa-download"></i></a></td>                                                    	
                                             </tr>
 <?php endforeach; ?>			 			
                                         </tbody>

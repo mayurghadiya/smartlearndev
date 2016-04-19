@@ -82,7 +82,7 @@
                                                 <th><div>Branch</div></th>												
                                                 <th><div>Batch</div></th>												
                                                 <th><div>Semester</div></th>												
-                                                <th><div>Downloadable File</div></th>
+                                                <th><div>File</div></th>
                                                 <th><div>Date of submission</div></th>												
                                                 <th><div>Operation</div></th>											
                                             </tr>
@@ -131,7 +131,7 @@
                                                         }
                                                         ?>													
                                                     </td>	
-                                                    <td><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
+                                                    <td id="downloadedfile"><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date_formats($row->assign_dos); ?></td>	
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn  menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
@@ -313,7 +313,7 @@
                                             <th><div>Sem</div></th>	
                                             <th><div>Submitted date</div></th>	
                                             <th><div>Comment</div></th>
-                                            <th><div>Action</div></th>												                                            
+                                            <th><div>File</div></th>												                                            
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -368,7 +368,7 @@
                                                     </td>	
                                                     <td><?php echo date_formats($rowsub->submited_date); ?></td>	
                                                     <td><?php echo $rowsub->comment; ?></td>
-                                                   <td><a href="uploads/project_file/<?php echo $rowsub->document_file;?>" download="" title="<?php echo  $rowsub->document_file;?>"><i class="fa fa-download"></i></a></td>                      	
+                                                    <td id="downloadedfile"><a href="uploads/project_file/<?php echo $rowsub->document_file;?>" download="" title="<?php echo  $rowsub->document_file;?>"><i class="fa fa-download"></i></a></td>                      	
                                                 </tr>
                                             <?php endforeach; ?>						
                                         </tbody>

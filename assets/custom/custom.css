@@ -177,3 +177,5 @@ a.chat-button {
 }
 
 .vd_menu > ul >li > div.active{ display: block; }
+#downloadedfile{ text-align: center; }
+.tab-pane.box.active{ padding: 15px; }

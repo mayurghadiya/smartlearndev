@@ -78,7 +78,7 @@
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											                                                
                                                 <th><div>Date</div></th>									
-                                                <th><div>Downloadable File</div></th>											
+                                                <th><div>File</div></th>											
                                                 <th><div>Operation</div></th>											
                                             </tr>
                                         </thead>
@@ -151,7 +151,7 @@
                                                     </td>	
                                                   
                                                     <td><?php echo date_formats($row->study_dos); ?></td>	
-  <td><a href="<?php echo $row->study_url; ?>" download=""  title="<?php echo $row->study_filename; ?>"><i class="fa fa-download"></i></a></td>	
+                                                    <td id="downloadedfile"><a href="<?php echo $row->study_url; ?>" download=""  title="<?php echo $row->study_filename; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_studyresource/<?php echo $row->study_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 

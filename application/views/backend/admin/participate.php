@@ -70,9 +70,9 @@
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
-                                                <th><div>Downloadable File</div></th>											
+                                                <th><div>File</div></th>											
                                                 <th><div>Date of submission</div></th>									
-                                                <th><div>Operation</div></th>											
+                                                <th><div>Action</div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -140,7 +140,7 @@
                                                         ?>
 
                                                     </td>	
-                                                    <td><a href="<?php echo $row->pp_url; ?>" download="" title="<?php echo $row->pp_filename; ?>" ><i class="fa fa-download"></i></a></td>	
+                                                    <td id="downloadedfile"><a href="<?php echo $row->pp_url; ?>" download="" title="<?php echo $row->pp_filename; ?>" ><i class="fa fa-download"></i></a></td>	
                                                     <td><?php  echo date_formats($row->pp_dos); ?></td>	
 
                                                     <td class="menu-action">
@@ -373,7 +373,7 @@
                                                     <th><div>Batch</div></th>											
                                                     <th><div>Semester</div></th>	
                                                     <th><div>Question</div></th>  
-                                                    <th><div>Status</div></th>                               
+                                                    <th><div>Answer</div></th>                               
                                                     <th><div>Action</div></th>
 
                                                 </tr>
@@ -644,7 +644,7 @@
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>
                                                 <th><div>Semester</div></th>											
-                                                <th><div>Download</div></th>											                                                
+                                                <th><div>File</div></th>											                                                
 
                                             </tr>
                                         </thead>
@@ -689,7 +689,7 @@
                                                             echo $user1[0]['s_name'];
                                                         }
                                                         ?></td>	
-                                                    <td><a href="<?php echo $rowsupl['upload_url']; ?>" download=""><i class="fa fa-download" title="<?php echo $rowsupl['upload_file_name']; ?>"></i></a></td>	
+                                                    <td id="downloadedfile"><a href="<?php echo $rowsupl['upload_url']; ?>" download=""><i class="fa fa-download" title="<?php echo $rowsupl['upload_file_name']; ?>"></i></a></td>	
 
                                                 </tr>
 <?php endforeach; ?>						

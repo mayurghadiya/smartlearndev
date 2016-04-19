@@ -78,9 +78,9 @@
                                                 <th><div>Branch</div></th>											
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
-                                                <th><div>Downloadable File</div></th>											
+                                                <th><div>File</div></th>											
                                                 <th><div>Date of submission</div></th>									
-                                                <th><div>Operation</div></th>											
+                                                <th><div>Action</div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -145,7 +145,7 @@
                                                         ?>
 
                                                     </td>	
-                                                    <td><a href="<?php echo $row->lm_url; ?>" download="" target="_blank" title="<?php echo $row->lm_filename; ?>"><i class="fa fa-download"></i></a></td>	
+                                                    <td id="downloadedfile"><a href="<?php echo $row->lm_url; ?>" download="" target="_blank" title="<?php echo $row->lm_filename; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date_formats($row->lm_dos); ?></td>	
 
                                                     <td class="menu-action">
