@@ -149,3 +149,69 @@ ERROR - 2016-04-12 12:39:00 --> Severity: Notice --> Undefined variable: gochat 
 ERROR - 2016-04-12 12:39:49 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
 ERROR - 2016-04-12 15:43:44 --> Query error: Unknown column 'undefined' in 'where clause' - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(1, degree_id) AND FIND_IN_SET(undefined, course_id)
 ERROR - 2016-04-12 15:43:44 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/models/admin/Crud_model.php 902
+ERROR - 2016-04-12 17:38:08 --> Severity: error --> Exception: syntax error, unexpected ';', expecting ',' or ')' /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/project.php 147
+ERROR - 2016-04-12 17:38:08 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-12 17:41:58 --> Severity: error --> Exception: Call to undefined function datetime_formats() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_survey_detal.php 23
+ERROR - 2016-04-12 17:41:58 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-12 17:42:06 --> Severity: error --> Exception: Call to undefined function datetime_formats() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_survey_detal.php 23
+ERROR - 2016-04-12 17:42:06 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-12 17:42:35 --> Severity: error --> Exception: Call to undefined function datetime_formats() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_survey_detal.php 23
+ERROR - 2016-04-12 17:42:35 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-12 18:06:58 --> Unable to load the requested class: Jquery
+ERROR - 2016-04-12 18:06:59 --> Unable to load the requested class: Jquery
+ERROR - 2016-04-12 18:07:54 --> Unable to load the requested class: Jquery
+ERROR - 2016-04-12 18:10:46 --> Severity: Notice --> Undefined property: CI_Loader::$jquery /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/studyresource.php 581
+ERROR - 2016-04-12 18:10:46 --> Severity: error --> Exception: Call to a member function script() on null /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/studyresource.php 581
+ERROR - 2016-04-12 18:10:46 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-12 18:11:04 --> Unable to load the requested class: Jquery
+ERROR - 2016-04-12 18:46:12 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:46:22 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:46:22 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:46:35 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:46:35 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:48:07 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:48:07 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:48:16 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:48:16 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 247
+ERROR - 2016-04-12 18:51:20 --> Unable to load the requested class: Jquery
+ERROR - 2016-04-12 18:57:00 --> Severity: Notice --> Undefined property: CI_Loader::$jquery /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/studyresource.php 580
+ERROR - 2016-04-12 18:57:00 --> Severity: error --> Exception: Call to a member function click() on null /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/studyresource.php 580
+ERROR - 2016-04-12 18:57:00 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-12 18:57:10 --> Severity: Notice --> Undefined property: CI_Loader::$javascript /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/studyresource.php 580
+ERROR - 2016-04-12 18:57:10 --> Severity: error --> Exception: Call to a member function click() on null /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/studyresource.php 580
+ERROR - 2016-04-12 18:57:10 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
