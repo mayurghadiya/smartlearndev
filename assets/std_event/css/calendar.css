@@ -18,20 +18,21 @@
 }
 
 .fc-calendar .fc-head {
-	height: 30px;
-	line-height: 30px;
+	height: 10px;
+	line-height: 10px;
 	background: #ccc;
 	color: #fff;
 }
 
 .fc-calendar .fc-body {
 	position: relative;
-	width: 100%;
+	width: 1020
+            %;
 	height: 100%;
 	height: -moz-calc(100% - 30px);
 	height: -webkit-calc(100% - 30px);
 	height: calc(100% - 30px);
-	border: 1px solid #ddd;
+/*	border: 1px solid #ddd;*/
 }
 
 .fc-calendar .fc-row {
@@ -40,18 +41,18 @@
 }
 
 .fc-four-rows .fc-row  {
-	height: 25%;
+	height: 10%;
 }
 
 .fc-five-rows .fc-row  {
-	height: 20%;
+	height: 8.4%;
 }
 
 .fc-six-rows .fc-row {
 	height: 16.66%;
 	height: -moz-calc(100%/6);
 	height: -webkit-calc(100%/6);
-	height: calc(100%/6);
+	height: 19px;
 }
 
 .fc-calendar .fc-row > div,

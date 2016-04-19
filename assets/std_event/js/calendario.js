@@ -34,7 +34,7 @@
     weekdays: 'MON, TUE, WED, THU, FRI',
     weekends: 'SAT, SUN',
     format: 'MM-DD-YYYY',
-    feed: 'http://calendario.t15.org/sync/'
+    feed: ''
   }
 
   Calendario.prototype.init = function (type, element, options) {

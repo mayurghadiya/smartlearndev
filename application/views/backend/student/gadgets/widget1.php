@@ -21,7 +21,7 @@
         <script src="<?php echo base_url() ?>assets/std_event/js/modernizr.custom.63321.js"></script>
         <?php 
         ?>
-            <section class="main">
+            <section class="main scroll_none">
                 
                 <div class="custom-calendar-wrap">
                     <div id="custom-inner" class="custom-inner">
@@ -30,8 +30,7 @@
                                 <span id="custom-prev" class="custom-prev"></span>
                                 <span id="custom-next" class="custom-next"></span>
                             </nav>
-                            <h2 id="custom-month" class="custom-month"></h2>
-                            <h3 id="custom-year" class="custom-year"></h3>
+                            <h2 id="custom-month" class="custom-month"></h2>                          
                         </div>
                         <div id="calendar" class="fc-calendar-container"></div>
                     </div>
@@ -80,13 +79,20 @@ events[today] = [{content: 'TODAY', allDay: true}];
 
             $(function() {
                 function updateMonthYear() {
-					$( '#custom-month' ).html( $( '#calendar' ).calendario('getMonthName') );
-					$( '#custom-year' ).html( $( '#calendar' ).calendario('getYear'));
+                            var cyear =  $( '#calendar' ).calendario('getMonthName');
+                            var cmonth =   $( '#calendar' ).calendario('getYear');
+                            var currentdata = cyear+' '+cmonth;                           
+					$( '#custom-month' ).html(currentdata);
+                                                //$( '#custom-month' ).html( $( '#calendar' ).calendario('getYear'));
 				}
 				
 				$(document).on('finish.calendar.calendario', function(e){
-                    $( '#custom-month' ).html( $( '#calendar' ).calendario('getMonthName') );
-					$( '#custom-year' ).html( $( '#calendar' ).calendario('getYear'));
+                                    var mmonth = $( '#calendar' ).calendario('getMonthName') ;
+                                     var myear = $( '#calendar' ).calendario('getYear');
+                                     var mdata = mmonth+' '+myear;
+                                      $( '#custom-month' ).html( mdata);
+					//$( '#custom-year' ).html( $( '#calendar' ).calendario('getYear'));
+                                        
 					$( '#custom-next' ).on( 'click', function() {
 						$( '#calendar' ).calendario('gotoNextMonth', updateMonthYear);
 					} );
@@ -119,7 +125,7 @@ events[today] = [{content: 'TODAY', allDay: true}];
 
                 function showEvents( contentEl, dateprop ) {
                     hideEvents();
-                    var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>Events for ' + dateprop.monthname + ' '
+                    var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>' + dateprop.monthname + ' '
 					+ dateprop.day + ', ' + dateprop.year + '</h4></div>' ),
                     $close = $( '<span class="custom-content-close"></span>' ).on( 'click', hideEvents);
                     $events.append( contentEl.join('') , $close ).insertAfter( $wrapper );

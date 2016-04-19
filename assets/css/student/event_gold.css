@@ -5,10 +5,10 @@
 /*student side event css*/
 .custom-header {
 	background: #fff;
-	padding: 5px 10px 10px 20px;
-	height: 70px;
+	padding: 0;
+	height: 14px;
 	position: relative;
-	border-top: 5px solid #ffba00 !important;
+	border-top: 1px solid #ffba00 !important;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -24,7 +24,7 @@
 	color: #ffba00;
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 10px;
 }
 .fc-calendar .fc-row > div.fc-content:after {
 	content: '\00B7';
@@ -33,10 +33,10 @@
 	margin-left: -10px;
 	position: absolute;
 	color:  #ffba00;
-	font-size: 70px;
-	line-height: 20px;
+	font-size: 40px;
+	
 	left: 50%;
-	bottom: 3px;
+	bottom: 0px;
 }
 .fc-calendar .fc-row > div.fc-today.fc-content:after {
 	color: #fff;
@@ -47,29 +47,29 @@
 }
 .custom-content-reveal span.custom-content-close {
 	position: absolute;
-	top: 15px;
-	right: 10px;
-	width: 20px;
-	height: 20px;
+	top: 2px;
+	right: 2px;
+	width: 10px;
+	height: 10px;
 	text-align: center;
 	background: #ffba00;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 	cursor: pointer;
-	line-height: 13px;
+	line-height: 4px;
 	padding: 0;
 }
 .custom-content-reveal h4 {
 	text-transform: uppercase;
-	font-size: 13px;
+	font-size: 10px;
 	font-weight: 300;
-	letter-spacing: 3px;
+	letter-spacing: 0px;
 	color: #777;
-	padding: 20px;
+	padding: 0px;
 	background: #fff;
 	border-bottom: 1px solid #ddd;
-	border-top: 5px solid #ffba00;
+	border-top: 1px solid #ffba00;
 	box-shadow: 0 1px rgba(255,255,255,0.9);
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 .fc-calendar .fc-row > div.fc-content:hover:after{
 	color: #000;

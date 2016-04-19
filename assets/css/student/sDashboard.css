@@ -225,7 +225,8 @@ li.ui-sortable-placeholder {
 .sDashboardWidgetContent .widget-iframe {
 		background-color: white !important;
 		border: medium none;
-		width: 390px;
+		width: 100%;
+                
 		}
 /*.sDashboard-overlay {
  width: 100%;
@@ -305,7 +306,7 @@ iframe body { background-color: transparent !important;}
 /* --------- custom css by h --------*/
 @media (max-width:480px) {
 	
-	.sDashboardWidgetContent .widget-iframe {width:243px !important;}
+	.sDashboardWidgetContent .widget-iframe {width:100%;}
 	.sDashboard li { width:100%;}
 	
 	

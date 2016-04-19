@@ -1693,7 +1693,7 @@ class Admin extends CI_Controller {
             //$this->db->insert();
 
 
-            $this->session->set_flashdata('flash_message', get_phrase('assignment_added_successful'));
+            $this->session->set_flashdata('flash_message', get_phrase('assignment_added_successfully'));
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         if ($param1 == 'do_update') {
