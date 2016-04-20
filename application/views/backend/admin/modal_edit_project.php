@@ -123,7 +123,7 @@ foreach ($edit_data as $row):
                                         ?>
                                 
                                 <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
-                                <div class="col-sm-5">
+                                <div class="col-sm-8">
                                     <input type="checkbox" name="checkall" id="checkAll2"  >Check All<br>
                                    <div id="student2">
                                         <?php
@@ -138,9 +138,9 @@ foreach ($edit_data as $row):
                                         foreach ($datastudent as $rowstu) {
                                              if(in_array($rowstu->std_id, $stu)) {
                                                 ?>
-                                    <input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" checked=""><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?> <br>                                               
+                                       <div class="checkedstudent"> <input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" checked=""><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?> </div>                                               
                                      <?php     } else { ?>
-                                    <input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" ><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?><br>
+                                       <div class="checkedstudent"><input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" ><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?></div>
                                     <?php        }    }    ?>
                                    </div>
 

@@ -241,7 +241,7 @@ foreach ($datadegree as $rowdegree) {
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Student<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
+                                            <div class="col-sm-8">
                                                  <input type="checkbox" name="checkall" id="select_all"  >Check All<br>
                                                 <div id="student"></div>
                                                 <label class="error" for="student[]"></label>
