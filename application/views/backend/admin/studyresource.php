@@ -254,7 +254,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="dateofsubmission" id="dateofsubmission" />
+                                                <input type="text" class="form-control" readonly="" name="dateofsubmission" id="dateofsubmission" />
                                             </div>
                                         </div>
                                        

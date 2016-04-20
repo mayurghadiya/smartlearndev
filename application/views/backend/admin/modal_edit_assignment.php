@@ -117,7 +117,7 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Submission Date<span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="submissiondate1" id="submissiondate1"  value="<?php echo $row['assign_dos']; ?>"/>
+                                    <input type="text" class="form-control" readonly="" name="submissiondate1" id="submissiondate1"  value="<?php echo $row['assign_dos']; ?>"/>
                                 </div>
                             </div>
                             <div class="form-group">

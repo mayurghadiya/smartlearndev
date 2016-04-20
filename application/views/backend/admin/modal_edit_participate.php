@@ -124,7 +124,7 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Date  <span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['pp_dos']; ?>"/>
+                                    <input type="text" readonly="" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['pp_dos']; ?>"/>
                                 </div>
                             </div>
                             <input type="hidden" class="form-control" name="pageurl" id="pageurl" value="<?php echo $row['pp_url']; ?>" />
