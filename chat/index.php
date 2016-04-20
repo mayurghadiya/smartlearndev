@@ -20,14 +20,19 @@ session_start();
  //echo $_SERVER['REQUEST_URI'];
 // echo $_SERVER['QUERY_STRING'];
 //echo 'Dirname($_SERVER[PHP_SELF]: ' . dirname($_SERVER['PHP_SELF']) . '<br>';
-
+$readonly = 'readOnly';
+ 
 if(strpos($_SERVER['QUERY_STRING'],"="))
 {
+  //  $print['query'] = '';
  $print =  parse_url(  $_SERVER['QUERY_STRING'] , $component = -1 );
- //echo print_r($print['query']);
+
+ if(isset($print['query']))
+ {
  //echo "<br>";
- $res = explode("act",$print['query']);
- //print_r($_SERVER['REQUEST_URI']);
+  $query = $print['query'];
+ $res = explode("act",$query);
+
  $url = explode("?index.php",$_SERVER['REQUEST_URI']);
  define("MAIN_URL", $url[0]);
  $_SESSION['main_url'] = $url[0];
@@ -38,19 +43,37 @@ $rootsession = explode("chatuser",$rootsession);
 $_SESSION['chatme'] = $rootsession[1];
 $_SESSION['chatme'];
 define("CHATME",$rootsession[1]);
+$_SESSION['chatme'];
+unset($_SESSION['main_url']);
+
  //$_SESSION['chatuser'] = $rootsession[1];
  
  //define("",$rootsession);
- 
+ }
+
 
 }
 else{
+
+     $c_link = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];     
+     $c_link_exp = explode("index.php",$c_link);
+     
+     if(isset($c_link_exp[1])=="/site_admin/user/login")
+     {
+        $readonly = '';
+        
+     }
+     else{
+        $readonly = 'readOnly';
+     }
+
     $actual_link = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     $get_link = explode("index.php",$actual_link);
     $get_links =  $get_link[0];
     $new_link = explode("/lhc_web", $get_links);
     $admin_link =  $new_link[0];
      $_SESSION['main_url'] = $admin_link;
+     unset($_SESSION['chatme']);
    // strtolower($get_links)
     
      
@@ -100,3 +123,29 @@ if ( function_exists('fastcgi_finish_request') ) {
 };
 
 erLhcoreClassChatEventDispatcher::getInstance()->executeFinishRequest();
+?>
+<script src="jquery.js" type="text/javascript" ></script>
+<script type="text/javascript">
+  <?php if(isset($_SESSION['chatme'])){   ?>
+
+    
+var frm = $("#form-start-chat");
+frm.attr({'name':"myForm"});
+    document.myForm['Username'].value = "<?php echo $_SESSION['chatme']; ?>";
+   
+    document.myForm['Username'].readOnly = true;
+    <?php }else{  ?>
+        <?php if($readonly=="readOnly"){ ?>
+            var frm = $("#form-start-chat");
+frm.attr({'name':"myForm"});
+    document.myForm['Username'].value = "<?php echo $_SESSION['chatme']; ?>";
+   
+    document.myForm['Username'].readOnly = true;
+    document.myForm['StartChatAction'].style.display = "none";
+    
+
+    
+
+        <?php } ?>
+    <?php } ?>
+</script>
