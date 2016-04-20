@@ -122,3 +122,6 @@
 .fc-calendar .fc-row:last-child {
 	border-bottom: none;
 }
+.fc-row:last-child {
+  border-bottom: 1px solid #ccc !important;
+}
