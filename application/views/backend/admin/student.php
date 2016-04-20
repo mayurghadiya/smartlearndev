@@ -66,7 +66,7 @@
                                             </div>
                                             <div class="form-group col-sm-2">
                                                 <label>Batch<span style="color:red">*</span></label>
-                                                    <select name="filterbatch" id="filterbatch">
+                                                <select name="filterbatch" id="filterbatch" class="form-control">
                                                         <option value="">Select batch</option>
 
                                                     </select>
