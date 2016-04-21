@@ -229,6 +229,34 @@
                             </table>
                             <?php
                         }
+                        if(isset($search_result['event']) && count($search_result['event'])){?>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="6">Event Details</th>
+                                </tr>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Event Name</th>
+                                    <th>Description</th>
+                                    <th>Location</th>
+                                    <th>Date</th>
+                                    <th>Start time</th>                                    
+                                </tr>
+                                <?php
+                                $counter = 1;
+                                foreach($search_result['event'] as $event) { ?>
+                                <tr>
+                                    <td><?php echo $counter++; ?></td>
+                                    <td><?php echo $event->event_name; ?></td>
+                                    <td><?php echo $event->event_desc; ?></td>
+                                    <td><?php echo $event->event_location; ?></td>
+                                    <td><?php echo date('F d, Y', strtotime($event->event_date)); ?></td>
+                                    <td><?php echo date('h:i A', strtotime($event->event_date)); ?></td>
+                                </tr>
+                                <?php }
+                                ?>
+                            </table>
+                        <?php }
                     }
                     if (!array_filter($search_result)) {
                         ?>

@@ -367,9 +367,9 @@
 </div>
 
 <script>
-$('form input[type="text"]').attr('readonly', 'readonly');
-$('form input[type="email"]').attr('readonly', 'readonly');
-$('form textarea').attr('readonly', 'readonly');
+$('form#student_profile input[type="text"]').attr('readonly', 'readonly');
+$('form#student_profile input[type="email"]').attr('readonly', 'readonly');
+$('form#student_profile textarea').attr('readonly', 'readonly');
 //$('form input[type="radio"]').attr('readonly', 'readonly');
 </script>
 <!-- validation -->

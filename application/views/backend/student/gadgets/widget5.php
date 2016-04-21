@@ -6,7 +6,7 @@
                 <div class="content-list content-menu">
                     <ul class="list-wrapper pd-lr-10">
                         <li> 
-                            <a href="<?php echo base_url('index.php?student/exam_listing'); ?>" target="_parent">  
+                            <a href="<?php echo base_url('index.php?student/exam_listing'); ?>" target="_blank">  
                                 <div class="menu-text">Schedule 
                                     <?php
                                     if (!check_notification('exam_manager') || check_notification('exam_time_table')) {
