@@ -187,15 +187,14 @@
                           </div>
                           <!-- form-group -->
                           
-                          <div class="form-group">
+                          <div class="form-group" style="display:none">
                             <label class="col-sm-3 control-label">Branch</label>
                             <div class="col-sm-9 controls">
                               <div class="row mgbt-xs-0">
                                 <div class="col-xs-9">
-                                  <select name="ad_branch" id="ad_branch">
-                                   	<option value="">--- Select Batch ---</option>
-									 <?php 
-										$batch = $this->db->get('batch')->result_array();
+                                    <select name="ad_branch" id="ad_branch" hidden="">
+                                      <option value="2016">2016</option>
+									 <?php 										$batch = $this->db->get('batch')->result_array();
 										foreach($batch as $row2):
 										?>
 											<option value="<?php echo $row2['b_id'];?>" <?php if($row['ad_branch'] == $row2['b_id'])echo 'selected';?>><?php echo $row2['b_name'];?></option>

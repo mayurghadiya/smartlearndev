@@ -1108,7 +1108,7 @@ class Admin extends CI_Controller {
             //   $batch = $data['pm_batch'];
             //  $semester = $data['pm_semester'];            
             //  create_notification('project_manager',$degree ,$course,$batch,$semester, $last_id);
-            $this->session->set_flashdata('flash_message', get_phrase('project_added_successful'));
+            $this->session->set_flashdata('flash_message', 'Project Added Successfully');
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1166,7 +1166,7 @@ class Admin extends CI_Controller {
 
             $this->db->where('pm_id', $param2);
             $this->db->update('project_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('project_updated_successful'));
+            $this->session->set_flashdata('flash_message', 'Project Updated Successfully');
 
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
@@ -1174,7 +1174,7 @@ class Admin extends CI_Controller {
             $this->db->where('pm_id', $param2);
             $this->db->delete('project_manager');
             delete_notification('project_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('project_deleted_successful'));
+            $this->session->set_flashdata('flash_message', 'Project Deleted Successfully');
             redirect(base_url() . 'index.php?admin/project/', 'refresh');
         }
         $page_data['project'] = $this->db->get('project_manager')->result();
@@ -1301,7 +1301,7 @@ class Admin extends CI_Controller {
                 $notify['data_id'] = $last_id;
                 $this->db->insert("notification", $notify);
             }
-            $this->session->set_flashdata('flash_message', get_phrase('library_added_successfully'));
+            $this->session->set_flashdata('flash_message', 'Library Added Successfully');
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1359,7 +1359,7 @@ class Admin extends CI_Controller {
 
             $this->db->where('lm_id', $param2);
             $this->db->update('library_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('library_updated_successfully'));
+            $this->session->set_flashdata('flash_message', 'Library Updated Successfully');
 
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
@@ -1367,7 +1367,7 @@ class Admin extends CI_Controller {
             $this->db->where('lm_id', $param2);
             $this->db->delete('library_manager');
             delete_notification('library_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('library_deleted_successfully'));
+            $this->session->set_flashdata('flash_message', 'Library Deleted Successfully');
             redirect(base_url() . 'index.php?admin/library/', 'refresh');
         }
         $page_data['library'] = $this->db->get('library_manager')->result();
@@ -1489,7 +1489,7 @@ class Admin extends CI_Controller {
                 $notify['data_id'] = $last_id;
                 $this->db->insert("notification", $notify);
             }
-            $this->session->set_flashdata('flash_message', get_phrase('participate_added_successful'));
+            $this->session->set_flashdata('flash_message', 'Participate Added Successful');
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1527,7 +1527,7 @@ class Admin extends CI_Controller {
 
             $this->db->where('pp_id', $param2);
             $this->db->update('participate_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('participate_update_successful'));
+            $this->session->set_flashdata('flash_message', 'Participate Updated Successfully');
 
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
@@ -1535,7 +1535,7 @@ class Admin extends CI_Controller {
             $this->db->where('pp_id', $param2);
             $this->db->delete('participate_manager');
             delete_notification('participate_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('participate_deleted_successfully'));
+            $this->session->set_flashdata('flash_message', 'Participate Deleted Successfully');
             redirect(base_url() . 'index.php?admin/participate/', 'refresh');
         }
 
@@ -1692,7 +1692,7 @@ class Admin extends CI_Controller {
             //$this->db->insert();
 
 
-            $this->session->set_flashdata('flash_message', get_phrase('assignment_added_successfully'));
+            $this->session->set_flashdata('flash_message', 'Assignment Added Successfully');
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1749,14 +1749,14 @@ class Admin extends CI_Controller {
 
             $this->db->where('assign_id', $param2);
             $this->db->update('assignment_manager', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('assignment_updated_successfully'));
+            $this->session->set_flashdata('flash_message', 'Assignment Updated Successfully');
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         if ($param1 == 'delete') {
             $this->db->where('assign_id', $param2);
             $this->db->delete('assignment_manager');
             delete_notification('assignment_manager', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('assignment_deleted_successfully'));
+            $this->session->set_flashdata('flash_message', 'Assignment Deleted Successfully');
             redirect(base_url() . 'index.php?admin/assignment/', 'refresh');
         }
         $page_data['assignment'] = $this->db->get('assignment_manager')->result();
@@ -1869,7 +1869,7 @@ class Admin extends CI_Controller {
                 $notify['data_id'] = $last_id;
                 $this->db->insert("notification", $notify);
             }
-            $this->session->set_flashdata('flash_message', get_phrase('studyresource_added_successfully'));
+            $this->session->set_flashdata('flash_message', 'Studyresource Added Successfully');
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
         if ($param1 == 'do_update') {
@@ -1905,7 +1905,7 @@ class Admin extends CI_Controller {
 
             $this->db->where('study_id', $param2);
             $this->db->update('study_resources', $data);
-            $this->session->set_flashdata('flash_message', get_phrase('studyresource_updated_successfully'));
+            $this->session->set_flashdata('flash_message', 'Studyresource Updated Successfully');
 
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
@@ -1913,7 +1913,7 @@ class Admin extends CI_Controller {
             $this->db->where('study_id', $param2);
             $this->db->delete('study_resources');
             delete_notification('study_resources', $param2);
-            $this->session->set_flashdata('flash_message', get_phrase('studyresource_deleted_successfully'));
+            $this->session->set_flashdata('flash_message', 'Studyresource Deleted Successfully');
             redirect(base_url() . 'index.php?admin/studyresource/', 'refresh');
         }
         $page_data['studyresource'] = $this->db->get('study_resources')->result();
@@ -3955,7 +3955,7 @@ class Admin extends CI_Controller {
             $pp_id = $param;
 
             $this->db->delete("participate_student", array("participate_student_id" => $pp_id));
-            $this->session->set_flashdata('flash_message', 'disapprove successfully');
+            $this->session->set_flashdata('flash_message', 'Disapprove Successfully');
             redirect(base_url('index.php?admin/participate'));
         }
     }
@@ -3969,7 +3969,7 @@ class Admin extends CI_Controller {
             $indata['question_description'] = $this->input->post('description');
 
             $this->db->insert("survey_question", $indata);
-            $this->session->set_flashdata('flash_message', get_phrase('question_added_successfully'));
+            $this->session->set_flashdata('flash_message', 'Question Added Successfully');
             redirect(base_url('index.php?admin/participate'));
         }
         if ($param == 'do_update') {
@@ -3980,7 +3980,7 @@ class Admin extends CI_Controller {
 
                 $this->db->where("sq_id", $param2);
                 $this->db->update("survey_question", $indata);
-                $this->session->set_flashdata('flash_message', get_phrase('question_update_successfully'));
+                $this->session->set_flashdata('flash_message', 'Question Update Successfully');
             }
             redirect(base_url('index.php?admin/participate'));
         }
@@ -3988,7 +3988,7 @@ class Admin extends CI_Controller {
             if (!empty($param2)) {
                 $this->db->where("sq_id", $param2);
                 $this->db->delete("survey_question");
-                $this->session->set_flashdata('flash_message', get_phrase('question_delete_successfully'));
+                $this->session->set_flashdata('flash_message', 'Question Delete Successfully');
             }
             redirect(base_url('index.php?admin/participate'));
         }
@@ -4024,7 +4024,7 @@ class Admin extends CI_Controller {
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
         $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
-        $this->session->set_flashdata('flash_message', get_phrase(count($data['datastudent']) . ' records found.'));
+        $this->session->set_flashdata('flash_message', count($data['datastudent']) . ' records found.');
         $this->load->view("backend/admin/ajax_student", $data);
     }
 
@@ -4049,12 +4049,12 @@ class Admin extends CI_Controller {
             //$rowstu->std_id . . $rowstu->name;
             if (isset($std)) {
                 if (in_array($rowstu->std_id, $std)) {
-                    $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                    $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
                 } else {
-                    $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                    $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
                 }
             } else {
-                $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
             }
         }
         $html.='<script type="text/javascript">';
@@ -4089,12 +4089,12 @@ class Admin extends CI_Controller {
             foreach ($datastudent as $rowstu) {
                 if (isset($std)) {
                     if (in_array($rowstu->std_id, $std)) {
-                        $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                        $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '" checked="">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
                     } else {
-                        $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                        $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
                     }
                 } else {
-                    $html .='<input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '<br>';
+                    $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
                 }
             }
         }

@@ -12,9 +12,9 @@
                         
                         <div class="row">
                             <div class="col-sm-12">
-                                <?php
-                               
-                                    ?>
+                              <div class="">
+                            <span style="color:red">* is mandatory field</span> 
+                        </div>  
                                 <form id="frmsurvey" name="frmsurvey" class="form-horizontal form-groups-bordered validate" accept-charset="UTF-8" enctype="multipart/form-data" method="post" novalidate="" action="<?=base_url()?>/index.php?student/participate/create">
                                     <ul>
                                         <li>

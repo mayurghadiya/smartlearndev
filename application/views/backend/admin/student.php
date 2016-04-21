@@ -42,11 +42,10 @@
                                         <div class="">
                                             <span style="color:red">* is mandatory field</span> 
                                         </div>  
-                                        <form id="frmstudentlist" name="frmfilterlist" action="#" enctype="multipart/form-data" class="form-horizontal form-groups-bordered validate">
-                                            <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
-                                                <div class="col-sm-5">
-                                                    <select name="filterdegree" id="filterdegree" >
+                                        <form id="frmstudentlist" name="frmfilterlist" action="#" enctype="multipart/form-data" class="form-vertical form-groups-bordered validate">
+                                            <div class="form-group col-sm-2">
+                                                <label >Course<span style="color:red">*</span></label>
+                                                    <select class="form-control filter-rows" name="filterdegree" id="filterdegree" >
                                                         <option value="">Select Course</option>
                                                         <?php
                                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -57,40 +56,31 @@
                                                         }
                                                         ?>
                                                     </select>
-                                                </div>
                                             </div>	
-                                            <div class="form-group">
-                                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
-                                                <div class="col-sm-5">
-                                                    <select name="filtercourse" id="filtercourse" >
+                                            <div class="form-group col-sm-2">
+                                                <label >Branch<span style="color:red">*</span></label>
+                                                    <select class="form-control filter-rows" name="filtercourse" id="filtercourse" >
                                                         <option value="">Select Branch</option>
 
                                                     </select>
-                                                </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
-                                                <div class="col-sm-5">
-                                                    <select name="filterbatch" id="filterbatch">
+                                            <div class="form-group col-sm-2">
+                                                <label>Batch<span style="color:red">*</span></label>
+                                                <select name="filterbatch" id="filterbatch" class="form-control">
                                                         <option value="">Select batch</option>
 
                                                     </select>
-                                                </div>
                                             </div>	
-                                            <div class="form-group">
-                                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
-                                                <div class="col-sm-5">
-                                                    <select name="filtersemester" id="filtersemester" >
+                                            <div class="form-group col-sm-2">
+                                                <label>Semester<span style="color:red">*</span></label>
+                                                    <select class="form-control filter-rows" name="filtersemester" id="filtersemester" >
                                                         <option value="">Select semester</option>
-
                                                     </select>
-                                                </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-3 col-sm-5">
-                                                    <button type="button" class="btn vd_btn vd_bg-green" id="btnsubmit">Search</button>
-                                                </div>
+                                            <div class="form-group col-sm-2">
+                                                <label></label>
+                                                <button type="button" class="btn vd_btn vd_bg-green form-control filter-rows" id="btnsubmit">Search</button>
                                             </div>
                                         </form>
                                     </div>

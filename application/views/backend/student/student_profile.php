@@ -33,7 +33,7 @@
                                               </tr>-->
                                                 <tr>
                                                     <td>Register Since</td>
-                                                    <td><?php echo date('d-m-Y', strtotime($profile->Joining_date)); ?></td>
+                                                    <td><?php echo date('F d, Y', strtotime($profile->Joining_date)); ?></td>
                                                 </tr>
                                             </tbody>
                                         </table>
