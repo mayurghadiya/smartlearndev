@@ -509,18 +509,14 @@
                 batch: "required",
                 semester: "required",
                 student: "required",
-                dateofsubmission: "required",
-                libraryfile: {
-                    required: true,
-                  extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt',
-                },
+                dateofsubmission: "required",                
                 title:
                         {
                             required: true,
                         },
                 libraryfile: {
                     required: true,
-                    extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt|jpeg',
+                    extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt|jpeg|mkv|webm|flv|mp4|avi',
                 }
             },
             messages: {
