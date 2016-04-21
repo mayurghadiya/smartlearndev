@@ -585,4 +585,52 @@ class Student_model extends CI_Model {
                         ->result();
     }
 
+    /**
+     * Insert / update widget order
+     * @param mixed $data
+     * @param string $id
+     */
+    function save_widget_order($data, $id = NULL) {
+        if ($id != NULL) {
+            //update
+            $this->db->where('student_id', $id);
+            $this->db->update('widget_order', array(
+                'student_id' => $data['student'],
+                'order_data' => $data['widget_order']
+            ));
+        } else {
+            //insert
+            $this->db->insert('widget_order', array(
+                'student_id' => $data['student'],
+                'order_data' => $data['widget_order']
+            ));
+        }
+    }
+
+    /**
+     * Check for widget order present or not for specific student
+     * @param string $student_id
+     * @return int
+     */
+    function is_present_widget_order($student_id) {
+        return $this->db->select()
+                        ->from('widget_order')
+                        ->where(array(
+                            'student_id' => $student_id
+                        ))->get()->num_rows();
+    }
+
+    /**
+     * Student widget order
+     * @param int $student_id
+     * @return object
+     */
+    function student_widget_order($student_id) {
+        return $this->db->select()
+                ->from('widget_order')
+                ->where(array(
+                    'student_id'=> $student_id
+                ))->get()->row();
+    }
+
 }

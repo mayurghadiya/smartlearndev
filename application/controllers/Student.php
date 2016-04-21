@@ -43,6 +43,10 @@ class Student extends CI_Controller {
     /*     * * DASHBOARD** */
 
     function dashboard() {
+        $this->load->model('Student/Student_model');
+        $page_data['widget_order'] = $this->Student_model->student_widget_order(
+                $this->session->userdata('student_id'));
+       
         if ($this->session->userdata('student_login') != 1)
             redirect(base_url(), 'refresh');
         if (isset($_POST['online'])) {
@@ -1798,6 +1802,39 @@ class Student extends CI_Controller {
         } else {
             echo 'false';
         }
+    }
+
+    /**
+     * Insert / update widget order
+     * @param string $student_id
+     */
+    function save_widget_order($student_id = NULL) {
+        if ($student_id == NULL) {
+            //insert
+            $this->db->insert('widget_order', array(
+                'student_id' => $_POST['student'],
+                'order_data' => $_POST['widget_data']
+            ));
+        } else {
+            //update
+            $this->db->where('student_id', $student_id);
+            $this->db->update('widget_order', array(
+                'student_id' => $_POST['student'],
+                'order_data' => $_POST['widget_data']
+            ));
+        }
+    }
+
+    /**
+     * 
+     * @param string $student_id
+     * @return boolean
+     */
+    function is_present_widget_order($student_id = '') {
+        $this->load->model('Student/Student_model');
+        $is_present_widget_order = $this->Student_model->is_present_widget_order($student_id);
+
+        echo $is_present_widget_order;
     }
 
 }

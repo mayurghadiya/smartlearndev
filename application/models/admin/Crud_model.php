@@ -335,6 +335,7 @@ class Crud_model extends CI_Model {
                         ->join('semester', 'semester.s_id = exam_manager.em_semester')
                         ->join('batch', 'batch.b_id = exam_manager.batch_id')
                         ->join('degree', 'degree.d_id = exam_manager.degree_id')
+                        ->order_by('em_date', 'DESC')
                         ->get()
                         ->result();
     }
@@ -463,6 +464,7 @@ class Crud_model extends CI_Model {
                         ->join('semester', 'semester.s_id = exam_manager.em_semester')
                         ->join('batch', 'batch.b_id = exam_time_table.batch_id')
                         ->join('degree', 'degree.d_id = exam_time_table.degree_id')
+                        ->order_by('em_date', 'DESC')
                         ->get()
                         ->result();
     }
@@ -503,6 +505,7 @@ class Crud_model extends CI_Model {
      * @return array
      */
     function get_remedial_exam_list($course_id, $semester_id) {
+        $this->db->order_by('em_date', 'DESC');
         return $this->db->get_where('exam_manager', array(
                             'course_id' => $course_id,
                             'em_semester' => $semester_id,
@@ -1057,6 +1060,18 @@ class Crud_model extends CI_Model {
                     'mm_exam_id' => $exam_id,
                     'mark_obtained < '=>$passing_marks
                 ))->get()->result();
+    }
+    
+    /**
+     * Event manager
+     * @return array
+     */
+    function event_manager() {
+        return $this->db->select()
+                ->from('event_manager')
+                ->order_by('event_date', 'DESC')
+                ->get()
+                ->result_array();
     }
 
 }
