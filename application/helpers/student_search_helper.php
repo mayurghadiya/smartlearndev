@@ -40,10 +40,13 @@ if (!function_exists('global_search')) {
                     $result['assignment'] = assignment_search($search_query);
                 if(isset($from['participate']))
                     $result['participate'] = participate_search($search_query);
+                if(isset($from['event']))
+                    $result['event'] = event_search($search_query);
                 break;
             default :
+                reserved_keyword_search($search_query);
                 //global search
-                //$result['student'] = student_detail_search($search_query);
+                $result['event'] = event_search($search_query);
                 $result['exam'] = exam_search($search_query);
                 //$result['course'] = course_search($search_query);
                 //$result['batch'] = batch_search($search_query);
@@ -52,6 +55,30 @@ if (!function_exists('global_search')) {
         }
 
         return $result;
+    }
+
+}
+
+if (!function_exists('event_search')) {
+
+    /**
+     * Event search
+     * @param string $search_query
+     * @return array
+     */
+    function event_search($search_query) {
+        $CI = & get_instance();
+        $CI->load->database();
+
+        $event = $CI->db->list_fields('event_manager');
+        $CI->db->select();
+        $CI->db->from('event_manager');
+        foreach ($event as $field) {
+            $CI->db->or_like("event_manager.{$field}", $search_query, 'after');
+        }
+        $result = $CI->db->get();
+
+        return $result->result();
     }
 
 }
@@ -78,6 +105,76 @@ if (!function_exists('student_detail_search')) {
         $result = $CI->db->get();
 
         return $result->result();
+    }
+
+}
+
+if (!function_exists('reserved_keyword_search')) {
+
+    /**
+     * Reserved keyword search
+     * @param string $keyword
+     */
+    function reserved_keyword_search($keyword) {
+        switch ($keyword) {
+            case 'exam':
+            case 'exams':
+                redirect(base_url('index.php?student/exam_listing'));
+                break;
+            case 'profile':
+            case 'password':
+            case 'facebook':
+            case 'mobile':
+            case 'about me':
+            case 'about':
+                redirect(base_url('index.php?student/profile'));
+                break;
+            case 'result':
+            case 'mark':
+            case 'marks':
+                redirect(base_url('index.php?student/exam_marks'));
+                break;
+            case 'assignment':
+            case 'assignments':
+            case 'student assignment':
+            case 'student assignments':
+                redirect(base_url('index.php?student/assignment'));
+                break;
+            case 'project':
+            case 'projects':
+            case 'synopsis':
+            case 'project synopsis':
+                redirect(base_url('index.php?student/project/submission'));
+                break;
+            case 'participate':
+            case 'participates':
+                redirect(base_url('index.php?student/participate'));
+                break;
+
+            case 'exam schedule':
+            case 'time table':
+            case 'schedule':
+                redirect(base_url('index.php?student/exam_listing'));
+                break;            
+            case 'remedial marks':
+            case 'remedial mark':
+            case 'remedial exam marks':
+                redirect(base_url('index.php?student/exam_marks'));
+                break;            
+            case 'payment':
+            case 'make payment':
+            case 'student payment':
+                redirect(base_url('index.php?student/student_fees'));
+                break;
+            case 'email':
+            case 'inbox':
+            case 'mail':
+                redirect(base_url('index.php?student/email_inbox'));
+                break;            
+            case 'chat':
+                redirect('http://www.searchnative.in/hosting/smartlearn/chat/index.php/site_admin/user/login');
+                break;  
+        }
     }
 
 }

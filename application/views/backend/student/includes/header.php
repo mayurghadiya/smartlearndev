@@ -62,6 +62,13 @@
 
                                                                     <span>Participate</span></label>
                                                             </li>
+                                                            <li>
+                                                                <label>
+                                                                    <input type="checkbox" name="event" value="event"
+                                                                           <?php if (isset($from['event'])) echo 'checked'; ?>>
+
+                                                                    <span>Events</span></label>
+                                                            </li>
 
                                                         </ul>
                                                     </div>
