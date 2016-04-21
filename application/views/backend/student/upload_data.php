@@ -11,11 +11,14 @@
                     <div class="vd_content-section clearfix">
 
                         <div class="row">
-                            <div class="col-sm-12">	                             
+                            <div class="col-sm-12">	
+                                <div class="">
+                            <span style="color:red">* is mandatory field</span> 
+                        </div>  
                                  <?php echo form_open(base_url() . 'index.php?student/uploads/', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                         <div class="padded">											
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Upload</label>
+                                                <label class="col-sm-3 control-label">Upload <span style="color:red">* </span> </label>
                                                 <div class="col-sm-5">
                                                     <input type="file" name="fileupload" />
                                                 </div>
@@ -24,7 +27,7 @@
                                            
                                             <div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-5">
-                                                    <button type="submit" class="btn btn-info vd_bg-green">Upload File</button>
+                                                    <button type="submit" class="btn vd_bg-green">Upload File</button>
                                                 </div>
                                             </div>
                                             </form>               
