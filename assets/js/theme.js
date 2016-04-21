@@ -140,12 +140,6 @@ jQuery(document).ready(function($)
 				});					
 						
 		});
-
-							
-
-				
-
-		
 		
 		
 		/* Mega Menu Hover Checking. 
@@ -713,12 +707,14 @@ function isTablet() {
 }
 
 // Scroll To Function
-function scrollTo(element, offset) {
+// function commented because of widget reorder
+
+/*function scrollTo(element, offset) {
 	pos = element ? $(element).offset().top : 0;
 	$('html,body').animate({
 		scrollTop: pos + (offset ? offset : 0)
 	}, 'slow');
-}
+}*/
 
 var stack_topleft = {"dir1": "down", "dir2": "right", "push": "bottom"};
 var stack_topright = {"dir1": "down", "dir2": "left", "push": "bottom"};

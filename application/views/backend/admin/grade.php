@@ -8,14 +8,14 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a> </li>
                         <li><a href="#">Pages</a> </li>
-                        <li class="active">Grade</li>
+                        <li class="active">Exam Grade</li>
                     </ul>
 
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Grade</h1>
+                    <h1>Exam Grade</h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -25,11 +25,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Grade List
+                                    Exam Grade List
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Grade
+                                    Add Exam Grade
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>

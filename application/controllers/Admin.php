@@ -213,8 +213,7 @@ class Admin extends CI_Controller {
       /******** */
 
     function events($param1 = '', $param2 = '') {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
+        $this->load->model('admin/Crud_model');
         if ($param1 == 'create') {
             $data['event_name'] = $this->input->post('event_name');
             $data['event_location'] = $this->input->post('event_location');
@@ -247,7 +246,7 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('event_deleted_successfully'));
             redirect(base_url() . 'index.php?admin/events/', 'refresh');
         }
-        $page_data['events'] = $this->db->get('event_manager')->result_array();
+        $page_data['events'] = $this->Crud_model->event_manager();
         $page_data['group'] = $this->db->get('group')->result();
         $page_data['page_name'] = 'events';
         $page_data['page_title'] = 'Event Management';
@@ -3350,7 +3349,7 @@ class Admin extends CI_Controller {
      * @param string $semester_id
      * @param string $exam_id
      */
-    function marks($course_id = '', $semester_id = '', $exam_id = '') {
+    function marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '') {
         $this->load->model('admin/Crud_model');
         if ($_POST) {
             //exam details
@@ -3403,16 +3402,20 @@ class Admin extends CI_Controller {
             $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
             redirect(base_url('index.php?admin/marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
         }
+        $page_data['degree_id'] = '';
         $page_data['course_id'] = '';
         $page_data['semester_id'] = '';
         $page_data['exam_id'] = '';
+        $page_data['batch_id'] = '';
         $page_data['student_list'] = array();
         $page_data['subject_details'] = array();
         $page_data['exam_detail'] = array();
 
-        if ($course_id != '' && $semester_id != '' && $exam_id != '') {
+        if ($degree_id != '' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
             //assign variable
+            $page_data['degree_id'] = $degree_id;
             $page_data['course_id'] = $course_id;
+            $page_data['batch_id'] = $batch_id;
             $page_data['semester_id'] = $semester_id;
             $page_data['exam_id'] = $exam_id;
 
@@ -4610,9 +4613,6 @@ class Admin extends CI_Controller {
                 $this->session->set_flashdata('flash_message', 'Remedial exam is successfully added.');
             } elseif ($param1 == 'update') {
                 //update
-                echo '<pre>';
-                var_dump($_POST);
-                exit;
                 $this->Crud_model->save_remedial_exam(array(
                     'em_name' => $_POST['exam_name'],
                     'em_type' => $_POST['exam_type'],
@@ -4762,7 +4762,7 @@ class Admin extends CI_Controller {
     /**
      * Remedial exam marks
      */
-    function remedial_exam_marks($course_id = '', $semester_id = '', $exam_id = '') {
+    function remedial_exam_marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '') {
         $this->load->model('admin/Crud_model');
         if ($_POST) {
             //exam details
@@ -4814,16 +4814,20 @@ class Admin extends CI_Controller {
             $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
             redirect(base_url('index.php?admin/remedial_exam_marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
         }
+        $page_data['degree_id'] = '';
         $page_data['course_id'] = '';
+        $page_data['batch_id'] = '';
         $page_data['semester_id'] = '';
         $page_data['exam_id'] = '';
         $page_data['student_list'] = array();
         $page_data['subject_details'] = array();
         $page_data['exam_detail'] = array();
 
-        if ($course_id != '' && $semester_id != '' && $exam_id != '') {
+        if ($degree_id !='' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
             //assign variable
+            $page_data['degree_id'] = $degree_id;
             $page_data['course_id'] = $course_id;
+            $page_data['batch_id'] = $batch_id;
             $page_data['semester_id'] = $semester_id;
             $page_data['exam_id'] = $exam_id;
 
@@ -4845,6 +4849,10 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
     }
 
+    /**
+     * Remedial exam csv sample
+     * @param string $exam_id
+     */
     function remedial_exam_csv_sample($exam_id = '') {
         $this->load->helper('import_export_helper');
         $this->import_demo_sheet_download_config('Remedial Exam Marks');

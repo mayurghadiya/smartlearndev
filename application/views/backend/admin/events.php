@@ -37,7 +37,7 @@
                         <div class="tab-content">
                             <div class="tab-pane box active" id="list">
                                 <div class="panel-body table-responsive">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped" id="event-data-tables">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
@@ -49,7 +49,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $count = 1;
+                                            <?php
+                                            $count = 1;
                                             foreach ($events as $row):
                                                 ?>
                                                 <tr>
@@ -63,7 +64,7 @@
                                                         <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/events/delete/<?php echo $row['event_id']; ?>');" data-original-title="remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
-<?php endforeach; ?>						
+                                            <?php endforeach; ?>						
                                         </tbody>
                                     </table>
                                 </div>
@@ -71,10 +72,10 @@
 
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">   
- <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
-                                </div>                                      
-<?php echo form_open(base_url() . 'index.php?admin/events/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'eventform', 'target' => '_top')); ?>
+                                    <div class="">
+                                        <span style="color:red">* is mandatory field</span> 
+                                    </div>                                      
+                                    <?php echo form_open(base_url() . 'index.php?admin/events/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'eventform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Event Name<span style="color:red">*</span></label>
@@ -110,9 +111,8 @@
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="group">
                                                     <option value="">Select</option>
-                                                    <?php
-                                                    foreach($group as $row) { ?>
-                                                    <option value="<?php echo $row->g_id; ?>"><?php echo $row->group_name; ?></option>
+                                                    <?php foreach ($group as $row) { ?>
+                                                        <option value="<?php echo $row->g_id; ?>"><?php echo $row->group_name; ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -179,4 +179,10 @@
                                                                     }
                                                                 });
                                                             });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#event-data-tables').dataTable();
+    })
 </script>

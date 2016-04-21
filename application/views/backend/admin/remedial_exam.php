@@ -100,7 +100,7 @@
                                                     <td><?php echo $row->b_name; ?></td>
                                                     <td><?php echo $row->s_name; ?></td>
 
-                                                    <td><?php echo date('m/d/Y', strtotime($row->em_date)); ?></td>
+                                                    <td><?php echo date('F d, Y', strtotime($row->em_date)); ?></td>
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_remedial_exam/<?php echo $row->em_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
@@ -414,7 +414,6 @@
             });
 
             $('#exam-data-tables').dataTable({
-                "order": [[7, "desc"]],
                 "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
                         "<'row'<'col-sm-12'tr>>" +
                         "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",

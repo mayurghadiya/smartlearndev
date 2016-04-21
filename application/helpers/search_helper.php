@@ -55,6 +55,7 @@ if (!function_exists('global_search')) {
                 break;
             default :
                 //global search
+                reserved_keyword_search($search_query);
                 $result['student'] = student_detail_search($search_query);
                 $result['exam'] = exam_search($search_query);
                 $result['course'] = course_search($search_query);
@@ -66,6 +67,178 @@ if (!function_exists('global_search')) {
         }
 
         return $result;
+    }
+
+}
+
+if (!function_exists('reserved_keyword_search')) {
+
+    /**
+     * Reserved keyword search
+     * @param string $keyword
+     */
+    function reserved_keyword_search($keyword) {
+        switch ($keyword) {
+            case 'exam':
+            case 'exams':
+                redirect(base_url('index.php?admin/exam'));
+                break;
+            case 'profile':
+            case 'password':
+            case 'facebook':
+            case 'mobile':
+            case 'about me':
+            case 'about':
+                redirect(base_url('index.php?admin/manage_profile'));
+                break;
+            case 'result':
+            case 'mark':
+            case 'marks':
+                redirect(base_url('index.php?admin/marks'));
+                break;
+            case 'student':
+            case 'students':
+                redirect(base_url('index.php?admin/student'));
+                break;
+            case 'course':
+            case 'courses':
+            case 'degree':
+                redirect(base_url('index.php?admin/degree'));
+                break;
+            case 'branch':
+                redirect(base_url('index.php?admin/courses'));
+                break;
+            case 'batch':
+                redirect(base_url('index.php?admin/batch'));
+                break;
+            case 'semester':
+                redirect(base_url('index.php?admin/semester'));
+                break;
+
+            case 'admission':
+            case 'admission type':
+                redirect(base_url('index.php?admin/admission_type'));
+                break;
+
+            case 'subject':
+            case 'subjects':
+                redirect(base_url('index.php?admin/subject'));
+                break;
+
+            case 'event':
+            case 'events':
+            case 'event management':
+                redirect(base_url('index.php?admin/events'));
+                break;
+
+            case 'assignment':
+            case 'assignments':
+            case 'student assignment':
+            case 'student assignments':
+                redirect(base_url('index.php?admin/assignment'));
+                break;
+
+            case 'study resource':
+            case 'study':
+            case 'resource':
+            case 'study resources':
+                redirect(base_url('index.php?admin/studyresource'));
+                break;
+
+            case 'project':
+            case 'projects':
+            case 'synopsis':
+            case 'project synopsis':
+                redirect(base_url('index.php?admin/project'));
+                break;
+
+            case 'library':
+            case 'digital library':
+            case 'digital':
+                redirect(base_url('index.php?admin/library'));
+                break;
+
+            case 'participate':
+            case 'participates':
+                redirect(base_url('index.php?admin/participate'));
+                break;
+
+            case 'exam schedule':
+            case 'time table':
+            case 'schedule':
+                redirect(base_url('index.php?admin/exam_time_table'));
+                break;
+
+            case 'grade':
+            case 'exam grade':
+                redirect(base_url('index.php?admin/grade'));
+                break;
+
+            case 'remedial exam':
+            case 'remedial':
+            case 'exam remedial':
+                redirect(base_url('index.php?admin/remedial_exam'));
+                break;
+
+            case 'remedial exam time table':
+            case 'remedial exam schedule':
+                redirect(base_url('index.php?admin/remedial_exam_schedule'));
+                break;
+            
+            case 'remedial marks':
+            case 'remedial mark':
+            case 'remedial exam marks':
+                redirect(base_url('index.php?admin/remedial_exam_marks'));
+                break;
+            
+            case 'payment':
+            case 'make payment':
+            case 'student payment':
+                redirect(base_url('index.php?admin/make_payment'));
+                break;
+            
+            case 'fee':
+            case 'fee structure':
+            case 'student fee':
+                redirect(base_url('index.php?admin/fees_structure'));
+                break;
+            
+            case 'chart':
+            case 'report':
+            case 'charts':
+            case 'reports':
+            case 'report charts':
+                redirect(base_url('index.php?admin/report_chart/student'));
+                break;
+            
+            case 'streaming':
+            case 'live streaming':
+            case 'video streaming':
+            case 'broadcast':
+            case 'multicast':
+                redirect(base_url('index.php?video_streaming'));
+                break;
+            
+            case 'email':
+            case 'inbox':
+            case 'mail':
+                redirect(base_url('index.php?admin/email_inbox'));
+                break;
+            
+            case 'chat':
+                redirect('http://www.searchnative.in/hosting/smartlearn/chat/index.php/site_admin/user/login');
+                break;
+            
+            case 'setting':
+            case 'settings':
+                redirect(base_url('index.php?admin/system_settings'));
+                break;
+            
+            case 'group':
+            case 'groups':
+                redirect(base_url('index.php?admin/list_group'));
+                break;
+        }
     }
 
 }

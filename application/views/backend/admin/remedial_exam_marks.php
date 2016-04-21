@@ -41,13 +41,13 @@
                                             <div class="form-group col-sm-4 validating">
                                                 <label>Branch</label>
                                                 <select id="course" name="course" class="form-control">
-
+                                                    <option value="">Select</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
                                                 <label>Batch</label>
                                                 <select id="batch" name="batch" class="form-control">
-
+                                                    <option value="">Select</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
@@ -59,7 +59,7 @@
                                             <div class="form-group col-sm-4 validating">
                                                 <label>Exam</label>
                                                 <select id="exam" name="exam" class="form-control">
-                                                    <option value="">--- Select Exam --- </option>
+                                                    <option value="">Select</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -100,7 +100,7 @@
                                                     'mark_obtained < ' => $recent_exam_info->passing_mark
                                                 ))->group_by('marks_manager.mm_std_id')->get()->result();
                                 ?>
-                            
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="panel panel-default">
@@ -280,10 +280,14 @@
                     })
 
                     $('#exam').on('change', function () {
+                        var degree_id = $('#degree').val();
                         var course_id = $('#course').val();
+                        var batch_id = $('#batch').val();
                         var semester_id = $('#semester').val();
                         var exam_id = $(this).val();
-                        location.href = '<?php echo base_url(); ?>index.php?admin/remedial_exam_marks/' + course_id + '/' + semester_id + '/' + exam_id
+
+                        if (degree_id && course_id && batch_id && semester_id && exam_id)
+                            location.href = '<?php echo base_url(); ?>index.php?admin/remedial_exam_marks/' + degree_id + '/' + course_id + '/' + batch_id + '/' + semester_id + '/' + exam_id
                     })
                 })
             </script>
@@ -324,11 +328,11 @@
                     function batch_from_degree_and_course(degree_id, course_id) {
                         //remove all element from batch
                         $('#batch').find('option').remove().end();
+                        $('#batch').append('<option value="">Select</option>');
                         $.ajax({
                             url: '<?php echo base_url(); ?>index.php?admin/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
                             type: 'get',
                             success: function (content) {
-                                $('#batch').append('<option value="">Select</option>');
                                 var batch = jQuery.parseJSON(content);
                                 console.log(batch);
                                 $.each(batch, function (key, value) {
@@ -349,9 +353,79 @@
                                 var semester = jQuery.parseJSON(content);
                                 $.each(semester, function (key, value) {
                                     $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
-                                })
+                                });
+                            }
+                        });
+                    }
+
+
+                    var degree_id = '<?php echo $degree_id; ?>';
+                    var course_id = '<?php echo $course_id; ?>';
+                    var batch_id = '<?php echo $batch_id; ?>';
+                    var semester_id = '<?php echo $semester_id; ?>';
+                    var exam_id = '<?php echo $exam_id; ?>';
+
+                    if (degree_id && course_id && batch_id && semester_id && exam_id) {
+                        $('select#degree').val(degree_id);
+                        $('#course').find('option').remove().end();
+                        $('#course').append('<option value="">Select</option>');
+                        //brach from degree
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>index.php?admin/course_list_from_degree/' + degree_id,
+                            type: 'get',
+                            success: function (content) {
+                                var course = jQuery.parseJSON(content);
+                                $.each(course, function (key, value) {
+                                    $('#course').append('<option value=' + value.course_id + '>' + value.c_name + '</option>');
+                                });
+                                $('select#course').val(course_id);
+                            }
+                        });
+
+                        //batch from degree and course
+                        $('#batch').find('option').remove().end();
+                        $('select#batch').append('<option value="">Select</option>');
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>index.php?admin/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
+                            type: 'get',
+                            success: function (content) {
+                                var batch = jQuery.parseJSON(content);
+                                $.each(batch, function (key, value) {
+                                    $('#batch').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                                });
+                                $('select#batch').val(batch_id);
                             }
                         })
+
+
+                        //get semester
+                        $('#semester').find('option').remove().end();
+                        $('select#semester').append('<option value="">Select</option>');
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + course_id,
+                            type: 'get',
+                            success: function (content) {
+                                var semester = jQuery.parseJSON(content);
+                                console.log('hello');
+                                console.log(semester);
+                                $.each(semester, function (key, value) {
+                                    $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                                });
+                                $('select#semester').val(semester_id);
+                            }
+                        });
+
+
+                        //get exam 
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>index.php?admin/get_remedial_exam_list/' + course_id + '/' + semester_id + '/' + exam_id,
+                            type: 'get',
+                            success: function (content) {
+                                $('#exam').html(content);
+                                $('select#exam').val(exam_id);
+                            }                            
+                        });
+
                     }
 
                 })

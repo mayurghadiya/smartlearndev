@@ -38,7 +38,7 @@
                             <div class="tab-pane box active" id="list">
 
                                 <div class="panel-body table-responsive">
-                                    <table class="table table-striped" id="data-tables">
+                                    <table class="table table-striped table-responsive" id="data-tables">
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
@@ -53,7 +53,7 @@
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>
                                                     <td><?php echo $row['d_name']; ?></td>                         
-                                                    <td class="text-center">
+                                                    <td>
                                                         <?php if ($row['d_status'] == '1') { ?>
                                                             <span class="label label-success">Active</span>
                                                         <?php } else { ?>	
