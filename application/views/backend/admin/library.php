@@ -492,7 +492,7 @@
     $().ready(function () {
         $("#dateofsubmission").datepicker({
             dateFormat: ' MM dd, yy',
-            minDate: 0
+            maxDate: 0
         });
         jQuery.validator.addMethod("character", function (value, element) {
             return this.optional(element) || /^[A-z]+$/.test(value);
