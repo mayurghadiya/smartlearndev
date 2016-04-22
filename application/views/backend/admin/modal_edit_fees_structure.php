@@ -22,7 +22,7 @@ $batch = $this->db->query($query)->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Edit Fee Structure
+                    Update Fee Structure
                 </div>
             </div>
             <div class="panel-body">

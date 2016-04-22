@@ -37,7 +37,7 @@ $centerlist = $this->db->get('center_user')->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Edit Exam
+                    Update Exam
                 </div>
             </div>
             <div class="panel-body">

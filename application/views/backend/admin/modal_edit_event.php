@@ -3,7 +3,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
 ?>
 <div class="panel panel-primary">
     <div class="panel panel-heading">
-        <div class="panel-title">Edit Event</div>
+        <div class="panel-title">Update Event</div>
     </div>
     <div class="panel-body">
         <div class="tab-pane box" id="edit">

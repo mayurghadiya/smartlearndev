@@ -9,7 +9,7 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        Edit Question
+                        Update Question
                     </div>
                 </div>
                 <div class="panel-body">

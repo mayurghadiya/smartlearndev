@@ -29,7 +29,7 @@ $semester = $this->db->get('semester')->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Edit CMS Page
+                    Update CMS Page
                 </div>
             </div>
             <div class="panel-body">

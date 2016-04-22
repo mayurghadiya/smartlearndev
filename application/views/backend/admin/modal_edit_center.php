@@ -10,7 +10,7 @@ foreach ( $edit_data as $row):
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Edit Center
+                    Update Center
                 </div>
             </div>
             <div class="panel-body">
