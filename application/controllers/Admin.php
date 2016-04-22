@@ -932,6 +932,9 @@ class Admin extends CI_Controller {
             $data['course_id'] = $this->input->post('course');
             $data['std_about'] = $this->input->post('std_about');
             $data['std_mobile'] = $this->input->post('mobileno');
+            $data['parent_name']=$this->input->post('parentname');
+            $data['parent_contact']=$this->input->post('parentcontact');
+            $data['parent_email']=$this->input->post('parent_email_id');            
             $data['real_pass'] = $this->input->post('password');
             $data['address'] = $this->input->post('address');
             $data['city'] = $this->input->post('city');
@@ -1018,6 +1021,9 @@ class Admin extends CI_Controller {
             $data['course_id'] = $this->input->post('course');
             $data['std_about'] = $this->input->post('std_about');
             $data['std_mobile'] = $this->input->post('mobileno');
+            $data['parent_name']=$this->input->post('parentname');
+            $data['parent_contact']=$this->input->post('parentcontact');
+            $data['parent_email']=$this->input->post('parent_email_id');  
             $data['address'] = $this->input->post('address');
             $data['city'] = $this->input->post('city');
             $data['zip'] = $this->input->post('zip');
