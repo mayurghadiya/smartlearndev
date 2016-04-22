@@ -84,7 +84,7 @@ var baseurl = '<?php echo base_url();?>';
 <!-- Bottom Scripts --> 
 
 <script type="text/javascript">
- $('#email').keypress(function() {   
+ $('#email').change(function() {   
     $(this).val($(this).val().replace(/\s/g,""));
 });
 </script>
