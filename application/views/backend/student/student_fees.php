@@ -40,7 +40,7 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-3 control-label">Name</label>
                                                     <div class="col-sm-9">
-                                                        <input type="text" class="form-control" value="Sophia Daniels" name="title" disabled/>
+                                                        <input type="text" class="form-control" value="<?php echo $student_detail->std_first_name . ' ' . $student_detail->std_last_name; ?>" name="title" disabled/>
                                                     </div>
                                                 </div>
 
@@ -96,7 +96,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Fees Structure</label>
+                                                    <label class="col-sm-3 control-label">Type of Fees</label>
                                                     <div class="col-sm-9">
                                                         <select id="fees_structure" class="form-control" name="fees_structure">
 

@@ -111,23 +111,17 @@
                                                 <table class="table table-bordered">
                                                     <tr>
                                                         <th>Exam Name</th>
-                                                        <th>Total Marks</th>
-                                                        <th>Passing Marks</th>
                                                         <th>Course</th>
                                                         <th>Branch</th>
                                                         <th>Batch</th>
                                                         <th>Semester</th>
-                                                        <th>Type</th>
                                                     </tr>
                                                     <tr>
                                                         <td><?php echo $show_exam_details->em_name; ?></td>
-                                                        <td><?php echo $show_exam_details->total_marks; ?></td>
-                                                        <td><?php echo $show_exam_details->passing_mark; ?></td>
                                                         <td><?php echo $show_exam_details->d_name; ?></td>
                                                         <td><?php echo $show_exam_details->c_name; ?></td>
                                                         <td><?php echo $show_exam_details->b_name; ?></td>
                                                         <td><?php echo $show_exam_details->s_name; ?></td>
-                                                        <td><?php echo ucfirst($show_exam_details->exam_ref_name); ?></td>
                                                     </tr>
                                                 </table>
                                             </div>
