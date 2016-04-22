@@ -28,27 +28,14 @@ class Admin extends CI_Controller {
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
         $this->load->helper('date_format');
-        
     }
+
     /*     * *default functin, redirects to login page if no admin logged in yet	
       Auth : Brij  Dhami
       /******** */
 
     public function index($param1 = 'student') {
-        $this->load->helper('report_chart');
-        $course = $this->db->get('course')->result();
-        switch ($param1) {
-            case 'student':
-                $data['male_female_pie_chart'] = male_female_students();
-                $data['new_student_joining'] = new_student_registration();
-                $data['male_vs_female_course_wise'] = male_vs_female_course_wise();
-                $data['page_name'] = 'report_chart';
-                break;
-            default:
-                echo 'exam table';
-                $data['page_name'] = 'report_chart_exam';
-        }
-        $this->load->view('backend/index', $data);
+        redirect(base_url('index.php?admin/dashboard'));
     }
 
     function status($str) {
@@ -105,9 +92,11 @@ class Admin extends CI_Controller {
       /******** */
 
     function dashboard() {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
-
+        $this->load->helper('report_chart');
+        $course = $this->db->get('course')->result();
+        $page_data['male_female_pie_chart'] = male_female_students();
+        $page_data['new_student_joining'] = new_student_registration();
+        $page_data['male_vs_female_course_wise'] = male_vs_female_course_wise();
 
         $page_data['page_name'] = 'dashboard';
         $page_data['page_title'] = 'Admin Dashboard';
@@ -943,6 +932,9 @@ class Admin extends CI_Controller {
             $data['course_id'] = $this->input->post('course');
             $data['std_about'] = $this->input->post('std_about');
             $data['std_mobile'] = $this->input->post('mobileno');
+            $data['parent_name'] = $this->input->post('parentname');
+            $data['parent_contact'] = $this->input->post('parentcontact');
+            $data['parent_email'] = $this->input->post('parent_email_id');
             $data['real_pass'] = $this->input->post('password');
             $data['address'] = $this->input->post('address');
             $data['city'] = $this->input->post('city');
@@ -969,8 +961,8 @@ class Admin extends CI_Controller {
             //end roll no
             //email
 
-            $data['rollno']=$rollno;
-            $msg=$this->load->view("backend/admin/emailmessage",$data,true);
+            $data['rollno'] = $rollno;
+            $msg = $this->load->view("backend/admin/emailmessage", $data, true);
             $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
             $this->email->to($data['email']);
             //  $this->email->cc('mayur.ghadiya@searchnative.in');
@@ -979,7 +971,7 @@ class Admin extends CI_Controller {
 
             if ($this->email->send()) {
                 $this->session->set_flashdata('flash_message', get_phrase('student_added_successfully'));
-           
+
                 redirect(base_url() . 'index.php?admin/student/', 'refresh');
             } else {
                 show_error($this->email->print_debugger());
@@ -1029,6 +1021,9 @@ class Admin extends CI_Controller {
             $data['course_id'] = $this->input->post('course');
             $data['std_about'] = $this->input->post('std_about');
             $data['std_mobile'] = $this->input->post('mobileno');
+            $data['parent_name'] = $this->input->post('parentname');
+            $data['parent_contact'] = $this->input->post('parentcontact');
+            $data['parent_email'] = $this->input->post('parent_email_id');
             $data['address'] = $this->input->post('address');
             $data['city'] = $this->input->post('city');
             $data['zip'] = $this->input->post('zip');
@@ -3358,10 +3353,11 @@ class Admin extends CI_Controller {
      * @param string $semester_id
      * @param string $exam_id
      */
-    function marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '') {
+    function marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '', $student_id = '') {
         $this->load->model('admin/Crud_model');
         if ($_POST) {
             //exam details
+
             $exam_detail = $this->Crud_model->exam_detail($exam_id);
 
             //subject details
@@ -3373,10 +3369,16 @@ class Admin extends CI_Controller {
 
             $total_students = $_POST['total_student'];
 
+
             for ($i = 1; $i <= $total_students; $i++) {
                 //subject loop
+                if ($student_id != '') {
+                    if ($student_id != $student_list[$i - 1]->std_id)
+                        continue;
+                }
                 for ($j = 0; $j < count($subject_details); $j++) {
                     //where
+
                     $where = array(
                         'mm_std_id' => $student_list[$i - 1]->std_id,
                         'mm_subject_id' => $subject_details[$j]->sm_id,
@@ -3386,36 +3388,62 @@ class Admin extends CI_Controller {
                     $marks = $this->Crud_model->student_exam_mark($where);
 
                     if (count($marks)) {
-                        //udpate
-                        $this->Crud_model->mark_update(array(
-                            'mm_std_id' => $student_list[$i - 1]->std_id,
-                            'mm_subject_id' => $subject_details[$j]->sm_id,
-                            'mm_exam_id' => $exam_detail[0]->em_id,
-                            'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
-                            'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
-                                ), $where);
+                        if ($student_id != '') {
+                            $this->Crud_model->mark_update(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                                    ), $where);
+                        } else {
+                            $this->Crud_model->mark_update(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                                    ), $where);
+                        }
+                        //udpate                        
                     } else {
-                        //insert                        
-                        $this->Crud_model->mark_insert(array(
-                            'mm_std_id' => $student_list[$i - 1]->std_id,
-                            'mm_subject_id' => $subject_details[$j]->sm_id,
-                            'mm_exam_id' => $exam_detail[0]->em_id,
-                            'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
-                            'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
-                        ));
+                        //insert    
+                        if ($student_id != '') {
+                            $this->Crud_model->mark_insert(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                            ));
+                        } else {
+                            $this->Crud_model->mark_insert(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                            ));
+                        }
+
                         $insert_id = $this->db->insert_id();
                         create_notification('marks_manager', $student_list[$i - 1]->std_degree, $student_list[$i - 1]->course_id, $student_list[$i - 1]->std_batch, $student_list[$i - 1]->semester_id, $insert_id, $student_list[$i - 1]->std_id);
                     }
                 }
             }
+            if ($student_id != '') {
+                $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+                redirect(base_url('index.php?admin/marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id . '/' . $student_id));
+            }
             $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
-            redirect(base_url('index.php?admin/marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
+            redirect(base_url('index.php?admin/marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id));
         }
         $page_data['degree_id'] = '';
         $page_data['course_id'] = '';
         $page_data['semester_id'] = '';
         $page_data['exam_id'] = '';
         $page_data['batch_id'] = '';
+        $page_data['student_id'] = $student_id;
         $page_data['student_list'] = array();
         $page_data['subject_details'] = array();
         $page_data['exam_detail'] = array();
@@ -4771,7 +4799,7 @@ class Admin extends CI_Controller {
     /**
      * Remedial exam marks
      */
-    function remedial_exam_marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '') {
+    function remedial_exam_marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '', $student_id = '') {
         $this->load->model('admin/Crud_model');
         if ($_POST) {
             //exam details
@@ -4782,6 +4810,10 @@ class Admin extends CI_Controller {
 
             $counter = 1;
             foreach ($student_list as $student) {
+                if ($student_id != '') {
+                    if ($student_id != $student->std_id)
+                        continue;
+                }
                 //POST name convention
                 //counter_studentID_examID_subjectID
                 //find failed subjects
@@ -4798,41 +4830,66 @@ class Admin extends CI_Controller {
 
                     //if count then update else insert
                     if (count($marks)) {
-                        //update current exam marks                        
-                        $this->Crud_model->mark_update(array(
-                            'mm_std_id' => $student->std_id,
-                            'mm_subject_id' => $subject->mm_subject_id,
-                            'mm_exam_id' => $exam_id,
-                            'mark_obtained' => $_POST["mark_{$counter}_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
-                            'mm_remarks' => $_POST["remark_{$counter}_{$student->std_id}_{$exam_id}"],
-                                ), $where);
+                        //update current exam marks
+                        if ($student_id != '') {
+                            $this->Crud_model->mark_update(array(
+                                'mm_std_id' => $student->std_id,
+                                'mm_subject_id' => $subject->mm_subject_id,
+                                'mm_exam_id' => $exam_id,
+                                'mark_obtained' => $_POST["mark_1_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
+                                'mm_remarks' => $_POST["remark_1_{$student->std_id}_{$exam_id}"],
+                                    ), $where);
+                        } else {
+                            $this->Crud_model->mark_update(array(
+                                'mm_std_id' => $student->std_id,
+                                'mm_subject_id' => $subject->mm_subject_id,
+                                'mm_exam_id' => $exam_id,
+                                'mark_obtained' => $_POST["mark_{$counter}_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
+                                'mm_remarks' => $_POST["remark_{$counter}_{$student->std_id}_{$exam_id}"],
+                                    ), $where);
+                        }
                     } else {
                         //inert new marks
-                        $this->Crud_model->mark_insert(array(
-                            'mm_std_id' => $student->std_id,
-                            'mm_subject_id' => $subject->mm_subject_id,
-                            'mm_exam_id' => $exam_id,
-                            'mark_obtained' => $_POST["mark_{$counter}_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
-                            'mm_remarks' => $_POST["remark_{$counter}_{$student->std_id}_{$exam_id}"],
-                        ));
+                        if ($student_id != '') {
+                            $this->Crud_model->mark_insert(array(
+                                'mm_std_id' => $student->std_id,
+                                'mm_subject_id' => $subject->mm_subject_id,
+                                'mm_exam_id' => $exam_id,
+                                'mark_obtained' => $_POST["mark_1_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
+                                'mm_remarks' => $_POST["remark_1_{$student->std_id}_{$exam_id}"],
+                            ));
+                        } else {
+                            $this->Crud_model->mark_insert(array(
+                                'mm_std_id' => $student->std_id,
+                                'mm_subject_id' => $subject->mm_subject_id,
+                                'mm_exam_id' => $exam_id,
+                                'mark_obtained' => $_POST["mark_{$counter}_{$student->std_id}_{$exam_id}_{$subject->mm_subject_id}"],
+                                'mm_remarks' => $_POST["remark_{$counter}_{$student->std_id}_{$exam_id}"],
+                            ));
+                        }
                     }
                 }
                 $counter++;
             }
 
+            if ($student_id != '') {
+                $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+                redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' .$batch_id .'/' . $semester_id . '/' . $exam_id . '/' . $student_id));
+            }
             $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
-            redirect(base_url('index.php?admin/remedial_exam_marks/' . $course_id . '/' . $semester_id . '/' . $exam_id));
+            redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' .$batch_id .'/' . $semester_id . '/' . $exam_id));
         }
         $page_data['degree_id'] = '';
         $page_data['course_id'] = '';
         $page_data['batch_id'] = '';
         $page_data['semester_id'] = '';
         $page_data['exam_id'] = '';
+        $page_data['student_id'] = $student_id;
         $page_data['student_list'] = array();
         $page_data['subject_details'] = array();
         $page_data['exam_detail'] = array();
 
-        if ($degree_id !='' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
+        if ($degree_id != '' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
             //assign variable
             $page_data['degree_id'] = $degree_id;
             $page_data['course_id'] = $course_id;
@@ -4867,24 +4924,24 @@ class Admin extends CI_Controller {
         $this->import_demo_sheet_download_config('Remedial Exam Marks');
         remedial_exam_marks($exam_id);
     }
-    
-    function display(){
+
+    function display() {
         $page_data['title'] = 'demo';
         $page_data['page_name'] = 'assign_data';
         $this->load->view('backend/index', $page_data);
     }
-    function get_data()
-    {
-        
+
+    function get_data() {
+
         $results = $this->db->get('assignment_manager')->result_array();
-            $data = array();
-        foreach ($results  as $r) {
+        $data = array();
+        foreach ($results as $r) {
             array_push($data, array(
                 $r['assign_id'],
                 $r['assign_title'],
                 $r['assign_batch']));
         }
- 
+
         echo json_encode(array('data' => $data));
     }
 

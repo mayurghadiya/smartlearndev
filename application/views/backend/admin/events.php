@@ -5,15 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Event Manager</li>
+                        <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Event Manager");?></li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Event Manager</h1>
+                    <h1><?php echo ucwords("Event Manager");?></h1>
                 </div>
             </div>
 
@@ -24,11 +24,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Event List
+                                    <?php echo ucwords("Event List");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Event
+                                    <?php echo ucwords("Add Event");?>
                                 </a>
                             </li>
                         </ul>
@@ -41,11 +41,11 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Event Name</th>
-                                                <th>Description</th>
-                                                <th>Event Date</th>
-                                                <th>Event Time</th>
-                                                <th>Action</th>
+                                                <th><?php echo ucwords("Event Name");?></th>
+                                                <th><?php echo ucwords("Description");?></th>
+                                                <th><?php echo ucwords("Event Date");?></th>
+                                                <th><?php echo ucwords("Event Time");?></th>
+                                                <th><?php echo ucwords("Action");?></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -73,41 +73,41 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">   
                                     <div class="">
-                                        <span style="color:red">* is mandatory field</span> 
+                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                     </div>                                      
                                     <?php echo form_open(base_url() . 'index.php?admin/events/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'eventform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Name<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Event Name");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="event_name" value=""/>
                                             </div>
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Location<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Event Location");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" id="event_location" class="form-control" name="event_location" value=""/>
                                             </div>
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Description<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Description");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <textarea name="event_desc" rows="3"></textarea>									</div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Date<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Event Date");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" id="datepicker-date" class="form-control" name="event_date" value=""/>
                                             </div>
                                         </div>	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Event Time<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Event Time");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="time" id="event_time" class="form-control" name="event_time" value=""/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Group</label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Group");?></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="group">
                                                     <option value="">Select</option>
@@ -119,7 +119,7 @@
                                         </div>	
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Add event</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
                                             </div>
                                         </div>
                                     </div>    

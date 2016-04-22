@@ -3,12 +3,12 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
 ?>
 <div class="panel panel-primary">
     <div class="panel panel-heading">
-        <div class="panel-title">Update Event</div>
+        <div class="panel-title"><?php echo ucwords("Update Event");?></div>
     </div>
     <div class="panel-body">
         <div class="tab-pane box" id="edit">
             <div class="box-content">
-                <span style="color:red">* is mandatory field</span> 
+                <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                 <?php
                 foreach ($edit_data as $row) {
                     
@@ -17,34 +17,34 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                 <?php echo form_open(base_url() . 'index.php?admin/events/do_update/' . $row['event_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editevent', 'target' => '_top', 'role' => 'form')); ?>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Event Name<span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Name"); ?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
                         <input type="text" class="form-control" name="event_name" id="event_name" value="<?php echo $row['event_name']; ?>"/>
                     </div>
                 </div>    
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Event Location<span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Location"); ?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
                         <input type="text" id="event_location" class="form-control" name="event_location" 
                                value="<?php echo $row['event_location']; ?>"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Description<span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Description"); ?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
                         <textarea name="event_desc" rows="4"><?php echo $row['event_desc']; ?></textarea>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Event Date<span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Date"); ?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
                         <input type="text" id="datepicker-date123" class="form-control" name="event_date" value="<?php echo date('d F Y', strtotime($row['event_date'])); ?>"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Event Time<span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Time");?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
                         <input type="time" id="event_time" class="form-control" name="event_time" 
                                value="<?php echo date('H:i', strtotime($row['event_date'])); ?>"/>
@@ -52,7 +52,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Group</label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Group");?></label>
                     <div class="col-sm-7">
                         <select class="form-control" name="group">
                             <?php
@@ -69,7 +69,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-7">
-                        <button type="submit" class="btn btn-info vd_bg-green">Update</button>
+                        <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                     </div>
                 </div>
                 </form>

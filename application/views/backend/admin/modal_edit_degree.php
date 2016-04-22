@@ -9,24 +9,24 @@ foreach ($edit_data as $row):
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        Update Course
+                       <?php echo ucwords(" Update Course");?>
                     </div>
                 </div>
                 <div class="panel-body">
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
                              <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>
                             <?php echo form_open(base_url() . 'index.php?admin/degree/do_update/' . $row['d_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'degreeformedit', 'target' => '_top')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course Name<span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("course name");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="d_name" id="d_name" value="<?php echo $row['d_name']; ?>"   />
                                 </div>
                             </div>                   
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Status</label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
                                 <div class="col-sm-5">
                                     <select name="degree_status">
                                         <option value="1" <?php if ($row['d_status'] == '1') {
@@ -40,7 +40,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("update");?></button>
                                 </div>
                             </div>
                             </form>

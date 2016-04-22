@@ -265,3 +265,7 @@ ERROR - 2016-04-21 12:48:53 --> Severity: Notice --> Undefined variable: page_ti
 ERROR - 2016-04-21 12:48:53 --> Severity: Notice --> Undefined variable: widget_order /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 118
 ERROR - 2016-04-21 12:48:53 --> Severity: Notice --> Undefined variable: widget_order /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 146
 ERROR - 2016-04-21 12:48:53 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 254
+ERROR - 2016-04-21 12:53:54 --> Severity: Notice --> Undefined variable: page_title /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 2
+ERROR - 2016-04-21 12:53:55 --> Severity: Notice --> Undefined variable: widget_order /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 118
+ERROR - 2016-04-21 12:53:55 --> Severity: Notice --> Undefined variable: widget_order /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 146
+ERROR - 2016-04-21 12:53:55 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 254

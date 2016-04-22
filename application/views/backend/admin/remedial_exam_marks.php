@@ -62,6 +62,16 @@
                                                     <option value="">Select</option>
                                                 </select>
                                             </div>
+                                            <div class="form-group col-sm-4 validating">
+                                                <label>Students</label>
+                                                <select id="student" name="student" class="form-control">
+                                                    <option value="">All</option>
+                                                    <?php foreach ($student_list as $exam_student) { ?>
+                                                        <option value="<?php echo $exam_student->std_id; ?>"
+                                                                <?php if($student_id == $exam_student->std_id) echo 'selected'; ?>><?php echo $exam_student->std_first_name . ' ' . $exam_student->std_last_name; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -111,23 +121,17 @@
                                                 <table class="table table-bordered">
                                                     <tr>
                                                         <th>Exam Name</th>
-                                                        <th>Total Marks</th>
-                                                        <th>Passing Marks</th>
                                                         <th>Course</th>
                                                         <th>Branch</th>
                                                         <th>Batch</th>
                                                         <th>Semester</th>
-                                                        <th>Type</th>
                                                     </tr>
                                                     <tr>
                                                         <td><?php echo $show_exam_details->em_name; ?></td>
-                                                        <td><?php echo $show_exam_details->total_marks; ?></td>
-                                                        <td><?php echo $show_exam_details->passing_mark; ?></td>
                                                         <td><?php echo $show_exam_details->d_name; ?></td>
                                                         <td><?php echo $show_exam_details->c_name; ?></td>
                                                         <td><?php echo $show_exam_details->b_name; ?></td>
                                                         <td><?php echo $show_exam_details->s_name; ?></td>
-                                                        <td><?php echo ucfirst($show_exam_details->exam_ref_name); ?></td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -163,7 +167,13 @@
                                                     $counter = 1;
                                                     ?>
                                                     <?php if (isset($failed_students)) { ?>
-                                                        <?php foreach ($failed_students as $student) { ?>
+                                                        <?php foreach ($failed_students as $student) { 
+                                                            if($student_id != '') {
+                                                                if($student_id != $student->std_id) {
+                                                                    continue;
+                                                                }
+                                                            }
+                                                            ?>
                                                             <tr>
                                                                 <td><?php echo $student->std_id; ?></td>
                                                                 <td data-id="63"><?php echo $student->std_first_name . ' ' . $student->std_last_name; ?></td>
@@ -424,6 +434,27 @@
                                 $('#exam').html(content);
                                 $('select#exam').val(exam_id);
                             }                            
+                        });
+                        
+                        
+                        //single student marks
+                        $('#student').on('change', function () {
+                            var student_id = $(this).val();
+                            var degree = '<?php echo $this->uri->segment(3); ?>';
+                            var course = '<?php echo $this->uri->segment(4); ?>';
+                            var batch = '<?php echo $this->uri->segment(5); ?>';
+                            var semester = '<?php echo $this->uri->segment(6); ?>';
+                            var exam = '<?php echo $this->uri->segment(7); ?>';
+                            
+                            
+                            if(student_id != '') {
+                                location.href = '<?php echo base_url(); ?>index.php?admin/remedial_exam_marks/'+degree+'/'
+                                +course+'/'+batch+'/'+semester+'/'+exam+'/'+student_id;
+                            } else {
+                                //all students
+                                location.href = '<?php echo base_url(); ?>index.php?admin/remedial_exam_marks/'+degree+'/'
+                                +course+'/'+batch+'/'+semester+'/'+exam;
+                            }
                         });
 
                     }

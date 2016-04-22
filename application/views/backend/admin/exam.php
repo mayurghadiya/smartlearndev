@@ -75,7 +75,6 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Exam Name</th>
-                                                <th width="10%">Type</th>
                                                 <th>Course</th>
                                                 <th width="14%">Branch</th>
                                                 <th>Batch</th>
@@ -94,7 +93,6 @@
                                                 <tr>
                                                     <td><?php echo $counter; ?></td>
                                                     <td><?php echo $row->em_name; ?></td>
-                                                    <td><?php echo $row->exam_type_name; ?></td>
                                                     <td><?php echo $row->d_name; ?></td>
                                                     <td><?php echo $row->c_name; ?></td>
                                                     <td><?php echo $row->b_name; ?></td>

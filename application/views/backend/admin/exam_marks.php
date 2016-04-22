@@ -62,6 +62,16 @@
                                                     <option value="">Select</option>
                                                 </select>
                                             </div>
+                                            <div class="form-group col-sm-4 validating">
+                                                <label>Students</label>
+                                                <select id="student" name="student" class="form-control">
+                                                    <option value="">All</option>
+                                                    <?php foreach ($student_list as $exam_student) { ?>
+                                                        <option value="<?php echo $exam_student->std_id; ?>"
+                                                                <?php if($student_id == $exam_student->std_id) echo 'selected'; ?>><?php echo $exam_student->std_first_name . ' ' . $exam_student->std_last_name; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -90,8 +100,6 @@
                                                 <table class="table table-bordered">
                                                     <tr>
                                                         <th>Exam Name</th>
-                                                        <th>Total Marks</th>
-                                                        <th>Passing Marks</th>
                                                         <th>Course</th>
                                                         <th>Branch</th>
                                                         <th>Batch</th>
@@ -99,8 +107,6 @@
                                                     </tr>
                                                     <tr>
                                                         <td><?php echo $show_exam_details->em_name; ?></td>
-                                                        <td><?php echo $show_exam_details->total_marks; ?></td>
-                                                        <td><?php echo $show_exam_details->passing_mark; ?></td>
                                                         <td><?php echo $show_exam_details->d_name; ?></td>
                                                         <td><?php echo $show_exam_details->c_name; ?></td>
                                                         <td><?php echo $show_exam_details->b_name; ?></td>
@@ -138,7 +144,13 @@
                                                     $counter = 1;
                                                     ?>
                                                     <?php if (count($student_list)) { ?>
-                                                        <?php foreach ($student_list as $student) { ?>
+                                                        <?php foreach ($student_list as $student) {
+                                                            if($student_id != '') {
+                                                                if($student_id != $student->std_id) {
+                                                                    continue;
+                                                                }
+                                                            }
+                                                            ?>
                                                             <tr>
                                                                 <td><?php echo $student->std_id; ?></td>
                                                                 <td data-id="63"><?php echo $student->std_first_name . ' ' . $student->std_last_name; ?></td>
@@ -240,7 +252,7 @@
                         var semester_id = $('#semester').val();
                         var exam_id = $(this).val();
 
-                        if(degree_id && course_id && batch_id && semester_id && exam_id)
+                        if (degree_id && course_id && batch_id && semester_id && exam_id)
                             location.href = '<?php echo base_url(); ?>index.php?admin/marks/' + degree_id + '/' + course_id + '/' + batch_id + '/' + semester_id + '/' + exam_id
                     })
                 })
@@ -372,6 +384,26 @@
                         //get exam 
                         get_exam_list(course_id, semester_id, exam_id);
                         $('select#exam').val(exam_id);
+
+                        //single student marks
+                        $('#student').on('change', function () {
+                            var student_id = $(this).val();
+                            var degree = '<?php echo $this->uri->segment(3); ?>';
+                            var course = '<?php echo $this->uri->segment(4); ?>';
+                            var batch = '<?php echo $this->uri->segment(5); ?>';
+                            var semester = '<?php echo $this->uri->segment(6); ?>';
+                            var exam = '<?php echo $this->uri->segment(7); ?>';
+                            
+                            
+                            if(student_id != '') {
+                                location.href = '<?php echo base_url(); ?>index.php?admin/marks/'+degree+'/'
+                                +course+'/'+batch+'/'+semester+'/'+exam+'/'+student_id;
+                            } else {
+                                //all students
+                                location.href = '<?php echo base_url(); ?>index.php?admin/marks/'+degree+'/'
+                                +course+'/'+batch+'/'+semester+'/'+exam;
+                            }
+                        });
                     }
 
                 });
