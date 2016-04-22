@@ -34,12 +34,21 @@ class Admin extends CI_Controller {
       Auth : Brij  Dhami
       /******** */
 
-    public function index() {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url() . 'index.php?login', 'refresh');
-        if ($this->session->userdata('admin_login') == 1)
-        //$this->chat_user();
-            redirect(base_url() . 'index.php?admin/dashboard', $page_data, 'refresh');
+    public function index($param1 = 'student') {
+        $this->load->helper('report_chart');
+        $course = $this->db->get('course')->result();
+        switch ($param1) {
+            case 'student':
+                $data['male_female_pie_chart'] = male_female_students();
+                $data['new_student_joining'] = new_student_registration();
+                $data['male_vs_female_course_wise'] = male_vs_female_course_wise();
+                $data['page_name'] = 'report_chart';
+                break;
+            default:
+                echo 'exam table';
+                $data['page_name'] = 'report_chart_exam';
+        }
+        $this->load->view('backend/index', $data);
     }
 
     function status($str) {

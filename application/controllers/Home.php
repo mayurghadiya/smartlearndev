@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 
     public function index() {
         if ($this->session->userdata('admin_login') == 1)
-            redirect(base_url() . 'index.php?admin/dashboard', 'refresh');
+            redirect(base_url() . 'index.php?admin', 'refresh');
 
         if ($this->session->userdata('student_login') == 1)
         {

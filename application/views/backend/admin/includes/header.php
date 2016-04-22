@@ -7,7 +7,7 @@
           <div class="vd_top-nav vd_nav-width  ">
           <div class="vd_panel-header">
 				<div class="logo">
-					<a href="<?php echo base_url();?>index.php?admin/dashboard"><img alt="logo" src="<?=$this->config->item('image_path')?>logo.png"></a>
+					<a href="<?php echo base_url();?>index.php?admin/"><img alt="logo" src="<?=$this->config->item('image_path')?>logo.png"></a>
 				</div>
 				<!-- logo -->
 				<div class="vd_panel-menu  hidden-sm hidden-xs" data-intro="<strong>Minimize Left Navigation</strong><br/>Toggle navigation size to medium or small size. You can set both button or one button only. See full option at documentation." data-step=1>

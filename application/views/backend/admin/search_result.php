@@ -210,7 +210,7 @@
                                             <td><?php echo $assignment->b_name; ?></td>
                                             <td><?php echo $assignment->s_name; ?></td>
                                             <td><?php echo $assignment->assign_dos; ?></td>
-                                            <td><?php echo $assignment->assign_filename; ?></td>
+                                            <td><a download="" href="<?php echo base_url('uploads/project_file/' . $assignment->assign_filename); ?>"><i class="fa fa-download"></i></a></td>
                                         </tr>
                                         <?php
                                         $counter++;
