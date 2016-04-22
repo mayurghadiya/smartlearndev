@@ -1,0 +1,34 @@
+/*-----------------------------------------------------------------------------------
+    Author: SearchNative
+	Description: 
+    Author URI: 
+-----------------------------------------------------------------------------------*/
+
+@charset "utf-8";
+/* DEFAULT AND BOOTSTRAP STYLESHEET */
+@import "normalize.css";
+@import "bootstrap.min.css";
+@import "bootstrap-theme.min.css";
+
+/* FONT ICONS */
+@import "font-awesome.min.css";
+@import "simple-line-icons.css";
+@import "pe-icon-7-stroke.css";
+@import "themify-icons.css";
+
+/* PLUGINS DEFAULT STYSHEETS  */
+@import "magnific-popup.css";
+@import "slider-pro.css";
+@import "didizoo.css";
+@import "owl.carousel.css";
+@import "owl.theme.css";
+@import "owl.transitions.css";
+@import "jquery.mmenu.all.css";
+@import "animate.css";
+@import "hover-min.css";
+
+/* MAIN STYLESHEETS */
+@import "main.css";
+@import "responsive.css";
+
+
