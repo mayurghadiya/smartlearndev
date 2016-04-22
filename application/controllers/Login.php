@@ -31,7 +31,7 @@ class Login extends CI_Controller {
 
         if ($this->session->userdata('admin_login') == 1)
 			
-            redirect(base_url() . 'index.php?admin/dashboard');
+            redirect(base_url() . 'index.php?admin/');
        
          if ($this->session->userdata('student_login') == 1)
             {
