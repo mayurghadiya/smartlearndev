@@ -66,6 +66,25 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label">Parent Name<span style="color:red">*</span></label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" name="parentname" id="parentname" value="<?php echo $row['parent_name'] ?>" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Parent Contact No<span style="color:red">*</span></label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" name="parentcontact" id="parentcontact" value="<?php echo $row['parent_contact'] ?>" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Parent Email Id<span style="color:red"></span></label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" name="parent_email_id" id="parent_email_id" value="<?php echo $row['parent_email'] ?>" />
+                                        <span id="emailerror" style="color: red"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label">Address<span style="color:red">*</span></label>
                                     <div class="col-sm-5">
                                         <textarea class="form-control" name="address" id="address"><?php echo $row['address'] ?></textarea>
@@ -368,6 +387,20 @@ required: true,
                             mobile_no: true,
                             minlength: 10,
                         },
+                        parentname: {
+                            required: true,
+                            character: true,
+                        },
+                parentcontact: {
+                            required: true,
+                            maxlength: 11,
+                            mobile_no: true,
+                            minlength: 10,
+                        },
+                parent_email_id: {
+                           
+                            email_id: true,
+                            },
                 city:
                         {
                             required: true,
@@ -425,6 +458,20 @@ required: true,
                             mobile_no: "Enter valid mobile number",
                             minlength: "Enter minimum 10 digit number",
                         },
+                         parentname: {
+                            required: "Enter parent name",
+                            character: "Enter valid name",
+                        },
+                parentcontact: {
+                           required: "Enter mobile no",
+                            maxlength: "Enter maximum 10 digit number",
+                            mobile_no: "Enter valid mobile number",
+                            minlength: "Enter minimum 10 digit number",
+                        },
+                parent_email_id: {
+                          
+                    email_id: "Enter valid email id",
+                            },
                 city:
                         {
                             required: "Enter city",
