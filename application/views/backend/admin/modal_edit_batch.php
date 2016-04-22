@@ -9,19 +9,19 @@ foreach ( $edit_data as $row):
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Update Batch
+                   <?php echo ucwords("Update Batch");?>
                 </div>
             </div>
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                          <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>
                 <?php echo form_open(base_url() . 'index.php?admin/batch/do_update/'.$row['b_id'] , array('class' => 'form-horizontal form-groups-bordered validate','id'=>'batchformedit','target'=>'_top'));?>
                         <input type="hidden" name="courseid" id="courseid" value="<?php echo $row['course_id']?>">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch Name<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch Name");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <input type="text" class="form-control" name="b_name" id="b_name" value="<?php echo $row['b_name'];?>"   />
                             </div>
@@ -31,7 +31,7 @@ foreach ( $edit_data as $row):
                       $degree = $this->db->get('degree')->result_array();       
                       $course = $this->db->get('course')->result_array();
                     ?>
-                            <label class="col-sm-3 control-label"> Course<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?> <span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="degree1" name="degree1[]" class="form-control" multiple>
                                     <option value="">Select Course</option>                                        
@@ -59,7 +59,7 @@ foreach ( $edit_data as $row):
                             </div>	
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="course1" name="course1[]" class="form-control" multiple>
                               
@@ -87,7 +87,7 @@ foreach ( $edit_data as $row):
                             </div>	
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Status</label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
                             <div class="col-sm-5">
                                 <select name="batch_status">
                                     <option value="1" <?php if($row['b_status'] == '1'){ echo "selected"; } ?>>Active</option>
@@ -98,7 +98,7 @@ foreach ( $edit_data as $row):
                             
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
-                                <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
+                                <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                             </div>
                         </div>
                     </div> </div> </div>

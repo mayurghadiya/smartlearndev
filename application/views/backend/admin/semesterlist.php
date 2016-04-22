@@ -5,15 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Semester Management</li>
+                        <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Semester Management");?></li>
                     </ul>
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Semester Management</h1>
+                    <h1><?php echo ucwords("Semester Management");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -23,11 +23,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Semester List
+                                    <?php echo ucwords("Semester List");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Semester
+                                    <?php echo ucwords("Add Semester");?>
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -41,9 +41,9 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Semester Name</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th><?php echo ucwords("Semester Name");?></th>
+                                                <th><?php echo ucwords("Status");?></th>
+                                                <th><?php echo ucwords("Action");?></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -77,18 +77,18 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">
  <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>                                    
 <?php echo form_open(base_url() . 'index.php?admin/semester/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsemester', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester Name<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester Name");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="s_name" id="s_name" />
                                             </div>
                                         </div>												
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
                                             <div class="col-sm-5">
                                                 <select name="semester_status">
                                                     <option value="1" >Active</option>
@@ -99,7 +99,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Add Semester</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
                                             </div>
                                         </div>
                                         </form>               
