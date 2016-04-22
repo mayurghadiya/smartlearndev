@@ -9,18 +9,18 @@ foreach ($edit_data as $row):
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        Update Study Resources
+                        <?php echo ucwords("Update Study Resources");?>
                     </div>
                 </div>
                 <div class="panel-body">
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
                             <div class="">
-                                <span style="color:red">* is mandatory field</span> 
+                                <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                             </div>   
                             <?php echo form_open(base_url() . 'index.php?admin/studyresource/do_update/' . $row['study_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label">Course <?php echo ucwords("Home");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
                                         <option value="">Select Course</option>
@@ -45,7 +45,7 @@ foreach ($edit_data as $row):
                             </div>
                             
                             <div class="form-group">
-                                            <label class="col-sm-3 control-label">Branch <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"> <?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
 
                                                 <select name="course" id="course2">
@@ -64,7 +64,7 @@ foreach ($edit_data as $row):
                                             </div>
                                         </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Batch <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Batch ");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="batch" id="batch2">
                                         <option value="">Select batch</option>
@@ -87,7 +87,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>	
                             <div class="form-group"> 
-                                <label class="col-sm-3 control-label">Semester <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Semester ");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="semester" id="semester2">
                                         <option value="">Select semester</option>
@@ -110,13 +110,13 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                                 <div class="form-group">
-                                <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Title ");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['study_title']; ?>"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Date <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Date ");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text"  readonly="" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['study_dos']; ?>"/>
                                 </div>
@@ -125,14 +125,14 @@ foreach ($edit_data as $row):
                           
                             <input type="hidden" class="form-control" name="pageurl" id="pageurl" value="<?php echo $row['study_url']; ?>" />
                              <div class="form-group">
-                                <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("File Upload ");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="hidden" name="txtoldfile" id="txtoldfile" value="<?php echo $row['study_filename']; ?>" />
                                     <input type="file" class="form-control" name="resourcefile" id="resourcefile" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Description</label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
                                 <div class="col-sm-5">
                                     <textarea class="form-control" name="description" id="description" ><?php echo $row['study_desc']; ?></textarea>
                                 </div>
@@ -140,7 +140,7 @@ foreach ($edit_data as $row):
                            
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
+                                    <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                                 </div>
                             </div>
                             </form>
