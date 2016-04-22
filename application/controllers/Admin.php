@@ -28,27 +28,14 @@ class Admin extends CI_Controller {
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
         $this->load->helper('date_format');
-        
     }
+
     /*     * *default functin, redirects to login page if no admin logged in yet	
       Auth : Brij  Dhami
       /******** */
 
     public function index($param1 = 'student') {
-        $this->load->helper('report_chart');
-        $course = $this->db->get('course')->result();
-        switch ($param1) {
-            case 'student':
-                $data['male_female_pie_chart'] = male_female_students();
-                $data['new_student_joining'] = new_student_registration();
-                $data['male_vs_female_course_wise'] = male_vs_female_course_wise();
-                $data['page_name'] = 'report_chart';
-                break;
-            default:
-                echo 'exam table';
-                $data['page_name'] = 'report_chart_exam';
-        }
-        $this->load->view('backend/index', $data);
+        redirect(base_url('index.php?admin/dashboard'));
     }
 
     function status($str) {
@@ -105,9 +92,11 @@ class Admin extends CI_Controller {
       /******** */
 
     function dashboard() {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
-
+        $this->load->helper('report_chart');
+        $course = $this->db->get('course')->result();
+        $page_data['male_female_pie_chart'] = male_female_students();
+        $page_data['new_student_joining'] = new_student_registration();
+        $page_data['male_vs_female_course_wise'] = male_vs_female_course_wise();
 
         $page_data['page_name'] = 'dashboard';
         $page_data['page_title'] = 'Admin Dashboard';
@@ -969,8 +958,8 @@ class Admin extends CI_Controller {
             //end roll no
             //email
 
-            $data['rollno']=$rollno;
-            $msg=$this->load->view("backend/admin/emailmessage",$data,true);
+            $data['rollno'] = $rollno;
+            $msg = $this->load->view("backend/admin/emailmessage", $data, true);
             $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
             $this->email->to($data['email']);
             //  $this->email->cc('mayur.ghadiya@searchnative.in');
@@ -979,7 +968,7 @@ class Admin extends CI_Controller {
 
             if ($this->email->send()) {
                 $this->session->set_flashdata('flash_message', get_phrase('student_added_successfully'));
-           
+
                 redirect(base_url() . 'index.php?admin/student/', 'refresh');
             } else {
                 show_error($this->email->print_debugger());
@@ -4832,7 +4821,7 @@ class Admin extends CI_Controller {
         $page_data['subject_details'] = array();
         $page_data['exam_detail'] = array();
 
-        if ($degree_id !='' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
+        if ($degree_id != '' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
             //assign variable
             $page_data['degree_id'] = $degree_id;
             $page_data['course_id'] = $course_id;
@@ -4867,24 +4856,24 @@ class Admin extends CI_Controller {
         $this->import_demo_sheet_download_config('Remedial Exam Marks');
         remedial_exam_marks($exam_id);
     }
-    
-    function display(){
+
+    function display() {
         $page_data['title'] = 'demo';
         $page_data['page_name'] = 'assign_data';
         $this->load->view('backend/index', $page_data);
     }
-    function get_data()
-    {
-        
+
+    function get_data() {
+
         $results = $this->db->get('assignment_manager')->result_array();
-            $data = array();
-        foreach ($results  as $r) {
+        $data = array();
+        foreach ($results as $r) {
             array_push($data, array(
                 $r['assign_id'],
                 $r['assign_title'],
                 $r['assign_batch']));
         }
- 
+
         echo json_encode(array('data' => $data));
     }
 
