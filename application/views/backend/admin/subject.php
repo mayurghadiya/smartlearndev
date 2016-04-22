@@ -5,20 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> </li>
-                        <li><a href="pages-custom-product.html">Pages</a> </li>
-                        <li class="active">Subject Management</li>
+                        <li><a href="index.html"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="pages-custom-product.html"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Subject Management");?></li>
                     </ul>
-                    <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step=5  data-position="left">
-                        <div data-action="remove-navbar" data-original-title="Remove Navigation Bar Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-navbar-button menu"> <i class="fa fa-arrows-h"></i> </div>
-                        <div data-action="remove-header" data-original-title="Remove Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-header-button menu"> <i class="fa fa-arrows-v"></i> </div>
-                        <div data-action="fullscreen" data-original-title="Remove Navigation Bar and Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="fullscreen-button menu"> <i class="glyphicon glyphicon-fullscreen"></i> </div>
-                    </div>
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Subject Management</h1>
+                    <h1><?php echo ucwords("Subject Management");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -28,11 +23,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Subject List
+                                    <?php echo ucwords("Subject List");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Subject
+                                    <?php echo ucwords("Add Subject");?>
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -45,11 +40,11 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
-                                                <th><div>Subject Name</div></th>											
-                                                <th><div>Subject Code</div></th>											
-                                                <th><div>Branch</div></th>											
-                                                <th><div>Semester</div></th>									
-                                                <th><div>Operation</div></th>											
+                                                <th><div><?php echo ucwords("Subject Name");?></div></th>											
+                                                <th><div><?php echo ucwords("Subject Code");?></div></th>											
+                                                <th><div><?php echo ucwords("Branch");?></div></th>											
+                                                <th><div><?php echo ucwords("Semester");?></div></th>									
+                                                <th><div><?php echo ucwords("Action");?></div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -96,25 +91,25 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content"> 
                                 <div class="">
-                                   <span style="color:red">* is mandatory field</span> 
+                                   <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                </div>                                    
 <?php echo form_open(base_url() . 'index.php?admin/subject/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsubject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">	
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Subject Name<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Subject Name");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="subname" id="subname" />
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Subject Code<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Subject Code");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="subcode" id="subcode" />
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="course" id="course">
                                                     <option value="">Select branch</option>
@@ -130,7 +125,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="semester" id="semester">
                                                     <option value="">Select semester</option>
@@ -141,7 +136,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Add Subject</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add ");?></button>
                                             </div>
                                         </div>
                                         </form>
