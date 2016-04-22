@@ -122,7 +122,8 @@ if ($widget_order) {
         ?>
             var datanew<?php echo $order[$i]; ?> = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/' . $order[$i]); ?>"></iframe>';
             console.log(datanew<?php echo $order[$i]; ?>);
-    <?php }
+    <?php
+    }
 } else {
     ?>
         var datanew1 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/1'); ?>"></iframe>';
@@ -146,57 +147,63 @@ if ($widget_order) {
 <?php if ($widget_order) { ?>
         var dashboardJSON =
         [
-    <?php for ($i = 0; $i < count($order); $i++) { 
-        switch ($order[$i]) {
-            case '1':
-                $title = 'Event Calendar';
-                break;
-            case '2':
-                $title = 'Admission';
-                break;
-            case '3':
-                $title = 'Assignments';
-                break;
-            case '4':
-                $title = 'Study Resources';
-                break;
-            case '5':
-                $title = 'Examinations';
-                break;
-            case '6':
-                $title = 'Results';
-                break;
-            case '7':
-                $title = 'Project/Synopsis';
-                break;
-            case '8':
-                $title = 'Video Conferencing';
-                break;
-            case '9':
-                $title = 'Digital Library';
-                break;
-            case '10':
-                $title = 'Participate';
-                break;
-            case '11':
-                $title = 'Staff and Email Directory';
-                break;
-        }
-        ?>
-            {
-            widgetTitle: "<?php echo $title; ?>",
-                    widgetId: "id<?php echo $order[$i]; ?>",
-                    enableRefresh: true,
-                    refreshCallBack: function (widgetId) {
-                    return datanew<?php echo $order[$i]; ?> + new Date();
-                    },
-                    widgetContent: datanew<?php echo $order[$i]; ?>
-        <?php
-        $end = end($order);
-        ?>
-            }<?php if ($end == $order[$i]) echo '';
-        else echo ','; ?>
-    <?php } ?>
+            <?php
+            for ($i = 0; $i < count($order); $i++) {
+                switch ($order[$i]) {
+                    case '1':
+                        $title = 'Event Calendar';
+                        break;
+                    case '2':
+                        $title = 'Admission';
+                        break;
+                    case '3':
+                        $title = 'Assignments';
+                        break;
+                    case '4':
+                        $title = 'Study Resources';
+                        break;
+                    case '5':
+                        $title = 'Examinations';
+                        break;
+                    case '6':
+                        $title = 'Results';
+                        break;
+                    case '7':
+                        $title = 'Project/Synopsis';
+                        break;
+                    case '8':
+                        $title = 'Video Conferencing';
+                        break;
+                    case '9':
+                        $title = 'Digital Library';
+                        break;
+                    case '10':
+                        $title = 'Participate';
+                        break;
+                    case '11':
+                        $title = 'Staff and Email Directory';
+                        break;
+                }
+                ?>
+                    {
+                        widgetTitle: "<?php echo $title; ?>",
+                        widgetId: "id<?php echo $order[$i]; ?>",
+                        enableRefresh: true,
+                        refreshCallBack: function (widgetId) {
+                            return datanew<?php echo $order[$i]; ?> + new Date();
+                        },
+                        widgetContent: datanew<?php echo $order[$i]; ?>
+                    }
+                    <?php
+                    $end = end($order);
+                    ?>
+                    <?php 
+                    if ($end == $order[$i])
+                        echo '';
+                    else
+                        echo ',';
+                    ?>
+            <?php } ?>
         ]
 <?php } else { ?>
         var dashboardJSON = [
