@@ -75,7 +75,7 @@
                                                         }
                                                         ?>
                                                 </td>
-                                                <td class="text-center">
+                                                <td>
                                                         <?php if ($row['course_status'] == '1') { ?>
                                                     <span class="label label-success">Active</span>
                                                         <?php } else { ?>	

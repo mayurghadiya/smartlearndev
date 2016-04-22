@@ -490,7 +490,14 @@
                                                     <td><?php echo $countq++; ?></td>    
                                                     <td><?php echo $rowq->question; ?></td>    
                                                     <td><?php echo $rowq->question_description; ?></td>    
-                                                    <td><?php echo ($rowq->question_status == "1") ? 'Active' : 'Deactive'; ?></td>    
+                                                    <td>
+                                                        <?php if ($rowq->question_status == '1') { ?>
+                                                            <span class="label label-success">Active</span>
+                                                        <?php } else { ?>	
+                                                            <span class="label label-default">InActive</span>
+                                                        <?php } ?>
+                                                        
+                                                        <?php //echo ($rowq->question_status == "1") ? 'Active' : 'Deactive'; ?></td>    
 
                                                     <td>  <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_question/<?php echo $rowq->sq_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 

@@ -73,7 +73,7 @@
                                                         }
                                                         ?>
                                                 </td>
-                                                <td class="text-center">
+                                                <td>
                                                         <?php if ($row['b_status'] == '1') { ?>
                                                     <span class="label label-success">Active</span>
                                                         <?php } else { ?>	

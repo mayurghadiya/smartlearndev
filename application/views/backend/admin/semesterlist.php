@@ -52,7 +52,7 @@
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>
                                                     <td><?php echo $row['s_name']; ?></td>                         
-                                                    <td class="text-center">
+                                                    <td >
                                                         <?php if ($row['s_status'] == '1') { ?>
                                                             <span class="label label-success">Active</span>
                                                         <?php } else { ?>	

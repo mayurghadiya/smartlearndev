@@ -56,7 +56,7 @@
                                                     <td><?php echo $count++; ?></td>
                                                     <td><?php echo $row['c_title']; ?></td>
                                                     <td><?php echo $row['c_slug']; ?></td>                          
-                                                    <td class="text-center">
+                                                    <td>
                                                         <?php if ($row['c_status'] == '1') { ?>
                                                             <span class="label label-success">Active</span>
                                                         <?php } else { ?>	
