@@ -16,12 +16,8 @@
                                 <tr>
                                     <th>Sr</th>
                                     <th>Exam Name</th>
-                                    <th>Type</th>
                                     <th>Start Date</th>
                                     <th>End Date</th>
-                                    <th>Total Marks</th>
-                                    <th>Passing Marks</th>
-                                    <th>Exam Ref</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -33,14 +29,10 @@
                                     <tr>
                                         <td><?php echo $exam->em_id; ?></td>
                                         <td><?php echo $exam->em_name; ?></td>
-                                        <td><?php echo $exam->exam_type_name; ?></td>
                                         <td><?php echo date('F d, Y', strtotime($exam->em_start_time)); ?></td>
                                         <td><?php echo date('F d, Y', strtotime($exam->em_end_time)); ?></td>
-                                        <td><?php echo $exam->total_marks; ?></td>
-                                        <td><?php echo $exam->passing_mark; ?></td>
-                                        <td><?php echo ucfirst($exam->exam_ref_name); ?></td>
                                         <td>
-                                            <a href="<?php echo base_url('index.php?student/exam_schedule/' . $exam->em_id); ?>">Schedule</a>
+                                            <a class="btn btn-info" href="<?php echo base_url('index.php?student/exam_schedule/' . $exam->em_id); ?>">Schedule</a>
                                         </td>
                                     </tr>
 <?php } ?>

@@ -90,8 +90,6 @@
                                                 <table class="table table-bordered">
                                                     <tr>
                                                         <th>Exam Name</th>
-                                                        <th>Total Marks</th>
-                                                        <th>Passing Marks</th>
                                                         <th>Course</th>
                                                         <th>Branch</th>
                                                         <th>Batch</th>
@@ -99,8 +97,6 @@
                                                     </tr>
                                                     <tr>
                                                         <td><?php echo $show_exam_details->em_name; ?></td>
-                                                        <td><?php echo $show_exam_details->total_marks; ?></td>
-                                                        <td><?php echo $show_exam_details->passing_mark; ?></td>
                                                         <td><?php echo $show_exam_details->d_name; ?></td>
                                                         <td><?php echo $show_exam_details->c_name; ?></td>
                                                         <td><?php echo $show_exam_details->b_name; ?></td>
