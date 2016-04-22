@@ -42,10 +42,7 @@
                                             <thead>
                                                 <tr>
                                                     <th><div>#</div></th>
-                                                    <th><div>Assignment Name</div></th>												
-                                                    <th><div>Course</div></th>												
-                                                    <th><div>Batch</div></th>												
-                                                    <th><div>Sem</div></th>												
+                                                    <th><div>Assignment Name</div></th>											
                                                     <th><div>Date of submission</div></th>
                                                     <th><div>Description</div></th>
                                                     <th><div>File</div></th>                                                    
@@ -56,43 +53,10 @@
                                                 <?php $count = 1;foreach($assignment as $row): ?>
                                                 <tr>
                                                     <td><?php echo $count++;?></td>
-                                                    <td><?php echo $row->assign_title;?></td>	
-                                                    <td>
-                                                    <?php 
-                                                            foreach($course as $crs)
-                                                            {
-                                                                    if($crs->course_id==$row->course_id)
-                                                                    {
-                                                                            echo $crs->c_name;
-                                                                    }
-                                                            }
-                                                    ?>
-                                                    </td>
-                                                    <td>
-                                                    <?php 
-                                                            foreach($batch as $bch)
-                                                            {
-                                                                    if($bch->b_id==$row->assign_batch)
-                                                                    {
-                                                                            echo $bch->b_name;
-                                                                    }
-                                                            }
-                                                    ?>
-                                                    </td>
-                                                    <td>
-                                                    <?php 
-                                                            foreach($semester as $sem)
-                                                            {
-                                                                    if($sem->s_id==$row->assign_sem)
-                                                                    {
-                                                                            echo $sem->s_name;
-                                                                    }
-                                                            }														
-                                                    ?>													
-                                                    </td>	                                                   
+                                                    <td><?php echo $row->assign_title;?></td>	                                                    	                                                   
                                                     <td><?php echo  date("F d, Y",strtotime($row->assign_dos));?></td>		
                                                     	
-                                                    <td><?php echo  $row->assign_desc;?></td>
+                                                    <td><?php echo  wordwrap($row->assign_desc,30,"<br>\n");?></td>
                                                     <td> <a href="uploads/project_file/<?php echo $row->assign_filename; ?>" download="" title="<?php echo  $row->assign_filename;?>"><i class="fa fa-download"></i></a></td>
                                                     <td> 
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_submit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="Submit Assignment" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-plus"></i></a>

@@ -81,10 +81,11 @@
                                                 <th><div>Course</div></th>
                                                 <th><div>Branch</div></th>												
                                                 <th><div>Batch</div></th>												
-                                                <th><div>Semester</div></th>												
+                                                <th><div>Semester</div></th>
+                                                <th><div>Description</div></th>
                                                 <th><div>File</div></th>
                                                 <th><div>Date of submission</div></th>												
-                                                <th><div>Operation</div></th>											
+                                                <th><div>Action</div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -131,6 +132,7 @@
                                                         }
                                                         ?>													
                                                     </td>	
+                                                     <td><?php echo  wordwrap($row->assign_desc,30,"<br>\n");?></td>
                                                     <td id="downloadedfile"><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date_formats($row->assign_dos); ?></td>	
                                                     <td class="menu-action">
@@ -386,6 +388,37 @@
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
     <script type="text/javascript"> 
+         $( "#frmassignment" ).submit(function( event ) {
+          if($("#title").val()!=null & $("#degree").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#course").val()!=null )
+          { 
+         $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/checkassignments'; ?>",
+                    dataType:'json',
+                   data:
+                        {
+                            'title':$("#title").val(),
+                            'semester':$("#semester").val(),
+                            'degree':$("#degree").val(),
+                            'batch':$("#batch").val(),
+                            'course':$("#course").val()
+                        }, 
+                                success:function(response){
+                                    if(response.length == 0){
+                                         $("#error_lable_exist").html('');
+                                    $('#frmassignment').attr('validated',true);
+                                    $('#frmassignment').submit();
+                                     } else
+                                         {
+                                             $("#error_lable_exist").html('Record is already present in the system');
+                                         return false;
+                                     }
+                    }
+                });
+                    return false; 
+                    }
+        event.preventDefault();
+      });
         
          $("#sub_searchform").validate({
                 rules: {

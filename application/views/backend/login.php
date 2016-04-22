@@ -82,6 +82,12 @@ var baseurl = '<?php echo base_url();?>';
 </div>
 
 <!-- Bottom Scripts --> 
+
+<script type="text/javascript">
+ $('#email').keypress(function() {   
+    $(this).val($(this).val().replace(/\s/g,""));
+});
+</script>
 <script src="assets/login/js/gsap/main-gsap.js"></script> 
 <script src="assets/login/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script> 
 <script src="assets/login/js/bootstrap.js"></script> 
