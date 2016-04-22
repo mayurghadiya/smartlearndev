@@ -298,3 +298,936 @@ ERROR - 2016-04-22 15:56:02 --> Severity: Notice --> Undefined variable: gochat 
 ERROR - 2016-04-22 15:56:02 --> Severity: Notice --> Undefined variable: widget_order /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 118
 ERROR - 2016-04-22 15:56:02 --> Severity: Notice --> Undefined variable: widget_order /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/includes_top.php 147
 ERROR - 2016-04-22 15:56:02 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 254
+ERROR - 2016-04-22 17:09:42 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 254
+ERROR - 2016-04-22 17:09:42 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 254
+ERROR - 2016-04-22 17:12:58 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(1, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:13:00 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:30:52 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:30:52 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:30:52 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:30:52 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:38 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:38 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:38 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:38 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:42 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:42 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:43 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:43 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:47 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:48 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:48 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:48 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:48 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:48 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:48 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:31:48 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:31:48 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:03 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:03 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:03 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:03 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:03 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:03 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:10 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:10 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:17 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:17 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:17 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:17 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:26 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:26 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:27 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:27 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:40 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:40 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:40 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:40 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:41 --> Severity: Notice --> Undefined variable: inbox /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/email_inbox.php 69
+ERROR - 2016-04-22 17:32:52 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:52 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:32:52 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:32:52 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:33:14 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:33:14 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:33:14 --> Severity: error --> Exception: Call to undefined method CI_Loader::uri_segment() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/exam_marks.php 387
+ERROR - 2016-04-22 17:33:14 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-04-22 17:33:52 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:34:13 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(2, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:34:14 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:38:28 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:45:24 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:45:24 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:45:24 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:45:24 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:45:31 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:45:54 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:45:57 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:46:57 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:47:27 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 17:48:16 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:48:16 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:48:17 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:48:17 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:48:17 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:48:17 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:48:17 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3389
+ERROR - 2016-04-22 17:48:17 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3390
+ERROR - 2016-04-22 17:49:34 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3392
+ERROR - 2016-04-22 17:49:34 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3393
+ERROR - 2016-04-22 17:49:34 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3392
+ERROR - 2016-04-22 17:49:34 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3393
+ERROR - 2016-04-22 17:59:03 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3393
+ERROR - 2016-04-22 17:59:03 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3394
+ERROR - 2016-04-22 17:59:03 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3393
+ERROR - 2016-04-22 17:59:03 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3394
+ERROR - 2016-04-22 17:59:19 --> Severity: Notice --> Undefined index: mark_2_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3393
+ERROR - 2016-04-22 17:59:19 --> Severity: Notice --> Undefined index: remark_2_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3394
+ERROR - 2016-04-22 17:59:19 --> Severity: Notice --> Undefined index: mark_2_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3393
+ERROR - 2016-04-22 17:59:19 --> Severity: Notice --> Undefined index: remark_2_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3394
+ERROR - 2016-04-22 18:05:32 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3395
+ERROR - 2016-04-22 18:05:32 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:05:32 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3395
+ERROR - 2016-04-22 18:05:32 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:08:45 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3395
+ERROR - 2016-04-22 18:08:45 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:08:45 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3395
+ERROR - 2016-04-22 18:08:45 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:08:52 --> Severity: Notice --> Undefined index: mark_2_720_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3395
+ERROR - 2016-04-22 18:08:52 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:08:52 --> Severity: Notice --> Undefined index: mark_2_720_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3395
+ERROR - 2016-04-22 18:08:52 --> Severity: Notice --> Undefined index: remark_2_720_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:25 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:26 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:27 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:28 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:29 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:30 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:31 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:32 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:33 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:34 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:35 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:36 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:38 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:39 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:40 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:41 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:42 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:43 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:44 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:45 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:46 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:47 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:48 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3396
+ERROR - 2016-04-22 18:14:50 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3397
+ERROR - 2016-04-22 18:15:16 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3398
+ERROR - 2016-04-22 18:15:16 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3399
+ERROR - 2016-04-22 18:15:16 --> Severity: Notice --> Undefined index: mark_1_719_26_11 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3398
+ERROR - 2016-04-22 18:15:16 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3399
+ERROR - 2016-04-22 18:15:16 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3410
+ERROR - 2016-04-22 18:15:16 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3411
+ERROR - 2016-04-22 18:15:16 --> Query error: Column 'mark_obtained' cannot be null - Invalid query: INSERT INTO `marks_manager` (`mm_std_id`, `mm_subject_id`, `mm_exam_id`, `mark_obtained`, `mm_remarks`) VALUES ('719', '9', '26', NULL, NULL)
+ERROR - 2016-04-22 18:15:49 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3413
+ERROR - 2016-04-22 18:15:49 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3414
+ERROR - 2016-04-22 18:15:49 --> Query error: Column 'mark_obtained' cannot be null - Invalid query: INSERT INTO `marks_manager` (`mm_std_id`, `mm_subject_id`, `mm_exam_id`, `mark_obtained`, `mm_remarks`) VALUES ('719', '9', '26', NULL, NULL)
+ERROR - 2016-04-22 18:16:37 --> Severity: Notice --> Undefined index: mark_1_719_26_9 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3414
+ERROR - 2016-04-22 18:16:37 --> Severity: Notice --> Undefined index: remark_1_719_26 /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 3415
+ERROR - 2016-04-22 18:16:37 --> Query error: Column 'mark_obtained' cannot be null - Invalid query: INSERT INTO `marks_manager` (`mm_std_id`, `mm_subject_id`, `mm_exam_id`, `mark_obtained`, `mm_remarks`) VALUES ('719', '9', '26', NULL, NULL)
+ERROR - 2016-04-22 18:24:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 18:37:20 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 18:37:25 --> Severity: Notice --> Undefined variable: student_id /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/remedial_exam_marks.php 71
+ERROR - 2016-04-22 18:37:26 --> Severity: Notice --> Undefined variable: student_id /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/remedial_exam_marks.php 71
+ERROR - 2016-04-22 18:37:26 --> Severity: Notice --> Undefined variable: student_id /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/remedial_exam_marks.php 171
+ERROR - 2016-04-22 18:37:26 --> Severity: Notice --> Undefined variable: student_id /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/remedial_exam_marks.php 171
+ERROR - 2016-04-22 18:41:53 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(1, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 18:41:54 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
+ERROR - 2016-04-22 18:42:37 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' course_id)' at line 1 - Invalid query: SELECT * FROM batch WHERE FIND_IN_SET(4, degree_id) AND FIND_IN_SET(, course_id)
