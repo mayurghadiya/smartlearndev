@@ -29,18 +29,18 @@ $semester = $this->db->get('semester')->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Update Exam Schedule
+                    <?php echo ucwords("Update Exam Schedule");?>
                 </div>
             </div>
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                         <div class="">
-                            <span style="color:red">* is mandatory field</span> 
+                            <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                         </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/update/' . $edit_data->exam_time_table_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-time-table', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="degree" id="edit_degree" class="form-control" required="">
                                     <option value="">Select</option>
@@ -52,7 +52,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                  
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="course" id="edit_course" class="form-control" required="">
                                     <option value="">Select</option>
@@ -64,7 +64,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="batch" id="edit_batch" class="form-control" required="">
                                     <option value="">Select</option>
@@ -76,7 +76,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_semester" name="semester" required="">
                                     <option value="">Select</option>
@@ -88,7 +88,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Exam");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_exam" name="exam" required="">
                                     <option value="">Select</option>
@@ -96,7 +96,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Subject<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Subject");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_subject" name="subject" required="">
                                     <option value="">Select</option>
@@ -104,21 +104,21 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div> 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Date<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Date");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input readonly="" type="text" required=""  name="exam_date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Start Time<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Start Time");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="time" id="start_time" class="form-control" name="start_time"
                                        value="<?php echo $edit_data->exam_start_time; ?>" required=""/>
                             </div>	
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">End Time<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("End Time");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="time" id="end_time" class="form-control" name="end_time"
                                        value="<?php echo $edit_data->exam_end_time ?>" required=""/>
@@ -126,7 +126,7 @@ $semester = $this->db->get('semester')->result();
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
-                                <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
+                                <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                             </div>
                         </div>
                     </div> 

@@ -6,16 +6,16 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Exam Grade</li>
+                        <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Exam Grade");?></li>
                     </ul>
 
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Exam Grade</h1>
+                    <h1><?php echo ucwords("Exam Grade");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -25,11 +25,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Exam Grade List
+                                    <?php echo ucwords("Exam Grade List");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Exam Grade
+                                    <?php echo ucwords("Add Exam Grade");?>
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -43,11 +43,11 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Grade</th>
-                                                <th>From Percentage</th>
-                                                <th>To Percentage</th>
-                                                <th>Description</th>
-                                                <th>Action</th>
+                                                <th><?php echo ucwords("Grade");?></th>
+                                                <th><?php echo ucwords("From Percentage");?></th>
+                                                <th><?php echo ucwords("To Percentage");?></th>
+                                                <th><?php echo ucwords("Description");?></th>
+                                                <th><?php echo ucwords("Action");?></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -79,30 +79,30 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content"> 
                                     <div class="">
-                                        <span style="color:red">* is mandatory field</span> 
+                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                     </div>   
                                     <?php echo form_open(base_url() . 'index.php?admin/grade/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'gradeform', 'target' => '_top')); ?>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Grade Name<span style="color:red">*</span></label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Grade Name");?><span style="color:red">*</span></label>
                                         <div class="col-sm-5">
                                             <input id="grade_name" class="form-control" type="text" name="grade_name"/>
                                         </div>	
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">From Percentage<span style="color:red">*</span></label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("From Percentage");?><span style="color:red">*</span></label>
                                         <div class="col-sm-5">
                                             <input type="number" class="form-control" name="from_marks" id="from_marks" min="0"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">To Percentage<span style="color:red">*</span></label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("To Percentage");?><span style="color:red">*</span></label>
                                         <div class="col-sm-5">
                                             <input type="number" class="form-control" name="to_marks" id="to_marks"/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Description</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
                                         <div class="col-sm-5">	
                                             <div class="chat-message-box">
                                                 <textarea name="description" id="description" rows="3" class="form-control"></textarea>
@@ -112,7 +112,7 @@
 
                                     <div class="form-group">
                                         <div class="col-sm-offset-3 col-sm-5">
-                                            <button type="submit" class="btn btn-info vd_bg-green">Add Grade</button>
+                                            <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
                                         </div>
                                     </div> 
                                     </form>

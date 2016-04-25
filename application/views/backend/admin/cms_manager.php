@@ -5,15 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">CMS Manager</li>
+                        <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("CMS Manager");?></li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>CMS Manager</h1>
+                    <h1><?php echo ucwords("CMS Manager");?></h1>
                 </div>
             </div>
 
@@ -24,11 +24,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    CMS Page List
+                                    <?php echo ucwords("CMS Page List");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add CMS Page
+                                    <?php echo ucwords("Add CMS Page");?>
                                 </a>
                             </li>
                         </ul>
@@ -41,13 +41,13 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Title</th>
-                                                <th>URL</th>                                                
-                                                <th>Course</th>
-                                                <th>Branch</th>
-                                                <th>Batch</th>
-                                                <th>Semester</th>
-                                                <th>Action</th>
+                                                <th><?php echo ucwords("Title");?></th>
+                                                <th><?php echo ucwords("URL");?></th>                                                
+                                                <th><?php echo ucwords("Course");?></th>
+                                                <th><?php echo ucwords("Branch");?></th>
+                                                <th><?php echo ucwords("Batch");?></th>
+                                                <th><?php echo ucwords("Semester");?></th>
+                                                <th><?php echo ucwords("Action");?></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -81,13 +81,13 @@
                                 <br/>
                                 <div class="box-content">
                                     <div class="">
-                                        <span style="color:red">* is mandatory field</span> 
+                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                     </div>   
                                     <form class="form-horizontal form-groups-bordered validate" id="admissionform" method="post" 
                                           action="<?php echo base_url('index.php?admin/cms_manager/create'); ?>" role="form">
                                         <div class="row">
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label">Course</label>
+                                                <label class="col-sm-4 control-label"><?php echo ucwords("Course");?></label>
                                                 <div class="col-sm-5 controls">
                                                     <select id="degree" name="degree" class="form-control">
                                                         <option value="">Select</option>
@@ -100,7 +100,7 @@
                                         </div><!--./row-->
                                         <div class="row">
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label">Branch<span style="color:red">*</span></label>
+                                                <label class="col-sm-4 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5 controls">
                                                     <select id="course" name="course" class="form-control">
 
@@ -112,7 +112,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Batch<span style="color:red">*</span></label>
+                                                        <label class="col-sm-4 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select name="batch" id="batch" class="form-control">
 
@@ -127,7 +127,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Semester<span style="color:red">*</span></label>
+                                                        <label class="col-sm-4 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select id="semester" name="semester" class="form-control">
 
@@ -143,7 +143,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Page Title<span style="color:red">*</span></label>
+                                                        <label class="col-sm-4 control-label"><?php echo ucwords("Page Title");?><span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <input id="page_title" name="page_title" type="text" placeholder="Page Title">
                                                         </div>
@@ -155,7 +155,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Page Slug<span style="color:red">*</span></label>
+                                                        <label class="col-sm-4 control-label"><?php echo ucwords("Page Slug");?><span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <input id="page_slug" name="page_slug" type="text" placeholder="Page Slug">
                                                         </div>
@@ -167,7 +167,7 @@
                                             <div class="col-sm-12 col-xs-12">
                                                 <div class="callout callout-info">
                                                     <div class="form-group">
-                                                        <label class="col-sm-4 control-label">Content Type<span style="color:red">*</span></label>
+                                                        <label class="col-sm-4 control-label"><?php echo ucwords("Content Type");?><span style="color:red">*</span></label>
                                                         <div class="col-sm-5 controls">
                                                             <select class="form-control" id="content_type" name="content_type" id="content_type">
                                                                 <option value="">Select</option>
@@ -183,7 +183,7 @@
                                         <div class="row" id="ck-editor">
                                             <div class="col-sm-12 col-xs-12">	
                                                 <div class="form-group">
-                                                    <label class="col-sm-4 control-label">Page Content<span style="color:red">*</span></label>
+                                                    <label class="col-sm-4 control-label"><?php echo ucwords("Page Content");?><span style="color:red">*</span></label>
                                                     <div class="col-sm-7 controls">												
                                                         <div class="form-group">							
                                                             <textarea id="content_data" name="content_data" class="ckeditor" data-rel="ckeditor" rows="3" ></textarea>

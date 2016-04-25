@@ -5,9 +5,9 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">CMS Management</li>
+                        <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("CMS Management");?></li>
                     </ul>                  
                 </div>
             </div>
@@ -23,12 +23,12 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    CMS List
+                                    <?php echo ucwords("CMS List");?>
                                 </a>
                             </li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add CMS
+                                    <?php echo ucwords("Add CMS");?>
                                 </a>
                             </li>
                         </ul>
@@ -43,10 +43,10 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Name</th>
-                                                <th>Slug</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th><?php echo ucwords("Name");?></th>
+                                                <th><?php echo ucwords("Slug");?></th>
+                                                <th><?php echo ucwords("Status");?></th>
+                                                <th><?php echo ucwords("Action");?></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -81,30 +81,30 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">
  <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>                                      
 <?php echo form_open(base_url() . 'index.php?admin/cms/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'cmsform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Page Name<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Page Name");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="c_title" id="	c_title"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Page Slug<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Page Slug");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="c_slug" id="c_slug"/>
                                             </div>
                                         </div>
                                         <div class="form-group" id="ck-editor">					
-                                            <label class="col-sm-3 control-label">Page Content<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Page Content");?><span style="color:red">*</span></label>
                                             <div class="col-sm-7">		
                                                 <textarea name="c_description"  class="ckeditor" data-rel="ckeditor" rows="3" required></textarea>
                                             </div>														
                                         </div> 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
                                             <div class="col-sm-5">
                                                 <select name="c_status">
                                                     <option value="1">Active</option>
@@ -114,7 +114,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Add CMS</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add CMS");?></button>
                                             </div>
                                         </div>
                                         </form>               
