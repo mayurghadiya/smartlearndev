@@ -738,6 +738,47 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
+    function holiday($param1 = '', $param2 = '')
+    {
+       if ($this->session->userdata('admin_login') != 1)
+            redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['holiday_name'] = $this->input->post('holiday_name');
+            $data['holiday_startdate'] = date('Y-m-d', strtotime($this->input->post('holiday_startdate')));
+            $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate')));
+            $year=explode('-',$data['holiday_startdate']);
+            $data['holiday_year'] = $year[0];
+            $data['holiday_status'] = $this->status($this->input->post('batch_status'));
+            $data['created_date'] = date('Y-m-d');
+           
+            $this->db->insert('holiday', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('holiday_added_successfully'));
+            redirect(base_url() . 'index.php?admin/holiday/', 'refresh');
+        }
+        if ($param1 == 'do_update') {
+            $data['holiday_name'] = $this->input->post('holiday_name');
+           $data['holiday_startdate'] = date('Y-m-d', strtotime($this->input->post('holiday_startdate1')));
+            $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate1')));
+            $year=explode('-',$data['holiday_startdate']);
+            $data['holiday_year'] = $year[0];
+            $data['holiday_status'] = $this->status($this->input->post('batch_status'));
+            $this->db->where('holiday_id', $param2);
+            $this->db->update('holiday', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('holiday_updated_successfully'));
+            redirect(base_url() . 'index.php?admin/holiday/', 'refresh');
+        }
+        if ($param1 == 'delete') {
+            $this->db->where('holiday_id', $param2);
+            $this->db->delete('holiday');
+            $this->session->set_flashdata('flash_message', get_phrase('holiday_deleted_successfully'));
+           
+            redirect(base_url() . 'index.php?admin/holiday/', 'refresh');
+        }
+        $page_data['holiday'] = $this->db->get('holiday')->result_array();
+        $page_data['page_name'] = 'holiday';
+        $page_data['page_title'] = 'Holiday Management';
+        $this->load->view('backend/index', $page_data); 
+    }
     function batch($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
