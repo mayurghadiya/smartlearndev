@@ -83,7 +83,7 @@
                                 <div class="">
                                     <span style="color:red">*<?php echo ucwords(" is mandatory field");?> </span> 
                                 </div>
-<?php echo form_open(base_url() . 'index.php?admin/holiday/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'batchform', 'target' => '_top')); ?>
+<?php echo form_open(base_url() . 'index.php?admin/holiday/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'holidayform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("holiday name");?><span style="color:red">*</span></label>
@@ -106,14 +106,12 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
                                             <div class="col-sm-5">
-                                                <select name="batch_status">
+                                                <select name="holiday_status">
                                                     <option value="1">Active</option>
                                                     <option value="0">Inactive</option>	
                                                 </select>
                                                 <lable class="error" id="error_lable_exist" style="color:red"></lable>
-                                            	
                                             </div>
-                                             
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
@@ -151,6 +149,17 @@
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true,
+            });
+            
+            $("#holidayform").validate({
+                rules: {
+                    holiday_name: "required",
+                    holiday_status: "required",
+                },
+                messages: {
+                    holiday_name: "Enter holiday name",
+                    holiday_status: "Select status",
+                }
             });
           });
         </script>
