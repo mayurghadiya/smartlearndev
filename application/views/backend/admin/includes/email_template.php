@@ -90,6 +90,13 @@
           <script type="text/javascript" src="js/html5shiv.js"></script>
           <script type="text/javascript" src="js/respond.min.js"></script>     
         <![endif]-->
+        
+        <?php 
+        $skin = $this->db->get_where('system_setting' , array('type' => 'skin_colour'))->row()->description;		
+      ?> 
+        <!-- Theme CSS -->
+    <link id="pagestyle"  href="<?=$this->config->item('css_path')?><?php echo $skin; ?>" rel="stylesheet" type="text/css">
+	
 
     </head>    
 

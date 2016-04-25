@@ -3432,10 +3432,10 @@ class Admin extends CI_Controller {
                 }
             }
             if ($student_id != '') {
-                $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+                $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
                 redirect(base_url('index.php?admin/marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id . '/' . $student_id));
             }
-            $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+            $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
             redirect(base_url('index.php?admin/marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id));
         }
         $page_data['degree_id'] = '';
@@ -4873,10 +4873,10 @@ class Admin extends CI_Controller {
             }
 
             if ($student_id != '') {
-                $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+                $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
                 redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' .$batch_id .'/' . $semester_id . '/' . $exam_id . '/' . $student_id));
             }
-            $this->session->set_userdata('flash_message', 'Marks is successfully updated.');
+            $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
             redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' .$batch_id .'/' . $semester_id . '/' . $exam_id));
         }
         $page_data['degree_id'] = '';
@@ -4943,6 +4943,26 @@ class Admin extends CI_Controller {
         }
 
         echo json_encode(array('data' => $data));
+    }
+    
+    /**
+     * Subscriber
+     * 
+     * @return response
+     */
+    function subscriber($param1='', $param2='') {
+        $this->load->model('admin/Crud_model');
+        if($param1 == 'delete') {
+            $this->Crud_model->delete_subscriber($param2);
+            $this->session->set_flashdata('flash_message', 'Subscriber is successfully deleted.');
+            
+            redirect(base_url('index.php?admin/subscriber'));
+        }
+        
+        $page_data['title'] = 'Subscriber';
+        $page_data['page_name'] = 'subscriber';
+        $page_data['subscriber'] = $this->Crud_model->subscriber();
+        $this->load->view('backend/index', $page_data);
     }
 
 }

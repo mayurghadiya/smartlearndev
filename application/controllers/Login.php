@@ -218,7 +218,7 @@ $center_credential = array('emailid' => $email, 'password' => $password, 'center
 				}
         $this->session->sess_destroy();		
         $this->session->set_flashdata('logout_notification', 'logged_out');
-        redirect(base_url(), 'refresh');
+        redirect(base_url('index.php?site/home'), 'refresh');
     }
 	function active_student($std_id) {
 		$data['std_status'] = 1;

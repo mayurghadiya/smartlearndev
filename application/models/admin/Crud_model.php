@@ -1073,5 +1073,20 @@ class Crud_model extends CI_Model {
                 ->get()
                 ->result_array();
     }
+    
+    /**
+     * Get all subscriber
+     * @return array
+     */
+    function subscriber() {
+        $this->db->order_by('created_at', 'DESC');
+        return $this->db->get('subscriber')->result();
+    }
+    
+    function delete_subscriber($id) {
+        $this->db->delete('subscriber', array(
+            'id'    => $id
+        ));
+    }
 
 }
