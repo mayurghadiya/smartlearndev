@@ -6,16 +6,16 @@
                 <div class="vd_head-section clearfix">
                     <div class="vd_panel-header">
                         <ul class="breadcrumb">
-                            <li><a href="#">Home</a> </li>
-                            <li><a href="#">Pages</a> </li>
-                            <li class="active">Exam Marks</li>
+                            <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                            <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                            <li class="active"><?php echo ucwords("Exam Marks");?></li>
                         </ul>                  
                     </div>
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Exam Marks</h1>
+                    <h1><?php echo ucwords("Exam Marks");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Course</label>
+                                                <label><?php echo ucwords("Course");?></label>
                                                 <select id="degree" name="degree" class="form-control">
                                                     <option value="">Select</option>
                                                     <?php foreach ($degree as $row) { ?>
@@ -39,31 +39,31 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Branch</label>
+                                                <label><?php echo ucwords("Branch");?></label>
                                                 <select id="course" name="course" class="form-control">
                                                     <option value="">Select</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Batch</label>
+                                                <label><?php echo ucwords("Batch");?></label>
                                                 <select id="batch" name="batch" class="form-control">
                                                     <option value="">Select</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Semester</label>
+                                                <label><?php echo ucwords("Semester");?></label>
                                                 <select id="semester" name="semester" class="form-control">
                                                     <option value="">Select</option>                                                    
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Exam</label>
+                                                <label><?php echo ucwords("Exam");?></label>
                                                 <select id="exam" name="exam" class="form-control">
                                                     <option value="">Select</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-4 validating">
-                                                <label>Students</label>
+                                                <label><?php echo ucwords("Students");?></label>
                                                 <select id="student" name="student" class="form-control">
                                                     <option value="">All</option>
                                                     <?php foreach ($student_list as $exam_student) { ?>
@@ -94,16 +94,16 @@
                                     <div class="col-md-12">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <div class="panel-title">Exam Details</div>
+                                                <div class="panel-title"><?php echo ucwords("Home");?>Exam Details</div>
                                             </div>
                                             <div class="panel-body">
                                                 <table class="table table-bordered">
                                                     <tr>
-                                                        <th>Exam Name</th>
-                                                        <th>Course</th>
-                                                        <th>Branch</th>
-                                                        <th>Batch</th>
-                                                        <th>Semester</th>
+                                                        <th><?php echo ucwords("Exam Name");?></th>
+                                                        <th><?php echo ucwords("Course");?></th>
+                                                        <th><?php echo ucwords("Branch");?></th>
+                                                        <th><?php echo ucwords("Batch");?></th>
+                                                        <th><?php echo ucwords("Semester");?></th>
                                                     </tr>
                                                     <tr>
                                                         <td><?php echo $show_exam_details->em_name; ?></td>
@@ -123,19 +123,19 @@
                                 <div id="gridview" class="col-sm-12">
                                     <div style="" id="entermarks" class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4 class="panel-title" style="color:#000;">Enter Marks</h4>
+                                            <h4 class="panel-title" style="color:#000;"><?php echo ucwords("Enter Marks");?></h4>
                                         </div>
                                         <form class="form-horizontal" action="" method="post">
                                             <div class="table-responsive">
                                                 <table data-filter="#filter" id="marklist" class="table table-bordered table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th width="5%">Student ID</th>
-                                                            <th width="20%">Student Name</th>
+                                                            <th width="5%"><?php echo ucwords("Student ID");?></th>
+                                                            <th width="20%"><?php echo ucwords("Student Name");?></th>
                                                             <?php foreach ($subject_details as $subject) { ?>
                                                                 <th>Sub: <?php echo $subject->subject_name; ?></th>
                                                             <?php } ?>
-                                                            <th width="15%">Remarks</th>
+                                                            <th width="15%"><?php echo ucwords("Remarks");?></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

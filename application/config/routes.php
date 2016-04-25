@@ -39,9 +39,16 @@
 */
 
 
-$route['default_controller'] = 'Home';
+$route['default_controller'] = 'site/home';
 $route['pages/(:any)'] = 'pages/view/pages/$1';
 $route['404_override'] = '';
+
+// frontend side custom routing
+$route['home'] = 'site/home';
+$route['course/(:any)'] = 'site/course/$1';
+$route['branch/(:any)'] = 'site/branch_details/$1';
+$route['about'] = 'site/about';
+$route['contact'] = 'site/contact';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

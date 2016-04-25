@@ -37,19 +37,19 @@ $centerlist = $this->db->get('center_user')->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Update Exam
+                    <?php echo ucwords("Update Exam");?>
                 </div>
             </div>
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                         <div class="">
-                            <span style="color:red">* is mandatory field</span> 
+                            <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                         </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/remedial_exam/update/' . $edit_data->em_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-form', 'target' => '_top')); ?>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="degree" id="edit_degree">
                                     <option>Select</option>
@@ -61,7 +61,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="course" id="edit_course">
                                     <option value="">Select</option>
@@ -73,7 +73,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="batch" id="edit_batch">
                                     <option value="">Select</option>
@@ -86,7 +86,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="semester" id="edit_semester">
                                     <option value="">Select</option>
@@ -99,7 +99,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam Name<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Exam Name");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_exam_list" name="exam_list">
                                     <option value="">Select</option>
@@ -112,7 +112,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Exam Type<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Exam Type");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" name="exam_type" id="exam_type" required="">
                                     <option value="">Select</option>
@@ -124,13 +124,13 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Total Marks<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Total Marks");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" required="" name="total_marks" id="edit_total_marks" value="<?php echo $edit_data->total_marks; ?>"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Passing Marks<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Passing Marks");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" required="" name="passing_marks" id="edit_passing_marks" value="<?php echo $edit_data->passing_mark; ?>"/>
                             </div>
@@ -149,7 +149,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>                        
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Status<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Status");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="status" id="status">
                                     <option value="">Select</option>
@@ -161,7 +161,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Start Date");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input readonly="" type="text" required="" id="datepicker-date123" name="date" class="form-control datepicker-normal-edit"
                                        value="<?php echo $edit_data->em_date; ?>"/>
@@ -175,7 +175,7 @@ $centerlist = $this->db->get('center_user')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("End Date");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input readonly="" type="text" required="" name="end_date_time" id="edit_end_date_time" class="form-control"
                                        value="<?php echo $edit_data->em_end_time; ?>"/>
@@ -183,7 +183,7 @@ $centerlist = $this->db->get('center_user')->result();
                         </div>	
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
-                                <button type="submit" class="submit btn btn-info vd_bg-green">Update</button>
+                                <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                             </div>
                         </div>
                     </div> 

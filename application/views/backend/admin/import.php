@@ -5,15 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Import</li>
+                        <li><a href=""><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Import");?></li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Import</h1>
+                    <h1><?php echo ucwords("Import");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -23,11 +23,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Import Data
+                                    <?php echo ucwords("Import Data");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Download Sample Sheet
+                                    <?php echo ucwords("Download Sample Sheet");?>
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -38,16 +38,16 @@
 
                                 <div class="panel-body">
                                     <div class="">
-                                        <span style="color:red">* is mandatory field</span> 
+                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                     </div>
                                     <form id="importform" class="myimportform form-horizontal form-groups-bordered validate" role="form" method="post" action="" 
                                           enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Module<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Module");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="module" name="module">
                                                     <option value="">Select</option>
-                                                    <option value="admission_type">Admission Type</option>
+                                                    <option value="admission_type">Admission Type<?php echo ucwords("Home");?></option>
                                                     <option value="course">Branch</option>
                                                     <option value="degree">Course</option>
                                                     <option value="batch">Batch</option>
@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group" id="degree_main" style="display: none;">
-                                            <label class="col-sm-3 control-label">Course</label>                                            
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?></label>                                            
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -74,7 +74,7 @@
 
                                         </div>
                                         <div class="form-group" id="course_main" style="display: none;">
-                                            <label class="col-sm-3 control-label">Branch</label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?></label>
 
                                             <div class="col-sm-5">
                                                 <select id="course" name="course" class="form-control">
@@ -84,7 +84,7 @@
 
                                         </div>
                                         <div class="form-group" id="batch_main" style="display: none;">
-                                            <label class="col-sm-3 control-label">Batch</label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?></label>
 
                                             <div class="col-sm-5">
                                                 <select id="batch" name="batch" class="form-control">
@@ -119,7 +119,7 @@
 
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("File");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="userfile" id="userfile"/>
                                             </div>
@@ -131,7 +131,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
                                                 <a style="display: none;" id="show_download" class="btn btn-warning">Download Sample File</a>
-                                                <button type="submit" class="btn btn-info vd_bg-green">Upload</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("upload");?></button>
                                             </div>
                                         </div>
                                     </form>
@@ -144,7 +144,7 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">   
                                     <br/>                                    
-                                    <h4>Download Demo sheet</h4>
+                                    <h4><?php echo ucwords("Download Demo sheet");?></h4>
                                     <br/>
                                     <ul>                                        
                                         <li><a href="<?php echo base_url('index.php?admin/download_import/course'); ?>">Branch</a></li>

@@ -9,7 +9,7 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        Update Question
+                        <?php echo ucwords("Update Question");?>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -17,20 +17,20 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                         <div class="box-content">  
                             <?php echo form_open(base_url() . 'index.php?admin/survey/do_update/' . $edit_data[0]['sq_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditquestion', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                            <label class="col-sm-3 control-label">Question <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Question");?> <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="question" value="<?php echo $edit_data[0]['question']; ?>" id="question" />
                                             </div>
                                         </div>
                                        
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Short Description <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Short Description ");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="description" id="description"><?php echo $edit_data[0]['question_description']; ?></textarea>
                                             </div>
                                         </div>
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Status ");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="radio" id="status" name="status" value="1" <?php if($edit_data[0]['question_status']=="1"){ echo "checked=checked"; } ?> >Active
                                                  <input type="radio" id="status" name="status" value="0" <?php if($edit_data[0]['question_status']=="0"){ echo "checked=checked"; } ?> > Deactive
@@ -42,7 +42,7 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                                         
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Update</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                                             </div>
                                         </div>
                             

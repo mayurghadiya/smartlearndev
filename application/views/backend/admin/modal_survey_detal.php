@@ -13,7 +13,7 @@ $this->load->helper("date_format");
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                   Survey Detail
+                   <?php echo ucwords("Survey Detail");?>
                 </div>
             </div>
             <div class="panel-body">
@@ -24,11 +24,11 @@ $this->load->helper("date_format");
                                         <h5>Date : <?php echo datetime_formats($edit_data[0]->cdate); ?></h5>
                                          <thead>
                                             <tr>
-                                                <th>Student Name</th>
-                                                <th>Degree </th>
-                                                <th>Course </th>
-                                                <th>Batch </th>
-                                                <th>Semester </th>
+                                                <th><?php echo ucwords("Student Name");?></th>
+                                                <th><?php echo ucwords("Degree ");?></th>
+                                                <th><?php echo ucwords("Course ");?></th>
+                                                <th><?php echo ucwords("Batch ");?></th>
+                                                <th><?php echo ucwords("Semester ");?></th>
                                             </tr>
                                         </thead>
                                         <?php $degree = $this->db->get_where("degree",array("d_id"=>$edit_data[0]->std_degree))->result();
@@ -43,14 +43,13 @@ $this->load->helper("date_format");
                                              <td><?php  echo $batch[0]->b_name;?></td>
                                              <td><?php  echo $semester[0]->s_name;?></td>
                                              
-
                                          </tbody>
                                          </table>
                                            <table class="table table-striped" id="data-tables">
                                         <thead>
                                             <tr>
-                                                <th>Question</th>
-                                                <th>Answer</th>
+                                                <th><?php echo ucwords("Question");?></th>
+                                                <th><?php echo ucwords("Answer");?></th>
                                             </tr>
                                         </thead>
                                          <tbody>
