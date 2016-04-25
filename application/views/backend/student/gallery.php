@@ -238,6 +238,7 @@
         level1: { thumbnailWidth: 200, thumbnailHeight: 120 }
 			});
 			var contentGalleryMLN=[
+                            <?php if(count($gallery)) ?>
 				<?php foreach($gallery as $gal): ?>
 				{ src: '<?php echo base_url().'uploads/photogallery/'.$gal->main_img; ?>',
                                     srct: '<?php echo base_url().'uploads/photogallery/'.$gal->main_img; ?>', title: '<?php echo $gal->gallery_title; ?>',
