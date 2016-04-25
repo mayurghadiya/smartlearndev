@@ -43,7 +43,9 @@ function removeimg(image , id , img )
                                 <p><?php echo $row['gallery_desc']; ?></p>
                                 
                             </div>
-                            
+                            <div class="">
+                                <img src="uploads/photogallery/<?php echo $row['main_img'] ?>" style='width:300px;margin:20px;' >
+                            </div>
                             
 				 <div class="">
                         <?php  if(!empty($row['gallery_img'])) { 

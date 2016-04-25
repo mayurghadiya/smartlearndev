@@ -1,0 +1,239 @@
+.wp-smartstudy .cs-event-search-widget .cs-field{  position:relative; margin-bottom:20px;}
+.wp-smartstudy .cs-event-search-widget .cs-field input[type=text]{ background:#fff; padding-right:50px; border:1px solid #e5e5e5; border-radius:0;}
+.wp-smartstudy .cs-event-search-widget .cs-field label{ position:absolute; right:1px; top:1px; width:40px; height:40px; font-weight:normal; font-size:16px;}
+.wp-smartstudy .cs-event-search-widget .cs-field label:after{ content:'\f002'; font-family:'icomoon'; position:absolute; width:40px; height:40px; text-align:center; line-height:40px; color: #b0b0b0; z-index:2; top:0; right:0; pointer-events:none;}
+.wp-smartstudy .cs-event-search-widget .cs-field label input[type=submit]{width:40px; height:40px; border:0; background:none;}
+
+/* Cs Listing Filters Style Start */
+.wp-smartstudy .cs-event-filters a{text-decoration: none; outline: none;}
+.wp-smartstudy .cs-event-filters ul.cs-checkbox-list{height: 200px; padding: 10px 0 15px 0;}
+.wp-smartstudy .cs-event-filters .mCSB_scrollTools .mCSB_draggerRail{background-color: #f9fafa;}
+.wp-smartstudy .cs-event-filters ul{margin: 0px; padding: 10px 0 15px 0;}
+.wp-smartstudy .cs-event-filters .panel-group .panel + .panel{margin-top: 0px;}
+.wp-smartstudy .cs-event-filters ul li{list-style: none; display: inline-block; width: 100%; padding:0 0 5px 0; margin:0;}
+.wp-smartstudy .cs-event-filters .panel-title a{text-transform: uppercase !important; font-weight: bold; position: relative; display: block;}
+.wp-smartstudy .cs-event-filters .panel{box-shadow: none; border:none; border-radius:0px;  border-bottom: 1px solid #ebebec; margin-bottom: 12px;}
+.wp-smartstudy .cs-event-filters .panel-default > .panel-heading{background-image: none; background-color: #fff; border:none; padding:0px 0 10px;}
+.wp-smartstudy .cs-event-filters .panel-heading{border:none; border-radius: 0px;}
+.wp-smartstudy .cs-event-filters .panel-default > .panel-heading + .panel-collapse > .panel-body{border:none; padding: 0px;}
+.wp-smartstudy .cs-event-filters li .checkbox{margin: 0px; padding: 0px; line-height: 20px;}
+.wp-smartstudy .cs-event-filters li .checkbox label{margin-bottom: 0px; position: relative;  padding-left: 25px; font-size: 12px; color: #555; font-family: 'Montserrat', sans-serif;}
+.wp-smartstudy .cs-event-filters li input[type="checkbox"]{display: none;}
+.wp-smartstudy .cs-event-filters li .checkbox label:before{content: ""; position: absolute; left: 0px; top:3px; width: 12px; height: 12px; border-radius: 1px; border:1px solid #e7eaee;}
+.wp-smartstudy .cs-event-filters li input[type="checkbox"]:checked + label:after{content: "\e5ca"; position: absolute; left: 0px; top: 3px; font-family: "icomoon" !important; font-size: 12px; color: #fff; border-radius: 2px; width: 12px; height: 12px; line-height: 11px; }
+.wp-smartstudy .cs-event-filters .panel-title a:before{ content: "\e945"; position: absolute; right: 0px; top: 0; font-size: 16px; color: #cbcbcb; font-family: "icomoon" !important;}
+.wp-smartstudy .cs-event-filters .panel-title a.collapsed:before{content: "\e947"; position: absolute; right: 0px; top: 0; font-size: 16px; color: #cbcbcb; font-family: "icomoon" !important;}
+.wp-smartstudy .cs-event-filters  .cs-values{float: right;}
+/* Cs Listing Filters Style End */
+/* Recent Event Widget Style Start */
+.wp-smartstudy .cs-recent-event-widget{ margin:0; padding:0;}
+.wp-smartstudy .cs-recent-event-widget .widget-title{ margin-bottom:20px;}
+.wp-smartstudy .cs-recent-event-widget ul{ margin:0; padding:0;}
+.wp-smartstudy .cs-recent-event-widget ul li{ margin:0 0 25px 0; padding:0 0 25px 0; list-style:none; border-bottom:1px solid #ebebec;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post{ margin:0; padding:0;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-media{ float:left; width:85px; margin:0 17px 0 0;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-media img{ width:100%;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-text{ overflow:hidden;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-text h6{ margin:0 0 7px 0;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-text h6 a{ letter-spacing:0 !important; margin:0; padding:0; outline:none; text-decoration:none; font-size:14px !important; margin-bottom:0;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-text span{ font-size:12px; line-height:14px; color:#555; font-family: 'Montserrat', sans-serif; margin-bottom:7px; display:block;}
+.wp-smartstudy .cs-recent-event-widget ul li .cs-recrnt-post .cs-text .cs-location{ color:#aaa;}
+/* Recent Event Widget Style End */
+/* Calendar Event Widget Style Start */
+.responsive-calendar{ background:#f7f7f7; overflow:hidden; border-radius:4px; padding:10px 15px 0; margin-bottom:30px;}
+.responsive-calendar .controls {text-align: center;float: left;width: 100%; padding: 4px 10px 0 10px; height: 34px;}
+.responsive-calendar .controls a {cursor: pointer;}
+.responsive-calendar .controls h4 {display: inline-block;font-weight: 500 !important; font-size: 14px !important; color: #333; text-transform: uppercase !important; margin: 0px; line-height: 36px !important;}
+.responsive-calendar .day.not-current{ text-indent:-9999px;}
+.responsive-calendar .day.not-current a{ display:none;}
+.responsive-calendar .day-headers, .responsive-calendar .days { font-size: 0;}
+.responsive-calendar .days{ float: left; width: 100%;}
+.responsive-calendar .day-headers{ float: left; width: 100%;}
+.responsive-calendar .day-headers .day.header{padding:0 0 0 0;}
+.responsive-calendar .day {  display: inline-block; position: relative; font-size: 14px; width:13.9%; text-align: center; color: #787b7e; text-transform: uppercase; vertical-align: middle;  line-height: 29px;}
+.responsive-calendar .day a { color: #787b7e; display:inline-block; cursor: pointer; margin:0 9px; font-size: 14px;  line-height: 24px; width:24px; height:24px;}
+.responsive-calendar .day a:hover { text-decoration: none; color: #fff; border-radius: 100%;}
+.responsive-calendar .day.active a { color: #ffffff; background:#fff; border-radius:50%;}
+.responsive-calendar .day.active:hover a { color: #fff !important;}
+.responsive-calendar .day .badge { position: absolute;top: 2px;right: 2px; z-index: 1; display: none;}
+.responsive-calendar .btn-primary{color: #b6b6b6; font-size: 20px; background:none; border: none; box-shadow: none; padding: 3px 0 0 0;}
+/* Calendar Event Widget Style End */
+/* widget-event-links style start */
+.wp-smartstudy .widget-event-links .widget-title{margin-bottom: 20px;}
+.wp-smartstudy .widget-event-links .widget-title h6{text-transform: uppercase !important;}
+.wp-smartstudy .widget-event-links ul li{list-style: none; position: relative; padding:8px 0 8px 15px; border-top: 1px solid #f0f0f0;}
+.wp-smartstudy .widget-event-links ul li:before{position: absolute; content: ''; top: 19px; left: 0; width: 4px; height: 4px; border-radius: 50%; background: #ccc;}
+.wp-smartstudy .widget-event-links ul li a{color: #555; font-size: 13px; text-decoration: none; outline: none;}
+.wp-smartstudy .widget-event-links ul li:hover a{color: #207dba;}
+.wp-smartstudy .widget-event-links ul li span{font-size: 12px; color: #aaa; margin-left: 5px;}
+/* widget-event-links  Style End */
+/* widget-event-contact-info  style start */
+.wp-smartstudy .widget-event-contact-info .widget-title{margin-bottom: 20px;}
+.wp-smartstudy .widget-event-contact-info .widget-title h6{text-transform: uppercase !important;}
+.wp-smartstudy .widget-event-contact-info ul{background: #fbfbfb; border:1px solid #efefef; padding:25px 30px 20px;}
+.wp-smartstudy .widget-event-contact-info ul li{list-style: none; margin-bottom: 15px;}
+.wp-smartstudy .widget-event-contact-info ul li .cs-media{float: left; width: 35px;}
+.wp-smartstudy .widget-event-contact-info ul li .cs-media i{ font-size:17px; color:#aaa;}
+.wp-smartstudy .widget-event-contact-info ul li .cs-text{overflow: hidden; font-size: 12px; color: #555; line-height: 22px;}
+.wp-smartstudy .widget-event-contact-info ul li .cs-text a{text-decoration: none;}
+/* widget-event-contact-info style End */
+/* Event List Style Start */
+.wp-smartstudy .cs-section-title:after{ clear:both; content:''; display:block;}
+.wp-smartstudy .cs-event.list{ margin:0 0 50px 0; padding:0;}
+.wp-smartstudy .cs-event.list:after{ clear:both; content:''; display:block;}
+.wp-smartstudy .cs-event.list .cs-media{ float:left; width:270px; text-align:center; background:#f9f9f9; margin:0 40px 0 0;}
+.wp-smartstudy .cs-event.list .cs-media figure img{ width:100%;}
+.wp-smartstudy .cs-event.list .cs-media figure figcaption{ padding:10px 15px; font-size:12px; color:#555; font-family: 'Montserrat', sans-serif;}
+.wp-smartstudy .cs-event.list .cs-text { overflow:hidden; padding:0;}
+.wp-smartstudy .cs-event.list .cs-text .cs-post-title{ border-bottom:1px solid #f5f5f5; margin: 0 0 10px 0;}
+.wp-smartstudy .cs-event.list .cs-text .cs-post-title span{ display:block; text-transform:uppercase;}
+.wp-smartstudy .cs-event.list .cs-text .cs-post-title h3 a{ text-decoration:none; outline:none;}
+.wp-smartstudy .cs-event.list .cs-text .cs-location{ color:#aaa; font-size:12px; display:block;}
+.wp-smartstudy .cs-event.list .cs-text .cs-location i{ font-size:14px;}
+.wp-smartstudy .cs-event.list .cs-text .cs-event-price span{ display:inline-block; vertical-align:middle; color:#aaa; text-transform: uppercase; font-size:12px;}
+.wp-smartstudy .cs-event.list .cs-text .cs-event-price span em{ font-style:normal; display:inline-block; vertical-align:top; font-size:14px; font-family: 'Montserrat', sans-serif;}
+.wp-smartstudy .cs-event.list .cs-text .cs-event-price span em sup{ top:0; font-size:14px; margin-left:5px;}
+.wp-smartstudy .cs-event.list .cs-text .cs-event-price a{ display:inline-block; vertical-align:middle; padding:3px 17px; background:#81c483; font-size:11px; text-transform:uppercase; text-decoration:none; line-height:26px; font-family: 'Montserrat', sans-serif; color:#fff; margin-left:15px;}
+/* Event List Style End */
+/* Event Grid Page Style Start */
+.wp-smartstudy .cs-events-masonry .grid {list-style: none;margin: 0 auto;padding: 0;}
+.wp-smartstudy .cs-events-masonry .grid li {display: block;float: left;padding:0 20px;width: 33%;opacity: 0;}
+/* Event Grid Simple Post Style Start */
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple{ border:1px solid #f5f5f5; margin-bottom:40px; text-align:center;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-media{ margin:0;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-media img{ width:100%;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text{ padding:10px 0 20px; position:relative;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-post-title h5,
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-post-title h5 a{ font-weight:normal !important; letter-spacing:0 !important; text-decoration:none; outline:none;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-post-title span{ font-size:12px; text-transform:uppercase; color:#aaa;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-separate{ position:relative; overflow:hidden; width:100%;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-separate:after{ position:absolute; left:-53%; top:13px; content:''; height:1px; width:100%; background:#f5f5f5;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-separate:before{ position:absolute; right:-53%; top:13px; content:''; height:1px; width:100%; background:#f5f5f5;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-location{ font-size:12px; line-height:16px; color:#aaa; display:block; margin:0 0 17px 0 ;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.simple .cs-text .cs-buynow{ display:inline-block; text-decoration:none; outline:none; color:#fff; text-transform:uppercase; padding:2px 17px; line-height:26px;font-family: 'Montserrat', sans-serif; font-size:11px; margin:0;}
+/* Event Grid Simple Post Style End */
+/* Event Grid Fancy Post Style Start */
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy{ border:1px solid #f5f5f5; margin-bottom:40px; text-align:left;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-media{ margin:0;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-media img{ width:100%;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text{ padding:10px 15px 0px; position:relative;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-post-title h5,
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-post-title h5 a{ font-weight:normal !important; letter-spacing:0 !important; text-decoration:none; outline:none;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-post-title span{ font-size:12px; text-transform:uppercase; color:#aaa;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-location{ font-size:12px; line-height:16px; color:#aaa; display:block; margin:0 0 17px 0 ;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price{ border-top:1px solid #f5f5f5; padding: 0 15px 0; margin:0 -15px; overflow:hidden;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price span{ display:inline-block; vertical-align:middle; color:#aaa; text-transform: uppercase; font-size:14px;font-family: 'Montserrat', sans-serif; padding:9px 0;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price span em{ font-style:normal; display:inline-block; vertical-align:top; font-size:14px; }
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price span em sup{ top:0; font-size:14px; margin-left:5px;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price .cs-right-box{ margin:0 -15px 0 0; padding:0; float:right;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price .cs-right-box a{ text-decoration:none; outline:none; border-left:1px solid #f5f5f5; text-align:center; width:48px; padding:0 0; display:inline-block; margin:0 -4px 0 0; height:46px; line-height:46px;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price .cs-right-box .cs-like{ }
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.fancy .cs-text .cs-event-price .cs-right-box .cs-share{display:inline-block;}
+/* Event Grid Fancy Post Style End */
+/* Event Grid Modren Post Style Start */
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren{ border:1px solid #f5f5f5; margin-bottom:40px; text-align:left;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-media{ margin:0;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-media img{ width:100%;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text{ padding:10px 15px 0px; position:relative;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-post-title h5,
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-post-title h5 a{ font-weight:normal !important; letter-spacing:0 !important; text-decoration:none; outline:none;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-post-title span{ font-size:12px; text-transform:uppercase; color:#aaa;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-location,
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-date{ font-size:12px; line-height:16px; color:#aaa; display:block; margin:0 0 7px 0 ;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-location i,
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-date i{ display:inline-block; margin:0; padding: 0 5px 0 0; font-size:14px; color:#aaa;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-event-price{ border-top:1px solid #f5f5f5; padding: 0 0 4px 0; margin:15px 0 0 0; overflow:hidden;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-event-price .cs-buynow{ display:inline-block; text-decoration:none; outline:none; color:#fff; text-transform:uppercase; padding:2px 17px; line-height:26px;font-family: 'Montserrat', sans-serif; font-size:11px; margin:9px 0 0 0;}
+.cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-event-price .cs-right-box{ margin:0 0 0 0; padding:0; float:right;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-event-price .cs-right-box a{ text-decoration:none; outline:none; border-left:0; text-align:center; width:48px; padding:0 0; display:inline-block; margin:0 -4px 0 0; height:46px; line-height:46px;}
+.wp-smartstudy .cs-events-masonry .grid li .cs-event.grid.modren .cs-text .cs-event-price .cs-right-box .cs-share{display:inline-block;}
+/* Event Grid Modren Post Style End */
+.wp-smartstudy .cs-events-masonry .grid li.shown,
+.no-js .wp-smartstudy .cs-events-masonry .grid li,
+.no-cssanimations .wp-smartstudy .cs-events-masonry .grid li {opacity: 1;}
+.wp-smartstudy .cs-events-masonry .grid li a, .wp-smartstudy .cs-events-masonry .grid li img {outline: none;border: none;display: block;max-width: 100%;}
+.wp-smartstudy .cs-events-masonry .grid.effect-2 li.animate {-webkit-transform: translateY(200px);transform: translateY(200px);-webkit-animation: moveUp 0.65s ease forwards;animation: moveUp 0.65s ease forwards;}
+@-webkit-keyframes moveUp {	0% { }100% { -webkit-transform: translateY(0); opacity: 1; }}
+@keyframes moveUp {0% { }100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }}
+/* Event Grid Page Style End */
+/* Event Detail Page Style Start */
+.wp-smartstudy .image-frame{ margin-bottom:40px;}
+.wp-smartstudy .cs-event-detail-holder{ border-bottom:1px solid #f5f6f7; margin:0 0 30px 0; padding:0;}
+.wp-smartstudy .cs-event-detail-heading{ padding:4px 0 0 0;}
+.wp-smartstudy .cs-event-detail-heading h6{ font-size:12px !important; text-transform:uppercase !important; padding-left:35px; position:relative;}
+.wp-smartstudy .cs-event-detail-heading h6 i{ position:absolute; left:0; top:-1px; font-size:20px;}
+.wp-smartstudy .cs-event-detail-holder .cs-post-title h3{ font-size:18px !important; text-transform:uppercase !important; margin-bottom:20px;}
+.wp-smartstudy .cs-event-detail-description .cs-tags{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-description .cs-tags i{ display:inline-block; vertical-align:middle; padding:0 0 0 0;}
+.wp-smartstudy .cs-event-detail-description .cs-tags ul{ display:inline-block; vertical-align:middle; margin:0; padding:0;}
+.wp-smartstudy .cs-event-detail-description .cs-tags ul li{ margin:0; padding:0 12px; display:inline-block; position:relative;}
+.wp-smartstudy .cs-event-detail-description .cs-tags ul li:first-child:after{ display:none;}
+.wp-smartstudy .cs-event-detail-description .cs-tags ul li:after{ content:'\e95e'; font-family:'icomoon'; position:absolute; left:-9px; top:-3px; color:#81c483;}
+.wp-smartstudy .cs-event-detail-description .cs-tags ul li a{ font-size:12px; margin:0; padding:0; display:block; text-decoration:none; outline:none; color:#81c483; background:none !important; border:0;}
+.wp-smartstudy .cs-event-detail-map{ position:relative;}
+.wp-smartstudy .cs-event-detail-map .map-opener{ position:absolute; right:0; top:0; outline:none; text-decoration:none; color:#aaa; font-size:12px; text-transform:uppercase;}
+.wp-smartstudy .cs-event-detail-map .map-opener:after{content:'\e5cd'; font-family:'icomoon'; position:absolute; left:-15px; top:0; color:#aaa;}
+.wp-smartstudy .cs-event-detail-map .map-opener.active:after{content:'\ea1b';}
+.wp-smartstudy .cs-event-detail-map .cs-map-holder{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-map .cs-map-holder img{ width:100%;}
+.wp-smartstudy .cs-event-detail-date-time{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-date-time .cs-add-date{position:absolute; right:0; top:0; outline:none; text-decoration:none; color:#81c483; font-size:12px; text-transform:uppercase;}
+.wp-smartstudy .cs-event-detail-date-time .cs-add-date:after{content:'\ea1b'; font-family:'icomoon'; position:absolute; left:-15px; top:0;}
+.wp-smartstudy .cs-event-detail-cost{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-cost .cs-event-price span{ letter-spacing:1px;font-family: 'Montserrat', sans-serif;display:inline-block; vertical-align:middle; font-size:16px; color:#333; text-transform:uppercase;}
+.wp-smartstudy .cs-event-detail-cost .cs-event-price span em{ font-style:normal; font-size:22px; display:inline-block;}
+.wp-smartstudy .cs-event-detail-cost .cs-event-price span em sup{ top:0;font-size:22px; display:inline-block; padding:0 0 0 5px;}
+.wp-smartstudy .cs-event-detail-cost .cs-event-price a{font-family: 'Montserrat', sans-serif; font-size:12px; vertical-align:middle;text-transform:uppercase; outline:none; text-decoration:none; padding:0 10px; color:#aaa;}
+.wp-smartstudy .cs-event-detail-tabs{ margin-bottom:10px;}
+.wp-smartstudy .cs-event-detail-tabs ul.nav-tabs{ margin:0 0 30px 0 ; padding:0; width:100%; border:0;}
+.wp-smartstudy .cs-event-detail-tabs ul.nav-tabs li{ margin:0 3px 0 0; padding:0; display:inline-block; float:none;}
+.wp-smartstudy .cs-event-detail-tabs ul.nav-tabs li a{ margin:0; padding:7px 23px; display:block; color: #aaa; border:1px solid #efefef; background:#fff; box-shadow:0 0 0 rgba(0,0,0,0.1);text-transform:uppercase; outline:none; text-decoration:none; font-size:12px;font-family: 'Montserrat', sans-serif; border-radius:4px;}
+.wp-smartstudy .cs-event-detail-tabs ul.nav-tabs li:hover a,
+.wp-smartstudy .cs-event-detail-tabs ul.nav-tabs li.active a{ color:#fff !important;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content{ margin:0; padding:0;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events{ margin:0; padding:0;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li{ margin:0; padding:0 0 0 35px; display:inline-block; width:100%; position:relative;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li:after{content:''; position:absolute; left:0;top:11px; background:#f0f1f2; width:9px; height:9px; border-radius:50%;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li:before{content:''; position:absolute; left:4px;top:28px; background:#f0f1f2; width:1px; height:80%;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li:last-child:before{ display:none;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li .cs-post-title span{ font-size:12px; color:#aaa; text-transform:uppercase;}
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li .cs-post-title h4,
+.wp-smartstudy .cs-event-detail-tabs .tab-content ul.cs-timeline-events li .cs-post-title h4 a{ text-transform:uppercase !important; font-size:18px !important; outline:none; text-decoration:none; margin-bottom:5px;}
+.wp-smartstudy .cs-event-detail-gallery{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-gallery .row{ margin:0 -3px;}
+.wp-smartstudy .cs-event-detail-gallery [class*="col-lg"], 
+.wp-smartstudy .cs-event-detail-gallery [class*="col-md"], 
+.wp-smartstudy .cs-event-detail-gallery [class*="col-sm"], 
+.wp-smartstudy .cs-event-detail-gallery [class*="col-xs"]{ padding:0 3px;}
+.wp-smartstudy .cs-event-detail-gallery .cs-gallery{ margin-bottom:6px;}
+.wp-smartstudy .cs-event-detail-gallery .cs-gallery a{ margin:0; padding:0;}
+.wp-smartstudy .cs-event-detail-gallery .cs-gallery img{ width:100%;}
+.wp-smartstudy .cs-event-detail-speakers{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post{ margin-bottom:30px;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-media{ width:145px; float:left; margin:0 30px 0 0;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-media img{ width:100%;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text{ overflow:hidden;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text .cs-post-title span{ font-size:12px; color:#aaa; display:block;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text .cs-post-title h4,
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text .cs-post-title h4 a{ margin:0; padding:0; text-decoration:none; outline:none; text-transform:uppercase !important;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text p{ margin-bottom:10px !important;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text .cs-view-profile{margin:0; padding:0; text-decoration:none; outline:none; text-transform:uppercase; font-size:12px; color:#aaa;}
+.wp-smartstudy .cs-event-detail-speakers .cs-speaker-post .cs-text .cs-view-profile i{ display:inline-block; padding:0 5px 0 0;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-social-media{ margin:0; padding:10px 0 10px 0;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-social-media li{ margin:0 -4px 0 0; padding:3px 2px; list-style:none; display:inline-block; vertical-align:middle;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-social-media li a{ margin:0; padding:0; list-style:none; display:block; color:#aaa;text-decoration:none; outline:none; font-size:14px; }
+.wp-smartstudy .cs-event-detail-speakers ul.cs-speaker-contact{ margin:0; padding:0;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-speaker-contact li{ margin:0; padding:5px 0; list-style:none; width:100%; border-top:1px solid #f2f2f2;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-speaker-contact li span{ color:#aaa; font-size:12px;font-family: 'Montserrat', sans-serif;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-speaker-contact li span b{ font-weight:normal;}
+.wp-smartstudy .cs-event-detail-speakers ul.cs-speaker-contact li span a{ margin:0; padding:0; outline:none; text-decoration:none; color:#aaa;}
+.wp-smartstudy .cs-event-share{ float:right; margin-left:-20px}
+.wp-smartstudy .cs-event-share .cs-share-btn{ display:inline-block; padding:2px 15px;text-decoration:none; outline:none; text-transform:uppercase; color:#aaa; border:1px solid #e0e0e0; border-radius:3px;}
+.wp-smartstudy .cs-event-share .cs-share-btn i{ display:inline-block; padding:0 10px 0 0;}
+.wp-smartstudy .cs-event-share .cs-share-btn:hover{ color:#fff;}
+.wp-smartstudy .cs-event-share ul.cs-nav{ margin:0; padding:0; display:inline-block; border-radius:3px;border:1px solid #e0e0e0;}
+.wp-smartstudy .cs-event-share ul.cs-nav li{ margin:0; padding:0; display:inline-block; margin: 0 -4px 0 0;}
+.wp-smartstudy .cs-event-share ul.cs-nav li a{ margin:0; padding:1px 13px; display:block; margin: 0 0 0 0;color:#aaa;text-decoration:none; outline:none; text-transform:uppercase; }
+.wp-smartstudy .cs-event-share ul.cs-nav li:first-child a{border-right:1px solid #e0e0e0;}
+.wp-smartstudy .cs-event-share ul.cs-nav li a:hover{ color:#fff;}
+/* Event Detail Page Style End */

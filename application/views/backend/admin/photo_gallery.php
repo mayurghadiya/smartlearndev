@@ -29,6 +29,24 @@
                 }
             });
         });
+        $(document).ready(function($){
+	images = new Array();
+	$(document).on('change','.coverimage',function(){
+		 files = this.files;
+		 $.each( files, function(){
+			 file = $(this)[0];
+			 if (!!file.type.match(/image.*/)) {
+	        	 var reader = new FileReader();
+	             reader.readAsDataURL(file);
+	             reader.onloadend = function(e) {
+	            	img_src = e.target.result; 
+	            	html = "<img class='img-thumbnail' style='width:300px;margin:20px;' src='"+img_src+"'>";
+	            	$('#image_container').html( html );
+	             };
+        	 } 
+		});
+	});
+});
     </script>
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -130,11 +148,30 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label">Main Image <span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input id="main_img" class="form-control coverimage" type="file" name="main_img"  />
+                                            </div>
+                                            <div id="image_container"></div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label">File Upload <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <input id="fileupload" class="form-control" type="file" name="galleryimg[]" multiple="multiple" />
+                                                <input id="fileupload" class="form-control " type="file" name="galleryimg[]" multiple="multiple" />
                                             </div>
+                                            
                                         </div>
+                                         <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Status</label>
+                                                    <div class="col-sm-5">
+                                                        <select name="status" class="form-control">
+                                                            <option value="">Select</option>
+                                                            <option value="1">Active</option>
+                                                            <option value="0">Inactive</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
                                                 <button type="submit" class="btn btn-info vd_bg-green">Add Gallery Images</button>
@@ -173,14 +210,24 @@
                 rules: {
                     title:"required",                    
                     description: "required",
+                    main_img:{ 
+                        required:true,
+                        extension:"gif|jpg|png|jpeg"
+                    },
+                    status:"required",
                     'galleryimg[]': {
                             required: true,
-                            extension: "gif|jpg|png"
+                            extension: "gif|jpg|png|jpeg"
                      }                    
                 },
                 messages: {
                     title: "Please enter title",
                     description: "Please enter description",                    
+                    main_img:{ 
+                        required:"Please upload main image",
+                        extension:"Only gif,jpg,png file is allowed!"
+                    },
+                    status:"Select Status",
                      'galleryimg[]':{
                             required : "Please upload atleast 1 photo",
                             extension:"Only gif,jpg,png file is allowed!"

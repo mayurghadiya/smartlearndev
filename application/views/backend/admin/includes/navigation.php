@@ -68,7 +68,7 @@
                         <span class="menu-text">Asset Management</span>
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu"   data-action="click-target"  <?php if($page_name=="events" || $page_name=="assignment" || $page_name=="project" || $page_name=="participate" || $page_name=="studyresource"  || $page_name=="library"){ ?> style="display: block;" <?php } ?>>
+                    <div class="child-menu"   data-action="click-target"  <?php if($page_name=="events" || $page_name=="assignment" || $page_name=="project" || $page_name=="participate" || $page_name=="studyresource"  || $page_name=="library" || $page_name == 'subscriber'){ ?> style="display: block;" <?php } ?>>
                         <ul class="clearfix">   
                             <li  <?php if($page_name=="events"){ ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/events">
@@ -101,7 +101,12 @@
                                 <a href="<?php echo base_url('index.php?admin/participate'); ?>">
                                     <span class="menu-text">Participate</span>  
                                 </a>
-                            </li>                            
+                            </li> 
+                            <li <?php if($page_name=="subscriber"){ ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url('index.php?admin/subscriber'); ?>">
+                                    <span class="menu-text">Subscriber</span>  
+                                </a>
+                            </li> 
                         </ul>
                     </div>
                 </li>	
@@ -315,6 +320,11 @@
                             <li >
                                 <a href="<?php echo base_url(); ?>index.php?media/photogallery">
                                     <span class="menu-text">Photo Gallery</span>  
+                                </a>
+                            </li>
+                             <li >
+                                <a href="<?php echo base_url(); ?>index.php?media/bannerslider">
+                                    <span class="menu-text">Banner Slider</span>  
                                 </a>
                             </li>
                             
