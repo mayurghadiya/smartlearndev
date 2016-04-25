@@ -309,7 +309,24 @@
                         </ul> 
                     </div>
                 </li> 
-
+                    <li>
+                    <a href="javascript:void(0);"   data-action="click-trigger" >
+                        <span class="menu-icon entypo-archive"><i class="fa fa-cubes"></i></span>
+                        <span class="menu-text">Media</span>  
+                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
+                    </a>
+                    <div class="child-menu" data-action="click-target" >
+                        <ul class="clearfix">          
+                            <li >
+                                <a href="<?php echo base_url(); ?>index.php?media/photogallery">
+                                    <span class="menu-text">Photo Gallery</span>  
+                                </a>
+                            </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </li>
                 <li >
                     <a href="javascript:void(0);" data-action="click-trigger" <?php if($page_name=="create_group" || $page_name=="list_group"){ ?> class="open" <?php } ?>>
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 

@@ -29,7 +29,7 @@ $semester = $this->db->get('semester')->result();
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Update CMS Page
+                    <?php echo ucwords("Update CMS Page");?>
                 </div>
             </div>
             <div class="panel-body">
@@ -37,7 +37,7 @@ $semester = $this->db->get('semester')->result();
                     <div class="box-content">  
                         <?php echo form_open(base_url() . 'index.php?admin/cms_manager/update/' . $edit_data->am_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit_cms_page', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Course<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select id="edit_degree" required="" name="degree" class="form-control">
                                     <option value="">Select</option>
@@ -50,7 +50,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Branch<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select id="edit_course" required="" name="course" class="form-control">
                                     <option value="">Select</option>
@@ -63,7 +63,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Batch<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select name="batch" required="" id="edit_batch" class="form-control">
                                     <option value="">Select</option>
@@ -75,7 +75,7 @@ $semester = $this->db->get('semester')->result();
                             </div>	
                         </div>                 
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Semester<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select id="edit_semester" required="" name="semester" class="form-control">
                                     <option value="">Select</option>
@@ -88,21 +88,21 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Title<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Page Title");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input id="page_title" required="" name="page_title" type="text" placeholder="Page Title" 
                                        value="<?php echo $edit_data->am_title; ?>">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Slug<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Page Slug");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input id="page_slug" required="" name="page_slug" type="text" placeholder="Page Slug"
                                        value="<?php echo $edit_data->am_url; ?>">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Content Type<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Content Type");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <select class="form-control" required="" id="content_type" required="" name="content_type" id="content_type">
                                     <option value="">Select</option>
@@ -112,7 +112,7 @@ $semester = $this->db->get('semester')->result();
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Content<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Page Content");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">												
                                 <div class="form-group">							
                                     <textarea id="edit_content_data" required="" name="content_data" rows="3" ><?php echo $edit_data->am_content; ?></textarea>
@@ -122,7 +122,7 @@ $semester = $this->db->get('semester')->result();
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">
-                                <button type="submit" class="submit btn btn-info">Edit</button>
+                                <button type="submit" class="submit btn btn-info"><?php echo ucwords("Edit");?></button>
                             </div>
                         </div>
                     </div> 

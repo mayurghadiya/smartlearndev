@@ -185,3 +185,15 @@ a.chat-button {
     margin: 10px;
     padding: 3px;
 }
+
+.gallery_img {
+    float: left;
+    margin: 15px 0 0 15px;
+    position: relative;
+}
+#remove_gallery_img {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: -6px;
+}

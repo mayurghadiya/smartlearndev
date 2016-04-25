@@ -10,30 +10,30 @@ foreach ($edit_data as $row) {
             <div class="panel-heading">
                 <div class="panel-title" >
                     <i class="entypo-plus-circled"></i>
-                    Update CMS Page
+                    <?php echo ucwords("Update CMS Page");?>
                 </div>
             </div>
             <div class="panel-body">
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                          <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>  
                         <?php echo form_open(base_url() . 'index.php?admin/cms/do_update/' . $row['c_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editcmsform', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Title<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Page Title");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input type="text" class="form-control" name="c_title" value="<?php echo $row['c_title']; ?>" id="c_title" required />
                             </div>
                         </div>                   
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Slug<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Page Slug");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <input type="text" class="form-control" required="" name="c_slug" value="<?php echo $row['c_slug']; ?>" id="c_slug"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Status</label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Status");?></label>
                             <div class="col-sm-10">
                                 <select name="c_status">
                                     <option value="1" <?php
@@ -50,7 +50,7 @@ foreach ($edit_data as $row) {
                             </div>
                         </div>	
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">Page Content<span style="color:red">*</span></label>
+                            <label class="col-sm-2 control-label"><?php echo ucwords("Page Content");?><span style="color:red">*</span></label>
                             <div class="col-sm-10 controls">
                                 <textarea id="edit_content_data" required="" name="edit_content_data"  class="ckeditor" data-rel="ckeditor"  rows="3" ><?php echo $row['c_description']; ?></textarea>
                             </div>

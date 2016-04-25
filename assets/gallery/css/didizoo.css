@@ -1,0 +1,70 @@
+#instagram-container {
+	float:left;
+	overflow: hidden;
+	max-height: 170px;
+	height: 170px;
+	width: 100%;
+	bottom: 42px;
+	position: absolute;
+	white-space: nowrap;
+	margin: 0 auto;
+}
+#instagram {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: table;
+	float: left;
+}
+.instagram-wrap {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 2s ease-in-out;
+	transition: transform 2s ease-in-out;
+}
+/*.instagram-image {
+	background: #fff;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	height: 150px;
+	width: 150px;
+}*/
+.instagram-image {
+  height: 85px;
+  margin: 0;
+  padding: 1px;
+  width: 85px;
+}
+.instagram-link {
+	/*position: absolute;*/
+}
+.instagram-wrap .likes {
+	position: absolute;
+	height: 16px;
+	left: auto;
+	margin: 0;
+	padding: 0 5px 0 22px;
+	line-height: 16px;
+	border: 1px solid #ddd;
+	background: white url('../images/like.png') no-repeat 2px 0;
+	opacity: 0.8;
+	color: #f15c2b;
+	right: 0;
+	bottom: 10px;
+}
+#left_scroll, #right_scroll {
+	float: left;
+	height: 130px;
+	width: 15px;
+	background: #C0C0C0;
+}
+
+#instagram-container .innerScrollArea {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}

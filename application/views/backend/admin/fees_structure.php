@@ -5,15 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Fee Management</li>
+                        <li><a href="#"><?php echo ucwords("home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Fee Management");?></li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Fee Structure</h1>
+                    <h1><?php echo ucwords("Fee Structure");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -23,11 +23,11 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Fee Structure List
+                                    <?php echo ucwords("Fee Structure List");?>
                                 </a></li>
                             <li>
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Fee Structure
+                                    <?php echo ucwords("Add Fee Structure");?>
                                 </a></li>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -41,13 +41,13 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Title</th>
-                                                <th>Course</th>
-                                                <th>Branch</th>
-                                                <th>Batch</th>
-                                                <th>Semester</th>
-                                                <th>Fee</th>
-                                                <th>Action</th>
+                                                <th><?php echo ucwords("Title");?></th>
+                                                <th><?php echo ucwords("Course");?></th>
+                                                <th><?php echo ucwords("Branch");?></th>
+                                                <th><?php echo ucwords("Batch");?></th>
+                                                <th><?php echo ucwords("Semester");?></th>
+                                                <th><?php echo ucwords("Fee");?></th>
+                                                <th><?php echo ucwords("Action");?></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -78,20 +78,20 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">    
                                     <div class="">
-                                        <span style="color:red">* is mandatory field</span> 
+                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                     </div>                                       
                                     <form class="form-horizontal form-groups-bordered validate" id="feesstructure" 
                                           action="<?php echo base_url('index.php?admin/fees_structure/create'); ?>" method="post" role="form">
                                         <br/>
                                         <div class="padded">
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Title<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Title");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="title" name="title" class="form-control"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="degree" name="degree">
                                                         <option value="">Select</option>
@@ -102,7 +102,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="course" name="course">
 
@@ -110,7 +110,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="batch" name="batch">
 
@@ -118,7 +118,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" id="semester" name="semester">
                                                         <option value="">Select</option>                                                        
@@ -126,44 +126,44 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Fee<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Fee");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="fees" class="form-control" name="fees"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Start Date<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Start Date");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="start_date" class="form-control datepicker" name="start_date"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">End Date<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("End Date");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="end_date" class="form-control datepicker" name="end_date"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Expiry Date<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Expiry Date");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="expiry_date" class="form-control datepicker" name="expiry_date"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Penalty<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Penalty");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="penalty" class="form-control" name="penalty"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Description</label>
+                                                <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
                                                 <div class="col-sm-5">
                                                     <textarea id="description" name="description" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-5">
-                                                    <button type="submit" class="btn btn-info vd_bg-green">Add Fees Structure</button>
+                                                    <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
                                                 </div>
                                             </div>
                                     </form>               

@@ -10,16 +10,16 @@
                 <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">System Settings</li>
+                        <li><a href="#"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("System Settings");?></li>
                     </ul>                  
                 </div>
             </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>System Setting</h1>
+                    <h1><?php echo ucwords("System Setting");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -30,12 +30,12 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#system" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    System Setting
+                                    <?php echo ucwords("System Setting");?>
                                 </a>
                             </li>
                             <li>
                                     <a href="#theme_setting" data-toggle="tab"><!--<i class="entypo-plus-circled"></i>-->
-                                    Theme Setting
+                                    <?php echo ucwords("Theme Setting");?>
                                 </a>
                             </li>
                         </ul>
@@ -52,45 +52,45 @@
 
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                System Setting
+                                                <?php echo ucwords("System Setting");?>
                                             </div>
                                         </div>
                                         <div class="panel-body">  
                                              <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">System Name<span style="color:red">*</span></label>
+                                                <label  class="col-sm-3 control-label"><?php echo ucwords("System Name");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="system_name" id="system_name" value="<?php echo $this->db->get_where('system_setting', array('type' => 'system_name'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">Phone<span style="color:red">*</span></label>
+                                                <label  class="col-sm-3 control-label"><?php echo ucwords("Phone");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="phone" id="system_phone" value="<?php echo $this->db->get_where('system_setting', array('type' => 'phone'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">Paypal Email<span style="color:red">*</span></label>
+                                                <label  class="col-sm-3 control-label"><?php echo ucwords("Paypal Email");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="paypal_email" id="paypal_email" value="<?php echo $this->db->get_where('system_setting', array('type' => 'paypal_email'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">Currency<span style="color:red">*</span></label>
+                                                <label  class="col-sm-3 control-label"><?php echo ucwords("Currency");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="currency" id="currency" value="<?php echo $this->db->get_where('system_setting', array('type' => 'currency'))->row()->description; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label  class="col-sm-3 control-label">System Email<span style="color:red">*</span></label>
+                                                <label  class="col-sm-3 control-label"><?php echo ucwords("System Email");?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="system_email" id="system_email" value="<?php echo $this->db->get_where('system_setting', array('type' => 'system_email'))->row()->description; ?>">
                                                 </div>
                                             </div>	
                                             <div class="form-group">
-                                                <label for="field-1" class="col-sm-3 control-label">Photo</label>                          
+                                                <label for="field-1" class="col-sm-3 control-label"><?php echo ucwords("Photo");?></label>                          
                                                 <div class="col-sm-9">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-new thumbnail" style="width: 100px; height: 100px;" data-trigger="fileinput">
@@ -107,7 +107,7 @@
                                             </div>	 	
                                             <div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-9">
-                                                    <button type="submit" class="btn btn-info vd_bg-green">Save</button>
+                                                    <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("save");?></button>
                                                 </div>
                                             </div>
 
@@ -127,7 +127,7 @@
 
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                Theme Setting
+                                                <?php echo ucwords("Theme Setting");?>
                                             </div>
                                         </div>
                                         <?php 
@@ -179,7 +179,7 @@
                                                             </a>
                                                                <a id="theme_blue.min.css" class="album-options" href="#">
                                                             <i class="entypo-check"></i>
-                                                            Select Theme
+                                                            <?php echo ucwords("Select Theme");?>
                                                             </a>  
                                                         </header>
                                                     </article>
@@ -193,8 +193,8 @@
                                                                   <img src="<?php echo base_url().'assets/images/system_img/green.png' ?>"   />
                                                             </a>
                                                              <a id="theme_green.min.css" class="album-options" href="#">
-                                                            <i class="entypo-check"></i>
-                                                            Select Theme
+                                                                <i class="entypo-check"></i>
+                                                                Select Theme
                                                             </a>
                                                         </header>
                                                     </article>

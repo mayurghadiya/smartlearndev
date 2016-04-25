@@ -1837,5 +1837,14 @@ class Student extends CI_Controller {
 
         echo $is_present_widget_order;
     }
+    
+    function gallery()
+    {
+        $this->db->order_by('gallery_id','DESC');
+        $page_data['gallery'] = $this->db->get('photo_gallery')->result();
+        $page_data['page_name'] = 'gallery';
+        $page_data['page_title'] = 'Gallery';
+        $this->load->view('backend/index', $page_data);
+    }
 
 }
