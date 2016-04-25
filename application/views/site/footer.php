@@ -131,6 +131,15 @@
     })
 </script>
 
+<style>
+    .cs-search-area{
+        display: none;
+    }
+    .cs-menu-slide, .icon-search2{
+        display: none;
+    }
+</style>
+
 <script>eval(mod_pagespeed_n5auxpLi_K);</script> <!-- Slick Nav js --> 
 <script src="<?php echo base_url(); ?>site_assets/scripts/chosen.select.js.pagespeed.jm.lPyT1rX-zq.js"></script> <!-- Chosen js --> 
 <script src="<?php echo base_url(); ?>site_assets/scripts/slick.js.pagespeed.jm.l0TXLYnuWd.js"></script> <!-- Slick Slider js --> 

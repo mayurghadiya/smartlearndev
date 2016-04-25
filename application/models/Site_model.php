@@ -83,4 +83,15 @@ class Site_model extends CI_Model {
             'email' => $email
         ))->num_rows();
     }
+    
+    /**
+     * Get recent events
+     * @return mixed
+     */
+    function events() {
+        $this->db->limit(3);
+        $this->db->order_by('event_date', 'DESC');        
+        
+        return $this->db->get('event_manager')->result();
+    }
 }

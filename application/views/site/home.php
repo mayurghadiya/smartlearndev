@@ -49,42 +49,22 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
+                        <?php
+                        foreach($events as $event) { ?>
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                             <div class="cs-event left">
                                 <div class="cs-media">
-                                    <span><strong>dec</strong>23</span>
+                                    <span><strong><?php echo date('M', strtotime($event->event_date)) ?></strong><?php echo date('d', strtotime($event->event_date)) ?></span>
                                 </div>
                                 <div class="cs-text">
-                                    <em>12:59Pm-03:00Pm</em>
-                                    <h5 style="margin-bottom:30px;"><a href="#">Four Sheridan teams set IAM3D Challenge Starting.</a></h5>
-                                    <span><i class="icon-map-marker"></i>Rolson Garden-New Walters Street</span>
+                                    <em><?php echo date('h:m A', strtotime($event->event_date)); ?></em>
+                                    <h6 style="margin-bottom:10px;"><a href="#"><?php echo $event->event_name; ?></a></h6>
+                                    <span><i class="icon-map-marker"></i><?php echo $event->event_location; ?></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="cs-event left">
-                                <div class="cs-media">
-                                    <span><strong>dec</strong>23</span>
-                                </div>
-                                <div class="cs-text">
-                                    <em>12:59Pm-03:00Pm</em>
-                                    <h5 style="margin-bottom:30px;"><a href="#">Four Sheridan teams set IAM3D Challenge Starting.</a></h5>
-                                    <span><i class="icon-map-marker"></i>Rolson Garden-New Walters Street</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="cs-event left">
-                                <div class="cs-media">
-                                    <span><strong>dec</strong>23</span>
-                                </div>
-                                <div class="cs-text">
-                                    <em>12:59Pm-03:00Pm</em>
-                                    <h5 style="margin-bottom:30px;"><a href="#">Four Sheridan teams set IAM3D Challenge Starting.</a></h5>
-                                    <span><i class="icon-map-marker"></i>Rolson Garden-New Walters Street</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>                       
+                        
                     </div>
                 </div>
             </div>

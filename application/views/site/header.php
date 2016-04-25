@@ -23,38 +23,13 @@
         <script>eval(mod_pagespeed_8U31Wg3Ylw);</script>
     </head>
     <body class="wp-smartstudy">
-        <div class="wrapper"> 
-            <!-- Side Menu Start -->
-            <div id="overlay"></div>
-            <div id="mobile-menu">
-                <ul>
-                    <li><a href="<?php echo base_url('index.php?home'); ?>">Home</a></li>
-                    <li><a href="<?php echo base_url('index.php?about'); ?>">About</a></li>
-                    <li class="menu-item-has-children"><a href="#">Courses</a>
-                        <ul>
-                            <?php foreach ($courses as $course) { ?>
-                                <li><a href="<?php echo base_url('index.php?course/' . $course->d_id); ?>"><?php echo $course->d_name; ?></a></li>
-                            <?php } ?>
-                        </ul>
-                    </li>
-                    <li><a href="#">Events</a>
-
-                    </li>
-
-                    <li><a href="<?php echo base_url('index.php?contact'); ?>">Contact</a>
-
-                    </li>
-                </ul>
-            </div>
-            <!-- Side Menu End -->
+        <div class="wrapper">             
             <!-- Header Start -->
             <header id="header" class=""> 
                 <div class="top-bar">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-                            </div>
+                        <div class="row">    
+                            <div class="col-lg-4 col-md-4"></div>
                             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                                 <div class="cs-user">
                                     <ul>                                        
