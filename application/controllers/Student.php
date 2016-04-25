@@ -1841,6 +1841,7 @@ class Student extends CI_Controller {
     function gallery()
     {
         $this->db->order_by('gallery_id','DESC');
+        $this->db->where('gal_status','1');
         $page_data['gallery'] = $this->db->get('photo_gallery')->result();
         $page_data['page_name'] = 'gallery';
         $page_data['page_title'] = 'Gallery';

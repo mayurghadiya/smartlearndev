@@ -317,6 +317,11 @@
                                     <span class="menu-text">Photo Gallery</span>  
                                 </a>
                             </li>
+                             <li >
+                                <a href="<?php echo base_url(); ?>index.php?media/bannerslider">
+                                    <span class="menu-text">Banner Slider</span>  
+                                </a>
+                            </li>
                             
                             
                         </ul>

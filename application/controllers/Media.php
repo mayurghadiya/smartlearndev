@@ -75,7 +75,7 @@ class Media extends CI_Controller {
                 // next we pass the upload path for the images
                 $config['upload_path'] = FCPATH . 'uploads/photogallery';
                 // also, we make sure we allow only certain type of images
-                $config['allowed_types'] = 'gif|jpg|png';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
                 for ($i = 0; $i < $number_of_files; $i++) {
                   $_FILES['galleryimg']['name'] = $files['name'][$i];
                   $_FILES['galleryimg']['type'] = $files['type'][$i];
@@ -121,13 +121,43 @@ class Media extends CI_Controller {
               }else{
               $gallery = '';    
               }
+              
+              if(is_uploaded_file($_FILES['main_img']['tmp_name']))
+              {
+               $config1['upload_path'] = FCPATH . 'uploads/photogallery';
+		$config1['allowed_types'] = 'gif|jpg|png|jpeg';
+                $ext = explode(".",$_FILES['main_img']['name']);
+                $ext_file =strtolower(end($ext));
+                $config1['file_name'] = date('dmYhis').'main.'.$ext_file;
+               
+		$this->load->library('upload', $config1);
+
+		if ( ! $this->upload->do_upload('main_img'))
+		{
+              
+                    $error = "Invalid Main Image";
+                    $this->session->set_flashdata('flash_message',$error);
+                    redirect(base_url().'index.php?media/photogallery');
+		}
+		else
+		{
+                    $upl_path= FCPATH . 'uploads/photogallery/'.$config1['file_name'];
+                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+                 
+                     $main_img = $config1['file_name'];
+		}
+              }
+              
 
               $title = $this->input->post("title");
+              $status = $this->input->post("status");
               $description = $this->input->post("description");
               $gallery_img = $gallery;
               $insert = array("gallery_title"=>$title,
                               "gallery_desc"=>$description,
-                              "gallery_img"=>$gallery_img);
+                              "gallery_img"=>$gallery_img,
+                              "main_img"=>$main_img,
+                  "gal_status"=>$status);
 
                $this->photo_gallery->addmedia("photo_gallery",$insert);
 
@@ -174,7 +204,7 @@ class Media extends CI_Controller {
                 // next we pass the upload path for the images
                 $config['upload_path'] = FCPATH . 'uploads/photogallery';
                 // also, we make sure we allow only certain type of images
-                $config['allowed_types'] = 'gif|jpg|png';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
                 for ($i = 0; $i < $number_of_files; $i++) {
                   $_FILES['galleryimg2']['name'] = $files['name'][$i];
                   $_FILES['galleryimg2']['type'] = $files['type'][$i];
@@ -231,13 +261,51 @@ class Media extends CI_Controller {
                else{
                      $all_img  = $gal_data[0]->gallery_img;
                }
+                if(is_uploaded_file($_FILES['main_img']['tmp_name']))
+              {
+                 
+		$allowed_types = 'gif|jpg|png|jpeg';
+                $type = explode("|",$allowed_types);
+
+                
+                $ext = explode(".",$_FILES['main_img']['name']);
+                $ext_file =strtolower(end($ext));
+                $image1 = date('dmYhis').'main.'.$ext_file;
+               
+		$this->load->library('upload', $config1);
+
+		if (in_array($ext_file, $type))
+		{
+              
+                     $upl_path= FCPATH . 'uploads/photogallery/'.$image1;
+                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+                 
+                     $main_img = $image1;
+		}
+		else
+		{
+                   $error = "Invalid main image";
+                $this->session->set_flashdata('flash_message',$error);
+                redirect(base_url().'index.php?media/photogallery');
+		}
+              }
+              else{
+                  $main_img = $gal_data[0]->main_img;
+                
+              }
 
               $title = $this->input->post("title");
+              $status = $this->input->post("status");
               $description = $this->input->post("description");
               $gallery_img = $all_img;
+              $update_date = date("Y-m-d H:i:s");
               $update = array("gallery_title"=>$title,
                               "gallery_desc"=>$description,
-                              "gallery_img"=>$gallery_img);
+                              "gallery_img"=>$gallery_img,                              
+                              "main_img"=>$main_img,
+                              "update_date"=>$update_date,
+                  "gal_status"=>$status);
+              
 
                $this->photo_gallery->updatemedia($update,$param2);
 
@@ -284,6 +352,107 @@ class Media extends CI_Controller {
        $this->photo_gallery->updatemedia($data,$id);
        echo $item;
        
+        
+    }
+    
+    function bannerslider($param='' , $param2='')
+    {
+        if($param=="create")
+        {
+              if(is_uploaded_file($_FILES['main_img']['tmp_name']))
+              {
+               
+		$allowed_types = 'gif|jpg|png|jpeg';
+                $type = explode("|",$allowed_types);
+                $ext = explode(".",$_FILES['main_img']['name']);
+                $ext_file =strtolower(end($ext));
+                $image1 = date('dmYhis').'main.'.$ext_file;               
+		
+		if (in_array($ext_file, $type))
+		{
+                   $upl_path= FCPATH . 'uploads/bannerimg/'.$image1;
+                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+                   $main_img = $image1;
+		}
+		else
+		{
+                    $error = "Invalid main image";
+                    $this->session->set_flashdata('flash_message',$error);
+                    redirect(base_url().'index.php?media/bannerslider');
+		}
+              }
+              
+              
+              $title  = $this->input->post("title");
+              $status  = $this->input->post("status");
+              $description  = $this->input->post("description");
+            $insert = array("banner_title"=>$title,
+                "banner_desc"=>$description,
+                "banner_status"=>$status,
+                "banner_img"=>$main_img);
+            
+            $this->photo_gallery->addbanner($insert);
+             $success = "Banner added successfully";
+                    $this->session->set_flashdata('flash_message',$success);
+                    redirect(base_url().'index.php?media/bannerslider');
+        }
+        if($param=="do_update")
+        {
+           $banner =  $this->photo_gallery->getbanner($param2);
+             if(is_uploaded_file($_FILES['main_img']['tmp_name']))
+              {
+               
+		$allowed_types = 'gif|jpg|png|jpeg';
+                $type = explode("|",$allowed_types);
+                $ext = explode(".",$_FILES['main_img']['name']);
+                $ext_file =strtolower(end($ext));
+                $image1 = date('dmYhis').'main.'.$ext_file;               
+		
+		if (in_array($ext_file, $type))
+		{
+                   $upl_path= FCPATH . 'uploads/bannerimg/'.$image1;
+                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+                   $main_img = $image1;
+		}
+		else
+		{
+                    $error = "Invalid main image";
+                    $this->session->set_flashdata('flash_message',$error);
+                    redirect(base_url().'index.php?media/bannerslider');
+		}
+              }
+              else{
+                  $main_img = $banner[0]->banner_img;
+              }
+              
+              
+              $title  = $this->input->post("title");
+              $status  = $this->input->post("status");
+              $description  = $this->input->post("description");
+            $insert = array("banner_title"=>$title,
+                "banner_desc"=>$description,
+                "banner_status"=>$status,
+                "banner_img"=>$main_img);
+            
+            $this->photo_gallery->updatebanner($insert,$param2);
+             $success = "Banner updated successfully";
+                    $this->session->set_flashdata('flash_message',$success);
+                    redirect(base_url().'index.php?media/bannerslider');
+        }
+        if($param=="delete")
+        {
+            $this->db->where("banner_id",$param2);
+            $this->db->delete("banner_slider");
+             $success = "Banner deleted successfully";
+                    $this->session->set_flashdata('flash_message',$success);
+                    redirect(base_url().'index.php?media/bannerslider');
+        }
+        
+      $page_data["banners"] =  $this->photo_gallery->get_banner();
+        $page_data['title'] = 'Banner Slider';
+        $page_data['page_name'] = 'banner_slider';
+        $this->load->view('backend/index', $page_data);
+        
         
     }
 
