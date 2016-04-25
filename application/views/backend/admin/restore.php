@@ -5,9 +5,9 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> </li>
-                        <li><a href="pages-custom-product.html">Admin</a> </li>
-                        <li class="active">Restore</li>
+                        <li><a href="index.html"><?php echo ucwords("Home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Restore");?></li>
                     </ul>
                     <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step=5  data-position="left">
                         <div data-action="remove-navbar" data-original-title="Remove Navigation Bar Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-navbar-button menu"> <i class="fa fa-arrows-h"></i> </div>
@@ -18,7 +18,7 @@
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>System Restore</h1>
+                    <h1><?php echo ucwords("System Restore");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -28,7 +28,7 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    System Restore
+                                    <?php echo ucwords("System Restore");?>
                                 </a>
                         </ul>
                         <!------CONTROL TABS END------>
@@ -39,23 +39,23 @@
 
                                 <div class="panel-body">
                                      <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>
                                     <form id="restoreform" class="form-horizontal form-groups-bordered validate" role="form" action="" method="post" 
                                           enctype="multipart/form-data">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">File<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("File");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="file" class="form-control" name="userfile" id="userfile"/>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Restore</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("restore");?></button>
                                             </div>
                                         </div>
                                         <b>Note: Please take backup before system restore</b>
-										<br/><a href="<?php echo base_url('index.php?admin/backup'); ?>">Click here to backup</a>
+					<br/><a href="<?php echo base_url('index.php?admin/backup'); ?>">Click here to backup</a>
                                     </form>
                                 </div>
                             </div>

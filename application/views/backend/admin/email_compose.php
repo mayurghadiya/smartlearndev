@@ -14,8 +14,8 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>">Home</a> </li>
-                        <li><a href="<?php echo base_url('index.php?admin/email_inbox'); ?>">Email</a></li>
+                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                        <li><a href="<?php echo base_url('index.php?admin/email_inbox'); ?>"><?php echo ucwords("Email");?></a></li>
                         <li class="active">Email Compose</li>
                     </ul>
                     <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step=5  data-position="left">
@@ -31,7 +31,7 @@
 
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header">
-                    <h1>Email Compose</h1>
+                    <h1><?php echo ucwords("Email Compose");?></h1>
                     <small class="subtitle">Compose email page with address book filter</small>
 
                     <!-- vd_panel-menu -->            </div>
@@ -46,12 +46,12 @@
                             <!-- vd_panel-heading -->
 
                             <div class="panel-body">
-                                <h2 class="mgtp--10"><i class="icon-feather mgr-10 vd_green"></i> Compose New Email </h2>
+                                <h2 class="mgtp--10"><i class="icon-feather mgr-10 vd_green"></i> <?php echo ucwords("Compose New Email");?> </h2>
                                 <br/>
                                 <form class="form-horizontal" role="form" action="" method="post" 
                                       enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Course</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Course");?></label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="degree" name="degree" required="">
                                                 <option value="">Select</option>
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Branch</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?></label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="course" name="course" required="">
 
@@ -72,7 +72,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Batch</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?></label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="batch" name="batch" required="">
 
@@ -100,7 +100,7 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Teacher Email</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Teacher Email");?></label>
                                         <div class="col-sm-5">
                                             <select id="teacheremail" class="form-control" name="teacheremail[]" multiple="">
                                                 <?php foreach ($teacher as $row) { ?> 
@@ -111,28 +111,28 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Subject</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Subject");?></label>
                                         <div class="col-sm-5">
                                             <textarea class="form-control" name="subject" required=""></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Cc</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Cc");?></label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" name="cc"/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Message</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Message");?></label>
                                         <div class="col-sm-9">
                                             <textarea id="message" name="message" class="width-100 form-control"  rows="15" placeholder="Write your message here"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label">Attachment</label>
+                                        <label class="col-sm-3 control-label"><?php echo ucwords("Attachment");?></label>
                                         <div class="col-sm-5">
                                             <input type="file" class="form-control" name="userfile[]" multiple/>
                                         </div>
@@ -140,7 +140,7 @@
 
                                     <div class="form-group form-actions">
                                         <div class="col-sm-12 col-md-offset-3">
-                                            <button type="submit" class="btn vd_btn vd_bg-green vd_white"><i class="fa fa-envelope append-icon"></i> SEND</button>
+                                            <button type="submit" class="btn vd_btn vd_bg-green vd_white"><i class="fa fa-envelope append-icon"></i> <?php echo ucwords("Send");?></button>
 
                                         </div>
                                     </div>

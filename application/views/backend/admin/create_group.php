@@ -1,20 +1,29 @@
 <div class="vd_content-wrapper">
     <div class="vd_container">
         <div class="vd_content clearfix">
+             <div class="vd_head-section clearfix">
+                <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                        <li><a href=""><?php echo ucwords("home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("group creation");?></li>
+                    </ul>                  
+                </div>
+            </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Group Creation</h1>
+                    <h1><?php echo ucwords("Group Creation");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="">
-                            <span style="color:red">* is mandatory field</span> 
+                            <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                         </div>  
                         <?php echo form_open(base_url() . 'index.php?admin/create_group/create', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'id' => 'create_group')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Group Name<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Group Name");?><span style="color:red">*</span></label>
                             <div class="col-sm-5 controls">
                                 <input type="text" placeholder="Group Name" name="group_name">
                                 <span class="help-inline"></span> </div>
@@ -30,7 +39,7 @@
                             </div>
                         </div>	-->
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select name="degree" id="degree" >
                                     <option value="">Select Course</option>
@@ -46,7 +55,7 @@
                             </div>
                         </div>	
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Branch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select name="course" id="course" >
                                     <option value="">Select Branch</option>
@@ -55,7 +64,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Batch<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select name="batch" id="batch" onchange="get_student2(this.value);" >
                                     <option value="">Select batch</option>
@@ -64,7 +73,7 @@
                             </div>
                         </div>	
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Semester<span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select name="semester" id="semester"  onchange="get_students2(this.value);" >
                                     <option value="">Select semester</option>
@@ -102,7 +111,7 @@
                         <!-- col-sm-9-->
                         <div class="col-sm-3">                
                             <div class="mgbt-xs-5">
-                                <button class="btn vd_btn vd_bg-green " type="submit">Create Group</button>
+                                <button class="btn vd_btn vd_bg-green " type="submit"><?php echo ucwords("Create");?></button>
                             </div>
                         </div>
                     </div>		

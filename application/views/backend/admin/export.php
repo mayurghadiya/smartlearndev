@@ -5,15 +5,15 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Export</li>
+                        <li><a href="#"><?php echo ucwords("home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("Export");?></li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Export</h1>
+                    <h1><?php echo ucwords("Export");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -23,7 +23,7 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Export Data
+                                    <?php echo ucwords("Export Data");?>
                                 </a></li>
 
                         </ul>
@@ -34,11 +34,11 @@
                             <div class="tab-pane box active" id="list">
                                 <div class="box-content"> 
                                      <div class="">
-                                    <span style="color:red">* is mandatory field</span> 
+                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>              
                                     <form id="exportform" class="form-horizontal validate" action="#" method="post">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Module<span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Module<?php echo ucwords("home");?> <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="export_module" class="form-control" name="module_name" required="">
                                                     <option value="">Select</option>
@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button id="export" type="submit" class="btn btn-info vd_bg-green">Export</button>
+                                                <button id="export" type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("export");?></button>
                                             </div>
                                         </div>
                                     </form>
