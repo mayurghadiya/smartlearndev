@@ -63,7 +63,7 @@
 <!-- Banner End --> 
 <!-- Main Start -->
 <div class="main-section">
-    <div class="page-section" style="margin-bottom:10px">
+    <div class="page-section" style="margin-bottom:10px; margin-top: -50px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
