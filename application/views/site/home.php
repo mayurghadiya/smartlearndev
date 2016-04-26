@@ -214,7 +214,7 @@
             </div>
         </div>
     </div>
-    <div class="page-section" style="margin-bottom:80px;">
+    <div class="page-section">
         <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="cs-fancy-heading" style="margin-bottom:40px;">
                 <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
@@ -411,13 +411,6 @@
                     </div>
                 </li>
             </ul>
-        </div>
-    </div>
-    <div class="page-section" style="margin-bottom:40px;">
-        <div class="container">
-            <div class="row">
-
-            </div>
         </div>
     </div>
     <!-- Main End --> 
