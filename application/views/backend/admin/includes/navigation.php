@@ -16,7 +16,7 @@
                         <span class="menu-text">Basic Management</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
-                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject") { ?> style="display: block" <?php } ?>>
+                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus") { ?> style="display: block" <?php } ?>>
                         <ul>
                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/degree"> 
@@ -52,6 +52,11 @@
                             <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/subject">
                                     <span class="menu-text">Subject</span>  						
+                                </a> 
+                            </li>
+                             <li <?php if ($page_name == "syllabus") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>index.php?admin/syllabus">
+                                    <span class="menu-text">Syllabus Management</span>  						
                                 </a> 
                             </li>
                             <li>
