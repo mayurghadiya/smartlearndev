@@ -4128,8 +4128,18 @@ class Admin extends CI_Controller {
         echo json_encode($batch);
     }
 
-    function student_list_from_degree_course_batch($degree, $course, $batch) {
+    /**
+     * Student list by degree, course, batch, and semester
+     * @param type $degree
+     * @param type $course
+     * @param type $batch
+     * @param type $semester
+     */
+    function student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester) {
         $this->load->model('admin/Crud_model');
+        $student = $this->Crud_model->student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester);
+        
+        echo json_encode($student);
     }
 
     /**
@@ -5145,15 +5155,42 @@ class Admin extends CI_Controller {
      */
     function graduate($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
+        if($param1 == 'delete') {
+            $this->db->delete('graduates', array('graduates_id', $param2));
+            $this->session->set_flashdata('flash_message', 'Graduate succeffully deleted.');
+            redirect(base_url('index.php?admin/graduate'));
+        }
         if ($_POST) {
-            if ($param1 == 'create') {
-                
+            if ($param1 == 'create') {                
+                $this->Crud_model->save_graduates(array(
+                    'student_id'    => $_POST['student'],
+                    'degree_id'    => $_POST['degree'],
+                    'course_id' => $_POST['course'],
+                    'batch_id'  => $_POST['batch'],
+                    'semester_id'   => $_POST['semester'],
+                    'description'   => $_POST['description'],
+                    'graduate_year' => $_POST['year']
+                ));
+                $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');               
             } elseif ($param1 == 'update') {
-                
+                $this->Crud_model->save_graduates(array(
+                    'student_id'    => $_POST['student'],
+                    'degree_id'    => $_POST['degree'],
+                    'course_id' => $_POST['course'],
+                    'batch_id'  => $_POST['batch'],
+                    'semester_id'   => $_POST['semester'],
+                    'description'   => $_POST['description'],
+                    'graduate_year' => $_POST['year']
+                ), $param2);
+                $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');  
             }
+            
+             redirect(base_url('index.php?admin/graduate'));
         }
         $page_data['title'] = 'Recent Graduates';
         $page_data['page_name'] = 'graduate';
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['graduates'] = $this->Crud_model->get_all_graduates();
         $this->load->view('backend/index', $page_data);
     }
 

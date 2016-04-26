@@ -42,30 +42,29 @@ class Crud_model extends CI_Model {
     }
 
     /* End Code */
-    
-    /* Start syllabus */ 
-    function update_syllabus($data , $id)
-    {            
-            $this->db->update("smart_syllabus",$data,array("syllabus_id"=>$id));
-            
+
+    /* Start syllabus */
+
+    function update_syllabus($data, $id) {
+        $this->db->update("smart_syllabus", $data, array("syllabus_id" => $id));
     }
-    function delete_syllabus($id)
-    {
-        $this->db->where("syllabus_id",$id);
+
+    function delete_syllabus($id) {
+        $this->db->where("syllabus_id", $id);
         $this->db->delete("smart_syllabus");
     }
-    function getsyllabus($id)
-    {
-        $this->db->where("syllabus_id",$id);
+
+    function getsyllabus($id) {
+        $this->db->where("syllabus_id", $id);
         return $this->db->get('smart_syllabus')->result();
     }
-    function get_syllabus()
-    {
-     return   $this->db->get('smart_syllabus')->result();
+
+    function get_syllabus() {
+        return $this->db->get('smart_syllabus')->result();
     }
-    function add_syllabus($data)
-    {
-        $this->db->insert("smart_syllabus",$data);
+
+    function add_syllabus($data) {
+        $this->db->insert("smart_syllabus", $data);
     }
 
     /* End Code */
@@ -506,7 +505,7 @@ class Crud_model extends CI_Model {
                         ))
                         ->result();
     }
-    
+
     /**
      * All exam list
      * @param int $course_id
@@ -1067,7 +1066,7 @@ class Crud_model extends CI_Model {
                             'mark_obtained < ' => $passing_marks
                         ))->group_by('marks_manager.mm_std_id')->get()->result();
     }
-    
+
     /**
      * Failed student subject list
      * @param int $exam_id
@@ -1077,26 +1076,26 @@ class Crud_model extends CI_Model {
      */
     function remedial_exam_student_subject($exam_id, $student_id, $passing_marks) {
         return $this->db->select()
-                ->from('marks_manager')
-                ->where(array(
-                    'mm_std_id' => $student_id,
-                    'mm_exam_id' => $exam_id,
-                    'mark_obtained < '=>$passing_marks
-                ))->get()->result();
+                        ->from('marks_manager')
+                        ->where(array(
+                            'mm_std_id' => $student_id,
+                            'mm_exam_id' => $exam_id,
+                            'mark_obtained < ' => $passing_marks
+                        ))->get()->result();
     }
-    
+
     /**
      * Event manager
      * @return array
      */
     function event_manager() {
         return $this->db->select()
-                ->from('event_manager')
-                ->order_by('event_date', 'DESC')
-                ->get()
-                ->result_array();
+                        ->from('event_manager')
+                        ->order_by('event_date', 'DESC')
+                        ->get()
+                        ->result_array();
     }
-    
+
     /**
      * Get all subscriber
      * @return array
@@ -1105,17 +1104,17 @@ class Crud_model extends CI_Model {
         $this->db->order_by('created_at', 'DESC');
         return $this->db->get('subscriber')->result();
     }
-    
+
     /**
      * Delete subscriber
      * @param string $id
      */
     function delete_subscriber($id) {
         $this->db->delete('subscriber', array(
-            'id'    => $id
+            'id' => $id
         ));
     }
-    
+
     /**
      * Save exam seat no 
      * @param mixed $data
@@ -1123,10 +1122,10 @@ class Crud_model extends CI_Model {
      */
     function save_exam_seat_no($data) {
         $this->db->insert('exam_seat_no', $data);
-        
+
         return $this->db->insert_id();
     }
-    
+
     /**
      * Custom stduents details to generate seat no
      * @param mixed $where
@@ -1134,10 +1133,60 @@ class Crud_model extends CI_Model {
      */
     function custom_student_details($where) {
         return $this->db->select('std_id, semester_id, std_degree, course_id')
-                ->from('student')
-                ->where($where)
-                ->get()
-                ->result();
+                        ->from('student')
+                        ->where($where)
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Student list from degree, course, batch, and semester
+     * @param string $degree
+     * @param string $course
+     * @param string $batch
+     * @param string $semester
+     * @return mixed
+     */
+    function student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester) {
+        return $this->db->get_where('student', array(
+                    'std_degree' => $degree,
+                    'course_id' => $course,
+                    'std_batch' => $batch,
+                    'semester_id' => $semester
+                ))->result();
+    }
+
+    /**
+     * Insert or update graduates
+     * @param mixed $data
+     * @param string $id
+     */
+    function save_graduates($data, $id = NULL) {
+        if ($id) {
+            //update
+            $this->db->update('graduates', $data, array(
+                'graduates_id' => $id
+            ));
+        } else {
+            //insert
+            $this->db->insert('graduates', $data);
+        }
+    }
+
+    /**
+     * Get all graduates
+     * @return mixed
+     */
+    function get_all_graduates() {
+        return $this->db->select()
+                        ->from('graduates')
+                        ->join('student', 'student.std_id = graduates.student_id')
+                        ->join('degree', 'degree.d_id = graduates.degree_id')
+                        ->join('course', 'course.course_id = graduates.course_id')
+                        ->join('semester', 'semester.s_id = graduates.semester_id')
+                        ->order_by('graduates.created_at', 'DESC')
+                        ->get()
+                        ->result();
     }
 
 }
