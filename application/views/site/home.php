@@ -93,22 +93,21 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
-                        <?php
-                        foreach($events as $event) { ?>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="cs-event left">
-                                <div class="cs-media">
-                                    <span><strong><?php echo date('M', strtotime($event->event_date)) ?></strong><?php echo date('d', strtotime($event->event_date)) ?></span>
-                                </div>
-                                <div class="cs-text">
-                                    <em><?php echo date('h:m A', strtotime($event->event_date)); ?></em>
-                                    <h6 style="margin-bottom:10px;"><a href="#"><?php echo $event->event_name; ?></a></h6>
-                                    <span><i class="icon-map-marker"></i><?php echo $event->event_location; ?></span>
+                        <?php foreach ($events as $event) { ?>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="cs-event left">
+                                    <div class="cs-media">
+                                        <span><strong><?php echo date('M', strtotime($event->event_date)) ?></strong><?php echo date('d', strtotime($event->event_date)) ?></span>
+                                    </div>
+                                    <div class="cs-text">
+                                        <em><?php echo date('h:m A', strtotime($event->event_date)); ?></em>
+                                        <h6 style="margin-bottom:10px;"><a href="#"><?php echo $event->event_name; ?></a></h6>
+                                        <span><i class="icon-map-marker"></i><?php echo $event->event_location; ?></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php } ?>                       
-                        
+
                     </div>
                 </div>
             </div>
@@ -217,6 +216,9 @@
     </div>
     <div class="page-section" style="margin-bottom:80px;">
         <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="cs-fancy-heading" style="margin-bottom:40px;">
+                <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
+            </div>
             <ul class="row cs-testimonial main-testimonial">
                 <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
                     <div class="cs-media">
@@ -414,55 +416,7 @@
     <div class="page-section" style="margin-bottom:40px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="cs-fancy-heading" style="margin-bottom:40px;">
-                        <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <ul class="cs-graduate-slider">
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo1.jpg.pagespeed.ic.IfdYciHoiv.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo2.jpg.pagespeed.ic.wKvAxHC9Yh.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo3.jpg.pagespeed.ic.U_sjCp0ME9.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo4.jpg.pagespeed.ic.HZZ0Xr-cIP.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo5.jpg.pagespeed.ic.8Uv5xUR9s2.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo6.jpg.pagespeed.ic.OEOmRGi60j.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo5.jpg.pagespeed.ic.8Uv5xUR9s2.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo5.jpg.pagespeed.ic.8Uv5xUR9s2.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>

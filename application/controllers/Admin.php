@@ -738,28 +738,27 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
-    function holiday($param1 = '', $param2 = '')
-    {
-       if ($this->session->userdata('admin_login') != 1)
+    function holiday($param1 = '', $param2 = '') {
+        if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $data['holiday_name'] = $this->input->post('holiday_name');
             $data['holiday_startdate'] = date('Y-m-d', strtotime($this->input->post('holiday_startdate')));
             $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate')));
-            $year=explode('-',$data['holiday_startdate']);
+            $year = explode('-', $data['holiday_startdate']);
             $data['holiday_year'] = $year[0];
             $data['holiday_status'] = $this->status($this->input->post('batch_status'));
             $data['created_date'] = date('Y-m-d');
-           
+
             $this->db->insert('holiday', $data);
             $this->session->set_flashdata('flash_message', get_phrase('holiday_added_successfully'));
             redirect(base_url() . 'index.php?admin/holiday/', 'refresh');
         }
         if ($param1 == 'do_update') {
             $data['holiday_name'] = $this->input->post('holiday_name');
-           $data['holiday_startdate'] = date('Y-m-d', strtotime($this->input->post('holiday_startdate1')));
+            $data['holiday_startdate'] = date('Y-m-d', strtotime($this->input->post('holiday_startdate1')));
             $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate1')));
-            $year=explode('-',$data['holiday_startdate']);
+            $year = explode('-', $data['holiday_startdate']);
             $data['holiday_year'] = $year[0];
             $data['holiday_status'] = $this->status($this->input->post('batch_status'));
             $this->db->where('holiday_id', $param2);
@@ -771,14 +770,15 @@ class Admin extends CI_Controller {
             $this->db->where('holiday_id', $param2);
             $this->db->delete('holiday');
             $this->session->set_flashdata('flash_message', get_phrase('holiday_deleted_successfully'));
-           
+
             redirect(base_url() . 'index.php?admin/holiday/', 'refresh');
         }
         $page_data['holiday'] = $this->db->get('holiday')->result_array();
         $page_data['page_name'] = 'holiday';
         $page_data['page_title'] = 'Holiday Management';
-        $this->load->view('backend/index', $page_data); 
+        $this->load->view('backend/index', $page_data);
     }
+
     function batch($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
@@ -4915,10 +4915,10 @@ class Admin extends CI_Controller {
 
             if ($student_id != '') {
                 $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
-                redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' .$batch_id .'/' . $semester_id . '/' . $exam_id . '/' . $student_id));
+                redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id . '/' . $student_id));
             }
             $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
-            redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' .$batch_id .'/' . $semester_id . '/' . $exam_id));
+            redirect(base_url('index.php?admin/remedial_exam_marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id));
         }
         $page_data['degree_id'] = '';
         $page_data['course_id'] = '';
@@ -4985,25 +4985,45 @@ class Admin extends CI_Controller {
 
         echo json_encode(array('data' => $data));
     }
-    
+
     /**
      * Subscriber
      * 
      * @return response
      */
-    function subscriber($param1='', $param2='') {
+    function subscriber($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
-        if($param1 == 'delete') {
+        if ($param1 == 'delete') {
             $this->Crud_model->delete_subscriber($param2);
             $this->session->set_flashdata('flash_message', 'Subscriber is successfully deleted.');
-            
+
             redirect(base_url('index.php?admin/subscriber'));
         }
-        
+
         $page_data['title'] = 'Subscriber';
         $page_data['page_name'] = 'subscriber';
         $page_data['subscriber'] = $this->Crud_model->subscriber();
         $this->load->view('backend/index', $page_data);
+    }
+
+    /**
+     * Recent graduates
+     * @param string $param1
+     * @param string $param2
+     */
+    function graduate($param1 = '', $param2 = '') {
+        $this->load->model('admin/Crud_model');
+        if($_POST){
+            if($param1 == 'create'){
+                
+            } elseif($param1 == 'update'){
+                
+            }
+        }
+        $page_data['title'] = 'Recent Graduates';
+        $page_data['page_name'] = 'graduate';
+        $this->load->view('backend/index', $page_data);
+        
     }
 
 }
