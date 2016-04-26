@@ -75,6 +75,14 @@ class Site extends CI_Controller {
         $this->data['title'] = 'About us';
         $this->__template('about', $this->data);
     }
+    /*
+     * 
+     */
+    function syllabus() {        
+        $this->data['title'] = 'Syllabus';
+        $this->data['syllabus'] = $this->Site_model->get_all_syllabus();
+        $this->__template('syllabus', $this->data);
+    }
 
     /**
      * Contact action

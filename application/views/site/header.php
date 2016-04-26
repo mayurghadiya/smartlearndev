@@ -129,6 +129,8 @@
                                             <li><a href="#">Events</a><span>University Events</span>
 
                                             </li>
+                                            <li><a href="<?php echo base_url('index.php?syllabus'); ?>">Syllabus</a><span>Syllabus</span>
+                                            </li>
 
                                             <li><a href="<?php echo base_url('index.php?contact'); ?>">Contact</a><span>inquire with us</span>
 

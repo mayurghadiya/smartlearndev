@@ -21,6 +21,16 @@ class Site_model extends CI_Model {
         return $this->db->get('degree')->result();
     }
     
+    
+    /**
+     * Get all Syllabus
+     * @return mixed
+     */
+    
+    function get_all_syllabus() {
+        return $this->db->get('smart_syllabus')->result();
+    }
+    
     /**
      * Course details
      * @param int $id
