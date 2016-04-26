@@ -43,7 +43,6 @@
                             <h2>College Events</h2>
                             <p>Text of the printing and typesetting best industry. Lorem Ipsum has been the nome industry's.
                                 standard text ever.</p>
-                            <a href="#" class="cs-bgcolor"><i class="icon-keyboard_arrow_right"></i> Check Calender</a>
                         </div>
                     </div>
                 </div>

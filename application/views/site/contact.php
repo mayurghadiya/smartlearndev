@@ -114,11 +114,19 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="cs-contact-form">
                                     <div class="cs-section-title">
-                                        <h2>Quick Inquary</h2>
+                                        <h2>Quick Inquiry</h2>
+                                        <?php
+                                        $message = $this->session->flashdata('message');
+                                        if($message != '') { ?>
+                                        <div class="alert alert-success">
+                                            <button class="close" data-dismiss="alert">&times;</button>
+                                            <p><?php echo $message; ?></p>
+                                        </div>
+                                        <?php } ?>
                                     </div>
                                     <div class="form-holder">
                                         <div class="row">
-                                            <form>
+                                            <form action="" method="post">
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                     <div class="row">
                                                         <div class="cs-form-holder">
@@ -127,21 +135,21 @@
                                                             </div>
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="input-holder"> <i class="icon-user"></i>
-                                                                    <input type="text" placeholder="First Name & Last Name">
+                                                                    <input name="name" required="" type="text" placeholder="First Name & Last Name">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="row">
+                                                    <div class="row">                                                        
                                                         <div class="cs-form-holder">
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <label>Email Address</label>
                                                             </div>
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="input-holder"> <i class=" icon-envelope"></i>
-                                                                    <input type="text" placeholder="Example@domain.com">
+                                                                    <input name="email" required="" type="email" placeholder="Example@domain.com">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -155,7 +163,7 @@
                                                             </div>
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="input-holder"> <i class="icon-phone3"></i>
-                                                                    <input type="text" placeholder="773.702.8650">
+                                                                    <input name="phone" required="" type="text" placeholder="773.702.8650">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -169,7 +177,7 @@
                                                             </div>
                                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="input-holder"> <i class="icon-paragraph-left"></i>
-                                                                    <input type="text" placeholder="About this Course">
+                                                                    <input name="course" type="text" placeholder="About this Course">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -181,14 +189,14 @@
                                                     </div>
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                         <div class="input-holder"> <i class="icon-pencil-square-o"></i>
-                                                            <textarea placeholder="Text here..."></textarea>
+                                                            <textarea name="message" required="" placeholder="Text here..."></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-md-4 col-sm-12 col-md-12">
                                                     <div class="cs-field">
                                                         <div class="cs-btn-submit"> <i class=" icon-angle-right"></i>
-                                                            <input class="cs-bgcolor" type="submit" value="Submit Email" >
+                                                            <input class="cs-bgcolor" type="submit" value="Submit" >
                                                         </div>
                                                     </div>
                                                 </div>
