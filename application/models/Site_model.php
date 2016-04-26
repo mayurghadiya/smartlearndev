@@ -94,4 +94,11 @@ class Site_model extends CI_Model {
         
         return $this->db->get('event_manager')->result();
     }
+    
+    function banners()
+    {
+        $this->db->where('banner_status','1');
+        return $this->db->get('banner_slider')->result();
+        
+    }
 }

@@ -385,11 +385,20 @@ class Media extends CI_Controller {
               
               $title  = $this->input->post("title");
               $status  = $this->input->post("status");
+              $slide_option  = $this->input->post("slide_option");
+               
+               $pause_time = $this->input->post("pause_time");
+               $pause_on_hover = $this->input->post("pause_on_hover");
+               $caption_opacity =  $this->input->post("caption_opacity");
               $description  = $this->input->post("description");
             $insert = array("banner_title"=>$title,
                 "banner_desc"=>$description,
                 "banner_status"=>$status,
-                "banner_img"=>$main_img);
+                "banner_img"=>$main_img,
+                "slide_option"=>$slide_option,
+                 "pause_time"=>$pause_time,
+                "pause_on_hover"=>$pause_on_hover,
+                "caption_opacity"=>$caption_opacity);
             
             $this->photo_gallery->addbanner($insert);
              $success = "Banner added successfully";
@@ -429,10 +438,18 @@ class Media extends CI_Controller {
               $title  = $this->input->post("title");
               $status  = $this->input->post("status");
               $description  = $this->input->post("description");
+               $slide_option  = $this->input->post("slide_option");
+               $pause_time = $this->input->post("pause_time");
+               $pause_on_hover = $this->input->post("pause_on_hover");
+               $caption_opacity =  $this->input->post("caption_opacity");
             $insert = array("banner_title"=>$title,
                 "banner_desc"=>$description,
                 "banner_status"=>$status,
-                "banner_img"=>$main_img);
+                "banner_img"=>$main_img,
+                "slide_option"=>$slide_option,
+                "pause_time"=>$pause_time,
+                "pause_on_hover"=>$pause_on_hover,
+                "caption_opacity"=>$caption_opacity);
             
             $this->photo_gallery->updatebanner($insert,$param2);
              $success = "Banner updated successfully";
