@@ -137,16 +137,11 @@ class Student extends CI_Controller {
     }
        function holiday()
        {
-            $page_data['holiday'] = $this->db->get('holiday')->result();
             $page_data['page_name'] = 'holiday';
             $page_data['page_title'] = 'Holiday List';
             $this->load->view('backend/index', $page_data);           
        }
-       function  json_holiday()
-       {
-            $page_data= $this->db->get('holiday')->result();
-            echo json_encode($page_data);
-       }
+       
        
        function get_event() {
         $s_date = $this->input->post('date');
