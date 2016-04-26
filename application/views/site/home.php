@@ -41,14 +41,17 @@
                                       <?php if($slide1->pause_time!=""){ ?>     
                            pauseTime:<?php echo $slide1->pause_time; ?>, 
                                       <?php  } ?>
-                                          <?php if($slide1->pause_on_hover!=""){ ?>     
+                                    <?php if($slide1->pause_on_hover!=""){ ?>     
                     pauseOnHover:<?php echo $slide1->pause_on_hover; ?>, 
                                           <?php } ?>
-                                              <?php if($slide1->caption_opacity!=""){ ?>     
+                                    <?php if($slide1->caption_opacity!=""){ ?>     
                     captionOpacity: <?php echo $slide1->caption_opacity; ?>,
-                                              <?php  } ?>                                                 
+                                     <?php  } ?>  
+                                    <?php if($slide1->anim_speed!=""){ ?>     
+                    animSpeed: <?php echo $slide1->anim_speed; ?>,
+                                      <?php  } ?>  
                                                   
-                                                  animSpeed: 200,
+                                                 
                                         
 
 

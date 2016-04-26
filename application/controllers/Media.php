@@ -391,6 +391,7 @@ class Media extends CI_Controller {
                $pause_on_hover = $this->input->post("pause_on_hover");
                $caption_opacity =  $this->input->post("caption_opacity");
               $description  = $this->input->post("description");
+               $anim_speed =  $this->input->post("anim_speed");
             $insert = array("banner_title"=>$title,
                 "banner_desc"=>$description,
                 "banner_status"=>$status,
@@ -398,7 +399,8 @@ class Media extends CI_Controller {
                 "slide_option"=>$slide_option,
                  "pause_time"=>$pause_time,
                 "pause_on_hover"=>$pause_on_hover,
-                "caption_opacity"=>$caption_opacity);
+                "caption_opacity"=>$caption_opacity,
+                "anim_speed"=>$anim_speed);
             
             $this->photo_gallery->addbanner($insert);
              $success = "Banner added successfully";
@@ -442,6 +444,7 @@ class Media extends CI_Controller {
                $pause_time = $this->input->post("pause_time");
                $pause_on_hover = $this->input->post("pause_on_hover");
                $caption_opacity =  $this->input->post("caption_opacity");
+               $anim_speed =  $this->input->post("anim_speed");
             $insert = array("banner_title"=>$title,
                 "banner_desc"=>$description,
                 "banner_status"=>$status,
@@ -449,7 +452,8 @@ class Media extends CI_Controller {
                 "slide_option"=>$slide_option,
                 "pause_time"=>$pause_time,
                 "pause_on_hover"=>$pause_on_hover,
-                "caption_opacity"=>$caption_opacity);
+                "caption_opacity"=>$caption_opacity,
+                "anim_speed"=>$anim_speed);
             
             $this->photo_gallery->updatebanner($insert,$param2);
              $success = "Banner updated successfully";
