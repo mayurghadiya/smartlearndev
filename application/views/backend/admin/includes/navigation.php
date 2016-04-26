@@ -59,6 +59,16 @@
                                     <span class="menu-text">Syllabus Management</span>  						
                                 </a> 
                             </li>
+                            <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>index.php?admin/holiday">
+                                    <span class="menu-text">Holiday</span>  						
+                                </a> 
+                            </li>
+                            <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>index.php?admin/chancellor">
+                                    <span class="menu-text">Chancellor</span>  						
+                                </a> 
+                            </li>
                             <li>
                                                          <!--  <a href="<?php echo base_url(); ?>index.php?admin/center">
                                                                <span class="menu-text">Exam Center</span>  						
@@ -115,7 +125,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="hidden">
+                <li>
                     <a class="<?php if($page_name == 'graduate') echo 'open'; ?>" href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon"><i class="fa fa-building"> </i></span>
                         <span class="menu-text">University</span>

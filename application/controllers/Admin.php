@@ -882,7 +882,87 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Holiday Management';
         $this->load->view('backend/index', $page_data);
     }
+    
+    function chancellor($param1 = '', $param2 = '')
+    {
+        if ($this->session->userdata('admin_login') != 1)
+            redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['people_name'] = $this->input->post('name');
+            $data['people_phone'] = $this->input->post('mobileno');
+            $data['people_email'] = $this->input->post('email_id');
+            $data['people_designation'] = $this->input->post('designation');
+            $data['people_description'] = $this->input->post('description');
+            $data['facebook_link'] = $this->input->post('facebook');
+            $data['twitter_link'] = $this->input->post('twitter');
+            $data['google_plus_link'] = $this->input->post('googleplus');
+           
+             if ($_FILES['profilefile']['name'] != '') {
 
+                $config['upload_path'] = 'uploads/system_image';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('profilefile')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $data['people_photo'] = $file['file_name'];
+                }
+            } else {
+
+                $data['people_photo'] = '';
+            }
+            
+            $this->db->insert('university_peoples', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('chancellor_added_successfully'));
+            redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+        }
+         if ($param1 == 'do_update') {
+            $data['people_name'] = $this->input->post('name');
+            $data['people_phone'] = $this->input->post('mobileno');
+            $data['people_email'] = $this->input->post('email_id');
+            $data['people_designation'] = $this->input->post('designation');
+            $data['people_description'] = $this->input->post('description');
+            $data['facebook_link'] = $this->input->post('facebook');
+            $data['twitter_link'] = $this->input->post('twitter');
+            $data['google_plus_link'] = $this->input->post('googleplus');
+            
+              if ($_FILES['profilefile']['name'] != '') {
+                  unlink("uploads/system_image/" . $this->input->post('txtoldfile'));
+                $config['upload_path'] = 'uploads/system_image';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('profilefile')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $data['people_photo'] = $file['file_name'];
+                }
+            } 
+            $this->db->where('university_people_id', $param2);
+            $this->db->update('university_peoples', $data);
+           
+            $this->session->set_flashdata('flash_message', get_phrase('chancellor_updated_successfully'));
+            redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+        }
+         if ($param1 == 'delete') {
+            $this->db->where('university_people_id', $param2);
+            $this->db->delete('university_peoples');
+            $this->session->set_flashdata('flash_message', get_phrase('chancellor_deleted_successfully'));
+            redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+        }
+        $page_data['chancellor'] = $this->db->get('university_peoples')->result_array();
+        $page_data['page_name'] = 'chancellor';
+        $page_data['page_title'] = 'chancellor Management';
+        $this->load->view('backend/index', $page_data);
+    }
+    
     function batch($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
@@ -4128,8 +4208,18 @@ class Admin extends CI_Controller {
         echo json_encode($batch);
     }
 
-    function student_list_from_degree_course_batch($degree, $course, $batch) {
+    /**
+     * Student list by degree, course, batch, and semester
+     * @param type $degree
+     * @param type $course
+     * @param type $batch
+     * @param type $semester
+     */
+    function student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester) {
         $this->load->model('admin/Crud_model');
+        $student = $this->Crud_model->student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester);
+        
+        echo json_encode($student);
     }
 
     /**
@@ -5145,15 +5235,42 @@ class Admin extends CI_Controller {
      */
     function graduate($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
+        if($param1 == 'delete') {
+            $this->db->delete('graduates', array('graduates_id', $param2));
+            $this->session->set_flashdata('flash_message', 'Graduate succeffully deleted.');
+            redirect(base_url('index.php?admin/graduate'));
+        }
         if ($_POST) {
-            if ($param1 == 'create') {
-                
+            if ($param1 == 'create') {                
+                $this->Crud_model->save_graduates(array(
+                    'student_id'    => $_POST['student'],
+                    'degree_id'    => $_POST['degree'],
+                    'course_id' => $_POST['course'],
+                    'batch_id'  => $_POST['batch'],
+                    'semester_id'   => $_POST['semester'],
+                    'description'   => $_POST['description'],
+                    'graduate_year' => $_POST['year']
+                ));
+                $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');               
             } elseif ($param1 == 'update') {
-                
+                $this->Crud_model->save_graduates(array(
+                    'student_id'    => $_POST['student'],
+                    'degree_id'    => $_POST['degree'],
+                    'course_id' => $_POST['course'],
+                    'batch_id'  => $_POST['batch'],
+                    'semester_id'   => $_POST['semester'],
+                    'description'   => $_POST['description'],
+                    'graduate_year' => $_POST['year']
+                ), $param2);
+                $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');  
             }
+            
+             redirect(base_url('index.php?admin/graduate'));
         }
         $page_data['title'] = 'Recent Graduates';
         $page_data['page_name'] = 'graduate';
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['graduates'] = $this->Crud_model->get_all_graduates();
         $this->load->view('backend/index', $page_data);
     }
 
