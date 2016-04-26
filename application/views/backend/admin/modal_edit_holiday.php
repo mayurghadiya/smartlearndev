@@ -79,6 +79,25 @@ endforeach;
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true,
+                onClose: function (selectedDate) {
+                    $("#holiday_startdate1").datepicker("option", "maxDate", selectedDate);
+                }
             });
+            
+             $("#holidayformedit").validate({
+                rules: {
+                    holiday_name: "required",
+                    holiday_status: "required",
+                    holiday_startdate1:"required",
+                    holiday_enddate1:"required",
+                },
+                messages: {
+                    holiday_name: "Enter holiday name",
+                    holiday_status: "Select status",
+                    holiday_startdate1:"Select date",
+                    holiday_enddate1:"Select date",
+                }
+            });
+            
           });
         </script>

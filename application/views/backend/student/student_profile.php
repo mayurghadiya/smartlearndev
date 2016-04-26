@@ -201,6 +201,45 @@
                                 <!-- col-sm-10 --> 
                             </div>
                             <!-- form-group -->
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Parents Name</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="text" value="<?php echo $profile->parent_name; ?>" placeholder="">
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Parents Phone</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="text" value="<?php echo $profile->parent_contact; ?>" placeholder="">
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Parents Email</label>
+                                <div class="col-sm-9 controls">
+                                    <div class="row mgbt-xs-0">
+                                        <div class="col-xs-9">
+                                            <input type="text" value="<?php echo $profile->parent_email; ?>" placeholder="">
+                                        </div>
+                                    </div>
+                                    <!-- row --> 
+                                </div>
+                                <!-- col-sm-10 --> 
+                            </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Birthday</label>

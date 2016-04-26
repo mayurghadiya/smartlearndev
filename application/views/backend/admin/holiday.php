@@ -55,8 +55,8 @@
                                                 ?>
                                             <td><?php echo $count++; ?></td>
                                               <td><?php echo $row['holiday_name']; ?></td>    
-                                              <td><?php echo $row['holiday_startdate']; ?></td>    
-                                              <td><?php echo $row['holiday_enddate']; ?></td>    
+                                              <td><?php echo date('F d, Y', strtotime($row['holiday_startdate'])); ?></td>    
+                                              <td><?php echo date('F d, Y', strtotime($row['holiday_enddate'])); ?></td>    
                                               <td><?php echo $row['holiday_year']; ?></td>   
                                               <td>
                                                 <?php if ($row['holiday_status'] == '1') { ?>
@@ -139,7 +139,7 @@
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true,
-                 minDate: new Date(),
+               //  minDate: new Date(),
                 onClose: function (selectedDate) {
                     $("#holiday_enddate").datepicker("option", "minDate", selectedDate);
                 }
@@ -149,16 +149,23 @@
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true,
+                onClose: function (selectedDate) {
+                    $("#holiday_startdate").datepicker("option", "maxDate", selectedDate);
+                }
             });
             
             $("#holidayform").validate({
                 rules: {
                     holiday_name: "required",
                     holiday_status: "required",
+                    holiday_startdate:"required",
+                    holiday_enddate:"required",
                 },
                 messages: {
                     holiday_name: "Enter holiday name",
                     holiday_status: "Select status",
+                     holiday_startdate:"Select date",
+                     holiday_enddate:"Select date",
                 }
             });
           });

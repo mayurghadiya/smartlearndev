@@ -47,60 +47,7 @@
             </div>
         </div>
     </div>   
-    <div class="page-section" style="margin-bottom:100px;">
-        <div class="container">
-            <div class="row">
-                <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <ul class="row cs-counter-holder">
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="cs-counter left">
-                                <div class="cs-media">
-                                    <figure><i class="cs-color icon-uniF128"></i></figure>
-                                </div>
-                                <div class="cs-text">
-                                    <strong class="counter">23,589</strong>
-                                    <span>alumni and growing</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="cs-counter left">
-                                <div class="cs-media">
-                                    <figure><i class="cs-color icon-uniF118"></i></figure>
-                                </div>
-                                <div class="cs-text">
-                                    <strong class="counter">87,411</strong>
-                                    <span>Colleges across campus</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="cs-counter left">
-                                <div class="cs-media">
-                                    <figure><i class="cs-color icon-uniF11B"></i></figure>
-                                </div>
-                                <div class="cs-text">
-                                    <strong class="counter">25,729</strong>
-                                    <span>alumni and growing</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="cs-counter left">
-                                <div class="cs-media">
-                                    <figure><i class="cs-color icon-uniF11D"></i></figure>
-                                </div>
-                                <div class="cs-text">
-                                    <strong class="counter">23,589</strong>
-                                    <span>scholarships incoming</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>  
+     
     <div class="page-section" style="margin-bottom:40px;">
         <div class="container">
             <div class="row">

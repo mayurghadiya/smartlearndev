@@ -82,6 +82,27 @@ class Site extends CI_Controller {
      * @return response
      */
     function contact() {
+        if ($_POST) {
+            $config = Array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'mayur.ghadiya@searchnative.in',
+                'smtp_pass' => 'the mayurz97375',
+                'mailtype' => 'html',
+                'charset' => 'iso-8859-1'
+            );
+            $this->load->library('email', $config);
+            $this->email->from($_POST['email'], $_POST['name']);
+            $this->email->to('mayur.ghadiya@searchnative.in');            
+            $this->email->set_newline("\r\n");
+            $this->email->subject('Contact Inquiry');
+            $this->email->message($_POST['message']);
+            $this->email->send();
+            
+            $this->session->set_flashdata('message', 'Your inquiry successfully sent.');
+            redirect(base_url('index.php?contact'));
+        }
         $this->data['title'] = 'Contact us';
         $this->__template('contact', $this->data);
     }
@@ -100,7 +121,7 @@ class Site extends CI_Controller {
             $this->Site_model->save_subscriber(array(
                 'email' => $_POST['email']
             ));
-            echo 'Thank you for subsrcibing';
+            echo 'Thank you for subscribing';
         }
     }
 
@@ -109,17 +130,16 @@ class Site extends CI_Controller {
      * 
      * @return response
      */
-    function user_login() {     
+    function user_login() {
         $this->user_dashboard();
         if ($_POST) {
             $email = $_POST["email"];
             $password = md5($_POST["password"]);
-            if($this->validate_login($email, $password) == 'invalid') {
+            if ($this->validate_login($email, $password) == 'invalid') {
                 $this->session->set_flashdata('error', 'Invalid username or password');
             }
-            
+
             redirect(base_url('index.php?site/user_login'));
-            
         }
         $this->data['title'] = 'User Login';
         $this->__template('user_login', $this->data);
@@ -149,7 +169,7 @@ class Site extends CI_Controller {
             $update = array("online" => '1');
             $this->db->where('admin_id', $row->admin_id);
             $this->db->update('admin', $update);
-            
+
             redirect(base_url('index.php?admin/dashboard'));
         }
         // Checking login credential for student
@@ -171,7 +191,7 @@ class Site extends CI_Controller {
             $update = array("online" => '1');
             $this->db->where('std_id', $row->std_id);
             $this->db->update('student', $update);
-            
+
             redirect(base_url('index.php?student/dashboard'));
         }
 
@@ -187,12 +207,11 @@ class Site extends CI_Controller {
             $this->session->set_userdata('email', $row->email);
             $this->session->set_userdata('login_type', 'subadmin');
             redirect(base_url('index.php?sub_admin/dashboard'));
-
         }
 
         return 'invalid';
     }
-    
+
     /**
      * Loggedin user dashboard
      * 
@@ -200,11 +219,11 @@ class Site extends CI_Controller {
      */
     function user_dashboard() {
         $type = $this->session->userdata('login_type');
-        if($type == 'admin') {
+        if ($type == 'admin') {
             redirect(base_url('index.php?admin/dashboard'));
-        } elseif($type == 'student') {
+        } elseif ($type == 'student') {
             redirect(base_url('index.php?student/dashboard'));
-        } elseif($type == 'subadmin') {
+        } elseif ($type == 'subadmin') {
             redirect(base_url('index.php?sub_admin'));
         }
     }
