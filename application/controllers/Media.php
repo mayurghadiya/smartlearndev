@@ -358,10 +358,15 @@ class Media extends CI_Controller {
     function bannerslider($param='' , $param2='')
     {
         if($param=="create")
-        {
+        {            
               if(is_uploaded_file($_FILES['main_img']['tmp_name']))
               {
-               
+                      $path= FCPATH . 'uploads/bannerimg/';
+                      if(!is_dir($path))
+                      {
+                          mkdir($path,0777);
+                      }
+                      
 		$allowed_types = 'gif|jpg|png|jpeg';
                 $type = explode("|",$allowed_types);
                 $ext = explode(".",$_FILES['main_img']['name']);
@@ -412,6 +417,11 @@ class Media extends CI_Controller {
            $banner =  $this->photo_gallery->getbanner($param2);
              if(is_uploaded_file($_FILES['main_img']['tmp_name']))
               {
+                      $path= FCPATH . 'uploads/bannerimg/';
+                      if(!is_dir($path))
+                      {
+                          mkdir($path,0777);
+                      }
                
 		$allowed_types = 'gif|jpg|png|jpeg';
                 $type = explode("|",$allowed_types);
