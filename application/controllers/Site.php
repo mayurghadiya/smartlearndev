@@ -93,12 +93,12 @@ class Site extends CI_Controller {
             );
             $this->load->library('email', $config);
             $this->email->from($_POST['email'], $_POST['name']);
-            $this->email->to('mayur.ghadiya@searchnative.in');            
+            $this->email->to('mayur.ghadiya@searchnative.in');
             $this->email->set_newline("\r\n");
             $this->email->subject('Contact Inquiry');
             $this->email->message($_POST['message']);
             $this->email->send();
-            
+
             $this->session->set_flashdata('message', 'Your inquiry successfully sent.');
             redirect(base_url('index.php?contact'));
         }
@@ -225,6 +225,86 @@ class Site extends CI_Controller {
         } elseif ($type == 'subadmin') {
             redirect(base_url('index.php?sub_admin'));
         }
+    }
+
+    /**
+     * Forgot password 
+     * 
+     * @return response
+     */
+    function forgot_password() {
+        if ($_POST) {
+            $resp = array();
+            $resp['status'] = 'false';
+            $email = $_POST["email"];
+            $reset_account_type = '';
+            //resetting user password here
+            $new_password = substr(md5(rand(100000000, 20000000000)), 0, 7);
+
+            $config = Array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'mayur.ghadiya@searchnative.in',
+                'smtp_pass' => 'the mayurz97375',
+                'mailtype' => 'html',
+                'charset' => 'iso-8859-1'
+            );
+            $this->load->library('email', $config);
+            $this->email->from('mayur.ghadiya@searchnative.in');
+
+            // Checking credential for admin
+            $query = $this->db->get_where('admin', array('email' => $email));
+            if ($query->num_rows() > 0) {
+                $reset_account_type = 'admin';
+                $this->db->where('email', $email);
+                $this->db->update('admin', array('pass' => $new_password, 'password' => md5($new_password)));
+                $resp['status'] = 'true';
+
+                //send mail
+                $this->email->subject('Login Details for Learning Management System');
+                $this->email->to($_POST['email']);
+                $message = "<strong>Your Learning Management System login details given below.</strong><br/>";
+                $message .= "Login url: " . base_url('index.php?site/user_login') . "<br/>";
+                $message .= "Username: " . $_POST['email'] . "<br/>";
+                $message .= "Password: " . $new_password;
+                $this->email->message($message);
+                $this->email->send();
+            }
+            // Checking credential for student
+            $query = $this->db->get_where('student', array('email' => $email));
+            if ($query->num_rows() > 0) {
+                $reset_account_type = 'student';
+                $this->db->where('email', $email);
+                $this->db->update('student', array('real_pass' => $new_password, 'password' => md5($new_password)));
+                $resp['status'] = 'true';
+
+                $this->email->subject('Login Details for Learning Management System');
+                $this->email->to($_POST['email']);
+                $message = "<strong>Your Learning Management System login details given below.</strong><br/>";
+                $message .= "Login url: " . base_url('index.php?site/user_login') . "<br/>";
+                $message .= "Username: " . $_POST['email'] . "<br/>";
+                $message .= "Password: " . $new_password;
+                $this->email->message($message);
+                $this->email->send();
+            }
+
+
+            // send new password to user email  
+            $this->email_model->password_reset_email($new_password, $reset_account_type, $email);
+
+            $resp['submitted_data'] = $_POST;
+
+            if (!$resp['status']) {
+                $this->session->set_flashdata('error', 'Email address is not registered with system.');
+                redirect(base_url('index.php?site/forgot_password'));
+            }
+
+            $this->session->set_flashdata('message', 'Login information is successfully sent to your email.');
+            redirect(base_url('index.php?site/user_login'));
+        }
+        $this->data['title'] = 'Forgot password';
+        $this->__template('forgot_password', $this->data);
     }
 
 }

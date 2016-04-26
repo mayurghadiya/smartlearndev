@@ -7,8 +7,8 @@
                 <!--Element Section Start-->
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="cs-signup-form">
-                        <h6>login</h6>
-                        <form action="<?php echo base_url(); ?>index.php?site/user_login" method="post">
+                        <h6>forgot password</h6>
+                        <form action="<?php echo base_url(); ?>index.php?site/forgot_password" method="post">
                             <div class="row">
                                 <?php 
                                 $error = $this->session->flashdata('error');
@@ -29,30 +29,16 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="cs-field-holder">
                                         <i class="icon-user"></i>
-                                        <input name="email" type="text" placeholder="Username or email address *" required="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="cs-field-holder">
-                                        <i class="icon-lock2"></i>
-                                        <input name="password" type="password" placeholder="Password *" required="">
+                                        <input name="email" type="text" placeholder="Email address *" required="">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="cs-btn-submit">
-                                        <input type="submit" value="Login" name="login">
+                                        <input type="submit" value="Submit" name="forgot_password">
                                     </div>
-                                    <a class="cs-forgot-password" href="<?php echo base_url('index.php?site/forgot_password'); ?>">
-                                        <i class="cs-color icon-help-with-circle"></i>Forgot password?
+                                    <a class="cs-forgot-password" href="<?php echo base_url('index.php?site/user_login'); ?>">
+                                        <i class="cs-color icon-help-with-circle"></i>Back to login
                                     </a>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="cs-field-holder">
-                                        <div class="cs-checkbox">
-                                            <input type="checkbox" id="check1">
-                                            <label for="check1">Remember me</label>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </form>
