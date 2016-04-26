@@ -882,7 +882,87 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Holiday Management';
         $this->load->view('backend/index', $page_data);
     }
+    
+    function chancellor($param1 = '', $param2 = '')
+    {
+        if ($this->session->userdata('admin_login') != 1)
+            redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['people_name'] = $this->input->post('name');
+            $data['people_phone'] = $this->input->post('mobileno');
+            $data['people_email'] = $this->input->post('email_id');
+            $data['people_designation'] = $this->input->post('designation');
+            $data['people_description'] = $this->input->post('description');
+            $data['facebook_link'] = $this->input->post('facebook');
+            $data['twitter_link'] = $this->input->post('twitter');
+            $data['google_plus_link'] = $this->input->post('googleplus');
+           
+             if ($_FILES['profilefile']['name'] != '') {
 
+                $config['upload_path'] = 'uploads/system_image';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('profilefile')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $data['people_photo'] = $file['file_name'];
+                }
+            } else {
+
+                $data['people_photo'] = '';
+            }
+            
+            $this->db->insert('university_peoples', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('chancellor_added_successfully'));
+            redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+        }
+         if ($param1 == 'do_update') {
+            $data['people_name'] = $this->input->post('name');
+            $data['people_phone'] = $this->input->post('mobileno');
+            $data['people_email'] = $this->input->post('email_id');
+            $data['people_designation'] = $this->input->post('designation');
+            $data['people_description'] = $this->input->post('description');
+            $data['facebook_link'] = $this->input->post('facebook');
+            $data['twitter_link'] = $this->input->post('twitter');
+            $data['google_plus_link'] = $this->input->post('googleplus');
+            
+              if ($_FILES['profilefile']['name'] != '') {
+                  unlink("uploads/system_image/" . $this->input->post('txtoldfile'));
+                $config['upload_path'] = 'uploads/system_image';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+
+                if (!$this->upload->do_upload('profilefile')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $data['people_photo'] = $file['file_name'];
+                }
+            } 
+            $this->db->where('university_people_id', $param2);
+            $this->db->update('university_peoples', $data);
+           
+            $this->session->set_flashdata('flash_message', get_phrase('chancellor_updated_successfully'));
+            redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+        }
+         if ($param1 == 'delete') {
+            $this->db->where('university_people_id', $param2);
+            $this->db->delete('university_peoples');
+            $this->session->set_flashdata('flash_message', get_phrase('chancellor_deleted_successfully'));
+            redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
+        }
+        $page_data['chancellor'] = $this->db->get('university_peoples')->result_array();
+        $page_data['page_name'] = 'chancellor';
+        $page_data['page_title'] = 'chancellor Management';
+        $this->load->view('backend/index', $page_data);
+    }
+    
     function batch($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
