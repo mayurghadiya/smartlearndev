@@ -57,7 +57,7 @@ class Crud_model extends CI_Model {
     function getsyllabus($id)
     {
         $this->db->where("syllabus_id",$id);
-        return $this->db->get('smart_syllabus');
+        return $this->db->get('smart_syllabus')->result();
     }
     function get_syllabus()
     {
@@ -1106,10 +1106,38 @@ class Crud_model extends CI_Model {
         return $this->db->get('subscriber')->result();
     }
     
+    /**
+     * Delete subscriber
+     * @param string $id
+     */
     function delete_subscriber($id) {
         $this->db->delete('subscriber', array(
             'id'    => $id
         ));
+    }
+    
+    /**
+     * Save exam seat no 
+     * @param mixed $data
+     * @return int
+     */
+    function save_exam_seat_no($data) {
+        $this->db->insert('exam_seat_no', $data);
+        
+        return $this->db->insert_id();
+    }
+    
+    /**
+     * Custom stduents details to generate seat no
+     * @param mixed $where
+     * @return object
+     */
+    function custom_student_details($where) {
+        return $this->db->select('std_id, semester_id, std_degree, course_id')
+                ->from('student')
+                ->where($where)
+                ->get()
+                ->result();
     }
 
 }

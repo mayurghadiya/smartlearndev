@@ -162,8 +162,8 @@ class Admin extends CI_Controller {
         if($param=='do_update')
         {
                 $syllabus = $this->crud_model->getsyllabus($param2);
-             
-            if ($_FILES['syllabusfile']['name'] != "") {
+              
+                if ($_FILES['syllabusfile']['name'] != "") {
                 $path = FCPATH.'uploads/syllabus';
                 if(!is_dir($path))
                 {
@@ -2498,6 +2498,34 @@ class Admin extends CI_Controller {
                         $insert_id = $this->db->insert_id();
                         //$this->exam_email_notification($_POST);
                         $this->session->set_flashdata('flash_message', 'Exam is successfully added.');
+
+                        //create seat no
+                        $seat_no_initial = chr(mt_rand(65, 90));
+
+                        //get students
+                        $students_info = $this->Crud_model->custom_student_details(array(
+                            'std_degree' => $_POST['degree'],
+                            'course_id' => $_POST['course'],
+                            'std_batch' => $_POST['batch'],
+                            'semester_id' => $_POST['semester']
+                        ));
+
+                        $seat_no = str_pad($insert_id, 4, 0, STR_PAD_RIGHT);
+                        $seat_no .= mt_rand(12348, 69535);
+
+                        //echo '<pre>';
+                        foreach ($students_info as $student) {
+                            //var_dump($student);
+                            $seat_no++;
+                            $student_seat_no = $seat_no_initial . $seat_no;
+                            $this->Crud_model->save_exam_seat_no([
+                                'student_id' => $student->std_id,
+                                'exam_id' => $insert_id,
+                                'seat_no' => $student_seat_no
+                            ]);
+                        }
+                        //exit;
+
                         create_notification('exam_manager', $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $insert_id);
                         redirect(base_url('index.php?admin/exam'));
                     } else {
@@ -5197,17 +5225,16 @@ class Admin extends CI_Controller {
      */
     function graduate($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
-        if($_POST){
-            if($param1 == 'create'){
+        if ($_POST) {
+            if ($param1 == 'create') {
                 
-            } elseif($param1 == 'update'){
+            } elseif ($param1 == 'update') {
                 
             }
         }
         $page_data['title'] = 'Recent Graduates';
         $page_data['page_name'] = 'graduate';
         $this->load->view('backend/index', $page_data);
-        
     }
 
 }

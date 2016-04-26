@@ -48,6 +48,7 @@ $route['home'] = 'site/home';
 $route['course/(:any)'] = 'site/course/$1';
 $route['branch/(:any)'] = 'site/branch_details/$1';
 $route['about'] = 'site/about';
+$route['syllabus'] = 'site/syllabus';
 $route['contact'] = 'site/contact';
 
 /* End of file routes.php */
