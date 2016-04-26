@@ -246,7 +246,7 @@
                             mobile_no: "Enter valid mobile number",
                             minlength: "Enter minimum 10 digit number",
                         },
-                designation: "required",
+                designation: "Enter designation",
                 profilefile: {
                     required: "Upload image",
                     extension: "Upload valid file",
