@@ -315,5 +315,5 @@ class Site extends CI_Controller {
         $this->data['title'] = 'Forgot password';
         $this->__template('forgot_password', $this->data);
     }
-
+    
 }
