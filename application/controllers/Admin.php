@@ -851,7 +851,7 @@ class Admin extends CI_Controller {
             $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate')));
             $year = explode('-', $data['holiday_startdate']);
             $data['holiday_year'] = $year[0];
-            $data['holiday_status'] = $this->status($this->input->post('batch_status'));
+            $data['holiday_status'] = $this->status($this->input->post('holiday_status'));
             $data['created_date'] = date('Y-m-d');
 
             $this->db->insert('holiday', $data);

@@ -242,6 +242,7 @@
                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
                                                             <?php endforeach; ?>
                                                                  <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/student/gallery">Gallery</a></li>
+                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/student/holiday">Holiday</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>
