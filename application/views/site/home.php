@@ -1,20 +1,65 @@
 
 
 <!-- Banner Start --> 
-<div class="page-section" style="background:url(<?php echo base_url(); ?>site_assets/extra-images/xbanner-img.jpg.pagespeed.ic.Cyn7NvNsmA.jpg) no-repeat;background-size:cover;padding:212px 0">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="cs-column-text">
-                    <span style="display:inline-block;padding:10px 20px;background:rgba(0,0,0,0.8);color:#FFF;font-size:18px;margin-bottom:22px;">What would you like to learn?</span>
-                    <h1 style="color:#ffffff !important;line-height:64px !important;text-transform:capitalize !important;">Brighton Experience</h1>
-                    <p style="font-size:36px !important;line-height:42px !important;color:#FFF !important;font-weight:400 !important;margin-bottom:30px;">an inspiring place to work and study</p>
-                    <a style="font-size:13px;font-weight:700;line-height:19px;padding:16px 28px;border-radius:50px;color:#FFF;text-decoration:none;outline:none;" class="cs-bgcolor" href="#">About Smart Study</a>
-                </div>
+<link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>style.css" type="text/css" media="screen" />
+<div class="page-section" style="">
+ <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <?php if(count($banner)) 
+                    foreach($banner as $slide) : ?>
+                <img src="<?php echo base_url().'uploads/bannerimg/'.$slide->banner_img; ?>" data-thumb="<?php echo base_url().'uploads/bannerimg/'.$slide->banner_img; ?>" <?php if($slide->slide_option!=""){ ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" title="#htmlcaption<?php echo $slide->banner_id; ?>" />
+                <?php endforeach; ?>
             </div>
+              <?php if(count($banner)) 
+                    foreach($banner as $slide2) : 
+                  if($slide2->banner_title!=''){?>
+            <div id="htmlcaption<?php echo $slide2->banner_id; ?>" class="nivo-html-caption">
+                <strong> <?php echo $slide2->banner_title; ?></strong>
+                    <p><?php echo $slide2->banner_desc; ?></p>
+            </div>
+                  <?php } ?>
+            <?php endforeach; ?>
         </div>
+
     </div>
 </div>
+    
+    <script type="text/javascript" src="<?php echo base_url().'assets/slide/'; ?>scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url().'assets/slide/'; ?>jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+               $('#slider').nivoSlider(
+                       {
+                           <?php if(count($banner))
+                               foreach($banner as $slide1): ?>
+                                      <?php if($slide1->pause_time!=""){ ?>     
+                           pauseTime:<?php echo $slide1->pause_time; ?>, 
+                                      <?php  } ?>
+                                    <?php if($slide1->pause_on_hover!=""){ ?>     
+                    pauseOnHover:<?php echo $slide1->pause_on_hover; ?>, 
+                                          <?php } ?>
+                                    <?php if($slide1->caption_opacity!=""){ ?>     
+                    captionOpacity: <?php echo $slide1->caption_opacity; ?>,
+                                     <?php  } ?>  
+                                    <?php if($slide1->anim_speed!=""){ ?>     
+                    animSpeed: <?php echo $slide1->anim_speed; ?>,
+                                      <?php  } ?>  
+                                                  
+                                                 
+                                        
+
+
+                    <?php endforeach; ?>
+                }
+                       );
+    });
+    </script>
 <!-- Banner End --> 
 <!-- Main Start -->
 <div class="main-section">
@@ -48,22 +93,21 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
-                        <?php
-                        foreach($events as $event) { ?>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="cs-event left">
-                                <div class="cs-media">
-                                    <span><strong><?php echo date('M', strtotime($event->event_date)) ?></strong><?php echo date('d', strtotime($event->event_date)) ?></span>
-                                </div>
-                                <div class="cs-text">
-                                    <em><?php echo date('h:m A', strtotime($event->event_date)); ?></em>
-                                    <h6 style="margin-bottom:10px;"><a href="#"><?php echo $event->event_name; ?></a></h6>
-                                    <span><i class="icon-map-marker"></i><?php echo $event->event_location; ?></span>
+                        <?php foreach ($events as $event) { ?>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="cs-event left">
+                                    <div class="cs-media">
+                                        <span><strong><?php echo date('M', strtotime($event->event_date)) ?></strong><?php echo date('d', strtotime($event->event_date)) ?></span>
+                                    </div>
+                                    <div class="cs-text">
+                                        <em><?php echo date('h:m A', strtotime($event->event_date)); ?></em>
+                                        <h6 style="margin-bottom:10px;"><a href="#"><?php echo $event->event_name; ?></a></h6>
+                                        <span><i class="icon-map-marker"></i><?php echo $event->event_location; ?></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php } ?>                       
-                        
+
                     </div>
                 </div>
             </div>
@@ -172,6 +216,9 @@
     </div>
     <div class="page-section" style="margin-bottom:80px;">
         <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="cs-fancy-heading" style="margin-bottom:40px;">
+                <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
+            </div>
             <ul class="row cs-testimonial main-testimonial">
                 <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
                     <div class="cs-media">
@@ -369,55 +416,7 @@
     <div class="page-section" style="margin-bottom:40px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="cs-fancy-heading" style="margin-bottom:40px;">
-                        <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <ul class="cs-graduate-slider">
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo1.jpg.pagespeed.ic.IfdYciHoiv.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo2.jpg.pagespeed.ic.wKvAxHC9Yh.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo3.jpg.pagespeed.ic.U_sjCp0ME9.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo4.jpg.pagespeed.ic.HZZ0Xr-cIP.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo5.jpg.pagespeed.ic.8Uv5xUR9s2.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo6.jpg.pagespeed.ic.OEOmRGi60j.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo5.jpg.pagespeed.ic.8Uv5xUR9s2.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="cs-media">
-                                <figure> <img src="<?php echo base_url(); ?>site_assets/extra-images/xgraduate-logo5.jpg.pagespeed.ic.8Uv5xUR9s2.jpg" alt=""/> </figure>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>

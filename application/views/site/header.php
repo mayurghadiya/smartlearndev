@@ -86,7 +86,6 @@
                                         <?php } else {
                                             ?>
                                             <li><a href="<?php echo base_url('index.php?site/user_login'); ?>"><i class="icon-login"></i>Login</a></li>
-                                            <li><a href="<?php echo base_url('index.php?register'); ?>"><i class="icon-user2"></i>Signup</a></li>
                                             <?php
                                         }
                                         ?>    
