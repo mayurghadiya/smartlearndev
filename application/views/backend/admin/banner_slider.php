@@ -127,9 +127,59 @@
                                             </div>
                                             <div id="image_container"></div>
                                         </div>
-                                        
                                          <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Status</label>
+                                                    <label class="col-sm-3 control-label">Pause Time</label>
+                                                    <div class="col-sm-5">
+                                                        
+                                                        <input type="text" class="form-control" name="pause_time" placeholder="Ex 4000" id="pause_time" />
+                                                        
+                                                    </div>
+                                                </div>
+                                        
+                                        
+                                        <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Pause On Hover</label>
+                                                    <div class="col-sm-5">
+                                                        <select name="pause_on_hover" class="form-control">
+                                                            <option value="">Select</option>
+                                                            <option value="true">True</option>
+                                                            <option value="false">False</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                         <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Caption Opacity</label>
+                                                    <div class="col-sm-5">                                                        
+                                                        <input type="text" placeholder="Ex 0.8" class="form-control" name="caption_opacity" id="caption_opacity" />
+                                                    </div>
+                                         </div>                                        
+                                        
+                                        <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Slide</label>
+                                                    <div class="col-sm-5">
+                                                        <select name="slide_option" class="form-control">
+                                                            <option value="">Select</option>
+                                                            <option value="slideInLeft">Left</option>
+                                                            <option value="slideInRight">Right</option>
+                                                            <option value="sliceDown">sliceDown</option>
+                                                            <option value="sliceDownLeft">sliceDownLeft</option>
+                                                            <option value="sliceUp">sliceUp</option>
+                                                            <option value="sliceUpLeft">sliceUpLeft</option>
+                                                            <option value="sliceUpDown">sliceUpDown</option>
+                                                            <option value="sliceUpDownLeft">sliceUpDownLeft</option>
+                                                            <option value="fold">fold</option>
+                                                            <option value="fade">fade</option>
+                                                            <option value="random">random</option>
+                                                            <option value="boxRandom">boxRandom</option>
+                                                            <option value="boxRain">boxRain</option>
+                                                            <option value="boxRainReverse">boxRainReverse</option>
+                                                            <option value="boxRainGrow">boxRainGrow</option>
+                                                            <option value="boxRainGrowReverse">boxRainGrowReverse</option>
+                                                        </select>
+                                                    </div>
+                                        </div>
+                                         <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Status  <span style="color:red">*</span></label>
                                                     <div class="col-sm-5">
                                                         <select name="status" class="form-control">
                                                             <option value="">Select</option>
