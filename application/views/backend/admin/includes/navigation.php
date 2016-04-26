@@ -115,7 +115,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="hidden">
+                <li>
                     <a class="<?php if($page_name == 'graduate') echo 'open'; ?>" href="javascript:void(0);" data-action="click-trigger">
                         <span class="menu-icon"><i class="fa fa-building"> </i></span>
                         <span class="menu-text">University</span>

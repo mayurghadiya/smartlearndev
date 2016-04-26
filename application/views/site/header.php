@@ -7,7 +7,7 @@
         <title><?php echo $title; ?></title>
         <link href="<?php echo base_url(); ?>site_assets/css/bootstrap.css%2bbootstrap-theme.css%2biconmoon.css%2bchosen.css%2bjquery.mobile-menu.css.pagespeed.cc.F3it29Vo16.css" rel="stylesheet"/>
 
-        <link href="<?php echo base_url(); ?>site_assets/style.css%2bcs-smartstudy-plugin.css%2bassets%2c_css%2c_color.css%2bassets%2c_css%2c_widget.css%2bassets%2c_css%2c_responsive.css.pagespeed.cc.mnOD-G7HJT.css" rel="stylesheet"/>
+        <link href="<?php echo base_url(); ?>site_assets/style1.css" rel="stylesheet"/>
 
         <!-- <link href="<?php echo base_url(); ?>site_assets/css/bootstrap-rtl.css" rel="stylesheet"> Uncomment it if needed! -->
 
