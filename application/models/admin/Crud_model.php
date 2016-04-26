@@ -57,7 +57,7 @@ class Crud_model extends CI_Model {
     function getsyllabus($id)
     {
         $this->db->where("syllabus_id",$id);
-        return $this->db->get('smart_syllabus');
+        return $this->db->get('smart_syllabus')->result();
     }
     function get_syllabus()
     {

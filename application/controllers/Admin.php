@@ -162,8 +162,8 @@ class Admin extends CI_Controller {
         if($param=='do_update')
         {
                 $syllabus = $this->crud_model->getsyllabus($param2);
-             
-            if ($_FILES['syllabusfile']['name'] != "") {
+              
+                if ($_FILES['syllabusfile']['name'] != "") {
                 $path = FCPATH.'uploads/syllabus';
                 if(!is_dir($path))
                 {
