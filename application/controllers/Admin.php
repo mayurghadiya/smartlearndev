@@ -112,6 +112,110 @@ class Admin extends CI_Controller {
         //exit;
         $this->load->view('backend/index', $page_data);
     }
+    /*     * ** MANAGE syllabus
+      Auth : Mayur Panchal
+      /******** */
+    function syllabus($param='',$param2='')
+    {
+        if($param=="create")
+        {
+            
+            
+            if ($_FILES['syllabusfile']['name'] != "") {
+                $path = FCPATH.'uploads/syllabus';
+                if(!is_dir($path))
+                {
+                    mkdir($path,0777);
+                }
+                $config['upload_path'] = 'uploads/syllabus';
+                $config['allowed_types'] = 'pdf|doc|docx|ppt|pptx';
+                
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                //$this->upload->set_allowed_types('*');	
+
+                if (!$this->upload->do_upload('syllabusfile')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $insert['syllabus_filename'] = $file['file_name'];
+                   
+                }
+            } else {
+                $insert['syllabus_filename'] = '';
+               
+            }
+
+            
+            $insert['syllabus_title'] = $this->input->post('title');
+            $insert['syllabus_degree'] = $this->input->post('degree');
+            $insert['syllabus_course'] = $this->input->post('course');
+            $insert['syllabus_sem'] = $this->input->post('semester');
+            $insert['syllabus_desc'] = $this->input->post('description');
+            
+            
+            $this->crud_model->add_syllabus($insert);     
+            $this->session->set_flashdata('flash_message', "Syllabus Added Successfully");
+            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');            
+        }
+        if($param=='do_update')
+        {
+                $syllabus = $this->crud_model->getsyllabus($param2);
+             
+            if ($_FILES['syllabusfile']['name'] != "") {
+                $path = FCPATH.'uploads/syllabus';
+                if(!is_dir($path))
+                {
+                    mkdir($path,0777);
+                }
+                $config['upload_path'] = 'uploads/syllabus';
+                $config['allowed_types'] = 'pdf|doc|docx|ppt|pptx';
+                
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                //$this->upload->set_allowed_types('*');	
+
+                if (!$this->upload->do_upload('syllabusfile')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $insert['syllabus_filename'] = $file['file_name'];
+                   
+                }
+            } else {
+
+                $insert['syllabus_filename'] = $syllabus[0]->syllabus_filename;
+               
+            }
+
+            
+            $insert['syllabus_title'] = $this->input->post('title');
+            $insert['syllabus_degree'] = $this->input->post('degree');
+            $insert['syllabus_course'] = $this->input->post('course');
+            $insert['syllabus_sem'] = $this->input->post('semester');
+            $insert['syllabus_desc'] = $this->input->post('description');
+            $insert['update_date'] = date('Y-m-d H:i:s');
+            
+            $this->crud_model->update_syllabus($insert,$param2);     
+            $this->session->set_flashdata('flash_message', "Syllabus Updated Successfully");
+            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh'); 
+        }
+         if ($param == 'delete') {
+             
+            $this->crud_model->delete_syllabus($param2);
+            $this->session->set_flashdata('flash_message', "Syllabus Deleted Successfully");
+            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');
+        }
+        $page_data['syllabus'] = $this->crud_model->get_syllabus();
+        $page_data['course'] = $this->db->get('course')->result();
+        $page_data['semester'] = $this->db->get('semester')->result();        
+        $page_data['degree'] = $this->db->get('degree')->result();
+        $page_data['title'] = 'Syllabus Management';
+        $page_data['page_name'] = 'syllabus';
+        $this->load->view('backend/index', $page_data);
+    }
 
     /*     * **MANAGE COURSES	
       Auth : Brij  Dhami
@@ -747,7 +851,7 @@ class Admin extends CI_Controller {
             $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate')));
             $year = explode('-', $data['holiday_startdate']);
             $data['holiday_year'] = $year[0];
-            $data['holiday_status'] = $this->status($this->input->post('batch_status'));
+            $data['holiday_status'] = $this->status($this->input->post('holiday_status'));
             $data['created_date'] = date('Y-m-d');
 
             $this->db->insert('holiday', $data);

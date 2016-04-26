@@ -74,6 +74,12 @@ foreach ( $edit_data as $row):
                                                         
                                                     </div>
                                                 </div>
+                                        <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Animation Speed</label>
+                                                    <div class="col-sm-5">                                                        
+                                                        <input type="text" placeholder="Ex 340" class="form-control" name="anim_speed" id="caption_opacity" value="<?php echo $row['anim_speed'] ?>" />
+                                                    </div>
+                                         </div>
                                         
                                         
                                         <div class="form-group">
@@ -167,6 +173,12 @@ endforeach;
                     main_img:{
                         extension:'gif|jpg|png|jpeg', 
                     },
+                    pause_time:{
+                         number: true
+                    },
+                    anim_speed:{
+                         number: true
+                    },
                     status:"required",
                     
                 },
@@ -175,6 +187,12 @@ endforeach;
                     description: "Please enter description",                    
                     main_img:{
                         extension:'Upload valid file!',  
+                    },
+                     pause_time:{
+                         number: "Enter Number only",
+                    },
+                    anim_speed:{
+                         number: "Enter Number only",
                     },
                     status:"Select Status",                         
                     

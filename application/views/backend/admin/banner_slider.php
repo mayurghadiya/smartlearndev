@@ -135,6 +135,12 @@
                                                         
                                                     </div>
                                                 </div>
+                                        <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Animation Speed</label>
+                                                    <div class="col-sm-5">                                                        
+                                                        <input type="text" placeholder="Ex 340" class="form-control" name="anim_speed" id="caption_opacity" />
+                                                    </div>
+                                         </div>
                                         
                                         
                                         <div class="form-group">
@@ -231,6 +237,12 @@
                         required:true,
                         extension:"gif|jpg|png|jpeg"
                     },
+                    pause_time:{
+                         number: true
+                    },
+                    anim_speed:{
+                         number: true
+                    },
                     status:"required",                 
                 },
                 messages: {
@@ -239,6 +251,12 @@
                     main_img:{ 
                         required:"Please upload slide image",
                         extension:"Only gif,jpg,png file is allowed!"
+                    },
+                    pause_time:{
+                         number: "Enter Number only",
+                    },
+                    anim_speed:{
+                         number: "Enter Number only",
                     },
                     status:"Select Status",                    
                 },

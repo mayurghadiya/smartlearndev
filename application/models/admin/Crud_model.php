@@ -42,8 +42,31 @@ class Crud_model extends CI_Model {
     }
 
     /* End Code */
-
-
+    
+    /* Start syllabus */ 
+    function update_syllabus($data , $id)
+    {            
+            $this->db->update("smart_syllabus",$data,array("syllabus_id"=>$id));
+            
+    }
+    function delete_syllabus($id)
+    {
+        $this->db->where("syllabus_id",$id);
+        $this->db->delete("smart_syllabus");
+    }
+    function getsyllabus($id)
+    {
+        $this->db->where("syllabus_id",$id);
+        return $this->db->get('smart_syllabus');
+    }
+    function get_syllabus()
+    {
+     return   $this->db->get('smart_syllabus')->result();
+    }
+    function add_syllabus($data)
+    {
+        $this->db->insert("smart_syllabus",$data);
+    }
 
     /* End Code */
 
