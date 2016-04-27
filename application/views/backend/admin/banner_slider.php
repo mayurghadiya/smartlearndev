@@ -52,6 +52,10 @@
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     Add Banner Slider
                                 </a></li>
+                                <li >
+                                <a href="#general" data-toggle="tab"><i class="entypo-plus-circled"></i>
+                                   Slider General Setting
+                                </a></li>
                                 
                         </ul>
                         <!------CONTROL TABS END------>
@@ -107,7 +111,7 @@
                                     <div class="padded">											
                                         
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Title </label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
@@ -115,7 +119,7 @@
                                
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Description <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Description </label>
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="description" id="description"></textarea>
                                             </div>
@@ -126,39 +130,7 @@
                                                 <input id="main_img" class="form-control coverimage" type="file" name="main_img"  />
                                             </div>
                                             <div id="image_container"></div>
-                                        </div>
-                                         <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Pause Time</label>
-                                                    <div class="col-sm-5">
-                                                        
-                                                        <input type="text" class="form-control" name="pause_time" placeholder="Ex 4000" id="pause_time" />
-                                                        
-                                                    </div>
-                                                </div>
-                                        <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Animation Speed</label>
-                                                    <div class="col-sm-5">                                                        
-                                                        <input type="text" placeholder="Ex 340" class="form-control" name="anim_speed" id="caption_opacity" />
-                                                    </div>
-                                         </div>
-                                        
-                                        
-                                        <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Pause On Hover</label>
-                                                    <div class="col-sm-5">
-                                                        <select name="pause_on_hover" class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="true">True</option>
-                                                            <option value="false">False</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                         <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Caption Opacity</label>
-                                                    <div class="col-sm-5">                                                        
-                                                        <input type="text" placeholder="Ex 0.8" class="form-control" name="caption_opacity" id="caption_opacity" />
-                                                    </div>
-                                         </div>                                        
+                                        </div>                                                                              
                                         
                                         <div class="form-group">
                                                     <label class="col-sm-3 control-label">Slide</label>
@@ -197,7 +169,67 @@
 
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Add Gallery Images</button>
+                                                <button type="submit" class="btn btn-info vd_bg-green">Add Banner Image</button>
+                                            </div>
+                                        </div>
+                                        </form>               
+                                    </div> 
+                                    <div id="dvPreview">
+                                  </div>
+                                </div>
+                                 
+                                <!----CREATION FORM ENDS-->
+                            </div>
+                             <div class="tab-pane box" id="general" style="padding: 5px">
+                                <div class="box-content">  
+<div class="">
+                                    <span style="color:red">* is mandatory field</span> 
+                                </div>                                      
+<?php echo form_open(base_url() . 'index.php?media/bannerslider/general', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmgeneral', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+                                    <div class="padded">											
+                                        
+                                      
+                              
+                                       
+                                        
+                                          <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Pause Time <span style="color:red">*</span></label>
+                                                    <div class="col-sm-5">
+                                                        
+                                                        <input type="text" class="form-control" name="pause_time" placeholder="Ex 4000" id="pause_time" value="<?php if(!empty($general)) { echo $general[0]->pause_time; } ?>" />
+                                                        
+                                                    </div>
+                                                </div>
+                                        <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Animation Speed <span style="color:red">*</span></label>
+                                                    <div class="col-sm-5">                                                        
+                                                        <input type="text" placeholder="Ex 340" class="form-control" name="anim_speed" id="anim_speed" value="<?php if(!empty($general)) {  echo $general[0]->anim_speed; } ?>" />
+                                                    </div>
+                                         </div>
+                                        
+                                        
+                                        <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Pause On Hover  <span style="color:red">*</span></label>
+                                                    <div class="col-sm-5">
+                                                        <select name="pause_on_hover" class="form-control">
+                                                            <option value="">Select</option>
+                                                            <option value="true" <?php  if(!empty($general)) {  if($general[0]->pause_on_hover=="true"){ echo "selected=selected";} } ?>>True</option>
+                                                            <option value="false"  <?php  if(!empty($general)) {  if($general[0]->pause_on_hover=="false"){ echo "selected=selected";} } ?>>False</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                         <div class="form-group">
+                                                    <label class="col-sm-3 control-label">Caption Opacity  <span style="color:red">*</span></label>
+                                                    <div class="col-sm-5">                                                        
+                                                        <input type="text" placeholder="Ex 0.8" class="form-control" name="caption_opacity" id="caption_opacity" value="<?php  if(!empty($general)) {  echo $general[0]->caption_opacity; } ?>" />
+                                                    </div>
+                                         </div>                                                                             
+                                        
+                                        
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-3 col-sm-5">
+                                                <button type="submit" class="btn btn-info vd_bg-green">Update</button>
                                             </div>
                                         </div>
                                         </form>               
@@ -230,35 +262,49 @@
         $().ready(function () {
 
             $("#frmgallery").validate({
-                rules: {
-                    title:"required",                    
-                    description: "required",
+                rules: {                    
                     main_img:{ 
                         required:true,
                         extension:"gif|jpg|png|jpeg"
                     },
-                    pause_time:{
-                         number: true
-                    },
-                    anim_speed:{
-                         number: true
-                    },
                     status:"required",                 
                 },
                 messages: {
-                    title: "Please enter title",
-                    description: "Please enter description",                    
+                   
                     main_img:{ 
                         required:"Please upload slide image",
                         extension:"Only gif,jpg,png file is allowed!"
                     },
-                    pause_time:{
-                         number: "Enter Number only",
-                    },
-                    anim_speed:{
-                         number: "Enter Number only",
-                    },
                     status:"Select Status",                    
+                },
+            });
+              $("#frmgeneral").validate({
+                rules: {
+                    pause_time:{
+                        required:true,
+                         number: true
+                    },
+                    pause_on_hover:"required",
+                    anim_speed:{
+                        required :true,
+                         number: true
+                    },
+                    caption_opacity:"required",
+                   
+                },
+                messages: {
+                  
+                    pause_time:{
+                        required: "Please enter pause time",                    
+                         number: "Enter Number only",
+                    },
+                    pause_on_hover:"Please select option",
+                    anim_speed:{
+                        required:"Please enter animation speed",
+                         number: "Enter Number only",
+                    },
+                    caption_opacity:"Please enter caption opacity",
+                    
                 },
             });
         });
