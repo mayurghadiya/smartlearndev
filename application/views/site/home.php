@@ -1,4 +1,4 @@
-
+    
 
 <!-- Banner Start --> 
 <link rel="stylesheet" href="<?php echo base_url() . 'assets/slide/'; ?>themes/default/default.css" type="text/css" media="screen" />
@@ -125,17 +125,22 @@
                     </div>
                 </div>
                 <ul class="cs-teamlist-slider">
+                    <?php 
+                    $chancellor=$this->db->get('university_peoples')->result();
+                    foreach($chancellor as $ch)
+                    {
+                        ?>
                     <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="cs-team listing loop">
                             <div class="cs-media">
                                 <figure>
-                                    <a href="#"><img src="<?php echo base_url(); ?>site_assets/extra-images/xfaculty-01.jpg.pagespeed.ic.uUD9zrE4Bb.jpg" alt="#"></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>uploads/system_image/<?php echo $ch->people_photo;?>" alt="#"></a>
                                 </figure>
                             </div>
                             <div class="cs-text">
-                                <h5><a href="#" class="cs-color">Sarah Johnson</a></h5>
-                                <span>Associate Professor of Anthropology</span>
-                                <p>Diet and health, human osteology,paleopathology/ epidemiology, human evolution, disease ecology, human adaptation, Stable.</p>
+                                <h5><a href="#" class="cs-color"><?php echo $ch->people_name;?></a></h5>
+                                <span><?php echo $ch->people_designation;?></span>
+                                <p><?php echo $ch->people_description;?>.</p>
                                 <div class="cs-social-media">
                                     <ul>
                                         <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
@@ -147,72 +152,10 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="cs-team listing loop">
-                            <div class="cs-media">
-                                <figure>
-                                    <a href="#"><img src="<?php echo base_url(); ?>site_assets/extra-images/xfaculty-02.jpg.pagespeed.ic.9vagy2osqS.jpg" alt="#"></a>
-                                </figure>
-                            </div>
-                            <div class="cs-text">
-                                <h5><a href="#" class="cs-color">Arthur Springs</a></h5>
-                                <span>Associate Professor of Anthropology</span>
-                                <p>Diet and health, human osteology,paleopathology/ epidemiology, human evolution, disease ecology, human adaptation, Stable.</p>
-                                <div class="cs-social-media">
-                                    <ul>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="cs-team listing loop">
-                            <div class="cs-media">
-                                <figure>
-                                    <a href="#"><img src="<?php echo base_url(); ?>site_assets/extra-images/xfaculty-01.jpg.pagespeed.ic.uUD9zrE4Bb.jpg" alt="#"></a>
-                                </figure>
-                            </div>
-                            <div class="cs-text">
-                                <h5><a href="#" class="cs-color">Sarah Johnson</a></h5>
-                                <span>Associate Professor of Anthropology</span>
-                                <p>Diet and health, human osteology,paleopathology/ epidemiology, human evolution, disease ecology, human adaptation, Stable.</p>
-                                <div class="cs-social-media">
-                                    <ul>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="cs-team listing loop">
-                            <div class="cs-media">
-                                <figure>
-                                    <a href="#"><img src="<?php echo base_url(); ?>site_assets/extra-images/xfaculty-02.jpg.pagespeed.ic.9vagy2osqS.jpg" alt="#"></a>
-                                </figure>
-                            </div>
-                            <div class="cs-text">
-                                <h5><a href="#" class="cs-color">Arthur Springs</a></h5>
-                                <span>Associate Professor of Anthropology</span>
-                                <p>Diet and health, human osteology,paleopathology/ epidemiology, human evolution, disease ecology, human adaptation, Stable.</p>
-                                <div class="cs-social-media">
-                                    <ul>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <?php
+                    }
+                    ?>
+                    
                 </ul>
             </div>
         </div>
