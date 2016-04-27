@@ -59,12 +59,12 @@
                                     <span class="menu-text">Syllabus Management</span>  						
                                 </a> 
                             </li>
-                            <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
+                            <li <?php if ($page_name == "holiday") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/holiday">
                                     <span class="menu-text">Holiday</span>  						
                                 </a> 
                             </li>
-                            <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
+                            <li <?php if ($page_name == "chancellor") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/chancellor">
                                     <span class="menu-text">Chancellor</span>  						
                                 </a> 

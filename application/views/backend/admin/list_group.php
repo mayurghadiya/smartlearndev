@@ -1,6 +1,15 @@
 <div class="vd_content-wrapper">
     <div class="vd_container">
         <div class="vd_content clearfix">
+            <div class="vd_head-section clearfix">
+                <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                        <li><a href="#"><?php echo ucwords("pages");?></a> </li>
+                        <li class="active"><?php echo ucwords("List Group");?></li>
+                    </ul>                  
+                </div>
+            </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
                     <h1><?php echo ucwords("List Group");?></h1>
