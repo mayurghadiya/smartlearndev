@@ -167,7 +167,7 @@ if (count($slide_setting))
                     <div class="cs-element-title" style="margin-bottom:30px;">
                         <h2>Video Streaming</h2>
                     </div>
-                    <img class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
+                    <img style="height: 415px;" class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
                     <div class="cs-element-title" style="margin-bottom:30px;">
