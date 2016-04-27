@@ -152,24 +152,24 @@ $students = $this->db->get_where('student', array(
 
             $("#editgraduatesform").validate({
                 rules: {
-                    edit_degree: "required",
-                    edit_course: "required",
-                    edit_batch: "required",
-                    edit_semester: "required",
-                    edit_student: "required",
-                    edit_year: "required"
+                    degree: "required",
+                    course: "required",
+                    batch: "required",
+                    semester: "required",
+                    student: "required",
+                    year: "required"
                 },
                 messages: {
-                    edit_degree: "Please select course",
-                    edit_course: "Please select branch",
-                    edit_batch: "Please select batch",
-                    edit_semester: "Please select semester",
-                    edit_student: "Please select student",
-                    edit_year: "Please enter year"
+                    degree: "Please select course",
+                    course: "Please select branch",
+                    batch: "Please select batch",
+                    semester: "Please select semester",
+                    student: "Please select student",
+                    year: "Please enter year"
                 }
             });
         });
-    });
+    
 </script>
 
 <script>

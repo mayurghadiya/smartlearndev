@@ -1,5 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<<<<<<< HEAD
+ERROR - 2016-04-26 18:34:45 --> Severity: Notice --> Undefined index: year /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 5263
+=======
 ERROR - 2016-04-26 12:57:00 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/syllabus.php 81
 ERROR - 2016-04-26 12:58:42 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/syllabus.php 81
 ERROR - 2016-04-26 13:47:35 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/syllabus.php 81
@@ -34,3 +37,4 @@ Stack trace:
 #1 [internal function]: _exception_handler(Object(Error))
 #2 {main}
   thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+>>>>>>> c4f91a2fe98f35d3f23fff72e33c0f750d2c7dc3

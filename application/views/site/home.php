@@ -63,7 +63,7 @@
 <!-- Banner End --> 
 <!-- Main Start -->
 <div class="main-section">
-    <div class="page-section" style="margin-bottom:45px;margin-top:-60px;">
+    <div class="page-section" style="margin-bottom:10px; margin-top: -50px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -113,7 +113,7 @@
             </div>
         </div>
     </div>  
-    <div class="page-section" style="margin-bottom:30px;">
+    <div class="page-section" style="margin-bottom:-10px; margin-top: -30px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -214,7 +214,7 @@
             </div>
         </div>
     </div>
-    <div class="page-section">
+    <div class="page-section" style="margin-bottom: 20px;">
         <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="cs-fancy-heading" style="margin-bottom:40px;">
                 <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
