@@ -144,10 +144,9 @@ if (count($slide_setting))
                                     <p><?php echo $ch->people_description; ?>.</p>
                                     <div class="cs-social-media">
                                         <ul>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="<?php echo $ch->facebook_link;?>" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="<?php echo $ch->twitter_link;?>" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="<?php echo $ch->google_plus_link;?>" data-original-title="google"><i class="icon-google4"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -168,7 +167,7 @@ if (count($slide_setting))
                     <div class="cs-element-title" style="margin-bottom:30px;">
                         <h2>Video Streaming</h2>
                     </div>
-                    <img class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
+                    <img style="height: 415px;" class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
                     <div class="cs-element-title" style="margin-bottom:30px;">
