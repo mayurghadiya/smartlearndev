@@ -50,6 +50,7 @@ $route['branch/(:any)'] = 'site/branch_details/$1';
 $route['about'] = 'site/about';
 $route['syllabus'] = 'site/syllabus';
 $route['contact'] = 'site/contact';
+$route['events'] = 'site/events';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

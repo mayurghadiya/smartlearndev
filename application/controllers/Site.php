@@ -318,4 +318,15 @@ class Site extends CI_Controller {
         $this->__template('forgot_password', $this->data);
     }
     
+    /**
+     * Events actions
+     * 
+     * @return response
+     */
+    function events() {
+        $this->data['title'] = 'Events';
+        $this->data['events'] = $this->Site_model->all_events();
+        $this->__template('events', $this->data);
+    }
+    
 }

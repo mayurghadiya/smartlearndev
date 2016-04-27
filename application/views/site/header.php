@@ -127,7 +127,7 @@
                                                 </ul>
                                             </li>
                                             <li><a href="#">ALUMNI</a><span>Alumni</span>
-                                            <li><a href="#">Events</a><span>University Events</span>
+                                            <li><a href="<?php echo base_url('index.php?events'); ?>">Events</a><span>University Events</span>
 
                                             </li>
                                             <li><a href="<?php echo base_url('index.php?syllabus'); ?>">Syllabus</a><span>Syllabus</span>

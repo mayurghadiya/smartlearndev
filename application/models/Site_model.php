@@ -143,4 +143,14 @@ class Site_model extends CI_Model {
             return $this->db->get("slide_setting")->result();
         
     }
+    
+    /**
+     * All Events
+     * @return mixed
+     */
+    function all_events() {
+        $this->db->order_by('event_date', 'DESC');
+        
+        return $this->db->get('event_manager')->result();
+    }
 }
