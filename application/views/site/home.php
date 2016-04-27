@@ -14,7 +14,7 @@
                 <?php if (count($banner))
                     foreach ($banner as $slide) :
                         ?>
-                        <img src="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" data-thumb="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" <?php if ($slide->slide_option != "") { ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" title="#htmlcaption<?php echo $slide->banner_id; ?>" />
+                        <img src="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" data-thumb="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" <?php if ($slide->slide_option != "") { ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" <?php if ($slide->banner_title != '') { ?> title="#htmlcaption<?php echo $slide->banner_id; ?>" <?php } ?> />
                 <?php endforeach; ?>
             </div>
             <?php
@@ -26,7 +26,11 @@
                             <strong> <?php echo $slide2->banner_title; ?></strong>
                             <p><?php echo $slide2->banner_desc; ?></p>
                         </div>
-        <?php } ?>
+        <?php }else{ ?>
+            <style>
+                .nivo-caption{ display: none; }
+            </style>
+         <?php } ?>
     <?php endforeach; ?>
         </div>
 
@@ -38,8 +42,8 @@
     $(window).load(function () {
         $('#slider').nivoSlider(
         {
-<?php if (count($banner))
-    foreach ($banner as $slide1):
+<?php if (count($slide_setting))
+    foreach ($slide_setting as $slide1):
         ?>
         <?php if ($slide1->pause_time != "") { ?>
                     pauseTime:<?php echo $slide1->pause_time; ?>,
@@ -58,9 +62,8 @@
 
 
 
-    <?php endforeach; ?>
-        }
-        );
+    <?php endforeach; ?>        
+    });
     });
 </script>
 <!-- Banner End --> 

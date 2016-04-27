@@ -46,7 +46,7 @@ foreach ( $edit_data as $row):
                                     <div class="padded">											
                                         
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Title <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Title </label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" value="<?php echo $row['banner_title']; ?>" id="title" />
                                             </div>
@@ -54,7 +54,7 @@ foreach ( $edit_data as $row):
                                
 
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Description <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label">Description </label>
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="description" id="description"><?php echo $row['banner_desc']; ?></textarea>
                                             </div>
@@ -65,39 +65,7 @@ foreach ( $edit_data as $row):
                                                 <input id="main_img" class="form-control coverimage2" type="file" name="main_img" />
                                             </div>
                                             <div id="image_container1"><img class='img-thumbnail' style='width:300px;margin:20px;' src='<?php echo "uploads/bannerimg/".$row['banner_img']; ?>' ></div>
-                                        </div>
-                                          <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Pause Time</label>
-                                                    <div class="col-sm-5">
-                                                        
-                                                        <input type="text" class="form-control" name="pause_time" placeholder="Ex 4000" id="pause_time" value="<?php echo $row['pause_time']; ?>" />
-                                                        
-                                                    </div>
-                                                </div>
-                                        <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Animation Speed</label>
-                                                    <div class="col-sm-5">                                                        
-                                                        <input type="text" placeholder="Ex 340" class="form-control" name="anim_speed" id="caption_opacity" value="<?php echo $row['anim_speed'] ?>" />
-                                                    </div>
-                                         </div>
-                                        
-                                        
-                                        <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Pause On Hover</label>
-                                                    <div class="col-sm-5">
-                                                        <select name="pause_on_hover" class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="true" <?php if($row['pause_on_hover']=="true"){ echo "selected=selected";} ?>>True</option>
-                                                            <option value="false"  <?php if($row['pause_on_hover']=="false"){ echo "selected=selected";} ?>>False</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                         <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Caption Opacity</label>
-                                                    <div class="col-sm-5">                                                        
-                                                        <input type="text" placeholder="Ex 0.8" class="form-control" name="caption_opacity" id="caption_opacity" value="<?php echo $row['caption_opacity']; ?>" />
-                                                    </div>
-                                         </div>                    
+                                        </div>             
                                          <div class="form-group">
                                                     <label class="col-sm-3 control-label">Slide</label>
                                                     <div class="col-sm-5">
@@ -168,31 +136,16 @@ endforeach;
 
             $("#frmgallery2").validate({
                 rules: {
-                    title:"required",                    
-                    description: "required",
+                   
                     main_img:{
                         extension:'gif|jpg|png|jpeg', 
-                    },
-                    pause_time:{
-                         number: true
-                    },
-                    anim_speed:{
-                         number: true
-                    },
+                    },                    
                     status:"required",
                     
                 },
                 messages: {
-                    title: "Please enter title",
-                    description: "Please enter description",                    
                     main_img:{
                         extension:'Upload valid file!',  
-                    },
-                     pause_time:{
-                         number: "Enter Number only",
-                    },
-                    anim_speed:{
-                         number: "Enter Number only",
                     },
                     status:"Select Status",                         
                     

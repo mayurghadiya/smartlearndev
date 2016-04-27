@@ -162,7 +162,7 @@
                                             
                                         </div>
                                          <div class="form-group">
-                                                    <label class="col-sm-3 control-label">Status</label>
+                                                    <label class="col-sm-3 control-label">Status <span style="color:red"> *</span></label>
                                                     <div class="col-sm-5">
                                                         <select name="status" class="form-control">
                                                             <option value="">Select</option>
