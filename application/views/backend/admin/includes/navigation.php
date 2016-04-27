@@ -340,19 +340,19 @@
                     </div>
                 </li> 
                 <li>
-                    <a href="javascript:void(0);"   data-action="click-trigger" >
+                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "photo_gallery" || $page_name == "banner_slider") { ?> class="open"<?php } ?> >
                         <span class="menu-icon entypo-archive"><i class="fa fa-cubes"></i></span>
                         <span class="menu-text">Media</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu" data-action="click-target" >
+                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "photo_gallery" || $page_name == "banner_slider") { ?> style="display:block" <?php } ?>  >
                         <ul class="clearfix">          
-                            <li >
+                            <li <?php if ($page_name == "photo_gallery") { ?> class="selectednavmenu" <?php } ?> >
                                 <a href="<?php echo base_url(); ?>index.php?media/photogallery">
                                     <span class="menu-text">Photo Gallery</span>  
                                 </a>
                             </li>
-                            <li >
+                            <li <?php if ($page_name == "banner_slider") { ?> class="selectednavmenu" <?php } ?> >
                                 <a href="<?php echo base_url(); ?>index.php?media/bannerslider">
                                     <span class="menu-text">Banner Slider</span>  
                                 </a>

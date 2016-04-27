@@ -83,7 +83,7 @@
                                                     ?>
                                                     <tr>
                                                        <td><?php echo $count++; ?></td>    
-                                                    <td><?php echo $row->banner_title; ?></td>    
+                                                    <td><?php if($row->banner_title!=""){ echo $row->banner_title; }else{ echo "No-Title"; } ?></td>    
                                                     <td><?php echo $row->banner_desc; ?></td>  
                                                     
                                                   <td>  <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_banner/<?php echo $row->banner_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
