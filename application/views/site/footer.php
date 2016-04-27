@@ -141,11 +141,12 @@
 </style>
 
 <script>eval(mod_pagespeed_n5auxpLi_K);</script> <!-- Slick Nav js --> 
-<script src="<?php echo base_url(); ?>site_assets/scripts/chosen.select.js.pagespeed.jm.lPyT1rX-zq.js"></script> <!-- Chosen js --> 
+<script src="<?php echo base_url(); ?>site_assets/scripts/chosen.select.js.pagespeed.jm.lPyT1rX_zq.js"></script> <!-- Chosen js --> 
 <script src="<?php echo base_url(); ?>site_assets/scripts/slick.js.pagespeed.jm.l0TXLYnuWd.js"></script> <!-- Slick Slider js --> 
-<script src="<?php echo base_url(); ?>site_assets/scripts/jquery.mCustomScrollbar..js"></script><script>eval(mod_pagespeed_uCyK13KR_4);</script> 
-<script>eval(mod_pagespeed_bnv84p9rdx);</script><!-- Side Menu js --> 
-<script>eval(mod_pagespeed_vDsXghf8c3);</script><!-- Counter js --> 
+<script src="<?php echo base_url(); ?>site_assets/scripts/jquery.mCustomScrollbar.concat.min.js.pagespeed.jc.LFfyI898Qv.js">
+</script>
+<script>eval(mod_pagespeed_uCyK13KR_4);</script> 
+
 
 <!-- Put all Functions in functions.js --> 
 <script>eval(mod_pagespeed_NOO3SHeFLW);</script>
