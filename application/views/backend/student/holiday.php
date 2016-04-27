@@ -53,26 +53,34 @@ if ($skin == 'theme_green.min.css') {
     var events = {
 <?php
 foreach ($event as $eve) :
+    
     $event_date = date("m-d-Y", strtotime($eve->holiday_startdate));
-    $event_date_time =  date("m-d-Y", strtotime($eve->holiday_startdate));
+    $event_date_time =  $eve->holiday_startdate;
     $event_name = $eve->holiday_name;
-    $event_location = $eve->holiday_name;
-    $event_desc = $eve->holiday_name;
-   
+    
+    $diff=date_diff(date_create($eve->holiday_startdate),date_create($eve->holiday_enddate));
+    $count= $diff->format("%R%a days");
+   //$sdate=date("Y-m-d", strtotime($eve->holiday_startdate));
+    
+    for($i=0;$i<=$count;$i++)
+    {
+        $sdate= date('Y-m-d', strtotime($i.'day', strtotime(date("Y-m-d", strtotime($eve->holiday_startdate)))));
+       
+        ?>
+            '<?php echo date("m-d-Y", strtotime($sdate)); ?>' : [{content: '<?php  echo date("F d, Y", strtotime($sdate));
+             echo "<br/>";
+             echo $event_name;?>', allDay: true}],    
+             <?php
+    }
+
     ?>
-        '<?php echo $event_date; ?>' : [{content: '<?php echo date("F d, Y h:i:s A", strtotime($event_date_time));
-    echo "<br/>";
-    echo $event_name;
-    echo "<br/>";
-    echo $event_location;
-    echo "<br/>";
-    echo $event_desc; ?>', allDay: true}],
-        
 <?php endforeach; ?>
     },
+            
             t = new Date(),
 //Creation of today event
             today = ((t.getMonth() + 1) < 10 ? '0' + (t.getMonth() + 1) : (t.getMonth() + 1)) + '-' + (t.getDate() < 10 ? '0' + t.getDate() : t.getDate()) + '-' + t.getFullYear();
+           
     events[today] = [{content: 'TODAY', allDay: true}];
 
     $(function () {
