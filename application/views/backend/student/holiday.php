@@ -69,7 +69,7 @@ foreach ($event as $eve) :
         ?>
             '<?php echo date("m-d-Y", strtotime($sdate)); ?>' : [{content: '<?php  echo date("F d, Y", strtotime($sdate));
              echo "<br/>";
-             echo $event_name;?>', allDay: true}],    
+             echo $event_name;?>', allDay: false}],    
              <?php
     }
 
@@ -81,7 +81,7 @@ foreach ($event as $eve) :
 //Creation of today event
             today = ((t.getMonth() + 1) < 10 ? '0' + (t.getMonth() + 1) : (t.getMonth() + 1)) + '-' + (t.getDate() < 10 ? '0' + t.getDate() : t.getDate()) + '-' + t.getFullYear();
            
-    events[today] = [{content: 'TODAY', allDay: true}];
+    //events[today] = [{content: 'TODAY', allDay: true}];
 
     $(function () {
         function updateMonthYear() {
