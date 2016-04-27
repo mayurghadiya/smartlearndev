@@ -52,7 +52,7 @@
                                         <tbody>
                                             <?php $count = 1;
                                             foreach ($holiday as $row):
-                                                ?>
+                                                ?><tr>
                                             <td><?php echo $count++; ?></td>
                                               <td><?php echo $row['holiday_name']; ?></td>    
                                               <td><?php echo date('F d, Y', strtotime($row['holiday_startdate'])); ?></td>    
@@ -69,6 +69,7 @@
                                                     <a href="#" onclick="showAjaxModal('<?php echo base_url();?>index.php?modal/popup/modal_edit_holiday/<?php echo $row['holiday_id'];?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>        
                                                     <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/holiday/delete/<?php echo $row['holiday_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                 </td>
+                                                </tr>
                                             <?php endforeach; ?>
                                         </tbody>
                                     </table>

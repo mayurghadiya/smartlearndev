@@ -69,7 +69,6 @@ endforeach;
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true,
-                 minDate: new Date(),
                 onClose: function (selectedDate) {
                     $("#holiday_enddate1").datepicker("option", "minDate", selectedDate);
                 }
