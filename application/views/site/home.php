@@ -1,65 +1,68 @@
 
 
 <!-- Banner Start --> 
-<link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/default/default.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/light/light.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/dark/dark.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>themes/bar/bar.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>nivo-slider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url().'assets/slide/'; ?>style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url() . 'assets/slide/'; ?>themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url() . 'assets/slide/'; ?>themes/light/light.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url() . 'assets/slide/'; ?>themes/dark/dark.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url() . 'assets/slide/'; ?>themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url() . 'assets/slide/'; ?>nivo-slider.css" type="text/css" media="screen" />
+
 <div class="page-section" style="">
- <div id="wrapper">
+    <div id="wrapper">
         <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-                <?php if(count($banner)) 
-                    foreach($banner as $slide) : ?>
-                <img src="<?php echo base_url().'uploads/bannerimg/'.$slide->banner_img; ?>" data-thumb="<?php echo base_url().'uploads/bannerimg/'.$slide->banner_img; ?>" <?php if($slide->slide_option!=""){ ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" title="#htmlcaption<?php echo $slide->banner_id; ?>" />
+                <?php if (count($banner))
+                    foreach ($banner as $slide) :
+                        ?>
+                        <img src="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" data-thumb="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" <?php if ($slide->slide_option != "") { ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" title="#htmlcaption<?php echo $slide->banner_id; ?>" />
                 <?php endforeach; ?>
             </div>
-              <?php if(count($banner)) 
-                    foreach($banner as $slide2) : 
-                  if($slide2->banner_title!=''){?>
-            <div id="htmlcaption<?php echo $slide2->banner_id; ?>" class="nivo-html-caption">
-                <strong> <?php echo $slide2->banner_title; ?></strong>
-                    <p><?php echo $slide2->banner_desc; ?></p>
-            </div>
-                  <?php } ?>
-            <?php endforeach; ?>
+            <?php
+            if (count($banner))
+                foreach ($banner as $slide2) :
+                    if ($slide2->banner_title != '') {
+                        ?>
+                        <div id="htmlcaption<?php echo $slide2->banner_id; ?>" class="nivo-html-caption">
+                            <strong> <?php echo $slide2->banner_title; ?></strong>
+                            <p><?php echo $slide2->banner_desc; ?></p>
+                        </div>
+        <?php } ?>
+    <?php endforeach; ?>
         </div>
 
     </div>
 </div>
-    
-    <script type="text/javascript" src="<?php echo base_url().'assets/slide/'; ?>scripts/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url().'assets/slide/'; ?>jquery.nivo.slider.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-               $('#slider').nivoSlider(
-                       {
-                           <?php if(count($banner))
-                               foreach($banner as $slide1): ?>
-                                      <?php if($slide1->pause_time!=""){ ?>     
-                           pauseTime:<?php echo $slide1->pause_time; ?>, 
-                                      <?php  } ?>
-                                    <?php if($slide1->pause_on_hover!=""){ ?>     
-                    pauseOnHover:<?php echo $slide1->pause_on_hover; ?>, 
-                                          <?php } ?>
-                                    <?php if($slide1->caption_opacity!=""){ ?>     
+
+<script type="text/javascript" src="<?php echo base_url() . 'assets/slide/'; ?>jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#slider').nivoSlider(
+        {
+<?php if (count($banner))
+    foreach ($banner as $slide1):
+        ?>
+        <?php if ($slide1->pause_time != "") { ?>
+                    pauseTime:<?php echo $slide1->pause_time; ?>,
+        <?php } ?>
+        <?php if ($slide1->pause_on_hover != "") { ?>
+                    pauseOnHover:<?php echo $slide1->pause_on_hover; ?>,
+        <?php } ?>
+        <?php if ($slide1->caption_opacity != "") { ?>
                     captionOpacity: <?php echo $slide1->caption_opacity; ?>,
-                                     <?php  } ?>  
-                                    <?php if($slide1->anim_speed!=""){ ?>     
+        <?php } ?>
+        <?php if ($slide1->anim_speed != "") { ?>
                     animSpeed: <?php echo $slide1->anim_speed; ?>,
-                                      <?php  } ?>  
-                                                  
-                                                 
-                                        
+        <?php } ?>
 
 
-                    <?php endforeach; ?>
-                }
-                       );
+
+
+
+    <?php endforeach; ?>
+        }
+        );
     });
-    </script>
+</script>
 <!-- Banner End --> 
 <!-- Main Start -->
 <div class="main-section">
@@ -93,7 +96,7 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
-                        <?php foreach ($events as $event) { ?>
+<?php foreach ($events as $event) { ?>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="cs-event left">
                                     <div class="cs-media">
@@ -106,7 +109,7 @@
                                     </div>
                                 </div>
                             </div>
-                        <?php } ?>                       
+<?php } ?>                       
 
                     </div>
                 </div>
