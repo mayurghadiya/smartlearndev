@@ -144,10 +144,9 @@ if (count($slide_setting))
                                     <p><?php echo $ch->people_description; ?>.</p>
                                     <div class="cs-social-media">
                                         <ul>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
-                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="<?php echo $ch->facebook_link;?>" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="<?php echo $ch->twitter_link;?>" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="<?php echo $ch->google_plus_link;?>" data-original-title="google"><i class="icon-google4"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
