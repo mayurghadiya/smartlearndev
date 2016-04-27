@@ -15,13 +15,8 @@
                 if (count($banner))
                     foreach ($banner as $slide) :
                         ?>
-<<<<<<< HEAD
-                        <img src="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" data-thumb="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" <?php if ($slide->slide_option != "") { ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" title="#htmlcaption<?php echo $slide->banner_id; ?>" />
-                    <?php endforeach; ?>
-=======
                         <img src="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" data-thumb="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" <?php if ($slide->slide_option != "") { ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" <?php if ($slide->banner_title != '') { ?> title="#htmlcaption<?php echo $slide->banner_id; ?>" <?php } ?> />
-                <?php endforeach; ?>
->>>>>>> 8b3b4d6024eb9fcd8371008241db2315a806b327
+                    <?php endforeach; ?>
             </div>
             <?php
             if (count($banner))
@@ -32,17 +27,12 @@
                             <strong> <?php echo $slide2->banner_title; ?></strong>
                             <p><?php echo $slide2->banner_desc; ?></p>
                         </div>
-<<<<<<< HEAD
+                    <?php } else { ?>
+                        <style>
+                            .nivo-caption{ display: none; }
+                        </style>
                     <?php } ?>
                 <?php endforeach; ?>
-=======
-        <?php }else{ ?>
-            <style>
-                .nivo-caption{ display: none; }
-            </style>
-         <?php } ?>
-    <?php endforeach; ?>
->>>>>>> 8b3b4d6024eb9fcd8371008241db2315a806b327
         </div>
 
     </div>
@@ -53,14 +43,9 @@
     $(window).load(function () {
         $('#slider').nivoSlider(
         {
-<<<<<<< HEAD
 <?php
-if (count($banner))
-    foreach ($banner as $slide1):
-=======
-<?php if (count($slide_setting))
+if (count($slide_setting))
     foreach ($slide_setting as $slide1):
->>>>>>> 8b3b4d6024eb9fcd8371008241db2315a806b327
         ?>
         <?php if ($slide1->pause_time != "") { ?>
                     pauseTime:<?php echo $slide1->pause_time; ?>,
@@ -76,17 +61,8 @@ if (count($banner))
         <?php } ?>
 
 
-
-
-
-<<<<<<< HEAD
     <?php endforeach; ?>
-    }
-    );
-=======
-    <?php endforeach; ?>        
     });
->>>>>>> 8b3b4d6024eb9fcd8371008241db2315a806b327
     });
 </script>
 <!-- Banner End --> 
@@ -122,7 +98,7 @@ if (count($banner))
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
-                        <?php foreach ($events as $event) { ?>
+<?php foreach ($events as $event) { ?>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="cs-event left">
                                     <div class="cs-media">
@@ -135,7 +111,7 @@ if (count($banner))
                                     </div>
                                 </div>
                             </div>
-                        <?php } ?>                       
+<?php } ?>                       
 
                     </div>
                 </div>
@@ -151,37 +127,36 @@ if (count($banner))
                     </div>
                 </div>
                 <ul class="cs-teamlist-slider">
-                    <?php 
-                    $chancellor=$this->db->get('university_peoples')->result();
-                    foreach($chancellor as $ch)
-                    {
+                    <?php
+                    $chancellor = $this->db->get('university_peoples')->result();
+                    foreach ($chancellor as $ch) {
                         ?>
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="cs-team listing loop">
-                            <div class="cs-media">
-                                <figure>
-                                    <a href="#"><img src="<?php echo base_url(); ?>uploads/system_image/<?php echo $ch->people_photo;?>" alt="#"></a>
-                                </figure>
-                            </div>
-                            <div class="cs-text">
-                                <h5><a href="#" class="cs-color"><?php echo $ch->people_name;?></a></h5>
-                                <span><?php echo $ch->people_designation;?></span>
-                                <p><?php echo $ch->people_description;?>.</p>
-                                <div class="cs-social-media">
-                                    <ul>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
-                                        <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
-                                    </ul>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="cs-team listing loop">
+                                <div class="cs-media">
+                                    <figure>
+                                        <a href="#"><img src="<?php echo base_url(); ?>uploads/system_image/<?php echo $ch->people_photo; ?>" alt="#"></a>
+                                    </figure>
+                                </div>
+                                <div class="cs-text">
+                                    <h5><a href="#" class="cs-color"><?php echo $ch->people_name; ?></a></h5>
+                                    <span><?php echo $ch->people_designation; ?></span>
+                                    <p><?php echo $ch->people_description; ?>.</p>
+                                    <div class="cs-social-media">
+                                        <ul>
+                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="facebook"><i class="icon-facebook2"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="pinterest"><i class="icon-pinterest3"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="twitter"><i class="icon-twitter2"></i></a></li>
+                                            <li style="margin-right:5px !important;"><a href="#" data-original-title="google"><i class="icon-google4"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <?php
+                        </li>
+                        <?php
                     }
                     ?>
-                    
+
                 </ul>
             </div>
         </div>
