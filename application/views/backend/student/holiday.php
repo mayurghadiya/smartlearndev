@@ -2,6 +2,13 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/demo.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/calendar.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/custom_2.css" />
+<style>
+    section.scroll_none {
+    background: #fff none repeat scroll 0 0 !important;
+    height: 500px;
+    overflow: hidden;
+}
+    </style>
 <?php
 $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->row()->description;
 
@@ -39,46 +46,28 @@ if ($skin == 'theme_green.min.css') {
 </div><!-- /container -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/std_event/js/calendario.js"></script>
+
 <!--<script type="text/javascript" src="js/data.js"></script>-->
-<?php $event = $this->db->get('event_manager')->result(); ?>
+<?php $event = $this->db->get('holiday')->result(); ?>
 <script type="text/javascript">
     var events = {
 <?php
 foreach ($event as $eve) :
-    $event_date = date("m-d-Y", strtotime($eve->event_date));
-    $event_date_time = $eve->event_date;
-    $event_name = $eve->event_name;
-    $event_location = $eve->event_location;
-    $event_desc = $eve->event_desc;
-    $student = '';
-    $role = '';
-    if ($eve->group_id != '') {
-        $res = $this->db->get_where("group", array('g_id' => $eve->group_id))->result();
-        $role = $res[0]->user_role;
-        $student = explode(",", $role);
-
-        $std_id = $this->session->userdata('std_id');
-        if (in_array($std_id, $student)) {
-            ?>
-                '<?php echo $event_date; ?>' : [{content: '<?php echo date("F d, Y h:i:s A", strtotime($event_date_time));
-            echo "<br/>";
-            echo $event_name;
-            echo "<br/>";
-            echo $event_location;
-            echo "<br/>";
-            echo $event_desc; ?>', allDay: true}],
-        <?php
-        }
-    } else {
-        ?>
-            '<?php echo $event_date; ?>' : [{content: '<?php echo date("F d, Y h:i:s A", strtotime($event_date_time));
-        echo "<br/>";
-        echo $event_name;
-        echo "<br/>";
-        echo $event_location;
-        echo "<br/>";
-        echo $event_desc; ?>', allDay: true}],
-    <?php } ?>
+    $event_date = date("m-d-Y", strtotime($eve->holiday_startdate));
+    $event_date_time =  date("m-d-Y", strtotime($eve->holiday_startdate));
+    $event_name = $eve->holiday_name;
+    $event_location = $eve->holiday_name;
+    $event_desc = $eve->holiday_name;
+   
+    ?>
+        '<?php echo $event_date; ?>' : [{content: '<?php echo date("F d, Y h:i:s A", strtotime($event_date_time));
+    echo "<br/>";
+    echo $event_name;
+    echo "<br/>";
+    echo $event_location;
+    echo "<br/>";
+    echo $event_desc; ?>', allDay: true}],
+        
 <?php endforeach; ?>
     },
             t = new Date(),
