@@ -1,3 +1,26 @@
+
+    <script language="javascript" type="text/javascript">
+   
+        $(document).ready(function($){
+	images = new Array();
+	$(document).on('change','.coverimage2',function(){
+		 files = this.files;
+               
+		 $.each( files, function(){
+			 file = $(this)[0];
+			 if (!!file.type.match(/image.*/)) {
+	        	 var reader = new FileReader();
+	             reader.readAsDataURL(file);
+	             reader.onloadend = function(e) {
+	            	img_src = e.target.result; 
+	            	html = "<img class='img-thumbnail' style='width:300px;margin:20px;' src='"+img_src+"'>";
+	            	$('#image_container1').html( html );
+	             };
+        	 } 
+		});
+	});
+});
+    </script>
 <?php
 $edit_data = $this->db->select()
         ->from('graduates')
@@ -44,7 +67,7 @@ $students = $this->db->get_where('student', array(
                         <div class="">
                             <span style="color:red">* <?php echo ucwords("is mandatory field"); ?></span> 
                         </div> 
-                        <?php echo form_open(base_url() . 'index.php?admin/graduate/update/' . $edit_data->graduates_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editgraduatesform', 'target' => '_top')); ?>
+                        <?php echo form_open(base_url() . 'index.php?admin/graduate/update/' . $edit_data->graduates_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editgraduatesform', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("course name"); ?><span style="color:red">*</span></label>
@@ -110,6 +133,13 @@ $students = $this->db->get_where('student', array(
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Student Image <span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input id="main_img" class="form-control coverimage2" type="file" name="main_img" />
+                                            </div>
+                                            <div id="image_container1"><img class='img-thumbnail' style='width:300px;margin:20px;' src='<?php echo "uploads/student_image/".$edit_data->student_img; ?>' ></div>
+                          </div>   
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("graduate year"); ?><span style="color:red">*</span></label>
@@ -139,7 +169,7 @@ $students = $this->db->get_where('student', array(
     </div>
 </div>
 
-<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+
 
 <script type="text/javascript">
     $.validator.setDefaults({
@@ -157,7 +187,11 @@ $students = $this->db->get_where('student', array(
                     batch: "required",
                     semester: "required",
                     student: "required",
+                    main_img:{
+                        extension:'gif|jpg|png|jpeg', 
+                    }, 
                     year: "required"
+                   
                 },
                 messages: {
                     degree: "Please select course",
@@ -165,7 +199,11 @@ $students = $this->db->get_where('student', array(
                     batch: "Please select batch",
                     semester: "Please select semester",
                     student: "Please select student",
+                    main_img:{
+                          extension:"Only gif,jpg,png file is allowed!" 
+                    },
                     year: "Please enter year"
+                    
                 }
             });
         });

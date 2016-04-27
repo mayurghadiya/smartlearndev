@@ -189,7 +189,7 @@ if (count($slide_setting))
                     <li class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                         <div class="cs-media">
                             <figure>
-                                <img src="<?php echo base_url(); ?>uploads/student_image/<?php echo $row->profile_photo; ?>" alt=""/>
+                                <img src="<?php echo base_url(); ?>uploads/student_image/<?php echo $row->student_img; ?>" alt=""/>
                                 <figcaption>
                                     <div class="cs-text">
                                         <p><?php echo $row->c_name; ?></p>

@@ -5225,6 +5225,38 @@ class Admin extends CI_Controller {
         }
         if ($_POST) {
             if ($param1 == 'create') {
+                
+              if(is_uploaded_file($_FILES['main_img']['tmp_name']))
+              {
+                      $path= FCPATH . 'uploads/student_image/';
+                      if(!is_dir($path))
+                      {
+                          mkdir($path,0777);
+                      }
+                      
+		$allowed_types = 'gif|jpg|png|jpeg';
+                $type = explode("|",$allowed_types);
+                $ext = explode(".",$_FILES['main_img']['name']);
+                $ext_file =strtolower(end($ext));
+                $image1 = date('dmYhis').'main.'.$ext_file;               
+		
+		if (in_array($ext_file, $type))
+		{
+                   $upl_path= FCPATH . 'uploads/student_image/'.$image1;
+                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+                   $main_img = $image1;
+		}
+		else
+		{
+                    $error = "Invalid student image";
+                    $this->session->set_flashdata('flash_message',$error);
+                    redirect(base_url().'index.php?admin/graduate');
+		}
+              }
+              else{
+                  $main_img = '';
+              }
+                
                 $this->Crud_model->save_graduates(array(
                     'student_id' => $_POST['student'],
                     'degree_id' => $_POST['degree'],
@@ -5232,10 +5264,44 @@ class Admin extends CI_Controller {
                     'batch_id' => $_POST['batch'],
                     'semester_id' => $_POST['semester'],
                     'description' => $_POST['description'],
-                    'graduate_year' => $_POST['year']
+                    'graduate_year' => $_POST['year'],
+                    "student_img"=>$main_img
                 ));
                 $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');
             } elseif ($param1 == 'update') {
+                $graduate_std = $this->Crud_model->get_graduate_student($param2);
+                if(is_uploaded_file($_FILES['main_img']['tmp_name']))
+              {
+                      $path= FCPATH . 'uploads/student_image/';
+                      if(!is_dir($path))
+                      {
+                          mkdir($path,0777);
+                      }
+                      
+		$allowed_types = 'gif|jpg|png|jpeg';
+                $type = explode("|",$allowed_types);
+                $ext = explode(".",$_FILES['main_img']['name']);
+                $ext_file =strtolower(end($ext));
+                $image1 = date('dmYhis').'main.'.$ext_file;               
+		
+		if (in_array($ext_file, $type))
+		{
+                   $upl_path= FCPATH . 'uploads/student_image/'.$image1;
+                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+                   $main_img = $image1;
+		}
+		else
+		{
+                    $error = "Invalid student image";
+                    $this->session->set_flashdata('flash_message',$error);
+                    redirect(base_url().'index.php?admin/graduate');
+		}
+              }
+              else{
+                  $main_img = $graduate_std[0]->student_img;
+              }
+                
+               
                 $this->Crud_model->save_graduates(array(
                     'student_id' => $_POST['student'],
                     'degree_id' => $_POST['degree'],
@@ -5243,8 +5309,8 @@ class Admin extends CI_Controller {
                     'batch_id' => $_POST['batch'],
                     'semester_id' => $_POST['semester'],
                     'description' => $_POST['description'],
-                    'graduate_year' => $_POST['year']
-                        ), $param2);
+                    'graduate_year' => $_POST['year'],
+                    "student_img"=>$main_img), $param2);
                 $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');
             }
 

@@ -206,17 +206,24 @@
                     batch: "required",
                     semester: "required",
                     student: "required",
-                    year: "required",
-                    main_img:"required",
+                     main_img:{ 
+                        required:true,
+                        extension:"gif|jpg|png|jpeg"
+                    },
+                    year: "required"
+                   
                 },
                 messages: {
                     degree: "Please select course",
                     course: "Please select branch",
                     batch: "Please select batch",
                     semester: "Please select semester",
-                    student: "Please select student",
-                    year: "Please enter year",
-                    main_img:"Please upload image",
+                    student: "Please select student",                    
+                    main_img:{ 
+                        required:"Please upload slide image",
+                        extension:"Only gif,jpg,png file is allowed!"
+                    },
+                    year: "Please enter year"
                 }
             });
         });
