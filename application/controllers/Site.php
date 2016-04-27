@@ -42,12 +42,8 @@ class Site extends CI_Controller {
         $this->data['branch'] = $this->Site_model->all_branch();
         $this->data['events'] = $this->Site_model->events();
         $this->data['banner'] = $this->Site_model->banners();
-<<<<<<< HEAD
         $this->data['recent_graduates'] = $this->Site_model->recent_graduates();
-=======
         $this->data['slide_setting'] = $this->Site_model->banner_setting();
-        
->>>>>>> 8b3b4d6024eb9fcd8371008241db2315a806b327
         $this->__template('home', $this->data);
     }
 
