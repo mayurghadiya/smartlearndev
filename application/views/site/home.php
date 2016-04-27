@@ -11,11 +11,12 @@
     <div id="wrapper">
         <div class="slider-wrapper theme-default">
             <div id="slider" class="nivoSlider">
-                <?php if (count($banner))
+                <?php
+                if (count($banner))
                     foreach ($banner as $slide) :
                         ?>
                         <img src="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" data-thumb="<?php echo base_url() . 'uploads/bannerimg/' . $slide->banner_img; ?>" <?php if ($slide->slide_option != "") { ?> data-transition="<?php echo $slide->slide_option; ?>" <?php } ?>  alt="" title="#htmlcaption<?php echo $slide->banner_id; ?>" />
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
             </div>
             <?php
             if (count($banner))
@@ -26,8 +27,8 @@
                             <strong> <?php echo $slide2->banner_title; ?></strong>
                             <p><?php echo $slide2->banner_desc; ?></p>
                         </div>
-        <?php } ?>
-    <?php endforeach; ?>
+                    <?php } ?>
+                <?php endforeach; ?>
         </div>
 
     </div>
@@ -38,7 +39,8 @@
     $(window).load(function () {
         $('#slider').nivoSlider(
         {
-<?php if (count($banner))
+<?php
+if (count($banner))
     foreach ($banner as $slide1):
         ?>
         <?php if ($slide1->pause_time != "") { ?>
@@ -59,8 +61,8 @@
 
 
     <?php endforeach; ?>
-        }
-        );
+    }
+    );
     });
 </script>
 <!-- Banner End --> 
@@ -96,7 +98,7 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
-<?php foreach ($events as $event) { ?>
+                        <?php foreach ($events as $event) { ?>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="cs-event left">
                                     <div class="cs-media">
@@ -109,7 +111,7 @@
                                     </div>
                                 </div>
                             </div>
-<?php } ?>                       
+                        <?php } ?>                       
 
                     </div>
                 </div>
@@ -217,202 +219,52 @@
             </div>
         </div>
     </div>
+    <div class="page-section" style="margin-bottom: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="cs-element-title" style="margin-bottom:30px;">
+                        <h2>Video Streaming</h2>
+                    </div>
+                    <img class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="cs-element-title" style="margin-bottom:30px;">
+                        <h2>University Map</h2>
+                    </div>
+                    <img style="width: 100%; height: 390px;" src="<?php echo base_url(); ?>uploads/university_map.jpg"/>
+                </div>
+            </div>
+        </div>        
+    </div>
     <div class="page-section" style="margin-bottom: 20px;">
         <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="cs-fancy-heading" style="margin-bottom:40px;">
                 <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
             </div>
             <ul class="row cs-testimonial main-testimonial">
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-1.jpg.pagespeed.ic.TtS-RcU70J.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
+                <?php foreach ($recent_graduates as $row) { ?>
+                    <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                        <div class="cs-media">
+                            <figure>
+                                <img src="<?php echo base_url(); ?>uploads/student_image/<?php echo $row->profile_photo; ?>" alt=""/>
+                                <figcaption>
+                                    <div class="cs-text">
+                                        <p><?php echo $row->c_name; ?></p>
+                                        <div class="cs-media">
+                                            <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
+                                        </div>
+                                        <div class="cs-info">
+                                            <h6><a href="#"><?php echo $row->std_first_name . ' ' . $row->std_last_name; ?></a></h6>
+                                            <span><?php echo $row->graduate_year; ?></span>
+                                        </div>
                                     </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-2.jpg.pagespeed.ic.oPPrh9xq34.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-3.jpg.pagespeed.ic.wPxdI7KVu1.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-4.jpg.pagespeed.ic.uQ6Lk6d-Ew.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-5.jpg.pagespeed.ic.jVMol7j23-.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-1.jpg.pagespeed.ic.TtS-RcU70J.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-2.jpg.pagespeed.ic.oPPrh9xq34.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-3.jpg.pagespeed.ic.wPxdI7KVu1.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-4.jpg.pagespeed.ic.uQ6Lk6d-Ew.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-                    <div class="cs-media">
-                        <figure>
-                            <img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-img-5.jpg.pagespeed.ic.jVMol7j23-.jpg" alt=""/>
-                            <figcaption>
-                                <div class="cs-text">
-                                    <p>“Diet and health, human osteology, paleopathology/ epidemiology, human evolution, disease ecology,</p>
-                                    <div class="cs-media">
-                                        <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
-                                    </div>
-                                    <div class="cs-info">
-                                        <h6><a href="#">Charlie Waite</a></h6>
-                                        <span>Manager of University</span>
-                                    </div>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </li>
+                <?php } ?>
+
             </ul>
         </div>
     </div>

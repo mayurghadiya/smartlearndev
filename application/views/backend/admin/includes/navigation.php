@@ -126,18 +126,23 @@
                     </div>
                 </li>
                 <li>
-                    <a class="<?php if($page_name == 'graduate') echo 'open'; ?>" href="javascript:void(0);" data-action="click-trigger">
+                    <a  href="javascript:void(0);" data-action="click-trigger" <?php if($page_name == "graduate" || $page_name == 'charity_fund'){  ?> class="open" <?php } ?>>
                         <span class="menu-icon"><i class="fa fa-building"> </i></span>
                         <span class="menu-text">University</span>
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu"   data-action="click-target">
+                    <div class="child-menu"   data-action="click-target"  <?php if($page_name == "graduate" || $page_name == 'charity_fund'){  ?> style="display: block;" <?php } ?>>
                         <ul class="clearfix">   
                             <li  <?php if ($page_name == "graduate") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>index.php?admin/graduate">
                                     <span class="menu-text">Recent Graduates</span>  
                                 </a>
-                            </li>                            
+                            </li> 
+                            <li  <?php if ($page_name == "charity_fund") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>index.php?admin/charity_fund">
+                                    <span class="menu-text">Charity Fund</span>  
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>	

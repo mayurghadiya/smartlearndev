@@ -17,7 +17,7 @@ class Admin extends CI_Controller {
         $this->load->database();
         $this->load->library('session');
         if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url() . 'index.php?login', 'refresh');
+            redirect(base_url() . 'index.php?site/user_login', 'refresh');
         $this->chat_user();
         /* cache control */
         $this->output->set_header("HTTP/1.0 200 OK");
@@ -51,8 +51,6 @@ class Admin extends CI_Controller {
       /******** */
 
     function manage_profile($param1 = '', $param2 = '', $param3 = '') {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url() . 'index.php?login', 'refresh');
         if ($param1 == 'update_profile_info') {
             if (!empty($_POST)) {
                 $data['name'] = $this->input->post('name');
@@ -222,8 +220,6 @@ class Admin extends CI_Controller {
       /******** */
 
     function courses($param1 = '', $param2 = '') {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $semimplode = implode(',', $this->input->post('semester'));
             $data['c_name'] = $this->input->post('c_name');
@@ -360,8 +356,6 @@ class Admin extends CI_Controller {
      * *** */
 
     function system_settings($param1 = '', $param2 = '', $param3 = '') {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url() . 'index.php?login', 'refresh');
 
         if ($param1 == 'do_update') {
 
@@ -450,8 +444,6 @@ class Admin extends CI_Controller {
      * *** */
 
     function cms($param1 = '', $param2 = '') {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             //echo "<pre/>";
             //print_r($this->input->post());
@@ -498,8 +490,6 @@ class Admin extends CI_Controller {
      * *** */
 
     function exam_result($param1 = '', $param2 = '') {
-        if ($this->session->userdata('admin_login') != 1)
-            redirect(base_url(), 'refresh');
         if ($param1 == 'search') {
 
             $page_data['student_id'] = $this->input->post('std');
@@ -5236,7 +5226,8 @@ class Admin extends CI_Controller {
     function graduate($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
         if($param1 == 'delete') {
-            $this->db->delete('graduates', array('graduates_id', $param2));
+            $this->db->where('graduates_id', $param2);
+            $this->db->delete('graduates');
             $this->session->set_flashdata('flash_message', 'Graduate succeffully deleted.');
             redirect(base_url('index.php?admin/graduate'));
         }
@@ -5271,6 +5262,33 @@ class Admin extends CI_Controller {
         $page_data['page_name'] = 'graduate';
         $page_data['degree'] = $this->Crud_model->get_all_degree();
         $page_data['graduates'] = $this->Crud_model->get_all_graduates();
+        $this->load->view('backend/index', $page_data);
+    }
+    
+    /**
+     * Charity fund action
+     * @param string $param1
+     * @param string $param2
+     * 
+     * @return response
+     */
+    function charity_fund($param1='', $param2='') {
+        $this->load->model('admin/Crud_model');
+        if($_POST){
+            if($param1 == 'create') {
+                //create charity fund
+                //echo '<pre>';
+                //var_dump($_POST);
+                //exit;
+            } elseif($param1 == 'update'){
+                
+            }     
+            
+            redirect(base_url('index.php?admin/charity_fund'));
+        }
+        $page_data['title'] = 'Charity Fund';
+        $page_data['page_name'] = 'charity_fund';
+        $page_data['subscriber'] = $this->Crud_model->subscriber();
         $this->load->view('backend/index', $page_data);
     }
 

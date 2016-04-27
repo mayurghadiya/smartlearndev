@@ -51,7 +51,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="widget widget-news-letter">
                         <div class="widget-section-title"><h6 style="color:#fff !important">NewsLetter</h6></div>
-                        <p>Subcribe to out newsletter. We do not spam. We promise</p>
+                        <p>Subscribe to out newsletter. We do not spam. We promise</p>
                         <div class="cs-form">
                             <p class="hidden" id="subscribe-notification"></p>
                             <div class="input-holder">
