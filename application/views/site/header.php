@@ -7,7 +7,7 @@
         <title><?php echo $title; ?></title>
         <link href="<?php echo base_url(); ?>site_assets/css/bootstrap_theme.css" rel="stylesheet"/>
 
-        <link href="<?php echo base_url(); ?>site_assets/style.css+cs-smartstudy-plugin.css+assets,_css,_color.css+assets,_css,_widget.css+assets,_css,_responsive.css.pagespeed.cc.mnOD-G7HJT.css" rel="stylesheet"/>
+        <link href="<?php echo base_url(); ?>site_assets/style1.css" rel="stylesheet"/>
 
         <!-- <link href="<?php echo base_url(); ?>site_assets/css/bootstrap-rtl.css" rel="stylesheet"> Uncomment it if needed! -->
 
@@ -19,7 +19,7 @@
             <![endif]-->
         <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
         <script src="<?php echo base_url(); ?>site_assets/scripts/jquery.js.pagespeed.jm.J-8M9bCq0j.js"></script>
-        <script src="<?php echo base_url(); ?>site_assets/scripts/modernizr_bootstrap.js"></script><script>eval(mod_pagespeed_m5wYI4Lltk);</script>
+        <script src="<?php echo base_url(); ?>site_assets/scripts/modernizr.js.pagespeed.jc._Ez36Dl5Ej.js"></script>
         <script>eval(mod_pagespeed_8U31Wg3Ylw);</script>
     </head>
     <body class="wp-smartstudy">
