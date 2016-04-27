@@ -99,7 +99,7 @@ if (count($slide_setting))
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                     <div class="row">
 <?php foreach ($events as $event) { ?>
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="cs-event left">
                                     <div class="cs-media">
                                         <span><strong><?php echo date('M', strtotime($event->event_date)) ?></strong><?php echo date('d', strtotime($event->event_date)) ?></span>
@@ -164,17 +164,17 @@ if (count($slide_setting))
     <div class="page-section" style="margin-bottom: 30px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
                     <div class="cs-element-title" style="margin-bottom:30px;">
                         <h2>Video Streaming</h2>
                     </div>
                     <img class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
                     <div class="cs-element-title" style="margin-bottom:30px;">
                         <h2>University Map</h2>
                     </div>
-                    <img style="width: 100%; height: 390px;" src="<?php echo base_url(); ?>uploads/university_map.jpg"/>
+                    <img style="width: 100%; height: 100%;" src="<?php echo base_url(); ?>uploads/university_map.jpg"/>
                 </div>
             </div>
         </div>        
@@ -186,7 +186,7 @@ if (count($slide_setting))
             </div>
             <ul class="row cs-testimonial main-testimonial">
                 <?php foreach ($recent_graduates as $row) { ?>
-                    <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+                    <li class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                         <div class="cs-media">
                             <figure>
                                 <img src="<?php echo base_url(); ?>uploads/student_image/<?php echo $row->profile_photo; ?>" alt=""/>
