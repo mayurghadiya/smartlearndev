@@ -1189,4 +1189,27 @@ class Crud_model extends CI_Model {
                         ->result();
     }
 
+    /**
+     * Insert or update charity fund
+     * @param mixed $data
+     * @param string $id
+     * @return int
+     */
+    function save_charity_fund($data, $id = NULL) {
+        $insert_id = 0;
+        if ($id) {
+            //update
+            $this->db->update('charity_fund', $data, array(
+                'charity_fund_id' => $id
+            ));
+            $insert_id = $this->db->insert_id();
+        } else {
+            //insert            
+            $this->db->insert('charity_fund', $data);
+            $insert_id = $this->db->insert_id();
+        }
+
+        return $insert_id;
+    }
+
 }

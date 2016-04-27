@@ -110,24 +110,23 @@ class Admin extends CI_Controller {
         //exit;
         $this->load->view('backend/index', $page_data);
     }
+
     /*     * ** MANAGE syllabus
       Auth : Mayur Panchal
       /******** */
-    function syllabus($param='',$param2='')
-    {
-        if($param=="create")
-        {
-            
-            
+
+    function syllabus($param = '', $param2 = '') {
+        if ($param == "create") {
+
+
             if ($_FILES['syllabusfile']['name'] != "") {
-                $path = FCPATH.'uploads/syllabus';
-                if(!is_dir($path))
-                {
-                    mkdir($path,0777);
+                $path = FCPATH . 'uploads/syllabus';
+                if (!is_dir($path)) {
+                    mkdir($path, 0777);
                 }
                 $config['upload_path'] = 'uploads/syllabus';
                 $config['allowed_types'] = 'pdf|doc|docx|ppt|pptx';
-                
+
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
                 //$this->upload->set_allowed_types('*');	
@@ -138,38 +137,34 @@ class Admin extends CI_Controller {
                 } else {
                     $file = $this->upload->data();
                     $insert['syllabus_filename'] = $file['file_name'];
-                   
                 }
             } else {
                 $insert['syllabus_filename'] = '';
-               
             }
 
-            
+
             $insert['syllabus_title'] = $this->input->post('title');
             $insert['syllabus_degree'] = $this->input->post('degree');
             $insert['syllabus_course'] = $this->input->post('course');
             $insert['syllabus_sem'] = $this->input->post('semester');
             $insert['syllabus_desc'] = $this->input->post('description');
-            
-            
-            $this->crud_model->add_syllabus($insert);     
+
+
+            $this->crud_model->add_syllabus($insert);
             $this->session->set_flashdata('flash_message', "Syllabus Added Successfully");
-            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');            
+            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');
         }
-        if($param=='do_update')
-        {
-                $syllabus = $this->crud_model->getsyllabus($param2);
-              
-                if ($_FILES['syllabusfile']['name'] != "") {
-                $path = FCPATH.'uploads/syllabus';
-                if(!is_dir($path))
-                {
-                    mkdir($path,0777);
+        if ($param == 'do_update') {
+            $syllabus = $this->crud_model->getsyllabus($param2);
+
+            if ($_FILES['syllabusfile']['name'] != "") {
+                $path = FCPATH . 'uploads/syllabus';
+                if (!is_dir($path)) {
+                    mkdir($path, 0777);
                 }
                 $config['upload_path'] = 'uploads/syllabus';
                 $config['allowed_types'] = 'pdf|doc|docx|ppt|pptx';
-                
+
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
                 //$this->upload->set_allowed_types('*');	
@@ -180,35 +175,33 @@ class Admin extends CI_Controller {
                 } else {
                     $file = $this->upload->data();
                     $insert['syllabus_filename'] = $file['file_name'];
-                   
                 }
             } else {
 
                 $insert['syllabus_filename'] = $syllabus[0]->syllabus_filename;
-               
             }
 
-            
+
             $insert['syllabus_title'] = $this->input->post('title');
             $insert['syllabus_degree'] = $this->input->post('degree');
             $insert['syllabus_course'] = $this->input->post('course');
             $insert['syllabus_sem'] = $this->input->post('semester');
             $insert['syllabus_desc'] = $this->input->post('description');
             $insert['update_date'] = date('Y-m-d H:i:s');
-            
-            $this->crud_model->update_syllabus($insert,$param2);     
+
+            $this->crud_model->update_syllabus($insert, $param2);
             $this->session->set_flashdata('flash_message', "Syllabus Updated Successfully");
-            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh'); 
+            redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');
         }
-         if ($param == 'delete') {
-             
+        if ($param == 'delete') {
+
             $this->crud_model->delete_syllabus($param2);
             $this->session->set_flashdata('flash_message', "Syllabus Deleted Successfully");
             redirect(base_url() . 'index.php?admin/syllabus/', 'refresh');
         }
         $page_data['syllabus'] = $this->crud_model->get_syllabus();
         $page_data['course'] = $this->db->get('course')->result();
-        $page_data['semester'] = $this->db->get('semester')->result();        
+        $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
         $page_data['title'] = 'Syllabus Management';
         $page_data['page_name'] = 'syllabus';
@@ -872,9 +865,8 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'Holiday Management';
         $this->load->view('backend/index', $page_data);
     }
-    
-    function chancellor($param1 = '', $param2 = '')
-    {
+
+    function chancellor($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
@@ -886,8 +878,8 @@ class Admin extends CI_Controller {
             $data['facebook_link'] = $this->input->post('facebook');
             $data['twitter_link'] = $this->input->post('twitter');
             $data['google_plus_link'] = $this->input->post('googleplus');
-           
-             if ($_FILES['profilefile']['name'] != '') {
+
+            if ($_FILES['profilefile']['name'] != '') {
 
                 $config['upload_path'] = 'uploads/system_image';
                 $config['allowed_types'] = 'gif|jpg|png|jpeg';
@@ -905,12 +897,12 @@ class Admin extends CI_Controller {
 
                 $data['people_photo'] = '';
             }
-            
+
             $this->db->insert('university_peoples', $data);
             $this->session->set_flashdata('flash_message', get_phrase('chancellor_added_successfully'));
             redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
         }
-         if ($param1 == 'do_update') {
+        if ($param1 == 'do_update') {
             $data['people_name'] = $this->input->post('name');
             $data['people_phone'] = $this->input->post('mobileno');
             $data['people_email'] = $this->input->post('email_id');
@@ -919,9 +911,9 @@ class Admin extends CI_Controller {
             $data['facebook_link'] = $this->input->post('facebook');
             $data['twitter_link'] = $this->input->post('twitter');
             $data['google_plus_link'] = $this->input->post('googleplus');
-            
-              if ($_FILES['profilefile']['name'] != '') {
-                  unlink("uploads/system_image/" . $this->input->post('txtoldfile'));
+
+            if ($_FILES['profilefile']['name'] != '') {
+                unlink("uploads/system_image/" . $this->input->post('txtoldfile'));
                 $config['upload_path'] = 'uploads/system_image';
                 $config['allowed_types'] = 'gif|jpg|png|jpeg';
                 $this->load->library('upload', $config);
@@ -934,14 +926,14 @@ class Admin extends CI_Controller {
                     $file = $this->upload->data();
                     $data['people_photo'] = $file['file_name'];
                 }
-            } 
+            }
             $this->db->where('university_people_id', $param2);
             $this->db->update('university_peoples', $data);
-           
+
             $this->session->set_flashdata('flash_message', get_phrase('chancellor_updated_successfully'));
             redirect(base_url() . 'index.php?admin/chancellor/', 'refresh');
         }
-         if ($param1 == 'delete') {
+        if ($param1 == 'delete') {
             $this->db->where('university_people_id', $param2);
             $this->db->delete('university_peoples');
             $this->session->set_flashdata('flash_message', get_phrase('chancellor_deleted_successfully'));
@@ -952,7 +944,7 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'chancellor Management';
         $this->load->view('backend/index', $page_data);
     }
-    
+
     function batch($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
@@ -3528,7 +3520,7 @@ class Admin extends CI_Controller {
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
+            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3547,7 +3539,7 @@ class Admin extends CI_Controller {
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ') - ' . ucfirst($row->exam_ref_name); ?></option>
+            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ') - ' . ucfirst($row->exam_ref_name); ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3566,7 +3558,7 @@ class Admin extends CI_Controller {
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
+            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3584,7 +3576,7 @@ class Admin extends CI_Controller {
         foreach ($subjects as $row) {
             ?>
             <option value="<?php echo $row->sm_id; ?>"
-                    <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
+            <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
             <!--echo "<option value={$row->sm_id}>{$row->subject_name}  (Code: {$row->subject_code})</option>";-->
             <?php
         }
@@ -4208,7 +4200,7 @@ class Admin extends CI_Controller {
     function student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester) {
         $this->load->model('admin/Crud_model');
         $student = $this->Crud_model->student_list_from_degree_course_batch_semester($degree, $course, $batch, $semester);
-        
+
         echo json_encode($student);
     }
 
@@ -5044,7 +5036,7 @@ class Admin extends CI_Controller {
         foreach ($exam_type as $row) {
             ?>
             <option value="<?php echo $row->exam_type_id; ?>"
-                    <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
+            <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
             <?php
         }
     }
@@ -5225,38 +5217,38 @@ class Admin extends CI_Controller {
      */
     function graduate($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
-        if($param1 == 'delete') {
+        if ($param1 == 'delete') {
             $this->db->where('graduates_id', $param2);
             $this->db->delete('graduates');
             $this->session->set_flashdata('flash_message', 'Graduate succeffully deleted.');
             redirect(base_url('index.php?admin/graduate'));
         }
         if ($_POST) {
-            if ($param1 == 'create') {                
+            if ($param1 == 'create') {
                 $this->Crud_model->save_graduates(array(
-                    'student_id'    => $_POST['student'],
-                    'degree_id'    => $_POST['degree'],
+                    'student_id' => $_POST['student'],
+                    'degree_id' => $_POST['degree'],
                     'course_id' => $_POST['course'],
-                    'batch_id'  => $_POST['batch'],
-                    'semester_id'   => $_POST['semester'],
-                    'description'   => $_POST['description'],
+                    'batch_id' => $_POST['batch'],
+                    'semester_id' => $_POST['semester'],
+                    'description' => $_POST['description'],
                     'graduate_year' => $_POST['year']
                 ));
-                $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');               
+                $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');
             } elseif ($param1 == 'update') {
                 $this->Crud_model->save_graduates(array(
-                    'student_id'    => $_POST['student'],
-                    'degree_id'    => $_POST['degree'],
+                    'student_id' => $_POST['student'],
+                    'degree_id' => $_POST['degree'],
                     'course_id' => $_POST['course'],
-                    'batch_id'  => $_POST['batch'],
-                    'semester_id'   => $_POST['semester'],
-                    'description'   => $_POST['description'],
+                    'batch_id' => $_POST['batch'],
+                    'semester_id' => $_POST['semester'],
+                    'description' => $_POST['description'],
                     'graduate_year' => $_POST['year']
-                ), $param2);
-                $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');  
+                        ), $param2);
+                $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');
             }
-            
-             redirect(base_url('index.php?admin/graduate'));
+
+            redirect(base_url('index.php?admin/graduate'));
         }
         $page_data['title'] = 'Recent Graduates';
         $page_data['page_name'] = 'graduate';
@@ -5264,7 +5256,7 @@ class Admin extends CI_Controller {
         $page_data['graduates'] = $this->Crud_model->get_all_graduates();
         $this->load->view('backend/index', $page_data);
     }
-    
+
     /**
      * Charity fund action
      * @param string $param1
@@ -5272,18 +5264,56 @@ class Admin extends CI_Controller {
      * 
      * @return response
      */
-    function charity_fund($param1='', $param2='') {
+    function charity_fund($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
-        if($_POST){
-            if($param1 == 'create') {
+        if ($_POST) {
+            if ($param1 == 'create') {
                 //create charity fund
-                //echo '<pre>';
-                //var_dump($_POST);
-                //exit;
-            } elseif($param1 == 'update'){
-                
-            }     
-            
+                if ($_POST['donation_type'] == 'cheque') {
+                    $data['cheque_number'] = $_POST['cheque_cheque_number'];
+                    $data['account_number'] = $_POST['cheque_account_number'];
+                    $data['account_holder_name'] = $_POST['cheque_account_holder_name'];
+                    $data['branch_code'] = $_POST['cheque_branch_code'];
+                    $data['bank_name'] = $_POST['cheque_bank_name'];
+                } elseif ($_POST['donation_type'] == 'dd') {
+                    $data['account_number'] = $_POST['dd_account_number'];
+                    $data['account_holder_name'] = $_POST['dd_account_holder_name'];
+                    $data['branch_code'] = $_POST['dd_branch_code'];
+                    $data['bank_name'] = $_POST['dd_bank_name'];
+                }
+                $data['donor_name'] = $_POST['donor_name'];
+                $data['donor_mobile'] = $_POST['donor_mobile'];
+                $data['email'] = $_POST['donor_email'];
+                $data['amount'] = $_POST['amount'];
+                $data['donation_type'] = $_POST['donation_type'];
+                $data['description'] = $_POST['description'];
+                $data['donation_date'] = $_POST['date'];
+                $this->Crud_model->save_charity_fund($data);
+                $this->session->set_flashdata('flash_message', 'Charity fund is successfully added.');
+            } elseif ($param1 == 'update') {
+                if ($_POST['donation_type'] == 'cheque') {
+                    $data['cheque_number'] = $_POST['cheque_cheque_number'];
+                    $data['account_number'] = $_POST['cheque_account_number'];
+                    $data['account_holder_name'] = $_POST['cheque_account_holder_name'];
+                    $data['branch_code'] = $_POST['cheque_branch_code'];
+                    $data['bank_name'] = $_POST['cheque_bank_name'];
+                } elseif ($_POST['donation_type'] == 'dd') {
+                    $data['account_number'] = $_POST['dd_account_number'];
+                    $data['account_holder_name'] = $_POST['dd_account_holder_name'];
+                    $data['branch_code'] = $_POST['dd_branch_code'];
+                    $data['bank_name'] = $_POST['dd_bank_name'];
+                }
+                $data['donor_name'] = $_POST['donor_name'];
+                $data['donor_mobile'] = $_POST['donor_mobile'];
+                $data['email'] = $_POST['donor_email'];
+                $data['amount'] = $_POST['amount'];
+                $data['donation_type'] = $_POST['donation_type'];
+                $data['description'] = $_POST['description'];
+                $data['donation_date'] = $_POST['date'];
+                $this->Crud_model->save_charity_fund($data, $param2);
+                $this->session->set_flashdata('flash_message', 'Charity fund is successfully updated.');
+            }
+
             redirect(base_url('index.php?admin/charity_fund'));
         }
         $page_data['title'] = 'Charity Fund';

@@ -1,4 +1,25 @@
-
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+     
+        $(document).ready(function($){
+	images = new Array();
+	$(document).on('change','.coverimage',function(){
+		 files = this.files;
+		 $.each( files, function(){
+			 file = $(this)[0];
+			 if (!!file.type.match(/image.*/)) {
+	        	 var reader = new FileReader();
+	             reader.readAsDataURL(file);
+	             reader.onloadend = function(e) {
+	            	img_src = e.target.result; 
+	            	html = "<img class='img-thumbnail' style='width:300px;margin:20px;' src='"+img_src+"'>";
+	            	$('#image_container').html( html );
+	             };
+        	 } 
+		});
+	});
+});
+    </script>
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -125,6 +146,13 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"> Student Image <span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input id="main_img" class="form-control coverimage" type="file" name="main_img"  />
+                                            </div>
+                                            <div id="image_container"></div>
+                                        </div>      
                                         
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("graduate year"); ?><span style="color:red">*</span></label>
@@ -178,7 +206,8 @@
                     batch: "required",
                     semester: "required",
                     student: "required",
-                    year: "required"
+                    year: "required",
+                    main_img:"required",
                 },
                 messages: {
                     degree: "Please select course",
@@ -186,7 +215,8 @@
                     batch: "Please select batch",
                     semester: "Please select semester",
                     student: "Please select student",
-                    year: "Please enter year"
+                    year: "Please enter year",
+                    main_img:"Please upload image",
                 }
             });
         });
