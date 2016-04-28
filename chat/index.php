@@ -124,6 +124,25 @@ if ( function_exists('fastcgi_finish_request') ) {
 
 erLhcoreClassChatEventDispatcher::getInstance()->executeFinishRequest();
 ?>
+<style>
+    #side-menu li:nth-child(n+3) {
+      display:none !important;
+   }
+   .navbar-inline{
+      display:none !important; 
+   }
+   .sortable-column-dashboard{ display: none !important; }
+   .pb10 > ul.nav.nav-pills > li {
+    display: none;
+}
+/*   .nav-pills > li{
+       display:none !important; 
+   }
+   .nav-pills > li:first-child{
+   display: block;*/
+}
+
+</style>
 <script src="jquery.js" type="text/javascript" ></script>
 <script type="text/javascript">
   <?php if(isset($_SESSION['chatme'])){   ?>
