@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php echo $title; ?></title>
+        <title><?php echo $title; ?> | <?php echo system_name(); ?></title>
         <link href="<?php echo base_url(); ?>site_assets/css/bootstrap_theme.css" rel="stylesheet"/>
 
         <link href="<?php echo base_url(); ?>site_assets/style1.css" rel="stylesheet"/>
