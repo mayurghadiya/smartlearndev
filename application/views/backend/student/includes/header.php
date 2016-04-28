@@ -7,7 +7,7 @@
                     <div class="vd_top-nav vd_nav-width  ">
                         <div class="vd_panel-header">
                             <div class="logo">
-                                <a href="<?php echo base_url(); ?>"><img alt="logo" src="<?= $this->config->item('image_path') ?>logo.png"></a>
+                                <a href="<?php echo base_url('index.php?student/dashboard'); ?>"><img alt="logo" src="<?= $this->config->item('image_path') ?>logo.png"></a>
                             </div>
                             <!-- logo -->           
                             <div class="vd_panel-menu left-pos visible-sm visible-xs">                                 
@@ -235,7 +235,6 @@
                                                 <nav class="">
                                                     <div class="container-fluid">
                                                         <ul class="nav navbar-nav">
-                                                            <li><a href="<?php echo base_url('index.php?student/dashboard'); ?>">Dashboard</a></li>
                                                             <?php
                                                             $news_conent = $this->db->get_where('cms_manager', array('c_status' => 1))->result_array();
                                                             foreach ($news_conent as $row):
