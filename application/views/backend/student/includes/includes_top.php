@@ -20,8 +20,10 @@ if ($skin == 'theme_green.min.css') {
     <link href="<?= $this->config->item('css_path') ?>student/sDashboard.css" rel="stylesheet">			
 <?php } ?>     
 
-
-
+<script>
+var base_url = '<?php echo base_url(); ?>';
+var login_student_id = '<?php echo $this->session->userdata("student_id"); ?>';
+</script>
 <!-- load gitter css -->
 
 
@@ -112,195 +114,232 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
 <!-- example code -->
 <script type="text/javascript">
     $(function () {
-    //var randomString = "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Aenean lacinia mollis condimentum. Proin vitae ligula quis ipsum elementum tristique. Vestibulum ut sem erat.";				
-    //var base = '<?php echo base_url(); ?>';
+        //var randomString = "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Aenean lacinia mollis condimentum. Proin vitae ligula quis ipsum elementum tristique. Vestibulum ut sem erat.";				
+        //var base = '<?php echo base_url(); ?>';
 <?php
 if ($widget_order) {
     $order = str_replace('id', '', $widget_order->order_data);
     $order = explode(',', $order);
     for ($i = 0; $i < count($order); $i++) {
         ?>
-            var datanew<?php echo $order[$i]; ?> = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/' . $order[$i]); ?>"></iframe>';
-            console.log(datanew<?php echo $order[$i]; ?>);
-    <?php
+                var datanew<?php echo $order[$i]; ?> = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/' . $order[$i]); ?>"></iframe>';
+                console.log(datanew<?php echo $order[$i]; ?>);
+        <?php
     }
 } else {
     ?>
-        var datanew1 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/1'); ?>"></iframe>';
-        var datanew2 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/2'); ?>"></iframe>';
-        var datanew3 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/3'); ?>"></iframe>';
-        var datanew4 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/4'); ?>"></iframe>';
-        var datanew5 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/5'); ?>"></iframe>';
-        var datanew6 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/6'); ?>"></iframe>';
-        var datanew7 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/7'); ?>"></iframe>';
-        var datanew8 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/8'); ?>"></iframe>';
-        var datanew9 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/9'); ?>"></iframe>';
-        var datanew10 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/10'); ?>"></iframe>';
-        var datanew11 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/11'); ?>"></iframe>';
+            var datanew1 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/1'); ?>"></iframe>';
+            var datanew2 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/2'); ?>"></iframe>';
+            var datanew3 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/3'); ?>"></iframe>';
+            var datanew4 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/4'); ?>"></iframe>';
+            var datanew5 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/5'); ?>"></iframe>';
+            var datanew6 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/6'); ?>"></iframe>';
+            var datanew7 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/7'); ?>"></iframe>';
+            var datanew8 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/8'); ?>"></iframe>';
+            var datanew9 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/9'); ?>"></iframe>';
+            var datanew10 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/10'); ?>"></iframe>';
+            var datanew11 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/11'); ?>"></iframe>';
 <?php } ?>
 
 
-    //**********************************************//
-    //dashboard json data
-    //this is the data format that the dashboard framework expects
-    //**********************************************//
+        //**********************************************//
+        //dashboard json data
+        //this is the data format that the dashboard framework expects
+        //**********************************************//
 <?php if ($widget_order) { ?>
-        var dashboardJSON =
-        [
-            <?php
-            for ($i = 0; $i < count($order); $i++) {
-                switch ($order[$i]) {
-                    case '1':
-                        $title = 'Event Calendar';
-                        break;
-                    case '2':
-                        $title = 'Admission';
-                        break;
-                    case '3':
-                        $title = 'Assignments';
-                        break;
-                    case '4':
-                        $title = 'Study Resources';
-                        break;
-                    case '5':
-                        $title = 'Examinations';
-                        break;
-                    case '6':
-                        $title = 'Results';
-                        break;
-                    case '7':
-                        $title = 'Project/Synopsis';
-                        break;
-                    case '8':
-                        $title = 'Video Conferencing';
-                        break;
-                    case '9':
-                        $title = 'Digital Library';
-                        break;
-                    case '10':
-                        $title = 'Participate';
-                        break;
-                    case '11':
-                        $title = 'Staff and Email Directory';
-                        break;
-                }
-                ?>
-                    {
-                        widgetTitle: "<?php echo $title; ?>",
+            var dashboardJSON =
+            [
+    <?php
+    for ($i = 0; $i < count($order); $i++) {
+        switch ($order[$i]) {
+            case '1':
+                $title = 'Event Calendar';
+                break;
+            case '2':
+                $title = 'Admission';
+                break;
+            case '3':
+                $title = 'Assignments';
+                break;
+            case '4':
+                $title = 'Study Resources';
+                break;
+            case '5':
+                $title = 'Examinations';
+                break;
+            case '6':
+                $title = 'Results';
+                break;
+            case '7':
+                $title = 'Project/Synopsis';
+                break;
+            case '8':
+                $title = 'Video Conferencing';
+                break;
+            case '9':
+                $title = 'Digital Library';
+                break;
+            case '10':
+                $title = 'Participate';
+                break;
+            case '11':
+                $title = 'Staff and Email Directory';
+                break;
+        }
+        ?>
+                {
+                widgetTitle: "<?php echo $title; ?>",
                         widgetId: "id<?php echo $order[$i]; ?>",
                         enableRefresh: true,
                         refreshCallBack: function (widgetId) {
                             return datanew<?php echo $order[$i]; ?> + new Date();
                         },
                         widgetContent: datanew<?php echo $order[$i]; ?>
-                    }
-                    <?php
-                    $end = end($order);
-                    ?>
-                    <?php 
-                    if ($end == $order[$i])
-                        echo '';
-                    else
-                        echo ',';
-                    ?>
-            <?php } ?>
-        ]
-<?php } else { ?>
-        var dashboardJSON = [
-        {
-
-        widgetTitle: "Event Calendar",
-                widgetId: "id1",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew1 + new Date();
-                },
-                widgetContent: datanew1
-        }, {
-        widgetTitle: "Admissions",
-                widgetId: "id2",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew2 + new Date();
-                },
-                widgetContent: datanew2
-        }, {
-        widgetTitle: "Assignments",
-                widgetId: "id3",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew3 + new Date();
-                },
-                widgetContent: datanew3
-        }, {
-        widgetTitle: "Study Resources",
-                widgetId: "id4",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew4 + new Date();
-                },
-                widgetContent: datanew4
-        }, {
-        widgetTitle: "Examinations",
-                widgetId: "id5",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew5 + new Date();
-                },
-                widgetContent: datanew5
-        }, {
-        widgetTitle: "Results",
-                widgetId: "id6",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew6 + new Date();
-                },
-                widgetContent: datanew6
-        }, {
-        widgetTitle: "Project/Synopsis",
-                widgetId: "id7",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew7 + new Date();
-                },
-                widgetContent: datanew7
-        }, {
-        widgetTitle: "Video Conferencing",
-                widgetId: "id8",
-                enableRefresh: true,
-                widgetContent: datanew8
-        }, {
-        widgetTitle: "Digital Library",
-                widgetId: "id9",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew9 + new Date();
-                },
-                widgetContent: datanew9
-        }, {
-        widgetTitle: "Participate",
-                widgetId: "id10",
-                enableRefresh: true,
-                refreshCallBack: function (widgetId) {
-                return datanew10 + new Date();
-                },
-                widgetContent: datanew10
-        }, {
-        widgetTitle: "Staff and Email Directory",
-                widgetId: "id11",
-                enableRefresh: true,
-                widgetContent: datanew11,
-                refreshCallBack: function (widgetId) {
-                return datanew11 + new Date();
                 }
-        }]
+        <?php
+        $end = end($order);
+        ?>
+        <?php
+        if ($end == $order[$i])
+            echo '';
+        else
+            echo ',';
+        ?>
+    <?php } ?>
+            ]
+<?php } else { ?>
+            var dashboardJSON = [
+                {
+                    widgetTitle: "Event Calendar",
+                    widgetId: "id1",
+                    enableRefresh: true,
+                    refreshCallBack: function (widgetId) {
+                        return datanew1 + new Date();
+                    },
+                    widgetContent: datanew1
+                }, {
+                    widgetTitle: "Admissions",
+                    widgetId: "id2",
+                    enableRefresh: true,
+                    refreshCallBack: function (widgetId) {
+                        return datanew2 + new Date();
+                    },
+                    widgetContent: datanew2
+                }, {
+                    widgetTitle: "Assignments",
+                    widgetId: "id3",
+                    enableRefresh: true,
+                    refreshCallBack: function (widgetId) {
+                        return datanew3 + new Date();
+                    },
+                    widgetContent: datanew3
+                }]
 <?php } ?>
 
-    //basic initialization example
-    $("#myDashboard").sDashboard({
-    dashboardData: dashboardJSON
-    });
+        //basic initialization example
+        $("#myDashboard").sDashboard({
+            dashboardData: dashboardJSON
+        });
     });
 
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#addWidgetFromSelect').on('click', function () {
+            var widget_id = $(this).children(":selected").attr('id');
+
+            switch (widget_id) {
+                case 'wid1':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Event Calendar",
+                        widgetId: "id1",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/1'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid2':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Admissions",
+                        widgetId: "id2",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/2'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid3':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Assignments",
+                        widgetId: "id3",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/3'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid4':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Study Resources",
+                        widgetId: "id4",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/4'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid5':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Examinations",
+                        widgetId: "id5",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/5'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid6':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Results",
+                        widgetId: "id6",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/6'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid7':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Project & Synposis",
+                        widgetId: "id7",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/7'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid8':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Video Conferencing",
+                        widgetId: "id8",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/8'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid9':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Digital Library",
+                        widgetId: "id9",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/9'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid10':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Participate",
+                        widgetId: "id10",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/10'); ?>"></iframe>'
+                    });
+                    break;
+                case 'wid11':
+                    //event calendar widget
+                    $('#myDashboard').sDashboard("addWidget", {
+                        widgetTitle: "Staff & Email Directory",
+                        widgetId: "id11",
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/11'); ?>"></iframe>'
+                    });
+                    break;
+            }
+        });
+    });
 </script>
 </head>

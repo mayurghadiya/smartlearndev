@@ -19,6 +19,7 @@ class Site extends CI_Controller {
         $this->load->database();
         $this->load->model('Site_model');
         $this->load->helper('system_setting');
+        $this->output->enable_profiler(TRUE);
     }
 
     /**
@@ -30,7 +31,7 @@ class Site extends CI_Controller {
         $data['courses'] = $this->Site_model->get_all_courses();
         $this->load->view('site/header.php', $data);
         $this->load->view('site/' . $view_name);
-        $this->load->view('site/footer.php');
+        $this->load->view('site/footer.php');        
     }
 
     /**
@@ -45,6 +46,7 @@ class Site extends CI_Controller {
         $this->data['banner'] = $this->Site_model->banners();
         $this->data['recent_graduates'] = $this->Site_model->recent_graduates();
         $this->data['slide_setting'] = $this->Site_model->banner_setting();
+        $this->output->cache(5);
         $this->__template('home', $this->data);
     }
 

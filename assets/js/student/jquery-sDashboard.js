@@ -99,7 +99,7 @@
             var self = this;
             //click event for maximize button
             this.element.on("click", ".sDashboardWidgetHeader div.sDashboard-icon.sDashboard-circle-minus-icon", function (e) {
-               
+
                 // get closest li id
                 var id = $(e.currentTarget).closest('ul > li').attr('id');
 
@@ -199,9 +199,137 @@
                 widget.hide("fold", {}, 300, function () {
                     self._removeWidgetFromWidgetDefinitions(this.id);
                     $(this).remove();
+                    append_widget_in_select(this.id);
+                    currentWidgets();
                     $(".sDashboard-overlay").hide();
                 });
             });
+
+            //get all current dashboard widgets
+            function currentWidgets() {
+                var widget_order = '';
+                $('#myDashboard li').each(function (i) {
+                    widget_order += $(this).attr('id') + ',';
+                });
+                widget_order = widget_order.replace(/(^\s*,)|(,\s*$)/g, '');
+
+                return widget_order;
+            }
+
+            function removeWidgetFromSelect() {
+                var current_widget_order = currentWidgets();
+                var indivualWidget = current_widget_order.split(',');
+                var totalCurrentWidget = indivualWidget.length;
+
+                for (var i = 0; i < totalCurrentWidget; i++) {
+                    $('select#addWidgetFromSelect option').each(function () {
+                        if (indivualWidget[i] == $(this).val()) {
+                            $(this).remove();
+                        }
+                    })
+                }
+            }
+
+            function getWidgetTitle(widgetId) {
+                var title = '';
+                switch (widgetId) {
+                    case 'id1':
+                        title = 'Event Manager';
+                        break;
+                    case 'id2':
+                        title = 'Admission';
+                        break;
+                    case 'id3':
+                        title = 'Assignments';
+                        break;
+                    case 'id4':
+                        title = 'Study Resources';
+                        break;
+                    case 'id5':
+                        title = 'Examinations';
+                        break;
+                    case 'id6':
+                        title = 'Results';
+                        break;
+                    case 'id7':
+                        title = 'Project & Synopsis';
+                        break;
+                    case 'id8':
+                        title = 'Video Conferencing';
+                        break;
+                    case 'id9':
+                        title = 'Digital Library';
+                        break;
+                    case 'id10':
+                        title = 'Participate';
+                        break;
+                    case 'id11':
+                        title = 'Staff & Email Directory';
+                        break;
+                }
+
+                return title;
+            }
+
+            function append_widget_in_select(widgetId) {
+                var title = getWidgetTitle(widgetId);
+                $('select#addWidgetFromSelect').append('<option value="' + widgetId + '" id="w' + widgetId + '">' + title + '</option>');
+            }
+
+            $(document).ready(function () {
+                removeWidgetFromSelect();
+            });
+            function add_remove_widget(student_id, widget_order) {
+                $.ajax({
+                    url: base_url + 'index.php?student/is_present_widget_order/' + student_id,
+                    type: 'get',
+                    async: false,
+                    success: function (content) {
+                        if (content == '0') {
+                            var form_data = {
+                                student: student_id,
+                                widget_data: widget_order
+                            };
+                            $.ajax({
+                                url: base_url + 'index.php?student/save_widget_order',
+                                type: 'post',
+                                data: form_data,
+                                success: function () {
+                                    console.log(form_data);
+                                }
+                            });
+                        } else {
+                            //update       
+                            var form_data = {
+                                student: student_id,
+                                widget_data: widget_order
+                            };
+                            $.ajax({
+                                url: base_url + 'index.php?student/save_widget_order/' + student_id,
+                                type: 'post',
+                                data: form_data,
+                                success: function () {
+                                    console.log(form_data);
+                                }
+                            });
+                        }
+                    }
+                })
+            }
+
+            $('select#addWidgetFromSelect').change(
+                    function () {
+                        setTimeout(
+                                function () {
+                                    var widget_order = currentWidgets();
+                                    //update widget order
+                                    add_remove_widget(login_student_id, widget_order);
+
+                                    //remove from select
+                                    removeWidgetFromSelect();
+                                },
+                                1000);
+                    });
 
             //table row click
             this.element.on("click", ".sDashboardWidgetContent table.sDashboardTableView tbody tr", function (e) {

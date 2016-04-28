@@ -39,58 +39,62 @@ if ($message != '') {
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>theme.js"></script>
 <?php if ($this->router->fetch_method() == 'dashboard') { ?>
     <script>
-    $(document).ready(function () {
-        $("#myDashboard").mouseup(
-                function () {
-                    setTimeout(
-                            function () {
-                                var widget_order = '';
-                                $('#myDashboard li').each(function (i) {
-                                    widget_order += $(this).attr('id') + ',';
-                                });
-                                widget_order = widget_order.replace(/(^\s*,)|(,\s*$)/g, '');
+        $(document).ready(function () {
+            $("#myDashboard").mouseup(
+                    function () {
+                        setTimeout(
+                                function () {
+                                    var widget_order = '';
+                                    $('#myDashboard li').each(function (i) {
+                                        widget_order += $(this).attr('id') + ',';
+                                    });
+                                    widget_order = widget_order.replace(/(^\s*,)|(,\s*$)/g, '');
 
-                                //check in db
-                                var student_id = '<?php echo $this->session->userdata("student_id"); ?>';
-                                $.ajax({
-                                    url: '<?php echo base_url(); ?>index.php?student/is_present_widget_order/' + student_id,
-                                    type: 'get',
-                                    async: false,
-                                    success: function (content) {
-                                        if (content == '0') {
-                                            var form_data = {
-                                                student: student_id,
-                                                widget_data: widget_order
-                                            };
-                                            $.ajax({
-                                                url: '<?php echo base_url(); ?>index.php?student/save_widget_order',
-                                                type: 'post',
-                                                data: form_data,
-                                                success: function () {
-                                                    console.log(form_data);
-                                                }
-                                            });
-                                        } else {
-                                            //update       
-                                            var form_data = {
-                                                student: student_id,
-                                                widget_data: widget_order
-                                            };
-                                            $.ajax({
-                                                url: '<?php echo base_url(); ?>index.php?student/save_widget_order/'+student_id,
-                                                type: 'post',
-                                                data: form_data,
-                                                success: function () {
-                                                    console.log(form_data);
-                                                }
-                                            });
-                                        }
-                                    }
-                                })
-                            },
-                            1000);
-                });
-    });
+                                    //check in db
+                                    var student_id = '<?php echo $this->session->userdata("student_id"); ?>';
+                                    add_remove_widget(student_id, widget_order);
+                                },
+                                1000);
+                    });
+
+            function add_remove_widget(student_id, widget_order) {
+                $.ajax({
+                    url: '<?php echo base_url(); ?>index.php?student/is_present_widget_order/' + student_id,
+                    type: 'get',
+                    async: false,
+                    success: function (content) {
+                        if (content == '0') {
+                            var form_data = {
+                                student: student_id,
+                                widget_data: widget_order
+                            };
+                            $.ajax({
+                                url: '<?php echo base_url(); ?>index.php?student/save_widget_order',
+                                type: 'post',
+                                data: form_data,
+                                success: function () {
+                                    console.log(form_data);
+                                }
+                            });
+                        } else {
+                            //update       
+                            var form_data = {
+                                student: student_id,
+                                widget_data: widget_order
+                            };
+                            $.ajax({
+                                url: '<?php echo base_url(); ?>index.php?student/save_widget_order/' + student_id,
+                                type: 'post',
+                                data: form_data,
+                                success: function () {
+                                    console.log(form_data);
+                                }
+                            });
+                        }
+                    }
+                })
+            }
+        });
     </script>
 <?php } ?>
 <script type="text/javascript" src="<?= $this->config->item('asset') ?>custom/custom.js"></script>
