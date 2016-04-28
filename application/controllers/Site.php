@@ -330,4 +330,14 @@ class Site extends CI_Controller {
         $this->__template('events', $this->data);
     }
     
+    /**
+     * Alumni action
+     * 
+     * @return response
+     */
+    function alumni() {
+        $this->data['title'] = 'Alumni';
+        $this->__template('alumni', $this->data);
+    }
+    
 }

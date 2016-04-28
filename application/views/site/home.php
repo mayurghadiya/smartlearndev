@@ -163,14 +163,14 @@ if (count($slide_setting))
     <div class="page-section" style="margin-bottom: 30px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
-                    <div class="cs-element-title" style="margin-bottom:30px;">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="cs-element-title" style="margin-bottom:30px; margin-top: 20px;">
                         <h2>Video Streaming</h2>
                     </div>
                     <img style="height: 415px;" class="img-responsive" src="<?php echo base_url(); ?>uploads/video_streaming.jpg"/>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-6">
-                    <div class="cs-element-title" style="margin-bottom:30px;">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="cs-element-title" style="margin-bottom:30px; margin-top: 20px;">
                         <h2>University Map</h2>
                     </div>
                     <img style="width: 100%; height: 100%;" src="<?php echo base_url(); ?>uploads/university_map.jpg"/>

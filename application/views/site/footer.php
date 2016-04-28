@@ -43,7 +43,7 @@
                             <li><a href="<?php echo base_url(); ?>">Home</a></li>
                             <li><a href="<?php echo base_url('index.php?about'); ?>">About</a></li>
                             <li><a href="<?php echo base_url('index.php?events'); ?>">Events</a></li>
-                            <li><a href="#">Alumni</a></li>
+                            <li><a href="<?php echo base_url('index.php?alumni'); ?>">Alumni</a></li>
                             <li><a href="<?php echo base_url('index.php?contact'); ?>">Contact</a></li>
                         </ul>	
                     </div>
