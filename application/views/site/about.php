@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="cs-column-text">
-                                <h2>About <strong class="cs-color">univeristy</strong></h2>
+                                <h2>About <strong class="cs-color">university</strong></h2>
                                 <p>Habitasse volutpat leo sodales sem himenaeos nulla class viverra habitant morbi posuere sapien ullamcorper sed fusce maecenas volutpat odio sit primis at aenean, auctor curabitur porttitor viverra maecenas curabitur blandit hendrerit rutrum tempus pretium vulputate pulvinar.</p>
                                 <div class="cs-liststyle">
                                     <ul class="icon-listing">
