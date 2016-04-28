@@ -3,11 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/graduate.php</file>
             <file>file:/opt/lampp/htdocs/smartlearndev/application/views/site/home.php</file>
             <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_graduate.php</file>
             <file>file:/opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php</file>
             <file>file:/opt/lampp/htdocs/smartlearndev/application/models/admin/Crud_model.php</file>
+=======
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/dashboard.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/includes/includes_top.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/holiday.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/chancellor.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_chancellor.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/student/holiday.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/student/gadgets/widget1.php</file>
+            <file>file:/opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php</file>
+>>>>>>> b92a566c6a10ca882863a640f0a8e99ed90d8dbb
         </group>
     </open-files>
 </project-private>
