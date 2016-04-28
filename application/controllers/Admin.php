@@ -5233,25 +5233,61 @@ class Admin extends CI_Controller {
                       {
                           mkdir($path,0777);
                       }
+                      $ext = explode(".",$_FILES['main_img']['name']);
+                      $ext_file =strtolower(end($ext));
+                      $image1 = date('dmYhis').'main.'.$ext_file;   
+                $config['upload_path'] = 'uploads/student_image';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $config['file_name'] = $image1;
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                $main_img = $config['file_name'];
+                //$this->upload->set_allowed_types('*');	
+
+                if (!$this->upload->do_upload('main_img')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/graduate/', 'refresh');
+                } else {
+                     $config['image_library'] = 'gd2';
+                    $config['source_image'] = 'uploads/student_image/'.$main_img;
+                    $config['create_thumb'] = TRUE;
+                    $config['maintain_ratio'] = TRUE;
+                    $config['width'] = 50;
+                    $config['height'] = 50;
+                    $this->load->library('image_lib', $config);
+                   
+                    
+                       $this->image_lib->resize();
+                  
+                     $file = $this->upload->data();
+                   
+
+                  
+                       $thumb_img = $file['raw_name'].'_thumb'.$file['file_ext']; // Here it is
+                    
+
+                    
+                    
+                }
                       
-		$allowed_types = 'gif|jpg|png|jpeg';
-                $type = explode("|",$allowed_types);
-                $ext = explode(".",$_FILES['main_img']['name']);
-                $ext_file =strtolower(end($ext));
-                $image1 = date('dmYhis').'main.'.$ext_file;               
-		
-		if (in_array($ext_file, $type))
-		{
-                   $upl_path= FCPATH . 'uploads/student_image/'.$image1;
-                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
-                   $main_img = $image1;
-		}
-		else
-		{
-                    $error = "Invalid student image";
-                    $this->session->set_flashdata('flash_message',$error);
-                    redirect(base_url().'index.php?admin/graduate');
-		}
+//		$allowed_types = 'gif|jpg|png|jpeg';
+//                $type = explode("|",$allowed_types);
+//                $ext = explode(".",$_FILES['main_img']['name']);
+//                $ext_file =strtolower(end($ext));
+//                $image1 = date('dmYhis').'main.'.$ext_file;               
+//		
+//		if (in_array($ext_file, $type))
+//		{
+//                   $upl_path= FCPATH . 'uploads/student_image/'.$image1;
+//                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
+//                   $main_img = $image1;
+//		}
+//		else
+//		{
+//                    $error = "Invalid student image";
+//                    $this->session->set_flashdata('flash_message',$error);
+//                    redirect(base_url().'index.php?admin/graduate');
+//		}
               }
               else{
                   $main_img = '';
@@ -5265,37 +5301,55 @@ class Admin extends CI_Controller {
                     'semester_id' => $_POST['semester'],
                     'description' => $_POST['description'],
                     'graduate_year' => $_POST['year'],
-                    "student_img"=>$main_img
-                ));
+                    "student_img"=>$main_img,
+                    "std_thumb_img"=>$thumb_img));
                 $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');
             } elseif ($param1 == 'update') {
                 $graduate_std = $this->Crud_model->get_graduate_student($param2);
                 if(is_uploaded_file($_FILES['main_img']['tmp_name']))
               {
+                    
                       $path= FCPATH . 'uploads/student_image/';
                       if(!is_dir($path))
                       {
                           mkdir($path,0777);
                       }
-                      
-		$allowed_types = 'gif|jpg|png|jpeg';
-                $type = explode("|",$allowed_types);
-                $ext = explode(".",$_FILES['main_img']['name']);
-                $ext_file =strtolower(end($ext));
-                $image1 = date('dmYhis').'main.'.$ext_file;               
-		
-		if (in_array($ext_file, $type))
-		{
-                   $upl_path= FCPATH . 'uploads/student_image/'.$image1;
-                   move_uploaded_file($_FILES['main_img']['tmp_name'],$upl_path);
-                   $main_img = $image1;
-		}
-		else
-		{
-                    $error = "Invalid student image";
-                    $this->session->set_flashdata('flash_message',$error);
-                    redirect(base_url().'index.php?admin/graduate');
-		}
+                      $ext = explode(".",$_FILES['main_img']['name']);
+                      $ext_file =strtolower(end($ext));
+                      $image1 = date('dmYhis').'main.'.$ext_file;   
+                $config['upload_path'] = 'uploads/student_image';
+                $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                $config['file_name'] = $image1;
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                $main_img = $config['file_name'];
+                //$this->upload->set_allowed_types('*');	
+
+                if (!$this->upload->do_upload('main_img')) {
+                    $this->session->set_flashdata('flash_message', "Invalid File!");
+                    redirect(base_url() . 'index.php?admin/graduate/', 'refresh');
+                } else {
+                     $config['image_library'] = 'gd2';
+                    $config['source_image'] = 'uploads/student_image/'.$main_img;
+                    $config['create_thumb'] = TRUE;
+                    $config['maintain_ratio'] = TRUE;
+                    $config['width'] = 50;
+                    $config['height'] = 50;
+                    $this->load->library('image_lib', $config);
+                   
+                    
+                       $this->image_lib->resize();
+                  
+                     $file = $this->upload->data();
+                   
+
+                  
+                       $thumb_img = $file['raw_name'].'_thumb'.$file['file_ext']; // Here it is
+                    
+
+                    
+                    
+                }
               }
               else{
                   $main_img = $graduate_std[0]->student_img;
@@ -5310,7 +5364,8 @@ class Admin extends CI_Controller {
                     'semester_id' => $_POST['semester'],
                     'description' => $_POST['description'],
                     'graduate_year' => $_POST['year'],
-                    "student_img"=>$main_img), $param2);
+                    "student_img"=>$main_img,
+                    "std_thumb_img"=>$thumb_img), $param2);
                 $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');
             }
 

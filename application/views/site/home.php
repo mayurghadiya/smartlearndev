@@ -193,7 +193,7 @@ if (count($slide_setting))
                                     <div class="cs-text">
                                         <p><?php echo $row->c_name; ?></p>
                                         <div class="cs-media">
-                                            <figure><img src="<?php echo base_url(); ?>site_assets/extra-images/xtestimonial-sm-img-1.jpg.pagespeed.ic.ycfNTg1QdH.jpg" alt=""/></figure>
+                                            <figure><img src="<?php echo base_url(); ?>uploads/student_image/<?php echo $row->std_thumb_img; ?>" alt=""/></figure>
                                         </div>
                                         <div class="cs-info">
                                             <h6><a href="#"><?php echo $row->std_first_name . ' ' . $row->std_last_name; ?></a></h6>
