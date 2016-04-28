@@ -29,7 +29,7 @@
                                     <ul class="icon-listing">
                                         <?php if(count($syllabus)) 
                                             foreach ($syllabus as $file):?>
-                                        <li><i class="icon-check3 cs-color"></i><span><a href="<?php echo base_url().'uploads/syllabus/'.$file->syllabus_filename; ?>" title="<?php echo $file->syllabus_title; ?>" download=""><img src="<?php echo base_url().'assets/images/pdf-icon.jpg' ?>" height="32" width="32" /></a> <?php echo $file->syllabus_title; ?>    ( <?php echo $file->syllabus_desc; ?> )</span></li>                               
+                                        <li><i class="icon-check3 cs-color"></i><span><a href="<?php echo base_url().'uploads/syllabus/'.$file->syllabus_filename; ?>" class="nounderline" title="<?php echo $file->syllabus_title; ?>" download=""><img src="<?php echo base_url().'assets/images/pdf-icon.jpg' ?>" height="32" width="32" /> <?php echo $file->syllabus_title; ?> </a>   <?php if($file->syllabus_desc!="") {?> ( <?php echo $file->syllabus_desc; ?> ) <?php } ?></span></li>                               
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
