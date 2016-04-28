@@ -81,14 +81,14 @@
                                                 <div class="tab-content">
                                                     <div id="day1" class="tab-pane fade in active">
                                                         <ul class="cs-timeline-events">                                                        
-                                                            <li>
+                                                            <li class="nobulltes">
                                                                 <div class="cs-post-title" style="margin-top: -20px;">
                                                                     <span>09:00 AM - 11:00 AM</span>
                                                                     <h4><a href="#">Expand opportunities for internships</a></h4>
                                                                 </div>
                                                                 <p>This course will introduce students to the basics of the Structured Query Language (SQL) as well as basic database design for storing data.</p>
                                                             </li>
-                                                            <li>
+                                                            <li class="nobulltes">
                                                                 <div class="cs-post-title">
                                                                     <span>11:15 AM - 12:00 pM</span>
                                                                     <h4><a href="#">Encrease opportunities for guest artists, speakers </a></h4>
