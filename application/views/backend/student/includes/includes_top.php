@@ -190,10 +190,6 @@ if ($widget_order) {
                 {
                 widgetTitle: "<?php echo $title; ?>",
                         widgetId: "id<?php echo $order[$i]; ?>",
-                        enableRefresh: true,
-                        refreshCallBack: function (widgetId) {
-                            return datanew<?php echo $order[$i]; ?> + new Date();
-                        },
                         widgetContent: datanew<?php echo $order[$i]; ?>
                 }
         <?php
@@ -211,27 +207,15 @@ if ($widget_order) {
             var dashboardJSON = [
                 {
                     widgetTitle: "Event Calendar",
-                    widgetId: "id1",
-                    enableRefresh: true,
-                    refreshCallBack: function (widgetId) {
-                        return datanew1 + new Date();
-                    },
+                    widgetId: "id1",                    
                     widgetContent: datanew1
                 }, {
                     widgetTitle: "Admissions",
                     widgetId: "id2",
-                    enableRefresh: true,
-                    refreshCallBack: function (widgetId) {
-                        return datanew2 + new Date();
-                    },
                     widgetContent: datanew2
                 }, {
                     widgetTitle: "Assignments",
                     widgetId: "id3",
-                    enableRefresh: true,
-                    refreshCallBack: function (widgetId) {
-                        return datanew3 + new Date();
-                    },
                     widgetContent: datanew3
                 }]
 <?php } ?>

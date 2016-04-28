@@ -17,7 +17,7 @@
                 <option value="id7" id="wid7">Project &amp; Synopsis</option>
                 <option value="id8" id="wid8">Video Conferencing</option>
                 <option value="id9" id="wid9">Digital Library</option>
-                <option value="id10" id="w10">Participate</option>
+                <option value="id10" id="wid10">Participate</option>
                 <option value="id11" id="wid11">Staff &amp; Email Directory</option>
             </select>
             </div>
