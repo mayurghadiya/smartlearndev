@@ -12,6 +12,7 @@ class Home extends CI_Controller {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
         $this->output->set_header('Pragma: no-cache');
         $this->output->set_header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+        $this->load->helper('system_setting');
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet** */

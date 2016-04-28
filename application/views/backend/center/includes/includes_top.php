@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-    <title><?php echo $page_title; ?> | smart learn</title>
+    <title><?php echo $page_title; ?> | <?php echo system_name(); ?> </title>
     <meta name="keywords" content="HTML5 Template, CSS3, Mega Menu, Admin Template, Elegant HTML Theme, smart learn" />
     <meta name="description" content="UI Elements Panels Draggable - Responsive Admin HTML Template">
     <meta name="author" content="Venmond">

@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Smart learn Registraion| Smart learn</title>
+    <title>Registraion | <?php echo system_name(); ?> </title>
     <meta name="keywords" content="HTML5 Template, CSS3, Metro Slider, Elegant HTML5 Theme" />
     <meta name="description" content="Multipurpose Responsive HTML5 Themes with Animated Metro Slider - Vencorp">
     <meta name="author" content="Smart  Learn">

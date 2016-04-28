@@ -12,7 +12,7 @@
         <meta name="description" content="Neon Admin Panel" />
         <meta name="author" content="" />
 
-        <title>Reset Password | Smart Learn </title>
+        <title>Reset Password | <?php echo system_name(); ?>  </title>
 
 
         <link rel="stylesheet" href="assets/login/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">

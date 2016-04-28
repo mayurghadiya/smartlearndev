@@ -12,7 +12,7 @@
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <meta name="keywords" content="Smart learn" />
+        <meta name="keywords" content="<?php echo system_name(); ?> " />
         <meta name="description" content="">
         <meta name="author" content="Searchnative">
 

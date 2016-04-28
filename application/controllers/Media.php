@@ -29,6 +29,7 @@ class Media extends CI_Controller {
         $this->load->helper('notification');
         $this->load->helper('date_format');
         $this->load->model('photo_gallery');
+        $this->load->helper('system_setting');
         
     }
     /*     * *default functin, redirects to login page if no admin logged in yet	

@@ -13,6 +13,7 @@ class Pages extends CI_Controller {
         $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
+        $this->load->helper('system_setting');
 
         /* if ( ! file_exists('application/views/pages/'.$page.'.php'))
           {

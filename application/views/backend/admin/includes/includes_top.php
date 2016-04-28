@@ -1,5 +1,5 @@
     <meta charset="utf-8" />
-    <title>Login Pages HTML Template | Smart learn</title>
+    <title>Login Pages HTML Template | <?php echo system_name(); ?></title>
     <meta name="keywords" content="HTML5 Template, CSS3, All Purpose Admin Template, Smart learn" />
     <meta name="description" content="Login Pages - Responsive Admin HTML Template">
     <meta name="author" content="Venmond">

@@ -10,7 +10,7 @@
 <html lang="en" dir="<?php //if ($text_align == 'right-to-left') echo 'rtl';?>" manifest="mainfest.appcache">
 <head>
 	
-	<title>Smart Learn | <?php //echo $system_title;?></title>
+	<title><?php echo system_name(); ?> | <?php //echo $system_title;?></title>
     
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

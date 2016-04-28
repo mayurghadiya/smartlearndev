@@ -12,7 +12,7 @@
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <meta name="keywords" content="HTML5 Template, CSS3, All Purpose Admin Template, Smart learn" />
+        <meta name="keywords" content="HTML5 Template, CSS3, All Purpose Admin Template, <?php echo system_name(); ?>" />
         <meta name="description" content="Responsive Admin Template for blogging dashboard">
         <meta name="author" content="Searchnative">
 

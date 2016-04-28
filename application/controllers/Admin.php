@@ -28,6 +28,7 @@ class Admin extends CI_Controller {
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
         $this->load->helper('date_format');
+        $this->load->helper('system_setting');
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
