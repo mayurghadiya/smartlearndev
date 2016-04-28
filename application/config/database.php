@@ -64,9 +64,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => '192.168.1.36',
+	'username' => 'mayur',
+	'password' => 'mayur',
 	'database' => 'smart_learn',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

@@ -153,4 +153,15 @@ class Site_model extends CI_Model {
         
         return $this->db->get('event_manager')->result();
     }
+    
+    /**
+     * Get recent university peoples
+     * @return mixed
+     */
+    function recent_universiy_peoples() {
+        $this->db->order_by('university_people_id', 'DESC');
+        $this->db->limit(4);
+        
+        return $this->db->get('university_peoples')->result();
+    }
 }

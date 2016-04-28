@@ -75,6 +75,7 @@ class Site extends CI_Controller {
      */
     function about() {
         $this->data['title'] = 'About us';
+        $this->data['university_peoples'] = $this->Site_model->recent_universiy_peoples();
         $this->__template('about', $this->data);
     }
     /*
