@@ -6,7 +6,7 @@ class Sub_admin extends CI_Controller {
         parent::__construct();
         $this->load->database();
         $this->load->library('session');
-        $this->load->helper('system_setting');
+        
     }
 
     function dashboard() {

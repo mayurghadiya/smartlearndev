@@ -6,7 +6,7 @@ class Data extends CI_Controller
     {
         parent::__construct();
         $this->load->database();
-        $this->load->helper('system_setting');
+       
     }
     
     public function index()
