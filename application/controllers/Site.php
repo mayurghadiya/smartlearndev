@@ -18,7 +18,7 @@ class Site extends CI_Controller {
         $this->load->library('session');
         $this->load->database();
         $this->load->model('Site_model');
-        $this->load->helper('system_setting');
+      
     }
 
     /**

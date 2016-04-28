@@ -29,7 +29,7 @@ class Student extends CI_Controller {
         $notification = show_notification($this->session->userdata('student_id'));
         $this->session->set_userdata('notifications', $notification);
         $this->load->helper('text');        
-        $this->load->helper('system_setting');
+       
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet** */
