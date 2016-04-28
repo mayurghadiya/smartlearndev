@@ -889,7 +889,7 @@ ul.cs-testimonial li:hover .cs-media figure figcaption:after{opacity:0.9;visibil
 ul.cs-testimonial .cs-media figure figcaption .cs-text{padding:60px 50px 20px;}
 ul.cs-testimonial .cs-media figure figcaption .cs-text p{color:#fff !important;position:relative;top:-10px;opacity:0;visibility:hidden;}
 ul.cs-testimonial li:hover .cs-media figure figcaption .cs-text p{top:0;opacity:1;visibility:visible;}
-ul.cs-testimonial .cs-media figure figcaption .cs-text .cs-media{width:34px;height:34px;border-radius:100px;border:solid 1px #fff;float:left;margin-right:10px;transform:scale(0);opacity:0;visibility:hidden;position:relative;bottom:-10px;}
+ul.cs-testimonial .cs-media figure figcaption .cs-text .cs-media{width:34px;height:31px;border-radius:100px;border:solid 1px #fff;float:left;margin-right:10px;transform:scale(0);opacity:0;visibility:hidden;position:relative;bottom:-10px;}
 ul.cs-testimonial li:hover .cs-media figure figcaption .cs-text .cs-media{opacity:1;visibility:visible;transform:scale(1);bottom:0;}
 ul.cs-testimonial .cs-media figure figcaption .cs-text .cs-media figure img{border-radius:100px;}
 ul.cs-testimonial .cs-media figure figcaption .cs-text .cs-info{overflow:hidden;opacity:0;visibility:hidden;position:relative;bottom:-10px;}

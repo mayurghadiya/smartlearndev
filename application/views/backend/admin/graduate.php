@@ -76,7 +76,7 @@
                                             <?php foreach ($graduates as $row) { ?>
                                                 <tr>
                                                     <td><?php echo $counter++; ?></td>
-                                                    <td><img class="img-circle img-responsive" src="<?php echo base_url('uploads/student_image/' . $row->student_img); ?>"/></td>
+                                                    <td><img class="img-circle img-responsive" src="<?php echo base_url('uploads/student_image/' . $row->std_thumb_img); ?>"/></td>
                                                     <td><?php echo $row->std_first_name . ' ' . $row->std_last_name; ?></td>
                                                     <td><?php echo $row->d_name; ?></td>
                                                     <td><?php echo $row->c_name; ?></td>
