@@ -186,3 +186,4 @@
         $('#event-data-tables').dataTable();
     })
 </script>
+<?php include('plus_icon.php'); ?>

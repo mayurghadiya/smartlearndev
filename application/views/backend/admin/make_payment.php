@@ -431,3 +431,4 @@
     $(".student").select2();
     
 </script>
+<?php include('plus_icon.php'); ?>

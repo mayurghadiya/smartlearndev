@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-sm-12">								
                         <!------CONTROL TABS START------>
-                        <ul class="nav nav-tabs bordered">
+                        <ul class="nav nav-tabs bordered" id="changestab">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Project List");?>
@@ -818,4 +818,4 @@ $( "#frmproject" ).submit(function( event ) {
             margin-top: -50px;
         }
     </style>
-   
+    <?php include('plus_icon.php'); ?>

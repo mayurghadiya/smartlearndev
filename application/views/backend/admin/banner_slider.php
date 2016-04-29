@@ -319,4 +319,5 @@
         });
 
     </script>
+    <?php include('plus_icon.php'); ?>
 
