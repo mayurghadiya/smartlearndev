@@ -16,8 +16,8 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> </li>
-                        <li><a href="pages-custom-product.html">Pages</a> </li>
+                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>">Home</a> </li>
+                        <li><?php echo ucwords("payment management");?></li>
                         <li class="active">Make Payment</li>
                     </ul>
                     <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step=5  data-position="left">

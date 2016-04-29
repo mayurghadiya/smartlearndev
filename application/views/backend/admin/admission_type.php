@@ -6,7 +6,7 @@
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("Home");?></a></li>
-                        <li><a href="#"><?php echo ucwords("Pages");?></a> </li>
+                        <li><?php echo ucwords("basic management");?></li>
                         <li class="active"><?php echo ucwords("Admission Type Management");?></li>
                     </ul>					
                 </div>

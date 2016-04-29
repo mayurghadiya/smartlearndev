@@ -8,7 +8,7 @@
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
-                        <li class="active"><a href="<?php echo base_url('index.php?admin/email_inbox'); ?>"><?php echo ucwords("Email");?></a> </li>
+                        <li><?php echo ucwords("email & chat");?></li>
                         <li class="active"><?php echo ucwords("Inbox");?></li>
                     </ul>
                 </div>
