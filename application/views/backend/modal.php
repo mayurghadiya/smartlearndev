@@ -28,7 +28,7 @@
                     <h4 class="modal-title"><?php echo $system_name;?></h4>
                 </div>
                 
-                <div class="modal-body" style="height:500px; overflow:auto;">
+                <div class="modal-body" style=" overflow:auto;">
                 
                     
                     

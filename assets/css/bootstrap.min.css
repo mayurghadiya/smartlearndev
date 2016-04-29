@@ -1314,7 +1314,7 @@ button.close { -webkit-appearance: none; padding: 0; cursor: pointer; background
 .modal-header { min-height: 16.43px; padding: 15px; border-bottom: 1px solid #e5e5e5 }
 .modal-header .close { margin-top: -2px }
 .modal-title { margin: 0; line-height: 1.42857143 }
-.modal-body { position: relative; padding: 15px }
+.modal-body { position: relative; padding: 0 15px 0 15px; }
 .modal-footer { padding: 15px; text-align: right; border-top: 1px solid #e5e5e5 }
 .modal-footer .btn+.btn { margin-bottom: 0; margin-left: 5px }
 .modal-footer .btn-group .btn+.btn { margin-left: -1px }
