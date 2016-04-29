@@ -498,3 +498,4 @@
             margin-top: -50px;
         }
     </style>
+<?php include('plus_icon.php'); ?>

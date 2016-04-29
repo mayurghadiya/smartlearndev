@@ -322,3 +322,4 @@
     //minDate: new Date(),
 
 </script>
+<?php include('plus_icon.php'); ?>

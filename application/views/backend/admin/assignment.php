@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-sm-12">								
                         <!------CONTROL TABS START------>
-                        <ul class="nav nav-tabs bordered">
+                        <ul class="nav nav-tabs bordered" id="changestab">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Assignment List");?>
@@ -745,13 +745,12 @@
                         $('#sfilter' + filter_id).val()
                         ).draw();
             }
-        });
+            
+        });       
     </script>
 
     <style>
         #sub-tables_filter{
             margin-top: -50px;
         }
-    </style>
-   
-        
+    </style> <?php include('plus_icon.php'); ?>
