@@ -9,15 +9,9 @@
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
-                        <li ><a href="<?php echo base_url('index.php?admin/email_inbox'); ?>"><?php echo ucwords("Email");?></a></li>
+                        <li ><?php echo ucwords("email & chat");?></li>
                         <li class="active"><?php echo ucwords("Sent");?></li>
                     </ul>
-                    <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step=5  data-position="left">
-                        <div data-action="remove-header" data-original-title="Remove Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-header-button menu"> <i class="fa fa-arrows-v"></i> </div>
-                        <div data-action="fullscreen" data-original-title="Remove Navigation Bar and Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="fullscreen-button menu"> <i class="glyphicon glyphicon-fullscreen"></i> </div>
-
-                    </div>
-
                 </div>
                 <!-- vd_panel-header -->
             </div>
