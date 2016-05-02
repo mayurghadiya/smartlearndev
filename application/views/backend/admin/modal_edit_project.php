@@ -23,7 +23,7 @@ foreach ($edit_data as $row):
                            <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Project Title");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['pm_title']; ?>"/>
+                                    <input type="text" class="form-control" name="title" id="title2"  value="<?php echo $row['pm_title']; ?>"/>
                                 </div>
                                    <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                             </div>
@@ -198,25 +198,25 @@ endforeach;
 <script type="text/javascript">
      
     $( "#btnupd" ).click(function( event ) {
-          if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
+          if($("#degree2").val()!=null & $("#course2").val()!=null & $("#batch2").val()!=null & $("#semester2").val()!=null & $("#title2").val()!=null)
           { 
          $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/checkprjects/'.$param2; ?>",
+                    url:"<?php echo base_url().'index.php?admin/checkprjectsedit/'.$param2; ?>",
                     dataType:'json',
                    data:
                         {
-                            'degree':$("#degree").val(),
-                            'course':$("#course").val(),
-                            'batch':$("#batch").val(),
-                            'semester':$("#semester").val(),
-                            'title':$("#title").val(),
+                            'degree':$("#degree2").val(),
+                            'course':$("#course2").val(),
+                            'batch':$("#batch2").val(),
+                            'semester':$("#semester2").val(),
+                            'title':$("#title2").val(),
                         }, 
                                 success:function(response){
                                     if(response.length == 0){
                                          $("#error_lable_exist").html('');
-                                    $('#frmproject').attr('validated',true);
-                                    $('#frmproject').submit();
+                                    $('#frmeditproject').attr('validated',true);
+                                    $('#frmeditproject').submit();
                                      } else
                                          {
                                              $("#error_lable_exist").html('Project is already present in the system');

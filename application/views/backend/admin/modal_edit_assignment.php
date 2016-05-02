@@ -171,8 +171,8 @@ endforeach;
                    
                     if (response.length == 0) {
                         $("#error_lable_exist").html('');
-                        $('#frmassignment').attr('validated', true);
-                        $('#frmassignment').submit();
+                        $('#frmeditassignment').attr('validated', true);
+                        $('#frmeditassignment').submit();
                     } else
                     {                         
                         $("#error_lable_exist").html('Record is already present in the system');
