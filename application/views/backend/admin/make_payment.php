@@ -196,7 +196,7 @@
                                                     <input type="text" name="due_amount" id="due_amount" class="form-control" readonly=""/>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
+                                            <div id="fees_main" class="form-group">
                                                 <label class="col-sm-3 control-label">Amount<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <input type="text" name="fees" id="fees" class="form-control" placeholder="In dollar" required=""/>
@@ -219,7 +219,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-offset-3 col-sm-5">
-                                                    <button type="submit" class="btn btn-info vd_bg-green">Make Payment</button>
+                                                    <button id="submit-form" type="submit" class="btn btn-info vd_bg-green">Make Payment</button>
                                                 </div>
                                             </div>
                                     </form>               
@@ -305,7 +305,19 @@
             var student_id = $('#student').val();
             fees_structure(fees_structure_id, student_id);
         });
-
+        
+        $('#fees_structure').on('blur', function () {
+            var fees_structure_id = $(this).val();
+            var student_id = $('#student').val();
+            fees_structure(fees_structure_id, student_id);
+        });
+        
+        $('#fees_structure').on('focus', function () {
+            var fees_structure_id = $(this).val();
+            var student_id = $('#student').val();
+            fees_structure(fees_structure_id, student_id);
+        });
+        
         $('#student').on('change', function () {
             var student_id = $(this).val();
             var fees_structure_id = $('#fees_structure').val();
@@ -322,6 +334,14 @@
                     $('#total_fees').val(amount.total_fees);
                     $('#total_fees_amount').val(amount.total_paid);
                     $('#due_amount').val(amount.due_amount);
+                    
+                    if(amount.total_fees == amount.total_paid) {
+                        $('#fees_main').css('display', 'none');
+                        $('#submit-form').attr('disabled', '');
+                    } else {
+                        $('#fees_main').css('display', 'block');
+                        $('#submit-form').removeAttr('disabled');
+                    }
                 }
             })
             $('#main_total_fees').css('display', 'block');

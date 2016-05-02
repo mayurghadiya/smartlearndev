@@ -78,7 +78,7 @@
                                     <strong>Batch :   </strong> 
                                     <?php echo $batch_detail->b_name; ?>
                                 </p>
-                                
+
                             </td>
                         </tr>
                     </tbody></table>
@@ -124,6 +124,9 @@
                                             $obtained_marks = 0;
                                             $is_failed = FALSE;
                                             foreach ($student_marks as $row) {
+                                                $is_number = is_numeric($row->mark_obtained);
+                                                if (!$is_number)
+                                                    continue;
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $counter++; ?></td>
@@ -141,38 +144,31 @@
                                                     <td>
                                                         <?php
                                                         $grade = $percentage;
-                                                        //echo $grade;
-                                                        //exit;
-                                                        switch ($grade) {
-                                                            case $grade > 90:
-                                                                echo 'A+';
-                                                                break;
-                                                            case $grade > 85:
-                                                                echo 'A';
-                                                                break;
-                                                            case $grade > 76:
-                                                                echo 'B+';
-                                                                break;
-                                                            case $grade > 71:
-                                                                echo 'B';
-                                                                break;
-                                                            case $grade > 60:
-                                                                echo 'C';
-                                                                break;
-                                                            case $grade > $exam_details->passing_mark:
-                                                                echo 'D';
-                                                                break;
-                                                            default:
-                                                                echo 'F';
-                                                            //$is_failed = TRUE;
+                                                        $grade = (int) (100 * $row->mark_obtained) / $exam_details->total_marks;
+                                                        $grade_data = $this->db->select()
+                                                                ->from('grade')
+                                                                ->where('from_marks >= ', $grade)
+                                                                ->order_by('from_marks', 'ASC')
+                                                                ->limit(1)
+                                                                ->get()
+                                                                ->row();
+                                                        $is_pass = TRUE;
+
+                                                        if ($row->mark_obtained < $exam_details->passing_mark) {
+                                                            echo 'F';
+                                                            $is_pass = FALSE;
+                                                        } else {
+                                                            echo $grade_data->grade_name;
+                                                            $is_pass = TRUE;
                                                         }
                                                         ?>
                                                     </td>
-                                                    <td><?php if ($row->mark_obtained > $exam_details->passing_mark)
-                                                    echo 'Pass';
-                                                else
-                                                    echo 'Fail';
-                                                ?></td>
+                                                    <td><?php
+                                                        if ($is_pass)
+                                                            echo 'Pass';
+                                                        else
+                                                            echo 'Fail';
+                                                        ?></td>
                                                     <td><?php echo ''; ?></td>
 
                                                 </tr>
@@ -197,8 +193,8 @@
                                                 <span class="label label-success">Pass</span>    
                                             <?php } else { ?>
                                                 <span class="label label-danger">Failed</span>
-    <?php }
-    ?>
+                                            <?php }
+                                            ?>
 
                                         </div>
                                     </div>
@@ -209,10 +205,10 @@
                     </div><!--/box-->
                 </div><!--/box-body-->
             </div><!--/box-->
-    <?php } ?>
+<?php } ?>
 
     </body>
-<?php
-@require_once 'includes/footer.php';
-?>
+    <?php
+    @require_once 'includes/footer.php';
+    ?>
 </html>

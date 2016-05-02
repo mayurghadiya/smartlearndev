@@ -181,7 +181,7 @@ if (count($slide_setting))
     <div class="page-section" style="margin-bottom: 20px;">
         <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="cs-fancy-heading" style="margin-bottom:40px;">
-                <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Graduates</h6>
+                <h6 style="font-size:14px !important; color:#999 !important; text-transform:uppercase !important;">Universities Accepting Our Recent Toppers Graduates</h6>
             </div>
             <ul class="row cs-testimonial main-testimonial">
                 <?php foreach ($recent_graduates as $row) { ?>

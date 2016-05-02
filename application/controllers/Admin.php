@@ -310,6 +310,7 @@ class Admin extends CI_Controller {
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
+            $data['event_end_date'] = $this->input->post('event_end_date');
             $data['group_id'] = $this->input->post('group');
             $this->db->insert('event_manager', $data);
             $this->session->set_flashdata('flash_message', get_phrase('event_added_successfully'));
@@ -320,6 +321,7 @@ class Admin extends CI_Controller {
             $data['event_location'] = $this->input->post('event_location');
             $data['event_desc'] = $this->input->post('event_desc');
             $data['event_date'] = date('Y-m-d H:i:s', strtotime($this->input->post('event_date') . $_POST['event_time']));
+            $data['event_end_date'] = $this->input->post('event_end_date');
             $data['group_id'] = $this->input->post('group');
             $this->db->where('event_id', $param2);
             $this->db->update('event_manager', $data);
@@ -5463,6 +5465,21 @@ class Admin extends CI_Controller {
         $page_data['page_name'] = 'charity_fund';
         $page_data['subscriber'] = $this->Crud_model->subscriber();
         $this->load->view('backend/index', $page_data);
+    }
+    
+    /**
+     * Due payment student list
+     * @param string $course
+     * @param string $sem
+     * @param string $fee_id
+     */
+    function due_payment_student_list($course = '', $sem = '', $fee_id = '') {
+        $this->load->model('admin/Crud_model');
+        
+        $students = $this->Crud_model->due_payment_student_list($course, $sem, $fee_id);
+        
+        echo '<pre>';
+        var_dump($students);
     }
 
 }

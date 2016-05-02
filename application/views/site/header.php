@@ -45,8 +45,8 @@
                                                             ))->row();
 
                                                     $name = $admin->ad_first_name . ' ' . $admin->ad_last_name;
-                                                    $dashboard_url = base_url('index.php?admin/dashboard');
-                                                    $profile_url = base_url('index.php?admin/manage_profile');
+                                                    $dashboard_url = base_url('admin/dashboard');
+                                                    $profile_url = base_url('admin/manage_profile');
                                                     break;
                                                 case 'student':
                                                     //find students details
@@ -55,8 +55,8 @@
                                                             ))->row();
 
                                                     $name = $student->std_first_name . ' ' . $student->std_last_name;
-                                                    $dashboard_url = base_url('index.php?student/dashboard');
-                                                    $profile_url = base_url('index.php?student/profile');
+                                                    $dashboard_url = base_url('student/dashboard');
+                                                    $profile_url = base_url('student/profile');
                                                     $image = base_url('uploads/student_image/' . $student->profile_photo);
                                                     break;
                                                 case 'subadmin':
@@ -66,7 +66,7 @@
                                                             ))->row();
 
                                                     $name = 'Sub Admin';
-                                                    $dashboard_url = base_url('index.php?sub_admin/dashboard');
+                                                    $dashboard_url = base_url('sub_admin/dashboard');
                                                     $profile_url = '';
                                                     break;
                                             }
@@ -80,13 +80,13 @@
                                                     <ul>
                                                         <li><a href="<?php echo $dashboard_url; ?>"><i class="icon-user3"></i> Dashboard</a></li>
                                                         <li><a href="<?php echo $profile_url; ?>"><i class="icon-gear"></i> Profile</a></li>
-                                                        <li><a href="<?php echo base_url('index.php?login/logout'); ?>"><i class="icon-log-out"></i> Logout</a></li>
+                                                        <li><a href="<?php echo base_url('login/logout'); ?>"><i class="icon-log-out"></i> Logout</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                         <?php } else {
                                             ?>
-                                            <li><a href="<?php echo base_url('index.php?site/user_login'); ?>"><i class="icon-login"></i>Login</a></li>
+                                            <li><a href="<?php echo base_url('site/user_login'); ?>"><i class="icon-login"></i>Login</a></li>
                                             <?php
                                         }
                                         ?>    
@@ -103,12 +103,12 @@
                             <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
                                 <div class="cs-logo cs-logo-dark">
                                     <div class="cs-media">
-                                        <figure><a href="<?php echo base_url('index.php?home'); ?>"><img style="margin-top: -20px;" src="<?php echo base_url(); ?>assets/img/logo.png" alt=""/></a></figure>
+                                        <figure><a href="<?php echo base_url('home'); ?>"><img style="margin-top: -20px;" src="<?php echo base_url(); ?>assets/img/logo.png" alt=""/></a></figure>
                                     </div>
                                 </div>
                                 <div class="cs-logo cs-logo-light">
                                     <div class="cs-media">
-                                        <figure><a href="<?php echo base_url('index.php?home'); ?>"><img src="<?php echo base_url(); ?>site_assets/images/xcs-logo-light.png.pagespeed.ic.Q1HdweYLsy.png" alt=""/></a></figure>
+                                        <figure><a href="<?php echo base_url('home'); ?>"><img src="<?php echo base_url(); ?>site_assets/images/xcs-logo-light.png.pagespeed.ic.Q1HdweYLsy.png" alt=""/></a></figure>
                                     </div>
                                 </div>
                             </div>
@@ -116,24 +116,24 @@
                                 <div class="cs-main-nav pull-right">
                                     <nav class="main-navigation">
                                         <ul>
-                                            <li><a href="<?php echo base_url('index.php?home'); ?>">Home</a><span>About College</span></li>
-                                            <li><a href="<?php echo base_url('index.php?about'); ?>">About</a><span>About Us</span></li>
+                                            <li><a href="<?php echo base_url('home'); ?>">Home</a><span>About College</span></li>
+                                            <li><a href="<?php echo base_url('about'); ?>">About</a><span>About Us</span></li>
                                             <li class="menu-item-has-children"><a href="#">Courses</a>
                                                 <span>Online Education</span>
                                                 <ul>
                                                     <?php foreach ($courses as $course) { ?>
-                                                        <li><a href="<?php echo base_url('index.php?course/' . $course->d_id); ?>"><?php echo $course->d_name; ?></a></li>
+                                                        <li><a href="<?php echo base_url('course/' . $course->d_id); ?>"><?php echo $course->d_name; ?></a></li>
                                                     <?php } ?>
                                                 </ul>
                                             </li>
-                                            <li><a href="<?php echo base_url('index.php?alumni'); ?>">ALUMNI</a><span>Alumni</span>
-                                            <li><a href="<?php echo base_url('index.php?events'); ?>">Events</a><span>University Events</span>
+                                            <li><a href="<?php echo base_url('alumni'); ?>">ALUMNI</a><span>Alumni</span>
+                                            <li><a href="<?php echo base_url('events'); ?>">Events</a><span>University Events</span>
 
                                             </li>
-                                            <li><a href="<?php echo base_url('index.php?syllabus'); ?>">Syllabus</a><span>Syllabus</span>
+                                            <li><a href="<?php echo base_url('syllabus'); ?>">Syllabus</a><span>Syllabus</span>
                                             </li>
 
-                                            <li><a href="<?php echo base_url('index.php?contact'); ?>">Contact</a><span>inquire with us</span>
+                                            <li><a href="<?php echo base_url('contact'); ?>">Contact</a><span>inquire with us</span>
 
                                             </li>
                                             <li class="cs-search-area">

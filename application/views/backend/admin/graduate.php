@@ -33,7 +33,7 @@
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1><?php echo ucwords("recent graduates"); ?></h1>
+                    <h1><?php echo ucwords("Toppers Graduate"); ?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -65,7 +65,7 @@
                                                 <th><?php echo ucwords("student name"); ?></th>
                                                 <th><?php echo ucwords("course"); ?></th>
                                                 <th><?php echo ucwords("branch"); ?></th>
-                                                <th><?php echo ucwords("year"); ?></th>
+                                                <th><?php echo ucwords("graduation year"); ?></th>
                                                 <th><?php echo ucwords("action"); ?></th>
                                             </tr>
                                         </thead>
@@ -104,7 +104,7 @@
                                     <?php echo form_open(base_url() . 'index.php?admin/graduate/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'graduatesform', 'enctype' => 'multipart/form-data', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course name"); ?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("course"); ?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="degree" name="degree">
                                                     <option value="">Select</option>
@@ -155,7 +155,7 @@
                                         </div>      
                                         
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("graduate year"); ?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("graduation year"); ?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" name="year" id="year" class="form-control"/>
                                             </div>

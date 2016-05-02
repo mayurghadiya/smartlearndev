@@ -162,7 +162,7 @@
                                                                     );
                                                                     $marks = $this->Crud_model->student_exam_mark($where);
                                                                     ?>
-                                                                    <td><input type="number" class="form-control" placeholder="Obtained Mark: <?php echo $exam_detail[0]->total_marks; ?>"
+                                                                    <td><input type="number" class="form-control" placeholder="Enter Marks: <?php echo $exam_detail[0]->total_marks; ?>"
                                                                                min="0" max="<?php echo $exam_detail[0]->total_marks; ?>"
                                                                                name="mark_<?php echo $counter; ?>_<?php echo $student->std_id; ?>_<?php echo $exam_detail[0]->em_id; ?>_<?php echo $subject->sm_id; ?>"
                                                                                value="<?php if (count($marks)) echo $marks->mark_obtained; ?>"/></td>

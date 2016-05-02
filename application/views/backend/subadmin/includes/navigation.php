@@ -10,7 +10,7 @@
         <div class="vd_menu">
             <ul>                   
                 <li>
-                    <a href="<?php echo base_url('index.php?video_streaming'); ?>">
+                    <a href="<?php echo base_url('video_streaming'); ?>">
                         <span class="menu-icon"><i class="fa fa-desktop"></i></span> 
                         <span class="menu-text">Video Streaming</span>  
                     </a>
@@ -24,7 +24,7 @@
     <div class="vd_menu vd_navbar-bottom-widget">
         <ul>
             <li>
-                <a href="<?php echo base_url(); ?>index.php?login/logout">
+                <a href="<?php echo base_url(); ?>login/logout">
                     <span class="menu-icon"><i class="fa fa-sign-out"></i></span>          
                     <span class="menu-text">Logout</span>             
                 </a>

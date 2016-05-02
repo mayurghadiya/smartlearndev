@@ -7,7 +7,7 @@
                     <div class="vd_top-nav vd_nav-width  ">
                         <div class="vd_panel-header">
                             <div class="logo">
-                                <a href="<?php echo base_url('index.php?student/dashboard'); ?>"><img alt="logo" src="<?= $this->config->item('image_path') ?>logo.png"></a>
+                                <a href="<?php echo base_url('student/dashboard'); ?>"><img alt="logo" src="<?= $this->config->item('image_path') ?>logo.png"></a>
                             </div>
                             <!-- logo -->           
                             <div class="vd_panel-menu left-pos visible-sm visible-xs">                                 
@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-sm-5 col-xs-12">            		
                                 <div class="vd_menu-search">
-                                    <form id="search-box" method="post" action="<?php echo base_url('index.php?student/search'); ?>">
+                                    <form id="search-box" method="post" action="<?php echo base_url('student/search'); ?>">
                                         <input type="text" name="search" class="vd_menu-search-text width-60" placeholder="Search"
                                                value="<?php echo isset($search_string) ? $search_string : ''; ?>">
                                         <div class="vd_menu-search-category"> <span data-action="click-trigger"> <span class="separator"></span> <span class="text">Category</span> <span class="icon"> <i class="fa fa-caret-down"></i></span> </span>
@@ -89,7 +89,7 @@
                                             </li>
 
                                             <li id="top-menu-2"  class="one-icon mega-li"> 
-                                                <a href="<?php echo base_url(); ?>index.php?admin/email" class="mega-link" data-action="click-trigger">
+                                                <a href="<?php echo base_url(); ?>admin/email" class="mega-link" data-action="click-trigger">
                                                     <span class="mega-icon"><i class="fa fa-globe"></i></span> 
                                                     <span class="badge vd_bg-red">
                                                         <?php echo $this->session->userdata('notifications')['total_notification']; ?></span>        
@@ -109,7 +109,7 @@
                                                                         <ul class="list-wrapper pd-lr-10">
                                                                             <?php if (isset($this->session->userdata('notifications')['fees_structure'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/student_fees'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/student_fees'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New fee structure was added.
                                                                                         </div> 
@@ -120,7 +120,7 @@
                                                                             <?php if (isset($this->session->userdata('notifications')['exam_manager']) ||
                                                                                     isset($this->session->userdata('notifications')['exam_time_table'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/exam_listing'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/exam_listing'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New exam or exam schedule was added.
                                                                                         </div> 
@@ -129,7 +129,7 @@
                                                                             <?php } ?>
                                                                              <?php if (isset($this->session->userdata('notifications')['assignment_manager'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/assignment/assignment_list'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/assignment/assignment_list'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New assignment was added.
                                                                                         </div> 
@@ -138,7 +138,7 @@
                                                                             <?php } ?>
                                                                                  <?php if (isset($this->session->userdata('notifications')['project_manager'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/project/submission'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/project/submission'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New Project was added.
                                                                                         </div> 
@@ -147,7 +147,7 @@
                                                                             <?php } ?> 
                                                                                 <?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/exam_marks'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/exam_marks'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> Exam marks was added.
                                                                                         </div> 
@@ -159,7 +159,7 @@
                                                                                  
                                                                                  <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/volunteer'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/volunteer'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New Participate was added.
                                                                                         </div> 
@@ -168,7 +168,7 @@
                                                                             <?php } ?>
                                                                                  <?php if (isset($this->session->userdata('notifications')['study_resources'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/studyresources'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/studyresources'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New Study Resources was added.
                                                                                         </div> 
@@ -177,7 +177,7 @@
                                                                             <?php } ?>
                                                                                  <?php if (isset($this->session->userdata('notifications')['library_manager'])) { ?>
                                                                                 <li> 
-                                                                                    <a href="<?php echo base_url('index.php?student/digitallibrary'); ?>"> 
+                                                                                    <a href="<?php echo base_url('student/digitallibrary'); ?>"> 
                                                                                         <div class="menu-icon vd_yellow"><i class="fa fa-suitcase"></i></div> 
                                                                                         <div class="menu-text"> New Digital Library was added.
                                                                                         </div> 
@@ -206,8 +206,8 @@
                                                                         <div class="content-list content-menu">
                                                                             <ul class="list-wrapper pd-lr-10">
                                                                                 <li> <a href="<?php echo base_url(); ?>index.php"> <div class="menu-icon"><i class=" fa fa-dashboard"></i></div> <div class="menu-text">Home</div> </a> </li>
-                                                                                <li> <a href="<?php echo base_url(); ?>index.php?student/profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
-                                                                                <li> <a href="<?php echo base_url(); ?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
+                                                                                <li> <a href="<?php echo base_url(); ?>student/profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+                                                                                <li> <a href="<?php echo base_url(); ?>login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
                                                                             </ul>
                                                                         </div> 
                                                                     </div> 
@@ -239,10 +239,10 @@
                                                             $news_conent = $this->db->get_where('cms_manager', array('c_status' => 1))->result_array();
                                                             foreach ($news_conent as $row):
                                                                 ?>	
-                                                                <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
+                                                                <li><a target="_blank" href="<?php echo base_url(); ?>/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
                                                             <?php endforeach; ?>
-                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/student/gallery">Gallery</a></li>
-                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>index.php?/student/holiday">Holiday</a></li>
+                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>/student/gallery">Gallery</a></li>
+                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>/student/holiday">Holiday</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>
@@ -253,14 +253,14 @@
                                                     <div class="container">
 
                                                         <!-----------code by h------------
-                                                         <a target="_blank" href="<?php echo base_url(); ?>chat?index.php?act=<?php echo $gochat; ?>">Go To Chat</a>-->
+                                                         <a target="_blank" href="<?php echo base_url(); ?>chat?act=<?php echo $gochat; ?>">Go To Chat</a>-->
                                                         <?php
                                                         $sess = $this->session->userdata('std_roll');
 
                                                         $gochat = "chatuser" . $sess;
                                                         $gochat = base64_encode($gochat);
                                                         ?>
-                                                        <a class=' btn-info chat-button vd_bg-green' target="_blank"  href='<?php echo base_url(); ?>chat?index.php?act=<?php echo $gochat; ?>'><i class="fa fa-comment"></i>Go To Chat<?php // include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat2/lhc_web/index.php');       ?>
+                                                        <a class=' btn-info chat-button vd_bg-green' target="_blank"  href='<?php echo base_url(); ?>chat?act=<?php echo $gochat; ?>'><i class="fa fa-comment"></i>Go To Chat<?php // include($_SERVER['DOCUMENT_ROOT'] . '/smart_learn_main_chat2/lhc_web/index.php');       ?>
                                                         </a>
 
                                                         <div class='chat-link-box'>

@@ -24,7 +24,7 @@ class Student extends CI_Controller {
         $this->output->set_header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
         $this->load->helper('smiley');
         if ($this->session->userdata('student_login') != 1)
-            redirect(base_url() . 'index.php?login', 'refresh');
+            redirect(base_url() . 'site/user_login', 'refresh');
         $this->load->helper('notification');
         $notification = show_notification($this->session->userdata('student_id'));
         $this->session->set_userdata('notifications', $notification);

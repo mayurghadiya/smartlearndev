@@ -24,7 +24,7 @@
                     <ul class="list-wrapper pd-lr-10">
                         <?php foreach ($live_streaming as $video) { ?>
                             <li>
-                                <a target="_blank" href="<?php echo base_url('index.php?video_streaming#' . $video->url_link); ?>">
+                                <a target="_blank" href="<?php echo base_url('video_streaming#' . $video->url_link); ?>">
                                     <div class="menu-icon">
                                         <i class=" icon-trophy"></i>
                                     </div>
@@ -44,7 +44,7 @@
                         ?>
                         <?php foreach ($all as $video) { ?>
                             <li>
-                                <a target="_blank" href="<?php echo base_url('index.php?video_streaming#' . $video->url_link); ?>">
+                                <a target="_blank" href="<?php echo base_url('video_streaming#' . $video->url_link); ?>">
                                     <div class="menu-icon">
                                         <i class=" icon-trophy"></i>
                                     </div>
