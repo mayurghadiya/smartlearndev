@@ -26,11 +26,7 @@
         <div class="vd_content clearfix">
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
-                    <ul class="breadcrumb">
-                        <li><a href="<?php echo ucwords("email");?>">Home</a> </li>
-                        <li><?php echo ucwords("media");?></li>
-                        <li class="active">Banner Slider</li>
-                    </ul>                  
+                    <?php echo set_breadcrumb(); ?>                 
                 </div>
             </div>
             <div class="vd_title-section clearfix">
