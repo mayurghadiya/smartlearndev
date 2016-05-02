@@ -108,7 +108,7 @@ foreach ($datadegree as $rowdegree) {
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
+                                                <button type="submit" id="btnadd" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
                                             </div>
                                         </div>
                                         </form>               
@@ -120,14 +120,6 @@ foreach ($datadegree as $rowdegree) {
     $("#checkAll").change(function () {
     $("input:checkbox").prop('checked', $(this).prop("checked"));
 });
-
-        
-     
-     
-     
-       
-    
-     
         
           $("#degree").change(function(){
                 var degree = $(this).val();
@@ -202,7 +194,7 @@ foreach ($datadegree as $rowdegree) {
         }
     });
 
-$( "#frmproject" ).submit(function( event ) {
+$( "#btnadd" ).click(function( event ) {
           if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
           { 
          $.ajax({
