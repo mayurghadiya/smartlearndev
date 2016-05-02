@@ -194,7 +194,7 @@ foreach ($datadegree as $rowdegree) {
         }
     });
 
-$( "#id="btnadd"" ).click(function( event ) {
+$( "#btnadd" ).click(function( event ) {
           if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
           { 
          $.ajax({
