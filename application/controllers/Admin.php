@@ -4799,6 +4799,19 @@ class Admin extends CI_Controller {
                     'assign_batch' => $batch, 'assign_sem' => $semester))->result_array();
         echo json_encode($data);
     }
+    function checkassignment($id = '') {
+        $degree = $this->input->post('degree');
+        $course = $this->input->post('course');
+        $batch = $this->input->post('batch');
+        $semester = $this->input->post('semester');
+        $title = $this->input->post('title');
+        $data = $this->db->get_where('assignment_manager', array('assign_degree' => $degree,
+                    'course_id' => $course,
+                    'assign_title' => $title,
+                    'assign_batch' => $batch, 'assign_sem' => $semester,'assign_id!='=>$id))->result_array();
+        
+        echo json_encode($data);
+    }
 
     /**
      * Grade
