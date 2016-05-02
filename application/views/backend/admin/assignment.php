@@ -263,6 +263,7 @@
         <!-- row --> 
     </div>
        <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+       <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
    
 
 <script type="text/javascript">

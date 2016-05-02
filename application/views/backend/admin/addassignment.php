@@ -87,152 +87,45 @@
                                     </div>             
                                      </form>               
                                   
-    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+    
      <script type="text/javascript"> 
-        
-        
-         $("#sub_searchform").validate({
-                rules: {
-                    degree:"required",
-                    course:"required",
-                    batch:"required",
-                    semester:"required",
-                },
-                messages:{
-                    degree:"select course",
-                    course:"select branch",
-                    batch:"select batch",
-                    semester:"select semester",
-                }
-            });
-            $("#searchform").validate({
-             rules: {
-                 degree:"required",
-                 course:"required",
-                 batch:"required",
-                 semester:"required",
-             },
-             messages:{
-                 degree:"select course",
-                 course:"select branch",
-                 batch:"select batch",
-                 semester:"select semester",
-             }
-         });
-                        
-         $("#sub_courses").change(function(){
-                var degree = $(this).val();
-                
-                var dataString = "degree="+degree;
-                $.ajax({
+          $( "#frmassignment" ).submit(function( event ) {
+          if($("#title").val()!=null & $("#degree").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#course").val()!=null )
+          { 
+              alert('sdfds');
+         $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#sub_branches").html(response);
+                    url:"<?php echo base_url().'index.php?admin/checkassignments'; ?>",
+                    dataType:'json',
+                    async:false,
+                   data:
+                        {
+                            'title':$("#title").val(),
+                            'semester':$("#semester").val(),
+                            'degree':$("#degree").val(),
+                            'batch':$("#batch").val(),
+                            'course':$("#course").val()
+                        }, 
+                                success:function(response){
+                                    
+                                    alert(response.length);
+                                    if(response.length == 0){
+                                         $("#error_lable_exist").html('');
+                                    $('#frmassignment').attr('validated',true);
+                                    $('#frmassignment').submit();
+                                     } else
+                                         {
+                                             $("#error_lable_exist").html('Record is already present in the system');
+                                         return false;
+                                     }
                     }
                 });
-        });
-         $("#sub_branches").change(function(){
-                //var course = $(this).val();
-                // var degree = $("#degree").val();
-                var degree = $("#sub_courses").val();
-                var course = $("#sub_branches").val();
-                var dataString = "course="+course+"&degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#sub_batches").html(response);
-                        
-                            $.ajax({
-                               type: "POST",
-                               url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
-                               data: dataString,
-                               success: function (response1) {
-                                   $("#sub_semesters").html(response1);
-                               }
-                           });
+                    return false; 
                     }
-                });
-        });
-        $("#sub_searchform").submit(function(){
-            var degree =  $("#sub_courses").val();
-           var course =  $("#sub_branches").val();
-           var batch =  $("#sub_batches").val();
-            var semester = $("#sub_semesters").val();
-             if($("#sub_courses").val()!="" & $("#sub_branches").val()!="" & $("#sub_batches").val()!="" & $("#sub_semesters").val()!="")
-            {
-            $.ajax({
-                type:"POST",
-                url:"<?php echo base_url(); ?>index.php?admin/getsubmitted/submitted",
-                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
-                success:function(response)
-                {
-                    $("#getsubmit").html(response);
-                }
-                
-                
-            });
-            }
-            else{
-                    $("#sub_searchform").validate({
-                      rules: {
-                          degree:"required",
-                          course:"required",
-                          batch:"required",
-                          semester:"required",
-
-                      },
-                      messages:{
-                          degree:"select course",
-                          course:"select branch",
-                          batch:"select batch",
-                          semester:"select semester",
-                      }
-                  });
-            }
-             return false;
-        });
+        event.preventDefault();
         
-         $("#searchform").submit(function(){
-           var degree =  $("#courses").val();
-           var course =  $("#branches").val();
-           var batch =  $("#batches").val();
-            var semester = $("#semesters").val();
-            if($("#courses").val()!="" & $("#branches").val()!="" & $("#batches").val()!="" & $("#semesters").val()!="")
-            {
-                
-            $.ajax({
-                type:"POST",
-                url:"<?php echo base_url(); ?>index.php?admin/getassignment/allassignment",
-                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
-                success:function(response)
-                {
-                    $("#getresponse").html(response);
-                }
-                
-                
-            });
-            }else{
-                    $("#searchform").validate({
-                          rules: {
-                              degree:"required",
-                              course:"required",
-                              batch:"required",
-                              semester:"required",
-                          },
-                          messages:{
-                              degree:"select course",
-                              course:"select branch",
-                              batch:"select batch",
-                              semester:"select semester",
-                          }
-                      });
-            }
-             return false;
-         });
+      });
+         
         $("#degree").change(function(){
                 var degree = $(this).val();
                 var dataString = "degree="+degree;
@@ -246,43 +139,8 @@
                 });
         });
         
-         $("#courses").change(function(){
-                var degree = $(this).val();
-                
-                var dataString = "degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#branches").html(response);
-                    }
-                });
-        });
-         $("#branches").change(function(){
-                //var course = $(this).val();
-                // var degree = $("#degree").val();
-                var degree = $("#courses").val();
-                var course = $("#branches").val();
-                var dataString = "course="+course+"&degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        $("#batches").html(response);
-                        
-                        $.ajax({
-                           type: "POST",
-                           url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
-                           data: dataString,
-                           success: function (response1) {
-                               $("#semesters").html(response1);
-                           }
-                       });
-                    }
-                });
-        });
+    
+        
         
          $("#course").change(function(){
                 var course = $(this).val();
@@ -331,45 +189,44 @@
 
         $("#frmassignment").validate({
             rules: {
+                title:{
+                            required: true,  
+                               
+                        },
                 degree: "required",
                 course: "required",
                 batch: "required",
-                semester: "required",
+                semester:{
+                        required:true,
+                    },
                 submissiondate: "required",
-                assignmenturl:
-                        {
-                            required: true,
-                            url: true,
-                        },
+                
                 assignmentfile: {
                             required:true,
                             extension:'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|txt',  
 
                     },
-                title:
-                        {
-                            required: true,                                                                              
-                        },
+                
 
             },
             messages: {
+                 title:
+                        {
+                            required: "Enter title",
+                        },
                 degree:"Select Course",
                 course: "Select Branch",
                 batch: "Select Batch",
-                semester: "Select Semester",
+                semester:  {
+                        required:"Select semester",                       
+                    },
                 submissiondate: "Select date of submission",
-                assignmenturl:
-                        {
-                            required: "Enter page url",
-                        },
+                
                 assignmentfile: {
                     required: "Upload file",
                         extension:'Upload valid file',  
                     },
-                title:
-                        {
-                            required: "Enter title",
-                        },
+               
             }
         });
         
