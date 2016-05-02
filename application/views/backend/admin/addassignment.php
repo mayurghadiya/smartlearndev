@@ -89,15 +89,13 @@
                                   
     
      <script type="text/javascript"> 
-          $( "#frmassignment" ).submit(function( event ) {
+        $( "#frmassignment" ).submit(function( event ) {
           if($("#title").val()!=null & $("#degree").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#course").val()!=null )
           { 
-              alert('sdfds');
          $.ajax({
                     type:"POST",
                     url:"<?php echo base_url().'index.php?admin/checkassignments'; ?>",
                     dataType:'json',
-                    async:false,
                    data:
                         {
                             'title':$("#title").val(),
@@ -107,8 +105,6 @@
                             'course':$("#course").val()
                         }, 
                                 success:function(response){
-                                    
-                                    alert(response.length);
                                     if(response.length == 0){
                                          $("#error_lable_exist").html('');
                                     $('#frmassignment').attr('validated',true);
@@ -123,9 +119,9 @@
                     return false; 
                     }
         event.preventDefault();
-        
+     
       });
-         
+        
         $("#degree").change(function(){
                 var degree = $(this).val();
                 var dataString = "degree="+degree;
@@ -190,8 +186,7 @@
         $("#frmassignment").validate({
             rules: {
                 title:{
-                            required: true,  
-                               
+                            required: true,                                                                              
                         },
                 degree: "required",
                 course: "required",
@@ -218,7 +213,7 @@
                 course: "Select Branch",
                 batch: "Select Batch",
                 semester:  {
-                        required:"Select semester",                       
+                        required:"Select semester",
                     },
                 submissiondate: "Select date of submission",
                 
