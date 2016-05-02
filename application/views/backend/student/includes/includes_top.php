@@ -188,7 +188,7 @@ if ($widget_order) {
         }
         ?>
                 {
-                widgetTitle: "<?php echo $title; ?>",
+                widgetTitle: "<?php echo strtoupper($title); ?>",
                         widgetId: "id<?php echo $order[$i]; ?>",
                         widgetContent: datanew<?php echo $order[$i]; ?>
                 }
@@ -206,15 +206,15 @@ if ($widget_order) {
 <?php } else { ?>
             var dashboardJSON = [
                 {
-                    widgetTitle: "Event Calendar",
+                    widgetTitle: "EVENT CALENDAR",
                     widgetId: "id1",                    
                     widgetContent: datanew1
                 }, {
-                    widgetTitle: "Admissions",
+                    widgetTitle: "ADMISSIONS",
                     widgetId: "id2",
                     widgetContent: datanew2
                 }, {
-                    widgetTitle: "Assignments",
+                    widgetTitle: "ASSIGNMENTS",
                     widgetId: "id3",
                     widgetContent: datanew3
                 }]
@@ -237,7 +237,7 @@ if ($widget_order) {
                 case 'wid1':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Event Calendar",
+                        widgetTitle: "EVENT CALENDAR",
                         widgetId: "id1",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/1'); ?>"></iframe>'
                     });
@@ -245,7 +245,7 @@ if ($widget_order) {
                 case 'wid2':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Admissions",
+                        widgetTitle: "ADMISSIONS",
                         widgetId: "id2",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/2'); ?>"></iframe>'
                     });
@@ -253,7 +253,7 @@ if ($widget_order) {
                 case 'wid3':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Assignments",
+                        widgetTitle: "ASSIGNMENTS",
                         widgetId: "id3",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/3'); ?>"></iframe>'
                     });
@@ -261,7 +261,7 @@ if ($widget_order) {
                 case 'wid4':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Study Resources",
+                        widgetTitle: "STUDY RESOURCES",
                         widgetId: "id4",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/4'); ?>"></iframe>'
                     });
@@ -269,7 +269,7 @@ if ($widget_order) {
                 case 'wid5':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Examinations",
+                        widgetTitle: "EXAMINATIONS",
                         widgetId: "id5",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/5'); ?>"></iframe>'
                     });
@@ -277,7 +277,7 @@ if ($widget_order) {
                 case 'wid6':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Results",
+                        widgetTitle: "RESULTS",
                         widgetId: "id6",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/6'); ?>"></iframe>'
                     });
@@ -285,7 +285,7 @@ if ($widget_order) {
                 case 'wid7':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Project & Synposis",
+                        widgetTitle: "PROJECTS & SYNOPSIS",
                         widgetId: "id7",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/7'); ?>"></iframe>'
                     });
@@ -293,7 +293,7 @@ if ($widget_order) {
                 case 'wid8':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Video Conferencing",
+                        widgetTitle: "VIDEO CONFERENCING",
                         widgetId: "id8",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/8'); ?>"></iframe>'
                     });
@@ -301,7 +301,7 @@ if ($widget_order) {
                 case 'wid9':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Digital Library",
+                        widgetTitle: "DIGITAL LIBRARY",
                         widgetId: "id9",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/9'); ?>"></iframe>'
                     });
@@ -309,7 +309,7 @@ if ($widget_order) {
                 case 'wid10':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Participate",
+                        widgetTitle: "PARTICIPATE",
                         widgetId: "id10",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/10'); ?>"></iframe>'
                     });
@@ -317,7 +317,7 @@ if ($widget_order) {
                 case 'wid11':
                     //event calendar widget
                     $('#myDashboard').sDashboard("addWidget", {
-                        widgetTitle: "Staff & Email Directory",
+                        widgetTitle: "STAFF & EMAIL DIRECTORY",
                         widgetId: "id11",
                         widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/11'); ?>"></iframe>'
                     });

@@ -4,22 +4,44 @@
         <div data-action="click-target" class="vd_mega-menu-content  width-xs-2  left-xs">
             <div class="col-sm-6 ui-sortable">
                 <div class="content-list content-menu">
-                    <ul class="list-wrapper pd-lr-10">
-                        <li> <a href="<?php echo base_url('student/exam_marks'); ?>" target="_blank"> 
-                                <div class="menu-text">Exam Marks 
-                                    <?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
-                                    <img src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
-                                    <?php } ?>
-                                </div> 
-                            </a> 
-                        </li>
-                        <li> 
-                            <a href="<?php echo base_url('student/statement_of_marks'); ?>" target="_blank">  
-                                <div class="menu-text">Statement of Marks</div> 
-                            </a> 
-                        </li>
 
-                    </ul>
+                    <style> 
+                        .image_box, .text_box{width: 50%; display: inline-block; float: left; }
+                        .text_box{position: relative;}
+                        .text_box .detials{height: 10em; display: flex; align-items: center; justify-content: center}                        
+                        .image_box img{ max-width: 100%; display: block;}
+                        .image_box1 {width:150px; height:150px;display:table-cell; vertical-align:middle; }
+                        .image_box img{ display:block;margin-left:auto;margin-right:auto;vertical-align:middle;}                        
+                    </style>
+
+                    <div class="image_box">
+                        <div class="image_box1">
+                            <img src="<?php echo base_url('uploads/widgets_images/6.jpg'); ?>"/>
+                        </div>
+                    </div>
+
+                    <div class="text_box">
+                        <div class="detials">
+                            <ul class="list-wrapper pd-lr-10">
+                                <li> <a href="<?php echo base_url('student/exam_marks'); ?>" target="_blank"> 
+                                        <div class="menu-text">Exam Marks 
+                                            <?php if (isset($this->session->userdata('notifications')['marks_manager'])) { ?>
+                                                <img src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
+                                            <?php } ?>
+                                        </div> 
+                                    </a> 
+                                </li>
+                                <li> 
+                                    <a href="<?php echo base_url('student/statement_of_marks'); ?>" target="_blank">  
+                                        <div class="menu-text">Statement of Marks</div> 
+                                    </a> 
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
