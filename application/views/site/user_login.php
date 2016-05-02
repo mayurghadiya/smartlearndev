@@ -10,22 +10,24 @@
                         <h6>login</h6>
                         <form action="<?php echo base_url(); ?>index.php?site/user_login" method="post">
                             <div class="row">
-                                <?php 
+                                <?php
                                 $error = $this->session->flashdata('error');
-                                if($error != '') { ?>
-                                <div class="alert alert-danger">
-                                    <button class="close" data-dismiss="alert">&times;</button>
-                                    <p><?php echo $error; ?></p>
-                                </div>
+                                if ($error != '') {
+                                    ?>
+                                    <div class="alert alert-danger">
+                                        <button class="close" data-dismiss="alert">&times;</button>
+                                        <p><?php echo $error; ?></p>
+                                    </div>
                                 <?php } ?>
-                                <?php 
+                                <?php
                                 $message = $this->session->flashdata('message');
-                                if($message != '') { ?>
-                                <div class="alert alert-success">
-                                    <button class="close" data-dismiss="alert">&times;</button>
-                                    <p><?php echo $message; ?></p>
-                                </div>
-                                <?php } ?>
+                                if ($message != '') {
+                                    ?>
+                                    <div class="alert alert-success">
+                                        <button class="close" data-dismiss="alert">&times;</button>
+                                        <p><?php echo $message; ?></p>
+                                    </div>
+<?php } ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="cs-field-holder">
                                         <i class="icon-user"></i>
@@ -42,18 +44,12 @@
                                     <div class="cs-btn-submit">
                                         <input type="submit" value="Login" name="login">
                                     </div>
-                                    <a class="cs-forgot-password" href="<?php echo base_url('index.php?site/forgot_password'); ?>">
+                                    <input style="margin-left: 70px;" type="checkbox" id="check1">
+                                    <label for="check1">Remember me</label>
+                                    <a style="margin-left: 20px;" class="" href="<?php echo base_url('index.php?site/forgot_password'); ?>">
                                         <i class="cs-color icon-help-with-circle"></i>Forgot password?
                                     </a>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="cs-field-holder">
-                                        <div class="cs-checkbox">
-                                            <input type="checkbox" id="check1">
-                                            <label for="check1">Remember me</label>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>                                
                             </div>
                         </form>
                     </div>
