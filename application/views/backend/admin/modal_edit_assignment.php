@@ -22,8 +22,9 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Assignment Name");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="title" id="title" value="<?php echo $row['assign_title']; ?>" />
+                                    <input type="text" class="form-control" name="title" id="title1" value="<?php echo $row['assign_title']; ?>" />
                                 </div>
+                                 <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                             </div>
                              <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
@@ -135,7 +136,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
+                                    <button type="submit" id="btnupd" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                                 </div>
                             </div>
                             </form>
@@ -149,6 +150,41 @@ endforeach;
 ?>
 <script type="text/javascript">
     
+    $("#btnupd").click(function (event) {
+        if ($("#title1").val() != null & $("#degree2").val() != null & $("#batch2").val() != null & $("#semester1").val() != null & $("#course2").val() != null)
+        {   
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url() . 'index.php?admin/checkassignment/'.$param2; ?>",
+                dataType: 'json',
+                async: false,
+                data:
+                        {
+                            'title': $("#title1").val(),
+                            'semester': $("#semester1").val(),
+                            'degree': $("#degree2").val(),
+                            'batch': $("#batch2").val(),
+                            'course': $("#course2").val()
+                        },
+                success: function (response) {
+
+                   
+                    if (response.length == 0) {
+                        $("#error_lable_exist").html('');
+                        $('#frmassignment').attr('validated', true);
+                        $('#frmassignment').submit();
+                    } else
+                    {                         
+                        $("#error_lable_exist").html('Record is already present in the system');
+                        return false;
+                    }
+                }
+            });
+            return false;
+        }
+        event.preventDefault();
+
+    });
       $("#degree2").change(function(){
                 var degree = $(this).val();
                 var dataString = "degree="+degree;
