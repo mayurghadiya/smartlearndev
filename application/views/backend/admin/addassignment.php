@@ -114,7 +114,7 @@
                         $('#frmassignment').submit();
                     } else
                     {                         
-                        $("#error_lable_exist").html('Record is already present in the system');alert(response.length);
+                        $("#error_lable_exist").html('Record is already present in the system');
                         return false;
                     }
                 }
