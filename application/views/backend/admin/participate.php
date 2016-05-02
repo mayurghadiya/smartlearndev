@@ -30,14 +30,15 @@
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     <?php echo ucwords("Add Participate");?>
                                 </a></li>
-                            <li>
-                                <a href="#addsurvey" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add survey Question");?>
-                                </a></li>
+                           
                             <li>
                                 <a href="#survey" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     <?php echo ucwords("Survey List");?>
                                 </a></li> 
+                                 <li>
+                                <a href="#addsurvey" data-toggle="tab"><i class="entypo-plus-circled"></i>
+                                    <?php echo ucwords("Add survey Question");?>
+                                </a></li>
                             <li>
                                 <a href="#newlist" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     <?php echo ucwords("Question List");?>

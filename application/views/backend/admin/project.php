@@ -293,7 +293,7 @@
         $(document).ready(function () {
             "use strict";
             $('#project-data-tables').dataTable({
-                "order": [[7, "desc"]],
+                "order": [[0, "desc"]],
                 "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
                         "<'row'<'col-sm-12'tr>>" +
                         "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
@@ -320,7 +320,7 @@
         $(document).ready(function () {
             "use strict";
             $('#sub-tables').dataTable({
-                "order": [[7, "desc"]],
+                "order": [[0, "desc"]],
                 "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
                         "<'row'<'col-sm-12'tr>>" +
                         "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
