@@ -1127,7 +1127,6 @@ class Admin extends CI_Controller {
                 $data['profile_photo'] = '';
             }
             $data['email'] = $this->input->post('email_id');
-            $data['name'] = $this->input->post('name');
             $data['password'] = md5($this->input->post('password'));
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
@@ -1217,7 +1216,6 @@ class Admin extends CI_Controller {
             $data['email'] = $this->input->post('email_id');
             $data['password'] = md5($this->input->post('password'));
             $data['real_pass'] = $this->input->post('password');
-            $data['name'] = $this->input->post('name');
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
             $data['std_gender'] = $this->input->post('gen');
