@@ -4,16 +4,21 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
     ?>
 
 
-<div class="content">
-    <div class="container">
         <div class="vd_content-wrapper">
             <div class="">
                 <div class="vd_content clearfix">
                     <div class="vd_title-section clearfix">
+                         <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                         <li><?php echo set_breadcrumb(); ?></li>
+                    </ul>
+                    
+                </div>
                         <div class="vd_panel-header">
                             <h1><?php echo $page_title ?></h1>            
                         </div>
                     </div>
+                      <div class="vd_content-section clearfix">
 <div class="row">
                         <div class="col-sm-12">								
                             <!------CONTROL TABS START------>
@@ -66,12 +71,8 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                                              
                                             </div>
                                             
-                                            <div class="form-group">
-                                                <label class="col-sm-3 control-label">Your interest</label>
-                                                <div class="col-sm-5">
-                                                    <input type="radio" name="p_status" value="1" checked="" >Yes						
-                                                </div>
-                                            </div>
+                                          
+                                                    <input type="hidden" name="p_status" value="1" checked=""  >
                                             
                                             <div class="form-group">
                                                 <label class="col-sm-3 control-label">Comment</label>
@@ -98,7 +99,8 @@ $res = $this->db->query("SELECT * FROM participate_manager WHERE pp_id not in (s
                             </div>
                         </div>
                     </div>
-                </div></div></div></div></div>
+                    </div>
+                </div></div></div>
 
     <?php
 

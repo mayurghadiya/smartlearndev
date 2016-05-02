@@ -10,9 +10,7 @@
                 <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("Home");?></a> </li>
-                        <li><?php echo ucwords("settings");?></li>
-                        <li class="active"><?php echo ucwords("System Settings");?></li>
+                         <li><?php echo set_breadcrumb(); ?></li>
                     </ul>                  
                 </div>
             </div>

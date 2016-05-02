@@ -1129,7 +1129,6 @@ class Admin extends CI_Controller {
                 $data['profile_photo'] = '';
             }
             $data['email'] = $this->input->post('email_id');
-            $data['name'] = $this->input->post('name');
             $data['password'] = md5($this->input->post('password'));
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
@@ -1219,7 +1218,6 @@ class Admin extends CI_Controller {
             $data['email'] = $this->input->post('email_id');
             $data['password'] = md5($this->input->post('password'));
             $data['real_pass'] = $this->input->post('password');
-            $data['name'] = $this->input->post('name');
             $data['std_first_name'] = $this->input->post('f_name');
             $data['std_last_name'] = $this->input->post('l_name');
             $data['std_gender'] = $this->input->post('gen');
@@ -1440,7 +1438,7 @@ class Admin extends CI_Controller {
             $data['lm_url'] = $file_url;
             $data['lm_semester'] = $this->input->post('semester');
             $data['lm_desc'] = $this->input->post('description');
-            $data['lm_dos'] = $this->input->post('dateofsubmission');
+          
             $data['lm_status'] = 1;
             //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
@@ -1564,8 +1562,7 @@ class Admin extends CI_Controller {
             $data['lm_batch'] = $this->input->post('batch');
             $data['lm_url'] = $file_url;
             $data['lm_semester'] = $this->input->post('semester');
-            $data['lm_desc'] = $this->input->post('description');
-            $data['lm_dos'] = $this->input->post('dateofsubmission1');
+            $data['lm_desc'] = $this->input->post('description');           
             $data['lm_status'] = 1;
             //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
@@ -4788,6 +4785,18 @@ class Admin extends CI_Controller {
                     'pm_batch' => $batch, 'pm_semester' => $semester))->result_array();
         echo json_encode($data);
     }
+    function checkprject($id = '') {
+        $degree = $this->input->post('degree');
+        $course = $this->input->post('course');
+        $batch = $this->input->post('batch');
+        $semester = $this->input->post('semester');
+        $title = $this->input->post('title');
+        $data = $this->db->get_where('project_manager', array('pm_degree' => $degree,
+                    'pm_course' => $course,
+                    'pm_title' => $title,
+                    'pm_batch' => $batch, 'pm_semester' => $semester))->result_array();
+        echo json_encode($data);
+    }
 
     function checkassignments() {
         $degree = $this->input->post('degree');
@@ -4798,7 +4807,20 @@ class Admin extends CI_Controller {
         $data = $this->db->get_where('assignment_manager', array('assign_degree' => $degree,
                     'course_id' => $course,
                     'assign_title' => $title,
-                    'assign_batch' => $batch, 'assign_sem' => $semester))->result_array();
+                    'assign_batch' => $batch, 'assign_sem' => $semester,'pm_id!='=>$id))->result_array();
+        echo json_encode($data);
+    }
+    function checkassignment($id = '') {
+        $degree = $this->input->post('degree');
+        $course = $this->input->post('course');
+        $batch = $this->input->post('batch');
+        $semester = $this->input->post('semester');
+        $title = $this->input->post('title');
+        $data = $this->db->get_where('assignment_manager', array('assign_degree' => $degree,
+                    'course_id' => $course,
+                    'assign_title' => $title,
+                    'assign_batch' => $batch, 'assign_sem' => $semester,'assign_id!='=>$id))->result_array();
+        
         echo json_encode($data);
     }
 

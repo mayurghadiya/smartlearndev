@@ -3,8 +3,16 @@
     <div class="vd_head-section clearfix"></div>
     <!--<hr/>-->
     <div class="vd_title-section clearfix">
+        
         <div class="vd_panel-header">
+                   <div class="vd_panel-header " style="float: left;">
+                    <ul class="breadcrumb">
+                          <li><?php echo set_breadcrumb(); ?></li>
+                    </ul>
+
+                </div> 
             <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4" style="float: right;">
+                
             Add Widgets
             <select style="width: 75%;" id="addWidgetFromSelect">
                 <option value="">Select Widget</option>

@@ -5,9 +5,7 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("Home");?></a> </li>
-                        <li><?php echo ucwords("asset management");?></li>
-                        <li class="active"><?php echo ucwords("Participate Management");?></li>
+                         <li><?php echo set_breadcrumb(); ?></li>
                     </ul>                  
                 </div>
             </div>
@@ -32,14 +30,15 @@
                                 <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     <?php echo ucwords("Add Participate");?>
                                 </a></li>
-                            <li>
-                                <a href="#addsurvey" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add survey Question");?>
-                                </a></li>
+                           
                             <li>
                                 <a href="#survey" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     <?php echo ucwords("Survey List");?>
                                 </a></li> 
+                                 <li>
+                                <a href="#addsurvey" data-toggle="tab"><i class="entypo-plus-circled"></i>
+                                    <?php echo ucwords("Add survey Question");?>
+                                </a></li>
                             <li>
                                 <a href="#newlist" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                     <?php echo ucwords("Question List");?>
@@ -1295,4 +1294,4 @@ $("#courses").change(function(){
             margin-top: -50px;
         }
     </style>
-    <?php include('plus_icon.php'); ?>
+    

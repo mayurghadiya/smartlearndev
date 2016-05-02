@@ -20,7 +20,6 @@ $.toaster({
 <thead>
     <tr>
         <th><div>#</div></th>												
-        <th><div>Name</div></th>											
         <th><div>Full Name</div></th>												
         <th><div>Email</div></th>												
         <th><div>Mobile No</div></th>												
@@ -34,7 +33,6 @@ $.toaster({
         ?>
         <tr>
             <td><?php echo $count++; ?></td>											
-            <td><?php echo $row->name; ?></td>											
            <!-- <td>
                 <?php
                 if($row->profile_photo != '') { ?>
