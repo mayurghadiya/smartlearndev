@@ -1211,10 +1211,12 @@ class Crud_model extends CI_Model {
 
         return $insert_id;
     }
-    
-    function get_graduate_student($id)
-    {
-        $this->db->get_where('graduates',array("graduates_id"=>$id))->result();
-    }
 
+    /**
+     * Get graduates students
+     * @param string $id
+     */
+    function get_graduate_student($id) {
+        $this->db->get_where('graduates', array("graduates_id" => $id))->result();
+    }
 }

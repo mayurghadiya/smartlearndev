@@ -31,7 +31,7 @@
                         <div class="widget-section-title"><h6 style="color:#fff !important">Programme & Courses</h6></div>
                         <ul>
                             <?php foreach ($courses as $course) { ?>
-                                <li><a href="<?php echo base_url('index.php?course/' . $course->d_id); ?>"><?php echo $course->d_name; ?></a></li>
+                                <li><a href="<?php echo base_url('course/' . $course->d_id); ?>"><?php echo $course->d_name; ?></a></li>
                             <?php } ?>
                         </ul>	
                     </div>
@@ -41,10 +41,10 @@
                         <div class="widget-section-title"><h6 style="color:#fff !important">Useful links</h6></div>
                         <ul>
                             <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                            <li><a href="<?php echo base_url('index.php?about'); ?>">About</a></li>
-                            <li><a href="<?php echo base_url('index.php?events'); ?>">Events</a></li>
-                            <li><a href="<?php echo base_url('index.php?alumni'); ?>">Alumni</a></li>
-                            <li><a href="<?php echo base_url('index.php?contact'); ?>">Contact</a></li>
+                            <li><a href="<?php echo base_url('about'); ?>">About</a></li>
+                            <li><a href="<?php echo base_url('events'); ?>">Events</a></li>
+                            <li><a href="<?php echo base_url('alumni'); ?>">Alumni</a></li>
+                            <li><a href="<?php echo base_url('contact'); ?>">Contact</a></li>
                         </ul>	
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     email: email_address
                 };
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?site/subscriber',
+                    url: '<?php echo base_url(); ?>site/subscriber',
                     type: 'post',
                     data: form_data,
                     success: function (content) {

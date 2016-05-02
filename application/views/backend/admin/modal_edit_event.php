@@ -3,12 +3,12 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
 ?>
 <div class="panel panel-primary">
     <div class="panel panel-heading">
-        <div class="panel-title"><?php echo ucwords("Update Event");?></div>
+        <div class="panel-title"><?php echo ucwords("Update Event"); ?></div>
     </div>
     <div class="panel-body">
         <div class="tab-pane box" id="edit">
             <div class="box-content">
-                <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                <span style="color:red">* <?php echo ucwords("is mandatory field"); ?></span> 
                 <?php
                 foreach ($edit_data as $row) {
                     
@@ -37,14 +37,20 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Date"); ?><span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Start Date"); ?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
-                        <input type="text" id="datepicker-date123" class="form-control" name="event_date" value="<?php echo date('d F Y', strtotime($row['event_date'])); ?>"/>
+                        <input type="text" id="edit-datepicker-date" class="form-control" name="event_date" value="<?php echo date('d F Y', strtotime($row['event_date'])); ?>"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"><?php echo ucwords("End Date"); ?><span style="color:red">*</span></label>
+                    <div class="col-sm-7">
+                        <input type="text" id="edit-datepicker-end-date" class="form-control" name="event_end_date" value="<?php echo date('d F Y', strtotime($row['event_end_date'])); ?>"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Time");?><span style="color:red">*</span></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Event Time"); ?><span style="color:red">*</span></label>
                     <div class="col-sm-7">
                         <input type="time" id="event_time" class="form-control" name="event_time" 
                                value="<?php echo date('H:i', strtotime($row['event_date'])); ?>"/>
@@ -52,7 +58,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo ucwords("Group");?></label>
+                    <label class="col-sm-3 control-label"><?php echo ucwords("Group"); ?></label>
                     <div class="col-sm-7">
                         <select class="form-control" name="group">
                             <?php
@@ -69,7 +75,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
 
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-7">
-                        <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
+                        <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Update"); ?></button>
                     </div>
                 </div>
                 </form>
@@ -85,13 +91,24 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
     });
 
     $().ready(function () {
-        $("#datepicker-date123").datepicker({
+        $("#edit-datepicker-date").datepicker({
             dateFormat: 'dd M yy',
             changeMonth: true,
             changeYear: true,
-            minDate: new Date()
-
+            minDate: new Date(),
+            onClose: function (selectedDate) {
+                $("#edit-datepicker-end-date").datepicker("option", "minDate", selectedDate);
+            }
         });
+        $("#edit-datepicker-end-date").datepicker({
+            dateFormat: 'dd M yy',
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date(),
+            onClose: function (selectedDate) {
+                //$(".datepicker-normal").datepicker("option", "maxDate", new Date());
+            }
+        })
         $("#editevent").validate({
             rules: {
                 event_name: "required",

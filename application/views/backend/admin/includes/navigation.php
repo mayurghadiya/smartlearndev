@@ -135,7 +135,7 @@
                         <ul class="clearfix">   
                             <li  <?php if ($page_name == "graduate") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/graduate">
-                                    <span class="menu-text">Recent Graduates</span>  
+                                    <span class="menu-text">Toppers Graduate</span>  
                                 </a>
                             </li> 
                             <li  <?php if ($page_name == "charity_fund") { ?> class="selectednavmenu" <?php } ?>>

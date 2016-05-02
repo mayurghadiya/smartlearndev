@@ -70,7 +70,7 @@ $students = $this->db->get_where('student', array(
                         <?php echo form_open(base_url() . 'index.php?admin/graduate/update/' . $edit_data->graduates_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'editgraduatesform', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("course name"); ?><span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("course"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_degree" name="degree">
                                     <option value="">Select</option>
@@ -142,7 +142,7 @@ $students = $this->db->get_where('student', array(
                           </div>   
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("graduate year"); ?><span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("graduation year"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <input type="text" name="year" id="year" class="form-control" value="<?php echo $edit_data->graduate_year; ?>"/>
                             </div>

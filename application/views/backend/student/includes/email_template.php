@@ -12,8 +12,8 @@
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <meta name="keywords" content="HTML5 Template, CSS3, All Purpose Admin Template, <?php echo system_name(); ?>" />
-        <meta name="description" content="Responsive Admin Template for blogging dashboard">
+        <meta name="keywords" content="<?php echo system_name(); ?>" />
+        <meta name="description" content="">
         <meta name="author" content="Searchnative">
 
         <!-- Set the viewport width to device width for mobile -->
@@ -102,7 +102,7 @@
                         <div class="vd_top-nav vd_nav-width  ">
                             <div class="vd_panel-header">
                                 <div class="logo">
-                                    <a href="<?php echo base_url('index.php?student/dashboard'); ?>"><img alt="logo" src="<?php echo base_url(); ?>assets/img/logo.png"></a>
+                                    <a href="<?php echo base_url('student/dashboard'); ?>"><img alt="logo" src="<?php echo base_url(); ?>assets/img/logo.png"></a>
                                 </div>
                                 <!-- logo -->
                                 <div class="vd_panel-menu  hidden-sm hidden-xs" data-intro="<strong>Minimize Left Navigation</strong><br/>Toggle navigation size to medium or small size. You can set both button or one button only. See full option at documentation." data-step=1>
@@ -276,8 +276,8 @@
                                                         <div class="child-menu"> 
                                                             <div class="content-list content-menu">
                                                                 <ul class="list-wrapper pd-lr-10">
-                                                                    <li> <a href="<?php echo base_url('index.php?student/profile'); ?>"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
-                                                                    <li> <a href="<?php echo base_url('index.php?login/logout'); ?>"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
+                                                                    <li> <a href="<?php echo base_url('student/profile'); ?>"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+                                                                    <li> <a href="<?php echo base_url('login/logout'); ?>"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
                                                                 </ul>
                                                             </div> 
                                                         </div> 
@@ -332,7 +332,7 @@
                         </div>
                         <div class="navbar-menu clearfix">
                             <h3 class="menu-title hide-nav-medium hide-nav-small">
-                                <a href="<?php echo base_url(); ?>index.php?student/email_compose" class="btn vd_btn vd_bg-red">
+                                <a href="<?php echo base_url(); ?>student/email_compose" class="btn vd_btn vd_bg-red">
                                     <span class="append-icon"><i class="icon-feather"></i></span>
                                     Compose Email
                                 </a>
@@ -342,19 +342,19 @@
                                     <li class="line vd_bd-grey">
                                     </li>
                                     <li>
-                                        <a href="<?php echo base_url('index.php?student/email_inbox'); ?>">
+                                        <a href="<?php echo base_url('student/email_inbox'); ?>">
                                             <span class="menu-icon entypo-icon"><i class="icon-mail"></i></span> 
                                             <span class="menu-text">Inbox</span>  
                                         </a> 
                                     </li> 
                                     <!--                                    <li>
-                                                                            <a href="<?php echo base_url('index.php?student/email_draft'); ?>">
+                                                                            <a href="<?php echo base_url('student/email_draft'); ?>">
                                                                                 <span class="menu-icon"><i class="fa fa-archive"></i></span> 
                                                                                 <span class="menu-text">Drafts</span>            
                                                                             </a>
                                                                         </li>          -->
                                     <li>
-                                        <a href="<?php echo base_url(); ?>index.php?student/email_sent">
+                                        <a href="<?php echo base_url(); ?>student/email_sent">
                                             <span class="menu-icon entypo-icon"><i class="icon-paperplane"></i></span> 
                                             <span class="menu-text">Sent</span>  
                                         </a>
@@ -362,7 +362,7 @@
                                     <li class="line vd_bd-grey">
                                     </li>
                                     <li>
-                                        <a href="<?php echo base_url(); ?>index.php?student/dashboard">
+                                        <a href="<?php echo base_url(); ?>student/dashboard">
                                             <span class="menu-icon"><i class="fa fa-desktop"></i></span> 
                                             <span class="menu-text">Back to Home</span>  
                                         </a>

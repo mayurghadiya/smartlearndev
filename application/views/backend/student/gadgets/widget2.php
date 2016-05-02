@@ -5,16 +5,16 @@
         <div class="content-list content-menu">
             <ul class="list-wrapper pd-lr-10">
                 <li> 
-                    <a href="<?php echo base_url('index.php?student/profile'); ?>" target="_blank"> 
+                    <a href="<?php echo base_url('student/profile'); ?>" target="_blank"> 
                         <div class="menu-text">Profile</div> 
                     </a> 
                 </li>
                 <li> 
-                    <a href="<?php echo base_url('index.php?student/fee_record'); ?>" target="_blank"> 
+                    <a href="<?php echo base_url('student/fee_record'); ?>" target="_blank"> 
                         <div class="menu-text"> Student Payment Record</div> 
                     </a> 
                 </li>
-                <li> <a href="<?php echo base_url('index.php?student/student_fees'); ?>" target="_blank"> 
+                <li> <a href="<?php echo base_url('student/student_fees'); ?>" target="_blank"> 
                         <div class="menu-icon"><i class=" icon-lock"></i></div> 
                         <div class="menu-text">Pay Online 
                             <?php
@@ -37,7 +37,7 @@
                             foreach ($cms_pages as $page) {
                                 ?>
                     <li>
-                        <a href="<?php echo base_url('index.php?student/cms_page/' . $page->am_id); ?>" target="_blank">
+                        <a href="<?php echo base_url('student/cms_page/' . $page->am_id); ?>" target="_blank">
                             <div><?php echo $page->am_title; ?></div>
                         </a>
                     </li>

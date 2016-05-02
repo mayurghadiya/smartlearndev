@@ -6,7 +6,7 @@
                 <div class="content-list content-menu">
                     <ul class="list-wrapper pd-lr-10">
                         <li> 
-                            <a href="<?php echo base_url('index.php?student/email_inbox'); ?>" target="_blank"> 
+                            <a href="<?php echo base_url('student/email_inbox'); ?>" target="_blank"> 
                                 <div class="menu-text">Email</div> 
                             </a> 
                         </li>

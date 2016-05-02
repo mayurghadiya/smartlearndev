@@ -7,7 +7,7 @@
           <div class="vd_top-nav vd_nav-width  ">
           <div class="vd_panel-header">
 				<div class="logo">
-					<a href="<?php echo base_url();?>index.php?admin/dashboard"><img alt="logo" src="<?=$this->config->item('image_path')?>logo.png"></a>
+					<a href="<?php echo base_url();?>student/dashboard"><img alt="logo" src="<?=$this->config->item('image_path')?>logo.png"></a>
 				</div>
 				<!-- logo -->
 				<div class="vd_panel-menu  hidden-sm hidden-xs" data-intro="<strong>Minimize Left Navigation</strong><br/>Toggle navigation size to medium or small size. You can set both button or one button only. See full option at documentation." data-step=1>
@@ -90,7 +90,7 @@
 								</li>
 														
 								<li id="top-menu-2"  class="one-icon mega-li"> 
-								  <a href="<?php echo base_url();?>index.php?admin/email" class="mega-link" data-action="click-trigger">
+								  <a href="<?php echo base_url();?>admin/email" class="mega-link" data-action="click-trigger">
 									<span class="mega-icon"><i class="fa fa-globe"></i></span> 
 									<span class="badge vd_bg-red">
 									<?php $new_mail	=$this->db->get_where('email' , array('read' => 0) )->result_array();
@@ -122,8 +122,8 @@
 										<div class="child-menu"> 
 											<div class="content-list content-menu">
 												<ul class="list-wrapper pd-lr-10">
-													<li> <a href="<?php echo base_url(); ?>index.php?admin/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
-													<li> <a href="<?php echo base_url();?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
+													<li> <a href="<?php echo base_url(); ?>admin/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+													<li> <a href="<?php echo base_url();?>login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
 												</ul>
 											</div> 
 										</div> 

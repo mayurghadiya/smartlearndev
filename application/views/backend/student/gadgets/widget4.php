@@ -42,8 +42,8 @@
                                                 ?>
                                                  
                                               </li>
-						<!--<li> <a href="<?php echo base_url();?>index.php?student/studyresource" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Resources Online</div> </a> </li>-->
-						<!--<li> <a href="<?php echo base_url();?>index.php?student/studyresource" target="_blank">  <div class="menu-icon"><i class=" icon-trophy"></i></div> <div class="menu-text">Resources Downloadable</div> </a> </li>-->						
+						<!--<li> <a href="<?php echo base_url();?>student/studyresource" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Resources Online</div> </a> </li>-->
+						<!--<li> <a href="<?php echo base_url();?>student/studyresource" target="_blank">  <div class="menu-icon"><i class=" icon-trophy"></i></div> <div class="menu-text">Resources Downloadable</div> </a> </li>-->						
                                                 <?php endforeach;?>	
 					  </ul>
 					</div>

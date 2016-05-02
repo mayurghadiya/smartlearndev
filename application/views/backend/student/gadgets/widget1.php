@@ -1,6 +1,6 @@
 <?php
 if ($this->session->userdata('student_login') != 1)
-            redirect(base_url() . 'index.php?site/user_login', 'refresh');
+            redirect(base_url() . 'site/user_login', 'refresh');
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/demo.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/calendar.css" />

@@ -122,23 +122,23 @@ if ($widget_order) {
     $order = explode(',', $order);
     for ($i = 0; $i < count($order); $i++) {
         ?>
-                var datanew<?php echo $order[$i]; ?> = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/' . $order[$i]); ?>"></iframe>';
+                var datanew<?php echo $order[$i]; ?> = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/' . $order[$i]); ?>"></iframe>';
                 console.log(datanew<?php echo $order[$i]; ?>);
         <?php
     }
 } else {
     ?>
-            var datanew1 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/1'); ?>"></iframe>';
-            var datanew2 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/2'); ?>"></iframe>';
-            var datanew3 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/3'); ?>"></iframe>';
-            var datanew4 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/4'); ?>"></iframe>';
-            var datanew5 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/5'); ?>"></iframe>';
-            var datanew6 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/6'); ?>"></iframe>';
-            var datanew7 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/7'); ?>"></iframe>';
-            var datanew8 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/8'); ?>"></iframe>';
-            var datanew9 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/9'); ?>"></iframe>';
-            var datanew10 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/10'); ?>"></iframe>';
-            var datanew11 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/11'); ?>"></iframe>';
+            var datanew1 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/1'); ?>"></iframe>';
+            var datanew2 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/2'); ?>"></iframe>';
+            var datanew3 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/3'); ?>"></iframe>';
+            var datanew4 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/4'); ?>"></iframe>';
+            var datanew5 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/5'); ?>"></iframe>';
+            var datanew6 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/6'); ?>"></iframe>';
+            var datanew7 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/7'); ?>"></iframe>';
+            var datanew8 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/8'); ?>"></iframe>';
+            var datanew9 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/9'); ?>"></iframe>';
+            var datanew10 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/10'); ?>"></iframe>';
+            var datanew11 = '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/11'); ?>"></iframe>';
 <?php } ?>
 
 
@@ -239,7 +239,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Event Calendar",
                         widgetId: "id1",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/1'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/1'); ?>"></iframe>'
                     });
                     break;
                 case 'wid2':
@@ -247,7 +247,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Admissions",
                         widgetId: "id2",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/2'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/2'); ?>"></iframe>'
                     });
                     break;
                 case 'wid3':
@@ -255,7 +255,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Assignments",
                         widgetId: "id3",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/3'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/3'); ?>"></iframe>'
                     });
                     break;
                 case 'wid4':
@@ -263,7 +263,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Study Resources",
                         widgetId: "id4",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/4'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/4'); ?>"></iframe>'
                     });
                     break;
                 case 'wid5':
@@ -271,7 +271,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Examinations",
                         widgetId: "id5",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/5'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/5'); ?>"></iframe>'
                     });
                     break;
                 case 'wid6':
@@ -279,7 +279,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Results",
                         widgetId: "id6",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/6'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/6'); ?>"></iframe>'
                     });
                     break;
                 case 'wid7':
@@ -287,7 +287,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Project & Synposis",
                         widgetId: "id7",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/7'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/7'); ?>"></iframe>'
                     });
                     break;
                 case 'wid8':
@@ -295,7 +295,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Video Conferencing",
                         widgetId: "id8",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/8'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/8'); ?>"></iframe>'
                     });
                     break;
                 case 'wid9':
@@ -303,7 +303,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Digital Library",
                         widgetId: "id9",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/9'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/9'); ?>"></iframe>'
                     });
                     break;
                 case 'wid10':
@@ -311,7 +311,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Participate",
                         widgetId: "id10",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/10'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/10'); ?>"></iframe>'
                     });
                     break;
                 case 'wid11':
@@ -319,7 +319,7 @@ if ($widget_order) {
                     $('#myDashboard').sDashboard("addWidget", {
                         widgetTitle: "Staff & Email Directory",
                         widgetId: "id11",
-                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('index.php?student/gadgets/11'); ?>"></iframe>'
+                        widgetContent: '<iframe class="widget-iframe" style="overflow:hidden;" src="<?php echo base_url('student/gadgets/11'); ?>"></iframe>'
                     });
                     break;
             }
