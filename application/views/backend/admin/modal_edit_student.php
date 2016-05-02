@@ -19,12 +19,7 @@ foreach ($edit_data as $row):
                                     <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>
                             <form name="frmstudentedit" id="frmstudentedit" method="post" action="<?=base_url()?>index.php?admin/student/do_update/<?php echo $row['std_id']?>" enctype="multipart/form-data" class="form-horizontal form-groups-bordered validate"> 
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label"><?php echo ucwords("Name");?><span style="color:red">*</span></label>
-                                    <div class="col-sm-5">
-                                        <input type="text" class="form-control" name="name" id="name" value="<?php echo $row['name']; ?>"  />
-                                    </div>
-                                </div>
+                                
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label"><?php echo ucwords("First Name");?><span style="color:red">*</span></label>
                                     <div class="col-sm-5">
