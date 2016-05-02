@@ -38,13 +38,9 @@ class Media extends CI_Controller {
     
     public function index()
     {
-         if ($this->session->userdata('admin_login') != 1)
-           redirect(base_url() . 'index.php?login', 'refresh');
          
-        $page_data['title'] = 'Photo Gallery';
-        $page_data['page_name'] = 'photo_gallery';
-        $this->load->view('backend/index', $page_data);
-    }
+           redirect(base_url() . 'media/photogallery', 'refresh');
+     }
     
     public function photogallery($param = '' , $param2 = '')
     {

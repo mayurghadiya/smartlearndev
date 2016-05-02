@@ -81,8 +81,8 @@ foreach ($datadegree as $rowdegree) {
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Student");?><span style="color:red">*</span></label>
                                             <div class="col-sm-8">
                                                  <input type="checkbox" name="checkall" id="select_all"  >Check All<br>
-                                                <div id="student"></div>
-                                                <label class="error" for="student[]"></label>
+                                                 <div id="student"><input type="hidden" name="student[]" value=""  /></div>
+                                                 <label class="error" id="error_std" for="student[]"></label>
                                                 <!--<select name="student[]" id="student" multiple="">
                                                     <option value="">Select student</option>
                                                                                                   </select>-->
@@ -167,7 +167,10 @@ foreach ($datadegree as $rowdegree) {
            type: 'POST',
           data:{'batch':batch,'sem':semester,'course':course,'degree':degree},
            success: function(content){
+               if(content!="")
+               {
                $("#student").html(content);
+                }
            }
         });
     }
@@ -212,7 +215,26 @@ $( "#btnadd" ).click(function( event ) {
                         }, 
                                 success:function(response){
                                     if(response.length == 0){
-                                         $("#error_lable_exist").html('');
+                                    $.ajax({
+                                        type:"POST",
+                                        url:"<?php echo base_url().'index.php?admin/checkprojectstd'; ?>",
+                                        data:{
+                                            'degree':$("#degree").val(),
+                                            'course':$("#course").val(),
+                                            'batch':$("#batch").val(),
+                                            'semester':$("#semester").val(),
+                                        },
+                                        success:function(getstudent)
+                                        {
+                                            if(getstudent=="false")
+                                            {
+                                                $("#error_std").html("Student not found");
+                                                return false;
+                                            }
+                                        }
+                                        
+                                    });    
+                                    $("#error_lable_exist").html('');
                                     $('#frmproject').attr('validated',true);
                                     $('#frmproject').submit();
                                      } else
@@ -296,3 +318,11 @@ $( "#btnadd" ).click(function( event ) {
 });
     
     </script>
+    <script type="text/javascript">function uncheck()
+    {
+         if($('.checkbox1:checked').length == $('.checkbox1').length){
+            $('#select_all').prop('checked',true);
+        }else{
+            $('#select_all').prop('checked',false);
+        }
+    }</script>
