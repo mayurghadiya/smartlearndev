@@ -1,6 +1,12 @@
 <div class="vd_content-wrapper" style="min-height: 8px;">
     <div class="vd_head-section clearfix"></div>
     <div class="vd_title-section clearfix">
+         <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                          <li><?php echo set_breadcrumb(); ?></li>
+                    </ul>
+
+                </div>
         <div class="vd_panel-header">
             <h1>Student Payment Records</h1>
         </div>

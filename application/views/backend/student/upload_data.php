@@ -5,6 +5,12 @@
                 <div class="vd_content clearfix">
                     <div class="vd_title-section clearfix">
                         <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                          <li><?php echo set_breadcrumb(); ?></li>
+                    </ul>
+
+                </div>
+                        <div class="vd_panel-header">
                             <h1><?php echo $page_title ?></h1>            
                         </div>
                     </div>

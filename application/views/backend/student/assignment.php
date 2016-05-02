@@ -6,9 +6,7 @@
 
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="<?php echo base_url(); ?>">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active"><?php echo $page_title ?></li>
+                          <li><?php echo set_breadcrumb(); ?></li>
                     </ul>
 
                 </div>
