@@ -3,7 +3,14 @@
                                     <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>                                      
 <?php echo form_open(base_url() . 'index.php?admin/project/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
-                                    <div class="padded">											
+                                    <div class="padded">
+                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Project Title");?><span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="title" id="title" />
+                                            </div>
+                                            <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
+                                        </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
@@ -69,13 +76,7 @@ foreach ($datadegree as $rowdegree) {
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Project Title");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="title" id="title" />
-                                            </div>
-                                            <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
-                                        </div>
+                                       
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Student");?><span style="color:red">*</span></label>
                                             <div class="col-sm-8">
