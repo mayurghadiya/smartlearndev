@@ -84,3 +84,11 @@ ERROR - 2016-05-02 17:57:02 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-02 17:57:05 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-02 17:57:08 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-02 17:57:10 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 17:57:22 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 17:58:46 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-02 17:58:47 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-02 17:58:47 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-02 17:59:47 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-02 17:59:47 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-02 17:59:47 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-02 17:59:51 --> 404 Page Not Found: Admin/mainfest.appcache
