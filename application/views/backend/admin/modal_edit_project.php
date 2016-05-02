@@ -20,6 +20,13 @@ foreach ($edit_data as $row):
                                     <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
                                 </div>  
                             <?php echo form_open(base_url() . 'index.php?admin/project/do_update/' . $row['pm_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+                           <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Project Title");?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['pm_title']; ?>"/>
+                                </div>
+                                   <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
+                            </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
@@ -152,12 +159,7 @@ foreach ($edit_data as $row):
                                     <input type="text" readonly="" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['pm_dos']; ?>"/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("Project Title");?><span style="color:red">*</span></label>
-                                <div class="col-sm-5">
-                                    <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['pm_title']; ?>"/>
-                                </div>
-                            </div>
+                            
                             <!--<div class="form-group">
                                 <label class="col-sm-3 control-label">Page URL</label>
                                 <div class="col-sm-5">
@@ -180,7 +182,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
+                                    <button type="submit" id="btnupd" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>
                                 </div>
                             </div>
                             </form>
@@ -193,6 +195,37 @@ foreach ($edit_data as $row):
 endforeach;
 ?>
 <script type="text/javascript">
+    $( "#btnupd" ).click(function( event ) {
+          if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
+          { 
+         $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/checkprjects/'.$param2; ?>",
+                    dataType:'json',
+                   data:
+                        {
+                            'degree':$("#degree").val(),
+                            'course':$("#course").val(),
+                            'batch':$("#batch").val(),
+                            'semester':$("#semester").val(),
+                            'title':$("#title").val(),
+                        }, 
+                                success:function(response){
+                                    if(response.length == 0){
+                                         $("#error_lable_exist").html('');
+                                    $('#frmproject').attr('validated',true);
+                                    $('#frmproject').submit();
+                                     } else
+                                         {
+                                             $("#error_lable_exist").html('Project is already present in the system');
+                                         return false;
+                                     }
+                    }
+                });
+                    return false; 
+                    }
+        event.preventDefault();
+      });
       $("#checkAll2").change(function () {
     $("input:checkbox").prop('checked', $(this).prop("checked"));
 });

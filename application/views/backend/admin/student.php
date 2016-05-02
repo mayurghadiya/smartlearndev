@@ -98,12 +98,7 @@
                                     </div >                                    
                                     <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
                                     <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Name");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="name" id="name" />
-                                            </div>
-                                        </div>												
+                                        											
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("First Name");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
