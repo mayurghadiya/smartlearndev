@@ -97,3 +97,58 @@ ERROR - 2016-05-02 18:01:01 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-02 18:01:27 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-02 18:01:30 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-02 18:01:48 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:03:32 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:05:44 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 256
+ERROR - 2016-05-02 18:05:45 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-02 18:05:45 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-02 18:05:45 --> Severity: Notice --> Undefined variable: gochat /opt/lampp/htdocs/smartlearndev/application/views/backend/student/includes/header.php 256
+ERROR - 2016-05-02 18:05:49 --> 404 Page Not Found: Img/logo.png
+ERROR - 2016-05-02 18:15:21 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-02 18:15:21 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-02 18:15:21 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-02 18:15:21 --> 404 Page Not Found: No-internethtml/index
+ERROR - 2016-05-02 18:15:24 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:15:25 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:18:53 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:19:03 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:19:05 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:19:48 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:19:48 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:21:15 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:21:17 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:22:17 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:22:17 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:25:53 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:25:53 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:26:03 --> Severity: Notice --> Undefined variable: rowstu /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 4328
+ERROR - 2016-05-02 18:26:28 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:26:29 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:27:47 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:28:08 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:28:43 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:31:33 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:31:35 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:33:42 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:33:45 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:34:06 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:34:08 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:34:54 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:34:56 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:35:20 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:35:22 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:36:46 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:37:08 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:38:10 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:38:11 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:38:40 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:44:59 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:44:59 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:45:28 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:45:30 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:45:50 --> Severity: Warning --> implode(): Invalid arguments passed /opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php 1295
+ERROR - 2016-05-02 18:45:50 --> Query error: Column 'pm_student_id' cannot be null - Invalid query: INSERT INTO `project_manager` (`pm_filename`, `pm_degree`, `pm_title`, `pm_batch`, `pm_url`, `pm_semester`, `pm_desc`, `pm_dos`, `pm_status`, `pm_student_id`, `pm_course`, `created_date`) VALUES ('profile-pic-133.jpg', '1', 'Design 2vbdc', '38', 'http://localhost/smartlearndev/uploads/project_file/profile-pic-133.jpg', '2', 'asd', ' May 11, 2016', 1, NULL, '1', '2016-05-02')
+ERROR - 2016-05-02 18:48:14 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:48:16 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:54:55 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-02 18:55:01 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-02 18:55:34 --> 404 Page Not Found: Admin/assets

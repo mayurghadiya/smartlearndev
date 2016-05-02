@@ -150,6 +150,7 @@ foreach ($edit_data as $row):
                                        <div class="checkedstudent"><input type="checkbox" name="student[]" value="<?php echo $rowstu->std_id; ?>" ><?php echo $rowstu->std_first_name.'&nbsp'.$rowstu->std_last_name; ?></div>
                                     <?php        }    }    ?>
                                    </div>
+                                    <label class="error" id="error_std" for="student[]"></label>
 
                                 </div>
                             </div>
@@ -195,6 +196,7 @@ foreach ($edit_data as $row):
 endforeach;
 ?>
 <script type="text/javascript">
+     
     $( "#btnupd" ).click(function( event ) {
           if($("#degree").val()!=null & $("#course").val()!=null & $("#batch").val()!=null & $("#semester").val()!=null & $("#title").val()!=null)
           { 
@@ -370,3 +372,11 @@ endforeach;
         });
     });
 </script>
+<script type="text/javascript">function uncheck()
+    {
+         if($('.checkbox1:checked').length == $('.checkbox1').length){
+            $('#select_all').prop('checked',true);
+        }else{
+            $('#select_all').prop('checked',false);
+        }
+    }</script>
