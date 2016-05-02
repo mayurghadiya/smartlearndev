@@ -1438,7 +1438,7 @@ class Admin extends CI_Controller {
             $data['lm_url'] = $file_url;
             $data['lm_semester'] = $this->input->post('semester');
             $data['lm_desc'] = $this->input->post('description');
-            $data['lm_dos'] = $this->input->post('dateofsubmission');
+          
             $data['lm_status'] = 1;
             //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
@@ -1562,8 +1562,7 @@ class Admin extends CI_Controller {
             $data['lm_batch'] = $this->input->post('batch');
             $data['lm_url'] = $file_url;
             $data['lm_semester'] = $this->input->post('semester');
-            $data['lm_desc'] = $this->input->post('description');
-            $data['lm_dos'] = $this->input->post('dateofsubmission1');
+            $data['lm_desc'] = $this->input->post('description');           
             $data['lm_status'] = 1;
             //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');

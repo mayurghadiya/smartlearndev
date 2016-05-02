@@ -80,13 +80,7 @@
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Date  ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" readonly="" class="form-control" name="dateofsubmission" id="dateofsubmission" />
-                                            </div>
-                                        </div>
+                                        </div>                                        
 
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>

@@ -76,7 +76,7 @@
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											
                                                 <th><div><?php echo ucwords("File");?></div></th>											
-                                                <th><div><?php echo ucwords("Date of submission");?></div></th>									
+                                             <!--   <th><div><?php echo ucwords("Date of submission");?></div></th>-->
                                                 <th><div><?php echo ucwords("Action");?></div></th>											
                                             </tr>
                                         </thead>
@@ -143,7 +143,7 @@
 
                                                     </td>	
                                                     <td id="downloadedfile"><a href="<?php echo $row->lm_url; ?>" download="" target="_blank" title="<?php echo $row->lm_filename; ?>"><i class="fa fa-download"></i></a></td>	
-                                                    <td><?php echo date_formats($row->lm_dos); ?></td>	
+                                                    <!--<td><?php echo date_formats($row->lm_dos); ?></td>	-->
 
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_library/<?php echo $row->lm_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>

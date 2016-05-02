@@ -116,12 +116,7 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
 
-                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("Date ");?><span style="color:red">*</span></label>
-                                <div class="col-sm-5">
-                                    <input type="text" readonly="" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['lm_dos']; ?>"/>
-                                </div>
-                            </div>
+                         
                             
                              <input type="hidden" class="form-control" name="pageurl" id="pageurl" value="<?php echo $row['lm_url']; ?>" />
                             <div class="form-group">
@@ -275,7 +270,7 @@ endforeach;
                 batch: "required",
                 semester: "required",
                 student: "required",
-                dateofsubmission1: "required",               
+               
                 title:
                         {
                             required: true,
@@ -293,7 +288,7 @@ endforeach;
                 batch: "Please select batch",
                 semester: "Please select semester",
                 student: "Please select student",
-                dateofsubmission1: "Please select date of submission",              
+               
                 title:
                         {
                             required: "Please enter title",
