@@ -26,10 +26,7 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Library List");?>
                                 </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add Library");?>
-                                </a></li>
+                            
                         </ul>
                         <!------CONTROL TABS END------>
 
@@ -163,119 +160,7 @@
 
 
                             <!----CREATION FORM STARTS---->
-                            <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">  
-<div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
-                                </div>                                      
-<?php echo form_open(base_url() . 'index.php?admin/library/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmlibrary', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
-                                    <div class="padded">											
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?> <span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select name="degree" id="degree">
-                                                    <option value="">Select Course</option>
-                                                    <option value="All">All</option>
-                                                    <?php
-                                                    $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
-                                                    foreach ($datadegree as $rowdegree) {
-                                                        ?>
-                                                        <option value="<?= $rowdegree->d_id ?>"><?= $rowdegree->d_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>	
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select name="course" id="course">
-                                                    <option value="">Select Branch</option>
-                                                    <option value="All">All</option>
-                                                    <?php
-                                                    /*
-                                                     * $course = $this->db->get_where('course', array('course_status' => 1))->result();
-                                                      foreach ($course as $crs) {
-                                                      ?>
-                                                      <!--  <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>-->
-                                                      <?php
-                                                      } */
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select name="batch" id="batch" onchange="get_student2(this.value);" >
-                                                    <option value="">Select batch</option>
-                                                    <option value="All">All</option>
-                                                    <?php
-                                                    /* $databatch = $this->db->get_where('batch', array('b_status' => 1))->result();
-                                                      foreach ($databatch as $row) {
-                                                      ?>
-                                                      <option value="<?= $row->b_id ?>"><?= $row->b_name ?></option>
-                                                      <?php
-                                                      } */
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>	
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select name="semester" id="semester" onchange="get_students2(this.value);">
-                                                    <option value="">Select Semester</option>
-                                                    <option value="All">All</option>
-                                                    <?php
-                                                    $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-                                                    foreach ($datasem as $rowsem) {
-                                                        ?>
-                                                        <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Library Name ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="title" id="title" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Date  ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" readonly="" class="form-control" name="dateofsubmission" id="dateofsubmission" />
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
-                                            <div class="col-sm-5">
-                                                <textarea class="form-control" name="description" id="description"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("File Upload ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="file" class="form-control" name="libraryfile" id="libraryfile" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
-                                            </div>
-                                        </div>
-                                        </form>               
-                                    </div>                
-                                </div>
-                                <!----CREATION FORM ENDS-->
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -285,261 +170,7 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
-        $("#searchform").validate({
-            rules: {
-                degree:"required",
-                course:"required",
-                batch:"required",
-                semester:"required",
-
-            },
-            messages:{
-                degree:"select course",
-                course:"select branch",
-                batch:"select batch",
-                semester:"select semester",
-            }
-        });
-
-    $("#degree").change(function () {
-        var degree = $(this).val();
-
-        var dataString = "degree=" + degree;
-        $.ajax({
-            type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_cource/'; ?>",
-            data: dataString,
-            success: function (response) {
-                if (degree == "All")
-                {
-                    $("#batch").val($("#batch option:eq(1)").val());
-                    $("#course").val($("#course option:eq(1)").val());
-                    $("#semester").val($("#semester option:eq(1)").val());
-                } else {
-                    $("#course").html(response);
-                }
-            }
-        });
-    });
-
-   $("#searchform").submit(function(){
-           var degree =  $("#courses").val();
-           var course =  $("#branches").val();
-           var batch =  $("#batches").val();
-            var semester = $("#semesters").val();
-            if($("#courses").val()!="" & $("#branches").val()!="" & $("#batches").val()!="" & $("#semesters").val()!="")
-            {
-            $.ajax({
-                type:"POST",
-                url:"<?php echo base_url(); ?>index.php?admin/getlibrary/",
-                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
-                success:function(response)
-                {
-                    $("#getresponse").html(response);
-                }
-                
-                
-            });
-            }else{
-                $("#searchform").validate({
-                      rules: {
-                          degree:"required",
-                          course:"required",
-                          batch:"required",
-                          semester:"required",
-
-                      },
-                      messages:{
-                          degree:"select course",
-                          course:"select branch",
-                          batch:"select batch",
-                          semester:"select semester",
-                      }
-                  });
-            }
-             return false;
-         });
-         $("#courses").change(function(){
-                var degree = $(this).val();
-                
-                var dataString = "degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/course_filter/'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                        if(degree=='All')
-                        {
-                             $("#branches").html(response);
-                             $("#batches").val($("#batches option:eq(1)").val());
-                             $("#branches").val($("#branches option:eq(1)").val());
-                             $("#semesters").val($("#semesters option:eq(1)").val());
-                           // $("#branches").append(response);
-                        }
-                        else{
-                            $("#branches").append(response);
-                            
-                        }
-                    }
-                });
-        });
-        $("#batches").change(function(){
-            var batches = $("#batches").val();
-            if(batches=='All')
-            {
-                $("#semesters").val($("#semesters option:eq(1)").val());
-            }
-        });
-         $("#branches").change(function(){
-                //var course = $(this).val();
-                // var degree = $("#degree").val();
-                var degree = $("#courses").val();
-                var course = $("#branches").val();
-                var dataString = "course="+course+"&degree="+degree;
-                $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/batch_filter/'; ?>",
-                    data:dataString,                   
-                    success:function(response){
-                         $.ajax({
-                        type:"POST",
-                        url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
-                        data:{'course':course},                   
-                        success:function(response1){
-                            $("#semesters").html(response1);
-                             $("#semesters").val($("#semesters option:eq(1)").val());
-                        }
-                        });
-                         if(course=='All')
-                        {
-                              $("#batches").html(response);
-                             $("#batches").val($("#batches option:eq(1)").val());                            
-                             $("#semesters").val($("#semesters option:eq(1)").val());
-                          
-                        }
-                        else{
-                           $("#batches").append(response);
-                            
-                        }
-                        
-                    }
-                });
-        });
-
-    $("#course").change(function () {
-        var course = $(this).val();
-        var degree = $("#degree").val();
-        var dataString = "course=" + course + "&degree=" + degree;
-        $.ajax({
-            type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_batchs/'; ?>",
-            data: dataString,
-            success: function (response) {
-                 $.ajax({
-                        type:"POST",
-                        url:"<?php echo base_url().'index.php?admin/get_semesterall/'; ?>",
-                        data:{'course':course},                   
-                        success:function(response1){
-                            $("#semester").html(response1);
-                             $("#semester").val($("#semester option:eq(1)").val());
-                        }
-                        });
-                //$("#semester").val($("#semester option:eq(1)").val());
-                $("#batch").html(response);
-            }
-        });
-    });
-
-
-    function get_student2(batch, semester = '') {
-        $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/batchwisestudent/',
-            type: 'POST',
-            data: {'batch': batch},
-            success: function (content) {
-                $("#student").html(content);
-            }
-        });
-    }
-
-    function get_students2(sem)
-    {
-        var batch = $("#batch").val();
-        var course = $("#course").val();
-        var degree = $("#degree").val();
-        $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/semwisestudent/',
-            type: 'POST',
-            data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
-            success: function (content) {
-                //alert(content);
-                $("#student").html(content);
-            }
-        });
-
-
-    }
-
-
-
-    $.validator.setDefaults({
-        submitHandler: function (form) {
-            form.submit();
-        }
-    });
-
-    $().ready(function () {
-        $("#dateofsubmission").datepicker({
-            dateFormat: ' MM dd, yy',
-            maxDate: 0
-        });
-        jQuery.validator.addMethod("character", function (value, element) {
-            return this.optional(element) || /^[A-z]+$/.test(value);
-        }, 'Please enter a valid character.');
-
-        jQuery.validator.addMethod("url", function (value, element) {
-            return this.optional(element) || /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/.test(value);
-        }, 'Please enter a valid URL.');
-
-        $("#frmlibrary").validate({
-            rules: {
-                degree: "required",
-                course: "required",
-                batch: "required",
-                semester: "required",
-                student: "required",
-                dateofsubmission: "required",                
-                title:
-                        {
-                            required: true,
-                        },
-                libraryfile: {
-                    required: true,
-                    extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt|jpeg|mkv|webm|flv|mp4|avi',
-                }
-            },
-            messages: {
-                degree: "Please select Course",
-                course: "Please select Branch",
-                batch: "Please select Batch",
-                semester: "Please select Semester",
-                student: "Please select Student",
-                dateofsubmission: "Please select date",
-                libraryfile: {
-                    required: "Please upload file",
-                  extension: 'Please upload valid file',
-                },
-                title:
-                        {
-                            required: "Please enter title",
-                        },
-            }
-        });
-    });
-
-    </script>
-
+    
 
 <script type="text/javascript">
         $(document).ready(function () {
@@ -568,4 +199,26 @@
             margin-top: -50px;
         }
     </style>
-<?php include('plus_icon.php'); ?>
+ 
+   <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+  
+     <ul class="nav nav-tabs bordered nav-fixedtabs" >
+                          
+                                <li class="nav-fixed-tabs" >
+                                    <a href="#"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addlibrary/');"  id="navfixed" class="nav-fixed-a-tabs vd_bg-red" data-toggle="tab"><i class="entypo-plus-circled"></i>
+                                <i class="fa fa-plus-circle"> </i>
+</a>
+                                </a></li>
+                                
+                        </ul>
