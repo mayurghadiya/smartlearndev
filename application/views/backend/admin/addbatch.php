@@ -70,34 +70,36 @@
         </div>
 </div>
 <script type="text/javascript">
-      $( "#batchadd" ).click(function( event ) {
-          if($("#degree").val()!=null & $("#course").val()!=null & $("#b_name").val()!="" )
-          { 
-         $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/check_batch'; ?>",
-                    dataType:'json',
-                   data:
-                        {
-                            'degree':$("#degree").val(),
-                            'course':$("#course").val(),
-                            'batch':$("#b_name").val(),
-                        }, 
-                                success:function(response){
-                                    if(response.length == 0){
-                                    $('#batchform').attr('validated',true);
-                                    $('#batchform').submit();
-                                     } else
-                                         {
-                                             $("#error_lable_exist").html('Record is already present in the system');
-                                         return false;
-                                     }
-                    }
-                });
-                    return false; 
-                    }
-        event.preventDefault();
-      });
+//      $( "#batchadd" ).click(function( event ) {
+//          
+//          if($("#degree").val()!=null & $("#course").val()!=null & $("#b_name").val()!="" )
+//          { 
+//              alert('hiiiii');
+//         $.ajax({
+//                    type:"POST",
+//                    url:"<?php echo base_url().'index.php?admin/check_batch'; ?>",
+//                    dataType:'json',
+//                   data:
+//                        {
+//                            'degree':$("#degree").val(),
+//                            'course':$("#course").val(),
+//                            'batch':$("#b_name").val(),
+//                        }, 
+//                                success:function(response){
+//                                    if(response.length == 0){
+//                                    $('#batchform').attr('validated',true);
+//                                    $('#batchform').submit();
+//                                     } else
+//                                         {
+//                                             $("#error_lable_exist").html('Record is already present in the system');
+//                                         return false;
+//                                     }
+//                    }
+//                });
+//                    return false; 
+//                    }
+//        event.preventDefault();
+//      });
   
         
         $().ready(function () {
