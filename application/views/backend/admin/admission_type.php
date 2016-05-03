@@ -5,9 +5,9 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="#">Home</a> </li>
-                        <li><a href="#">Pages</a> </li>
-                        <li class="active">Admission Type Management</li>
+                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><?php echo ucwords("basic management");?></li>
+                         <li><?php echo ucwords("admission type");?></li>
                     </ul>					
                 </div>
             </div>
