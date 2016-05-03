@@ -6,17 +6,17 @@
 
   
  
-  <script type="text/javascript" src="assets/gal2/third.party/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url(); ?>assets/gal2/third.party/jquery-1.7.1.min.js"></script>
  
-	<link href="assets/gal2/css/nanogallery.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url(); ?>assets/gal2/css/nanogallery.css" rel="stylesheet" type="text/css">
 
-	<link href="assets/gal2/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url(); ?>assets/gal2/css/themes/clean/nanogallery_clean.css" rel="stylesheet" type="text/css">
 
-	<link href="assets/gal2/css/themes/light/nanogallery_light.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url(); ?>assets/gal2/css/themes/light/nanogallery_light.css" rel="stylesheet" type="text/css">
 
-	<script type="text/javascript" src="assets/gal2/jquery.nanogallery.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/gal2/jquery.nanogallery.js"></script>
 
-	<script type="text/javascript" src="assets/gal2/jquery.nanogallerydemo.js"></script> 
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/gal2/jquery.nanogallerydemo.js"></script> 
 	<script>
 		$(document).ready(function () {
 			var myColorScheme = {
