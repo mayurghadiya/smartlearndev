@@ -59,7 +59,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("add");?></button>
+                                                <button type="submit" id="batchadd" class="btn btn-info vd_bg-green"><?php echo ucwords("add");?></button>
                                             </div>
                                         </div>
                                         </form>               
@@ -70,7 +70,7 @@
         </div>
 </div>
 <script type="text/javascript">
-      $( "#batchform" ).submit(function( event ) {
+      $( "#batchadd" ).click(function( event ) {
           if($("#degree").val()!=null & $("#course").val()!=null & $("#b_name").val()!="" )
           { 
          $.ajax({

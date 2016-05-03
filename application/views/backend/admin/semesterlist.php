@@ -25,10 +25,7 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Semester List");?>
                                 </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add Semester");?>
-                                </a></li>
+                          
                         </ul>
                         <!------CONTROL TABS END------>
 
@@ -71,42 +68,6 @@
                                 </div>
                             </div>
                             <!----TABLE LISTING ENDS--->
-
-
-                            <!----CREATION FORM STARTS---->
-                            <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">
- <div class="">
-                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
-                                </div>                                    
-<?php echo form_open(base_url() . 'index.php?admin/semester/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsemester', 'target' => '_top')); ?>
-                                    <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester Name");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="s_name" id="s_name" />
-                                            </div>
-                                        </div>												
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
-                                            <div class="col-sm-5">
-                                                <select name="semester_status">
-                                                    <option value="1" >Active</option>
-                                                    <option value="0" >Inactive</option>		
-                                                </select>
-
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
-                                            </div>
-                                        </div>
-                                        </form>               
-                                    </div>                
-                                </div>
-                                <!----CREATION FORM ENDS-->
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,40 +77,24 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
-        $.validator.setDefaults({
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
+   
+      <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+  
+    <div class="md-fab-wrapper">
 
-        $().ready(function () {
-            $("#frmsemester").validate({
-                rules: {
-                     s_name: 
-                        {
-                            required:true,
-                            remote: {
-                              url: "<?php echo base_url().'index.php?admin/check_semester'; ?>",
-                              type: "post",
-                              data: {
-                                semester: function() {
-                                  return $( "#s_name" ).val();
-                                },
-                              }
-                            }
-                        },
-                    semester_status: "required",
-                },
-                messages: {
-                     s_name:
-                    {
-                         required:"Enter semester name",
-                        remote:"Record is already present in the system",
-                    },
-                    semester_status: "Slect semester status",
-                }
-            });
-        });
-    </script>
-    <?php include('plus_icon.php'); ?>
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addsem/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>
+

@@ -59,3 +59,14 @@ ERROR - 2016-05-03 16:23:44 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-03 16:24:00 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
 ERROR - 2016-05-03 16:24:05 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
 ERROR - 2016-05-03 16:42:35 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1)' at line 1 - Invalid query: select * from course where degree_id in(,1)
+ERROR - 2016-05-03 16:47:02 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 16:47:30 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 16:47:33 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 16:47:35 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-03 16:48:03 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 16:50:26 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 16:50:27 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-03 16:51:09 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-03 16:51:14 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-03 16:51:39 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
+ERROR - 2016-05-03 16:51:47 --> 404 Page Not Found: Admin/mainfest.appcache
