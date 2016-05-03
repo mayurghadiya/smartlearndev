@@ -225,9 +225,6 @@ if ($widget_order) {
             dashboardData: dashboardJSON
         });
         
-        $('#addWidgetFromSelect').on('change',function(){
-            alert($('li').size());
-        });
     });
 
 </script>
