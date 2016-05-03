@@ -4,7 +4,11 @@
         <div class="vd_content clearfix">
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
-                    <?php echo set_breadcrumb(); ?>                 
+                   <ul class="breadcrumb">
+                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><?php echo ucwords("asset management");?></li>
+                         <li><?php echo ucwords("assignment Management");?></li>
+                    </ul>
                 </div>
             </div>
             <div class="vd_title-section clearfix">
