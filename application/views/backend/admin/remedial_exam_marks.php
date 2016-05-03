@@ -24,7 +24,7 @@
                                 <div class="col-sm-12">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4 class="panel-title" style="color:#000;">Enter Marks </h4>
+                                            <h4 class="panel-title" style="color:#000;">Remedial Exam </h4>
                                         </div>
                                         <div class="panel-body">
                                             <div class="form-group col-sm-4 validating">
@@ -202,7 +202,7 @@
                                                                     //check for current subject and decide fail or pass
                                                                     if (isset($failed_subject_info->mm_subject_id) && $failed_subject_info->mm_subject_id == $subject->sm_id) {
                                                                         ?>
-                                                                        <td><input type="number" class="form-control" placeholder="Obtained Mark: Max <?php echo $exam_detail[0]->total_marks; ?>"
+                                                                        <td><input type="number" class="form-control" placeholder="Obtained Marks / <?php echo $exam_detail[0]->total_marks; ?>"
                                                                                    min="0" max="<?php echo $exam_detail[0]->total_marks; ?>"
                                                                                    name="mark_<?php echo $counter; ?>_<?php echo $student->std_id; ?>_<?php echo $exam_detail[0]->em_id; ?>_<?php echo $subject->sm_id; ?>"
                                                                                    value="<?php if (count($marks)) echo $marks->mark_obtained; ?>"/></td>

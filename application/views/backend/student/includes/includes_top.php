@@ -224,6 +224,10 @@ if ($widget_order) {
         $("#myDashboard").sDashboard({
             dashboardData: dashboardJSON
         });
+        
+        $('#addWidgetFromSelect').on('change',function(){
+            alert($('li').size());
+        });
     });
 
 </script>
