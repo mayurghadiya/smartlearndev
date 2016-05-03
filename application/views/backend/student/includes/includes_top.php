@@ -224,6 +224,7 @@ if ($widget_order) {
         $("#myDashboard").sDashboard({
             dashboardData: dashboardJSON
         });
+        
     });
 
 </script>

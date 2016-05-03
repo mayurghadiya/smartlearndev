@@ -239,10 +239,10 @@
                                                             $news_conent = $this->db->get_where('cms_manager', array('c_status' => 1))->result_array();
                                                             foreach ($news_conent as $row):
                                                                 ?>	
-                                                                <li><a target="_blank" href="<?php echo base_url(); ?>/pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
+                                                                <li><a target="_blank" href="<?php echo base_url(); ?>pages/<?php echo @$row['c_slug']; ?>"><?php echo @$row['c_title']; ?></a></li>
                                                             <?php endforeach; ?>
-                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>/student/gallery">Gallery</a></li>
-                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>/student/holiday">Holiday</a></li>
+                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>student/gallery">Gallery</a></li>
+                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>student/holiday">Holiday</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>

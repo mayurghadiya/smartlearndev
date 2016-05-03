@@ -59,7 +59,7 @@ if ($message != '') {
 
             function add_remove_widget(student_id, widget_order) {
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?student/is_present_widget_order/' + student_id,
+                    url: '<?php echo base_url(); ?>student/is_present_widget_order/' + student_id,
                     type: 'get',
                     async: false,
                     success: function (content) {
@@ -69,7 +69,7 @@ if ($message != '') {
                                 widget_data: widget_order
                             };
                             $.ajax({
-                                url: '<?php echo base_url(); ?>index.php?student/save_widget_order',
+                                url: '<?php echo base_url(); ?>student/save_widget_order',
                                 type: 'post',
                                 data: form_data,
                                 success: function () {
@@ -83,7 +83,7 @@ if ($message != '') {
                                 widget_data: widget_order
                             };
                             $.ajax({
-                                url: '<?php echo base_url(); ?>index.php?student/save_widget_order/' + student_id,
+                                url: '<?php echo base_url(); ?>student/save_widget_order/' + student_id,
                                 type: 'post',
                                 data: form_data,
                                 success: function () {
