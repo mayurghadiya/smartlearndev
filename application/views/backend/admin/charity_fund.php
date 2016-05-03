@@ -25,11 +25,7 @@
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords(" charity fund list"); ?>
-                                </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("add charity fund"); ?> 
-                                </a></li>
+                                </a></li>                            
                         </ul>
                         <!------CONTROL TABS END------>
 

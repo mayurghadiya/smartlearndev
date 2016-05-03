@@ -7,3 +7,5 @@ ERROR - 2016-05-03 18:14:19 --> Query error: Table 'smart_learn.charity_fund' do
 ERROR - 2016-05-03 18:16:51 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-03 18:17:04 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-03 18:19:33 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 18:20:55 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-03 18:21:16 --> 404 Page Not Found: Admin/mainfest.appcache
