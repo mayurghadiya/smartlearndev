@@ -15,6 +15,9 @@ $edit_data = $this->db->get_where('survey_question', array('sq_id' => $param2))-
                 <div class="panel-body">
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
+                              <div class="">
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
+                                </div>  
                             <?php echo form_open(base_url() . 'index.php?admin/survey/do_update/' . $edit_data[0]['sq_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditquestion', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Question");?> <span style="color:red">*</span></label>

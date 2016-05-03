@@ -23,7 +23,7 @@
            });
          });
     </script>
-     <ul class="nav nav-tabs bordered nav-fixedtabs" >
+<!--     <ul class="nav nav-tabs bordered nav-fixedtabs" >
                           
                                 <li class="nav-fixed-tabs" >
                                     <a href="#add" id="navfixed" class="nav-fixed-a-tabs vd_bg-red" data-toggle="tab"><i class="entypo-plus-circled"></i>
@@ -31,4 +31,15 @@
 </a>
                                 </a></li>
                                 
-                        </ul>
+                        </ul>-->
+    
+    <div class="md-fab-wrapper">
+<!--        <a class="md-fab md-fab-accent" href="#mailbox_new_message">
+            <i class="material-icons">&#xE150;</i>
+        </a>
+        <br>-->
+
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red" href="#add" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>

@@ -71,10 +71,9 @@
                                                 <th><div><?php echo ucwords("Course");?></div></th>
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
-                                                <th><div><?php echo ucwords("Semester");?></div></th>											                                                
-                                                <th><div><?php echo ucwords("Date");?></div></th>									
+                                                <th><div><?php echo ucwords("Semester");?></div></th>											                                                                                               
                                                 <th><div><?php echo ucwords("File");?></div></th>											
-                                                <th><div><?php echo ucwords("Operation");?></div></th>											
+                                                <th><div><?php echo ucwords("Action");?></div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -144,9 +143,7 @@
                                                         ?>
 
                                                     </td>	
-                                                  
-                                                    <td><?php echo date_formats($row->study_dos); ?></td>	
-                                                    <td id="downloadedfile"><a href="<?php echo $row->study_url; ?>" download=""  title="<?php echo $row->study_filename; ?>"><i class="fa fa-download"></i></a></td>	
+                                                   <td id="downloadedfile"><a href="<?php echo $row->study_url; ?>" download=""  title="<?php echo $row->study_filename; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_studyresource/<?php echo $row->study_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
@@ -216,13 +213,10 @@
     
     </style>
     
-  
-     <ul class="nav nav-tabs bordered nav-fixedtabs" >
-                          
-                                <li class="nav-fixed-tabs" >
-                                    <a href="#add"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addstudyresource/');"  id="navfixed" class="nav-fixed-a-tabs vd_bg-red" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                <i class="fa fa-plus-circle"> </i>
-</a>
-                                </a></li>
-                                
-                        </ul>
+    
+    <div class="md-fab-wrapper">
+
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addstudyresource/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>

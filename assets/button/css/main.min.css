@@ -1,0 +1,109 @@
+[class^=uk-animation-] {
+    -webkit-animation-timing-function: cubic-bezier(.4, 0, .2, 1);
+    animation-timing-function: cubic-bezier(.4, 0, .2, 1);
+    -webkit-animation-duration: 280ms;
+    animation-duration: 280ms
+}
+.md-fab {
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #fff;
+    color: #727272;
+    display: block;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    -webkit-transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    border: none;
+    position: relative;
+    text-align: center;
+    cursor: pointer
+}
+.md-fab:active,
+.md-fab:focus,
+.md-fab:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23)
+}
+.md-fab>i {
+    font-size: 36px;
+    line-height: 62px;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #727272
+}
+.md-fab.md-fab-accent {
+    background: #39f
+}
+.md-fab.md-fab-accent>i {
+    color: #fff
+}
+.md-fab.md-fab-success {
+    background: #39f
+}
+.md-fab.md-fab-success>i {
+    color: #fff
+}
+
+.md-fab-wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 40px;
+    z-index: 1004;
+    -webkit-transition: margin 280ms cubic-bezier(.4, 0, .2, 1);
+    transition: margin 280ms cubic-bezier(.4, 0, .2, 1)
+}
+
+
+
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.eot);
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/MaterialIcons-Regular.woff2) format('woff2'), url(../fonts/MaterialIcons-Regular.woff) format('woff'), url(../fonts/MaterialIcons-Regular.ttf) format('truetype')
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    vertical-align: -4px;
+    color: rgba(0, 0, 0, .54)
+}
+.material-icons.md-inactive {
+    color: rgba(0, 0, 0, .26)
+}
+.material-icons.md-24 {
+    font-size: 24px;
+    vertical-align: -8px
+}
+.material-icons.md-36 {
+    font-size: 36px;
+    vertical-align: -16px
+}
+.material-icons.md-48 {
+    font-size: 48px;
+    vertical-align: -24px
+}
+.material-icons.md-light {
+    color: #fff
+}
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, .3)
+}

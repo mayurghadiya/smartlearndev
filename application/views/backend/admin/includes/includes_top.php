@@ -6,7 +6,10 @@
     
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    
+    <link rel="stylesheet" href="<?php echo base_url().'assets/button/'; ?>css/flags.min.css" media="all">
+
+    <!-- altair admin -->
+    <link rel="stylesheet" href="<?php echo base_url().'assets/button/'; ?>css/main.min.css" media="all">
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">

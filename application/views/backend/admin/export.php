@@ -32,7 +32,7 @@
                             <div class="tab-pane box active" id="list">
                                 <div class="box-content"> 
                                      <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>              
                                     <form id="exportform" class="form-horizontal validate" action="#" method="post">
                                         <div class="form-group">

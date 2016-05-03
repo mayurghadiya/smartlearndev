@@ -33,7 +33,7 @@
 
                                 <div class="panel-body">
                                      <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>
                                     <form id="restoreform" class="form-horizontal form-groups-bordered validate" role="form" action="" method="post" 
                                           enctype="multipart/form-data">

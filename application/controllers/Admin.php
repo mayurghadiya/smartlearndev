@@ -1607,34 +1607,11 @@ class Admin extends CI_Controller {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-            if ($_FILES['participatefile']['name'] != "") {
-
-                $config['upload_path'] = 'uploads/project_file';
-                $config['allowed_types'] = '*';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                //$this->upload->set_allowed_types('*');	
-
-                if (!$this->upload->do_upload('participatefile')) {
-                    $dataerror = array('msg' => $this->upload->display_errors());
-                    redirect(base_url() . 'admin/participate/', 'refresh');
-                } else {
-                    $file = $this->upload->data();
-                    $data['pp_filename'] = $file['file_name'];
-                    $file_url = base_url() . 'uploads/project_file/' . $data['pp_filename'];
-                }
-            } else {
-
-
-                $file_url = '';
-            }
-
-
-
+            
             $data['pp_degree'] = $this->input->post('degree');
             $data['pp_title'] = $this->input->post('title');
             $data['pp_batch'] = $this->input->post('batch');
-            $data['pp_url'] = $file_url;
+           
             $data['pp_semester'] = $this->input->post('semester');
             $data['pp_desc'] = $this->input->post('description');
             $data['pp_dos'] = $this->input->post('dateofsubmission');
@@ -1714,31 +1691,10 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash_message', 'Participate Added Successful');
             redirect(base_url() . 'admin/participate/', 'refresh');
         }
-        if ($param1 == 'do_update') {
-            if ($_FILES['participatefile']['name'] != "") {
-
-                $config['upload_path'] = 'uploads/project_file';
-                $config['allowed_types'] = '*';
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                //$this->upload->set_allowed_types('*');	
-
-                if (!$this->upload->do_upload('participatefile')) {
-                    $dataerror = array('msg' => $this->upload->display_errors());
-                    redirect(base_url() . 'admin/participate/', 'refresh');
-                } else {
-                    $file = $this->upload->data();
-                    $data['pp_filename'] = $file['file_name'];
-                    $file_url = base_url() . 'uploads/project_file/' . $data['pp_filename'];
-                }
-            } else {
-
-                $file_url = $this->input->post('pageurl');
-            }
+        if ($param1 == 'do_update') {            
             $data['pp_degree'] = $this->input->post('degree');
             $data['pp_title'] = $this->input->post('title');
-            $data['pp_batch'] = $this->input->post('batch');
-            $data['pp_url'] = $file_url;
+            $data['pp_batch'] = $this->input->post('batch');           
             $data['pp_semester'] = $this->input->post('semester');
             $data['pp_desc'] = $this->input->post('description');
             $data['pp_dos'] = $this->input->post('dateofsubmission1');
@@ -2025,8 +1981,6 @@ class Admin extends CI_Controller {
             $data['study_batch'] = $this->input->post('batch');
             $data['study_url'] = $file_url;
             $data['study_sem'] = $this->input->post('semester');
-            $data['study_desc'] = $this->input->post('description');
-            $data['study_dos'] = $this->input->post('dateofsubmission');
             $data['study_course'] = $this->input->post('course');
             $data['study_status'] = 1;
             $data['created_date'] = date('Y-m-d');
@@ -2120,8 +2074,6 @@ class Admin extends CI_Controller {
             $data['study_batch'] = $this->input->post('batch');
             $data['study_url'] = $file_url;
             $data['study_sem'] = $this->input->post('semester');
-            $data['study_desc'] = $this->input->post('description');
-            $data['study_dos'] = $this->input->post('dateofsubmission1');
             $data['study_course'] = $this->input->post('course');
             $data['study_status'] = 1;
 

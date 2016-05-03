@@ -36,7 +36,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="">
-                                            <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                            <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                         </div>  
                                         <form id="frmstudentlist" name="frmfilterlist" action="#" enctype="multipart/form-data" class="form-vertical form-groups-bordered validate">
                                             <div class="form-group col-sm-2">
@@ -94,7 +94,7 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">
                                     <div class="">
-                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                        <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                     </div >                                    
                                     <?php echo form_open(base_url() . 'index.php?admin/student/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudent', 'target' => '_top', "enctype" => "multipart/form-data")); ?>
                                     <div class="padded">

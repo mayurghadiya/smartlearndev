@@ -87,7 +87,7 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">  
                                     <div class="">
-                                        <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                        <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                     </div>                                     
                                     <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'exam_time_table_form', 'target' => '_top')); ?>
                                     <br/>

@@ -1,0 +1,90 @@
+
+[class*=" flag-"],
+
+[class^=flag-] {
+
+    display: inline-block;
+
+    margin-top: -1px;
+
+   width: 16px;
+
+    height: 16px;
+
+    line-height: 16px;
+
+    vertical-align: middle;
+
+    background-image: url(flags.png);
+
+    background-repeat: no-repeat;
+
+    background-position: 0 -9288px
+
+}
+
+.flag-AD {
+
+    background-position: 0 0
+
+}
+
+.flag-AE {
+
+    background-position: 0 -36px
+
+}
+
+.flag-AF {
+
+    background-position: 0 -72px
+
+}
+22
+.flag-AG {
+
+    background-position: 0 -108px
+
+}
+25
+.flag-AI {
+
+    background-position: 0 -144px
+
+}
+
+.flag-AL {
+
+    background-position: 0 -180px
+
+}
+31
+.flag-AM {
+
+    background-position: 0 -216px
+
+}
+
+.flag-AN {
+
+    background-position: 0 -252px
+
+}
+37
+.flag-AO {
+
+    background-position: 0 -288px
+
+}
+
+.flag-AQ {
+
+    background-position: 0 -324px
+
+}
+
+.flag-AR {
+
+    background-position: 0 -360px
+
+}

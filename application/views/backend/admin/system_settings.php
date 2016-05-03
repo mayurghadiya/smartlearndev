@@ -54,9 +54,9 @@
                                             </div>
                                         </div>
                                         <div class="panel-body">  
-                                            <div class="">
-                                                <span style="color:red">* <?php echo ucwords("is mandatory field"); ?></span> 
-                                            </div>
+                                             <div class="">
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
+                                </div>
                                             <div class="form-group">
                                                 <label  class="col-sm-3 control-label"><?php echo ucwords("System Name"); ?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">

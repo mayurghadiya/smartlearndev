@@ -39,7 +39,7 @@ foreach ( $edit_data as $row):
             </div>
 			<div class="panel-body">
 				 <div class="">
-                                    <span style="color:red">* Is Mandatory Field</span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                     
                                                                     
 <?php echo form_open(base_url() . 'index.php?media/bannerslider/do_update/'.$row['banner_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmgallery2', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>

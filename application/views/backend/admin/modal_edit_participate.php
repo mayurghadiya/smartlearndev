@@ -16,7 +16,7 @@ foreach ($edit_data as $row):
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
                             <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>  
                             <?php echo form_open(base_url() . 'index.php?admin/participate/do_update/' . $row['pp_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
@@ -133,16 +133,7 @@ foreach ($edit_data as $row):
                                 <div class="col-sm-5">
                                     <textarea class="form-control" name="description" id="description" ><?php echo $row['pp_desc']; ?></textarea>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("File Upload ");?></label>
-                                <div class="col-sm-5">
-                                    
-                                    <input type="hidden" name="txtoldfile" id="txtoldfile" value="<?php echo $row['pp_filename']; ?>" />
-                                    <input type="file" class="form-control" name="participatefile" id="participatefile" />
-                                    <span id="fileerror" style="color:red;"></span>
-                                         </div>
-                            </div>
+                            </div>                           
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
                                     <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("Update");?></button>

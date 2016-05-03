@@ -132,7 +132,7 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">  
 <div class="">
-                                    <span style="color:red">* <?php echo ucwords("Is Mandatory Field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>                                       
 <?php echo form_open(base_url() . 'index.php?admin/syllabus/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsyllabus', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">
