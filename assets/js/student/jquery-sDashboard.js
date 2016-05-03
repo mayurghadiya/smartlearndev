@@ -228,6 +228,7 @@
                         }
                     })
                 }
+                hide_show_widget();
             }
 
             function getWidgetTitle(widgetId) {
@@ -274,6 +275,7 @@
             function append_widget_in_select(widgetId) {
                 var title = getWidgetTitle(widgetId);
                 $('select#addWidgetFromSelect').append('<option value="' + widgetId + '" id="w' + widgetId + '">' + title + '</option>');
+                hide_show_widget();
             }
 
             $(document).ready(function () {
@@ -314,7 +316,17 @@
                             });
                         }
                     }
-                })
+                });
+                hide_show_widget();
+
+            }
+
+            function hide_show_widget() {
+                if ($('#addWidgetFromSelect').children().size() == 1) {
+                    $('.widget-hide').hide();
+                } else {
+                    $('.widget-hide').show();
+                }
             }
 
             $('select#addWidgetFromSelect').change(
@@ -327,6 +339,7 @@
 
                                     //remove from select
                                     removeWidgetFromSelect();
+                                    hide_show_widget();
                                 },
                                 1000);
                     });

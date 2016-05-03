@@ -4,7 +4,7 @@
     <!--<hr/>-->
     <div class="vd_title-section clearfix">
         
-        <div class="vd_panel-header">
+        <div class="vd_panel-header widget-hide">
                    <div class="vd_panel-header " style="float: left;">
                     <ul class="breadcrumb">
                           <li><?php echo set_breadcrumb(); ?></li>
