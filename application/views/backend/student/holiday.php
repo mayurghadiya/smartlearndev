@@ -87,12 +87,11 @@ foreach ($event as $eve) :
     
     for($i=0;$i<=$count;$i++)
     {
-        $sdate= date('Y-m-d', strtotime($i.'day', strtotime(date("Y-m-d", strtotime($eve->holiday_startdate)))));
-       
+        $sdate= date('Y-m-d', strtotime($i.'day', strtotime(date("Y-m-d", strtotime($eve->holiday_startdate)))));       
         ?>
             '<?php echo date("m-d-Y", strtotime($sdate)); ?>' : [{content: '<?php  echo date("F d, Y", strtotime($sdate));
              echo "<br/>";
-             echo $event_name;?>', allDay: false}],    
+             echo $event_name;?>', allDay: true}],    
              <?php
     }
 

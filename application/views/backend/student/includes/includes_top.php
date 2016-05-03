@@ -117,7 +117,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
         //var randomString = "Lorem ipsum dolor sit amet,consectetur adipiscing elit. Aenean lacinia mollis condimentum. Proin vitae ligula quis ipsum elementum tristique. Vestibulum ut sem erat.";				
         //var base = '<?php echo base_url(); ?>';
 <?php
-if ($widget_order) {
+if (isset($widget_order)) {
     $order = str_replace('id', '', $widget_order->order_data);
     $order = explode(',', $order);
     for ($i = 0; $i < count($order); $i++) {
@@ -146,7 +146,7 @@ if ($widget_order) {
         //dashboard json data
         //this is the data format that the dashboard framework expects
         //**********************************************//
-<?php if ($widget_order) { ?>
+<?php if (isset($widget_order)) { ?>
             var dashboardJSON =
             [
     <?php
@@ -219,11 +219,12 @@ if ($widget_order) {
                     widgetContent: datanew3
                 }]
 <?php } ?>
-
+<?php if (isset($widget_order)) { ?>
         //basic initialization example
         $("#myDashboard").sDashboard({
             dashboardData: dashboardJSON
         });
+<?php } ?>
         
     });
 
