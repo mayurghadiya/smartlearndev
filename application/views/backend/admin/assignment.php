@@ -350,12 +350,9 @@
     </style>
     
   
-     <ul class="nav nav-tabs bordered nav-fixedtabs" >
-                          
-                                <li class="nav-fixed-tabs" >
-                                    <a href="#add"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addassignment/');"  id="navfixed" class="nav-fixed-a-tabs vd_bg-red" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                <i class="fa fa-plus-circle"> </i>
-</a>
-                                </a></li>
-                                
-                        </ul>
+    <div class="md-fab-wrapper">
+
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addassignment/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>

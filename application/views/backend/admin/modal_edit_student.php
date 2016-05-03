@@ -16,7 +16,7 @@ foreach ($edit_data as $row):
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
                              <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>
                             <form name="frmstudentedit" id="frmstudentedit" method="post" action="<?=base_url()?>index.php?admin/student/do_update/<?php echo $row['std_id']?>" enctype="multipart/form-data" class="form-horizontal form-groups-bordered validate"> 
                                 

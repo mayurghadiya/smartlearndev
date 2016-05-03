@@ -97,7 +97,7 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content"> 
                                 <div class="">
-                                    <span style="color:red">*<?php echo ucwords(" is mandatory field");?> </span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>
 <?php echo form_open(base_url() . 'index.php?admin/batch/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'batchform', 'target' => '_top')); ?>
                                     <div class="padded">

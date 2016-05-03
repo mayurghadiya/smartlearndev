@@ -14,7 +14,7 @@ foreach ($edit_data as $row) {
                 </div>
             </div>
             <div class="panel-body">
-                <span style="color:red">* <?php echo ucwords("is mandatory field");?></span>
+                <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span>
                 <?php echo form_open(base_url() . 'index.php?admin/grade/update/' . $row['grade_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-grade-form', 'target' => '_top')); ?>
                 <div class="padded">
                     <div class="form-group">

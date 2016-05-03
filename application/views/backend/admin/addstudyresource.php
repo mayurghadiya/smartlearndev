@@ -1,6 +1,18 @@
- <div class="box-content">  
+<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary" data-collapsed="0">
+                <div class="panel-heading">
+                    <div class="panel-title" >
+                        <i class="entypo-plus-circled"></i>
+                        <?php echo ucwords("Add Study Resources");?>
+                    </div>
+                </div>
+                <div class="panel-body"> 
+
+<div class="box-content">  
+  
                                 <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>                                       
 <?php echo form_open(base_url() . 'index.php?admin/studyresource/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
@@ -80,14 +92,6 @@
                                                 <input type="text" class="form-control" name="title" id="title" />
                                             </div>
                                         </div>   
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Date ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" readonly="" name="dateofsubmission" id="dateofsubmission" />
-                                            </div>
-                                        </div>
-                                       
                                       <!--  <div class="form-group">
                                             <label class="col-sm-3 control-label">Page URL</label>
                                             <div class="col-sm-5">
@@ -100,12 +104,7 @@
                                                 <input type="file" class="form-control" name="resourcefile" id="resourcefile" />
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
-                                            <div class="col-sm-5">
-                                                <textarea class="form-control" name="description" id="description"></textarea>
-                                            </div>
-                                        </div>
+                                      
 
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
@@ -116,6 +115,8 @@
                                     </div>         
        </form>               
                                 </div>
+                </div>
+            </div></div></div>
     <script type="text/javascript">
         
   
@@ -230,8 +231,7 @@
                                                                     degree: "Please select Course",
                                                                     course:"Please select Branch",
                                                                     batch: "Please select batch",
-                                                                    semester: "Please select semester",
-                                                                    dateofsubmission: "Please select date",
+                                                                    semester: "Please select semester",                                                                   
                                                                     pageurl:
                                                                             {
                                                                                 required: "Please enter page url",

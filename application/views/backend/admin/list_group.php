@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                          <div class="">
-                            <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                            <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                         </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/list_group/do_update', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'id' => 'list_group')); ?>
                         <div class="form-group">

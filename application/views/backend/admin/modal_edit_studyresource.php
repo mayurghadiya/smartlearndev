@@ -16,7 +16,7 @@ foreach ($edit_data as $row):
                     <div class="tab-pane box" id="add" style="padding: 5px">
                         <div class="box-content">  
                             <div class="">
-                                <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                             </div>   
                             <?php echo form_open(base_url() . 'index.php?admin/studyresource/do_update/' . $row['study_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
@@ -115,13 +115,6 @@ foreach ($edit_data as $row):
                                     <input type="text" class="form-control" name="title" id="title"  value="<?php echo $row['study_title']; ?>"/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("Date ");?><span style="color:red">*</span></label>
-                                <div class="col-sm-5">
-                                    <input type="text"  readonly="" class="form-control" name="dateofsubmission1" id="dateofsubmission1" value="<?php echo $row['study_dos']; ?>"/>
-                                </div>
-                            </div>
-                            
                           
                             <input type="hidden" class="form-control" name="pageurl" id="pageurl" value="<?php echo $row['study_url']; ?>" />
                              <div class="form-group">
@@ -130,13 +123,7 @@ foreach ($edit_data as $row):
                                     <input type="hidden" name="txtoldfile" id="txtoldfile" value="<?php echo $row['study_filename']; ?>" />
                                     <input type="file" class="form-control" name="resourcefile" id="resourcefile" />
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
-                                <div class="col-sm-5">
-                                    <textarea class="form-control" name="description" id="description" ><?php echo $row['study_desc']; ?></textarea>
-                                </div>
-                            </div>
+                            </div>                          
                            
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">

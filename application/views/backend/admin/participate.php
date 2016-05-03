@@ -68,8 +68,7 @@
                                                 <th><div><?php echo ucwords("Course");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
-                                                <th><div><?php echo ucwords("Semester");?></div></th>											
-                                                <th><div><?php echo ucwords("File");?></div></th>											
+                                                <th><div><?php echo ucwords("Semester");?></div></th>											                                              
                                                 <th><div><?php echo ucwords("Date of submission");?></div></th>									
                                                 <th><div><?php echo ucwords("Action");?></div></th>											
                                             </tr>
@@ -139,7 +138,7 @@
                                                         ?>
 
                                                     </td>	
-                                                    <td id="downloadedfile"><a href="<?php echo $row->pp_url; ?>" download="" title="<?php echo $row->pp_filename; ?>" ><i class="fa fa-download"></i></a></td>	
+                                                  
                                                     <td><?php  echo date_formats($row->pp_dos); ?></td>	
 
                                                     <td class="menu-action">
@@ -162,7 +161,7 @@
                             <div class="tab-pane box" id="add" style="padding: 5px">
                                 <div class="box-content">       
                                 <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>                                      
                                     <?php echo form_open(base_url() . 'index.php?admin/participate/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
@@ -254,13 +253,7 @@
                                             <div class="col-sm-5">
                                                 <textarea class="form-control" name="description" id="description"></textarea>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("File Upload ");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="file" class="form-control" name="participatefile" id="participatefile" />
-                                            </div>
-                                        </div>
+                                        </div>                                        
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
                                                 <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
@@ -278,7 +271,7 @@
                             <div class="tab-pane box" id="addsurvey" style="padding: 5px">
                                 <div class="box-content">                   
 <div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>  
                                     <?php echo form_open(base_url() . 'index.php?admin/survey/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsurvey', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">                                            
@@ -1111,11 +1104,7 @@ $("#courses").change(function(){
                     course: "required",
                     batch: "required",
                     semester: "required",
-                    dateofsubmission: "required",
-                    participatefile: {
-                        required: true,
-                        extension: 'gif|jpg|png|pdf|xlsx|xls|doc|docx|ppt|pptx|pdf|txt',
-                    },
+                    dateofsubmission: "required",                   
                     title:
                             {
                                 required: true,
@@ -1127,10 +1116,6 @@ $("#courses").change(function(){
                     batch: "Please select batch",
                     semester: "Please select semester",
                     dateofsubmission: "Please select date of submission",
-                    participatefile: {
-                        required: "Please select participate file",
-                        extension: 'Please upload valid file',
-                    },
                     title:
                             {
                                 required: "Please enter title",
