@@ -54,8 +54,10 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><?php echo set_breadcrumb(); ?></li>
-                    </ul>                  
+                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><?php echo ucwords("media");?></li>
+                         <li><?php echo ucwords("Photo Gallery");?></li>
+                    </ul>                
                 </div>
             </div>
             <div class="vd_title-section clearfix">
