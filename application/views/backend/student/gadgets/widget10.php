@@ -5,19 +5,41 @@
         <div data-action="click-target" class="vd_mega-menu-content  width-xs-2  left-xs">
             <div class="col-sm-6 ui-sortable">
                 <div class="content-list content-menu">
-                    <ul class="list-wrapper pd-lr-10">
-                        <?php ?>
 
-                        <li><a href="<?php echo base_url(); ?>student/volunteer" target="_blank">Volunteer
-                                <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
-                                    <img style="margin-top: 5px;" src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
-                                <?php } ?>
-                            </a></li>                                            
-                        <li>  <a href="<?php echo base_url(); ?>student/participate" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Survey</div> </a> </li>
-                        <li>  <a href="<?php echo base_url(); ?>student/uploads" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Upload</div> </a> </li>
+                    <style> 
+                        .image_box, .text_box{width: 50%; display: inline-block; float: left; }
+                        .text_box{position: relative;}
+                        .text_box .detials{height: 10em; display: flex; align-items: center; justify-content: center}                        
+                        .image_box img{ max-width: 100%; display: block;}
+                        .image_box1 {width:150px; height:150px;display:table-cell; vertical-align:middle; }
+                        .image_box img{ display:block;margin-left:auto;margin-right:auto;vertical-align:middle;}                        
+                    </style>
+
+                    <div class="image_box">
+                        <div class="image_box1">
+                            <img src="<?php echo base_url('uploads/widgets_images/10.jpg'); ?>"/>
+                        </div>
+                    </div>
+
+                    <div class="text_box">
+                        <div class="detials">
+                            <ul class="list-wrapper pd-lr-10">
+                                <?php ?>
+
+                                <li><a href="<?php echo base_url(); ?>student/volunteer" target="_blank">Volunteer
+                                        <?php if (isset($this->session->userdata('notifications')['participate_manager'])) { ?>
+                                            <img style="margin-top: 5px;" src="<?php echo base_url('assets/images/new_icon.gif'); ?>"/>
+                                        <?php } ?>
+                                    </a></li>                                            
+                                <li>  <a href="<?php echo base_url(); ?>student/participate" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Survey</div> </a> </li>
+                                <li>  <a href="<?php echo base_url(); ?>student/uploads" target="_blank"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Upload</div> </a> </li>
 
 
-                    </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
