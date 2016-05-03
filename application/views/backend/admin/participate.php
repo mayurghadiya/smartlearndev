@@ -64,7 +64,7 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
-                                                <th><div><?php echo ucwords("Participate Title");?> </div></th>											
+                                                <th><div><?php echo ucwords("Parti. Title");?> </div></th>											
                                                 <th><div><?php echo ucwords("Course");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
@@ -537,13 +537,13 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div><?php echo ucwords("Student Name");?></div></th>	
-                                                <th><div><?php echo ucwords("Participate Title");?></div></th>
+                                                <th><div><?php echo ucwords("Parti. Title");?></div></th>
                                                 <th><div><?php echo ucwords("Comment");?></div></th>
                                                 <th><div><?php echo ucwords("Course");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											
-                                                <th><div><?php echo ucwords("Participate Status");?></div></th>											
+                                                <th><div><?php echo ucwords("Parti. Status");?></div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>
