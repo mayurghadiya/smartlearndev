@@ -201,14 +201,14 @@
                     </a>
                     <div class="child-menu" data-action="click-target" <?php if ($page_name == "cms_manager" || $page_name == "cms") { ?> style="display: block" <?php } ?>>
                         <ul class="clearfix">          
-                            <li <?php if ($page_name == "cms_manager") { ?> class="selectednavmenu" <?php } ?>> 
+                            <li <?php if ($page_name == "cms_manager") { ?> class="selectednavmenu" <?php } ?> style="display: none;"> 
                                 <a href="<?php echo base_url('admin/cms_manager'); ?>">
                                     <span class="menu-text">CMS Dynamic Pages</span>
                                 </a>          
                             </li>
                             <li <?php if ($page_name == "cms") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/cms">
-                                    <span class="menu-text">CMS Static Pages</span>  
+                                    <span class="menu-text">CMS Pages</span>  
                                 </a>
                             </li>
                         </ul>
