@@ -27,10 +27,7 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                    <?php echo ucwords(" course list");?>
                                 </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                   <?php echo ucwords("add course");?> 
-                                </a></li>
+                           
                         </ul>
                         <!------CONTROL TABS END------>
 
@@ -75,39 +72,7 @@
                             <!----TABLE LISTING ENDS--->
 
 
-                            <!----CREATION FORM STARTS---->
-                            <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">     
-                                <div class="">
-                                   <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
-                               </div>                                    
-<?php echo form_open(base_url() . 'index.php?admin/degree/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'degreeform', 'target' => '_top')); ?>
-                                    <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course name");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="d_name" id="d_name"/>
-                                            </div>
-                                        </div>												
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
-                                            <div class="col-sm-5">
-                                                <select name="degree_status">
-                                                    <option value="1">Active</option>
-                                                    <option value="0">Inactive</option>		
-                                                </select>	
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green" ><?php echo ucwords("add");?></button>
-                                            </div>
-                                        </div>
-                                        </form>               
-                                    </div>                
-                                </div>
-                                <!----CREATION FORM ENDS-->
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -117,43 +82,24 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
-        $.validator.setDefaults({
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
+    
+    
+      <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+  
+    <div class="md-fab-wrapper">
 
-   
-        $().ready(function () {
-             
-            $("#degreeform").validate({
-                rules: {                  
-                     d_name: 
-                        {
-                            required:true,
-                            remote: {
-                              url: "<?php echo base_url().'index.php?admin/check_degree'; ?>",
-                              type: "post",
-                              data: {
-                                course: function() {
-                                  return $( "#d_name" ).val();
-                                },
-                              }
-                            }
-                        },
-                    degree_status: "required",
-                },
-                messages: {
-                    d_name:
-                    {
-                         required:"Enter course name",
-                        remote:"Record is already present in the system",
-                    },
-                    
-                    degree_status: "Select status",
-                }
-            });
-        });
-    </script>
-    <?php include('plus_icon.php'); ?>
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/adddegree/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>

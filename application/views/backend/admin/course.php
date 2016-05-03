@@ -8,7 +8,7 @@
                     <ul class="breadcrumb">
                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
                          <li><?php echo ucwords("basic management");?></li>
-                         <li><?php echo ucwords("course");?></li>
+                         <li><?php echo ucwords("Branch");?></li>
                         
                     </ul>
                   
@@ -28,10 +28,7 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Branch List");?>
                                 </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                   <?php echo ucwords("Add Branch");?> 
-                                </a></li>
+                           
                         </ul>
                         <!------CONTROL TABS END------>
                             
@@ -98,78 +95,7 @@
                                 
                                 
                             <!----CREATION FORM STARTS---->
-                            <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content"> 
-                                <div class="">
-                                   <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
-                               </div>                                    
-<?php echo form_open(base_url() . 'index.php?admin/courses/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'courseform', 'target' => '_top')); ?>
-                                    <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select id="degree" name="degree" class="form-control">
-                                                    <option value="">--- Select Course ---</option>
-                                                        <?php foreach ($degree as $srow) { ?>
-                                                        <option value="<?php echo $srow['d_id']; ?>"><?php echo $srow['d_name']; ?>
-                                                        </option>
-                                                        <?php } ?>
-                                                </select>
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("branch name");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="c_name" id="c_name"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("ID");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="course_alias_id" id="course_alias_id"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("semester");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select id="semester" name="semester[]" class="form-control" multiple>
-                                                    <option value="">--- Select Semester ---</option>
-                                                        <?php foreach ($semesters as $srow) { ?>
-                                                        <option value="<?php echo $srow['s_id']; ?>"><?php echo $srow['s_name']; ?>
-                                                        </option>
-                                                        <?php } ?>
-                                                </select>
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("description");?></label>
-                                            <div class="col-sm-5">	
-                                                <div class="chat-message-box">
-                                                    <textarea name="c_description" id="c_description" rows="3" class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
-                                            <div class="col-sm-5">
-                                                <select name="course_status">
-                                                    <option value="1">Active</option>
-                                                    <option value="0">Inactive</option>
-                                                        
-                                                </select>
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("add");?></button>
-                                            </div>
-                                        </div>
-                                        </form>               
-                                    </div>                
-                                </div>
-                                <!----CREATION FORM ENDS-->
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -179,43 +105,23 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
     
-        $(document).ready(function () {
-         
-            $("#courseform").validate({
-                rules: {
-                    degree:  "required",
-                    c_name: 
-                        {
-                            required:true,
-                            remote: {
-                              url: "<?php echo base_url().'index.php?admin/check_course'; ?>",
-                              type: "post",
-                              data: {
-                                course: function() {
-                                  return $( "#c_name" ).val();
-                                },
-                                 degree: function() {
-                                  return $( "#degree" ).val();
-                                },
-                              }
-                            }
-                        },
-                    'semester[]':"required",
-                    course_alias_id: "required",
-                },
-                messages: {
-                    degree: "Select course",
-                    c_name: 
-                    {
-                        required:"Enter branch name",
-                        remote:"Record is already present in the system",
-                    },
-                    'semester[]':"Select semester",
-                    course_alias_id: "Enter branch id",
-                },
-            });
-        });
-    </script>
-    <?php include('plus_icon.php'); ?>
+      <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+  
+    <div class="md-fab-wrapper">
+
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addcourse/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>
