@@ -29,7 +29,7 @@
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">
                                 <div class="">
-                                    <span style="color:red">*<?php echo ucwords(" is mandatory field"); ?> </span> 
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?> </span> 
                                 </div>
                                 <div class="panel-body">
                                     <form id="authorizenetconfig" class="form-horizontal form-groups-bordered validate" method="post" action="" 

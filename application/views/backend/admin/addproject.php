@@ -1,6 +1,18 @@
+<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary" data-collapsed="0">
+                <div class="panel-heading">
+                    <div class="panel-title" >
+                        <i class="entypo-plus-circled"></i>
+                        <?php echo ucwords("Add Project");?>
+                    </div>
+                </div>
+                <div class="panel-body"> 
+
 <div class="box-content">  
-<div class="">
-                                    <span style="color:red">* <?php echo ucwords("is mandatory field");?></span> 
+  
+                                <div class="">
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>                                      
 <?php echo form_open(base_url() . 'index.php?admin/project/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmproject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">
@@ -112,9 +124,14 @@ foreach ($datadegree as $rowdegree) {
                                                 <button type="submit" id="btnadd" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
                                             </div>
                                         </div>
-                                        </form>               
-                                    </div>                
+                                                      
+                                    </div>     
+    </form> 
                                 </div>
+                </div>
+            </div>
+        </div>
+</div>
       <script type="text/javascript">
      
       

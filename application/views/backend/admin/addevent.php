@@ -1,8 +1,20 @@
   <?php $group = $this->db->get('group')->result(); ?>
+<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary" data-collapsed="0">
+                <div class="panel-heading">
+                    <div class="panel-title" >
+                        <i class="entypo-plus-circled"></i>
+                        <?php echo ucwords("Add Event");?>
+                    </div>
+                </div>
+                <div class="panel-body"> 
+
 <div class="box-content">  
-                                    <div class="">
-                                        <span style="color:red">* <?php echo ucwords("is mandatory field"); ?></span> 
-                                    </div>                                      
+  
+                                <div class="">
+                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
+                                </div>                                       
                                     <?php echo form_open(base_url() . 'index.php?admin/events/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'eventform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
@@ -59,6 +71,10 @@
                                     </div>    
                                     </form>         
                                 </div>
+                      </div>
+            </div>
+        </div>
+</div>
 <script type="text/javascript">
 
                                                             $().ready(function () {

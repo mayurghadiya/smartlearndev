@@ -8,7 +8,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
     <div class="panel-body">
         <div class="tab-pane box" id="edit">
             <div class="box-content">
-                <span style="color:red">* <?php echo ucwords("is mandatory field"); ?></span> 
+                <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                 <?php
                 foreach ($edit_data as $row) {
                     
