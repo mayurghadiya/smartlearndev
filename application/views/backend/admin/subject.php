@@ -25,10 +25,7 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Subject List");?>
                                 </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add Subject");?>
-                                </a></li>
+                          
                         </ul>
                         <!------CONTROL TABS END------>
 
@@ -89,59 +86,7 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content"> 
-                                <div class="">
-                                   <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
-                               </div>                                    
-<?php echo form_open(base_url() . 'index.php?admin/subject/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsubject', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
-                                    <div class="padded">	
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Subject Name");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="subname" id="subname" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Subject Code");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="subcode" id="subcode" />
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select name="course" id="course">
-                                                    <option value="">Select branch</option>
-                                                    <?php
-                                                    $course = $this->db->get_where('course', array('course_status' => 1))->result();
-                                                    foreach ($course as $crs) {
-                                                        ?>
-                                                        <option value="<?= $crs->course_id ?>"><?= $crs->c_name ?></option>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <select name="semester" id="semester">
-                                                    <option value="">Select semester</option>
-                                                    
-                                                </select>
-                                                 <lable class="error" id="error_lable_exist" style="color:red"></lable>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add ");?></button>
-                                            </div>
-                                        </div>
-                                        </form>
-                                    </div>
-                                </div>
+                                
                                 <!----CREATION FORM ENDS-->
                             </div>
                         </div>
@@ -153,87 +98,24 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
-        
-         $( "#frmsubject" ).submit(function( event ) {
-          if($("#subname").val()!=null & $("#semester").val()!=null & $("#subcode").val()!=null & $("#course").val()!=null )
-          { 
-         $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/checksubjects'; ?>",
-                    dataType:'json',
-                   data:
-                        {
-                            'subname':$("#subname").val(),
-                            'semester':$("#semester").val(),
-                            'subcode':$("#subcode").val(),
-                            'course':$("#course").val()
-                        }, 
-                                success:function(response){
-                                    if(response.length == 0){
-                                         $("#error_lable_exist").html('');
-                                    $('#frmsubject').attr('validated',true);
-                                    $('#frmsubject').submit();
-                                     } else
-                                         {
-                                             $("#error_lable_exist").html('Record is already present in the system');
-                                         return false;
-                                     }
-                    }
-                });
-                    return false; 
-                    }
-        event.preventDefault();
-      });
-       $("#course").change(function () {
-        var course = $(this).val();
-        var degree = $("#degree").val();
-        var dataString = "course=" + course;
-        $.ajax({
-            type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
-            data: dataString,
-            success: function (response) {
-                $("#semester").html(response);
-            }
-        });
-    });
-        
-        $(document).ready(function(){
-        $("#subname").change(function(){ 
-           $('#semester').val($("#semester option:eq(0)").val());
-        });
-        $("#course").change(function(){
-             $('#semester').val($("#semester option:eq(0)").val());
-        });
-        $("#subcode").change(function(){
-              $('#semester').val($("#semester option:eq(0)").val());
-        });
-        });
-        $.validator.setDefaults({
-            submitHandler: function (form) {
-                form.submit();
-            }
-        });
 
-        $().ready(function () {
+      <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+  
+    <div class="md-fab-wrapper">
 
-            $("#frmsubject").validate({
-                rules: {
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addsubject/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>
 
-                      subname:"required",                                                                  
-                    subcode:"required",
-                    course:"required",
-                    semester:"required"
-                },
-                messages: {
-
-                subname: "Enter subject name",
-                 subcode: "Enter subject code",                                                                  
-                    course: "Select branch",
-                    semester: "Select semester",
-                }
-            });
-        });
-    </script>
-<?php include('plus_icon.php'); ?>

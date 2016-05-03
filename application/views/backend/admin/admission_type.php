@@ -24,11 +24,7 @@
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     Admission Type List
-                                </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Admission Type
-                                </a></li>
+                                </a></li>                           
                         </ul>
                         <!------CONTROL TABS END------>
 
@@ -74,43 +70,7 @@
 
 
                             <!----CREATION FORM STARTS---->
-                            <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">  
-                                    <div class="">
-<<<<<<< HEAD
-                                        <span style="color:red">* is mandatory field</span> 
-=======
-                                        <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
->>>>>>> origin/master
-                                    </div>                                                                    
-                                        <?php echo form_open(base_url() . 'index.php?admin/admission_type/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmadmission_type', 'target' => '_top')); ?>
-                                    <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Admission Type Name<span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="at_name" id="at_name" />
-                                            </div>
-                                        </div>												
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">Status</label>
-                                            <div class="col-sm-5">
-                                                <select name="at_status">
-                                                    <option value="1">Active</option>
-                                                    <option value="0">Inactive</option>		
-                                                </select>	
-
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green">Add Admission Type</button>
-                                            </div>
-                                        </div>
-                                        </form>               
-                                    </div>                
-                                </div>
-                                <!----CREATION FORM ENDS-->
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -120,35 +80,23 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
+    
+      <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+  
+    <div class="md-fab-wrapper">
 
-    $().ready(function () {
-        $("#frmadmission_type").validate({
-            rules: {
-                at_name: "required",
-                at_name:
-                        {
-                            required: true,
-                            remote: {
-                                url: "<?php echo base_url() . 'index.php?admin/check_admission_type'; ?>",
-                                type: "post",
-                                data: {
-                                    admission_type: function () {
-                                        return $("#at_name").val();
-                                    },
-                                }
-                            }
-                        },
-                at_status: "required",
-            },
-            messages: {
-                at_name:
-                        {
-                            required: "Enter admission type name",
-                            remote: "Record is already present in the system",
-                        },
-                at_status: "Please slect admission status",
-            }
-        });
-    });
-    </script>
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/add_adtype/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>
