@@ -75,7 +75,7 @@
                                                     <input type="text" class="form-control" name="paypal_email" id="paypal_email" value="<?php echo $this->db->get_where('system_setting', array('type' => 'paypal_email'))->row()->description; ?>">
                                                 </div>
                                             </div>
-                                            <div class="form-group hidden">
+                                            <div class="form-group">
                                                 <label  class="col-sm-3 control-label"><?php echo ucwords("Currency"); ?><span style="color:red">*</span></label>
                                                 <div class="col-sm-9">
                                                     <input type="text" class="form-control" name="currency" id="currency" value="<?php echo $this->db->get_where('system_setting', array('type' => 'currency'))->row()->description; ?>">
