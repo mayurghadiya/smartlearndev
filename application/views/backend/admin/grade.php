@@ -27,10 +27,7 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("Exam Grade List");?>
                                 </a></li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add Exam Grade");?>
-                                </a></li>
+                     
                         </ul>
                         <!------CONTROL TABS END------>
 
@@ -77,46 +74,7 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content"> 
-                                    <div class="">
-                                        <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
-                                    </div>   
-                                    <?php echo form_open(base_url() . 'index.php?admin/grade/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'gradeform', 'target' => '_top')); ?>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label"><?php echo ucwords("Grade Name");?><span style="color:red">*</span></label>
-                                        <div class="col-sm-5">
-                                            <input id="grade_name" class="form-control" type="text" name="grade_name"/>
-                                        </div>	
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label"><?php echo ucwords("From Percentage");?><span style="color:red">*</span></label>
-                                        <div class="col-sm-5">
-                                            <input type="number" class="form-control" name="from_marks" id="from_marks" min="0"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label"><?php echo ucwords("To Percentage");?><span style="color:red">*</span></label>
-                                        <div class="col-sm-5">
-                                            <input type="number" class="form-control" name="to_marks" id="to_marks"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
-                                        <div class="col-sm-5">	
-                                            <div class="chat-message-box">
-                                                <textarea name="description" id="description" rows="3" class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-3 col-sm-5">
-                                            <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
-                                        </div>
-                                    </div> 
-                                    </form>
-                                </div>
+                                
                                 <!----CREATION FORM ENDS-->
                             </div>
                         </div>
@@ -128,30 +86,21 @@
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
+     <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+    <div class="md-fab-wrapper">
 
-                                                        $(document).ready(function () {
-                                                            $("#gradeform").validate({
-                                                                rules: {
-                                                                    grade_name: "required",
-                                                                    from_marks: "required",
-                                                                    to_marks: "required"
-                                                                },
-                                                                messages: {
-                                                                    grade_name: "Please enter grade name",
-                                                                    from_marks: "Please enter valid grade number percentage",
-                                                                    to_marks: "Please enter valid grade number percentage"
-                                                                },
-                                                            });
-                                                        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('#from_marks').on('blur', function () {
-                $('#to_marks').attr('min', $(this).val());
-                $('#to_marks').attr('required', 'required');
-            });
-        })
-    </script>
-    <?php include('plus_icon.php'); ?>
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addgrade/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>

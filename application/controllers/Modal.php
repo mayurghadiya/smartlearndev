@@ -8,6 +8,7 @@ class Modal extends CI_Controller {
         parent::__construct();
 		$this->load->database();
 		$this->load->library('session');
+                  $this->load->model('admin/Crud_model');
 		/*cache control*/
                 $this->load->helper('system_setting');
 		$this->output->set_header('Last-Modified: ' . gmdate("D, d M Y H:i:s") . ' GMT');
@@ -32,6 +33,37 @@ class Modal extends CI_Controller {
 		$account_type		=	$this->session->userdata('login_type');
 		$page_data['param2']		=	$param2;
 		$page_data['param3']		=	$param3;
+                if($page_name=="add_exam_schedual"){
+                    $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    $page_data['course'] = $this->Crud_model->get_all_course();
+                    $page_data['semester'] = $this->Crud_model->get_all_semester();
+                    $page_data['time_table'] = $this->Crud_model->time_table();
+                }
+                if($page_name=="addexam")
+                {
+                    $page_data['exams'] = $this->Crud_model->exam_details();
+                    $page_data['exam_type'] = $this->Crud_model->get_all_exam_type();
+                    $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    $page_data['course'] = $this->Crud_model->get_all_course();
+                    $page_data['semester'] = $this->Crud_model->get_all_semester();
+                    //$page_data['centerlist'] = $this->db->get('center_user')->result(); 
+                }
+                if($page_name=="addremedial")
+                {
+                    $page_data['exams'] = $this->Crud_model->exam_details();
+                    $page_data['exam_type'] = $this->Crud_model->get_all_exam_type();
+                    $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    $page_data['course'] = $this->Crud_model->get_all_course();
+                    $page_data['semester'] = $this->Crud_model->get_all_semester();
+                    //$page_data['centerlist'] = $this->db->get('center_user')->result(); 
+                }
+                if($page_name=="addremedial_schedual")
+                {
+                     $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    $page_data['course'] = $this->Crud_model->get_all_course();
+                    $page_data['semester'] = $this->Crud_model->get_all_semester();
+                    $page_data['time_table'] = $this->Crud_model->time_table();
+                }
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		
 		echo '<script src="http://192.168.1.13/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
 	}
