@@ -37,6 +37,16 @@ class Admin extends CI_Controller {
     public function index($param1 = 'student') {
         redirect(base_url('admin/dashboard'));
     }
+    function savedata($table='',$id='')
+    {
+        $column = $this->input->post('column');
+        $editval = strip_tags($this->input->post('editval'));
+        $update_id = $this->input->post("id");        
+        $data = array($column=>$editval);
+        $this->db->where($id,$update_id);
+        $this->db->update($table,$data);
+        
+    }
 
     function status($str) {
         if ($str) {

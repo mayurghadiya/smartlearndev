@@ -44,15 +44,18 @@
 	height: 10%;
 }
 
-.fc-five-rows .fc-row  {
+/*.fc-five-rows .fc-row  {
 	height: 8.4%;
 }
-
+*/
 .fc-six-rows .fc-row {
-	height: 16.66%;
+  height: 22.5px;
+}
+.fc-six-rows .fc-row {
+	/*height: 16.66%;
 	height: -moz-calc(100%/6);
-	height: -webkit-calc(100%/6);
-	height: 19px;
+	height: -webkit-calc(100%/6);*/
+	height: 23px;
 }
 
 .fc-calendar .fc-row > div,
@@ -72,11 +75,18 @@
 	width:  14.2%;
 }
 
-.fc-calendar .fc-row > div {
+/*.fc-calendar .fc-row > div {
 	border-right: 1px solid #ddd;
 	padding: 4px;
 	overflow: hidden;
 	position: relative;
+}*/
+.fc-calendar .fc-row > div {
+  border-right: 1px solid #ddd;
+  height: 18px;
+  overflow: hidden;
+  padding: 4px;
+  position: relative;
 }
 
 .fc-calendar .fc-head > div {

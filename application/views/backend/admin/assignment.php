@@ -90,7 +90,7 @@
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>	
                                                    	
-                                                    <td><?php echo $row->assign_title; ?></td>	
+                                                    <td ><?php echo $row->assign_title; ?></td>	
                                                      <td><?php foreach($degree as $dgr): 
                                                         if($dgr->d_id==$row->assign_degree):
                                                             
@@ -127,9 +127,10 @@
                                                         }
                                                         ?>													
                                                     </td>	
-                                                     <td><?php echo  wordwrap($row->assign_desc,30,"<br>\n");?></td>
+                                                    <!-- id="inlinedate" contenteditable="true" onBlur="saveToDatabase(this,'assign_dos','<?php echo $row->assign_id; ?>')" onClick="showEdit(this);"-->
+                                                     <td  ><?php echo  wordwrap($row->assign_desc,30,"<br>\n");?></td>
                                                     <td id="downloadedfile"><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
-                                                    <td><?php echo date_formats($row->assign_dos); ?></td>	
+                                                    <td ><?php echo date_formats($row->assign_dos); ?></td>	
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn  menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
@@ -313,7 +314,7 @@
     </style>
     
  <script type="text/javascript">
-        $(document).ready(function () {
+           $(document).ready(function () {
             "use strict";
             $('#sub-tables').dataTable({
                 "order": [[0, "desc"]],
@@ -360,3 +361,25 @@
             <i class="material-icons">&#xE145;</i>
         </a>
     </div>
+    <script>
+        $().ready(function () {
+        $("#inlinedate").datepicker({
+            dateFormat: ' MM dd, yy',
+            minDate: 0
+        });
+       		function showEdit(editableObj) {
+			$(editableObj).css("background","#FFF");
+		} 
+		
+		function saveToDatabase(editableObj,column,id) {
+			$(editableObj).css("background","#FFF url(loaderIcon.gif) no-repeat right");
+			$.ajax({
+				url: "<?php echo base_url().'admin/savedata/assignment_manager/assign_id' ?>",
+				type: "POST",
+				data:'column='+column+'&editval='+editableObj.innerHTML+'&id='+id,
+				success: function(data){                                
+					$(editableObj).css("background","#FDFDFD");
+				}        
+		   });
+		}
+		</script>
