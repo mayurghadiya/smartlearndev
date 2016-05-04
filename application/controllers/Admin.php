@@ -370,7 +370,6 @@ class Admin extends CI_Controller {
     function system_settings($param1 = '', $param2 = '', $param3 = '') {
 
         if ($param1 == 'do_update') {
-
             $data['description'] = $this->input->post('system_name');
             $this->db->where('type', 'system_name');
             $this->db->update('system_setting', $data);
@@ -413,6 +412,10 @@ class Admin extends CI_Controller {
 
             $data['description'] = $this->input->post('text_align');
             $this->db->where('type', 'text_align');
+            $this->db->update('system_setting', $data);
+            
+            $data['description'] = $this->input->post('countryCode');
+            $this->db->where('type', 'country_code');
             $this->db->update('system_setting', $data);
             //$path = "uploads/system_image/" . $this->session->userdata('admin_id');
             //unlink($path);

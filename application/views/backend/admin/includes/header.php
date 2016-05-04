@@ -118,7 +118,7 @@
                                     <div class="vd_mega-menu pull-right">                                        
                                         <ul class="mega-ul">
                                             <li id="top-menu-1"  class="one-icon mega-li"> 
-                                                <span class="icon-phone" > <a href="tel:<?php echo system_info('phone'); ?>"><?php echo system_info('phone'); ?></a></span>
+                                                <span class="icon-phone" > <a href="tel:+<?php echo system_info('country_code'); ?> <?php echo system_info('phone'); ?>">+<?php echo system_info('country_code'); ?> <?php echo system_info('phone'); ?></a></span>
                                             </li>
                                             <li id="top-menu-88"  class="one-icon mega-li"> 
                                                 <span class="fa fa-envelope" > &nbsp;<a href="mail:<?php echo system_info('system_email'); ?>"><?php echo system_info('system_email'); ?></a></span>
