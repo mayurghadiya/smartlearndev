@@ -119,6 +119,26 @@
 </div>
 
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var table = $('#example').DataTable();
+
+        $("#example tfoot th").each(function (i) {
+            var select = $('<select><option value=""></option></select>')
+                    .appendTo($(this).empty())
+                    .on('change', function () {
+                        table.column(i)
+                                .search($(this).val())
+                                .draw();
+                    });
+
+            table.column(i).data().unique().sort().each(function (d, j) {
+                select.append('<option value="' + d + '">' + d + '</option>')
+            });
+        });
+    });
+</script>
 <style>
     .nav-fixedtabs {
     left: 86%;
