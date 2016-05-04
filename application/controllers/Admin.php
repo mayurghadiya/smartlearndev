@@ -37,6 +37,16 @@ class Admin extends CI_Controller {
     public function index($param1 = 'student') {
         redirect(base_url('admin/dashboard'));
     }
+    function savedata($table='',$id='')
+    {
+        $column = $this->input->post('column');
+        $editval = strip_tags($this->input->post('editval'));
+        $update_id = $this->input->post("id");        
+        $data = array($column=>$editval);
+        $this->db->where($id,$update_id);
+        $this->db->update($table,$data);
+        
+    }
 
     function status($str) {
         if ($str) {
@@ -4403,10 +4413,10 @@ class Admin extends CI_Controller {
 
     function getassignment($param = '') {
         if ($param = 'allassignment') {
-            $degree = $this->input->post('degree');
+           $degree = $this->input->post('degree');
             $course = $this->input->post('course');
-            $batch = $this->input->post('batch');
-            $semester = $this->input->post("semester");
+           $batch = $this->input->post('batch');
+             $semester = $this->input->post("semester");
             $data['course'] = $this->db->get('course')->result();
             $data['semester'] = $this->db->get('semester')->result();
             $data['batch'] = $this->db->get('batch')->result();
@@ -4415,8 +4425,8 @@ class Admin extends CI_Controller {
             $this->db->where("assign_batch", $batch);
             $this->db->where("assign_degree", $degree);
             $this->db->where("assign_sem", $semester);
-            $data['param'] = $param;
-            $data['assignment'] = $this->db->get('assignment_manager')->result();
+            $data['param'] = $param;            
+            $data['assignment'] = $this->db->get('assignment_manager')->result();         
 
             $this->load->view("backend/admin/getassignment", $data);
         }

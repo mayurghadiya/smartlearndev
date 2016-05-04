@@ -8,13 +8,14 @@
                                                 <th><div>Course</div></th>
                                                 <th><div>Branch</div></th>												
                                                 <th><div>Batch</div></th>												
-                                                <th><div>Semester</div></th>												
-                                                <th><div>Downloadable File</div></th>
-                                                <th><div>Date of submission</div></th>												
-                                                <th><div>Operation</div></th>											
+                                                <th><div>Semester</div></th>	
+                                                 <th><div><?php echo ucwords("Description");?></div></th>
+                                                <th><div>File</div></th>
+                                                <th><div>Date of Submission</div></th>												
+                                                <th><div>Action</div></th>											
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody>                                           
                                             <?php $count = 1;
                                             foreach ($assignment as $row):
                                                 ?>
@@ -57,7 +58,8 @@
                                                             }
                                                         }
                                                         ?>													
-                                                    </td>	
+                                                    </td>
+                                                     <td  ><?php echo  wordwrap($row->assign_desc,30,"<br>\n");?></td>
                                                     <td><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	
                                                     <td><?php echo date('F d, Y',strtotime($row->assign_dos)); ?></td>	
                                                     <td class="menu-action">

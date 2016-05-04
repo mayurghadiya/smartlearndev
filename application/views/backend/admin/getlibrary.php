@@ -8,9 +8,8 @@
                 <th><div>Branch</div></th>												
                 <th><div>Batch</div></th>												
                 <th><div>Semester</div></th>												
-                <th><div>Downloadable File</div></th>
-                <th><div>Date of submission</div></th>												
-                <th><div>Operation</div></th>											
+                <th><div>File</div></th>              
+                <th><div>Action</div></th>											
             </tr>
         </thead>
         <tbody>

@@ -1,12 +1,13 @@
 /* Custom calendar elements */
 
 .custom-calendar-wrap {
-	margin: 11px auto;
-	position: relative;
-	overflow: hidden;
-        width: 80%;
-        background: #fff;
-        border: 1px solid #ccc;
+  background: #fff none repeat scroll 0 0;
+  border: 0 solid #ccc;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .custom-inner {
@@ -51,11 +52,25 @@ position: absolute;
 	text-transform: uppercase;
 }
 
+/*.custom-header h2 {
+  color: #495468;
+  font-size: 16px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}*/
 .custom-header h2 {
-	color: #495468;
-	font-weight: 300;
-	font-size: 9px;
-/*	margin-top: 10px;*/
+  color: #495468;
+  font-size: 16px;
+  font-weight: bold;
+  height: 26px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .custom-header h3 {
@@ -64,14 +79,15 @@ position: absolute;
 	color: #b7bbc2;
 }
 
-.custom-header nav span {
+/*.custom-header nav span {
 	position: absolute;
-	top: 6px;
+	top: 15px;
 	width: 30px;
-	height: 10px;
+	height: auto;
 	color: transparent;
 	cursor: pointer;
-	margin: 0 1px;
+	margin: 0;
+	padding: 0;
 	font-size: 10px;
 	line-height: 0px;
 	-webkit-touch-callout: none;
@@ -80,6 +96,18 @@ position: absolute;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}*/
+.custom-header nav span {
+  -moz-user-select: none;
+  color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  height: auto;
+  line-height: 0;
+  margin: 0;
+  position: absolute;
+  top: 12px;
+  width: 30px;
 }
 
 .custom-header nav span:first-child {
@@ -147,12 +175,19 @@ position: absolute;
 	color: #fff;
 }
 
-.custom-content-reveal a,
+/*.custom-content-reveal a,
 .custom-content-reveal span {
 	display: block;
     font-size: 13px;
     letter-spacing: 0.1px;
     padding: 6px 10px;
+}*/
+.custom-content-reveal a, .custom-content-reveal span {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  line-height: 22px;
+  padding: 6px 10px;
 }
 
 .custom-content-reveal h4 {
@@ -273,12 +308,13 @@ position: absolute;
 		height: 300px;
 	}
 	.fc-calendar .fc-row > div > span.fc-date {
-		font-size: 10px;
+		font-size: 14px;
+		height: 16px;
 	}
 }
 .fc-calendar .fc-row > div.fc-content:after {
     line-height: 13px;
 }
 section.scroll_none{
-    height: 150px; overflow: hidden; background: #fff !important;
+    height: 180px; overflow: hidden; background: #fff !important;
 }
