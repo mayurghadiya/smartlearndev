@@ -1,0 +1,27 @@
+
+.custom-header {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #42c0fb !important;
+    height: 23px;
+    padding: 6px;
+    position: relative;
+}
+.fc-six-rows .fc-row {
+    height: 16.66%;
+    height: -moz-calc(100%/6);
+    height: -webkit-calc(100%/6);
+    height: 66px;
+}
+
+.fc-five-rows .fc-row {
+    height: 21.4%;
+}
+.fc-calendar .fc-row > div.fc-content:after {
+    
+    bottom: 8px;
+}
+.fc-calendar .fc-head {
+   
+    margin-top: 10px;
+}

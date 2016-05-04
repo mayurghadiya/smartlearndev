@@ -1224,4 +1224,86 @@ class Crud_model extends CI_Model {
         $this->db->get_where('graduates', array("graduates_id" => $id))->result();
     }
 
+    /**
+     * Get filter exam
+     * @param type $degree
+     * @param type $course
+     * @param type $batch
+     * @param type $semester
+     * @return type
+     */
+    function get_exam_filter($degree, $course, $batch, $semester) {
+        return $this->db->select('exam_manager.*, exam_type.*, course.*, semester.*, batch.*, degree.*')
+                        ->from('exam_manager')
+                        ->join('exam_type', 'exam_type.exam_type_id = exam_manager.em_type')
+                        ->join('course', 'course.course_id = exam_manager.course_id')
+                        ->join('semester', 'semester.s_id = exam_manager.em_semester')
+                        ->join('batch', 'batch.b_id = exam_manager.batch_id')
+                        ->join('degree', 'degree.d_id = exam_manager.degree_id')
+                        ->where(array(
+                            'exam_manager.degree_id' => $degree,
+                            'exam_manager.course_id' => $course,
+                            'exam_manager.batch_id' => $batch,
+                            'exam_manager.em_semester' => $semester
+                        ))
+                        ->order_by('em_date', 'DESC')
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Exam schedule filter
+     * @param string $degree
+     * @param string $course
+     * @param string $batch
+     * @param string $semester
+     * @param string $exam
+     * @return mixed
+     */
+    function exam_schedule_filter($degree, $course, $batch, $semester, $exam) {
+        return $this->db->select()
+                        ->from('exam_time_table')
+                        ->join('exam_manager', 'exam_manager.em_id = exam_time_table.exam_id')
+                        ->join('subject_manager', 'subject_manager.sm_id = exam_time_table.subject_id')
+                        ->join('course', 'course.course_id = exam_manager.course_id')
+                        ->join('semester', 'semester.s_id = exam_manager.em_semester')
+                        ->join('batch', 'batch.b_id = exam_time_table.batch_id')
+                        ->join('degree', 'degree.d_id = exam_time_table.degree_id')
+                        ->where(array(
+                            'exam_time_table.degree_id' => $degree,
+                            'exam_time_table.course_id' => $course,
+                            'exam_time_table.batch_id' => $batch,
+                            'exam_time_table.semester_id' => $semester,
+                            'exam_time_table.exam_id' => $exam
+                        ))
+                        ->order_by('em_date', 'DESC')
+                        ->get()
+                        ->result();
+    }
+
+    /**
+     * Fee structure filter
+     * @param string $degree
+     * @param string $course
+     * @param string $batch
+     * @param string $semeter
+     * @return mixed
+     */
+    function fee_structure_filter($degree, $course, $batch, $semeter) {
+        return $this->db->select()
+                        ->from('fees_structure')
+                        ->join('course', 'course.course_id = fees_structure.course_id')
+                        ->join('semester', 'semester.s_id = fees_structure.sem_id')
+                        ->join('batch', 'batch.b_id = fees_structure.batch_id')
+                        ->join('degree', 'degree.d_id = fees_structure.degree_id')
+                        ->where(array(
+                            'fees_structure.degree_id' => $degree,
+                            'fees_structure.course_id' => $course,
+                            'fees_structure.batch_id' => $batch,
+                            'fees_structure.sem_id' => $semeter
+                        ))->order_by('created_at', 'DESC')
+                        ->get()
+                        ->result();
+    }
+
 }

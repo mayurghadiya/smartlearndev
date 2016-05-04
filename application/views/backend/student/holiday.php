@@ -2,13 +2,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/demo.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/calendar.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/std_event/css/custom_2.css" />
-<style>
-    section.scroll_none {
-    background: #fff none repeat scroll 0 0 !important;
-    height: 500px;
-    overflow: hidden;
-}
-    </style>
+
 <?php
 $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->row()->description;
 
@@ -23,8 +17,15 @@ if ($skin == 'theme_green.min.css') {
     <link href="<?= $this->config->item('css_path') ?>student/event_gold.css" rel="stylesheet">
 <?php } else { ?>
     <link href="<?= $this->config->item('css_path') ?>student/event_default.css" rel="stylesheet">			
-<?php } ?>     
-
+<?php } ?>  
+    <link href="<?= $this->config->item('css_path') ?>student/holiday_css.css" rel="stylesheet">			
+<style>
+    section.scroll_none {
+    background: #fff none repeat scroll 0 0 !important;
+    height: 500px;
+    overflow: hidden;
+}
+</style>
 
 <script src="<?php echo base_url() ?>assets/std_event/js/modernizr.custom.63321.js"></script>
 <?php ?>

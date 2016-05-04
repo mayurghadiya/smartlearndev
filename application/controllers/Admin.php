@@ -5476,6 +5476,46 @@ class Admin extends CI_Controller {
         $students = $this->Crud_model->due_payment_student_list($course, $sem, $fee_id);
     }
     
+    /**
+     * Exam ajax filter
+     * @param string $degree
+     * @param string $course
+     * @param string $batch
+     * @param string $semester
+     */
+    function get_exam_filter($degree, $course, $batch, $semester) {
+        $this->load->model('admin/Crud_model');
+        $data['exams'] = $this->Crud_model->get_exam_filter($degree, $course, $batch, $semester);
+        $this->load->view("backend/admin/exam_filter", $data);
+    }
+    
+    /**
+     * Exam schedule ajax filter
+     * @param string $degree
+     * @param string $course
+     * @param string $batch
+     * @param string $semester
+     * @param string $exam
+     */
+    function get_exam_schedule_filter($degree, $course, $batch, $semester, $exam) {
+        $this->load->model('admin/Crud_model');
+        $data['time_table'] = $this->Crud_model->exam_schedule_filter($degree, $course, $batch, $semester, $exam);
+        $this->load->view("backend/admin/exam_schedule_filter", $data);
+    }
+    
+    /**
+     * Fee structure ajax filter
+     * @param string $degree
+     * @param string $course
+     * @param string $batch
+     * @param string $semester
+     */
+    function fee_structure_filter($degree, $course, $batch, $semester) {
+        $this->load->model('admin/Crud_model');
+        $data['fees_structure'] = $this->Crud_model->fee_structure_filter($degree, $course, $batch, $semester);
+        $this->load->view("backend/admin/fee_structure_filter", $data);
+    }
+    
     function test()
     {
 //        $this->load->model('admin/Crud_model');
