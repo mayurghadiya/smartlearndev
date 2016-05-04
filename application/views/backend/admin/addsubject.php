@@ -72,36 +72,36 @@
                </div>
     <script type="text/javascript">
         
-         $( "#addsubject" ).click(function( event ) {
-          if($("#subname").val()!=null & $("#semester").val()!=null & $("#subcode").val()!=null & $("#course").val()!=null )
-          { 
-         $.ajax({
-                    type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/checksubjects'; ?>",
-                    dataType:'json',
-                   data:
-                        {
-                            'subname':$("#subname").val(),
-                            'semester':$("#semester").val(),
-                            'subcode':$("#subcode").val(),
-                            'course':$("#course").val()
-                        }, 
-                                success:function(response){
-                                    if(response.length == 0){
-                                         $("#error_lable_exist").html('');
-                                    $('#frmsubject').attr('validated',true);
-                                    $('#frmsubject').submit();
-                                     } else
-                                         {
-                                             $("#error_lable_exist").html('Record is already present in the system');
-                                         return false;
-                                     }
-                    }
-                });
-                    return false; 
-                    }
-        event.preventDefault();
-      });
+//         $( "#addsubject" ).click(function( event ) {
+//          if($("#subname").val()!=null & $("#semester").val()!=null & $("#subcode").val()!=null & $("#course").val()!=null )
+//          { 
+//         $.ajax({
+//                    type:"POST",
+//                    url:"<?php echo base_url().'index.php?admin/checksubjects'; ?>",
+//                    dataType:'json',
+//                   data:
+//                        {
+//                            'subname':$("#subname").val(),
+//                            'semester':$("#semester").val(),
+//                            'subcode':$("#subcode").val(),
+//                            'course':$("#course").val()
+//                        }, 
+//                                success:function(response){
+//                                    if(response.length == 0){
+//                                         $("#error_lable_exist").html('');
+//                                    $('#frmsubject').attr('validated',true);
+//                                    $('#frmsubject').submit();
+//                                     } else
+//                                         {
+//                                             $("#error_lable_exist").html('Record is already present in the system');
+//                                         return false;
+//                                     }
+//                    }
+//                });
+//                    return false; 
+//                    }
+//        event.preventDefault();
+//      });
        $("#course").change(function () {
         var course = $(this).val();
         var degree = $("#degree").val();
