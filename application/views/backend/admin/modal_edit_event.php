@@ -64,7 +64,7 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                             <?php
                             $group = $this->db->get('group')->result();
                             ?>
-                            <option>Select</option>
+                            <option value="">Select</option>
                             <?php foreach ($group as $gp) { ?>
                                 <option value="<?php echo $gp->g_id; ?>"
                                         <?php if ($gp->g_id == $row['group_id']) echo 'selected'; ?>><?php echo $gp->group_name; ?></option>
