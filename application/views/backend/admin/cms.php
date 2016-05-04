@@ -79,47 +79,7 @@
 
                             <!----CREATION FORM STARTS---->
                             <div class="tab-pane box" id="add" style="padding: 5px">
-                                <div class="box-content">
- <div class="">
-                                    <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
-                                </div>                                      
-<?php echo form_open(base_url() . 'index.php?admin/cms/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'cmsform', 'target' => '_top')); ?>
-                                    <div class="padded">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Page Name");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="c_title" id="	c_title"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Page Slug");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" name="c_slug" id="c_slug"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group" id="ck-editor">					
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Page Content");?><span style="color:red">*</span></label>
-                                            <div class="col-sm-7">		
-                                                <textarea name="c_description"  class="ckeditor" data-rel="ckeditor" rows="3" required></textarea>
-                                            </div>														
-                                        </div> 
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
-                                            <div class="col-sm-5">
-                                                <select name="c_status">
-                                                    <option value="1">Active</option>
-                                                    <option value="0">Inactive</option>		
-                                                </select>
-                                            </div>	
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-3 col-sm-5">
-                                                <button type="submit" class="btn btn-info vd_bg-green"><?php echo ucwords("Add");?></button>
-                                            </div>
-                                        </div>
-                                        </form>               
-                                    </div>                
-                                </div>
+                                
                                 <!----CREATION FORM ENDS-->
                             </div>
                         </div>
@@ -129,47 +89,28 @@
         </div>
         <!-- row --> 
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <!-- Specific Page Scripts Put Here -->
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/ckeditor/adapters/jquery.js"></script>
+   
 
     <!-- Specific Page Scripts END -->
     <script type="text/javascript">
-                                                                                                                        $(window).load(function ()
-                                                                                                                        {
-                                                                                                                            //CKEDITOR.replace( $('[data-rel^="ckeditor"]') );
-                                                                                                                            //$('.ckeditor').ckeditor();                                                                
-                                                                                                                        })
     </script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    <script type="text/javascript">
-                                                                                                                        $.validator.setDefaults({
-                                                                                                                            submitHandler: function (form) {
-                                                                                                                                form.submit();
-                                                                                                                            }
-                                                                                                                        });
+    <style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+    <div class="md-fab-wrapper">
 
-                                                                                                                        $().ready(function () {
-                                                                                                                            $("#cmsform").validate({
-                                                                                                                                ignore: [],
-                                                                                                                                rules: {
-                                                                                                                                    content_data: {
-                                                                                                                                        required: function () {
-                                                                                                                                            CKEDITOR.instances.content_data.updateElement();
-                                                                                                                                        }
-                                                                                                                                    },
-                                                                                                                                    c_title: "required",
-                                                                                                                                    c_slug: "required",
-                                                                                                                                    c_description: "required",
-                                                                                                                                },
-                                                                                                                                messages: {
-                                                                                                                                    c_title: "Please enter title",
-                                                                                                                                    c_slug: "Please select slug",
-                                                                                                                                    c_description: "Please enter page content",
-                                                                                                                                }
-                                                                                                                            });
-                                                                                                                        });
-    </script>
-<?php include('plus_icon.php'); ?>
+        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addcms/');" href="#" id="navfixed" data-toggle="tab">
+            <i class="material-icons">&#xE145;</i>
+        </a>
+    </div>
