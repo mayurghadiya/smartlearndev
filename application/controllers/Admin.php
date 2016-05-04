@@ -292,11 +292,28 @@ class Admin extends CI_Controller {
     }
 
     function check_batch() {
-        $degree = implode(',', $this->input->post("degree"));
-        $course = implode(',', $this->input->post("course"));
-        $batchname = $this->input->post('batch');
-        $data = $this->db->query("select * from batch where degree_id in($degree) and course_id in($course) and b_name='".$batchname."'")->result_array();
-       echo json_encode($data);
+//        $degree = implode(',', $this->input->post("degree"));
+//        $course = implode(',', $this->input->post("course"));
+//        $batchname = $this->input->post('batch');
+//       // $data = $this->db->query("select * from batch where  FIND_IN_SET('degree_id','".$degree."') and  FIND_IN_SET('course_id','".$course."') and b_name='".$batchname."'")->result_array();
+//        $data= $batch = $this->Crud_model->batch_list_from_degree_and_course($degree, $course);
+         
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+        $query = 'SELECT * FROM `batch` WHERE b_name="'.$this->input->post('batch').'" AND '; // construct query
+        foreach ($degree as $d)
+        {
+            $query .= "FIND_IN_SET($d, degree_id) AND "; // append every time for set 
+        }
+        foreach ($course as $c)
+        {
+            $query .= "FIND_IN_SET($c, course_id) AND "; // append every time for set 
+        }
+        
+        $query = rtrim($query, ' AND'); // remove last AND
+
+        $data=$this->db->query($query)->result_array();
+        echo json_encode($data);
     }
 
     /*     * *MANAGE Events
@@ -5448,5 +5465,40 @@ class Admin extends CI_Controller {
 
         $students = $this->Crud_model->due_payment_student_list($course, $sem, $fee_id);
     }
+    
+    function test()
+    {
+//        $this->load->model('admin/Crud_model');
+//        $degree = explode(',', '1,2,3');
+//        $course = explode(',', '1,2,3');
+//        $data=$this->Crud_model->test($degree,$course);
+//        echo "<pre>";
+//        var_dump($data);
+        $bloggerscat = '2,3'; // Your input here (string)
+        $degree='1,2';
+        
+        $set = explode(',',$bloggerscat); // get the numbers in $set array
+        $degreeid=explode(',',$degree);
+        
+        $query = 'SELECT * FROM `batch` WHERE b_name="cgvdfg" AND '; // construct query
+
+        foreach ($set as $search)
+        {
+            $query .= "FIND_IN_SET($search, course_id) AND "; // append every time for set 
+        }
+        foreach ($degreeid as $search1)
+        {
+            $query .= "FIND_IN_SET($search1, degree_id) AND "; // append every time for set 
+        }
+        
+        $query = rtrim($query, ' AND'); // remove last OR
+
+        echo $query; // test
+        
+        
+       
+
+    }
+    
 
 }
