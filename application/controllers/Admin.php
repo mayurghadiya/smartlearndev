@@ -27,7 +27,7 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
-        
+              
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
@@ -292,11 +292,28 @@ class Admin extends CI_Controller {
     }
 
     function check_batch() {
-        $degree = implode(',', $this->input->post("degree"));
-        $course = implode(',', $this->input->post("course"));
-        $batchname = $this->input->post('batch');
-        $data = $this->db->query("select * from batch where degree_id in($degree) and course_id in($course) and b_name='".$batchname."'")->result_array();
-       echo json_encode($data);
+//        $degree = implode(',', $this->input->post("degree"));
+//        $course = implode(',', $this->input->post("course"));
+//        $batchname = $this->input->post('batch');
+//       // $data = $this->db->query("select * from batch where  FIND_IN_SET('degree_id','".$degree."') and  FIND_IN_SET('course_id','".$course."') and b_name='".$batchname."'")->result_array();
+//        $data= $batch = $this->Crud_model->batch_list_from_degree_and_course($degree, $course);
+         
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+        $query = 'SELECT * FROM `batch` WHERE b_name="'.$this->input->post('batch').'" AND '; // construct query
+        foreach ($degree as $d)
+        {
+            $query .= "FIND_IN_SET($d, degree_id) AND "; // append every time for set 
+        }
+        foreach ($course as $c)
+        {
+            $query .= "FIND_IN_SET($c, course_id) AND "; // append every time for set 
+        }
+        
+        $query = rtrim($query, ' AND'); // remove last AND
+
+        $data=$this->db->query($query)->result_array();
+        echo json_encode($data);
     }
 
     /*     * *MANAGE Events
@@ -353,7 +370,6 @@ class Admin extends CI_Controller {
     function system_settings($param1 = '', $param2 = '', $param3 = '') {
 
         if ($param1 == 'do_update') {
-
             $data['description'] = $this->input->post('system_name');
             $this->db->where('type', 'system_name');
             $this->db->update('system_setting', $data);
@@ -396,6 +412,10 @@ class Admin extends CI_Controller {
 
             $data['description'] = $this->input->post('text_align');
             $this->db->where('type', 'text_align');
+            $this->db->update('system_setting', $data);
+            
+            $data['description'] = $this->input->post('countryCode');
+            $this->db->where('type', 'country_code');
             $this->db->update('system_setting', $data);
             //$path = "uploads/system_image/" . $this->session->userdata('admin_id');
             //unlink($path);
@@ -1263,8 +1283,7 @@ class Admin extends CI_Controller {
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $checkstd = $this->input->post('student');
-            if(empty($checkstd))
-            {
+            if (empty($checkstd)) {
                 $this->session->set_flashdata('flash_message', "Student not found, data not added!");
                 redirect(base_url() . 'admin/project/', 'refresh');
             }
@@ -1329,9 +1348,8 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/project/', 'refresh');
         }
         if ($param1 == 'do_update') {
-                $checkstd = $this->input->post('student');
-            if(empty($checkstd))
-            {
+            $checkstd = $this->input->post('student');
+            if (empty($checkstd)) {
                 $this->session->set_flashdata('flash_message', "Student not found, data not added!");
                 redirect(base_url() . 'admin/project/', 'refresh');
             }
@@ -1450,7 +1468,7 @@ class Admin extends CI_Controller {
             $data['lm_url'] = $file_url;
             $data['lm_semester'] = $this->input->post('semester');
             $data['lm_desc'] = $this->input->post('description');
-          
+
             $data['lm_status'] = 1;
             //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
@@ -1574,7 +1592,7 @@ class Admin extends CI_Controller {
             $data['lm_batch'] = $this->input->post('batch');
             $data['lm_url'] = $file_url;
             $data['lm_semester'] = $this->input->post('semester');
-            $data['lm_desc'] = $this->input->post('description');           
+            $data['lm_desc'] = $this->input->post('description');
             $data['lm_status'] = 1;
             //  $data['lm_student_id'] = $this->input->post('student');
             $data['lm_course'] = $this->input->post('course');
@@ -1607,11 +1625,11 @@ class Admin extends CI_Controller {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-            
+
             $data['pp_degree'] = $this->input->post('degree');
             $data['pp_title'] = $this->input->post('title');
             $data['pp_batch'] = $this->input->post('batch');
-           
+
             $data['pp_semester'] = $this->input->post('semester');
             $data['pp_desc'] = $this->input->post('description');
             $data['pp_dos'] = $this->input->post('dateofsubmission');
@@ -1691,10 +1709,10 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash_message', 'Participate Added Successful');
             redirect(base_url() . 'admin/participate/', 'refresh');
         }
-        if ($param1 == 'do_update') {            
+        if ($param1 == 'do_update') {
             $data['pp_degree'] = $this->input->post('degree');
             $data['pp_title'] = $this->input->post('title');
-            $data['pp_batch'] = $this->input->post('batch');           
+            $data['pp_batch'] = $this->input->post('batch');
             $data['pp_semester'] = $this->input->post('semester');
             $data['pp_desc'] = $this->input->post('description');
             $data['pp_dos'] = $this->input->post('dateofsubmission1');
@@ -3476,14 +3494,14 @@ class Admin extends CI_Controller {
      * @param type $semester_id
      * 
      */
-    function get_exam_list($course_id = '', $semester_id = '', $time_table = '') {
+    function get_exam_list($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $time_table = '') {
         $this->load->model('admin/Crud_model');
-        $exam_detail = $this->Crud_model->get_exam_list($course_id, $semester_id);
+        $exam_detail = $this->Crud_model->get_exam_list($degree_id, $course_id, $batch_id, $semester_id);
         echo "<option value=''>Select</option>";
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
+                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3502,7 +3520,7 @@ class Admin extends CI_Controller {
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ') - ' . ucfirst($row->exam_ref_name); ?></option>
+                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ') - ' . ucfirst($row->exam_ref_name); ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3521,7 +3539,7 @@ class Admin extends CI_Controller {
         foreach ($exam_detail as $row) {
             ?>
             <option value="<?php echo $row->em_id ?>"
-            <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
+                    <?php if ($row->em_id == $time_table) echo 'selected'; ?>><?php echo $row->em_name . '  (Marks' . $row->total_marks . ')'; ?></option>
             <!--echo "<option value={$row->em_id}>{$row->em_name}  (Marks{$row->total_marks})</option>";-->
             <?php
         }
@@ -3539,7 +3557,7 @@ class Admin extends CI_Controller {
         foreach ($subjects as $row) {
             ?>
             <option value="<?php echo $row->sm_id; ?>"
-            <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
+                    <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
             <!--echo "<option value={$row->sm_id}>{$row->subject_name}  (Code: {$row->subject_code})</option>";-->
             <?php
         }
@@ -3661,7 +3679,8 @@ class Admin extends CI_Controller {
             $page_data['subject_details'] = $this->Crud_model->exam_time_table_subject_list($exam_id);
 
             //student list
-            $page_data['student_list'] = $this->Crud_model->student_list_by_course_semester($course_id, $semester_id);
+            $page_data['student_list'] = $this->Crud_model->student_list_by_course_semester($degree_id, $course_id, $batch_id, $semester_id);
+            
         }
         $page_data['degree'] = $this->Crud_model->get_all_degree();
         $page_data['course'] = $this->Crud_model->get_all_course();
@@ -4301,17 +4320,16 @@ class Admin extends CI_Controller {
             } else {
                 $html .='<div class="checkedstudent"><input type="checkbox" class="checkbox1" onclick="uncheck();" name="student[]" value="' . $rowstu->std_id . '">' . $rowstu->std_first_name . '&nbsp' . $rowstu->std_last_name . '</div>';
             }
-        }      
+        }
         echo $html;
     }
-    
-    function checkprojectstd()
-    {
-          $batch = $this->input->post("batch");
+
+    function checkprojectstd() {
+        $batch = $this->input->post("batch");
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
-         $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
         if (count($datastudent) > 0) {
             echo "true";
         } else {
@@ -4753,7 +4771,8 @@ class Admin extends CI_Controller {
                     'pm_batch' => $batch, 'pm_semester' => $semester))->result_array();
         echo json_encode($data);
     }
-    function checkprjectsedit($id= '') {
+
+    function checkprjectsedit($id = '') {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
         $batch = $this->input->post('batch');
@@ -4762,10 +4781,10 @@ class Admin extends CI_Controller {
         $data = $this->db->get_where('project_manager', array('pm_degree' => $degree,
                     'pm_course' => $course,
                     'pm_title' => $title,
-                    'pm_batch' => $batch, 'pm_semester' => $semester,'pm_id!='=>$id))->result_array();
+                    'pm_batch' => $batch, 'pm_semester' => $semester, 'pm_id!=' => $id))->result_array();
         echo json_encode($data);
     }
-    
+
     function checkprject($id = '') {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
@@ -4791,6 +4810,7 @@ class Admin extends CI_Controller {
                     'assign_batch' => $batch, 'assign_sem' => $semester))->result_array();
         echo json_encode($data);
     }
+
     function checkassignment($id = '') {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
@@ -4800,8 +4820,8 @@ class Admin extends CI_Controller {
         $data = $this->db->get_where('assignment_manager', array('assign_degree' => $degree,
                     'course_id' => $course,
                     'assign_title' => $title,
-                    'assign_batch' => $batch, 'assign_sem' => $semester,'assign_id!='=>$id))->result_array();
-        
+                    'assign_batch' => $batch, 'assign_sem' => $semester, 'assign_id!=' => $id))->result_array();
+
         echo json_encode($data);
     }
 
@@ -5041,7 +5061,7 @@ class Admin extends CI_Controller {
         foreach ($exam_type as $row) {
             ?>
             <option value="<?php echo $row->exam_type_id; ?>"
-            <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
+                    <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
             <?php
         }
     }
@@ -5230,51 +5250,45 @@ class Admin extends CI_Controller {
         }
         if ($_POST) {
             if ($param1 == 'create') {
-                
-              if(is_uploaded_file($_FILES['main_img']['tmp_name']))
-              {
-                      $path= FCPATH . 'uploads/student_image/';
-                      if(!is_dir($path))
-                      {
-                          mkdir($path,0777);
-                      }
-                      $ext = explode(".",$_FILES['main_img']['name']);
-                      $ext_file =strtolower(end($ext));
-                      $image1 = date('dmYhis').'main.'.$ext_file;   
-                $config['upload_path'] = 'uploads/student_image';
-                $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                $config['file_name'] = $image1;
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                $main_img = $config['file_name'];
-                //$this->upload->set_allowed_types('*');	
 
-                if (!$this->upload->do_upload('main_img')) {
-                    $this->session->set_flashdata('flash_message', "Invalid File!");
-                    redirect(base_url() . 'admin/graduate/', 'refresh');
-                } else {
-                     $config['image_library'] = 'gd2';
-                    $config['source_image'] = 'uploads/student_image/'.$main_img;
-                    $config['create_thumb'] = TRUE;
-                    $config['maintain_ratio'] = TRUE;
-                    $config['width'] = 50;
-                    $config['height'] = 50;
-                    $this->load->library('image_lib', $config);
-                   
-                    
-                       $this->image_lib->resize();
-                  
-                     $file = $this->upload->data();
-                   
+                if (is_uploaded_file($_FILES['main_img']['tmp_name'])) {
+                    $path = FCPATH . 'uploads/student_image/';
+                    if (!is_dir($path)) {
+                        mkdir($path, 0777);
+                    }
+                    $ext = explode(".", $_FILES['main_img']['name']);
+                    $ext_file = strtolower(end($ext));
+                    $image1 = date('dmYhis') . 'main.' . $ext_file;
+                    $config['upload_path'] = 'uploads/student_image';
+                    $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                    $config['file_name'] = $image1;
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+                    $main_img = $config['file_name'];
+                    //$this->upload->set_allowed_types('*');	
 
-                  
-                       $thumb_img = $file['raw_name'].'_thumb'.$file['file_ext']; // Here it is
-                    
+                    if (!$this->upload->do_upload('main_img')) {
+                        $this->session->set_flashdata('flash_message', "Invalid File!");
+                        redirect(base_url() . 'admin/graduate/', 'refresh');
+                    } else {
+                        $config['image_library'] = 'gd2';
+                        $config['source_image'] = 'uploads/student_image/' . $main_img;
+                        $config['create_thumb'] = TRUE;
+                        $config['maintain_ratio'] = TRUE;
+                        $config['width'] = 50;
+                        $config['height'] = 50;
+                        $this->load->library('image_lib', $config);
 
-                    
-                    
-                }
-                      
+
+                        $this->image_lib->resize();
+
+                        $file = $this->upload->data();
+
+
+
+                        $thumb_img = $file['raw_name'] . '_thumb' . $file['file_ext']; // Here it is
+                    }
+
 //		$allowed_types = 'gif|jpg|png|jpeg';
 //                $type = explode("|",$allowed_types);
 //                $ext = explode(".",$_FILES['main_img']['name']);
@@ -5293,11 +5307,10 @@ class Admin extends CI_Controller {
 //                    $this->session->set_flashdata('flash_message',$error);
 //                    redirect(base_url().'admin/graduate');
 //		}
-              }
-              else{
-                  $main_img = '';
-              }
-                
+                } else {
+                    $main_img = '';
+                }
+
                 $this->Crud_model->save_graduates(array(
                     'student_id' => $_POST['student'],
                     'degree_id' => $_POST['degree'],
@@ -5306,61 +5319,54 @@ class Admin extends CI_Controller {
                     'semester_id' => $_POST['semester'],
                     'description' => $_POST['description'],
                     'graduate_year' => $_POST['year'],
-                    "student_img"=>$main_img,
-                    "std_thumb_img"=>$thumb_img));
+                    "student_img" => $main_img,
+                    "std_thumb_img" => $thumb_img));
                 $this->session->set_flashdata('flash_message', 'Graduates is succeffully added.');
             } elseif ($param1 == 'update') {
                 $graduate_std = $this->Crud_model->get_graduate_student($param2);
-                if(is_uploaded_file($_FILES['main_img']['tmp_name']))
-              {
-                    
-                      $path= FCPATH . 'uploads/student_image/';
-                      if(!is_dir($path))
-                      {
-                          mkdir($path,0777);
-                      }
-                      $ext = explode(".",$_FILES['main_img']['name']);
-                      $ext_file =strtolower(end($ext));
-                      $image1 = date('dmYhis').'main.'.$ext_file;   
-                $config['upload_path'] = 'uploads/student_image';
-                $config['allowed_types'] = 'gif|jpg|png|jpeg';
-                $config['file_name'] = $image1;
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                $main_img = $config['file_name'];
-                //$this->upload->set_allowed_types('*');	
+                if (is_uploaded_file($_FILES['main_img']['tmp_name'])) {
 
-                if (!$this->upload->do_upload('main_img')) {
-                    $this->session->set_flashdata('flash_message', "Invalid File!");
-                    redirect(base_url() . 'admin/graduate/', 'refresh');
+                    $path = FCPATH . 'uploads/student_image/';
+                    if (!is_dir($path)) {
+                        mkdir($path, 0777);
+                    }
+                    $ext = explode(".", $_FILES['main_img']['name']);
+                    $ext_file = strtolower(end($ext));
+                    $image1 = date('dmYhis') . 'main.' . $ext_file;
+                    $config['upload_path'] = 'uploads/student_image';
+                    $config['allowed_types'] = 'gif|jpg|png|jpeg';
+                    $config['file_name'] = $image1;
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+                    $main_img = $config['file_name'];
+                    //$this->upload->set_allowed_types('*');	
+
+                    if (!$this->upload->do_upload('main_img')) {
+                        $this->session->set_flashdata('flash_message', "Invalid File!");
+                        redirect(base_url() . 'admin/graduate/', 'refresh');
+                    } else {
+                        $config['image_library'] = 'gd2';
+                        $config['source_image'] = 'uploads/student_image/' . $main_img;
+                        $config['create_thumb'] = TRUE;
+                        $config['maintain_ratio'] = TRUE;
+                        $config['width'] = 50;
+                        $config['height'] = 50;
+                        $this->load->library('image_lib', $config);
+
+
+                        $this->image_lib->resize();
+
+                        $file = $this->upload->data();
+
+
+
+                        $thumb_img = $file['raw_name'] . '_thumb' . $file['file_ext']; // Here it is
+                    }
                 } else {
-                     $config['image_library'] = 'gd2';
-                    $config['source_image'] = 'uploads/student_image/'.$main_img;
-                    $config['create_thumb'] = TRUE;
-                    $config['maintain_ratio'] = TRUE;
-                    $config['width'] = 50;
-                    $config['height'] = 50;
-                    $this->load->library('image_lib', $config);
-                   
-                    
-                       $this->image_lib->resize();
-                  
-                     $file = $this->upload->data();
-                   
-
-                  
-                       $thumb_img = $file['raw_name'].'_thumb'.$file['file_ext']; // Here it is
-                    
-
-                    
-                    
+                    $main_img = $graduate_std[0]->student_img;
                 }
-              }
-              else{
-                  $main_img = $graduate_std[0]->student_img;
-              }
-                
-               
+
+
                 $this->Crud_model->save_graduates(array(
                     'student_id' => $_POST['student'],
                     'degree_id' => $_POST['degree'],
@@ -5369,8 +5375,8 @@ class Admin extends CI_Controller {
                     'semester_id' => $_POST['semester'],
                     'description' => $_POST['description'],
                     'graduate_year' => $_POST['year'],
-                    "student_img"=>$main_img,
-                    "std_thumb_img"=>$thumb_img), $param2);
+                    "student_img" => $main_img,
+                    "std_thumb_img" => $thumb_img), $param2);
                 $this->session->set_flashdata('flash_message', 'Graduates is succeffully updated.');
             }
 
@@ -5447,7 +5453,7 @@ class Admin extends CI_Controller {
         $page_data['subscriber'] = $this->Crud_model->subscriber();
         $this->load->view('backend/index', $page_data);
     }
-    
+
     /**
      * Due payment student list
      * @param string $course
@@ -5456,11 +5462,43 @@ class Admin extends CI_Controller {
      */
     function due_payment_student_list($course = '', $sem = '', $fee_id = '') {
         $this->load->model('admin/Crud_model');
-        
+
         $students = $this->Crud_model->due_payment_student_list($course, $sem, $fee_id);
-        
-        echo '<pre>';
-        var_dump($students);
     }
+    
+    function test()
+    {
+//        $this->load->model('admin/Crud_model');
+//        $degree = explode(',', '1,2,3');
+//        $course = explode(',', '1,2,3');
+//        $data=$this->Crud_model->test($degree,$course);
+//        echo "<pre>";
+//        var_dump($data);
+        $bloggerscat = '2,3'; // Your input here (string)
+        $degree='1,2';
+        
+        $set = explode(',',$bloggerscat); // get the numbers in $set array
+        $degreeid=explode(',',$degree);
+        
+        $query = 'SELECT * FROM `batch` WHERE b_name="cgvdfg" AND '; // construct query
+
+        foreach ($set as $search)
+        {
+            $query .= "FIND_IN_SET($search, course_id) AND "; // append every time for set 
+        }
+        foreach ($degreeid as $search1)
+        {
+            $query .= "FIND_IN_SET($search1, degree_id) AND "; // append every time for set 
+        }
+        
+        $query = rtrim($query, ' AND'); // remove last OR
+
+        echo $query; // test
+        
+        
+       
+
+    }
+    
 
 }
