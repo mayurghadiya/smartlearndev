@@ -115,13 +115,13 @@
                             </div>
                             <div class="col-sm-7 col-xs-12">
                                 <div class="vd_mega-menu-wrapper">
-                                    <div class="vd_mega-menu pull-right">
+                                    <div class="vd_mega-menu pull-right">                                        
                                         <ul class="mega-ul">
                                             <li id="top-menu-1"  class="one-icon mega-li"> 
-                                                <span class="icon-phone" > <a href="tel:+919909978808">+91 99099 78808</a></span>
+                                                <span class="icon-phone" > <a href="tel:<?php echo system_info('phone'); ?>"><?php echo system_info('phone'); ?></a></span>
                                             </li>
                                             <li id="top-menu-88"  class="one-icon mega-li"> 
-                                                <span class="fa fa-envelope" > &nbsp;<a href="mail:info@lorebrain.com">info@lorebrain.com</a></span>
+                                                <span class="fa fa-envelope" > &nbsp;<a href="mail:<?php echo system_info('system_email'); ?>"><?php echo system_info('system_email'); ?></a></span>
                                             </li>
 
                                             <li id="top-menu-2"  class="one-icon mega-li"> 
@@ -157,7 +157,7 @@
                                                         <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('admin', $this->session->userdata('admin_id')); ?>" alt="...">             
                                                     </span>
                                                     <span class="mega-name">
-<?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
+                                                        <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
                                                     </span>
                                                 </a> 
                                                 <div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">

@@ -185,9 +185,11 @@ class Crud_model extends CI_Model {
      * @param int $semester_id
      * @return array
      */
-    function student_list_by_course_semester($course_id, $semester_id) {
+    function student_list_by_course_semester($degree_id, $course_id, $batch_id, $semester_id) {
         return $this->db->get_where('student', array(
+                    'std_degree' => $degree_id,
                     'course_id' => $course_id,
+                    'std_batch' => $batch_id,
                     'semester_id' => $semester_id
                 ))->result();
     }
@@ -497,10 +499,12 @@ class Crud_model extends CI_Model {
      * @param int $semester_id
      * @return array
      */
-    function get_exam_list($course_id, $semester_id) {
+    function get_exam_list($degree_id, $course_id, $batch_id, $semester_id) {
         return $this->db->get_where('exam_manager', array(
                             'course_id' => $course_id,
                             'em_semester' => $semester_id,
+                            'degree_id' => $degree_id,
+                            'batch_id' => $batch_id,
                             'exam_ref_name' => 'reguler'
                         ))
                         ->result();
@@ -1219,4 +1223,5 @@ class Crud_model extends CI_Model {
     function get_graduate_student($id) {
         $this->db->get_where('graduates', array("graduates_id" => $id))->result();
     }
+
 }
