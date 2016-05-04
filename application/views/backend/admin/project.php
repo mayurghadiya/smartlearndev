@@ -36,7 +36,7 @@
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">
                                 <form action="#" method="post" id="searchform">
-                                            <div class="form-group col-sm-2 validating">
+                                            <div class="form-group col-sm-3 validating">
                                                 <label>Course</label>
                                                 <select id="courses" name="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -45,14 +45,14 @@
                                                     <?php } ?>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-2 validating">
+                                            <div class="form-group col-sm-3 validating">
                                                 <label>Branch</label>
                                                 <select id="branches" name="course" class="form-control">
                                                      <option value="">Select</option>
 
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-2 validating">
+                                            <div class="form-group col-sm-3 validating">
                                                 <label>Batch</label>
                                                 <select id="batches" name="batch" class="form-control">
                                                      <option value="">Select</option>
@@ -70,12 +70,12 @@
                                                 </select>
                                             </div>
                                      
-                                <div class="form-group col-sm-2">
-                                    <div class="form-group col-sm-2">
+                                
+                                    <div class="form-group col-sm-1">
                                         <label>&nbsp;</label>
                                     <button type="submit" class="submit btn btn-info vd_bg-green">Go</button>
                                     </div>
-                                </div>
+                                
                                     </form>
                                    
                                 <div class="panel-body table-responsive" id="getresponse">
