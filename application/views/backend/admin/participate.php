@@ -4,9 +4,11 @@
         <div class="vd_content clearfix">
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
-                    <ul class="breadcrumb">
-                         <li><?php echo set_breadcrumb(); ?></li>
-                    </ul>                  
+                   <ul class="breadcrumb">
+                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><?php echo ucwords("asset management");?></li>
+                         <li><?php echo ucwords("Participate Management");?></li>
+                    </ul>                
                 </div>
             </div>
             <div class="vd_title-section clearfix">
@@ -64,7 +66,7 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>											
-                                                <th><div><?php echo ucwords("Participate Title");?> </div></th>											
+                                                <th><div><?php echo ucwords("Parti. Title");?> </div></th>											
                                                 <th><div><?php echo ucwords("Course");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
@@ -537,13 +539,13 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div><?php echo ucwords("Student Name");?></div></th>	
-                                                <th><div><?php echo ucwords("Participate Title");?></div></th>
+                                                <th><div><?php echo ucwords("Parti. Title");?></div></th>
                                                 <th><div><?php echo ucwords("Comment");?></div></th>
                                                 <th><div><?php echo ucwords("Course");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											
-                                                <th><div><?php echo ucwords("Participate Status");?></div></th>											
+                                                <th><div><?php echo ucwords("Parti. Status");?></div></th>											
                                             </tr>
                                         </thead>
                                         <tbody>

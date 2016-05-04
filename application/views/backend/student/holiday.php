@@ -28,6 +28,27 @@ if ($skin == 'theme_green.min.css') {
 
 <script src="<?php echo base_url() ?>assets/std_event/js/modernizr.custom.63321.js"></script>
 <?php ?>
+<div class="vd_content-wrapper">
+    <div class="">
+        <div class="vd_content clearfix">
+            <div class="vd_title-section clearfix">
+
+                <div class="vd_panel-header">
+                    <ul class="breadcrumb">
+                          <li><?php echo set_breadcrumb(); ?></li>
+                    </ul>
+
+                </div>
+
+                <div class="vd_panel-header">
+                    <h1><?php echo $page_title ?></h1>            
+                </div>
+
+            </div>
+            <div class="vd_content-section clearfix">
+                <div class="row">
+                    <div class="col-sm-12">	
+                        
 <section class="main scroll_none">
 
     <div class="custom-calendar-wrap">
@@ -44,6 +65,8 @@ if ($skin == 'theme_green.min.css') {
     </div>
 </section>
 </div><!-- /container -->
+</div>
+                </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/std_event/js/calendario.js"></script>
 
@@ -64,12 +87,11 @@ foreach ($event as $eve) :
     
     for($i=0;$i<=$count;$i++)
     {
-        $sdate= date('Y-m-d', strtotime($i.'day', strtotime(date("Y-m-d", strtotime($eve->holiday_startdate)))));
-       
+        $sdate= date('Y-m-d', strtotime($i.'day', strtotime(date("Y-m-d", strtotime($eve->holiday_startdate)))));       
         ?>
             '<?php echo date("m-d-Y", strtotime($sdate)); ?>' : [{content: '<?php  echo date("F d, Y", strtotime($sdate));
              echo "<br/>";
-             echo $event_name;?>', allDay: false}],    
+             echo $event_name;?>', allDay: true}],    
              <?php
     }
 

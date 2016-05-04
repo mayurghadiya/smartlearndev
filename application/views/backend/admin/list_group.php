@@ -4,7 +4,9 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                         <li><?php echo set_breadcrumb(); ?></li>
+                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><?php echo ucwords("user management");?></li>
+                         <li><?php echo ucwords("List Group");?></li>
                     </ul>                  
                 </div>
             </div>

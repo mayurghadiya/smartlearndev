@@ -64,7 +64,7 @@ foreach ( $edit_data as $row):
                                             <div class="col-sm-5">
                                                 <input id="main_img" class="form-control coverimage2" type="file" name="main_img" />
                                             </div>
-                                            <div id="image_container1"><img class='img-thumbnail' style='width:300px;margin:20px;' src='<?php echo "uploads/bannerimg/".$row['banner_img']; ?>' ></div>
+                                            <div id="image_container1"><img class='img-thumbnail' style='width:300px;margin:20px;' src='<?php echo base_url()."uploads/bannerimg/".$row['banner_img']; ?>' ></div>
                                         </div>             
                                          <div class="form-group">
                                                     <label class="col-sm-3 control-label">Slide</label>
