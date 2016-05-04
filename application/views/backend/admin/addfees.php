@@ -5,7 +5,7 @@
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        <?php echo ucwords("Add Semester");?>
+                        <?php echo ucwords("Add Fees");?>
                     </div>
                 </div>
                 <div class="panel-body"> 
