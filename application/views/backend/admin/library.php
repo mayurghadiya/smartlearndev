@@ -33,37 +33,51 @@
                         <div class="tab-content">
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">	
-                                 <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Course");?></label>
-                                    <select class="form-control filter-rows" id="filter2" data-filter="2" data-type="course">
-                                        <option value="">All</option>
-                                        <?php foreach ($degree as $row) { ?>
-                                            <option value="<?php echo $row->d_name; ?>"
-                                                    data-id="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
-                                                <?php } ?>
-                                    </select>
-                                </div>
-                                <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Branch");?></label>
-                                    <select id="filter3" name="branch" data-filter="3" class="form-control filter-rows" data-type="branch">
-                                        <option value="">All</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Batch");?></label>
-                                    <select id="filter4" name="batch" data-filter="4" class="form-control filter-rows" data-type="batch">
-                                        <option value="">All</option>
-                                    </select>
-                                </div>                                
-                                <div class="form-group col-sm-2">
-                                    <label> <?php echo ucwords("Semester");?></label>
-                                    <select id="filter5" name="semester" data-filter="5" class="form-control filter-rows" data-type="semester">
-                                        <option value="">All</option>
+                                <form action="#" method="post" id="searchform">
+                                            <div class="form-group col-sm-3 validating">
+                                                <label>Course</label>
+                                                <select id="courses" name="degree" class="form-control">
+                                                    <option value="">Select Course</option>
+                                                    <option value="All">All</option>
+                                                    
+                                                    <?php foreach ($degree as $row) { ?>
+                                                        <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3 validating">
+                                                <label>Branch</label>
+                                                <select id="branches" name="course" class="form-control">
+                                                     <option value="">Select Branch</option>
+                                                     <option value="All">All</option>
 
-                                    </select>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3 validating">
+                                                <label>Batch</label>
+                                                <select id="batches" name="batch" class="form-control">
+                                                     <option value="">Select Batch</option>
+                                                      <option value="All">All</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Select Semester</label>
+                                                <select id="semesters" name="semester" class="form-control">
+                                                    <option value="">Select Semester</option>
+                                                     <option value="All">All</option>
+                                                   
+                                                    <?php foreach ($semester as $row) { ?>
+                                                        <option value="<?php echo $row->s_id; ?>"
+                                                               ><?php echo $row->s_name; ?></option>
+                                                            <?php } ?>
+                                                </select>
+                                            </div>
+                                     
+                                <div class="form-group col-sm-1">                                    
+                                        <label>&nbsp;</label>                                        
+                                    <button type="submit" class="submit btn btn-info vd_bg-green">Go</button>                                    
                                 </div>
-                                <label style="margin-left: 40px; margin-top: 30px;">OR</label>
-                                
+                                    </form>
   
                                 <div class="panel-body table-responsive" id="getresponse">
                                     <table class="table table-striped" id="library-data">
@@ -173,32 +187,89 @@
     
 
 <script type="text/javascript">
+    
+   $("#searchform").submit(function(){
+           var degree =  $("#courses").val();
+           var course =  $("#branches").val();
+           var batch =  $("#batches").val();
+            var semester = $("#semesters").val();
+            $.ajax({
+                type:"POST",
+                url:"<?php echo base_url(); ?>index.php?admin/getlibrary/",
+                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
+                success:function(response)
+                {
+                    $("#getresponse").html(response);
+                }
+                
+                
+            });
+             return false;
+         });
+         $("#courses").change(function(){
+                var degree = $(this).val();
+                
+                var dataString = "degree="+degree;
+                $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/course_filter/'; ?>",
+                    data:dataString,                   
+                    success:function(response){
+                        if(degree=='All')
+                        {
+                             $("#branches").html(response);
+                             $("#batches").val($("#batches option:eq(1)").val());
+                             $("#branches").val($("#branches option:eq(1)").val());
+                             $("#semesters").val($("#semesters option:eq(1)").val());
+                           // $("#branches").append(response);
+                        }
+                        else{
+                            $("#branches").append(response);
+                            
+                        }
+                    }
+                });
+        });
+        $("#batches").change(function(){
+            var batches = $("#batches").val();
+            if(batches=='All')
+            {
+                $("#semesters").val($("#semesters option:eq(1)").val());
+            }
+        });
+         $("#branches").change(function(){
+                //var course = $(this).val();
+                // var degree = $("#degree").val();
+                var degree = $("#courses").val();
+                var course = $("#branches").val();
+                var dataString = "course="+course+"&degree="+degree;
+                $.ajax({
+                    type:"POST",
+                    url:"<?php echo base_url().'index.php?admin/batch_filter/'; ?>",
+                    data:dataString,                   
+                    success:function(response){
+                         if(course=='All')
+                        {
+                              $("#batches").html(response);
+                             $("#batches").val($("#batches option:eq(1)").val());                            
+                             $("#semesters").val($("#semesters option:eq(1)").val());
+                          
+                        }
+                        else{
+                           $("#batches").append(response);
+                            
+                        }
+                        
+                    }
+                });
+        });
+
         $(document).ready(function () {
             "use strict";
-            $('#library-data').dataTable({
-                "order": [[0, "desc"]],
-                "dom": "<'row'<'col-sm-6'><'col-sm-6'f>>" +
-                        "<'row'<'col-sm-12'tr>>" +
-                        "<'row'<'col-sm-4'l><'col-sm-4'i><'col-sm-4'p>>",
-            });
-            $('.filter-rows').on('change', function () {
-                var filter_id = $(this).attr('data-filter');
-                filter_column(filter_id);
-            });
-
-            function filter_column(filter_id) {
-                $('#library-data').DataTable().column(filter_id).search(
-                        $('#filter' + filter_id).val()
-                        ).draw();
-            }
+            $('#library-data').dataTable();
         });
     </script>
 
-    <style>
-        #library-data_filter{
-            margin-top: -50px;
-        }
-    </style>
  
    <style>
     .nav-fixedtabs {
