@@ -26,11 +26,7 @@
                                     <?php echo ucwords("CMS List");?>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    <?php echo ucwords("Add CMS");?>
-                                </a>
-                            </li>
+                           
                         </ul>
                         <!------CONTROL TABS END------>
 
