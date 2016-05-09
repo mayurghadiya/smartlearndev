@@ -1,14 +1,16 @@
  <?php 
    $degree = $this->db->get('degree')->result_array();
         $courses = $this->db->get('course')->result_array();
-        $semesters = $this->db->get('semester')->result_array();?>
+        $semesters = $this->db->get('semester')->result_array();
+        $professor = $this->db->get('professor')->result_array();
+        ?>
 <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary" data-collapsed="0">
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        <?php echo ucwords("Add Subject");?>
+                        <?php echo ucwords("Add Subject Association");?>
                     </div>
                 </div>
                 <div class="panel-body"> 
@@ -58,6 +60,20 @@
                                                  <lable class="error" id="error_lable_exist" style="color:red"></lable>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("professor");?><span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <select name="professor" id="professor">
+                                                    <option value="">Select Professor</option>
+                                                    <?php foreach($professor as $prof) : ?>
+                                                    <option value="<?php echo $prof['professor_id']; ?>"><?php echo $prof['name']; ?></option>
+                                                    <?php endforeach; ?>
+                                                    
+                                                </select>
+                                                 
+                                            </div>
+                                        </div>
+                                        
                                         <div class="form-group">
                                             <div class="col-sm-offset-3 col-sm-5">
                                                 <button type="submit" id="addsubject" class="btn btn-info vd_bg-green"><?php echo ucwords("Add ");?></button>
@@ -141,7 +157,8 @@
                       subname:"required",                                                                  
                     subcode:"required",
                     course:"required",
-                    semester:"required"
+                    semester:"required",
+                    professor:"required",
                 },
                 messages: {
 
@@ -149,6 +166,7 @@
                  subcode: "Enter subject code",                                                                  
                     course: "Select branch",
                     semester: "Select semester",
+                    professor:"Select professor",
                 }
             });
         });

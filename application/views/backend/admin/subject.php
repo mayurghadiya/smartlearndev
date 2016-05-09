@@ -7,13 +7,13 @@
                      <ul class="breadcrumb">
                          <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
                          <li><?php echo ucwords("basic management");?></li>
-                         <li><?php echo ucwords("subject");?></li>
+                         <li><?php echo ucwords("subject Association");?></li>
                     </ul>
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1><?php echo ucwords("Subject Management");?></h1>
+                    <h1><?php echo ucwords("Subject Association Management");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">

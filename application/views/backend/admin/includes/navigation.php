@@ -51,7 +51,7 @@
                             </li>	
                             <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/subject">
-                                    <span class="menu-text">Subject</span>  						
+                                    <span class="menu-text">Subject Association</span>  						
                                 </a> 
                             </li>
                              <li <?php if ($page_name == "syllabus") { ?> class="selectednavmenu" <?php } ?>>
