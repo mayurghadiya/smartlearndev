@@ -856,6 +856,20 @@ class Admin extends CI_Controller {
     function vocationalcourse($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['course_name'] = $this->input->post('course_name');
+            $data['course_startdate'] = date('Y-m-d', strtotime($this->input->post('startdate')));
+            $data['course_enddate'] = date('Y-m-d', strtotime($this->input->post('enddate')));
+            $data['course_fee'] = $this->input->post('fee');
+            $data['professor_id'] = $this->input->post('professor');
+            $data['status'] = $this->status($this->input->post('course_status'));
+            $data['created_date'] = date('Y-m-d');
+
+            $this->db->insert('vocational_course', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('vocational_course_added_successfully'));
+            redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
+        }
+        
         $page_data['holiday'] = $this->db->get('vocational_course')->result_array();
         $page_data['page_name'] = 'vocational_course';
         $page_data['page_title'] = 'Vocational course';
