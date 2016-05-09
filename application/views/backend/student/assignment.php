@@ -115,7 +115,9 @@
                         </div>
                     </div>
                 </div>
-                
+                  <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+  
                 <script>
                 $(document).ready(function () {
                     $('#data-tables1').dataTable();

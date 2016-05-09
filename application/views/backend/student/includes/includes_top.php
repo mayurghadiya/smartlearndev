@@ -328,4 +328,23 @@ if (isset($widget_order)) {
         });
     });
 </script>
+
+<style> 
+                .image_box, .text_box{width: 50%; display: inline-block; float: left; }
+                        .text_box{position: relative;}
+                        .text_box .detials{height: 10em; display: flex; align-items: center; justify-content: center}                        
+                        .image_box img{ max-width: 100%; display: block;}
+                        .image_box1 {width:100%; height:100%;display:table-cell; vertical-align:middle; }
+                        .image_box img{ display:block;margin-left:auto;margin-right:auto;vertical-align:middle;height: 179px;}     
+
+body{margin: 0 !important; padding: 0 !important; -webkit-text-size-adjust: none;}
+.sDashboardWidget .sDashboardWidgetContent{ margin: 0; padding: 0; }
+.sDashboardWidget .sDashboardWidgetContent .widget-iframe{vertical-align: middle; height: 100%; width: 100%; box-sizing:border-box;}
+.sDashboardWidget .sDashboardWidgetContent .widget-iframe * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  box-sizing: border-box;}
+.sDashboardWidget .sDashboardWidgetContent .widget-iframe :before, .sDashboardWidget .sDashboardWidgetContent .widget-iframe :after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.sDashboardWidget .sDashboardWidgetContent .widget-iframe body{margin: 0 !important; padding: 0 !important; -webkit-text-size-adjust: none;}
+.sDashboardWidget .sDashboardWidgetContent .widget-iframe body div{overflow: hidden; height: 100%;}
+.sDashboardWidget .sDashboardWidgetContent .widget-iframe .image_box1 {display: table-cell; height: 100%; vertical-align: middle; width: 100%;}
+.text_box{overflow-y:auto;}     
+            </style>
 </head>
