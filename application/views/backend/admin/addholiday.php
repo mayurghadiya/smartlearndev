@@ -67,9 +67,7 @@
                 changeMonth: true,
                 changeYear: true,
                //  minDate: new Date(),
-                onClose: function (selectedDate) {
-                    $("#holiday_enddate").datepicker("option", "minDate", selectedDate);
-                }
+               
             });
             
             $("#holiday_enddate").datepicker({
