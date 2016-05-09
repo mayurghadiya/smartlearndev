@@ -5590,31 +5590,5 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
     }
 
-    function test() {
-//        $this->load->model('admin/Crud_model');
-//        $degree = explode(',', '1,2,3');
-//        $course = explode(',', '1,2,3');
-//        $data=$this->Crud_model->test($degree,$course);
-//        echo "<pre>";
-//        var_dump($data);
-        $bloggerscat = '2,3'; // Your input here (string)
-        $degree = '1,2';
-
-        $set = explode(',', $bloggerscat); // get the numbers in $set array
-        $degreeid = explode(',', $degree);
-
-        $query = 'SELECT * FROM `batch` WHERE b_name="cgvdfg" AND '; // construct query
-
-        foreach ($set as $search) {
-            $query .= "FIND_IN_SET($search, course_id) AND "; // append every time for set 
-        }
-        foreach ($degreeid as $search1) {
-            $query .= "FIND_IN_SET($search1, degree_id) AND "; // append every time for set 
-        }
-
-        $query = rtrim($query, ' AND'); // remove last OR
-
-        echo $query; // test
-    }
 
 }
