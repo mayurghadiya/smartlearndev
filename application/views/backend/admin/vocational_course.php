@@ -49,7 +49,37 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-  
+                                                 <?php $count = 1;
+                                            foreach ($vocationalcourse as $row):
+                                                ?><tr>
+                                            <td><?php echo $count++; ?></td>
+                                              <td><?php echo $row['course_name']; ?></td>    
+                                              <td><?php echo date('F d, Y', strtotime($row['course_startdate'])); ?></td>    
+                                              <td><?php echo date('F d, Y', strtotime($row['course_enddate'])); ?></td>    
+                                              <td><?php echo $row['course_fee']; ?></td>   
+                                              <td><?php 
+                                               $professor = $this->db->get('professor')->result_array();
+                                               foreach($professor as $pro)
+                                               {
+                                                   if($pro['professor_id']==$row['professor_id'])
+                                                   {
+                                                       echo $pro['name'];
+                                                   }
+                                               }
+                                               ?></td>   
+                                              <td>
+                                                <?php if ($row['status'] == '1') { ?>
+                                                <span class="label label-success">Active</span>
+                                                    <?php } else { ?>	
+                                                <span class="label label-default">InActive</span>
+                                                <?php } ?>
+                                                </td>
+                                                <td class="menu-action">
+                                                    <a href="#" onclick="showAjaxModal('<?php echo base_url();?>index.php?modal/popup/modal_edit_vocational/<?php echo $row['vocational_course_id'];?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>        
+                                                    <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/vocationalcourse/delete/<?php echo $row['vocational_course_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                </td>
+                                                </tr>
+                                            <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
