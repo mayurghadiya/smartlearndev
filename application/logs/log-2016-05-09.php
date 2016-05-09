@@ -142,3 +142,44 @@ ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Logopng/index
 ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Indexhtml/index
 ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Stylecss/index
 ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 18:42:03 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:42:04 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:42:34 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:42:35 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:44:37 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+ERROR - 2016-05-09 18:44:41 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:44:42 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:44:48 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:45:01 --> Query error: Column 'forum_title' cannot be null - Invalid query: INSERT INTO `forum` (`forum_title`, `forum_status`) VALUES (NULL, NULL)
+ERROR - 2016-05-09 18:45:22 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:45:24 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:45:28 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
+ERROR - 2016-05-09 18:45:35 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:46:21 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:52:39 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:52:39 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:52:59 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:53:00 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:53:01 --> Severity: Notice --> Undefined variable: forum /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_forumtopic.php 28
+ERROR - 2016-05-09 18:53:01 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_forumtopic.php 28
+ERROR - 2016-05-09 18:53:37 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:53:40 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:55:16 --> Query error: Unknown column 'forum_topic_id' in 'where clause' - Invalid query: UPDATE `forum_topics` SET `forum_topic_title` = 'installation', `forum_topic_status` = '1', `forum_id` = '1'
+WHERE `forum_topic_id` = '1'
+ERROR - 2016-05-09 18:56:38 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
+ERROR - 2016-05-09 18:56:42 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:56:43 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:56:48 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:57:02 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:57:03 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:57:10 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:58:55 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 19:00:14 --> Severity: error --> Exception: syntax error, unexpected ')' /opt/lampp/htdocs/smartlearndev/application/controllers/Forum.php 92
+ERROR - 2016-05-09 19:00:14 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
+#1 [internal function]: _exception_handler(Object(ParseError))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-05-09 19:00:32 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 19:00:45 --> 404 Page Not Found: Forum/mainfest.appcache

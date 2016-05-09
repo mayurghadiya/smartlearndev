@@ -51,7 +51,7 @@ class Forum extends CI_Controller {
                 $data['forum_title']  = $this->input->post("forum_title");
                 $data['forum_status'] = $this->input->post("forum_status");
                 $this->forum_model->create($data);
-                  $this->session->set_flashdata('flash_message', get_phrase('forum added successfully'));
+                  $this->session->set_flashdata('flash_message', 'Forum Added Successfully');
                 redirect(base_url() . 'forum/', 'refresh');
             }
             if($param=="update")
@@ -59,18 +59,59 @@ class Forum extends CI_Controller {
                 $data['forum_title']  = $this->input->post("forum_title");
                 $data['forum_status'] = $this->input->post("forum_status");
                 $this->forum_model->update($data,$id);
-                  $this->session->set_flashdata('flash_message', get_phrase('forum Updated successfully'));
+                  $this->session->set_flashdata('flash_message', 'Forum Updated Successfully');
                 redirect(base_url() . 'forum/', 'refresh');
             }
             if($param=="delete")
             {
                 
                 $this->forum_model->delete($id);
-                  $this->session->set_flashdata('flash_message', get_phrase('forum Updated successfully'));
+                  $this->session->set_flashdata('flash_message', 'Forum Deleted Successfully');
                 redirect(base_url() . 'forum/', 'refresh');
             }
             
         }
+        
+        function forumtopics()
+        {
+            $page_data['page_name'] = 'forum_topic';
+        $page_data['page_title'] = 'Forum Topic';
+        $page_data['forum_topic'] = $this->forum_model->getforum_topic();
+        $this->load->view('backend/index', $page_data);
+        }
+        
+        function topicscrud($param='',$id = '')
+        {
+            if($param=="create")
+            {
+                $data['forum_topic_title'] = $this->input->post('topic_title');
+                $data['forum_topic_status'] = $this->input->post('topic_status');
+                $data['forum_id'] = $this->input->post('forum_id');
+                
+                $this->forum_model->create_topic($data);
+                 $this->session->set_flashdata('flash_message', 'Forum Topic Added Successfully');
+                redirect(base_url() . 'forum/forumtopics', 'refresh');
+                
+            }
+             if($param=="update")
+            {
+                $data['forum_topic_title'] = $this->input->post('topic_title');
+                $data['forum_topic_status'] = $this->input->post('topic_status');
+                $data['forum_id'] = $this->input->post('forum_id');
+                
+                $this->forum_model->update_topic($data,$id);
+                 $this->session->set_flashdata('flash_message', 'Forum Topic Updated Successfully');
+                redirect(base_url() . 'forum/forumtopics', 'refresh');
+                
+            }
+            if($param=="delete")
+            {
+                 $this->forum_model->forum_topicsdelete($id);
+                  $this->session->set_flashdata('flash_message', 'Forum Topic Deleted Successfully');
+                redirect(base_url() . 'forum/forumtopics', 'refresh');
+            }
+        }
+        
 }
 
 /* End of file welcome.php */

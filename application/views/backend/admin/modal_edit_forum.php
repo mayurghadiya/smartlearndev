@@ -61,12 +61,12 @@
 	$(document).ready(function() {	
 		$("#frmadmissiontypeedit").validate({		
 			rules: {
-				at_name: "required",
-				at_status: "required",
+				forum_title: "required",
+				forum_status: "required",
 			},
 			messages: {
-				at_name: "Please enter admission type Name",
-				at_status: "Please slect admission status",
+				forum_title: "Please enter title",
+				forum_status: "Please select status",
 			}
 		});
 	});
