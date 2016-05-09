@@ -33,6 +33,27 @@
                                             </div>	
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("course fee");?><span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" name="fee" id="fee"/>
+                                            </div>	
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Professor");?><span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <?php
+                                                    $professor=$this->db->get("vocational_course")->result_array();
+                                                ?>
+                                                 <select id="professor" name="professor" class="form-control">
+                                                    <option value="default">Select professor</option>
+                                                        <?php foreach ($professor as $srow) { ?>
+                                                        <option value="<?php echo $srow['vocational_course_id']; ?>"><?php echo $srow['course_name']; ?>
+                                                        </option>
+                                                        <?php } ?>
+                                                </select>
+                                            </div>	
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
                                             <div class="col-sm-5">
                                                 <select name="holiday_status">
