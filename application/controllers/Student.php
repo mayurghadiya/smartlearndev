@@ -240,6 +240,7 @@ class Student extends CI_Controller {
     }
 
     //develop by nikita
+        
     function exam_center($param1 = '', $param2 = '') {
         $this->load->model('Student/Student_model');
         if ($param1 == 'create') {
@@ -351,6 +352,14 @@ class Student extends CI_Controller {
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['page_name'] = 'studyresource';
         $page_data['page_title'] = 'Study Resource Online';
+        $this->load->view('backend/index', $page_data);
+    }
+    
+    function vocationalcourse($param1 = '', $param2 = '')
+    {
+        $page_data['vocationalcourse'] = $this->db->get_where('vocational_course',array('status'=>1))->result_array();
+        $page_data['page_name'] = 'vocational_course';
+        $page_data['page_title'] = 'Vocational Course';
         $this->load->view('backend/index', $page_data);
     }
 
