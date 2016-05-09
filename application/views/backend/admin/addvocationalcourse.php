@@ -23,13 +23,13 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("start date"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="startdate" id="startdate"/>
+                                <input type="text" class="form-control" readonly="" name="startdate" id="startdate"/>
                             </div>	
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("end date"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" name="enddate" id="enddate"/>
+                                <input type="text" class="form-control" readonly="" name="enddate" id="enddate"/>
                             </div>	
                         </div>
                         <div class="form-group">
