@@ -857,6 +857,16 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
+    function vocationalcourse($param1 = '', $param2 = '')
+    {
+         if ($this->session->userdata('admin_login') != 1)
+            redirect(base_url(), 'refresh');
+        $page_data['holiday'] = $this->db->get('vocational_course')->result_array();
+        $page_data['page_name'] = 'vocational_course';
+        $page_data['page_title'] = 'Vocational course';
+        $this->load->view('backend/index', $page_data);
+    }
+    
     function holiday($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
