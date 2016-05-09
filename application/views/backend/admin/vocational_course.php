@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -83,6 +83,4 @@
             <i class="material-icons">&#xE145;</i>
         </a>
     </div>
-   
-=======
->>>>>>> origin/master
+  
