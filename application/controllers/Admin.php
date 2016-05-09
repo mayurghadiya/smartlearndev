@@ -864,13 +864,20 @@ class Admin extends CI_Controller {
             $data['professor_id'] = $this->input->post('professor');
             $data['status'] = $this->status($this->input->post('course_status'));
             $data['created_date'] = date('Y-m-d');
-
+            
             $this->db->insert('vocational_course', $data);
             $this->session->set_flashdata('flash_message', get_phrase('vocational_course_added_successfully'));
             redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
         }
         
-        $page_data['holiday'] = $this->db->get('vocational_course')->result_array();
+         if ($param1 == 'delete') {
+            $this->db->where('vocational_course_id', $param2);
+            $this->db->delete('vocational_course');
+            $this->session->set_flashdata('flash_message', get_phrase('vocational_course_deleted_successfully'));
+
+            redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
+        }
+        $page_data['vocationalcourse'] = $this->db->get('vocational_course')->result_array();
         $page_data['page_name'] = 'vocational_course';
         $page_data['page_title'] = 'Vocational course';
         $this->load->view('backend/index', $page_data);
