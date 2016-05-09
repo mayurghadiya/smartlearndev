@@ -1305,5 +1305,34 @@ class Crud_model extends CI_Model {
                         ->get()
                         ->result();
     }
+    
+    /**
+     * Professor list
+     * @return mixed
+     */
+    function professor() {
+        return $this->db->get('professor')->result();
+    }
+    
+    /**
+     * Insert or update professor information
+     * @param mixed $data
+     * @param int $id
+     * @return int
+     */
+    function save_professor($data, $id = NULL) {
+        $insert_id = 0;
+        if($id) {
+            //update
+            $this->db->where('professor_id', $id);
+            $this->db->update('professor', $data);
+            $insert_id = $this->db->insert_id();
+        } else {
+            $this->db->insert('professor', $data);
+            $insert_id = $this->db->insert_id();
+        }
+        
+        return $insert_id;
+    }
 
 }
