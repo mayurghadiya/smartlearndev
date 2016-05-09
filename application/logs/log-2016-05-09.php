@@ -63,3 +63,82 @@ ERROR - 2016-05-09 17:36:29 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2016-05-09 17:36:29 --> Severity: Notice --> Undefined property: stdClass::$s_name /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_subject.php 93
 ERROR - 2016-05-09 17:37:01 --> 404 Page Not Found: Admin/mainfest.appcache
 ERROR - 2016-05-09 17:37:02 --> 404 Page Not Found: Admin/assets
+ERROR - 2016-05-09 17:49:16 --> 404 Page Not Found: Forum/index
+ERROR - 2016-05-09 17:49:26 --> 404 Page Not Found: Forum/index
+ERROR - 2016-05-09 17:49:26 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+ERROR - 2016-05-09 17:50:23 --> 404 Page Not Found: Forum/index
+ERROR - 2016-05-09 17:50:44 --> 404 Page Not Found: Forum/index
+ERROR - 2016-05-09 17:50:52 --> Severity: error --> Exception: Call to undefined method Forum::chat_user() /opt/lampp/htdocs/smartlearndev/application/controllers/Forum.php 26
+ERROR - 2016-05-09 17:50:52 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-05-09 17:51:02 --> Severity: error --> Exception: Call to undefined method Forum::chat_user() /opt/lampp/htdocs/smartlearndev/application/controllers/Forum.php 26
+ERROR - 2016-05-09 17:51:02 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-05-09 17:51:41 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 17:51:41 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 17:51:41 --> 404 Page Not Found: No-internethtml/index
+ERROR - 2016-05-09 17:51:41 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 17:57:36 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 17:57:36 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 17:57:36 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 17:58:01 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 17:58:01 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 17:58:01 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 18:01:28 --> 404 Page Not Found: No-internethtml/index
+ERROR - 2016-05-09 18:01:28 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 18:01:28 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 18:01:28 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 18:04:43 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 18:04:43 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 18:04:43 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 18:04:46 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
+ERROR - 2016-05-09 18:04:47 --> Severity: error --> Exception: Cannot use object of type stdClass as array /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/forum.php 50
+ERROR - 2016-05-09 18:04:47 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-05-09 18:04:48 --> 404 Page Not Found: Forum/img
+ERROR - 2016-05-09 18:04:48 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:06:00 --> Severity: error --> Exception: Cannot use object of type stdClass as array /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/forum.php 54
+ERROR - 2016-05-09 18:06:00 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+ERROR - 2016-05-09 18:06:02 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:06:25 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:06:43 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:06:45 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:10:33 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:10:33 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:10:39 --> Severity: Notice --> Trying to get property of non-object /opt/lampp/htdocs/smartlearndev/application/helpers/multi_language_helper.php 32
+ERROR - 2016-05-09 18:10:44 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:12:13 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+ERROR - 2016-05-09 18:12:17 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:12:19 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:12:28 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:12:30 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:12:38 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:12:39 --> 404 Page Not Found: Forum/assets
+ERROR - 2016-05-09 18:12:52 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:14:06 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:14:14 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:22:52 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+ERROR - 2016-05-09 18:22:59 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Logopng/index
