@@ -220,6 +220,17 @@ class Site extends CI_Controller {
             $this->session->set_userdata('login_type', 'subadmin');
             redirect(base_url('index.php?sub_admin/dashboard'));
         }
+        
+        $query = $this->db->get_where('professor', $credential);
+        if($query->num_rows()) {
+            $row = $query->row();
+            $this->session->set_userdata('professor_login', '1');
+            $this->session->set_userdata('login_user_id', $row->professor_id);
+            $this->session->set_userdata('name', $row->name);
+            $this->session->set_userdata('email', $row->email);
+            $this->session->set_userdata('login_type', 'professor');
+            redirect(base_url('professor'));
+        }
 
         return 'invalid';
     }
@@ -237,6 +248,8 @@ class Site extends CI_Controller {
             redirect(base_url('index.php?student/dashboard'));
         } elseif ($type == 'subadmin') {
             redirect(base_url('index.php?sub_admin'));
+        } elseif($type == 'professor') {
+            redirect(base_url('professor'));
         }
     }
 
