@@ -42,7 +42,7 @@ foreach ( $edit_data as $row):
                                             <div class="col-sm-5">
                                                 <select name="batch_status">
                                                   <option value="1" <?php if($row['holiday_status'] == '1'){ echo "selected"; } ?>>Active</option>
-                                    <option value="0" <?php if($row['b_status'] == '0'){ echo "selected"; } ?>>Inactive</option>	
+                                    <option value="0" <?php if($row['holiday_status'] == '0'){ echo "selected"; } ?>>Inactive</option>	
                                                 </select>
                                                 <lable class="error" id="error_lable_exist" style="color:red"></lable>
                                             	
