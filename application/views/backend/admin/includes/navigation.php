@@ -385,12 +385,30 @@
                         </ul>
                     </div>
                 </li>
-                <li class="<?php if($page_name == 'forum') echo 'active'; ?>">
-                    <a  href="<?php echo base_url('forum'); ?>" <?php if($page_name == "forum"){  ?> <?php } ?>>
-                        <span class="menu-icon"><i class="fa fa-book"> </i></span>
-                        <span class="menu-text">Forum</span>
+                 <li>
+                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "forum" || $page_name == "forum_topic") { ?> class="open"<?php } ?> >
+                        <span class="menu-icon entypo-archive"><i class="fa fa-book"></i></span>
+                        <span class="menu-text">Forum</span>  
+                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                </li>	
+                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "forum" || $page_name == "forum_topic") { ?> style="display:block" <?php } ?>  >
+                        <ul class="clearfix">          
+                            <li <?php if ($page_name == "forum") { ?> class="selectednavmenu" <?php } ?> >
+                                <a href="<?php echo base_url(); ?>forum">
+                                    <span class="menu-text">Forum</span>  
+                                </a>
+                            </li>
+                            <li <?php if ($page_name == "forum_topic") { ?> class="selectednavmenu" <?php } ?> >
+                                <a href="<?php echo base_url(); ?>forum/forumtopics">
+                                    <span class="menu-text">Forum Topics</span>  
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </li>
+              
                 <li >
                     <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "create_group" || $page_name == "list_group") { ?> class="open" <?php } ?>>
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 

@@ -183,3 +183,8 @@ Stack trace:
   thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
 ERROR - 2016-05-09 19:00:32 --> 404 Page Not Found: Forum/mainfest.appcache
 ERROR - 2016-05-09 19:00:45 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 19:03:44 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 19:04:14 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 19:04:24 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 19:04:24 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 19:04:24 --> 404 Page Not Found: Logopng/index
