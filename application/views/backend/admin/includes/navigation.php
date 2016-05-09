@@ -385,6 +385,12 @@
                         </ul>
                     </div>
                 </li>
+                <li class="<?php if($page_name == 'forum') echo 'active'; ?>">
+                    <a  href="<?php echo base_url('forum'); ?>" <?php if($page_name == "forum"){  ?> <?php } ?>>
+                        <span class="menu-icon"><i class="fa fa-book"> </i></span>
+                        <span class="menu-text">Forum</span>
+                    </a>
+                </li>	
                 <li >
                     <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "create_group" || $page_name == "list_group") { ?> class="open" <?php } ?>>
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 

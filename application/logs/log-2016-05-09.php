@@ -134,3 +134,11 @@ ERROR - 2016-05-09 18:12:39 --> 404 Page Not Found: Forum/assets
 ERROR - 2016-05-09 18:12:52 --> 404 Page Not Found: Forum/mainfest.appcache
 ERROR - 2016-05-09 18:14:06 --> 404 Page Not Found: Forum/mainfest.appcache
 ERROR - 2016-05-09 18:14:14 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 18:22:52 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+ERROR - 2016-05-09 18:22:59 --> 404 Page Not Found: Admin/mainfest.appcache
+ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 18:25:28 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 18:26:33 --> 404 Page Not Found: Logopng/index
