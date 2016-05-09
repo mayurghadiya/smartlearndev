@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Middle Content Start -->    
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -83,3 +84,5 @@
         </a>
     </div>
    
+=======
+>>>>>>> origin/master
