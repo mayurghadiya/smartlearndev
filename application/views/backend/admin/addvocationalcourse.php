@@ -44,7 +44,7 @@
                                 <?php
                                 $professor = $this->db->get('professor')->result_array();
                                 ?>
-                                <select id="professor1" name="professor1" class="form-control">
+                                <select id="professor" name="professor" class="form-control">
                                     <option value="">Select professor</option>
                                     <?php foreach ($professor as $srow) { ?>
                                         <option value="<?php echo $srow['professor_id']; ?>"><?php echo $srow['name']; ?>
@@ -100,7 +100,7 @@
         $("#frmvocationalcourse").validate({
             rules: {
                 course_name: "required",
-                professor1: "required",
+                professor: "required",
                 fee: "required",
                 course_status: "required",
                 startdate: "required",
@@ -108,7 +108,7 @@
             },
             messages: {
                 course_name: "Enter course name",
-                professor1: "Select professor",
+                professor: "Select professor",
                 fee: "Enter course fee",
                 course_status: "Select status",
                 startdate: "Select date",
