@@ -188,3 +188,8 @@ ERROR - 2016-05-09 19:04:14 --> 404 Page Not Found: Forum/mainfest.appcache
 ERROR - 2016-05-09 19:04:24 --> 404 Page Not Found: Indexhtml/index
 ERROR - 2016-05-09 19:04:24 --> 404 Page Not Found: Stylecss/index
 ERROR - 2016-05-09 19:04:24 --> 404 Page Not Found: Logopng/index
+ERROR - 2016-05-09 19:28:15 --> Severity: Warning --> Invalid argument supplied for foreach() /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/forum_question.php 47
+ERROR - 2016-05-09 19:28:19 --> 404 Page Not Found: Forum/mainfest.appcache
+ERROR - 2016-05-09 19:29:00 --> 404 Page Not Found: Indexhtml/index
+ERROR - 2016-05-09 19:29:00 --> 404 Page Not Found: Stylecss/index
+ERROR - 2016-05-09 19:29:01 --> 404 Page Not Found: Logopng/index

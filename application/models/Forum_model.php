@@ -45,6 +45,16 @@ class Forum_model extends CI_Model {
         {
              $this->db->delete("forum_topics",array("forum_topic_id"=>$id));
         }
+        public function getforum_question()
+        {
+            $this->db->get("forum_question")->result_array();
+        }
+        
+        public function create_question($data)
+        {
+            $this->db->insert("forum_question",$data);
+        }
+        
         
 	
 }

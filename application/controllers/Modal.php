@@ -76,6 +76,12 @@ class Modal extends CI_Controller {
                 {
                     $page_data['forum'] = $this->forum_model->getforum();
                 }
+                if($page_name=="add_forum_question")
+                {
+                    $page_data['forum'] = $this->forum_model->getforum();
+                    $page_data['forum_topic'] = $this->forum_model->getforum_topic();
+                    
+                }
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		
 		echo '<script src="http://192.168.1.13/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
 	}

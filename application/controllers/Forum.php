@@ -112,6 +112,48 @@ class Forum extends CI_Controller {
             }
         }
         
+        function question()
+        {
+            $page_data['page_name'] = 'forum_question';
+        $page_data['page_title'] = 'Forum Question';
+        $page_data['forum_question'] = $this->forum_model->getforum_question();
+        $this->load->view('backend/index', $page_data);
+            
+        }
+        
+        function questioncrud($param='',$id='')
+        {
+             if($param=="create")
+            {
+                $data['forum_topic_id'] = $this->input->post('forum_topic_id');
+                $data['forum_question'] = $this->input->post('question');
+                $data['forum_que_status'] = $this->input->post('question_status');
+                $data['forum_id'] = $this->input->post('forum_id');
+                
+                $this->forum_model->create_question($data);
+                 $this->session->set_flashdata('flash_message', 'Forum Question Added Successfully');
+                redirect(base_url() . 'forum/forumtopics', 'refresh');
+                
+            }
+             if($param=="update")
+            {
+                $data['forum_topic_title'] = $this->input->post('topic_title');
+                $data['forum_topic_status'] = $this->input->post('topic_status');
+                $data['forum_id'] = $this->input->post('forum_id');
+                
+                $this->forum_model->update_topic($data,$id);
+                 $this->session->set_flashdata('flash_message', 'Forum Topic Updated Successfully');
+                redirect(base_url() . 'forum/forumtopics', 'refresh');
+                
+            }
+            if($param=="delete")
+            {
+                 $this->forum_model->forum_topicsdelete($id);
+                  $this->session->set_flashdata('flash_message', 'Forum Topic Deleted Successfully');
+                redirect(base_url() . 'forum/forumtopics', 'refresh');
+            }
+        }
+        
 }
 
 /* End of file welcome.php */
