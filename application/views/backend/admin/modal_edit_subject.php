@@ -79,18 +79,18 @@ foreach ($edit_data as $row):
                               <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Professor");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="professor" id="professor1">
-                                        <option value="">Select professor</option>
+                                      <select name="professor[]" id="professor1" multiple="">                                      
                                             <?php
+                                               $professor_id=explode(',',$row['professor_id']);
                                             $professor = $this->db->get_where('professor')->result();
                                             foreach ($professor as $prof) {
-                                                if ($prof->professor_id == $row['professor_id']) {
+                                                if (in_array($prof->professor_id,$professor_id)) {
                                                     ?>
                                                 <option value="<?= $prof->professor_id; ?>" selected><?= $prof->name ?></option>
                                                 <?php
                                             } else {
                                                 ?>
-                                                <option value="<?= $prof->s_id ?>" ><?= $prof->s_name ?></option>
+                                                <option value="<?= $prof->professor_id ?>" ><?= $prof->name ?></option>
                                                 <?php
                                             }
                                         }
@@ -167,7 +167,11 @@ $("#course1").change(function () {
                                     }
 
                     },
-                professor:"required",
+                 'professor[]': 
+                            {
+                    
+                                 required:true,
+                            },
             },
             messages: {
                 subname: "Enter subject name",
@@ -177,7 +181,11 @@ $("#course1").change(function () {
                         required:"Select semester",
                         remote:"subject already exists in this course and semester",
                     },
-                    professor:"Select professor",
+                    'professor[]': 
+                            {
+                    
+                                 required:"Select Professor",
+                            },
             }
         });
     });

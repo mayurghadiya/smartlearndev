@@ -63,7 +63,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("professor");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
-                                                <select name="professor" id="professor">
+                                                <select name="professor[]" id="professor" multiple=""> 
                                                     <option value="">Select Professor</option>
                                                     <?php foreach($professor as $prof) : ?>
                                                     <option value="<?php echo $prof['professor_id']; ?>"><?php echo $prof['name']; ?></option>
@@ -157,16 +157,24 @@
                       subname:"required",                                                                  
                     subcode:"required",
                     course:"required",
-                    semester:"required",
-                    professor:"required",
+                    semester:"required",                    
+                    'professor[]': 
+                            {
+                    
+                                 required:true,
+                            },
                 },
                 messages: {
 
                 subname: "Enter subject name",
                  subcode: "Enter subject code",                                                                  
                     course: "Select branch",
-                    semester: "Select semester",
-                    professor:"Select professor",
+                    semester: "Select semester",                                       
+                    'professor[]': 
+                            {
+                    
+                                 required:"Select Professor",
+                            },
                 }
             });
         });

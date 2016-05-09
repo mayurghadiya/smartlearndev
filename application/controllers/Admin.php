@@ -1818,7 +1818,7 @@ class Admin extends CI_Controller {
             $data['sm_sem_id'] = $this->input->post('semester');
             $data['subject_name'] = $this->input->post('subname');
             $data['subject_code'] = $this->input->post('subcode');
-            $data['professor_id'] = $this->input->post('professor');
+            $data['professor_id'] = implode(',', $this->input->post('professor'));          
             $data['sm_status'] = 1;
             $data['created_date'] = date('Y-m-d');
 
@@ -1833,6 +1833,7 @@ class Admin extends CI_Controller {
             $data['sm_sem_id'] = $this->input->post('semester');
             $data['subject_name'] = $this->input->post('subname');
             $data['subject_code'] = $this->input->post('subcode');
+            $data['professor_id'] = implode(',', $this->input->post('professor'));          
             $data['sm_status'] = 1;
 
 
