@@ -869,7 +869,20 @@ class Admin extends CI_Controller {
             $this->session->set_flashdata('flash_message', get_phrase('vocational_course_added_successfully'));
             redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
         }
-        
+         if ($param1 == 'do_update') {
+             $data['course_name'] = $this->input->post('course_name');
+            $data['course_startdate'] = date('Y-m-d', strtotime($this->input->post('startdate1')));
+            $data['course_enddate'] = date('Y-m-d', strtotime($this->input->post('enddate1')));
+            $data['course_fee'] = $this->input->post('fee');
+            $data['professor_id'] = $this->input->post('professor');
+            $data['status'] = $this->status($this->input->post('course_status'));
+            $data['updated_date'] = date('Y-m-d');
+            
+            $this->db->where('vocational_course_id', $param2);
+            $this->db->update('vocational_course', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('vocational_course_updated_successfully'));
+            redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
+        }
          if ($param1 == 'delete') {
             $this->db->where('vocational_course_id', $param2);
             $this->db->delete('vocational_course');
