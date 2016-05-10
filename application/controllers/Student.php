@@ -745,13 +745,9 @@ class Student extends CI_Controller {
         }
         echo json_encode($total_paid);
     }
-    function get_vocational_fee()
-    {
-        $id=$this->input->post('id');
-        $data=$this->db->get_where('vocational_course',array('vocational_course_id'=>$id))->result_array();
-        echo json_encode($data);
-    }
+   
 // payment nikita 
+    
     function vocationalcourse($param1 = '', $param2 = '')
     {
         if ($param1 == 'register') {
@@ -763,7 +759,12 @@ class Student extends CI_Controller {
         }
         else
         {
-              $page_data['vocationalcourse'] = $this->db->get_where('vocational_course',array('status'=>1))->result_array();
+
+          $page_data['vocationalcourse']=$this->db->query('SELECT * FROM vocational_course 
+                    WHERE NOT EXISTS (SELECT vocational_course_id FROM vocational_course_fee
+                    WHERE vocational_course_fee.vocational_course_id = vocational_course.vocational_course_id and vocational_course_fee.student_id= '.$this->session->userdata('student_id').')')->result_array();
+        
+          //$page_data['vocationalcourse'] = $this->db->get_where('vocational_course',array('status'=>1))->result_array();
         $page_data['page_name'] = 'vocational_course';
         $page_data['page_title'] = 'Vocational Course';
         $this->load->view('backend/index', $page_data);
