@@ -16,7 +16,7 @@
                         <span class="menu-text">Basic Management</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
-                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course") { ?> style="display: block" <?php } ?>>
+                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course" || $page_name=="assessments") { ?> style="display: block" <?php } ?>>
                         <ul>
                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/degree"> 
@@ -72,6 +72,11 @@
                              <li <?php if ($page_name == "vocational_course") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/vocationalcourse">
                                     <span class="menu-text">Vocational Course</span>  						
+                                </a> 
+                            </li>
+                            <li <?php if ($page_name == "assessments") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>admin/assessments">
+                                    <span class="menu-text">Assessments Management</span>  						
                                 </a> 
                             </li>
                             
