@@ -475,7 +475,13 @@ class Student_model extends CI_Model {
 
         return $insert_id;
     }
+ function vocational_add_authorized_payment($data) {
+     
+        $this->db->insert('vocational_course_fee', $data);
+        $insert_id = $this->db->insert_id();
 
+        return $insert_id;
+    }
     /**
      * Student fees record
      * @param int $student_id
