@@ -29,6 +29,7 @@ class Forum_model extends CI_Model {
         
         public function getforum_topic()
         {
+            $this->db->order_by("forum_topic_id","DESC");
             return $this->db->get('forum_topics')->result_array();
         }
         
@@ -55,6 +56,25 @@ class Forum_model extends CI_Model {
             $this->db->insert("forum_question",$data);
         }
         
+        public function getcomments($param)
+        {
+            $this->db->order_by("forum_comment_id","DESC");
+            $this->db->where("forum_topic_id",$param);
+            return $this->db->get("forum_comment")->result_array();
+        }
+        
+        public function confirm($id)
+        {
+            $data['forum_comment_status'] = '1';
+            $this->db->where("forum_comment_id",$id);
+            $this->db->update("forum_comment",$data);
+        }
+        
+        public function delete_comment($id)
+        {
+            $this->db->where("forum_comment_id",$id);
+            $this->db->delete("forum_comment");
+        }
         
 	
 }

@@ -86,7 +86,10 @@ class Forum extends CI_Controller {
             {
                 $data['forum_topic_title'] = $this->input->post('topic_title');
                 $data['forum_topic_status'] = $this->input->post('topic_status');
+                $data['forum_topic_desc'] = $this->input->post('description');
+                $data['user_role'] = $this->session->userdata('login_type');
                 $data['forum_id'] = $this->input->post('forum_id');
+                
                 
                 $this->forum_model->create_topic($data);
                  $this->session->set_flashdata('flash_message', 'Forum Topic Added Successfully');
@@ -98,9 +101,10 @@ class Forum extends CI_Controller {
                 $data['forum_topic_title'] = $this->input->post('topic_title');
                 $data['forum_topic_status'] = $this->input->post('topic_status');
                 $data['forum_id'] = $this->input->post('forum_id');
-                
+                $data['forum_topic_desc'] = $this->input->post('description');
+                $data['user_role'] = $this->session->userdata('login_type');
                 $this->forum_model->update_topic($data,$id);
-                 $this->session->set_flashdata('flash_message', 'Forum Topic Updated Successfully');
+                $this->session->set_flashdata('flash_message', 'Forum Topic Updated Successfully');
                 redirect(base_url() . 'forum/forumtopics', 'refresh');
                 
             }
@@ -154,6 +158,28 @@ class Forum extends CI_Controller {
             }
         }
         
+        function forumcomment($param = '')
+        {
+            if($param!="")
+            {
+             $page_data['forum_comment'] =  $this->forum_model->getcomments($param);
+            }
+             $page_data['page_name'] = 'forum_comment';
+             $page_data['page_title'] = 'Forum Comment';       
+             $this->load->view('backend/index', $page_data);
+        }
+        function commentdelete($param='',$topic)
+        {
+            $this->forum_model->delete_comment($param);
+             $this->session->set_flashdata('flash_message', 'Forum Comment Delete Successfully');
+                redirect(base_url() . 'forum/forumcomment/'.$topic, 'refresh');
+        }
+        function confirmcomment($param='',$topic)
+        {
+             $this->forum_model->confirm($param);
+              $this->session->set_flashdata('flash_message', 'Forum Comment Approve Successfully');
+                redirect(base_url() . 'forum/forumcomment/'.$topic, 'refresh');
+        }
 }
 
 /* End of file welcome.php */

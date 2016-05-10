@@ -39,6 +39,7 @@
                                                 <th><div>#</div></th>
                                                 <th>Forum Topics Name</th>
                                                 <th>Status</th>
+                                                <th>Comments</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -54,7 +55,9 @@
                                                         <?php } else { ?>	
                                                             <span class="label label-default">InActive</span>
     <?php } ?>
+            
                                                     </td>
+                                                    <td><a href="<?php echo base_url().'forum/forumcomment/'.$row['forum_topic_id']; ?>" data-original-title="View Comments" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-file-o"></i></a></td>
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_forumtopic/<?php echo $row['forum_topic_id']; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 

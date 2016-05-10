@@ -35,7 +35,13 @@
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="topic_title" id="topic_title" />
                                             </div>
-                                        </div>												
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
+                                            <div class="col-sm-5">
+                                                <textarea class="form-control" name="description" id="description"></textarea>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Status <span style="color:red">*</span></label>
                                             <div class="col-sm-5">

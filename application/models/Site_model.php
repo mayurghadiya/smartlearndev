@@ -164,4 +164,16 @@ class Site_model extends CI_Model {
         
         return $this->db->get('university_peoples')->result();
     }
+    /**
+     * Topics crud
+     * @return mixed
+     */
+    function create_topic($data) {
+        $this->db->insert("forum_topics",$data);
+        
+    }
+    function create_comment($data)
+    {
+        $this->db->insert("forum_comment",$data);
+    }
 }

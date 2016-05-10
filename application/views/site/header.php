@@ -132,6 +132,8 @@
                                             </li>
                                             <li><a href="<?php echo base_url('syllabus'); ?>">Syllabus</a><span>Syllabus</span>
                                             </li>
+                                            <li><a href="<?php echo base_url('site/forums'); ?>">Forum</a><span>Forum</span>
+                                            </li>
 
                                             <li><a href="<?php echo base_url('contact'); ?>">Contact</a><span>inquire with us</span>
 

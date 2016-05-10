@@ -7,13 +7,13 @@
                     <ul class="breadcrumb">
                          <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
                          <li><?php echo ucwords("basic management");?></li>
-                         <li><?php echo ucwords("Forum");?></li>
+                         <li><?php echo ucwords("Forum Comment");?></li>
                     </ul>					
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1>Forum</h1>
+                    <h1>Forum Comment</h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -23,7 +23,7 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                    Forum List
+                                    Forum Comment
                                 </a></li>                           
                         </ul>
                         <!------CONTROL TABS END------>
@@ -37,29 +37,35 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th>Forum Name</th>
+                                                <th>Forum Comments</th>
                                                 <th>Status</th>
-                                                <th>Action</th>
+                                                <th  >Action</th>
+                                                <th  ></th>
+                                                 
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $count = 1;
-                                            foreach ($forum as $row): ?>
+                                            foreach ($forum_comment as $row): ?>
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>
-                                                    <td><?php echo $row['forum_title']; ?></td>                         
+                                                    <td><?php echo $row['forum_comments']; ?></td>                         
                                                     <td >
-                                                        <?php if ($row['forum_status'] == '1') { ?>
+                                                        <?php if ($row['forum_comment_status'] == '1') { ?>
                                                             <span class="label label-success">Active</span>
                                                         <?php } else { ?>	
                                                             <span class="label label-default">InActive</span>
     <?php } ?>
                                                             
                                                     </td>
-                                                    <td class="menu-action">
-                                                        <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_forum/<?php echo $row['forum_id']; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
-
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>forum/crud/delete/<?php echo $row['forum_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                    <td class="menu-action">                                                            
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>forum/commentdelete/<?php echo $row['forum_comment_id']; ?>/<?php  echo $row['forum_topic_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                       
+                                                    </td>
+                                                    <td >
+                                                        <?php if ($row['forum_comment_status'] == '0') { ?>
+                                                        <a href="<?php echo base_url(); ?>index.php?forum/confirmcomment/<?php echo $row['forum_comment_id']; ?>/<?php  echo $row['forum_topic_id']; ?>" class="btn btn-info vd_bg-green">Approve</a>
+                                                        <?php } ?>
                                                     </td>
                                                 </tr>
                                 <?php endforeach; ?>						
@@ -94,10 +100,3 @@
     
     </style>
     
-  
-    <div class="md-fab-wrapper">
-
-        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/add_forum/');" href="#" id="navfixed" data-toggle="tab">
-            <i class="material-icons">&#xE145;</i>
-        </a>
-    </div>

@@ -19,6 +19,7 @@ class Site extends CI_Controller {
         $this->load->database();
         $this->load->model('Site_model');
         $this->load->helper('system_setting');
+        $this->load->helper('forum');
     }
 
     /**
@@ -353,5 +354,73 @@ class Site extends CI_Controller {
         $this->data['title'] = 'Alumni';
         $this->__template('alumni', $this->data);
     }
+    function forums()
+    {
+        $this->data['title'] = 'Forum';
+        $this->db->where("forum_status","1");
+        $this->data['forums'] = $this->db->get("forum")->result();
+        $this->__template('forum', $this->data);
+    }
+    
+    function topics($param = '')
+    {
+        $this->data['title'] = 'Forum Topics';
+        $this->db->where("forum_topic_status","1");
+        $this->db->where("forum_id",$param);
+         
+        
+        $this->data['topics'] = $this->db->get("forum_topics")->result();
+        $this->data['param'] = $param;
+        $this->db->where("forum_id",$param);
+         $this->data['forum'] = $this->db->get("forum")->result();
+        $this->__template('topic', $this->data);
+    }
+    
+    function viewtopic($param='')
+    {
+        $this->data['title'] = 'Forum Topic Discussion';
+        $this->db->where("forum_topic_status","1");
+        $this->db->where("forum_topic_id",$param);
+        $this->data['param'] = $param;
+        $this->data['topics'] = $this->db->get("forum_topics")->result();
+        
+        $this->data['comments'] = $this->db->get_where("forum_comment",array("forum_topic_id"=>$param))->result();
+        $this->__template('discussion', $this->data);
+    }
+    
+    function comment($param='')
+    {
+       if($param=="create")
+       {
+          $data['forum_topic_id'] = $this->input->post('forum_topic_id');
+          $data['forum_comments'] = $this->input->post('discussion');
+          $data['forum_comment_status'] = '0';
+           $data['user_role'] = $this->session->userdata('login_type');
+           $data['user_role_id'] = $this->session->userdata('login_user_id');
+          $this->Site_model->create_comment($data);
+           $this->session->set_flashdata('message', ' Your comment has been queued for review by site administrators and will be published after approval.');
+           redirect(base_url('index.php?site/viewtopic/'.$data['forum_topic_id']));
+       }
+    }
+    
+    function crudtopic($param='')
+    {   
+        if($param='create')
+        {
+            $data['forum_id'] = $this->input->post('forum_id');
+            $data['forum_topic_title'] = $this->input->post('subject');
+            $data['forum_topic_desc'] = $this->input->post('discussion');
+            $data['forum_topic_status'] = '0';
+            $data['user_role'] = $this->session->userdata('login_type');
+            $data['user_role_id'] = $this->session->userdata('login_user_id');
+            
+            $this->Site_model->create_topic($data);
+            $this->session->set_flashdata('message', ' Your Topic has been queued for review by site administrators and will be published after approval.');
+            redirect(base_url('index.php?site/topics/'.$data['forum_id']));
+            
+        }
+        
+    }
+    
     
 }

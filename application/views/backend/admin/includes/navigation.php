@@ -391,12 +391,12 @@
                     </div>
                 </li>
                  <li>
-                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "forum" || $page_name == "forum_topic") { ?> class="open"<?php } ?> >
+                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "forum" || $page_name == "forum_topic" || $page_name == "forum_comment") { ?> class="open"<?php } ?> >                       
                         <span class="menu-icon entypo-archive"><i class="fa fa-book"></i></span>
                         <span class="menu-text">Forum</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "forum" || $page_name == "forum_topic") { ?> style="display:block" <?php } ?>  >
+                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "forum" || $page_name == "forum_topic" || $page_name == "forum_comment") { ?> style="display:block" <?php } ?>  >
                         <ul class="clearfix">          
                             <li <?php if ($page_name == "forum") { ?> class="selectednavmenu" <?php } ?> >
                                 <a href="<?php echo base_url(); ?>forum">

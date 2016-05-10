@@ -52,6 +52,8 @@ $route['syllabus'] = 'site/syllabus';
 $route['contact'] = 'site/contact';
 $route['events'] = 'site/events';
 $route['alumni'] = 'site/alumni';
+$route['forums'] = 'site/forums';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
