@@ -57,7 +57,7 @@
                                                ?></td>   
                                               
                                                 <td class="menu-action">
-                                                   
+                                                    <a href="<?php echo base_url(); ?>index.php?student/vocationalcourse/register/<?php echo $row['vocational_course_id']; ?>"  data-original-title="Submit Assignment" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow">Register Now</a>
                                                 </td>
                                                 </tr>
                                             <?php endforeach; ?>
