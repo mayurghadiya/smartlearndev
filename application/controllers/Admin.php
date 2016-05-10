@@ -853,6 +853,42 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
+    function division($param1 = '', $param2 = '')
+    {
+        if ($this->session->userdata('admin_login') != 1)
+        redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['class_name'] = $this->input->post('class_name');
+            $data['created_date'] = date('Y-m-d');           
+            $this->db->insert('class', $data); 
+            $this->session->set_flashdata('flash_message', get_phrase('class_added_successfully'));
+            redirect(base_url() . 'admin/division/', 'refresh');
+        }
+        
+        if ($param1 == 'do_update') {
+             $data['class_name'] = $this->input->post('class_name');           
+            $data['updated_date'] = date('Y-m-d');
+            
+            $this->db->where('class_id', $param2);
+            $this->db->update('class', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('class_updated_successfully'));
+           
+            redirect(base_url() . 'admin/division/', 'refresh');
+        }
+        if ($param1 == 'delete') {
+            $this->db->where('class_id', $param2);
+            $this->db->delete('class');
+            $this->session->set_flashdata('flash_message', get_phrase('class_deleted_successfully'));
+
+            redirect(base_url() . 'admin/division/', 'refresh');
+        }
+        
+        $page_data['class'] = $this->db->get('class')->result_array();
+        $page_data['page_name'] = 'class';
+        $page_data['page_title'] = 'Class';
+        $this->load->view('backend/index', $page_data);
+    }
+    
     function vocationalcourse($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');

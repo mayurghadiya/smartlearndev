@@ -355,14 +355,7 @@ class Student extends CI_Controller {
         $this->load->view('backend/index', $page_data);
     }
     
-    function vocationalcourse($param1 = '', $param2 = '')
-    {
-        $page_data['vocationalcourse'] = $this->db->get_where('vocational_course',array('status'=>1))->result_array();
-        $page_data['page_name'] = 'vocational_course';
-        $page_data['page_title'] = 'Vocational Course';
-        $this->load->view('backend/index', $page_data);
-    }
-
+    
     function project($param1 = '', $param2 = '') {
 
         if ($param1 == 'create') {
@@ -752,7 +745,128 @@ class Student extends CI_Controller {
         }
         echo json_encode($total_paid);
     }
+   
+// payment nikita 
+    
+    function vocationalcourse($param1 = '', $param2 = '')
+    {
+        if ($param1 == 'register') {
+        $page_data['vocationalcourse']=$this->db->get_where('vocational_course',array('vocational_course_id'=>$param2))->result_array();
+        
+        $page_data['page_name'] = 'modal_register_vocational_course';
+        $page_data['page_title'] = 'Vocational Course Fee';
+        $this->load->view('backend/index', $page_data);
+        }
+        else
+        {
 
+          $page_data['vocationalcourse']=$this->db->query('SELECT * FROM vocational_course 
+                    WHERE NOT EXISTS (SELECT vocational_course_id FROM vocational_course_fee
+                    WHERE vocational_course_fee.vocational_course_id = vocational_course.vocational_course_id and vocational_course_fee.student_id= '.$this->session->userdata('student_id').')')->result_array();
+        
+          //$page_data['vocationalcourse'] = $this->db->get_where('vocational_course',array('status'=>1))->result_array();
+        $page_data['page_name'] = 'vocational_course';
+        $page_data['page_title'] = 'Vocational Course';
+        $this->load->view('backend/index', $page_data);
+        }
+      
+    }
+    
+    function pay_online_vocational_course() {
+        if ($_POST) {
+            //set payment data in session
+            $session['payment_info'] = array(
+                'student_id' => $this->session->userdata('student_id'),                
+                'amount' => $_POST['amount'],
+                'vocational_courseid' => $_POST['voc_course'],
+            );
+            $this->session->set_userdata($session);
+            //echo '<pre>';
+            //var_dump($_POST);
+            redirect(base_url('index.php?student/vocational_payment_gateway_type/' . $_POST['method']));
+        } else {
+            redirect(base_url('index.php?student/vocationalcourse'));
+        }
+    }
+    
+    function vocational_payment_gateway_type($type) {
+        $this->load->model('admin/Crud_model');
+        if ($type == 'authorize.net') {
+            //load authorize.net payment getaway page
+            $page_data['authorize_net'] = $this->Crud_model->authorize_net_config();
+            
+        }
+        $page_data['title'] = 'Make Payment';
+        $page_data['page_name'] = 'vocational_make_payment';
+        $this->load->view('backend/index', $page_data);
+    }
+     function vocational_authorize_net_make_payment()
+    {
+         $this->load->library('authorize_net');
+        $this->load->model('Student/Student_model');
+        if ($_POST) {
+            $student_detail = $this->db->get_where('student', array(
+                        'std_id' => $this->session->userdata('login_user_id')
+                    ))->row();
+            
+            $cc_details = $this->validateCreditcard_number($_POST['card_number']);
+            if ($cc_details['status'] == 'false') {
+                // invalid card details
+                echo 'invalid card details';
+                //$this->do_payment();
+            } else {
+                $student_data = $this->db->get_where('student', array('std_id' => $this->session->userdata('payment_data')['student_id']))->row();
+                $auth_net = array(
+                    'x_card_num' => $_POST['card_number'], // Visa
+                    'x_exp_date' => $_POST['month'] . '/17',
+                    'x_card_code' => $_POST['cvv'],
+                    'x_description' => 'Authorize.net transaction',
+                    'x_amount' => $this->session->userdata('payment_info')['amount'],
+                    'x_first_name' => $student_detail->std_first_name,
+                    'x_last_name' => $student_detail->std_last_name,
+                    'x_address' => 'Address',
+                    'x_city' => $student_detail->city,
+                    'x_state' => 'State',
+                    'x_zip' => $student_detail->zip,
+                    'x_country' => 'India',
+                    'x_phone' => $student_detail->std_mobile,
+                    'x_email' => 'mayur.ghadiya@searchnative.in',
+                    'x_customer_ip' => $this->input->ip_address(),
+                );
+                $this->authorize_net->setData($auth_net);
+                // redirect after order completion
+                $status = array();
+                // Try to AUTH_CAPTURE
+                if ($this->authorize_net->authorizeAndCapture()) {
+                    
+                    $this->session->set_flashdata('flash_message', 'Transaction is successfully done.');
+                    
+                    $student_detail = $this->db->get_where('student', array(
+                                'std_id' => $this->session->userdata('login_user_id')
+                            ))->row();
+                    //insert into db
+                    $this->Student_model->vocational_add_authorized_payment(array(
+                        'student_id' => $this->session->userdata('payment_info')['student_id'],
+                        'pay_amount' => $this->session->userdata('payment_info')['amount'],
+                        'vocational_course_id' => $this->session->userdata('payment_info')['vocational_courseid'],
+                        'pay_date'=>date('Y-m-d')
+                    ));
+                    //remove session
+                    $this->session->unset_userdata('payment_info');
+                    redirect(base_url('index.php?student/vocationalcourse'));
+                } else {
+                    $this->session->set_flashdata('flash_message', '<p>' . $this->authorize_net->getError() . '</p>');
+                    //remove session
+                    $this->session->unset_userdata('payment_data');
+                    //remove session
+                    $this->session->unset_userdata('payment_info');
+                    redirect(base_url('index.php?student/vocationalcourse'));
+                }
+            }
+        }
+    }
+    
+    //end
     /**
      * Pay online
      */
@@ -775,7 +889,7 @@ class Student extends CI_Controller {
             redirect(base_url('index.php?student/student_fees'));
         }
     }
-
+ 
     /**
      * Payment gateway type
      * @param string $type
@@ -793,7 +907,7 @@ class Student extends CI_Controller {
         $page_data['page_name'] = 'make_payment';
         $this->load->view('backend/index', $page_data);
     }
-
+     
     function authorize_net_make_payment() {
         $this->load->library('authorize_net');
         $this->load->model('Student/Student_model');
@@ -858,6 +972,8 @@ class Student extends CI_Controller {
             }
         }
     }
+    
+   
 
     /**
      * Verify and print verify card details
