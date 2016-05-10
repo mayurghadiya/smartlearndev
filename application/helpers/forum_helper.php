@@ -31,3 +31,33 @@ if (!function_exists('roleuserdatatopic')) {
 
 }
 
+/*
+ * 
+ * 
+ */
+/*
+if (!function_exists('roleuserdatacomment')) {
+
+    function roleuserdatacomment($role,$role_id) {
+        $CI = & get_instance();
+        $CI->load->database();
+        if($role=="admin"){        
+        $CI->db->where('admin_id', $role_id);
+        return $res = $CI->db->get('admin')->result_array();
+        }
+        
+        if($role=="student"){        
+        $CI->db->where('std_id', $role_id);
+        return $res = $CI->db->get('forum_topics')->result_array();
+        }
+        if($role=="professor"){        
+        $CI->db->where('professor_id', $role_id);
+        return $res = $CI->db->get('professor')->result_array();
+        }
+       
+        
+    }
+
+}
+
+*/
