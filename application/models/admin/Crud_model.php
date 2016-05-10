@@ -8,6 +8,8 @@ class Crud_model extends CI_Model {
     function __construct() {
         parent::__construct();
     }
+    
+   
 
     /*     * ****  
       Created :-- Mayur Panchal
@@ -1334,5 +1336,29 @@ class Crud_model extends CI_Model {
         
         return $insert_id;
     }
+     /*
+     * 
+     * Created by mayur panchal
+     * Message : -- for get assessments
+     */
+    public function assessment()
+    {
+       return $this->db->get('assessments')->result_array();
+    }
+    
+    public function create_assessment($data)
+    {
+        $this->db->insert("assessments",$data);
+    }
+    
+    public function update_assessment($data,$id)
+    {
+        $this->db->update("assessments",$data,array("assessment_id"=>$id));
+    }
+    public function delete_assessment($id)
+    {
+            $this->db->delete("assessments",array("assessment_id"=>$id));
+    }
+    
 
 }
