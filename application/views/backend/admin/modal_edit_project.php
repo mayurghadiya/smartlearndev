@@ -98,7 +98,7 @@ foreach ($edit_data as $row):
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
-                                    <select name="semester"  id="semester2"  onchange="get_students(this.value);">
+                                    <select name="semester"  id="semester2"  >
                                         <option value="">Select semester</option>
                                 <?php
                                 $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
@@ -118,16 +118,34 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             <div class="form-group">
-                                  <?php
-                                        $stu=explode(',',$row['pm_student_id']);
-                                        
-                                        $datastudent = $this->db->get_where('student', array('std_degree'=>$row['pm_degree'],
-                                                                                            'course_id'=>$row['pm_course'],
-                                                                                             'std_batch'=>$row['pm_batch'],
-                                                                                              'semester_id'=>$row['pm_semester']))->result();
-//                                       
-                                        
-                                        ?>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("class");?><span style="color:red">*</span></label>
+                            <div class="col-sm-5">
+                                <select name="class2" id="class2" onchange="get_students(this.value);">
+                                    <option value="">Select class</option>
+                                    <?php 
+                                    $class=$this->db->get('class')->result_array();
+
+                                    foreach($class as $c)
+                                    {
+                                        if($c['class_id']==$row['class_id'])
+                                        {
+                                    ?>
+                                        <option selected value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                    <?php
+                                    }
+                                    else 
+                                        {                                        
+                                    ?>
+                                       <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                    <?php                                            
+                                    }
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              
                                 
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Student");?><span style="color:red">*</span></label>
                                 <div class="col-sm-8">
@@ -140,8 +158,8 @@ foreach ($edit_data as $row):
                                                 array('std_degree'=>$row['pm_degree'],
                                                     'course_id'=>$row['pm_course'],
                                                     'std_batch'=>$row['pm_batch'],
-                                                    'semester_id'=>$row['pm_semester']))->result();
-                                       
+                                                    'semester_id'=>$row['pm_semester'],'class_id'=>$row['class_id']))->result();
+                                        
                                         foreach ($datastudent as $rowstu) {
                                              if(in_array($rowstu->std_id, $stu)) {
                                                 ?>
@@ -161,12 +179,6 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                             
-                            <!--<div class="form-group">
-                                <label class="col-sm-3 control-label">Page URL</label>
-                                <div class="col-sm-5">
-                                    
-                                </div>
-                            </div>-->
                             <input type="hidden" class="form-control" name="pageurl" id="pageurl" value="<?php echo $row['pm_url']; ?>" />
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Description");?></label>
@@ -247,18 +259,19 @@ endforeach;
         });
     }
     
-    function get_students(sem)
+    function get_students(divclass)
     {
        
        var batch = $("#batch2").val();
         var course = $("#course2").val();
          var degree = $("#degree2").val();
+         var sem = $("#semester2").val();
          var param = '<?php echo $param2; ?>';
          
          $.ajax({
            url: '<?php echo base_url(); ?>index.php?admin/checkboxstudent/'+param,
            type: 'POST',
-           data: {'batch':batch,'sem':sem,'course':course,'degree':degree},
+           data: {'batch':batch,'sem':sem,'course':course,'degree':degree,'divclass':divclass},
            success: function(content){
                //alert(content);
                $("#student2").html(content);
@@ -334,6 +347,7 @@ endforeach;
                 course:"required",
                 batch: "required",
                 semester: "required",
+                class2: "required",
                'student[]': "required",
                 dateofsubmission1: "required",
                 pageurl:
@@ -351,10 +365,11 @@ endforeach;
                         },
             },
             messages: {
-                degree: "Select Course",
+                degree: "Select department",
                 course:"Select Branch",
                 batch: "Select Batch",
                 semester:"Select Semester", 
+                class2:"Select class", 
                'student[]':"Select Student",
                 dateofsubmission1: "Select date of submission",
                 pageurl:

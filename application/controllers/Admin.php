@@ -1399,6 +1399,7 @@ class Admin extends CI_Controller {
             $data['pm_batch'] = $this->input->post('batch');
             $data['pm_url'] = $file_url;
             $data['pm_semester'] = $this->input->post('semester');
+            $data['class_id'] = $this->input->post('class');
             $data['pm_desc'] = $this->input->post('description');
             $data['pm_dos'] = $this->input->post('dateofsubmission');
             $data['pm_status'] = 1;
@@ -1439,24 +1440,7 @@ class Admin extends CI_Controller {
                 $this->session->set_flashdata('flash_message', "Student not found, data not added!");
                 redirect(base_url() . 'admin/project/', 'refresh');
             }
-            /* if ($_FILES['projectfile']['name'] != "") {
-
-              unlink("uploads/project_file/" . $this->input->post('txtoldfile'));
-
-              $config['upload_path'] = 'uploads/project_file';
-              $config['allowed_types'] = '*';
-              $this->load->library('upload', $config);
-              $this->upload->initialize($config);
-
-              if (!$this->upload->do_upload('projectfile')) {
-              $data = array('msg' => $this->upload->display_errors());
-              } else {
-              $file = $this->upload->data();
-              $data['pm_filename'] = $file['file_name'];
-              }
-              } */
-
-
+          
             if ($_FILES['projectfile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
@@ -1483,6 +1467,7 @@ class Admin extends CI_Controller {
             $data['pm_batch'] = $this->input->post('batch');
             $data['pm_url'] = $file_url;
             $data['pm_semester'] = $this->input->post('semester');
+            $data['class_id'] = $this->input->post('class2');
             $data['pm_desc'] = $this->input->post('description');
             $data['pm_dos'] = $this->input->post('dateofsubmission1');
             $data['pm_status'] = 1;
@@ -1514,6 +1499,7 @@ class Admin extends CI_Controller {
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['course'] = $this->db->get('course')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
+        $page_data['class'] = $this->db->get('class')->result();
         $page_data['student'] = $this->db->get('student')->result();
         $page_data['page_name'] = 'project';
         $page_data['page_title'] = 'Project Management';
@@ -4375,8 +4361,9 @@ class Admin extends CI_Controller {
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
+        $class = $this->input->post("divclass");
 
-        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree,'class_id'=>$class))->result();
         $html = '';
         if ($param != '') {
             $edit_data = $this->db->get_where('project_manager', array('pm_id' => $param))->result_array();
@@ -4551,15 +4538,18 @@ class Admin extends CI_Controller {
             $course = $this->input->post('course');
             $batch = $this->input->post('batch');
             $semester = $this->input->post("semester");
+            $class = $this->input->post("divclass");
             $data['course'] = $this->db->get('course')->result();
             $data['semester'] = $this->db->get('semester')->result();
             $data['batch'] = $this->db->get('batch')->result();
             $data['degree'] = $this->db->get('degree')->result();
+            $data['class'] = $this->db->get('class')->result();
             $data['student'] = $this->db->get('student')->result();
             $this->db->where("pm_course", $course);
             $this->db->where("pm_batch", $batch);
             $this->db->where("pm_degree", $degree);
             $this->db->where("pm_semester", $semester);
+            $this->db->where("class_id", $class);
             $data['param'] = $param;
             $data['project'] = $this->db->get('project_manager')->result();
 

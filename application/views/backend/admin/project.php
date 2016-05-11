@@ -36,8 +36,8 @@
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">
                                 <form action="#" method="post" id="searchform">
-                                            <div class="form-group col-sm-3 validating">
-                                                <label>Course</label>
+                                            <div class="form-group col-sm-2 validating">
+                                                <label>Department</label>
                                                 <select id="courses" name="degree" class="form-control">
                                                     <option value="">Select</option>
                                                     <?php foreach ($degree as $row) { ?>
@@ -45,14 +45,14 @@
                                                     <?php } ?>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-3 validating">
+                                            <div class="form-group col-sm-2 validating">
                                                 <label>Branch</label>
                                                 <select id="branches" name="course" class="form-control">
                                                      <option value="">Select</option>
 
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-3 validating">
+                                            <div class="form-group col-sm-2 validating">
                                                 <label>Batch</label>
                                                 <select id="batches" name="batch" class="form-control">
                                                      <option value="">Select</option>
@@ -60,7 +60,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-sm-2 validating">
-                                                <label>Select Semester</label>
+                                                <label> Semester</label>
                                                 <select id="semesters" name="semester" class="form-control">
                                                     <option value="">Select</option>
                                                     <?php foreach ($semester as $row) { ?>
@@ -69,7 +69,21 @@
                                                             <?php } ?>
                                                 </select>
                                             </div>
-                                     
+                                            <div class="form-group col-sm-2">
+                                                <label><?php echo ucwords("Class");?><span style="color:red"></span></label>
+                                                    <select class="form-control filter-rows" name="filterclass" id="filterclass" >
+                                                        <option value="">Select</option>
+                                                        <?php 
+                                                        $class=$this->db->get('class')->result_array();
+                                                        foreach($class as $c)
+                                                        {
+                                                        ?>
+                                                        <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                            </div>
                                 
                                     <div class="form-group col-sm-1">
                                         <label>&nbsp;</label>
@@ -89,6 +103,7 @@
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
                                                 <th><div><?php echo ucwords("Semester");?></div></th>
+                                                <th><div><?php echo ucwords("class");?></div></th>
                                                  <th><div><?php echo ucwords("File");?></div></th>
                                                 <th><div><?php echo ucwords("Date of submission");?></div></th>						
                                                 <th><div><?php echo ucwords("Action");?></div></th>											
@@ -149,6 +164,18 @@
                                                         }
                                                         ?>
 
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                        foreach($class as $c)
+                                                        {
+                                                             if($c['class_id']== $row->class_id)
+                                                            {
+                                                                echo $c['class_name'];
+                                                            }
+                                                        }
+                                                            
+                                                        ?>
                                                     </td>
                                                     <td id="downloadedfile"> <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
                                                     <td><?php echo date_formats($row->pm_dos); ?></td>	
@@ -267,7 +294,8 @@
                                                         }
                                                         ?>
 
-                                                    </td>	
+                                                    </td>
+                                                    
                                                 <td><?php echo date_formats($rowsub->dos); ?></td>	
                                                 <td><?php echo $rowsub->description; ?></td>
                                                 <td id="downloadedfile"><a href="uploads/project_file/<?php echo $rowsub->document_file; ?>" download="" title="<?php echo $rowsub->document_file; ?>"><i class="fa fa-download"></i></a></td>                                                    	
@@ -317,10 +345,11 @@
            var course =  $("#branches").val();
            var batch =  $("#batches").val();
             var semester = $("#semesters").val();
+            var divclass = $("#class").val();
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getprojects/allproject",
-                data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
+                data:{'degree':degree,'course':course,'batch':batch,"semester":semester,"divclass":divclass},
                 success:function(response)
                 {
                     $("#getresponse").html(response);
