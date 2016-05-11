@@ -203,7 +203,7 @@
                              <!----Project Detail Nikita patel 23-3-2016-->
                             <div class="tab-pane box" id="submitedassignment">	
                                        <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Course");?></label>
+                                    <label><?php echo ucwords("department");?></label>
                                     <select class="form-control sfilter-rows" id="sfilter3" data-filter="3" data-type="course">
                                         <option value="">All</option>
                                         <?php foreach ($degree as $row) { ?>
@@ -240,7 +240,7 @@
                                                 <th><div>#</div></th>												
                                                 <th><div><?php echo ucwords("Project Name");?></div></th>
                                                 <th><div><?php echo ucwords("Student Name");?></div></th>                                                											
-                                                <th><div><?php echo ucwords("Course");?></div></th>	
+                                                <th><div><?php echo ucwords("department");?></div></th>	
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
                                                 <th><div><?php echo ucwords("Semester");?></div></th>
