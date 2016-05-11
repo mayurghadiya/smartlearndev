@@ -178,12 +178,14 @@
                     filtercourse: "required",
                     filterbatch: "required",
                     filtersemester: "required",
+                    filterclass: "required",
                 },
                 messages: {
                     filterdegree: "Select department",
                     filtercourse: "Select branch",
                     filterbatch: "Select batch",
                     filtersemester: "Select semester",
+                    filterclass: "Select class",
                 }
             });
 
