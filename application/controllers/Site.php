@@ -19,7 +19,7 @@ class Site extends CI_Controller {
         $this->load->database();
         $this->load->model('Site_model');
         $this->load->helper('system_setting');
-        $this->load->helper('forum');
+     
     }
 
     /**
@@ -384,7 +384,7 @@ class Site extends CI_Controller {
         $this->data['param'] = $param;
         $this->data['topics'] = $this->db->get("forum_topics")->result();
         
-        $this->data['comments'] = $this->db->get_where("forum_comment",array("forum_topic_id"=>$param))->result();
+        $this->data['comments'] = $this->db->get_where("forum_comment",array("forum_topic_id"=>$param,"forum_comment_status"=>'1'))->result();
         $this->__template('discussion', $this->data);
     }
     
@@ -410,7 +410,7 @@ class Site extends CI_Controller {
             $data['forum_id'] = $this->input->post('forum_id');
             $data['forum_topic_title'] = $this->input->post('subject');
             $data['forum_topic_desc'] = $this->input->post('discussion');
-            $data['forum_topic_status'] = '0';
+            $data['forum_topic_status'] = '0';         
             $data['user_role'] = $this->session->userdata('login_type');
             $data['user_role_id'] = $this->session->userdata('login_user_id');
             

@@ -88,6 +88,7 @@ class Forum extends CI_Controller {
                 $data['forum_topic_status'] = $this->input->post('topic_status');
                 $data['forum_topic_desc'] = $this->input->post('description');
                 $data['user_role'] = $this->session->userdata('login_type');
+                $data['user_role_id'] = $this->session->userdata('login_id');
                 $data['forum_id'] = $this->input->post('forum_id');
                 
                 
@@ -98,11 +99,16 @@ class Forum extends CI_Controller {
             }
              if($param=="update")
             {
+                $topic = $this->forum_model->getforumtopic($id);
                 $data['forum_topic_title'] = $this->input->post('topic_title');
                 $data['forum_topic_status'] = $this->input->post('topic_status');
                 $data['forum_id'] = $this->input->post('forum_id');
                 $data['forum_topic_desc'] = $this->input->post('description');
-                $data['user_role'] = $this->session->userdata('login_type');
+                if($topic[0]['user_role']==$this->session->userdata('login_type'))
+                {
+                    $data['user_role'] = $this->session->userdata('login_type');
+                    $data['user_role_id'] = $this->session->userdata('login_id');
+                }
                 $this->forum_model->update_topic($data,$id);
                 $this->session->set_flashdata('flash_message', 'Forum Topic Updated Successfully');
                 redirect(base_url() . 'forum/forumtopics', 'refresh');

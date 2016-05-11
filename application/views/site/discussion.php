@@ -24,7 +24,7 @@
                                     <h6 class="cs-color"><i class="icon-uniF119"></i>Description</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">                                                               
                                 <?php foreach(@$topics as $topic): ?>
                                 <div class="cs-event-detail-description">
                                     <div class="cs-post-title">
@@ -35,7 +35,14 @@
                                 <?php foreach(@$comments as $comment): ?>
                                 <div class="cs-event-detail-description">
                                     <div class="cs-post-title">                                        
-                                        <p><?php echo $comment->forum_comments; ?></p>
+                                        <?php  $path =  roleimgpath($comment->user_role,$comment->user_role_id);?>
+                                        <p>  
+                                         <img src="<?php echo base_url().$path; ?>" height="50" width="50" />
+                                        <?php echo "  ".$comment->forum_comments;  
+                                              echo "<br>";
+                                              echo roleuserdatatopic($comment->user_role,$comment->user_role_id).' '.date("F d, Y h:i:s A",  strtotime($comment->created_date));
+                                        ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <?php endforeach; ?>

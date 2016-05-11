@@ -75,7 +75,11 @@ class Forum_model extends CI_Model {
             $this->db->where("forum_comment_id",$id);
             $this->db->delete("forum_comment");
         }
-        
+        public function getforumtopic($id)
+        {
+            
+           return $this->db->get_where("forum_topics",array("forum_topic_id"=>$id))->result_array();
+        }
 	
 }
 ?>

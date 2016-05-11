@@ -23,6 +23,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="cs-page-title">
                     <h1>Forum Topics</h1>
+                    <h2><?php echo @$forum[0]->forum_title; ?></h2>
                 </div>
             </div>
         </div>
@@ -119,7 +120,7 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                                 <div class="cs-event-detail-heading">
-                                    <h6 class="cs-color"><?php echo @$forum[0]->forum_title; ?></h6>
+                                    <h6 class="cs-color"></h6>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -127,9 +128,12 @@
                                 <div class="cs-event-detail-description" style="background:#3488bf; padding: 2px 2px 0px 10px;">
                                     <div class="cs-post-title">
                                         <h3 class="cs-color"><a style="color:#fff !important;" href="<?php echo base_url().'site/viewtopic/'.$topic->forum_topic_id; ?>"><?php echo $topic->forum_topic_title; ?></a></h3>
-                                        <p style="color:#fff !important;"> <?php $res = roleuserdatatopic($topic->user_role,$topic->user_role_id);                                       
-                                       if(@$res[0]['name']!=""){ echo "Created By ".@$res[0]['name']; }
-                                        ?></p>
+                                        <p style="color:#fff !important;"> <?php echo "Created By ".roleuserdatatopic($topic->user_role,$topic->user_role_id);                                       
+                                       
+                                        ?> <span><?php echo date("F d, Y h:i:s A",  strtotime($topic->created_date)); ?></span>
+                                            
+                                        </p>
+                                       
                                     </div>
                                 </div>
                                 <?php endforeach; ?>
