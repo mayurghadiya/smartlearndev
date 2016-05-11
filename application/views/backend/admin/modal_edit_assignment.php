@@ -111,7 +111,33 @@ foreach ($edit_data as $row):
                                     </select>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("class");?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <select name="class" id="class">
+                                        <option value="">Select class</option>
+                                        <?php 
+                                        $class=$this->db->get('class')->result_array();
 
+                                        foreach($class as $c)
+                                        {
+                                            if($c['class_id']==$row['class_id'])
+                                            {
+                                        ?>
+                                            <option selected value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                        <?php
+                                        }
+                                        else 
+                                            {                                        
+                                        ?>
+                                           <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                        <?php                                            
+                                        }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                                </div>
                            
                                     <input type="hidden" class="form-control" name="assignmenturl" id="assignmenturl" value="<?php echo $row['assign_url']; ?>"/>
                            

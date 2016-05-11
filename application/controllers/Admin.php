@@ -1925,6 +1925,7 @@ class Admin extends CI_Controller {
             $data['assign_batch'] = $this->input->post('batch');
             $data['assign_url'] = $file_url;
             $data['assign_sem'] = $this->input->post('semester');
+            $data['class_id'] = $this->input->post('class');
             $data['assign_desc'] = $this->input->post('description');
             $data['assign_dos'] = $this->input->post('submissiondate');
             $data['assign_status'] = 1;
@@ -1980,23 +1981,7 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/assignment/', 'refresh');
         }
         if ($param1 == 'do_update') {
-            /* if ($_FILES['assign_filename']['name'] != "") {
-
-
-
-              $config['upload_path'] = 'uploads/project_file';
-              $config['allowed_types'] = '*';
-              $this->load->library('upload', $config);
-              $this->upload->initialize($config);
-
-              if (!$this->upload->do_upload('assign_filename')) {
-              $data = array('msg' => $this->upload->display_errors());
-              } else {
-              $file = $this->upload->data();
-              $data['assign_filename'] = $file['file_name'];
-              }
-              $file_url ='';
-              } */
+           
 
             if ($_FILES['assignmentfile']['name'] != "") {
 
@@ -2026,6 +2011,7 @@ class Admin extends CI_Controller {
             $data['assign_batch'] = $this->input->post('batch');
             $data['assign_url'] = $file_url;
             $data['assign_sem'] = $this->input->post('semester');
+            $data['class_id'] = $this->input->post('class');
             $data['assign_desc'] = $this->input->post('description');
             $data['assign_dos'] = $this->input->post('submissiondate1');
             $data['assign_degree'] = $this->input->post('degree');
@@ -4374,7 +4360,7 @@ class Admin extends CI_Controller {
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
-        $class = $this->input->post("class");
+        $class = $this->input->post("divclass");
         $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree,'class_id'=>$class))->result();
         
         $this->session->set_flashdata('flash_message', count($data['datastudent']) . ' records found.');
@@ -4496,14 +4482,17 @@ class Admin extends CI_Controller {
             $course = $this->input->post('course');
             $batch = $this->input->post('batch');
             $semester = $this->input->post("semester");
+            $class = $this->input->post("divclass");
             $data['course'] = $this->db->get('course')->result();
             $data['semester'] = $this->db->get('semester')->result();
             $data['batch'] = $this->db->get('batch')->result();
             $data['degree'] = $this->db->get('degree')->result();
+            $data['class'] = $this->db->get('class')->result();
             $this->db->where("course_id", $course);
             $this->db->where("assign_batch", $batch);
             $this->db->where("assign_degree", $degree);
             $this->db->where("assign_sem", $semester);
+            $this->db->where("class_id", $class);
             $data['param'] = $param;
             $data['assignment'] = $this->db->get('assignment_manager')->result();
 
