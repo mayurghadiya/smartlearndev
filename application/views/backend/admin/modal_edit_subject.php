@@ -9,7 +9,7 @@ foreach ($edit_data as $row):
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                         <?php echo ucwords("Update Subject");?>
+                         <?php echo ucwords("Update Subject Association");?>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -69,6 +69,28 @@ foreach ($edit_data as $row):
                                             } else {
                                                 ?>
                                                 <option value="<?= $rowsem->s_id ?>" ><?= $rowsem->s_name ?></option>
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Professor");?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                      <select name="professor[]" id="professor1" multiple="">                                      
+                                            <?php
+                                               $professor_id=explode(',',$row['professor_id']);
+                                            $professor = $this->db->get_where('professor')->result();
+                                            foreach ($professor as $prof) {
+                                                if (in_array($prof->professor_id,$professor_id)) {
+                                                    ?>
+                                                <option value="<?= $prof->professor_id; ?>" selected><?= $prof->name ?></option>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <option value="<?= $prof->professor_id ?>" ><?= $prof->name ?></option>
                                                 <?php
                                             }
                                         }
@@ -145,6 +167,11 @@ $("#course1").change(function () {
                                     }
 
                     },
+                 'professor[]': 
+                            {
+                    
+                                 required:true,
+                            },
             },
             messages: {
                 subname: "Enter subject name",
@@ -154,6 +181,11 @@ $("#course1").change(function () {
                         required:"Select semester",
                         remote:"subject already exists in this course and semester",
                     },
+                    'professor[]': 
+                            {
+                    
+                                 required:"Select Professor",
+                            },
             }
         });
     });

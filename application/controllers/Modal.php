@@ -15,6 +15,7 @@ class Modal extends CI_Controller {
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
         $this->output->set_header('Pragma: no-cache');
         $this->output->set_header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); 
+        $this->load->model('forum_model');
     }
 	
 	/***default functin, redirects to login page if no admin logged in yet***/
@@ -71,6 +72,25 @@ class Modal extends CI_Controller {
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
                     $page_data['fees_structure'] = $this->Crud_model->get_all_fees_structure();
                 }
+                if($page_name=="add_forum_topic" || $page_name=="modal_edit_forumtopic")
+                {
+                    $page_data['forum'] = $this->forum_model->getforum();
+                }
+                if($page_name=="add_forum_question")
+                {
+                    $page_data['forum'] = $this->forum_model->getforum();
+                    $page_data['forum_topic'] = $this->forum_model->getforum_topic();
+                    
+                }
+                if($page_name=="addassessment" || $page_name=="modal_edit_assessment")
+                {
+                    
+                  $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    $page_data['course'] = $this->Crud_model->get_all_course();
+                    $page_data['semester'] = $this->Crud_model->get_all_semester();
+                     $page_data['batch'] = $this->Crud_model->get_all_bacth();
+                }
+                
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		
 		echo '<script src="http://192.168.1.13/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
 	}

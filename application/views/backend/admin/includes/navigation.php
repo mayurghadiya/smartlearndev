@@ -11,12 +11,12 @@
             <ul>                  
 
                 <li>
-                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" ) { ?> class="open" <?php } ?> >
+                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course" ) { ?> class="open" <?php } ?> >
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
                         <span class="menu-text">Basic Management</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
-                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" ) { ?> style="display: block" <?php } ?>>
+                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course" || $page_name=="assessments") { ?> style="display: block" <?php } ?>>
                         <ul>
                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/degree"> 
@@ -51,7 +51,7 @@
                             </li>	
                             <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/subject">
-                                    <span class="menu-text">Subject</span>  						
+                                    <span class="menu-text">Subject Association</span>  						
                                 </a> 
                             </li>
                              <li <?php if ($page_name == "syllabus") { ?> class="selectednavmenu" <?php } ?>>
@@ -69,6 +69,17 @@
                                     <span class="menu-text">Chancellor</span>  						
                                 </a> 
                             </li>
+                             <li <?php if ($page_name == "vocational_course") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>admin/vocationalcourse">
+                                    <span class="menu-text">Vocational Course</span>  						
+                                </a> 
+                            </li>
+                            <li <?php if ($page_name == "assessments") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url(); ?>admin/assessments">
+                                    <span class="menu-text">Assessments Management</span>  						
+                                </a> 
+                            </li>
+                            
                             <li>
                                                          <!--  <a href="<?php echo base_url(); ?>admin/center">
                                                                <span class="menu-text">Exam Center</span>  						
@@ -379,6 +390,30 @@
                         </ul>
                     </div>
                 </li>
+                 <li>
+                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "forum" || $page_name == "forum_topic" || $page_name == "forum_comment") { ?> class="open"<?php } ?> >                       
+                        <span class="menu-icon entypo-archive"><i class="fa fa-book"></i></span>
+                        <span class="menu-text">Forum</span>  
+                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
+                    </a>
+                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "forum" || $page_name == "forum_topic" || $page_name == "forum_comment") { ?> style="display:block" <?php } ?>  >
+                        <ul class="clearfix">          
+                            <li <?php if ($page_name == "forum") { ?> class="selectednavmenu" <?php } ?> >
+                                <a href="<?php echo base_url(); ?>forum">
+                                    <span class="menu-text">Forum</span>  
+                                </a>
+                            </li>
+                            <li <?php if ($page_name == "forum_topic") { ?> class="selectednavmenu" <?php } ?> >
+                                <a href="<?php echo base_url(); ?>forum/forumtopics">
+                                    <span class="menu-text">Forum Topics</span>  
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </li>
+              
                 <li >
                     <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "create_group" || $page_name == "list_group") { ?> class="open" <?php } ?>>
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 

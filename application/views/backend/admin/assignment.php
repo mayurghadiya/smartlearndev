@@ -37,8 +37,8 @@
                             <!----TABLE LISTING STARTS-->
                             <div class="tab-pane box active" id="list">		
                                 <form id="assignment-search" action="#" class="form-groups-bordered validate">
-                                  <div class="form-group col-sm-3">
-                                        <label><?php echo ucwords("Course"); ?></label>
+                                  <div class="form-group col-sm-2">
+                                        <label><?php echo ucwords("department"); ?></label>
                                         <select class="form-control" id="courses"name="degree_search">
                                             <option value="">Select</option>
                                             <?php foreach ($degree as $row) { ?>
@@ -46,13 +46,13 @@
                                             <?php } ?>
                                         </select>
                                     </div>
-                                    <div class="form-group col-sm-3">
+                                    <div class="form-group col-sm-2">
                                         <label><?php echo ucwords("Branch"); ?></label>
                                         <select id="branches" name="course_search" data-filter="4" class="form-control">
                                             <option value="">Select</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-sm-3">
+                                    <div class="form-group col-sm-2">
                                         <label><?php echo ucwords("Batch"); ?></label>
                                         <select id="batches" name="batch_search" data-filter="5" class="form-control">
                                             <option value="">Select</option>
@@ -65,6 +65,21 @@
 
                                         </select>
                                     </div>
+                                    <div class="form-group col-sm-2">
+                                        <label><?php echo ucwords("Class");?><span style="color:red">*</span></label>
+                                            <select class="form-control filter-rows" name="filterclass" id="filterclass" >
+                                                <option value="">Select</option>
+                                                <?php 
+                                                $class=$this->db->get('class')->result_array();
+                                                foreach($class as $c)
+                                                {
+                                                ?>
+                                                <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                                <?php
+                                                }
+                                                ?>
+                                            </select>
+                                    </div> 
                                 <div class="form-group col-sm-1">
                                         <label>&nbsp;</label>
                                         <input id="search-assignment-structure-data" type="button" value="Go" class="btn btn-info vd_bg-green"/>
@@ -369,7 +384,7 @@
                         semester_search: "required"
                     },
                     messages: {
-                        degree_search: "Select course",
+                        degree_search: "Select department",
                         branch_search: "Select branch",
                         batch_search: "Select batch",
                         semester_search: "Select semester"
@@ -382,11 +397,12 @@
                     var degree = $("#courses").val();
                     var course = $("#branches").val();
                     var batch = $("#batches").val();
-                    var semester = $("#semesters").val();                    
+                    var semester = $("#semesters").val();
+                    var divclass = $("#filterclass").val();
                     $.ajax({
                         url: '<?php echo base_url(); ?>index.php?admin/getassignment/allassignment',
                         type: 'post',
-                        data:{'degree':degree,"course":course,"batch":batch,"semester":semester},
+                        data:{'degree':degree,"course":course,"batch":batch,"semester":semester,'divclass':divclass},
                         success: function (content) {
                             $("#getresponse").html(content);
                             // $("#dtbl").hide();

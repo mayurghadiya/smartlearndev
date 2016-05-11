@@ -853,10 +853,79 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
+    function division($param1 = '', $param2 = '') {
+        if ($this->session->userdata('admin_login') != 1)
+            redirect(base_url(), 'refresh');
+        if ($param1 == 'create') {
+            $data['class_name'] = $this->input->post('class_name');
+            $data['created_date'] = date('Y-m-d');
+            $this->db->insert('class', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('class_added_successfully'));
+            redirect(base_url() . 'admin/division/', 'refresh');
+        }
+
+        if ($param1 == 'do_update') {
+            $data['class_name'] = $this->input->post('class_name');
+            $data['updated_date'] = date('Y-m-d');
+
+            $this->db->where('class_id', $param2);
+            $this->db->update('class', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('class_updated_successfully'));
+
+            redirect(base_url() . 'admin/division/', 'refresh');
+        }
+        if ($param1 == 'delete') {
+            $this->db->where('class_id', $param2);
+            $this->db->delete('class');
+            $this->session->set_flashdata('flash_message', get_phrase('class_deleted_successfully'));
+
+            redirect(base_url() . 'admin/division/', 'refresh');
+        }
+
+        $page_data['class'] = $this->db->get('class')->result_array();
+        $page_data['page_name'] = 'class';
+        $page_data['page_title'] = 'Class';
+        $this->load->view('backend/index', $page_data);
+    }
+
     function vocationalcourse($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
-        $page_data['holiday'] = $this->db->get('vocational_course')->result_array();
+        if ($param1 == 'create') {
+            $data['course_name'] = $this->input->post('course_name');
+            $data['course_startdate'] = date('Y-m-d', strtotime($this->input->post('startdate')));
+            $data['course_enddate'] = date('Y-m-d', strtotime($this->input->post('enddate')));
+            $data['course_fee'] = $this->input->post('fee');
+            $data['professor_id'] = $this->input->post('professor');
+            $data['status'] = $this->status($this->input->post('course_status'));
+            $data['created_date'] = date('Y-m-d');
+
+            $this->db->insert('vocational_course', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('vocational_course_added_successfully'));
+            redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
+        }
+        if ($param1 == 'do_update') {
+            $data['course_name'] = $this->input->post('course_name');
+            $data['course_startdate'] = date('Y-m-d', strtotime($this->input->post('startdate1')));
+            $data['course_enddate'] = date('Y-m-d', strtotime($this->input->post('enddate1')));
+            $data['course_fee'] = $this->input->post('fee');
+            $data['professor_id'] = $this->input->post('professor');
+            $data['status'] = $this->status($this->input->post('course_status'));
+            $data['updated_date'] = date('Y-m-d');
+
+            $this->db->where('vocational_course_id', $param2);
+            $this->db->update('vocational_course', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('vocational_course_updated_successfully'));
+            redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
+        }
+        if ($param1 == 'delete') {
+            $this->db->where('vocational_course_id', $param2);
+            $this->db->delete('vocational_course');
+            $this->session->set_flashdata('flash_message', get_phrase('vocational_course_deleted_successfully'));
+
+            redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
+        }
+        $page_data['vocationalcourse'] = $this->db->get('vocational_course')->result_array();
         $page_data['page_name'] = 'vocational_course';
         $page_data['page_title'] = 'Vocational course';
         $this->load->view('backend/index', $page_data);
@@ -1189,6 +1258,7 @@ class Admin extends CI_Controller {
             $data['admission_type_id'] = $this->input->post('admissiontype');
             $data['std_status'] = 1;
             $data['std_degree'] = $this->input->post('degree');
+            $data['class_id'] = $this->input->post('class');
             $data['created_date'] = date('Y-m-d');
             $data['password_status'] = 0;
             $data['user_type'] = 1;
@@ -1784,6 +1854,7 @@ class Admin extends CI_Controller {
             $data['sm_sem_id'] = $this->input->post('semester');
             $data['subject_name'] = $this->input->post('subname');
             $data['subject_code'] = $this->input->post('subcode');
+            $data['professor_id'] = implode(',', $this->input->post('professor'));
             $data['sm_status'] = 1;
             $data['created_date'] = date('Y-m-d');
 
@@ -1798,6 +1869,7 @@ class Admin extends CI_Controller {
             $data['sm_sem_id'] = $this->input->post('semester');
             $data['subject_name'] = $this->input->post('subname');
             $data['subject_code'] = $this->input->post('subcode');
+            $data['professor_id'] = implode(',', $this->input->post('professor'));
             $data['sm_status'] = 1;
 
 
@@ -1852,6 +1924,7 @@ class Admin extends CI_Controller {
             $data['assign_batch'] = $this->input->post('batch');
             $data['assign_url'] = $file_url;
             $data['assign_sem'] = $this->input->post('semester');
+            $data['class_id'] = $this->input->post('class');
             $data['assign_desc'] = $this->input->post('description');
             $data['assign_dos'] = $this->input->post('submissiondate');
             $data['assign_status'] = 1;
@@ -1907,23 +1980,7 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/assignment/', 'refresh');
         }
         if ($param1 == 'do_update') {
-            /* if ($_FILES['assign_filename']['name'] != "") {
 
-
-
-              $config['upload_path'] = 'uploads/project_file';
-              $config['allowed_types'] = '*';
-              $this->load->library('upload', $config);
-              $this->upload->initialize($config);
-
-              if (!$this->upload->do_upload('assign_filename')) {
-              $data = array('msg' => $this->upload->display_errors());
-              } else {
-              $file = $this->upload->data();
-              $data['assign_filename'] = $file['file_name'];
-              }
-              $file_url ='';
-              } */
 
             if ($_FILES['assignmentfile']['name'] != "") {
 
@@ -1953,6 +2010,7 @@ class Admin extends CI_Controller {
             $data['assign_batch'] = $this->input->post('batch');
             $data['assign_url'] = $file_url;
             $data['assign_sem'] = $this->input->post('semester');
+            $data['class_id'] = $this->input->post('class');
             $data['assign_desc'] = $this->input->post('description');
             $data['assign_dos'] = $this->input->post('submissiondate1');
             $data['assign_degree'] = $this->input->post('degree');
@@ -4173,7 +4231,7 @@ class Admin extends CI_Controller {
 
         echo json_encode($course);
     }
-    
+
     /**
      * Course list from degree for class routine
      * @param string $degree_id
@@ -4181,14 +4239,16 @@ class Admin extends CI_Controller {
     function class_routine_course_list_from_degree($degree_id) {
         $this->load->model('admin/Crud_model');
         $course = $this->Crud_model->course_list_from_degree($degree_id);
-        
+
         echo '<select style="width: 70%;" id="branch" style="width: 50%" name="branch" onchange="batch_list_from_department_and_branch()" data-bind="value:department" data-role="dropdownlist"
                 data-value-field="value" data-text-field="text" required="required">';
         echo '<option value="">Select</option>';
-        foreach($course as $row) { ?>
+        foreach ($course as $row) {
+            ?>
             <option value="<?php echo $row->course_id; ?>"><?php echo $row->c_name; ?></option>
-        <?php }
-        
+        <?php
+        }
+
         echo '</select>';
     }
 
@@ -4203,7 +4263,7 @@ class Admin extends CI_Controller {
 
         echo json_encode($batch);
     }
-    
+
     /**
      * Batch list from department and course
      * @param string $degree
@@ -4216,11 +4276,13 @@ class Admin extends CI_Controller {
         echo '<select style="width: 70%;" id="batch" style="width: 50%" name="batch" data-bind="value:batch" data-role="dropdownlist"
                             data-value-field="value" data-text-field="text" required="required">';
         echo '<option value="">Select</option>';
-        
-        foreach($batch as $row) { ?>
+
+        foreach ($batch as $row) {
+            ?>
             <option value="<?php echo $row->b_id; ?>"><?php echo $row->b_name; ?></option>    
-        <?php }
-        
+        <?php
+        }
+
         echo '</select>';
     }
 
@@ -4263,7 +4325,7 @@ class Admin extends CI_Controller {
 
         echo json_encode($subjects);
     }
-    
+
     /**
      * Subject list from course and semester
      * @param string $course
@@ -4276,10 +4338,12 @@ class Admin extends CI_Controller {
         echo '<select style="width: 70%;" id="subject" onChange="professor_list()" name="subject" data-bind="value:subject" data-role="dropdownlist"
                             data-value-field="value" data-text-field="text" required="required">';
         echo '<option value="">Select</option>';
-        foreach($subjects as $row) { ?>
+        foreach ($subjects as $row) {
+            ?>
             <option value="<?php echo $row->sm_id; ?>"><?php echo $row->subject_name; ?></option>    
-        <?php }
-        
+        <?php
+        }
+
         echo '</select>';
     }
 
@@ -4358,7 +4422,9 @@ class Admin extends CI_Controller {
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
-        $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $class = $this->input->post("divclass");
+        $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree, 'class_id' => $class))->result();
+
         $this->session->set_flashdata('flash_message', count($data['datastudent']) . ' records found.');
         $this->load->view("backend/admin/ajax_student", $data);
     }
@@ -4478,14 +4544,17 @@ class Admin extends CI_Controller {
             $course = $this->input->post('course');
             $batch = $this->input->post('batch');
             $semester = $this->input->post("semester");
+            $class = $this->input->post("divclass");
             $data['course'] = $this->db->get('course')->result();
             $data['semester'] = $this->db->get('semester')->result();
             $data['batch'] = $this->db->get('batch')->result();
             $data['degree'] = $this->db->get('degree')->result();
+            $data['class'] = $this->db->get('class')->result();
             $this->db->where("course_id", $course);
             $this->db->where("assign_batch", $batch);
             $this->db->where("assign_degree", $degree);
             $this->db->where("assign_sem", $semester);
+            $this->db->where("class_id", $class);
             $data['param'] = $param;
             $data['assignment'] = $this->db->get('assignment_manager')->result();
 
@@ -4960,16 +5029,18 @@ class Admin extends CI_Controller {
 
         echo '<select class="batch" style="width: 70%;" onChange="subject_list()" id="semester" style="width: 50%" name="semester" data-bind="value:semester" data-role="dropdownlist"
                             data-value-field="value" data-text-field="text" required="required">';
-        
+
         echo '<option value="">Select</option>';
-        
-        foreach($semester as $row) { ?>
+
+        foreach ($semester as $row) {
+            ?>
             <option id="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>    
-        <?php }
-        
+        <?php
+        }
+
         echo '</select>';
     }
-    
+
     /**
      * Semester list from branch
      * @param string $branch_id
@@ -4980,7 +5051,7 @@ class Admin extends CI_Controller {
 
         echo json_encode($semester);
     }
-    
+
     /**
      * Class routine professor
      * @param string $subject
@@ -4988,7 +5059,7 @@ class Admin extends CI_Controller {
     function class_routine_professor($subject) {
         $this->load->model('admin/Crud_model');
         $professors = $this->Crud_model->class_routine_professor($subject);
-        
+
         echo json_encode($professors);
     }
 
@@ -5163,7 +5234,7 @@ class Admin extends CI_Controller {
         foreach ($exam_type as $row) {
             ?>
             <option value="<?php echo $row->exam_type_id; ?>"
-                    <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
+            <?php if ($row->exam_type_id == $type_id) echo 'selected'; ?>><?php echo $row->exam_type_name; ?></option>
             <?php
         }
     }
@@ -5694,6 +5765,61 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
     }
 
+    function assessments($param = '', $id = '') {
+        $this->load->model('admin/Crud_model');
+        if ($param == 'create') {
+            $data['degree'] = $this->input->post('degree');
+            $data['course'] = $this->input->post('course');
+            $data['batch'] = $this->input->post('batch');
+            $data['semester'] = $this->input->post('semester');
+            $data['student'] = $this->input->post('student');
+            $data['instruction'] = $this->input->post('instruction');
+            $data['submissions'] = $this->input->post('submissions');
+            $data['feedback_tutor'] = $this->input->post('feedback');
+            $data['marks'] = $this->input->post('marks');
+            $this->Crud_model->create_assessment($data);
+            $this->session->set_flashdata('flash_message', 'Assessment added Successfully.');
+            redirect(base_url('admin/assessments'));
+        }
+
+        if ($param == 'update') {
+            $data['degree'] = $this->input->post('degree');
+            $data['course'] = $this->input->post('course');
+            $data['batch'] = $this->input->post('batch');
+            $data['semester'] = $this->input->post('semester');
+            $data['student'] = $this->input->post('student');
+            $data['instruction'] = $this->input->post('instruction');
+            $data['submissions'] = $this->input->post('submissions');
+            $data['feedback_tutor'] = $this->input->post('feedback');
+            $data['marks'] = $this->input->post('marks');
+            $this->Crud_model->update_assessment($data, $id);
+            $this->session->set_flashdata('flash_message', 'Assessment update Successfully.');
+            redirect(base_url('admin/assessments'));
+        }
+        if ($param == 'delete') {
+            $this->Crud_model->delete_assessment($id);
+            $this->session->set_flashdata('flash_message', 'Assessment delete Successfully.');
+            redirect(base_url('admin/assessments'));
+        }
+
+
+        $page_data['title'] = 'assessments';
+        $page_data['page_name'] = 'assessments';
+        $page_data['assessments'] = $this->Crud_model->assessment();
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['course'] = $this->Crud_model->get_all_course();
+        $page_data['semester'] = $this->Crud_model->get_all_semester();
+        $page_data['batch'] = $this->Crud_model->get_all_bacth();
+        $this->load->view('backend/index', $page_data);
+    }
+
+    function assessment_student() {
+        $batch = $this->input->post("batch");
+        $sem = $this->input->post("semester");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+    }
+
     function class_routine() {
         //$page_data['page_name'] = 'class_routine';
         //$page_data['title'] = 'Class Routine';
@@ -5746,13 +5872,13 @@ class Admin extends CI_Controller {
                 'RecurrenceException' => $row->RecurrenceException,
                 //'OwnerID' => $row->OwnerID,
                 'IsAllDay' => $row->IsAllDay,
-                'DepartmentID'  => $row->DepartmentID,
-                'BranchID'  => $row->BranchID,
-                'BatchID'   => $row->BatchID,
-                'SemesterID'    => $row->SemesterID,
-                'ClassID'=> $row->ClassID,
+                'DepartmentID' => $row->DepartmentID,
+                'BranchID' => $row->BranchID,
+                'BatchID' => $row->BatchID,
+                'SemesterID' => $row->SemesterID,
+                'ClassID' => $row->ClassID,
                 'SubjectID' => $row->SubjectID,
-                'ProfessorID'=> $row->ProfessorID,
+                'ProfessorID' => $row->ProfessorID,
             ];
             $this->db->insert('class_routine', $insert);
         }
@@ -5774,19 +5900,19 @@ class Admin extends CI_Controller {
                 'RecurrenceException' => $row->RecurrenceException,
                 //'OwnerID' => $row->OwnerID,
                 'IsAllDay' => $row->IsAllDay,
-                'DepartmentID'  => $row->DepartmentID,
-                'BranchID'  => $row->BranchID,
-                'BatchID'   => $row->BatchID,
-                'SemesterID'    => $row->SemesterID,
-                'ClassID'=> $row->ClassID,
+                'DepartmentID' => $row->DepartmentID,
+                'BranchID' => $row->BranchID,
+                'BatchID' => $row->BatchID,
+                'SemesterID' => $row->SemesterID,
+                'ClassID' => $row->ClassID,
                 'SubjectID' => $row->SubjectID,
-                'ProfessorID'=> $row->ProfessorID,
+                'ProfessorID' => $row->ProfessorID,
             ];
             $this->db->where('ClassRoutineId', $row->ClassRoutineId);
             $this->db->update('class_routine', $update);
         }
     }
-    
+
     function telerik_delete() {
         $request = $_POST['models'];
         $data = json_decode($request);

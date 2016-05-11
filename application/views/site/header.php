@@ -69,6 +69,16 @@
                                                     $dashboard_url = base_url('sub_admin/dashboard');
                                                     $profile_url = '';
                                                     break;
+                                                  case 'professor':
+                                                    //find sub admin details                                                
+                                                    $professor = $this->db->get_where('professor', array(
+                                                                'professor_id' => $this->session->userdata('login_id')
+                                                            ))->row();
+
+                                                    $name = 'Professor';
+                                                    $dashboard_url = base_url('professor');
+                                                    $profile_url = '';
+                                                    break;
                                             }
                                             ?>
                                             <li>
@@ -131,6 +141,8 @@
 
                                             </li>
                                             <li><a href="<?php echo base_url('syllabus'); ?>">Syllabus</a><span>Syllabus</span>
+                                            </li>
+                                            <li><a href="<?php echo base_url('site/forums'); ?>">Forum</a><span>Forum</span>
                                             </li>
 
                                             <li><a href="<?php echo base_url('contact'); ?>">Contact</a><span>inquire with us</span>
