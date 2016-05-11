@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/add_forum_question.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/forum.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/config/routes.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/forum_topic.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_forumtopic.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_forum.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/includes/navigation.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/forum_question.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/add_forum_topic.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/controllers/Forum.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/controllers/Modal.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/views/backend/admin/add_forum.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/controllers/Admin.php</file>
-            <file>file:/opt/lampp/htdocs/smartlearndev/application/models/Forum_model.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

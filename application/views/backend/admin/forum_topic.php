@@ -38,6 +38,8 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Forum Topics Name</th>
+                                                <th>User Roll</th>
+                                                <th>Start By</th>
                                                 <th>Status</th>
                                                 <th>Comments</th>
                                                 <th>Action</th>
@@ -48,7 +50,9 @@
                                             foreach ($forum_topic as $row): ?>
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>
-                                                    <td><?php echo $row['forum_topic_title']; ?></td>                         
+                                                    <td><?php echo $row['forum_topic_title']; ?></td>
+                                                    <td><?php echo $row['user_role']; ?></td> 
+                                                     <td><?php echo roleuserdatatopic($row['user_role'],$row['user_role_id']); ?></td>                         
                                                     <td >
                                                         <?php if ($row['forum_topic_status'] == '1') { ?>
                                                             <span class="label label-success">Active</span>
