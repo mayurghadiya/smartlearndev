@@ -180,7 +180,7 @@
                     filtersemester: "required",
                 },
                 messages: {
-                    filterdegree: "Select course",
+                    filterdegree: "Select department",
                     filtercourse: "Select branch",
                     filterbatch: "Select batch",
                     filtersemester: "Select semester",

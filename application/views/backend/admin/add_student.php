@@ -443,7 +443,7 @@
                         {
                             required: "Enter zip code",
                         },
-                degree: "Select course",
+                degree: "Select department",
                 course: "Select branch",
                 batch: "Select batch",
                 semester: "Select semester",

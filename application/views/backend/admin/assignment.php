@@ -38,7 +38,7 @@
                             <div class="tab-pane box active" id="list">		
                                 <form id="assignment-search" action="#" class="form-groups-bordered validate">
                                   <div class="form-group col-sm-2">
-                                        <label><?php echo ucwords("Course"); ?></label>
+                                        <label><?php echo ucwords("department"); ?></label>
                                         <select class="form-control" id="courses"name="degree_search">
                                             <option value="">Select</option>
                                             <?php foreach ($degree as $row) { ?>
@@ -384,7 +384,7 @@
                         semester_search: "required"
                     },
                     messages: {
-                        degree_search: "Select course",
+                        degree_search: "Select department",
                         branch_search: "Select branch",
                         batch_search: "Select batch",
                         semester_search: "Select semester"

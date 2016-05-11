@@ -27,10 +27,10 @@ foreach ($edit_data as $row):
                                  <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                             </div>
                              <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
-                                                    <option value="">Select Course</option>
+                                                    <option value="">Select department</option>
                                                     <?php
                                                     $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                     foreach ($degree as $dgr) {
@@ -277,7 +277,7 @@ endforeach;
                 },
             },
             messages: {
-                degree:"Select Course",
+                degree:"Select department",
                 course: "Select Branch",
                 batch: "Select Batch",
                 semester: "Select Semester",
