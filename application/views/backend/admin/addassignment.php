@@ -74,7 +74,24 @@
             </select>
         </div>
     </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label"><?php echo ucwords("class");?><span style="color:red">*</span></label>
+        <div class="col-sm-5">
+            <select name="class" id="class">
+                <option value="">Select class</option>
+                <?php 
+                $class=$this->db->get('class')->result_array();
 
+                foreach($class as $c)
+                {
+                ?>
+                <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+    </div>
     <div class="form-group">
         <label class="col-sm-3 control-label"><?php echo ucwords("Submission Date"); ?><span style="color:red">*</span></label>
         <div class="col-sm-5">
