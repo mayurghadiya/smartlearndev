@@ -1259,6 +1259,7 @@ class Admin extends CI_Controller {
             $data['admission_type_id'] = $this->input->post('admissiontype');
             $data['std_status'] = 1;
             $data['std_degree'] = $this->input->post('degree');
+            $data['class_id']=$this->input->post('class');
             $data['created_date'] = date('Y-m-d');
             $data['password_status'] = 0;
             $data['user_type'] = 1;
@@ -4373,7 +4374,9 @@ class Admin extends CI_Controller {
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
-        $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $class = $this->input->post("class");
+        $data['datastudent'] = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree,'class_id'=>$class))->result();
+        
         $this->session->set_flashdata('flash_message', count($data['datastudent']) . ' records found.');
         $this->load->view("backend/admin/ajax_student", $data);
     }

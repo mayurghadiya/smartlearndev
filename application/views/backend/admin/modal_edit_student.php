@@ -131,10 +131,10 @@ foreach ($edit_data as $row):
                                     </div>
                                 </div>
                                  <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
-                                                    <option value="">Select course</option>
+                                                    <option value="">Select department</option>
                                                     <?php
                                                     $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                     foreach ($degree as $dgr) {
@@ -214,6 +214,33 @@ foreach ($edit_data as $row):
                                             ?>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("class");?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <select name="class" id="class">
+                                        <option value="">Select class</option>
+                                        <?php 
+                                        $class=$this->db->get('class')->result_array();
+
+                                        foreach($class as $c)
+                                        {
+                                            if($c['class_id']==$row['class_id'])
+                                            {
+                                        ?>
+                                            <option selected value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                        <?php
+                                        }
+                                        else 
+                                            {                                        
+                                        ?>
+                                           <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                        <?php                                            
+                                        }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label"><?php echo ucwords("Mobile No");?><span style="color:red">*</span></label>
