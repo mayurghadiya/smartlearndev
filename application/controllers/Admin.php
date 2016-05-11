@@ -2024,6 +2024,7 @@ class Admin extends CI_Controller {
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['batch'] = $this->db->get('batch')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
+        $page_data['class'] = $this->db->get('class')->result();
         $page_data['page_name'] = 'assignment';
         $page_data['page_title'] = 'Assignment Management';
         $this->load->view('backend/index', $page_data);
