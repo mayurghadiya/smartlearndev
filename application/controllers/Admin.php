@@ -3596,7 +3596,7 @@ class Admin extends CI_Controller {
 
             //$subject_details = $this->Crud_model->exam_time_table_subject_list($exam_detail[0]->em_id);
             //student list
-            $student_list = $this->Crud_model->student_list_by_course_semester($course_id, $semester_id);
+            $student_list = $this->Crud_model->student_list_by_course_semester($degree_id, $course_id, $batch_id, $semester_id);
 
             $total_students = $_POST['total_student'];
 
@@ -4173,6 +4173,24 @@ class Admin extends CI_Controller {
 
         echo json_encode($course);
     }
+    
+    /**
+     * Course list from degree for class routine
+     * @param string $degree_id
+     */
+    function class_routine_course_list_from_degree($degree_id) {
+        $this->load->model('admin/Crud_model');
+        $course = $this->Crud_model->course_list_from_degree($degree_id);
+        
+        echo '<select style="width: 70%;" id="branch" style="width: 50%" name="branch" onchange="batch_list_from_department_and_branch()" data-bind="value:department" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">';
+        echo '<option value="">Select</option>';
+        foreach($course as $row) { ?>
+            <option value="<?php echo $row->course_id; ?>"><?php echo $row->c_name; ?></option>
+        <?php }
+        
+        echo '</select>';
+    }
 
     /**
      * Batch list from degree and course
@@ -4184,6 +4202,26 @@ class Admin extends CI_Controller {
         $batch = $this->Crud_model->batch_list_from_degree_and_course($degree, $course);
 
         echo json_encode($batch);
+    }
+    
+    /**
+     * Batch list from department and course
+     * @param string $degree
+     * @param string $course
+     */
+    function batch_list_from_department_and_branch($degree, $course) {
+        $this->load->model('admin/Crud_model');
+        $batch = $this->Crud_model->batch_list_from_degree_and_course($degree, $course);
+
+        echo '<select style="width: 70%;" id="batch" style="width: 50%" name="batch" data-bind="value:batch" data-role="dropdownlist"
+                            data-value-field="value" data-text-field="text" required="required">';
+        echo '<option value="">Select</option>';
+        
+        foreach($batch as $row) { ?>
+            <option value="<?php echo $row->b_id; ?>"><?php echo $row->b_name; ?></option>    
+        <?php }
+        
+        echo '</select>';
     }
 
     /**
@@ -4224,6 +4262,25 @@ class Admin extends CI_Controller {
         $subjects = $this->Crud_model->subject_list_from_course_and_semester($course, $semester);
 
         echo json_encode($subjects);
+    }
+    
+    /**
+     * Subject list from course and semester
+     * @param string $course
+     * @param string $semester
+     */
+    function class_routine_subject_list_from_course_and_semester($course, $semester) {
+        $this->load->model('admin/Crud_model');
+        $subjects = $this->Crud_model->subject_list_from_course_and_semester($course, $semester);
+
+        echo '<select style="width: 70%;" id="subject" onChange="professor_list()" name="subject" data-bind="value:subject" data-role="dropdownlist"
+                            data-value-field="value" data-text-field="text" required="required">';
+        echo '<option value="">Select</option>';
+        foreach($subjects as $row) { ?>
+            <option value="<?php echo $row->sm_id; ?>"><?php echo $row->subject_name; ?></option>    
+        <?php }
+        
+        echo '</select>';
     }
 
     /* worked by Mayur Panchal 29-3-2016 */
@@ -4901,7 +4958,38 @@ class Admin extends CI_Controller {
         $this->load->model('admin/Crud_model');
         $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
 
+        echo '<select class="batch" style="width: 70%;" onChange="subject_list()" id="semester" style="width: 50%" name="semester" data-bind="value:semester" data-role="dropdownlist"
+                            data-value-field="value" data-text-field="text" required="required">';
+        
+        echo '<option value="">Select</option>';
+        
+        foreach($semester as $row) { ?>
+            <option id="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>    
+        <?php }
+        
+        echo '</select>';
+    }
+    
+    /**
+     * Semester list from branch
+     * @param string $branch_id
+     */
+    function semesters_list_from_branch($branch_id) {
+        $this->load->model('admin/Crud_model');
+        $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
+
         echo json_encode($semester);
+    }
+    
+    /**
+     * Class routine professor
+     * @param string $subject
+     */
+    function class_routine_professor($subject) {
+        $this->load->model('admin/Crud_model');
+        $professors = $this->Crud_model->class_routine_professor($subject);
+        
+        echo json_encode($professors);
     }
 
     /**
@@ -5527,7 +5615,7 @@ class Admin extends CI_Controller {
      */
     function professor($param1 = '', $param2 = '') {
         $this->load->model('admin/Crud_model');
-        if($param1 == 'delete') {
+        if ($param1 == 'delete') {
             $this->db->delete('professor', ['professor_id' => $param2]);
             $this->session->set_flashdata('flash_message', 'Professor is successfully deleted.');
             redirect(base_url('admin/professor'));
@@ -5604,6 +5692,105 @@ class Admin extends CI_Controller {
         $page_data['page_name'] = 'professor';
         $page_data['professor'] = $this->Crud_model->professor();
         $this->load->view('backend/index', $page_data);
+    }
+
+    function class_routine() {
+        //$page_data['page_name'] = 'class_routine';
+        //$page_data['title'] = 'Class Routine';
+        //$this->load->view('backend/index', $page_data);
+        $this->load->view('backend/admin/class_routine');
+    }
+
+    function telerik() {
+        $json = file_get_contents(FCPATH . 'data.json');
+        $data = json_decode($json);
+        foreach ($data as $row) {
+            $insert = [
+                'TaskID' => $row->TaskID,
+                'Title' => $row->Title,
+                'Start' => $row->Start,
+                'End' => $row->End,
+                'StartTimezone' => $row->StartTimezone,
+                'EndTimezone' => $row->EndTimezone,
+                'Description' => $row->Description,
+                'RecurrenceID' => $row->RecurrenceID,
+                'RecurrenceRule' => $row->RecurrenceRule,
+                'RecurrenceException' => $row->RecurrenceException,
+                'OwnerID' => $row->OwnerID,
+                'IsAllDay' => $row->IsAllDay
+            ];
+            $this->db->insert('telerik', $insert);
+        }
+    }
+
+    function telerik_read() {
+        $event_data = $this->db->get('class_routine')->result();
+
+        echo json_encode($event_data);
+    }
+
+    function telerik_create() {
+        $request = $_POST['models'];
+        $data = json_decode($request);
+        foreach ($data as $row) {
+            $insert = [
+                //'TaskID' => $row->TaskID,
+                'Title' => $row->Title,
+                'Start' => $row->Start,
+                'End' => $row->End,
+                'StartTimezone' => $row->StartTimezone,
+                'EndTimezone' => $row->EndTimezone,
+                'Description' => $row->Description,
+                'RecurrenceID' => $row->RecurrenceID,
+                'RecurrenceRule' => $row->RecurrenceRule,
+                'RecurrenceException' => $row->RecurrenceException,
+                //'OwnerID' => $row->OwnerID,
+                'IsAllDay' => $row->IsAllDay,
+                'DepartmentID'  => $row->DepartmentID,
+                'BranchID'  => $row->BranchID,
+                'BatchID'   => $row->BatchID,
+                'SemesterID'    => $row->SemesterID,
+                'ClassID'=> $row->ClassID,
+                'SubjectID' => $row->SubjectID,
+                'ProfessorID'=> $row->ProfessorID,
+            ];
+            $this->db->insert('class_routine', $insert);
+        }
+    }
+
+    function telerik_update() {
+        $request = $_POST['models'];
+        $data = json_decode($request);
+        foreach ($data as $row) {
+            $update = [
+                'Title' => $row->Title,
+                'Start' => $row->Start,
+                'End' => $row->End,
+                'StartTimezone' => $row->StartTimezone,
+                'EndTimezone' => $row->EndTimezone,
+                'Description' => $row->Description,
+                'RecurrenceID' => $row->RecurrenceID,
+                'RecurrenceRule' => $row->RecurrenceRule,
+                'RecurrenceException' => $row->RecurrenceException,
+                //'OwnerID' => $row->OwnerID,
+                'IsAllDay' => $row->IsAllDay,
+                'DepartmentID'  => $row->DepartmentID,
+                'BranchID'  => $row->BranchID,
+                'BatchID'   => $row->BatchID,
+                'SemesterID'    => $row->SemesterID,
+                'ClassID'=> $row->ClassID,
+                'SubjectID' => $row->SubjectID,
+                'ProfessorID'=> $row->ProfessorID,
+            ];
+            $this->db->where('ClassRoutineId', $row->ClassRoutineId);
+            $this->db->update('class_routine', $update);
+        }
+    }
+    
+    function telerik_delete() {
+        $request = $_POST['models'];
+        $data = json_decode($request);
+        $this->db->delete('class_routine', ['ClassRoutineId' => $data[0]->ClassRoutineId]);
     }
 
 }

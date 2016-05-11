@@ -1334,5 +1334,24 @@ class Crud_model extends CI_Model {
         
         return $insert_id;
     }
+    
+    /**
+     * Class routine professor list
+     * @param string $subject_id
+     * @return mixed
+     */
+    function class_routine_professor($subject_id) {
+        $subject = $this->db->select()
+                ->from('subject_manager')
+                ->where([
+                    'sm_id' => $subject_id
+                ])->get()->row();
+        
+        $professors = explode(',', $subject->professor_id);
+        
+        return $this->db->select()
+                ->from('professor')
+                ->where_in('professor_id', $professors)->get()->result();
+    }
 
 }

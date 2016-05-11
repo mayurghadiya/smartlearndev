@@ -1,202 +1,500 @@
-<div class="row">
-	<div class="col-md-12">
-    
-    	<!------CONTROL TABS START------>
-		<ul class="nav nav-tabs bordered">
-			<li class="active">
-            	<a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-					<?php echo get_phrase('class_routine_list');?>
-                    	</a></li>
-			<li>
-            	<a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-					<?php echo get_phrase('add_class_routine');?>
-                    	</a></li>
-		</ul>
-    	<!------CONTROL TABS END------>
-        
-	
-		<div class="tab-content">
-            <!----TABLE LISTING STARTS-->
-            <div class="tab-pane active" id="list">
-				<div class="panel-group joined" id="accordion-test-2">
-                	<?php 
-					$toggle = true;
-					$classes = $this->db->get('class')->result_array();
-					foreach($classes as $row):
-						?>
-                        
-                
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                		<h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-test-2" href="#collapse<?php echo $row['class_id'];?>">
-                                        <i class="entypo-rss"></i> Class <?php echo $row['name'];?>
-                                    </a>
-                                    </h4>
-                                </div>
-                
-                                <div id="collapse<?php echo $row['class_id'];?>" class="panel-collapse collapse <?php if($toggle){echo 'in';$toggle=false;}?>">
-                                    <div class="panel-body">
-                                        <table cellpadding="0" cellspacing="0" border="0"  class="table table-bordered">
-                                            <tbody>
-                                                <?php 
-                                                for($d=1;$d<=7;$d++):
-                                                
-                                                if($d==1)$day='sunday';
-                                                else if($d==2)$day='monday';
-                                                else if($d==3)$day='tuesday';
-                                                else if($d==4)$day='wednesday';
-                                                else if($d==5)$day='thursday';
-                                                else if($d==6)$day='friday';
-                                                else if($d==7)$day='saturday';
-                                                ?>
-                                                <tr class="gradeA">
-                                                    <td width="100"><?php echo strtoupper($day);?></td>
-                                                    <td>
-                                                    	<?php
-														$this->db->order_by("time_start", "asc");
-														$this->db->where('day' , $day);
-														$this->db->where('class_id' , $row['class_id']);
-														$routines	=	$this->db->get('class_routine')->result_array();
-														foreach($routines as $row2):
-														?>
-														<div class="btn-group">
-															<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                                            	<?php echo $this->crud_model->get_subject_name_by_id($row2['subject_id']);?>
-																<?php echo '('.$row2['time_start'].'-'.$row2['time_end'].')';?>
-                                                            	<span class="caret"></span>
-                                                            </button>
-															<ul class="dropdown-menu">
-																<li>
-                                                                <a href="#" onclick="showAjaxModal('<?php echo base_url();?>index.php?modal/popup/modal_edit_class_routine/<?php echo $row2['class_routine_id'];?>');">
-                                                                    <i class="entypo-pencil"></i>
-                                                                        <?php echo get_phrase('edit');?>
-                                                                    			</a>
-                                                         </li>
-                                                         
-                                                         <li>
-                                                            <a href="#" onclick="confirm_modal('<?php echo base_url();?>index.php?admin/class_routine/delete/<?php echo $row2['class_routine_id'];?>');">
-                                                                <i class="entypo-trash"></i>
-                                                                    <?php echo get_phrase('delete');?>
-                                                                </a>
-                                                    		</li>
-															</ul>
-														</div>
-														<?php endforeach;?>
 
-                                                    </td>
-                                                </tr>
-                                                <?php endfor;?>
-                                                
-                                            </tbody>
-                                        </table>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-						<?php
-					endforeach;
-					?>
-  				</div>
-			</div>
-            <!----TABLE LISTING ENDS--->
-            
-            
-			<!----CREATION FORM STARTS---->
-			<div class="tab-pane box" id="add" style="padding: 5px">
-                <div class="box-content">
-                	<?php echo form_open(base_url() . 'index.php?admin/class_routine/create' , array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo get_phrase('class');?></label>
-                                <div class="col-sm-5">
-                                    <select name="class_id" class="form-control" style="width:100%;"
-                                        onchange="return get_class_subject(this.value)">
-                                        <option value=""><?php echo get_phrase('select_class');?></option>
-                                    	<?php 
-										$classes = $this->db->get('class')->result_array();
-										foreach($classes as $row):
-										?>
-                                    		<option value="<?php echo $row['class_id'];?>"><?php echo $row['name'];?></option>
-                                        <?php
-										endforeach;
-										?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo get_phrase('subject');?></label>
-                                <div class="col-sm-5">
-                                    <select name="subject_id" class="form-control" style="width:100%;" id="subject_selection_holder">
-                                        <option value=""><?php echo get_phrase('select_class_first');?></option>
-                                    	
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo get_phrase('day');?></label>
-                                <div class="col-sm-5">
-                                    <select name="day" class="form-control" style="width:100%;">
-                                        <option value="sunday">sunday</option>
-                                        <option value="monday">monday</option>
-                                        <option value="tuesday">tuesday</option>
-                                        <option value="wednesday">wednesday</option>
-                                        <option value="thursday">thursday</option>
-                                        <option value="friday">friday</option>
-                                        <option value="saturday">saturday</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo get_phrase('starting_time');?></label>
-                                <div class="col-sm-5">
-                                    <select name="time_start" class="form-control" style="width:100%;">
-										<?php for($i = 0; $i <= 12 ; $i++):?>
-                                            <option value="<?php echo $i;?>"><?php echo $i;?></option>
-                                        <?php endfor;?>
-                                    </select>
-                                    <select name="starting_ampm" class="form-control" style="width:100%">
-                                    	<option value="1">am</option>
-                                    	<option value="2">pm</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo get_phrase('ending_time');?></label>
-                                <div class="col-sm-5">
-                                    <select name="time_end" class="form-control" style="width:100%;">
-										<?php for($i = 0; $i <= 12 ; $i++):?>
-                                            <option value="<?php echo $i;?>"><?php echo $i;?></option>
-                                        <?php endfor;?>
-                                    </select>
-                                    <select name="ending_ampm" class="form-control" style="width:100%">
-                                    	<option value="1">am</option>
-                                    	<option value="2">pm</option>
-                                    </select>
-                                </div>
-                            </div>
-                        <div class="form-group">
-                              <div class="col-sm-offset-3 col-sm-5">
-                                  <button type="submit" class="btn btn-info"><?php echo get_phrase('add_class_routine');?></button>
-                              </div>
-							</div>
-                    </form>                
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Routine</title>
+        <meta charset="utf-8">
+        <link href="<?php echo base_url(); ?>assets/kendo/css/examples-offline.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/kendo/css/kendo.common.min.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/kendo/css/kendo.rtl.min.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/kendo/css/kendo.default.min.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/kendo/css/kendo.dataviz.min.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/kendo/css/kendo.dataviz.default.min.css" rel="stylesheet">
+        <script src="<?php echo base_url(); ?>assets/kendo/js/jquery.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/kendo/js/jszip.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/kendo/js/kendo.all.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/kendo/js/console.js"></script>
+        <script>
+
+        </script>
+
+
+    </head>
+    <body>
+
+        <a class="offline-button" href="../index.html">Back</a>
+        <form>
+            <table>
+                <tr>
+                    <td>Department</td>
+                    <td>
+                        <select id="department_search"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td>
+                        <select id="branch_search"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Batch</td>
+                    <td>
+                        <select id="batch_search"></select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div id="example">
+            <div id="example">
+                <div id="scheduler"></div>
+            </div>
+            <script id="event-template" type="text/x-kendo-template">
+                <div class="movie-template">
+                <p>
+                #: kendo.toString(start, "hh:mm") # - #: kendo.toString(end, "hh:mm") #
+                </p>
+                <h3>#: title #</h3>
+                <p>#: description #</p>
+                </div>
+            </script>
+            <script>
+
+                $('#scheduler').on('dblclick', function () {
+                    var department_id = $('#department').val();
+                    var branch_id = $('#branch').val();
+                    var batch_id = $('#batch').val();
+                    var semester_id = $('#semester').val();
+                    var subject_id = $('#subject').val();
+                    var professor_id = $('#ownerId').val();
+                    console.log(department_id + '-' + branch_id + '-' + batch_id + '-' + semester_id + '-' + subject_id + '-' + professor_id);
+                    
+                    branch_list_from_department(department_id);
+                    batch_from_department_and_branch(department_id, branch_id);
+                    semesters_list_from_branch(branch_id);
+                    subject_list_from_branch_and_semester(branch_id, semester_id);
+                    professor_list(subject_id);
+                    // branch list from department
+                    $('#department').on('change', function () {
+                        var department_id = $(this).val();
+                        branch_list_from_department(department_id);
+                    });
+
+                    // batch list from branch and department
+                    $('#branch').on('change', function () {
+                        var department_id = $('#department').val();
+                        var branch_id = $(this).val();
+                        batch_from_department_and_branch(department_id, branch_id);
+                        semesters_list_from_branch(branch_id);
+                    });
+
+                    $('#semester').on('change', function () {
+                        var branch_id = $('#branch').val();
+                        var semester_id = $(this).val();
+                        subject_list_from_branch_and_semester(branch_id, semester_id);
+                    });
+
+                    $('#subject').on('change', function () {
+                        var subject_id = $(this).val();
+                        professor_list(subject_id);
+                    });
+
+                    function branch_list_from_department(department_id) {
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>admin/course_list_from_degree/' + department_id,
+                            type: 'get',
+                            success: function (content) {
+                                var branch = jQuery.parseJSON(content);
+                                var avail_branch = new Array();
+                                $.each(branch, function (key, value) {
+                                    avail_branch.push(value.c_name);
+                                });
+                                $('#branch_listbox li').each(function () {
+                                    if (avail_branch.indexOf($(this).text()) > -1) {
+                                        $(this).show();
+                                    } else {
+                                        $(this).hide();
+                                    }
+                                });
+                            }
+                        });
+                    }
+
+                    function batch_from_department_and_branch(department_id, branch_id) {
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>admin/batch_list_from_degree_and_course/' + department_id + '/' + branch_id,
+                            type: 'get',
+                            success: function (content) {
+                                var batch_list = jQuery.parseJSON(content);
+                                var avail_batch = new Array();
+                                $.each(batch_list, function (key, value) {
+                                    avail_batch.push(value.b_name);
+                                });
+                                $('#batch_listbox li').each(function () {
+                                    if (avail_batch.indexOf($(this).text()) > -1) {
+                                        $(this).show();
+                                    } else {
+                                        $(this).hide();
+                                    }
+                                });
+                            }
+                        });
+                    }
+
+                    function semesters_list_from_branch(branch_id) {
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>admin/semesters_list_from_branch/' + branch_id,
+                            type: 'get',
+                            success: function (content) {
+                                var semester_list = jQuery.parseJSON(content);
+                                var avail_semester = new Array();
+                                $.each(semester_list, function (key, value) {
+                                    avail_semester.push(value.s_name);
+                                });
+                                $('#semester_listbox li').each(function () {
+                                    if (avail_semester.indexOf($(this).text()) > -1) {
+                                        $(this).show();
+                                    } else {
+                                        $(this).hide();
+                                    }
+                                });
+                            }
+                        });
+                    }
+
+                    function subject_list_from_branch_and_semester(branch_id, semester_id) {
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>admin/subject_list_from_course_and_semester/' + branch_id + '/' + semester_id,
+                            type: 'get',
+                            success: function (content) {
+                                var subject_list = jQuery.parseJSON(content);
+                                var avail_subject = new Array();
+                                $.each(subject_list, function (key, value) {
+                                    avail_subject.push(value.subject_name);
+                                });
+                                $('#subject_listbox li').each(function () {
+                                    if (avail_subject.indexOf($(this).text()) > -1) {
+                                        $(this).show();
+                                    } else {
+                                        $(this).hide();
+                                    }
+                                });
+                            }
+                        });
+                    }
+
+                    function professor_list(subject_id) {
+                        $.ajax({
+                            url: '<?php echo base_url(); ?>admin/class_routine_professor/' + subject_id,
+                            type: 'get',
+                            success: function (content) {
+                                var subject_list = jQuery.parseJSON(content);
+                                var avail_subject = new Array();
+                                $.each(subject_list, function (key, value) {
+                                    avail_subject.push(value.name);
+                                });
+                                $('#ownerId_listbox li').each(function () {
+                                    if (avail_subject.indexOf($(this).text()) > -1) {
+                                        $(this).show();
+                                    } else {
+                                        $(this).hide();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                    $('.k-window-title').html('Class Routine');
+                });
+            </script>
+            <?php
+            $department = $this->db->get('degree')->result();
+            ?>
+            <script id="customEditorTemplate" type="text/x-kendo-template">
+
+                <div class="k-edit-label"><label for="title">Title</label></div>
+                <div data-container-for="title" class="k-edit-field">
+                <input type="text" class="k-input k-textbox" name="title" required="required" data-bind="value:title">
+                </div>
+
+                <div class="k-edit-label"><label for="Department">Department</label></div>
+                <div data-container-for="departmentId" class="k-edit-field">
+                <select style="width: 70%;" id="department" style="width: 50%" name="department" data-bind="value:department" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">
+                <option value="">Select</option>
+                <?php foreach ($department as $dept) { ?>
+                    <option data-id="<?php echo $dept->d_id; ?>" value="<?php echo $dept->d_id; ?>"><?php echo $dept->d_name; ?></option>
+                <?php } ?>
+                </select>
+                </div>
+
+                <div class="k-edit-label">
+                <label for="branch">Branch</label></div>
+                <div id="branch_container" data-container-for="branchId" class="k-edit-field">
+                <select style="width: 70%;" id="branch" style="width: 50%" name="branch" data-bind="value:branch" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">
+                <option value="">Select</option>  
+                <?php
+                $course = $this->db->get('course')->result();
+                foreach ($course as $row) {
+                    ?>
+                    <option value="<?php echo $row->course_id; ?>"><?php echo $row->c_name; ?></option>
+                <?php } ?>
+                </select>                
+                </div>
+
+                <div class="k-edit-label">
+                <label for="batch">Batch</label></div>
+                <div id="batch_container" data-container-for="batchId" class="k-edit-field">
+                <select class="batch" style="width: 70%;" id="batch" style="width: 50%" name="batch" data-bind="value:batch" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">
+                <option value="">Select</option>  
+                <?php
+                $batch = $this->db->get('batch')->result();
+                foreach ($batch as $row) {
+                    ?>
+                    <option value="<?php echo $row->b_id; ?>"><?php echo $row->b_name; ?></option>
+                <?php } ?>
+                </select>                
+                </div>
+
+                <div class="k-edit-label">
+                <label for="semeter">Semester</label></div>
+                <div id="semester_container" data-container-for="semesterId" class="k-edit-field">
+                <select class="batch" style="width: 70%;" id="semester" style="width: 50%" name="semester" data-bind="value:semester" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">
+                <option value="">Select</option>  
+                <?php
+                $semester = $this->db->get('semester')->result();
+                foreach ($semester as $row) {
+                    ?>
+                    <option value="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>
+                <?php } ?>
+                </select>                
+                </div>
+
+                <div class="k-edit-label">
+                <label for="class">Class</label></div>
+                <div id="class_container" data-container-for="classId" class="k-edit-field">
+                <select class="class" style="width: 70%;" id="class" style="width: 50%" name="class" data-bind="value:class" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">
+                <option value="">Select</option>
+                <?php
+                $class = $this->db->get('class')->result();
+                foreach ($class as $row) {
+                    ?>
+                    <option value="<?php echo $row->class_id; ?>"><?php echo $row->class_name; ?></option>
+                <?php } ?>
+                </select>
+                </div>
+
+                <div class="k-edit-label">
+                <label for="subject">Subject</label></div>
+                <div id="subject_container" data-container-for="subjectId" class="k-edit-field">
+                <select style="width: 70%;" id="subject" style="width: 50%" name="subject" data-bind="value:subject" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text" required="required">
+                <option value="">Select</option>
+                <?php
+                $subject = $this->db->get('subject_manager')->result();
+                foreach ($subject as $row) {
+                    ?>
+                    <option value="<?php echo $row->sm_id; ?>"><?php echo $row->subject_name; ?></option>
+                <?php } ?>
+                </select>                
+                </div>
+
+                <div class="k-edit-label"><label for="ownerId">Professor</label></div>
+                <div data-container-for="ownerId" class="k-edit-field">
+                <select style="width: 70%;" id="ownerId" data-bind="value:ownerId" data-role="dropdownlist"
+                data-value-field="value" data-text-field="text">
+                <option value="">Select</option>
+                <?php
+                $professor = $this->db->get('professor')->result();
+                foreach ($professor as $row) {
+                    ?>
+                    <option value="<?php echo $row->professor_id; ?>"><?php echo $row->name; ?></option>
+                <?php } ?>
+                </select>
+                </div>
+
+                <div class="k-edit-label">
+                <label for="start">Start</label>
+                </div>
+                <div data-container-for="start" class="k-edit-field">
+                <input type="text"
+                data-role="datetimepicker"
+                data-interval="15"
+                data-type="date"
+                data-bind="value:start,invisible:isAllDay"
+                name="start"/>
+                <input type="text" data-type="date" data-role="datepicker" data-bind="value:start,visible:isAllDay" name="start" />
+                <span data-bind="text: startTimezone"></span>
+                <span data-for="start" class="k-invalid-msg" style="display: none;"></span>
+                </div>
+                <div class="k-edit-label"><label for="end">End</label></div>
+                <div data-container-for="end" class="k-edit-field">
+                <input type="text" data-type="date" data-role="datetimepicker" data-bind="value:end,invisible:isAllDay" name="end" data-datecompare-msg="End date should be greater than or equal to the start date" />
+                <input type="text" data-type="date" data-role="datepicker" data-bind="value:end,visible:isAllDay" name="end" data-datecompare-msg="End date should be greater than or equal to the start date" />
+                <span data-bind="text: endTimezone"></span>
+                <span data-bind="text: startTimezone, invisible: endTimezone"></span>
+                <span data-for="end" class="k-invalid-msg" style="display: none;"></span>
+                </div>
+                <div class="k-edit-label"><label for="isAllDay">All day event</label></div>
+                <div data-container-for="isAllDay" class="k-edit-field">
+                <input type="checkbox" name="isAllDay" data-type="boolean" data-bind="checked:isAllDay">
+                </div>
+                <div class="k-edit-label"><label for="recurrenceRule">Repeat</label></div>
+                <div data-container-for="recurrenceRule" class="k-edit-field">
+                <div data-bind="value:recurrenceRule" name="recurrenceRule" data-role="recurrenceeditor"></div>
+                </div>
+                <div class="k-edit-label"><label for="description">Description</label></div>
+                <div data-container-for="description" class="k-edit-field">
+                <textarea name="description" class="k-textbox" data-bind="value:description" placeholder="Description"></textarea>
                 </div>                
-			</div>
-			<!----CREATION FORM ENDS-->
-            
-		</div>
-	</div>
-</div>
+            </script>
+            <script>
+                $(function () {
+                    var base_url = '<?php echo base_url(); ?>';
+                    var base_url = '<?php echo base_url(); ?>';
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth();
+                    var yyyy = today.getFullYear();
+                    if (dd < 10) {
+                        dd = '0' + dd
+                    }
+                    if (mm < 10) {
+                        mm = '0' + mm
+                    }
+                    $("#scheduler").kendoScheduler({
+                        date: today,
+                        startTime: new Date(yyyy + '/' + mm + '/' + dd + ' 07:00 AM'),
+                        endTime: new Date(yyyy + '/' + mm + '/' + dd + ' 07:00 PM'),
+                        height: 600,
+                        views: [
+                            "day",
+                            {type: "workWeek", selected: true},
+                            "week",
+                            "month",
+                            "agenda"
+                        ],
+                        editable: {
+                            template: $("#customEditorTemplate").html(),
+                        },
+                        eventTemplate: $("#event-template").html(),
+                        edit: function (e) {
+                            var recurrenceEditor = e.container.find("[data-role=recurrenceeditor]").data("kendoRecurrenceEditor");
 
-<script type="text/javascript">
-    function get_class_subject(class_id) {
-        $.ajax({
-            url: '<?php echo base_url();?>index.php?admin/get_class_subject/' + class_id ,
-            success: function(response)
-            {
-                jQuery('#subject_selection_holder').html(response);
-            }
-        });
-    }
-</script>
+                            //set start option value, used to define the week 'Repeat on' selected checkboxes
+                            recurrenceEditor.setOptions({
+                                start: new Date(e.event.start)
+                            });
+                        },
+                        timezone: "Etc/UTC",
+                        dataSource: {
+                            batch: true,
+                            transport: {
+                                read: {
+                                    url: base_url + "admin/telerik_read",
+                                    dataType: "json"
+                                },
+                                update: {
+                                    url: base_url + "admin/telerik_update",
+                                    type: 'post',
+                                    dataType: "json",
+                                },
+                                create: {
+                                    url: base_url + "admin/telerik_create",
+                                    type: 'post',
+                                    dataType: "json"
+                                },
+                                destroy: {
+                                    url: base_url + "admin/telerik_delete",
+                                    type: 'post',
+                                    dataType: "json"
+                                },
+                                editable: false,
+                                parameterMap: function (options, operation) {
+                                    $("#scheduler").data("kendoScheduler").refresh();
+                                    if (operation !== "read" && options.models) {
+                                        return {models: kendo.stringify(options.models)};
+                                    }
+                                }
+                            },
+                            schema: {
+                                model: {
+                                    id: "taskId",
+                                    fields: {
+                                        taskId: {from: "ClassRoutineId", type: "number"},
+                                        title: {from: "Title", defaultValue: "", validation: {required: true}},
+                                        department: {from: "DepartmentID", defaultValue: '', validation: {required: true}},
+                                        branch: {from: "BranchID", defaultValue: '', validation: {required: true}},
+                                        batch: {from: "BatchID", defaulevalue: '', validation: {required: true}},
+                                        semester: {from: "SemesterID", defaultValue: '', validation: {required: true}},
+                                        class: {from: "ClassID", defaultValue: '', validation: {required: true}},
+                                        subject: {from: "SubjectID", defaultValue: '', validation: {required: true}},
+                                        //professor: {from: "ProfessorID", defaultValue: '', validation: {required: true}},
+                                        start: {type: "date", from: "Start"},
+                                        end: {type: "date", from: "End"},
+                                        startTimezone: {from: "StartTimezone"},
+                                        endTimezone: {from: "EndTimezone"},
+                                        description: {from: "Description"},
+                                        recurrenceId: {from: "RecurrenceID"},
+                                        recurrenceRule: {from: "RecurrenceRule"},
+                                        recurrenceException: {from: "RecurrenceException"},
+                                        ownerId: {from: "ProfessorID", defaultValue: '', validation: {required: true}},
+                                        isAllDay: {type: "boolean", from: "IsAllDay"}
+                                    }
+                                }
+                            }
+                        },
+                        resources: [
+                            {
+                                field: "ownerId",
+                                title: "Owner",
+                                dataSource: [
+                                    {text: "Alex", value: 1, color: "#f8a398"},
+                                    {text: "Bob", value: 2, color: "#51a0ed"},
+                                    {text: "Charlie", value: 3, color: "#56ca85"}
+                                ]
+                            }
+                        ]
+                    });
 
+                    $("#people :checkbox").change(function (e) {
+                        var checked = $.map($("#people :checked"), function (checkbox) {
+                            return parseInt($(checkbox).val());
+                        });
+
+                        var scheduler = $("#scheduler").data("kendoScheduler");
+
+                        scheduler.dataSource.filter({
+                            operator: function (task) {
+                                return $.inArray(task.ownerId, checked) >= 0;
+                            }
+                        });
+                    });
+                });
+            </script>
+
+            <style scoped>
+
+                .k-nav-current > .k-link span + span {
+                    max-width: 200px;
+                    display: inline-block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    vertical-align: top;
+                }
+
+                #team-schedule {
+                    background: url('<?php echo base_url(); ?>assets/kendo/scheduler/team-schedule.png') transparent no-repeat;
+                    height: 115px;
+                    position: relative;
+                }
+
+            </style>
+
+
+    </body>
+</html>
