@@ -40,6 +40,8 @@ if ($message != '') {
 <?php if ($this->router->fetch_method() == 'dashboard') { ?>
     <script>
         $(document).ready(function () {
+            var student_id = '<?php echo $this->session->userdata("student_id"); ?>';
+            //add_remove_widget(student_id, 'id1,id2,id3');            
             $("#myDashboard").mouseup(
                     function () {
                         setTimeout(
