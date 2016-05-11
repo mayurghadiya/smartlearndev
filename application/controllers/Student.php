@@ -304,7 +304,7 @@ class Student extends CI_Controller {
         $std_id = $this->session->userdata('std_id');
         $std = $this->db->get_where('student', array('std_id' => $std_id))->result_array();
         $page_data['assignment'] = $this->db->get_where('assignment_manager', array('	assign_degree' => $std[0]['std_degree'],
-                    'assign_batch' => $std[0]['std_batch'], 'assign_sem' => $std[0]['semester_id'], 'course_id' => $std[0]['course_id']))->result();
+                    'assign_batch' => $std[0]['std_batch'], 'assign_sem' => $std[0]['semester_id'], 'course_id' => $std[0]['course_id'],'class_id'=>$std[0]['class_id']))->result();
 
         $page_data['course'] = $this->db->get('course')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
