@@ -38,6 +38,8 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Forum Comments</th>
+                                                <th>User Roll</th>
+                                                <th>Comment By</th>
                                                 <th>Status</th>
                                                 <th  >Action</th>
                                                 <th  ></th>
@@ -50,6 +52,8 @@
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>
                                                     <td><?php echo $row['forum_comments']; ?></td>                         
+                                                      <td><?php echo $row['user_role']; ?></td> 
+                                                      <td><?php echo roleuserdatatopic($row['user_role'],$row['user_role_id']); ?></td>                                                                             
                                                     <td >
                                                         <?php if ($row['forum_comment_status'] == '1') { ?>
                                                             <span class="label label-success">Active</span>
