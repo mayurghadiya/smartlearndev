@@ -6,7 +6,7 @@
                 <div class="vd_head-section clearfix">
                     <div class="vd_panel-header">
                         <ul class="breadcrumb">
-                            <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home"); ?></a> </li>
+                            <li><a href="<?php echo base_url('index.php?professor/dashboard'); ?>"><?php echo ucwords("home"); ?></a> </li>
                             <li><?php echo ucwords("examinations"); ?></li>
                             <li><?php echo ucwords("exam schedule"); ?></li>
                         </ul>                 

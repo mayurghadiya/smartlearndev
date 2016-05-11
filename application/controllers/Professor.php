@@ -39,6 +39,55 @@ class Professor extends Professor_Controller {
         $this->index();
     }
     
+     function subject($param1 = '', $param2 = '') {
+       
+        if ($param1 == 'create') {
+            $data['sm_course_id'] = $this->input->post('course');
+            $data['sm_sem_id'] = $this->input->post('semester');
+            $data['subject_name'] = $this->input->post('subname');
+            $data['subject_code'] = $this->input->post('subcode');
+            $data['professor_id'] = implode(',', $this->input->post('professor'));
+            $data['sm_status'] = 1;
+            $data['created_date'] = date('Y-m-d');
+
+
+            $this->db->insert('subject_manager', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('subject_added_successfully'));
+            redirect(base_url() . 'admin/subject/', 'refresh');
+        }
+        if ($param1 == 'do_update') {
+
+            $data['sm_course_id'] = $this->input->post('course');
+            $data['sm_sem_id'] = $this->input->post('semester');
+            $data['subject_name'] = $this->input->post('subname');
+            $data['subject_code'] = $this->input->post('subcode');
+            $data['professor_id'] = implode(',', $this->input->post('professor'));
+            $data['sm_status'] = 1;
+
+
+            $this->db->where('sm_id', $param2);
+            $this->db->update('subject_manager', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('subject_updated_successfully'));
+            redirect(base_url() . 'professor/subject/', 'refresh');
+        }
+        if ($param1 == 'delete') {
+            $this->db->where('sm_id', $param2);
+            $this->db->delete('subject_manager');
+            $this->session->set_flashdata('flash_message', get_phrase('subject_deleted_successfully'));
+            redirect(base_url() . 'professor/subject/', 'refresh');
+        }
+       $dept = $this->session->userdata('department');
+        $page_data['subject'] = $this->db->query("SELECT * FROM subject_manager WHERE FIND_IN_SET('" . $dept . "',professor_id)")->result();
+        $login_id = $this->session->userdata('login_user_id');
+      $degree =   $this->db->get_where("professor",array("professor_id"=>$login_id))->result();
+     
+        $this->db->where("degree_id",$degree[0]->department);
+        $page_data['course'] = $this->db->get('course')->result();
+        $page_data['semester'] = $this->db->get('semester')->result();
+        $page_data['page_name'] = 'subject';
+        $page_data['page_title'] = 'Subject Management';
+        $this->__template('subject', $page_data);
+    }
     //// Exam ////
     function exam($param1 = '', $param2 = '') {
        
@@ -162,7 +211,7 @@ class Professor extends Professor_Controller {
         $page_data['course'] = $this->Professor_model->get_all_course();
         $page_data['semester'] = $this->Professor_model->get_all_semester();
         $page_data['centerlist'] = $this->db->get('center_user')->result();
-        $this->load->view('backend/index', $page_data);
+        $this->__template('exam', $page_data);
     }
     /**
      * Course list from degree
@@ -272,8 +321,137 @@ class Professor extends Professor_Controller {
         $page_data['time_table'] = $this->Professor_model->time_table();
         $page_data['title'] = 'Exam Time Table';
         $page_data['page_name'] = 'exam_time_table';
-        $this->load->view('backend/index', $page_data);
+        $this->__template('exam_time_table', $page_data);
     }
+    
+     /**
+     * Exam marks CRUD
+     * @param string $course_id
+     * @param string $semester_id
+     * @param string $exam_id
+     */
+    function marks($degree_id = '', $course_id = '', $batch_id = '', $semester_id = '', $exam_id = '', $student_id = '') {
+        $this->load->model('professor/Professor_model');
+        if ($_POST) {
+            //exam details
+
+            $exam_detail = $this->Professor_model->exam_detail($exam_id);
+
+            //subject details
+            $subject_details = $this->Professor_model->exam_time_table_subject_list($exam_id);
+
+            //$subject_details = $this->Crud_model->exam_time_table_subject_list($exam_detail[0]->em_id);
+            //student list
+            $student_list = $this->Professor_model->student_list_by_course_semester($degree_id, $course_id, $batch_id, $semester_id);
+
+            $total_students = $_POST['total_student'];
+
+
+            for ($i = 1; $i <= $total_students; $i++) {
+                //subject loop
+                if ($student_id != '') {
+                    if ($student_id != $student_list[$i - 1]->std_id)
+                        continue;
+                }
+                for ($j = 0; $j < count($subject_details); $j++) {
+                    //where
+
+                    $where = array(
+                        'mm_std_id' => $student_list[$i - 1]->std_id,
+                        'mm_subject_id' => $subject_details[$j]->sm_id,
+                        'mm_exam_id' => $exam_detail[0]->em_id,
+                    );
+
+                    $marks = $this->Professor_model->student_exam_mark($where);
+
+                    if (count($marks)) {
+                        if ($student_id != '') {
+                            $this->Professor_model->mark_update(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                                    ), $where);
+                        } else {
+                            $this->Professor_model->mark_update(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                                    ), $where);
+                        }
+                        //udpate                        
+                    } else {
+                        //insert    
+                        if ($student_id != '') {
+                            $this->Professor_model->mark_insert(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_1_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                            ));
+                        } else {
+                            $this->Professor_model->mark_insert(array(
+                                'mm_std_id' => $student_list[$i - 1]->std_id,
+                                'mm_subject_id' => $subject_details[$j]->sm_id,
+                                'mm_exam_id' => $exam_detail[0]->em_id,
+                                'mark_obtained' => $_POST["mark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}_{$subject_details[$j]->sm_id}"],
+                                'mm_remarks' => $_POST["remark_{$i}_{$student_list[$i - 1]->std_id}_{$exam_detail[0]->em_id}"],
+                            ));
+                        }
+
+                        $insert_id = $this->db->insert_id();
+                        create_notification('marks_manager', $student_list[$i - 1]->std_degree, $student_list[$i - 1]->course_id, $student_list[$i - 1]->std_batch, $student_list[$i - 1]->semester_id, $insert_id, $student_list[$i - 1]->std_id);
+                    }
+                }
+            }
+            if ($student_id != '') {
+                $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
+                redirect(base_url('professor/marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id . '/' . $student_id));
+            }
+            $this->session->set_flashdata('flash_message', 'Marks is successfully updated.');
+            redirect(base_url('professor/marks/' . $degree_id . '/' . $course_id . '/' . $batch_id . '/' . $semester_id . '/' . $exam_id));
+        }
+        $page_data['degree_id'] = '';
+        $page_data['course_id'] = '';
+        $page_data['semester_id'] = '';
+        $page_data['exam_id'] = '';
+        $page_data['batch_id'] = '';
+        $page_data['student_id'] = $student_id;
+        $page_data['student_list'] = array();
+        $page_data['subject_details'] = array();
+        $page_data['exam_detail'] = array();
+
+        if ($degree_id != '' && $course_id != '' && $batch_id != '' && $semester_id != '' && $exam_id != '') {
+            //assign variable
+            $page_data['degree_id'] = $degree_id;
+            $page_data['course_id'] = $course_id;
+            $page_data['batch_id'] = $batch_id;
+            $page_data['semester_id'] = $semester_id;
+            $page_data['exam_id'] = $exam_id;
+
+            //exam details
+            $page_data['exam_detail'] = $this->Professor_model->exam_detail($exam_id);
+
+            //subject details
+            $page_data['subject_details'] = $this->Professor_model->exam_time_table_subject_list($exam_id);
+
+            //student list
+            $page_data['student_list'] = $this->Professor_model->student_list_by_course_semester($degree_id, $course_id, $batch_id, $semester_id);
+        }
+        $page_data['degree'] = $this->Professor_model->get_all_degree();
+        $page_data['course'] = $this->Professor_model->get_all_course();
+        $page_data['semester'] = $this->Professor_model->get_all_semester();
+        $page_data['time_table'] = $this->Professor_model->time_table();
+        $page_data['title'] = 'Exam Marks';
+        $page_data['page_name'] = 'exam_marks';
+        $this->__template('exam_marks', $page_data);
+    }
+
+    
 
      /**
      * Get subject list by course and semester
