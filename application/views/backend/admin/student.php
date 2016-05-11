@@ -40,9 +40,9 @@
                                         </div>  
                                         <form id="frmstudentlist" name="frmfilterlist" action="#" enctype="multipart/form-data" class="form-vertical form-groups-bordered validate">
                                             <div class="form-group col-sm-2">
-                                                <label ><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                                                <label ><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                                     <select class="form-control filter-rows" name="filterdegree" id="filterdegree" >
-                                                        <option value="">Select Course</option>
+                                                        <option value="">Select department</option>
                                                         <?php
                                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
                                                         foreach ($datadegree as $rowdegree) {
@@ -73,7 +73,21 @@
                                                         <option value="">Select semester</option>
                                                     </select>
                                             </div>
-
+                                            <div class="form-group col-sm-2">
+                                                <label><?php echo ucwords("Class");?><span style="color:red">*</span></label>
+                                                    <select class="form-control filter-rows" name="filterclass" id="filterclass" >
+                                                        <option value="">Select class</option>
+                                                        <?php 
+                                                        $class=$this->db->get('class')->result_array();
+                                                        foreach($class as $c)
+                                                        {
+                                                        ?>
+                                                        <option value="<?php echo $c['class_id']?>"><?php echo $c['class_name']?></option>
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </select>
+                                            </div>    
                                             <div class="form-group col-sm-2">
                                                 <label></label>
                                                 <button type="button" class="btn vd_btn vd_bg-green form-control filter-rows" id="btnsubmit"><?php echo ucwords("Search");?></button>
@@ -106,11 +120,6 @@
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
 <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
 <script type="text/javascript">
-
-
-   
-
-  
 
     $("#filterdegree").change(function () {
         var degree = $(this).val();
@@ -184,10 +193,11 @@
                 var course = $("#filtercourse").val();
                 var batch = $("#filterbatch").val();
                 var sem = $("#filtersemester").val();
+                var divclass = $("#filterclass").val();
                 $.ajax({
                     url: '<?php echo base_url(); ?>index.php?admin/get_filter_student/',
                     type: 'POST',
-                    data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+                    data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree,'divclass':divclass},
                     success: function (content) {
                         $("#filterdata").html(content);
                         // $("#dtbl").hide();
