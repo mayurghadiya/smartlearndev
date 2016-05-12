@@ -122,9 +122,37 @@ class Modal extends CI_Controller {
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
                      $page_data['batch'] = $this->Crud_model->get_all_bacth();
                 }
+                if($page_name=="modal_student_detail")
+                {
+                    $page_data['student']= $this->Professor_model->getstudentinfo($param2);
+                }
+                if($page_name=="addsyllabus" || $page_name=="modal_edit_syllabus")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();
+                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
+                }
+                if($page_name=="addassignment" || $page_name=="modal_edit_assignment")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();
+                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
+                }
                 
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		
-		echo '<script src="http://192.168.1.13/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
+		echo '<script src="http://192.168.1.36/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
 	}
 	
 }
