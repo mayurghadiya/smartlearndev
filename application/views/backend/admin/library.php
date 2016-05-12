@@ -35,9 +35,9 @@
                             <div class="tab-pane box active" id="list">	
                                 <form action="#" method="post" id="searchform">
                                             <div class="form-group col-sm-3 validating">
-                                                <label>Course</label>
+                                                <label><?php echo ucwords("department");?></label>
                                                 <select id="courses" name="degree" class="form-control">
-                                                    <option value="">Select Course</option>
+                                                    <option value="">Select department</option>
                                                     <option value="All">All</option>
                                                     
                                                     <?php foreach ($degree as $row) { ?>
@@ -85,7 +85,7 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div><?php echo ucwords("Library Name");?></div></th>											
-                                                <th><div><?php echo ucwords("Course");?></div></th>											
+                                                <th><div><?php echo ucwords("department");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>											
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											
