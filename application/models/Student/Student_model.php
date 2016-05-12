@@ -638,6 +638,36 @@ class Student_model extends CI_Model {
                     'student_id'=> $student_id
                 ))->get()->row();
     }
+    
+    /**
+     * Student class routine information
+     * @param string $degree
+     * @param string $branch
+     * @param string $batch
+     * @param string $semester
+     * @param string $class
+     * @return mixed
+     */
+    function student_class_routine($degree, $branch, $batch, $semester, $class) {
+        return $this->db->get_where('class_routine', [
+            'DepartmentID'  => $degree,
+            'BranchID'  => $branch,
+            'BatchID'   => $batch,
+            'SemesterID'    => $semester,
+            'ClassID'   => $class
+        ])->result();
+    }
+    
+    /**
+     * Student information
+     * @param string $student_id
+     * @return object
+     */
+    function student_info($student_id) {
+        return $this->db->get_where('student', [
+            'std_id'    => $student_id
+        ])->row();
+    }
     /**
      * Student assessment
      * @param int $student_id
