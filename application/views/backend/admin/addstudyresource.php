@@ -17,10 +17,10 @@
 <?php echo form_open(base_url() . 'index.php?admin/studyresource/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?> <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?> <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select Course</option>
+                                                    <option value="">Select department</option>
                                                     <option value="All">All</option>
                                                     <?php
                                                     $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();

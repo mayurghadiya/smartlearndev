@@ -18,10 +18,10 @@
 <div class="padded">
    
     <div class="form-group">
-        <label class="col-sm-3 control-label"><?php echo ucwords("Course"); ?><span style="color:red">*</span></label>
+        <label class="col-sm-3 control-label"><?php echo ucwords("department"); ?><span style="color:red">*</span></label>
         <div class="col-sm-5">
             <select name="degree" id="degree">
-                <option value="">Select Course</option>
+                <option value="">Select department</option>
                 <?php
                 $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
                 foreach ($degree as $dgr) {
@@ -198,7 +198,7 @@
                 
             },
             messages: {               
-                degree: "Select Course",
+                degree: "Select department",
                 course: "Select Branch",
                 batch: "Select Batch",
                 semester:"Select semester",

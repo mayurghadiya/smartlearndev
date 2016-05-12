@@ -20,10 +20,10 @@ foreach ($edit_data as $row):
                             </div>   
                             <?php echo form_open(base_url() . 'index.php?admin/studyresource/do_update/' . $row['study_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditstudyresource', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">Course <?php echo ucwords("Home");?><span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"> <?php echo ucwords("department");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select Course</option>
+                                        <option value="">Select department</option>
                                         
                                         <option value="All" <?php if($row['study_degree']=="All"){ echo "selected=selected"; } ?> >All</option>
                                         <?php
@@ -230,19 +230,19 @@ endforeach;
                             },        
             },
             messages: {
-                degree: "Please select Course",
-                course:"Please select Branch",
-                batch: "Please select batch",
-                semester: "Please select semester",
-                dateofsubmission1: "Please select date",
+                degree: "Select department",
+                course:"Select branch",
+                batch: "Select batch",
+                semester: "Select semester",
+                dateofsubmission1: "Select date",
               
                 title:
                         {
-                            required: "Please enter title",
+                            required: "Enter title",
                             
                         },
                 resourcefile: {
-                            extension:'Please upload valid file',  
+                            extension:'Upload valid file',  
                            },
             }
         });
