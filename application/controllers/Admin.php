@@ -5821,10 +5821,35 @@ class Admin extends CI_Controller {
     }
 
     function class_routine() {
-        //$page_data['page_name'] = 'class_routine';
-        //$page_data['title'] = 'Class Routine';
-        //$this->load->view('backend/index', $page_data);
-        $this->load->view('backend/admin/class_routine');
+        $this->load->model('admin/Crud_model');        
+        if($_POST){
+            $where = [
+                'DepartmentID'  => $_POST['department'],
+                'BranchID'  => $_POST['branch'],
+                'BatchID'   => $_POST['batch'],
+                'SemesterID'    => $_POST['semester'],
+                
+            ];
+            
+            if($_POST['professor'] != '')
+                $where['ProfessorID'] = $_POST['professor'];
+            
+            $class_routine = $this->Crud_model->filtered_class_routine($where);
+            $this->session->set_userdata('class_routine', $class_routine);
+            
+            $filter_data = [
+                'DepartmentID'  => $_POST['department'],
+                'BranchID'  => $_POST['branch'],
+                'BatchID'   => $_POST['batch'],
+                'SemesterID'    => $_POST['semester'],
+            ];
+            $filter_data['ProfessorID'] = $_POST['professor'];
+            $this->session->set_userdata('filter_data',$filter_data);
+            redirect(base_url('admin/class_routine'));
+            
+        }        
+        $data['department'] = $this->Crud_model->get_all_degree();
+        $this->load->view('backend/admin/class_routine', $data);
     }
 
     function telerik() {
@@ -5850,9 +5875,11 @@ class Admin extends CI_Controller {
     }
 
     function telerik_read() {
-        $event_data = $this->db->get('class_routine')->result();
+        //$event_data = $this->db->get('class_routine')->result();
 
-        echo json_encode($event_data);
+        echo json_encode($this->session->userdata('class_routine'));
+        $this->session->unset_userdata('class_routine');
+        $this->session->unset_userdata('filter_data');
     }
 
     function telerik_create() {
@@ -5884,6 +5911,9 @@ class Admin extends CI_Controller {
         }
     }
 
+    /**
+     * Class routine update
+     */
     function telerik_update() {
         $request = $_POST['models'];
         $data = json_decode($request);
@@ -5913,10 +5943,25 @@ class Admin extends CI_Controller {
         }
     }
 
+    /**
+     * Class routine delete
+     */
     function telerik_delete() {
         $request = $_POST['models'];
         $data = json_decode($request);
         $this->db->delete('class_routine', ['ClassRoutineId' => $data[0]->ClassRoutineId]);
+    }
+    
+    /**
+     * Professor based on department and batch
+     * @param string $department
+     * @param string $branch
+     */
+    function professor_by_department_and_branch($department, $branch) {
+        $this->load->model('admin/Crud_model');
+        $professor = $this->Crud_model->professor_by_department_and_branch($department, $branch);
+        
+        echo json_encode($professor);
     }
 
 }

@@ -1355,6 +1355,29 @@ class Crud_model extends CI_Model {
                 ->from('professor')
                 ->where_in('professor_id', $professors)->get()->result();
     }
+    
+    /**
+     * Filtered class routine
+     * @param mixed $where
+     * @return mixed
+     */
+    function filtered_class_routine($where){
+        return $this->db->get_where('class_routine', $where)->result();
+    }
+    
+    /**
+     * Professor based on department and branch
+     * @param string $department
+     * @param string $branch
+     * @return mixed
+     */
+    function professor_by_department_and_branch($department, $branch) {
+        return $this->db->get_where('professor', [
+            'department' => $department,
+            'branch'    => $branch
+        ])->result();
+    }
+    
      /*
      * 
      * Created by mayur panchal
