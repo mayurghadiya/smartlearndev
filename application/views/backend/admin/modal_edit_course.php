@@ -21,7 +21,7 @@ foreach ( $edit_data as $row):
                                 </div>
                 <?php echo form_open(base_url() . 'index.php?admin/courses/do_update/'.$row['course_id'], array('class' => 'form-horizontal form-groups-bordered validate','id'=>'frmcourseedit','target'=>'_top'));?>
                     <div class="form-group">
-                             <label class="col-sm-3 control-label"><?php echo ucwords("course");?><span style="color:red">*</span></label>
+                             <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                               <div class="col-sm-5">
                                      <select id="degree" name="degree" class="form-control">
                                              <option value="">--- Select Course ---</option>
@@ -107,7 +107,7 @@ endforeach;
                     messages: {
                         c_name: "Enter branch name",
                         course_alias_id: "Enter branch id",
-                        degree: "Select course",
+                        degree: "Select department",
                         'semester[]':"Select semester",
                     }
             });
