@@ -1946,12 +1946,111 @@ class Professor extends Professor_Controller {
         $this->load->model('professor/Professor_model');
         $this->load->helper('system_email');
 
-        $data['inbox'] = admin_inbox();
+        $data['inbox'] = professor_inbox();
         $data['title'] = 'Inbox';
-        $data['content'] = 'backend/admin/email_inbox';
+        $data['content'] = 'backend/professor/email_inbox';
         //$data['page_name'] = 
-        $this->load->view('backend/admin/includes/email_template', $data);
+        $this->load->view('backend/professor/includes/email_template', $data);
+    }
+    
+    
+    /**
+     * Email compose
+     * 
+     * @return response
+     */
+    function email_compose() {
+        ini_set('max_execution_time', 500);
+        //load the Crud model
+        $this->load->model('professor/Professor_model');
+        $this->load->model('admin/Crud_model');
+        
+        
+        $this->load->helper('system_email');
+        if ($_POST) {
+            $filename = '';
+            $attachments = array();
+            if ($_FILES['userfile']['name'][0] != '') {
+                $files = $_FILES;
+                $cpt = count($_FILES['userfile']['name']);
+                for ($i = 0; $i < $cpt; $i++) {
+                    $_FILES['userfile']['name'] = $files['userfile']['name'][$i];
+                    $_FILES['userfile']['type'] = $files['userfile']['type'][$i];
+                    $_FILES['userfile']['tmp_name'] = $files['userfile']['tmp_name'][$i];
+                    $_FILES['userfile']['error'] = $files['userfile']['error'][$i];
+                    $_FILES['userfile']['size'] = $files['userfile']['size'][$i];
+
+                    $this->upload->initialize($this->set_upload_options());
+                    $this->upload->do_upload();
+                    $uploaded = $this->upload->data();
+                    $filename .= $uploaded['file_name'] . ',';
+                    array_push($attachments, $uploaded['full_path']);
+                }
+            }
+            $filename = rtrim($filename, ',');
+            $_POST['file_name'] = $filename;
+
+            if ($_POST['course'] == 'all') {
+                // send to all students 
+                send_to_all_course($_POST);
+            } else if ($_POST['semester'] == 'all') {
+                //send to all semester of the course
+                send_to_course_all_semester($_POST, $_POST['course']);
+            } else if ($_POST['student'] == 'all') {
+                //send to all students of the course and semeter
+                send_to_all_student_course_semester($_POST, $_POST['course'], $_POST['semester']);
+            } else {
+                //send particular student                
+                send_to_single_student($_POST);
+            }
+
+            $teacher_list = array();
+            //send mails to others
+            if (count($_POST['teacheremail'])) {
+                $teacher_list = $_POST['teacheremail'];
+            }
+
+            //cc
+            $cc_list = explode(',', $_POST['cc']);
+            $email_cc_list = array();
+            foreach ($cc_list as $row) {
+                array_push($email_cc_list, $row);
+            }
+
+            //send email
+            //var_dump($teacher_list);
+            //exit;
+            $this->setemail($teacher_list, $_POST['subject'], $_POST['message'], $email_cc_list, $attachments);
+
+            redirect(base_url('professor/email_inbox'));
+        }
+
+        $data['course'] = $this->Professor_model->get_all_course();
+        $data['degree'] = $this->Professor_model->get_all_degree();
+        $data['semester'] = $this->Crud_model->get_all_semester();
+        $data['students'] = $this->Crud_model->get_all_students();
+        $data['teacher'] = $this->Crud_model->get_all_teacher();
+        $data['all_admin'] = $this->Crud_model->get_all_admin();
+        //set the template and view
+        $data['title'] = 'Compose Email';
+        $data['content'] = 'backend/professor/email_compose';
+        $this->load->view('backend/professor/includes/email_template', $data);
     }
 
+    
+    /**
+     * Get all student by course and semester
+     * @param string $course_id
+     * @param string $semester_id
+     */
+    function course_semester_student($course_id = '', $semester_id = '') {
+        $this->load->model('admin/Crud_model');
+        $students = $this->Crud_model->course_semester_student($course_id, $semester_id);
+        foreach ($students as $row) {
+            ?>
+            <option value="<?php echo $row->std_id; ?>"><?php echo $row->std_first_name . ' ' . $row->std_last_name; ?></option>
+            <?php
+        }
+    }
 
 }
