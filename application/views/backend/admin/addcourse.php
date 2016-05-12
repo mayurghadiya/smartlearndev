@@ -20,10 +20,10 @@
 <?php echo form_open(base_url() . 'index.php?admin/courses/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'courseform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree" class="form-control">
-                                                    <option value="">--- Select Course ---</option>
+                                                    <option value="">--- Select department ---</option>
                                                         <?php foreach ($degree as $srow) { ?>
                                                         <option value="<?php echo $srow['d_id']; ?>"><?php echo $srow['d_name']; ?>
                                                         </option>
@@ -113,7 +113,7 @@
                     course_alias_id: "required",
                 },
                 messages: {
-                    degree: "Select course",
+                    degree: "Select department",
                     c_name: 
                     {
                         required:"Enter branch name",

@@ -43,7 +43,7 @@
                                                 <th><div>#</div></th>
                                                 <th><?php echo ucwords("Branch Name");?></th>
                                                 <th><?php echo ucwords("ID");?></th>
-                                                <th><?php echo ucwords("Course");?></th>
+                                                <th><?php echo ucwords("department");?></th>
                                                 <th><?php echo ucwords("Semester");?></th>
                                                 <th><?php echo ucwords("Status");?></th>
                                                 <th><?php echo ucwords("Action");?></th>

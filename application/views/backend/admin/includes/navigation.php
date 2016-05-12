@@ -20,7 +20,7 @@
                         <ul>
                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/degree"> 
-                                    <span class="menu-text">Course</span>  						
+                                    <span class="menu-text">Department</span>  						
                                 </a> 
                             </li>
                             <li <?php if ($page_name == "course") { ?> class="selectednavmenu" <?php } ?>>
