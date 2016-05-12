@@ -18,7 +18,7 @@
                                         <br/>
                                         <div class="padded">
                                             <div class="form-group">
-                                                <label class="col-sm-3 control-label">Course<span style="color:red">*</span></label>
+                                                <label class="col-sm-3 control-label">department<span style="color:red">*</span></label>
                                                 <div class="col-sm-5">
                                                     <select class="form-control" name="degree" id="degree" required="">
                                                         <option value="">Select</option>
@@ -136,7 +136,7 @@
                 fees_structure:"required",
             },
             messages: {
-                course: "Please select course Name",
+                course: "Please select department Name",
                 student: "Please select student",
                 fees: "Please enter fees",
                 semester: "Please select semester",
