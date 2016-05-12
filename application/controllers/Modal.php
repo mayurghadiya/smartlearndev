@@ -89,10 +89,20 @@ class Modal extends CI_Controller {
                 }
                 if($page_name=="addfees" || $page_name=="addpayment" )
                 {
-                    $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                         $page_data['degree'] = $this->Professor_model->get_all_degree();
+                    $page_data['course'] = $this->Professor_model->get_all_course();
+                    $page_data['semester'] = $this->Professor_model->get_all_semester();
+                    $page_data['fees_structure'] = $this->Professor_model->get_all_fees_structure();
+                    }
+                    else{
+                         $page_data['degree'] = $this->Crud_model->get_all_degree();
                     $page_data['course'] = $this->Crud_model->get_all_course();
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
                     $page_data['fees_structure'] = $this->Crud_model->get_all_fees_structure();
+                    }
+                   
                 }
                 if($page_name=="add_forum_topic" || $page_name=="modal_edit_forumtopic")
                 {
