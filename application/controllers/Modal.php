@@ -164,7 +164,7 @@ class Modal extends CI_Controller {
                 if($page_name=="addcourseware")
                 {
                      $page_data['branch'] = $this->db->get('course')->result_array();
-
+                }
                 if($page_name=="addstudyresource" || $page_name=="modal_edit_studyresource")
                 {
                     if($this->session->userdata('login_type')=="professor")

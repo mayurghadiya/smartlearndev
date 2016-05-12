@@ -1447,7 +1447,7 @@ class Professor_model extends CI_Model {
     function  getcourseware()
     {
         return $this->db->get('courseware')->result_array();
-
+    }
     public function get_studyresource()
     {
         $dept = $this->session->userdata("department");
