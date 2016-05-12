@@ -20,10 +20,10 @@ foreach ($edit_data as $row):
                                 </div>  
                             <?php echo form_open(base_url() . 'index.php?admin/participate/do_update/' . $row['pp_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("Course ");?><span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("department ");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select Course</option>
+                                        <option value="">Select department</option>
                                         <option value="All" <?php if($row['pp_degree']=="All"){ echo "selected=selected"; } ?>>All</option>
                                         <?php
                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -166,13 +166,6 @@ endforeach;
                              $("#course2").val($("#course2 option:eq(1)").val());
                               $("#semester2").val($("#semester2 option:eq(1)").val());
                               
-                        /*$("#course2").html(response);
-                        $("#batch2").html(response);
-                        $("#semester2").prepend(response);
-                        
-                         $("#semester2").val($("#semester2 option:first").val());
-
-                         */
                     }else{
                         $("#course2").html(response);
                     }
@@ -308,21 +301,20 @@ alert('123');
                      },
             },
             messages: {
-                degree: "Please select course",
-                 course:"Please select branch",
-                batch: "Please select batch",
-                semester: "Please select semester",
-                student: "Please select student",
-                dateofsubmission1: "Please select date of submission",
-                
+                degree: "Select department",
+                 course:"Select branch",
+                batch: "Select batch",
+                semester: "Select semester",
+                student: "Select student",
+                dateofsubmission1: "Select date of submission",
                 
                 title:
                         {
-                            required: "Please enter title",
+                            required: "Enter title",
                            
                         },
                participatefile:{  
-                            extension:'Please upload valid file', 
+                            extension:'Upload valid file', 
                         }
             },
         });

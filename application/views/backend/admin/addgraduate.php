@@ -42,7 +42,7 @@
                                     <?php echo form_open(base_url() . 'index.php?admin/graduate/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'graduatesform', 'enctype' => 'multipart/form-data', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course"); ?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department"); ?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" id="degree" name="degree">
                                                     <option value="">Select</option>
@@ -144,16 +144,16 @@
                    
                 },
                 messages: {
-                    degree: "Please select course",
-                    course: "Please select branch",
-                    batch: "Please select batch",
-                    semester: "Please select semester",
-                    student: "Please select student",                    
+                    degree: "Select department",
+                    course: "Select branch",
+                    batch: "Select batch",
+                    semester: "Select semester",
+                    student: "Select student",                    
                     main_img:{ 
-                        required:"Please upload slide image",
+                        required:"Upload slide image",
                         extension:"Only gif,jpg,png file is allowed!"
                     },
-                    year: "Please enter year"
+                    year: "Enter year"
                 }
             });
         });

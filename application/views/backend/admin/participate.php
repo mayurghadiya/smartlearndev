@@ -67,7 +67,7 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div><?php echo ucwords("Parti. Title");?> </div></th>											
-                                                <th><div><?php echo ucwords("Course");?></div></th>											
+                                                <th><div><?php echo ucwords("department");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											                                              
@@ -168,10 +168,10 @@
                                     <?php echo form_open(base_url() . 'index.php?admin/participate/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmparticipate', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course ");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department ");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select Course</option>
+                                                    <option value="">Select department</option>
                                                     <option value="All">All</option>
                                                     <?php
                                                     $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -323,7 +323,7 @@
                             <div class="tab-pane box" id="survey">		
                                 <div class="tab-pane box" id="list">
                                              <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Course");?></label>
+                                    <label><?php echo ucwords("department");?></label>
                                     <select class="form-control pfilter-rows" id="pfilter2" data-filter="2" data-type="course">
                                         <option value="">All</option>
                                         <?php foreach ($degree as $row) { ?>
@@ -359,7 +359,7 @@
                                                 <tr>
                                                     <th><div>#</div></th>                                           
                                                     <th><div><?php echo ucwords("Student Name");?></div></th>       
-                                                    <th><div><?php echo ucwords("Course");?></div></th>
+                                                    <th><div><?php echo ucwords("department");?></div></th>
                                                     <th><div><?php echo ucwords("Branch");?></div></th>
                                                     <th><div><?php echo ucwords("Batch");?></div></th>											
                                                     <th><div><?php echo ucwords("Semester");?></div></th>	
@@ -502,7 +502,7 @@
 
                             <div class="tab-pane box" id="listing">	
                                  <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Course");?></label>
+                                    <label><?php echo ucwords("department");?></label>
                                     <select class="form-control filter-rows" id="filter4" data-filter="4" data-type="course">
                                         <option value="">All</option>
                                         <?php foreach ($degree as $row) { ?>
@@ -541,7 +541,7 @@
                                                 <th><div><?php echo ucwords("Student Name");?></div></th>	
                                                 <th><div><?php echo ucwords("Parti. Title");?></div></th>
                                                 <th><div><?php echo ucwords("Comment");?></div></th>
-                                                <th><div><?php echo ucwords("Course");?></div></th>											
+                                                <th><div><?php echo ucwords("department");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											
@@ -602,7 +602,7 @@
                              
                                 <div class="panel-body table-responsive" id="upd_getsubmit">
                                 <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Course");?></label>
+                                    <label><?php echo ucwords("department");?></label>
                                     <select class="form-control ufilter-rows" id="ufilter2" data-filter="2" data-type="course">
                                         <option value="">All</option>
                                         <?php foreach ($degree as $row) { ?>
@@ -637,7 +637,7 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div><?php echo ucwords("Student Name");?></div></th>	                                               
-                                                <th><div><?php echo ucwords("Course");?></div></th>											
+                                                <th><div><?php echo ucwords("department");?></div></th>											
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>
                                                 <th><div><?php echo ucwords("Semester");?></div></th>											
@@ -815,10 +815,10 @@
 
                     },
                     messages:{
-                        degree:"select course",
-                        course:"select branch",
-                        batch:"select batch",
-                        semester:"select semester",
+                        degree:"Select course",
+                        course:"Select branch",
+                        batch:"Select batch",
+                        semester:"Select semester",
                     }
                 });
             
@@ -890,10 +890,10 @@
                       semester:"required",
                   },
                   messages:{
-                      degree:"select course",
-                      course:"select branch",
-                      batch:"select batch",
-                      semester:"select semester",
+                      degree:"Select department",
+                      course:"Select branch",
+                      batch:"Select batch",
+                      semester:"Select semester",
                   }
               });
             }
@@ -930,10 +930,10 @@ $("#searchform").submit(function(){
 
                       },
                       messages:{
-                          degree:"select course",
-                          course:"select branch",
-                          batch:"select batch",
-                          semester:"select semester",
+                          degree:"Select department",
+                          course:"Select branch",
+                          batch:"Select batch",
+                          semester:"Select semester",
                       }
                   });
             }
@@ -1082,9 +1082,9 @@ $("#courses").change(function(){
                 status: "required"
             },
             messages: {
-                question: "enter question",
-                description: "enter description",
-                status: "select status"
+                question: "Enter question",
+                description: "Enter description",
+                status: "Select status"
             },
         });
 
@@ -1113,14 +1113,14 @@ $("#courses").change(function(){
                             },
                 },
                 messages: {
-                    degree: "Please select course",
-                    course: "Please select branch",
-                    batch: "Please select batch",
-                    semester: "Please select semester",
-                    dateofsubmission: "Please select date of submission",
+                    degree: "Select department",
+                    course: "Select branch",
+                    batch: "Select batch",
+                    semester: "Select semester",
+                    dateofsubmission: "Select date of submission",
                     title:
                             {
-                                required: "Please enter title",
+                                required: "Enter title",
                             },
                 },
             });
