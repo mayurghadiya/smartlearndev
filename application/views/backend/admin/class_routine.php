@@ -476,7 +476,6 @@
             <script>
                 $(function () {
                     var base_url = '<?php echo base_url(); ?>';
-                    var base_url = '<?php echo base_url(); ?>';
                     var today = new Date();
                     var dd = today.getDate();
                     var mm = today.getMonth();

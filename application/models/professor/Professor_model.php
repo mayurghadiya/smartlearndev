@@ -1371,5 +1371,15 @@ class Professor_model extends CI_Model {
             $this->db->delete("assessments",array("assessment_id"=>$id));
     }
     
+    /**
+     * Professor class schedule
+     * @return mixed
+     */
+    function professor_class_schedule() {
+        return $this->db->get_where('class_routine', [
+            'ProfessorID'   => $this->session->userdata('login_user_id')
+        ])->result();
+    }
+    
 
 }

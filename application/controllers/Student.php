@@ -1982,5 +1982,25 @@ class Student extends CI_Controller {
         $page_data['page_title'] = 'Gallery';
         $this->load->view('backend/index', $page_data);
     }
+    
+    /**
+     * Student class routine
+     */
+    function class_routine() {
+        $this->load->view('backend/student/class_routine');
+    }
+    
+    /**
+     * Student class routine data
+     */
+    function class_routine_data() {
+        $this->load->model('Student/Student_model');        
+        $student = $this->Student_model->student_info($this->session->userdata('login_user_id'));        
+        $class_routine = $this->Student_model->student_class_routine($student->std_degree, $student->course_id, 
+                $student->std_batch, $student->semester_id, $student->class_id);
+        
+        echo json_encode($class_routine);
+        
+    }
 
 }

@@ -244,6 +244,7 @@
                                                                  <li><a target="_blank" href="<?php echo base_url(); ?>student/gallery">Gallery</a></li>
                                                                  <li><a target="_blank" href="<?php echo base_url(); ?>student/holiday">Holiday</a></li>
                                                                  <li><a target="_blank" href="<?php echo base_url(); ?>student/vocationalcourse">Vocational Course</a></li>
+                                                                 <li><a target="_blank" href="<?php echo base_url(); ?>student/class_routine">Class Routine</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>
