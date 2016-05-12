@@ -21,8 +21,7 @@
 
     </head>
     <body>
-
-        <a class="offline-button" href="../index.html">Back</a>
+        <h2>Filter</h2>
         <form method="post">
             <table>
                 <tr>

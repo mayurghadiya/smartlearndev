@@ -14,7 +14,7 @@
                                 <div class="">
                                     <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>                             
-<?php echo form_open(base_url() . 'index.php?admin/assessments/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+<?php echo form_open(base_url() . 'index.php?professor/assessments/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
 <div class="padded">
    
     <div class="form-group">
@@ -23,7 +23,7 @@
             <select name="degree" id="degree">
                 <option value="">Select department</option>
                 <?php
-                $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                
                 foreach ($degree as $dgr) {
                     ?>
                     <option value="<?= $dgr->d_id ?>"><?= $dgr->d_name ?></option>
@@ -123,7 +123,7 @@
         var dataString = "degree=" + degree;
         $.ajax({
             type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_course/'; ?>",
+            url: "<?php echo base_url() . 'index.php?professor/get_course/'; ?>",
             data: dataString,
             success: function (response) {
                 $("#course").html(response);
@@ -140,14 +140,14 @@
         var dataString = "course=" + course + "&degree=" + degree;
         $.ajax({
             type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_batches/'; ?>",
+            url: "<?php echo base_url() . 'index.php?professor/get_batches/'; ?>",
             data: dataString,
             success: function (response) {
                 $("#batch").html(response);
 
                 $.ajax({
                     type: "POST",
-                    url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                    url: "<?php echo base_url() . 'index.php?professor/get_semester'; ?>",
                     data: dataString,
                     success: function (response1) {
                         $("#semester").html(response1);
@@ -166,7 +166,7 @@
         var dataString = "course=" + course + "&degree=" + degree+"&batch="+batch+"&semester="+semester;
             $.ajax({
                     type: "POST",
-                    url: "<?php echo base_url() . 'index.php?admin/assessment_student'; ?>",
+                    url: "<?php echo base_url() . 'index.php?professor/assessment_student'; ?>",
                     data: dataString,
                     success: function (responses) {
                         $("#student").html(responses);

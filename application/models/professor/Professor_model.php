@@ -62,7 +62,12 @@ class Professor_model extends CI_Model {
     }
 
     function get_syllabus() {
-        return $this->db->get('smart_syllabus')->result();
+        $dept =  $this->session->userdata('department');
+        $branch = $this->session->userdata('branch');
+        $this->db->where("syllabus_degree",$dept);
+        $this->db->where("syllabus_course",$branch);
+         return $this->db->get('smart_syllabus')->result();
+         
     }
 
     function add_syllabus($data) {
@@ -1354,6 +1359,10 @@ class Professor_model extends CI_Model {
      */
     public function assessment()
     {
+        $dept = $this->session->userdata('department');
+        $branch = $this->session->userdata('branch');
+        $this->db->where("degree",$dept);
+        $this->db->where("course",$branch);
        return $this->db->get('assessments')->result_array();
     }
     
@@ -1381,5 +1390,56 @@ class Professor_model extends CI_Model {
         ])->result();
     }
     
-
+    public function get_prof_student($dept,$branch)
+    {
+       return $this->db->get_where("student",array('std_degree'=>$dept,"course_id"=>$branch))->result();
+    }
+    public function getstudentinfo($id)
+    {
+    return $this->db->get_where("student",array('std_id'=>$id))->result();    
+    }
+    
+    public function getholiday()
+    {
+        return $this->db->get('holiday')->result_array();
+    }
+    
+    public function addassignment($data)
+    {
+        $this->db->insert('assignment_manager', $data);
+    }
+    
+    public function updateassignment($data,$param2)
+    {
+          $this->db->where('assign_id', $param2);
+            $this->db->update('assignment_manager', $data);
+    }
+    public function deleteassignment($param2)
+    {
+         $this->db->where('assign_id', $param2);
+            $this->db->delete('assignment_manager');
+    }
+    public function get_assignment()
+    {
+        $dept = $this->session->userdata("department");
+        $branch = $this->session->userdata("branch");
+        $this->db->where("assign_degree",$dept);
+        $this->db->where("course_id",$branch);
+        return  $this->db->get('assignment_manager')->result();
+        
+        
+    }
+    
+    public function submitttedassignment()
+    {
+        $dept = $this->session->userdata('department');
+        $branch = $this->session->userdata('branch');
+        $this->db->select("ass.*,am.*,s.* ");
+        $this->db->from('assignment_submission ass');
+        $this->db->join("assignment_manager am", "am.assign_id=ass.assign_id");
+        $this->db->join("student s", "s.std_id=ass.student_id");
+        $this->db->where("s.std_degree",$dept);
+        $this->db->where("s.course_id",$branch);
+        return $this->db->get();
+    }
 }

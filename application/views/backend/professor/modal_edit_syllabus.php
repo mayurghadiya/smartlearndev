@@ -18,7 +18,7 @@ foreach ($edit_data as $row):
                             <div class="">
                                     <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>   
-                            <?php echo form_open(base_url() . 'index.php?admin/syllabus/do_update/' . $row['syllabus_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditsyllabus', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+                            <?php echo form_open(base_url() . 'index.php?professor/syllabus/do_update/' . $row['syllabus_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditsyllabus', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Syllabus title");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
@@ -26,12 +26,12 @@ foreach ($edit_data as $row):
                                 </div>
                             </div>
                              <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree2">
-                                                    <option value="">Select department</option>
+                                                    <option value="">Select Course</option>
                                                     <?php
-                                                    $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                                                    
                                                     foreach ($degree as $dgr) {
                                                         ?>
                                                     <option value="<?= $dgr->d_id ?>" <?php if($row['syllabus_degree']==$dgr->d_id){  echo "selected=selected"; } ?>><?= $dgr->d_name ?></option>
@@ -122,7 +122,7 @@ endforeach;
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/edit'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_cource/edit'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course2").html(response);
@@ -136,13 +136,13 @@ endforeach;
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batchs/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_batchs/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batch2").html(response);
                         $.ajax({
                                 type: "POST",
-                                url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                                url: "<?php echo base_url() . 'index.php?professor/get_semester'; ?>",
                                 data: dataString,
                                 success: function (response1) {
                                     $("#semester1").html(response1);
@@ -181,7 +181,7 @@ endforeach;
                 },
             },
             messages: {
-                degree:"Select department",
+                degree:"Select Course",
                 course: "Select Branch",               
                 semester: "Select Semester",
                 submissiondate: "Select date of submission",

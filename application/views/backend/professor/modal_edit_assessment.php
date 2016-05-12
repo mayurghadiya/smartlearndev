@@ -21,7 +21,7 @@ foreach ($edit_data as $row):
                             <div class="">
                                     <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>   
-                            <?php echo form_open(base_url() . 'index.php?admin/assessments/update/' . $row['assessment_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+                            <?php echo form_open(base_url() . 'index.php?professor/assessments/update/' . $row['assessment_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditassignment', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             
                              <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
@@ -29,7 +29,7 @@ foreach ($edit_data as $row):
                                                 <select name="degree" id="degree2">
                                                     <option value="">Select department</option>
                                                     <?php
-                                                    $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                                                    
                                                     foreach ($degree as $dgr) {
                                                         ?>
                                                     <option value="<?= $dgr->d_id ?>" <?php if($row['degree']==$dgr->d_id){  echo "selected=selected"; } ?>><?= $dgr->d_name ?></option>

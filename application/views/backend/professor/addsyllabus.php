@@ -1,7 +1,5 @@
  <?php 
-   $degree = $this->db->get('degree')->result_array();
-        $courses = $this->db->get('course')->result_array();
-        $semesters = $this->db->get('semester')->result_array();?>
+ ?>
 <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary" data-collapsed="0">
@@ -16,7 +14,7 @@
 <div class="">
                                     <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
                                 </div>                                       
-<?php echo form_open(base_url() . 'index.php?admin/syllabus/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsyllabus', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
+<?php echo form_open(base_url() . 'index.php?professor/syllabus/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmsyllabus', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Syllabus Title");?><span style="color:red">*</span></label>
@@ -26,12 +24,12 @@
                                              <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                                         </div>
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select department</option>
+                                                    <option value="">Select Course</option>
                                                     <?php
-                                                    $degree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                                                   
                                                     foreach ($degree as $dgr) {
                                                         ?>
                                                         <option value="<?= $dgr->d_id ?>"><?= $dgr->d_name ?></option>
@@ -103,7 +101,7 @@
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_course/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course").html(response);
@@ -118,14 +116,14 @@
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batch").html(response);
                         
                         $.ajax({
                            type: "POST",
-                           url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                           url: "<?php echo base_url() . 'index.php?professor/get_semester'; ?>",
                            data: dataString,
                            success: function (response1) {
                                $("#semester").html(response1);
@@ -175,7 +173,7 @@
 
             },
             messages: {
-                degree:"Select department",
+                degree:"Select Course",
                 course: "Select Branch",
                 
                 semester: "Select Semester",

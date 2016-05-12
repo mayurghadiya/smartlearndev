@@ -117,14 +117,51 @@ class Modal extends CI_Controller {
                 if($page_name=="addassessment" || $page_name=="modal_edit_assessment")
                 {
                     
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                         $page_data['degree'] = $this->Professor_model->get_all_degree();
+                    $page_data['course'] = $this->Professor_model->get_all_course();
+                    $page_data['semester'] = $this->Professor_model->get_all_semester();
+                    $page_data['fees_structure'] = $this->Professor_model->get_all_fees_structure();
+                    }
+                    else{
                   $page_data['degree'] = $this->Crud_model->get_all_degree();
                     $page_data['course'] = $this->Crud_model->get_all_course();
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
                      $page_data['batch'] = $this->Crud_model->get_all_bacth();
+                    }
+                }
+                if($page_name=="modal_student_detail")
+                {
+                    $page_data['student']= $this->Professor_model->getstudentinfo($param2);
+                }
+                if($page_name=="addsyllabus" || $page_name=="modal_edit_syllabus")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();
+                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
+                }
+                if($page_name=="addassignment" || $page_name=="modal_edit_assignment")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();
+                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
                 }
                 
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		
-		echo '<script src="http://192.168.1.13/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
+		echo '<script src="http://192.168.1.36/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
 	}
 	
 }

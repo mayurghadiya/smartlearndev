@@ -2003,4 +2003,14 @@ class Student extends CI_Controller {
         
     }
 
+       public function assessment()
+       {
+              if ($this->session->userdata('student_login') != 1)
+            redirect(base_url() . 'site/user_login', 'refresh');
+            $this->load->model('Student/Student_model');
+            $page_data['assessments'] = $this->Student_model->student_assessment();
+            $page_data['page_name'] = 'assessment';
+            $page_data['page_title'] = 'Assessment';
+            $this->load->view('backend/index', $page_data);
+       }
 }

@@ -92,7 +92,7 @@
                                             <tr>
                                                 <th><div>#</div></th>												
                                                 <th><div><?php echo ucwords("Assignment Name");?></div></th>
-                                                <th><div><?php echo ucwords("department");?></div></th>
+                                                <th><div><?php echo ucwords("Course");?></div></th>
                                                 <th><div><?php echo ucwords("Branch");?></div></th>												
                                                 <th><div><?php echo ucwords("Batch");?></div></th>												
                                                 <th><div><?php echo ucwords("Semester");?></div></th>
@@ -166,7 +166,7 @@
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_assignment/<?php echo $row->assign_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn  menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
 
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/assignment/delete/<?php echo $row->assign_id; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?professor/assignment/delete/<?php echo $row->assign_id; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
                                                     </td>	
                                                 </tr>
 <?php endforeach; ?>						

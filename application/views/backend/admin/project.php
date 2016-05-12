@@ -99,7 +99,7 @@
                                                 <th><div>#</div></th>											
                                                 <th><div><?php echo ucwords("Project Title");?></div></th>
                                                  <th><div><?php echo ucwords("Student Name");?></div></th>											
-                                                <th><div><?php echo ucwords("Course");?></div></th>	
+                                                <th><div><?php echo ucwords("department");?></div></th>	
                                                 <th><div><?php echo ucwords("Branch");?></div></th>
                                                 <th><div><?php echo ucwords("Batch");?></div></th>											
                                                 <th><div><?php echo ucwords("Semester");?></div></th>

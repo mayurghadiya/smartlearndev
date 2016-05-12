@@ -38,7 +38,7 @@
                             <div class="tab-pane box active" id="list">		
                                 
                                  <div class="form-group col-sm-2">
-                                    <label><?php echo ucwords("Course");?></label>
+                                    <label><?php echo ucwords("department");?></label>
                                     <select class="form-control filter-rows" id="filter2" data-filter="2" data-type="course">
                                         <option value="">All</option>
                                         <?php foreach ($degree as $row) { ?>
@@ -67,7 +67,7 @@
                                             <tr>
                                                 <th><div>#</div></th>												
                                                 <th><div><?php echo ucwords("Syllabus Title");?></div></th>
-                                                <th><div><?php echo ucwords("Course");?></div></th>
+                                                <th><div><?php echo ucwords("department");?></div></th>
                                                 <th><div><?php echo ucwords("Branch");?></div></th>												                                                
                                                 <th><div><?php echo ucwords("Semester");?></div></th>
                                                 <th><div><?php echo ucwords("Description");?></div></th>

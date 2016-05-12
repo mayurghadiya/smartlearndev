@@ -17,10 +17,10 @@
 <?php echo form_open(base_url() . 'index.php?admin/library/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmlibrary', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                                     <div class="padded">											
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?> <span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?> <span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree">
-                                                    <option value="">Select Course</option>
+                                                    <option value="">Select department</option>
                                                     <option value="All">All</option>
                                                     <?php
                                                     $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -240,19 +240,19 @@
                 }
             },
             messages: {
-                degree: "Please select Course",
-                course: "Please select Branch",
-                batch: "Please select Batch",
-                semester: "Please select Semester",
-                student: "Please select Student",
-                dateofsubmission: "Please select date",
+                degree: "Select department",
+                course: "Select Branch",
+                batch: "Select Batch",
+                semester: "Select Semester",
+                student: "Select Student",
+                dateofsubmission: "Select date",
                 libraryfile: {
-                    required: "Please upload file",
-                  extension: 'Please upload valid file',
+                    required: "Upload file",
+                  extension: 'Upload valid file',
                 },
                 title:
                         {
-                            required: "Please enter title",
+                            required: "Enter title",
                         },
             }
         });

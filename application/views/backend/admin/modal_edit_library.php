@@ -20,10 +20,10 @@ foreach ($edit_data as $row):
                                 </div>  
                             <?php echo form_open(base_url() . 'index.php?admin/library/do_update/' . $row['lm_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmeditlibrary', 'target' => '_top', 'enctype' => 'multipart/form-data')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("Course ");?><span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <select name="degree" id="degree2">
-                                        <option value="">Select Course</option>
+                                        <option value="">Select department</option>
                                          <option value="All" <?php if($row['lm_degree']=="All"){ echo "selected=selected"; } ?>>All</option>
                                         <?php
                                         $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
@@ -283,20 +283,20 @@ endforeach;
                 },
             },
             messages: {
-                degree: "Please select Course",
-                course:"Please select Branch",
-                batch: "Please select batch",
-                semester: "Please select semester",
-                student: "Please select student",
+                degree: "Select department",
+                course:"Select Branch",
+                batch: "Select batch",
+                semester: "Select semester",
+                student: "Select student",
                
                 title:
                         {
-                            required: "Please enter title",
+                            required: "Enter title",
                            
                         },
                         libraryfile: {
                                    
-                                    extension:'Please upload valid file',  
+                                    extension:'Upload valid file',  
                                 },
             }
         });
