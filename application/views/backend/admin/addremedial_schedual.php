@@ -29,7 +29,7 @@
                                             </div>                                            
                                         <?php } ?>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select name="degree" id="degree" class="form-control">
                                                     <option value="">Select</option>
@@ -131,7 +131,7 @@
                                                                     end_time: "required"
                                                                 },
                                                                 messages: {
-                                                                    degree: "Please select course",
+                                                                    degree: "Please select department",
                                                                     course: "Please select branch",
                                                                     batch: "Please select batch",
                                                                     semester: "Please select semester",

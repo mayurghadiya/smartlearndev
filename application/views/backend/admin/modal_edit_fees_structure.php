@@ -40,7 +40,7 @@ $batch = $this->db->query($query)->result();
                             </div>
                         </div>                  
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_degree" name="degree" required="">
                                     <option value="">Select</option>
@@ -166,7 +166,7 @@ $batch = $this->db->query($query)->result();
             },
             messages: {
                 edit_title: "Please enter title",
-                edit_degree: "Please select course",
+                edit_degree: "Please select department",
                 edit_course: "Please select branch",
                 edit_batch: "Please select batch",
                 edit_semester: "Please select semester",

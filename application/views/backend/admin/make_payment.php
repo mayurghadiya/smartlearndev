@@ -50,7 +50,7 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th>Student Name</th>
-                                                <th>Course</th>
+                                                <th>Department</th>
                                                 <th>Branch</th>
                                                 <th>Batch</th>
                                                 <th>Semester</th>
