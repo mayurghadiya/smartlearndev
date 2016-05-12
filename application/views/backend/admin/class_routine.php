@@ -23,28 +23,144 @@
     <body>
 
         <a class="offline-button" href="../index.html">Back</a>
-        <form>
+        <form method="post">
             <table>
                 <tr>
                     <td>Department</td>
                     <td>
-                        <select id="department_search"></select>
+                        <select id="department_search" required="" name="department">
+                            <option value="">Select</option>
+                            <?php foreach ($department as $row) { ?>
+                                <option value="<?php echo $row->d_id; ?>"><?php echo $row->d_name; ?></option>
+                            <?php } ?>
+                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Branch</td>
                     <td>
-                        <select id="branch_search"></select>
+                        <select id="branch_search" name="branch">
+                            <option value="">Select</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Batch</td>
                     <td>
-                        <select id="batch_search"></select>
+                        <select id="batch_search" name="batch">
+                            <option value="">Select</option>
+                        </select>
                     </td>
+                </tr>
+                <tr>
+                    <td>Semester</td>
+                    <td>
+                        <select id="semester_search" name="semester">
+                            <option value="">Select</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Professor</td>
+                    <td>
+                        <select id="professor_search" name="professor">
+                            <option value="">Select</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
         </form>
+
+        <script>
+            $(document).ready(function () {
+                $('#department_search').val('<?php echo $this->session->userdata('filter_data')['DepartmentID']; ?>');
+                branch_from_department('<?php echo $this->session->userdata('filter_data')['DepartmentID']; ?>');
+                batch_from_department_and_branch('<?php echo $this->session->userdata('filter_data')['DepartmentID']; ?>', '<?php echo $this->session->userdata('filter_data')['BranchID']; ?>');
+                semester_list('<?php echo $this->session->userdata('filter_data')['BranchID']; ?>');
+                professor_list('<?php echo $this->session->userdata('filter_data')['DepartmentID']; ?>', '<?php echo $this->session->userdata('filter_data')['BranchID']; ?>');
+                //alert(<?php echo $this->session->userdata('filter_data')['BatchID']; ?>);
+                setTimeout(function () {
+                    $('#batch_search').val('<?php echo $this->session->userdata('filter_data')['BatchID']; ?>');
+                    $('#branch_search').val('<?php echo $this->session->userdata('filter_data')['BranchID']; ?>');
+                    $('#semester_search').val('<?php echo $this->session->userdata('filter_data')['SemesterID']; ?>');
+                    $('#professor_search').val('<?php echo $this->session->userdata('filter_data')['ProfessorID']; ?>');
+                }, 500);
+
+                $('#department_search').on('change', function () {
+                    branch_from_department($(this).val());
+                });
+
+                $('#branch_search').on('change', function () {
+                    var department_id = $('#department_search').val();
+                    batch_from_department_and_branch(department_id, $(this).val());
+                    semester_list($(this).val());
+                    professor_list(department_id, $(this).val());
+                });
+
+                function branch_from_department(department_id) {
+                    $('#branch_search').find('option').remove().end();
+                    $('#branch_search').append('<option value="">Select</option>');
+                    $.ajax({
+                        url: '<?php echo base_url(); ?>admin/course_list_from_degree/' + department_id,
+                        type: 'get',
+                        success: function (content) {
+                            var branch = jQuery.parseJSON(content);
+                            $.each(branch, function (key, value) {
+                                $('#branch_search').append('<option value=' + value.course_id + '>' + value.c_name + '</option>');
+                            });
+                        }
+                    });
+                }
+
+                function batch_from_department_and_branch(department_id, branch_id) {
+                    $('#batch_search').find('option').remove().end();
+                    $('#batch_search').append('<option value="">Select</option>');
+                    $.ajax({
+                        url: '<?php echo base_url(); ?>admin/batch_list_from_degree_and_course/' + department_id + '/' + branch_id,
+                        type: 'get',
+                        success: function (content) {
+                            var batch = jQuery.parseJSON(content);
+                            $.each(batch, function (key, value) {
+                                $('#batch_search').append('<option value=' + value.b_id + '>' + value.b_name + '</option>');
+                            })
+                        }
+                    });
+                }
+
+                function semester_list(branch_id) {
+                    $('#semester_search').find('option').remove().end();
+                    $('#semester_search').append('<option value="">Select</option>');
+                    $.ajax({
+                        url: '<?php echo base_url(); ?>admin/semesters_list_from_branch/' + branch_id,
+                        type: 'get',
+                        success: function (content) {
+                            var semester = jQuery.parseJSON(content);
+                            $.each(semester, function (key, value) {
+                                $('#semester_search').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                            });
+                        }
+                    });
+                }
+
+                function professor_list(department, branch) {
+                    $('#professor_search').find('option').remove().end();
+                    $('#professor_search').append('<option value="">Select</option>');
+                    $.ajax({
+                        url: '<?php echo base_url(); ?>admin/professor_by_department_and_branch/' + department + '/' + branch,
+                        type: 'get',
+                        success: function (content) {
+                            var professor = jQuery.parseJSON(content);
+                            $.each(professor, function (key, value) {
+                                $('#professor_search').append('<option value=' + value.professor_id + '>' + value.name + '</option>');
+                            });
+                        }
+                    });
+                }
+            });
+        </script>
         <div id="example">
             <div id="example">
                 <div id="scheduler"></div>
@@ -61,6 +177,12 @@
             <script>
 
                 $('#scheduler').on('dblclick', function () {
+                    var remove_option = new Array('Monthly', 'Yearly');
+                    $('.k-reset li').each(function () {
+                        if (remove_option.indexOf($(this).text()) > -1) {
+                            $(this).hide();
+                        }
+                    });
                     var department_id = $('#department').val();
                     var branch_id = $('#branch').val();
                     var batch_id = $('#batch').val();
@@ -68,7 +190,7 @@
                     var subject_id = $('#subject').val();
                     var professor_id = $('#ownerId').val();
                     console.log(department_id + '-' + branch_id + '-' + batch_id + '-' + semester_id + '-' + subject_id + '-' + professor_id);
-                    
+
                     branch_list_from_department(department_id);
                     batch_from_department_and_branch(department_id, branch_id);
                     semesters_list_from_branch(branch_id);

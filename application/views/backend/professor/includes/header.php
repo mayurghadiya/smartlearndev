@@ -281,32 +281,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     </a>
                                     <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor") { ?> style="display: block" <?php } ?>>
                                         <ul>
-                                            <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/degree"> 
-                                                    <span class="menu-text">Course</span>  						
-                                                </a> 
-                                            </li>
-                                            <li <?php if ($page_name == "course") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/courses">
-                                                    <span class="menu-text">Branch</span>  						
-                                                </a> 
-                                            </li>	
-                                            <li <?php if ($page_name == "batch") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/batch">
-                                                    <span class="menu-text">Batch</span>  						
-                                                </a> 
-                                            </li>
-
-                                            <li <?php if ($page_name == "semesterlist") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/semester">
-                                                    <span class="menu-text">Semester</span>  						
-                                                </a> 
-                                            </li>	
-                                            <li  <?php if ($page_name == "admission_type") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url(); ?>professor/admission_type">
-                                                    <span class="menu-text">Admission Type</span>  						
-                                                </a> 
-                                            </li>
+                                            
                                             <li <?php if ($page_name == "student") { ?> class="selectednavmenu" <?php } ?>>
                                                 <a href="<?php echo base_url(); ?>professor/student"> 
                                                     <span class="menu-text">Student</span>  						
@@ -326,17 +301,8 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                 <a href="<?php echo base_url(); ?>professor/holiday">
                                                     <span class="menu-text">Holiday</span>  						
                                                 </a> 
-                                            </li>
-                                            <li <?php if ($page_name == "chancellor") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/chancellor">
-                                                    <span class="menu-text">Chancellor</span>  						
-                                                </a> 
-                                            </li>
-                                            <li>
-                                                                         <!--  <a href="<?php echo base_url(); ?>professor/center">
-                                                                               <span class="menu-text">Exam Center</span>  						
-                                                                           </a>--> 
-                                            </li>	
+                                            </li>                                            
+                                            	
                                         </ul> 
                                     </div>
                                 </li> 
@@ -379,12 +345,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                 <a href="<?php echo base_url('professor/participate'); ?>">
                                                     <span class="menu-text">Participate</span>  
                                                 </a>
-                                            </li> 
-                                            <li <?php if ($page_name == "subscriber") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('professor/subscriber'); ?>">
-                                                    <span class="menu-text">Subscriber</span>  
-                                                </a>
-                                            </li> 
+                                            </li>                                            
                                         </ul>
                                     </div>
                                 </li>
@@ -401,30 +362,16 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                     <span class="menu-text">Toppers Graduate</span>  
                                                 </a>
                                             </li> 
-                                            <li  <?php if ($page_name == "charity_fund") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/charity_fund">
-                                                    <span class="menu-text">Charity Fund</span>  
-                                                </a>
-                                            </li>
+                                         
                                         </ul>
                                     </div>
                                 </li>	
-                                <li>
-                                    <a  href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "professor") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon"><i class="fa fa-user"> </i></span>
-                                        <span class="menu-text">Professor</span>
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
+                                 <li class="<?php if($page_name == 'class_routine') echo 'active'; ?>">
+                                    <a  href="<?php echo base_url('professor/class_routine'); ?>" <?php if($page_name == "class_routine"){  ?> <?php } ?>>
+                                        <span class="menu-icon"><i class="fa fa-road"> </i></span>
+                                        <span class="menu-text">Class Routine</span>
                                     </a>
-                                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "professor") { ?> style="display: block;" <?php } ?>>
-                                        <ul class="clearfix">   
-                                            <li  <?php if ($page_name == "professor") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/professor">
-                                                    <span class="menu-text">Add Professor</span>  
-                                                </a>
-                                            </li> 
-                                        </ul>
-                                    </div>
-                                </li>	
+                                </li>
                                 <li>
                                     <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "exam" || $page_name == "exam_time_table" || $page_name == "exam_marks" || $page_name == "grade" || $page_name == "remedial_exam" || $page_name == "remedial_exam_time_table" || $page_name == "remedial_exam_marks") { ?> class="open" <?php } ?>>
                                         <span class="menu-icon"><i class="fa fa-th-list"></i></span> 
@@ -452,72 +399,11 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     </div>
                                 </li>  
 
-                                <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "cms_manager" || $page_name == "cms") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span>
-                                        <span class="menu-text">CMS Management</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
-                                    </a>
-                                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "cms_manager" || $page_name == "cms") { ?> style="display: block" <?php } ?>>
-                                        <ul class="clearfix">          
-                                            <li <?php if ($page_name == "cms_manager") { ?> class="selectednavmenu" <?php } ?> style="display: none;"> 
-                                                <a href="<?php echo base_url('professor/cms_manager'); ?>">
-                                                    <span class="menu-text">CMS Dynamic Pages</span>
-                                                </a>          
-                                            </li>
-                                            <li <?php if ($page_name == "cms") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/cms">
-                                                    <span class="menu-text">CMS Pages</span>  
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>               
+                                     
 
-                                <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "fees_structure" || $page_name == "make_payment") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon entypo-archive"><i class="fa fa-dollar"></i></span>
-                                        <span class="menu-text">Payment Management</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
-                                    </a>
-                                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "fees_structure" || $page_name == "make_payment") { ?> style="display: block" <?php } ?>>
-                                        <ul class="clearfix">          
-                                            <li <?php if ($page_name == "fees_structure") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('professor/fees_structure'); ?>">
-                                                    <span class="menu-text">Fees Structure</span> 
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                            <li <?php if ($page_name == "make_payment") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('professor/make_payment'); ?>">
-                                                    <span class="menu-text">Make Payment</span>  
-                                                </a>
-                                            </li> 
-                                        </ul>
-                                    </div>
-                                </li>                
+                                             
 
-                                <li>
-                                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "report_chart" || $page_name == "report_chart_exam") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon"><i class="fa fa-bar-chart-o"></i></span> 
-                                        <span class="menu-text">Reports</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
-                                    </a>
-                                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "report_chart" || $page_name == "report_chart_exam") { ?> style="display: block" <?php } ?>>
-                                        <ul>
-                                            <li <?php if ($page_name == "report_chart") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/report_chart/student">
-                                                    <span class="menu-text">Student</span>  
-                                                </a>
-                                            </li> 
-                                            <!-- <li>
-                                                 <a href="<?php echo base_url(); ?>professor/report_chart/exam">
-                                                     <span class="menu-text">Exam</span>  
-                                                 </a>
-                                             </li>                             -->
-                                        </ul>   
-                                    </div>
-                                </li>  
+                                
 
                                 <!--<li>
                                     <a href="reports.html">
@@ -525,52 +411,8 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                         <span class="menu-text">Reports</span>  
                                     </a>
                                 </li>-->
-                                <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "restore") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon entypo-download"><i class="icon-download"></i></span>
-                                        <span class="menu-text">Backup/Restore</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
-                                    </a>
-                                    <div class="child-menu" data-action="click-target"  <?php if ($page_name == "restore") { ?>  style="display: block" <?php } ?>>
-                                        <ul class="clearfix">
-                                            <li > 
-                                                <a href="<?php echo base_url('professor/backup'); ?>">
-                                                    <span class="menu-text">Backup</span>  
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                            <li <?php if ($page_name == "restore") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('professor/restore'); ?>">
-                                                    <span class="menu-text">Restore</span> 
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "import" || $page_name == "export") { ?> class="open"<?php } ?>>
-                                        <span class="menu-icon entypo-icon"><i class="icon-upload"></i></span>
-                                        <span class="menu-text">Import/Export</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
-                                    </a>
-                                    <div class="child-menu" data-action="click-target"  <?php if ($page_name == "import" || $page_name == "export") { ?> style="display: block" <?php } ?>>
-                                        <ul class="clearfix">
-                                            <li  <?php if ($page_name == "import") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('professor/import'); ?>">
-                                                    <span class="menu-text">Import</span> 
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                            <li  <?php if ($page_name == "export") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('professor/export'); ?>">
-                                                    <span class="menu-text">Export</span> 
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>	
+                                
+                                
 
                                 <li> 
                                     <a href="<?php echo base_url('video_streaming'); ?>">
@@ -603,89 +445,9 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                         </ul> 
                                     </div>
                                 </li> 
-                                <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "photo_gallery" || $page_name == "banner_slider") { ?> class="open"<?php } ?> >
-                                        <span class="menu-icon entypo-archive"><i class="fa fa-cubes"></i></span>
-                                        <span class="menu-text">Media</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
-                                    </a>
-                                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "photo_gallery" || $page_name == "banner_slider") { ?> style="display:block" <?php } ?>  >
-                                        <ul class="clearfix">          
-                                            <li <?php if ($page_name == "photo_gallery") { ?> class="selectednavmenu" <?php } ?> >
-                                                <a href="<?php echo base_url(); ?>media/photogallery">
-                                                    <span class="menu-text">Photo Gallery</span>  
-                                                </a>
-                                            </li>
-                                            <li <?php if ($page_name == "banner_slider") { ?> class="selectednavmenu" <?php } ?> >
-                                                <a href="<?php echo base_url(); ?>media/bannerslider">
-                                                    <span class="menu-text">Banner Slider</span>  
-                                                </a>
-                                            </li>
-
-
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li >
-                                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "create_group" || $page_name == "list_group") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
-                                        <span class="menu-text">User Management</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
-                                    </a>
-                                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "create_group" || $page_name == "list_group") { ?> style="display: block" <?php } ?>>
-                                        <ul>
-                                            <li <?php if ($page_name == "create_group") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/create_group">
-                                                    <span class="menu-text">Create Groups</span>  
-                                                </a>
-                                            </li>
-                                            <li <?php if ($page_name == "list_group") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/list_group">
-                                                    <span class="menu-text">List Groups</span>  
-                                                </a>
-                                            </li>
-                                            <!--  <li>
-                                                  <a href="<?php echo base_url(); ?>professor/assign_module">
-                                                      <span class="menu-text">Assign Module</span>  
-                                                  </a>
-                                              </li>
-                                              <li>
-                                                  <a href="<?php echo base_url(); ?>professor/list_module">
-                                                      <span class="menu-text">List Module</span>  
-                                                  </a>
-                                              </li>-->			
-                                        </ul>   
-                                    </div>
-                                </li> 
-
-                                <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "system_settings" || $page_name == "authorize_payment_config") { ?> class="open" <?php } ?>>
-                                        <span class="menu-icon entypo-archive"><i class="fa fa-cubes"></i></span>
-                                        <span class="menu-text">Settings</span>  
-                                        <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
-                                    </a>
-                                    <div class="child-menu" data-action="click-target" <?php if ($page_name == "system_settings" || $page_name == "authorize_payment_config") { ?> style="display: block" <?php } ?>>
-                                        <ul class="clearfix">          
-                                            <li  <?php if ($page_name == "system_settings") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>professor/system_settings">
-                                                    <span class="menu-text">General Settings</span>  
-                                                </a>
-                                            </li>
-                                            <li <?php if ($page_name == "authorize_payment_config") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('professor/authorize_payment_config'); ?>">
-                                                    <span class="menu-text">Authorize.net Config</span> 
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                            <li> 
-                                                <a href="#">
-                                                    <span class="menu-text">Paypal Config</span> 
-                                                    <span class="menu-badge"></span>
-                                                </a>          
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
+                                
+                                
+                                
 
                             </ul>
                             <!-- Head menu search form ends -->         

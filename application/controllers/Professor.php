@@ -450,6 +450,73 @@ class Professor extends Professor_Controller {
         $page_data['page_name'] = 'exam_marks';
         $this->__template('exam_marks', $page_data);
     }
+        
+     /**
+     * Fees structure
+     * @param string $param1
+     * @param string $param2
+     */
+    function fees_structure($param1 = '', $param2 = '') {
+        $this->load->model('professor/Professor_model');
+        $this->load->helper('notification');
+        if ($param1 == 'delete') {
+            $this->db->where('fees_structure_id', $param2);
+            $this->db->delete('fees_structure');
+            $this->session->set_flashdata('flash_message', 'Fees structure is successfully deleted.');
+            redirect(base_url('professor/fees_structure'));
+        }
+        if ($_POST) {
+            if ($param1 == 'create') {
+                //check for duplication
+                $is_record_present = $this->Crud_model->fees_structure_duplication(
+                        $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $_POST['title']);
+                if (count($is_record_present)) {
+                    $this->session->set_flashdata('flash_message', 'Data is already present');
+                } else {
+                    $this->Crud_model->fees_structure_save(array(
+                        'title' => $this->input->post('title', TRUE),
+                        'degree_id' => $this->input->post('degree', TRUE),
+                        'course_id' => $this->input->post('course', TRUE),
+                        'batch_id' => $this->input->post('batch', TRUE),
+                        'sem_id' => $this->input->post('semester', TRUE),
+                        'total_fee' => $this->input->post('fees', TRUE),
+                        'description' => $this->input->post('description', TRUE),
+                        'fee_start_date' => $this->input->post('start_date', TRUE),
+                        'fee_end_date' => $this->input->post('end_date', TRUE),
+                        'fee_expiry_date' => $this->input->post('expiry_date', TRUE),
+                        'penalty' => $this->input->post('penalty', TRUE)
+                    ));
+                    $insert_id = $this->db->insert_id();
+                    //create notification for students
+                    create_notification('fees_structure', $_POST['degree'], $_POST['course'], $_POST['batch'], $_POST['semester'], $insert_id);
+                    $this->session->set_flashdata('flash_message', 'Fees structure is successfully added.');
+                }
+            } elseif ($param1 == 'update') {
+                $this->Crud_model->fees_structure_save(array(
+                    'title' => $this->input->post('title', TRUE),
+                    'degree_id' => $this->input->post('degree', TRUE),
+                    'course_id' => $this->input->post('course', TRUE),
+                    'batch_id' => $this->input->post('edit_batch', TRUE),
+                    'sem_id' => $this->input->post('semester', TRUE),
+                    'total_fee' => $this->input->post('fees', TRUE),
+                    'fee_start_date' => $this->input->post('start_date', TRUE),
+                    'fee_end_date' => $this->input->post('end_date', TRUE),
+                    'fee_expiry_date' => $this->input->post('expiry_date', TRUE),
+                    'penalty' => $this->input->post('penalty', TRUE),
+                    'description' => $this->input->post('description', TRUE),
+                        ), $param2);
+                $this->session->set_flashdata('flash_message', 'Fees structure is successfully updated.');
+            }
+            redirect(base_url('professor/fees_structure'));
+        }
+        $page_data['degree'] = $this->Professor_model->get_all_degree();
+        $page_data['course'] = $this->Professor_model->get_all_course();
+        $page_data['semester'] = $this->Professor_model->get_all_semester();
+        $page_data['fees_structure'] = $this->Professor_model->get_all_fees_structure();
+        $page_data['title'] = 'Fees Structure';
+        $page_data['page_name'] = 'fees_structure';
+        $this->__template('fees_structure', $page_data);
+    }
 
     
 

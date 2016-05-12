@@ -629,12 +629,14 @@ class Professor_model extends CI_Model {
      * @return array
      */
     function get_all_fees_structure() {
+        $id = $this->session->userdata('department');
         return $this->db->select()
                         ->from('fees_structure')
                         ->join('course', 'course.course_id = fees_structure.course_id')
                         ->join('semester', 'semester.s_id = fees_structure.sem_id')
                         ->join('batch', 'batch.b_id = fees_structure.batch_id')
                         ->join('degree', 'degree.d_id = fees_structure.degree_id')
+                        ->where('fees_structure.degree_id',$id)
                         ->get()
                         ->result();
     }
