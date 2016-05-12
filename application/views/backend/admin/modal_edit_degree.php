@@ -9,7 +9,7 @@ foreach ($edit_data as $row):
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                       <?php echo ucwords(" Update Course");?>
+                       <?php echo ucwords(" Update department");?>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -20,7 +20,7 @@ foreach ($edit_data as $row):
                                 </div>
                             <?php echo form_open(base_url() . 'index.php?admin/degree/do_update/' . $row['d_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'degreeformedit', 'target' => '_top')); ?>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label"><?php echo ucwords("course name");?><span style="color:red">*</span></label>
+                                <label class="col-sm-3 control-label"><?php echo ucwords("department name");?><span style="color:red">*</span></label>
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="d_name" id="d_name" value="<?php echo $row['d_name']; ?>"   />
                                 </div>
@@ -66,7 +66,7 @@ endforeach;
                 degree_status: "required",
             },
             messages: {
-                d_name: "Enter course name",
+                d_name: "Enter department name",
                 degree_status: "Select status",
             }
         });

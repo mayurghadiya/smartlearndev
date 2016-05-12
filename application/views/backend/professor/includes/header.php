@@ -1,14 +1,14 @@
 <meta charset="utf-8" />
 <title><?php echo system_name(); ?> | <?php echo $title; ?></title>
-<meta name="keywords" content="HTML5 Template, CSS3, All Purpose Admin Template, Smart learn" />
-<meta name="description" content="Login Pages - Responsive Admin HTML Template">
+<meta name="keywords" content="HTML5 Template, CSS3, All Purpose professor Template, Smart learn" />
+<meta name="description" content="Login Pages - Responsive professor HTML Template">
 <meta name="author" content="Venmond">
 
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 <link rel="stylesheet" href="<?php echo base_url() . 'assets/button/'; ?>css/flags.min.css" media="all">
 
-<!-- altair admin -->
+<!-- altair professor -->
 <link rel="stylesheet" href="<?php echo base_url() . 'assets/button/'; ?>css/main.min.css" media="all">
 <!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
@@ -88,7 +88,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                     <div class="vd_top-nav vd_nav-width  ">
                         <div class="vd_panel-header">
                             <div class="logo">
-                                <a href="<?php echo base_url(); ?>index.php?admin/"><img alt="logo" src="<?= $this->config->item('image_path') ?>logo.png"></a>
+                                <a href="<?php echo base_url(); ?>index.php?professor/"><img alt="logo" src="<?= $this->config->item('image_path') ?>logo.png"></a>
                             </div>
                             <!-- logo -->
                             <div class="vd_panel-menu  hidden-sm hidden-xs" data-intro="<strong>Minimize Left Navigation</strong><br/>Toggle navigation size to medium or small size. You can set both button or one button only. See full option at documentation." data-step=1>
@@ -121,7 +121,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                             <div class="col-sm-5 col-xs-12">
 
                                 <div class="vd_menu-search">
-                                    <form id="search-box" method="post" action="<?php echo base_url('index.php?admin/search'); ?>">
+                                    <form id="search-box" method="post" action="<?php echo base_url('index.php?professor/search'); ?>">
                                         <input type="text" name="search" class="vd_menu-search-text width-60" placeholder="Search"
                                                value="<?php echo isset($search_string) ? $search_string : ''; ?>">
                                         <div class="vd_menu-search-category"> <span data-action="click-trigger"> <span class="separator"></span> <span class="text">Category</span> <span class="icon"> <i class="fa fa-caret-down"></i></span> </span>
@@ -206,7 +206,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                             </li>
 
                                             <li id="top-menu-2"  class="one-icon mega-li"> 
-                                                <a href="<?php echo base_url(); ?>index.php?admin/email" class="mega-link" data-action="click-trigger">
+                                                <a href="<?php echo base_url(); ?>index.php?professor/email" class="mega-link" data-action="click-trigger">
                                                     <span class="mega-icon"><i class="fa fa-globe"></i></span> 
                                                     <span class="badge vd_bg-red">
                                                         <?php
@@ -224,7 +224,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                             <li id="top-menu-profile" class="profile mega-li"> 
                                                 <a href="#" class="mega-link"  data-action="click-trigger"> 
                                                     <span  class="mega-image">
-                                                        <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('admin', $this->session->userdata('admin_id')); ?>" alt="...">             
+                                                        <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('professor', $this->session->userdata('professor_id')); ?>" alt="...">             
                                                     </span>
                                                     <span class="mega-name">
                                                         <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
@@ -235,7 +235,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                         <div class="content-list content-menu">
                                                             <ul class="list-wrapper pd-lr-10">
                                                                 <li> <a href="<?php echo base_url(); ?>index.php"> <div class="menu-icon"><i class=" fa fa-dashboard"></i></div> <div class="menu-text">Home</div> </a> </li>
-                                                                <li> <a href="<?php echo base_url(); ?>index.php?admin/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
+                                                                <li> <a href="<?php echo base_url(); ?>index.php?professor/manage_profile"> <div class="menu-icon"><i class=" fa fa-user"></i></div> <div class="menu-text">Edit Profile</div> </a> </li>
                                                                 <li> <a href="<?php echo base_url(); ?>index.php?login/logout"> <div class="menu-icon"><i class=" fa fa-sign-out"></i></div>  <div class="menu-text">Sign Out</div> </a> </li>
                                                             </ul>
                                                         </div> 
@@ -282,58 +282,58 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor") { ?> style="display: block" <?php } ?>>
                                         <ul>
                                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/degree"> 
+                                                <a href="<?php echo base_url(); ?>professor/degree"> 
                                                     <span class="menu-text">Course</span>  						
                                                 </a> 
                                             </li>
                                             <li <?php if ($page_name == "course") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/courses">
+                                                <a href="<?php echo base_url(); ?>professor/courses">
                                                     <span class="menu-text">Branch</span>  						
                                                 </a> 
                                             </li>	
                                             <li <?php if ($page_name == "batch") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/batch">
+                                                <a href="<?php echo base_url(); ?>professor/batch">
                                                     <span class="menu-text">Batch</span>  						
                                                 </a> 
                                             </li>
 
                                             <li <?php if ($page_name == "semesterlist") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/semester">
+                                                <a href="<?php echo base_url(); ?>professor/semester">
                                                     <span class="menu-text">Semester</span>  						
                                                 </a> 
                                             </li>	
                                             <li  <?php if ($page_name == "admission_type") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url(); ?>admin/admission_type">
+                                                <a href="<?php echo base_url(); ?>professor/admission_type">
                                                     <span class="menu-text">Admission Type</span>  						
                                                 </a> 
                                             </li>
                                             <li <?php if ($page_name == "student") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/student"> 
+                                                <a href="<?php echo base_url(); ?>professor/student"> 
                                                     <span class="menu-text">Student</span>  						
                                                 </a> 
                                             </li>	
                                             <li <?php if ($page_name == "subject") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/subject">
+                                                <a href="<?php echo base_url(); ?>professor/subject">
                                                     <span class="menu-text">Subject</span>  						
                                                 </a> 
                                             </li>
                                             <li <?php if ($page_name == "syllabus") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/syllabus">
+                                                <a href="<?php echo base_url(); ?>professor/syllabus">
                                                     <span class="menu-text">Syllabus Management</span>  						
                                                 </a> 
                                             </li>
                                             <li <?php if ($page_name == "holiday") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/holiday">
+                                                <a href="<?php echo base_url(); ?>professor/holiday">
                                                     <span class="menu-text">Holiday</span>  						
                                                 </a> 
                                             </li>
                                             <li <?php if ($page_name == "chancellor") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/chancellor">
+                                                <a href="<?php echo base_url(); ?>professor/chancellor">
                                                     <span class="menu-text">Chancellor</span>  						
                                                 </a> 
                                             </li>
                                             <li>
-                                                                         <!--  <a href="<?php echo base_url(); ?>admin/center">
+                                                                         <!--  <a href="<?php echo base_url(); ?>professor/center">
                                                                                <span class="menu-text">Exam Center</span>  						
                                                                            </a>--> 
                                             </li>	
@@ -349,39 +349,39 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" || $page_name == 'subscriber') { ?> style="display: block;" <?php } ?>>
                                         <ul class="clearfix">   
                                             <li  <?php if ($page_name == "events") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/events">
+                                                <a href="<?php echo base_url(); ?>professor/events">
                                                     <span class="menu-text">Events</span>  
                                                 </a>
                                             </li>
                                             <li <?php if ($page_name == "assignment") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/assignment'); ?>">
+                                                <a href="<?php echo base_url('professor/assignment'); ?>">
                                                     <span class="menu-text">Assignments</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          
                                             </li>
                                             <li  <?php if ($page_name == "studyresource") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/studyresource'); ?>">
+                                                <a href="<?php echo base_url('professor/studyresource'); ?>">
                                                     <span class="menu-text">Study Resources</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          
                                             </li>   
                                             <li   <?php if ($page_name == "project") { ?> class="selectednavmenu" <?php } ?>>					
-                                                <a href="<?php echo base_url('admin/project'); ?>">
+                                                <a href="<?php echo base_url('professor/project'); ?>">
                                                     <span class="menu-text">Project/Synopsis</span>  						
                                                 </a>
                                             </li>
                                             <li  <?php if ($page_name == "library") { ?> class="selectednavmenu" <?php } ?>>							
-                                                <a href="<?php echo base_url('admin/library'); ?>">
+                                                <a href="<?php echo base_url('professor/library'); ?>">
                                                     <span class="menu-text">Digital Library</span>  
                                                 </a>
                                             </li>
                                             <li <?php if ($page_name == "participate") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('admin/participate'); ?>">
+                                                <a href="<?php echo base_url('professor/participate'); ?>">
                                                     <span class="menu-text">Participate</span>  
                                                 </a>
                                             </li> 
                                             <li <?php if ($page_name == "subscriber") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('admin/subscriber'); ?>">
+                                                <a href="<?php echo base_url('professor/subscriber'); ?>">
                                                     <span class="menu-text">Subscriber</span>  
                                                 </a>
                                             </li> 
@@ -397,12 +397,12 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "graduate" || $page_name == 'charity_fund') { ?> style="display: block;" <?php } ?>>
                                         <ul class="clearfix">   
                                             <li  <?php if ($page_name == "graduate") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/graduate">
+                                                <a href="<?php echo base_url(); ?>professor/graduate">
                                                     <span class="menu-text">Toppers Graduate</span>  
                                                 </a>
                                             </li> 
                                             <li  <?php if ($page_name == "charity_fund") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/charity_fund">
+                                                <a href="<?php echo base_url(); ?>professor/charity_fund">
                                                     <span class="menu-text">Charity Fund</span>  
                                                 </a>
                                             </li>
@@ -418,7 +418,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "professor") { ?> style="display: block;" <?php } ?>>
                                         <ul class="clearfix">   
                                             <li  <?php if ($page_name == "professor") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/professor">
+                                                <a href="<?php echo base_url(); ?>professor/professor">
                                                     <span class="menu-text">Add Professor</span>  
                                                 </a>
                                             </li> 
@@ -434,41 +434,21 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu" data-action="click-target" <?php if ($page_name == "exam" || $page_name == "exam_time_table" || $page_name == "exam_marks" || $page_name == "grade" || $page_name == "remedial_exam" || $page_name == "remedial_exam_time_table" || $page_name == "remedial_exam_marks") { ?> style="display: block" <?php } ?>>
                                         <ul>
                                             <li <?php if ($page_name == "exam") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/exam">
+                                                <a href="<?php echo base_url(); ?>professor/exam">
                                                     <span class="menu-text">Exam</span>  
                                                 </a>
                                             </li>              
                                             <li <?php if ($page_name == "exam_time_table") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/exam_time_table">
+                                                <a href="<?php echo base_url(); ?>professor/exam_time_table">
                                                     <span class="menu-text">Exam Schedule</span>  
                                                 </a>
                                             </li>   
                                             <li <?php if ($page_name == "exam_marks") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('admin/marks'); ?>">
+                                                <a href="<?php echo base_url('professor/marks'); ?>">
                                                     <span class="menu-text">Marks</span>  
                                                 </a>
                                             </li> 
-                                            <li <?php if ($page_name == "grade") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('admin/grade'); ?>">
-                                                    <span class="menu-text">Exam Grade</span>  
-                                                </a>
-                                            </li>
-                                            <li <?php if ($page_name == "remedial_exam") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/remedial_exam">
-                                                    <span class="menu-text">Remedial Exam</span>  
-                                                </a>
-                                            </li>
-                                            <li <?php if ($page_name == "remedial_exam_time_table") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/remedial_exam_schedule">
-                                                    <span class="menu-text">Remedial Exam Schedule</span>  
-                                                </a>
-                                            </li>
-                                            <li <?php if ($page_name == "remedial_exam_marks") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/remedial_exam_marks">
-                                                    <span class="menu-text">Remedial Exam Marks</span>  
-                                                </a>
-                                            </li>                            
-                                        </ul>   
+                                           </ul>   
                                     </div>
                                 </li>  
 
@@ -481,12 +461,12 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu" data-action="click-target" <?php if ($page_name == "cms_manager" || $page_name == "cms") { ?> style="display: block" <?php } ?>>
                                         <ul class="clearfix">          
                                             <li <?php if ($page_name == "cms_manager") { ?> class="selectednavmenu" <?php } ?> style="display: none;"> 
-                                                <a href="<?php echo base_url('admin/cms_manager'); ?>">
+                                                <a href="<?php echo base_url('professor/cms_manager'); ?>">
                                                     <span class="menu-text">CMS Dynamic Pages</span>
                                                 </a>          
                                             </li>
                                             <li <?php if ($page_name == "cms") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/cms">
+                                                <a href="<?php echo base_url(); ?>professor/cms">
                                                     <span class="menu-text">CMS Pages</span>  
                                                 </a>
                                             </li>
@@ -503,13 +483,13 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu" data-action="click-target" <?php if ($page_name == "fees_structure" || $page_name == "make_payment") { ?> style="display: block" <?php } ?>>
                                         <ul class="clearfix">          
                                             <li <?php if ($page_name == "fees_structure") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/fees_structure'); ?>">
+                                                <a href="<?php echo base_url('professor/fees_structure'); ?>">
                                                     <span class="menu-text">Fees Structure</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          
                                             </li>
                                             <li <?php if ($page_name == "make_payment") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url('admin/make_payment'); ?>">
+                                                <a href="<?php echo base_url('professor/make_payment'); ?>">
                                                     <span class="menu-text">Make Payment</span>  
                                                 </a>
                                             </li> 
@@ -526,12 +506,12 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"  data-action="click-target" <?php if ($page_name == "report_chart" || $page_name == "report_chart_exam") { ?> style="display: block" <?php } ?>>
                                         <ul>
                                             <li <?php if ($page_name == "report_chart") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/report_chart/student">
+                                                <a href="<?php echo base_url(); ?>professor/report_chart/student">
                                                     <span class="menu-text">Student</span>  
                                                 </a>
                                             </li> 
                                             <!-- <li>
-                                                 <a href="<?php echo base_url(); ?>admin/report_chart/exam">
+                                                 <a href="<?php echo base_url(); ?>professor/report_chart/exam">
                                                      <span class="menu-text">Exam</span>  
                                                  </a>
                                              </li>                             -->
@@ -554,13 +534,13 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu" data-action="click-target"  <?php if ($page_name == "restore") { ?>  style="display: block" <?php } ?>>
                                         <ul class="clearfix">
                                             <li > 
-                                                <a href="<?php echo base_url('admin/backup'); ?>">
+                                                <a href="<?php echo base_url('professor/backup'); ?>">
                                                     <span class="menu-text">Backup</span>  
                                                     <span class="menu-badge"></span>
                                                 </a>          
                                             </li>
                                             <li <?php if ($page_name == "restore") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/restore'); ?>">
+                                                <a href="<?php echo base_url('professor/restore'); ?>">
                                                     <span class="menu-text">Restore</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          
@@ -577,13 +557,13 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu" data-action="click-target"  <?php if ($page_name == "import" || $page_name == "export") { ?> style="display: block" <?php } ?>>
                                         <ul class="clearfix">
                                             <li  <?php if ($page_name == "import") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/import'); ?>">
+                                                <a href="<?php echo base_url('professor/import'); ?>">
                                                     <span class="menu-text">Import</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          
                                             </li>
                                             <li  <?php if ($page_name == "export") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/export'); ?>">
+                                                <a href="<?php echo base_url('professor/export'); ?>">
                                                     <span class="menu-text">Export</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          
@@ -609,13 +589,13 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"  data-action="click-target">
                                         <ul>
                                             <li>
-                                                <a href="<?php echo base_url(); ?>admin/email_inbox">
+                                                <a href="<?php echo base_url(); ?>professor/email_inbox">
                                                     <span class="menu-text">Email Management</span>  
                                                     <span class="menu-badge"></span>
                                                 </a> 
                                             </li>
                                             <li>
-                                                <a target="_blank" href="http://www.searchnative.in/hosting/smartlearn/chat/index.php/site_admin/user/login">
+                                                <a target="_blank" href="http://www.searchnative.in/hosting/smartlearn/chat/index.php/site_professor/user/login">
                                                     <span class="menu-text">Chat</span>  
                                                     <span class="menu-badge"></span>
                                                 </a> 
@@ -655,22 +635,22 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu"  data-action="click-target" <?php if ($page_name == "create_group" || $page_name == "list_group") { ?> style="display: block" <?php } ?>>
                                         <ul>
                                             <li <?php if ($page_name == "create_group") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/create_group">
+                                                <a href="<?php echo base_url(); ?>professor/create_group">
                                                     <span class="menu-text">Create Groups</span>  
                                                 </a>
                                             </li>
                                             <li <?php if ($page_name == "list_group") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/list_group">
+                                                <a href="<?php echo base_url(); ?>professor/list_group">
                                                     <span class="menu-text">List Groups</span>  
                                                 </a>
                                             </li>
                                             <!--  <li>
-                                                  <a href="<?php echo base_url(); ?>admin/assign_module">
+                                                  <a href="<?php echo base_url(); ?>professor/assign_module">
                                                       <span class="menu-text">Assign Module</span>  
                                                   </a>
                                               </li>
                                               <li>
-                                                  <a href="<?php echo base_url(); ?>admin/list_module">
+                                                  <a href="<?php echo base_url(); ?>professor/list_module">
                                                       <span class="menu-text">List Module</span>  
                                                   </a>
                                               </li>-->			
@@ -687,12 +667,12 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     <div class="child-menu" data-action="click-target" <?php if ($page_name == "system_settings" || $page_name == "authorize_payment_config") { ?> style="display: block" <?php } ?>>
                                         <ul class="clearfix">          
                                             <li  <?php if ($page_name == "system_settings") { ?> class="selectednavmenu" <?php } ?>>
-                                                <a href="<?php echo base_url(); ?>admin/system_settings">
+                                                <a href="<?php echo base_url(); ?>professor/system_settings">
                                                     <span class="menu-text">General Settings</span>  
                                                 </a>
                                             </li>
                                             <li <?php if ($page_name == "authorize_payment_config") { ?> class="selectednavmenu" <?php } ?>> 
-                                                <a href="<?php echo base_url('admin/authorize_payment_config'); ?>">
+                                                <a href="<?php echo base_url('professor/authorize_payment_config'); ?>">
                                                     <span class="menu-text">Authorize.net Config</span> 
                                                     <span class="menu-badge"></span>
                                                 </a>          

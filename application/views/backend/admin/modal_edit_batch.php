@@ -31,7 +31,7 @@ foreach ( $edit_data as $row):
                       $degree = $this->db->get('degree')->result_array();       
                       $course = $this->db->get('course')->result_array();
                     ?>
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?> <span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?> <span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="degree1" name="degree1[]" class="form-control" multiple>
                                     <option value="">Select Course</option>                                        
@@ -159,8 +159,8 @@ endforeach;
                 b_name: "Please enter batch Name",
                'degree1[]': 
                             {
-                                 valueNotEquals: "Select course",
-                                 required:"Select course",
+                                 valueNotEquals: "Select department",
+                                 required:"Select department",
                             },
                     'course1[]': 
                     {

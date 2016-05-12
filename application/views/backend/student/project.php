@@ -49,6 +49,7 @@
                                                 <th><div>Branch</div></th>											
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
+                                                <th><div>Division</div></th>											
                                                 <th><div>Date of submission</div></th>	
                                                 <th><div>File</div></th>	
                                                 <th >Action</th>
@@ -100,7 +101,17 @@
                                                             ?>
                                                                 
                                                 </td>	
-
+                                                <td>
+                                                    <?php                                                             
+                                                    foreach($class as $c)
+                                                    {
+                                                         if($c->class_id== $row->class_id)
+                                                        {
+                                                            echo $c->class_name;
+                                                        }
+                                                    }
+                                                    ?>
+                                                </td>
                                                 <td><?php echo date('F d, Y',strtotime($row->pm_dos)); ?></td>	
                                                 <td>
                                                <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a>

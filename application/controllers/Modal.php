@@ -9,6 +9,7 @@ class Modal extends CI_Controller {
 		$this->load->database();
 		$this->load->library('session');
                   $this->load->model('admin/Crud_model');
+                  $this->load->model('professor/Professor_model');
 		/*cache control*/
                 $this->load->helper('system_setting');
 		$this->output->set_header('Last-Modified: ' . gmdate("D, d M Y H:i:s") . ' GMT');
@@ -35,18 +36,39 @@ class Modal extends CI_Controller {
 		$page_data['param2']		=	$param2;
 		$page_data['param3']		=	$param3;
                 if($page_name=="add_exam_schedual"){
-                    $page_data['degree'] = $this->Crud_model->get_all_degree();
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                        $page_data['degree'] = $this->Professor_model->get_all_degree();
+                        $page_data['course'] = $this->Professor_model->get_all_course();
+                        $page_data['semester'] = $this->Professor_model->get_all_semester();
+                        $page_data['time_table'] = $this->Professor_model->time_table();
+                    }
+                    else
+                    {
+                        $page_data['degree'] = $this->Crud_model->get_all_degree();
                     $page_data['course'] = $this->Crud_model->get_all_course();
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
                     $page_data['time_table'] = $this->Crud_model->time_table();
+                    }
                 }
                 if($page_name=="addexam")
                 {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $page_data['exams'] = $this->Professor_model->exam_details();
+                    $page_data['exam_type'] = $this->Professor_model->get_all_exam_type();
+                    $page_data['degree'] = $this->Professor_model->get_all_degree();
+                    $page_data['course'] = $this->Professor_model->get_all_course();
+                    $page_data['semester'] = $this->Professor_model->get_all_semester();
+                    }
+                    else
+                    {
                     $page_data['exams'] = $this->Crud_model->exam_details();
                     $page_data['exam_type'] = $this->Crud_model->get_all_exam_type();
                     $page_data['degree'] = $this->Crud_model->get_all_degree();
                     $page_data['course'] = $this->Crud_model->get_all_course();
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
+                    }
                     //$page_data['centerlist'] = $this->db->get('center_user')->result(); 
                 }
                 if($page_name=="addremedial")

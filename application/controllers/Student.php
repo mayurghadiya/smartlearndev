@@ -304,7 +304,7 @@ class Student extends CI_Controller {
         $std_id = $this->session->userdata('std_id');
         $std = $this->db->get_where('student', array('std_id' => $std_id))->result_array();
         $page_data['assignment'] = $this->db->get_where('assignment_manager', array('	assign_degree' => $std[0]['std_degree'],
-                    'assign_batch' => $std[0]['std_batch'], 'assign_sem' => $std[0]['semester_id'], 'course_id' => $std[0]['course_id']))->result();
+                    'assign_batch' => $std[0]['std_batch'], 'assign_sem' => $std[0]['semester_id'], 'course_id' => $std[0]['course_id'],'class_id'=>$std[0]['class_id']))->result();
 
         $page_data['course'] = $this->db->get('course')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
@@ -419,12 +419,14 @@ class Student extends CI_Controller {
             $batch = $std[0]['std_batch'];
             $sem = $std[0]['semester_id'];
             $course = $std[0]['course_id'];
-            $page_data['project'] = $this->db->query("SELECT * FROM project_manager WHERE pm_degree='$degree' AND pm_batch = '$batch' AND pm_semester = '$sem' AND pm_course = '$course' AND FIND_IN_SET('$std_id',pm_student_id)")->result();
+            $class = $std[0]['class_id'];
+            $page_data['project'] = $this->db->query("SELECT * FROM project_manager WHERE pm_degree='$degree' AND pm_batch = '$batch' AND pm_semester = '$sem' AND pm_course = '$course' AND class_id='$class' AND FIND_IN_SET('$std_id',pm_student_id)")->result();
             // $page_data['project'] = $this->db->get_where('project_manager', array("pm_student_id" => $this->session->userdata('std_id')))->result();
             $page_data['degree'] = $this->db->get('degree')->result();
             $page_data['batch'] = $this->db->get('batch')->result();
             $page_data['course'] = $this->db->get('course')->result();
             $page_data['semester'] = $this->db->get('semester')->result();
+            $page_data['class'] = $this->db->get('class')->result();
             $page_data['student'] = $this->db->get('student')->result();
             $page_data['page_name'] = 'project';
             $page_data['page_title'] = 'Project List';

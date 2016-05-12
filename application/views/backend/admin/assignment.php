@@ -66,7 +66,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-sm-2">
-                                        <label><?php echo ucwords("Class");?><span style="color:red">*</span></label>
+                                        <label><?php echo ucwords("Class");?><span style="color:red"></span></label>
                                             <select class="form-control filter-rows" name="filterclass" id="filterclass" >
                                                 <option value="">Select</option>
                                                 <?php 
@@ -96,6 +96,7 @@
                                                 <th><div><?php echo ucwords("Branch");?></div></th>												
                                                 <th><div><?php echo ucwords("Batch");?></div></th>												
                                                 <th><div><?php echo ucwords("Semester");?></div></th>
+                                                <th><div><?php echo ucwords("class");?></div></th>
                                                 <th><div><?php echo ucwords("Description");?></div></th>
                                                 <th><div><?php echo ucwords("File");?></div></th>
                                                 <th><div><?php echo ucwords("Date of Submission");?></div></th>												
@@ -145,7 +146,19 @@
                                                             }
                                                         }
                                                         ?>													
-                                                    </td>	
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                        foreach($class as $c)
+                                                        {
+                                                             if($c['class_id']== $row->class_id)
+                                                            {
+                                                                echo $c['class_name'];
+                                                            }
+                                                        }
+                                                            
+                                                        ?>
+                                                    </td>
                                                     <!-- id="inlinedate" contenteditable="true" onBlur="saveToDatabase(this,'assign_dos','<?php echo $row->assign_id; ?>')" onClick="showEdit(this);"-->
                                                      <td  ><?php echo  wordwrap($row->assign_desc,30,"<br>\n");?></td>
                                                     <td id="downloadedfile"><a href="<?php echo $row->assign_url; ?>" download="" title="<?php echo $row->assign_title; ?>"><i class="fa fa-download"></i></a></td>	

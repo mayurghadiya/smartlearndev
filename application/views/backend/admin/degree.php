@@ -8,14 +8,14 @@
                     <ul class="breadcrumb">                      
                          <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
                          <li><?php echo ucwords("basic management");?></li>
-                         <li><?php echo ucwords("course");?></li>
+                         <li><?php echo ucwords("department");?></li>
                         
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1><?php echo ucwords("course management");?></h1>
+                    <h1><?php echo ucwords("department management");?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
@@ -25,7 +25,7 @@
                         <ul class="nav nav-tabs bordered">
                             <li class="active">
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
-                                   <?php echo ucwords(" course list");?>
+                                   <?php echo ucwords(" department list");?>
                                 </a></li>
                            
                         </ul>
@@ -40,7 +40,7 @@
                                         <thead>
                                             <tr>
                                                 <th><div>#</div></th>
-                                                <th><?php echo ucwords("course name");?></th>
+                                                <th><?php echo ucwords("department name");?></th>
                                                 <th><?php echo ucwords("status");?></th>
                                                 <th><?php echo ucwords("action");?></th>
                                             </tr>

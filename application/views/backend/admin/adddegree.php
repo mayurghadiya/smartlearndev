@@ -8,7 +8,7 @@
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        <?php echo ucwords("Add Course");?>
+                        <?php echo ucwords("Add department");?>
                     </div>
                 </div>
                 <div class="panel-body"> 
@@ -20,7 +20,7 @@
 <?php echo form_open(base_url() . 'index.php?admin/degree/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'degreeform', 'target' => '_top')); ?>
                                     <div class="padded">
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course name");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department name");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="d_name" id="d_name"/>
                                             </div>
@@ -76,7 +76,7 @@
                 messages: {
                     d_name:
                     {
-                         required:"Enter course name",
+                         required:"Enter department name",
                         remote:"Record is already present in the system",
                     },
                     

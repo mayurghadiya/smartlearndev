@@ -228,7 +228,8 @@ class Site extends CI_Controller {
             $this->session->set_userdata('professor_login', '1');
             $this->session->set_userdata('login_user_id', $row->professor_id);
             $this->session->set_userdata('name', $row->name);
-            $this->session->set_userdata('email', $row->email);
+            $this->session->set_userdata('email', $row->email);            
+            $this->session->set_userdata('department', $row->department);
             $this->session->set_userdata('login_type', 'professor');
             redirect(base_url('professor'));
         }
