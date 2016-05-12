@@ -49,7 +49,7 @@ $centerlist = $this->db->get('center_user')->result();
                         <?php echo form_open(base_url() . 'index.php?admin/remedial_exam/update/' . $edit_data->em_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-form', 'target' => '_top')); ?>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-control" required="" name="degree" id="edit_degree">
                                     <option>Select</option>
@@ -224,7 +224,7 @@ $centerlist = $this->db->get('center_user')->result();
                 exam_type: "Please select Exam type",
                 year: "Please select year",
                 degree: "Please select degree",
-                course: "Please select course",
+                course: "Please select department",
                 batch: "Please select batch",
                 semester: "Please select semester",
                 edit_total_marks: "Please enter total marks",

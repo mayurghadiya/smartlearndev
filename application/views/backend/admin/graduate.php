@@ -42,7 +42,7 @@
                                                 <th><div>#</div></th>
                                                 <th width="10%">Image</th>
                                                 <th><?php echo ucwords("student name"); ?></th>
-                                                <th><?php echo ucwords("course"); ?></th>
+                                                <th><?php echo ucwords("department"); ?></th>
                                                 <th><?php echo ucwords("branch"); ?></th>
                                                 <th><?php echo ucwords("graduation year"); ?></th>
                                                 <th><?php echo ucwords("action"); ?></th>

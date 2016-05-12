@@ -40,7 +40,7 @@ $semester = $this->db->get('semester')->result();
                         </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/exam_time_table/update/' . $edit_data->exam_time_table_id, array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'edit-exam-time-table', 'target' => '_top')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                             <div class="col-sm-7">
                                 <select name="degree" id="edit_degree" class="form-control" required="">
                                     <option value="">Select</option>
@@ -160,7 +160,7 @@ $semester = $this->db->get('semester')->result();
                 end_time: "required"
             },
             messages: {
-                degree: "Please select course",
+                degree: "Please select department",
                 course: "Please select branch",
                 batch: "Please select batch",
                 semester: "Please select semester",

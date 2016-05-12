@@ -83,7 +83,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("Course");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select class="form-control" name="degree" id="degree">
                                                     <option value="">Select</option>
@@ -194,7 +194,7 @@
                                                         exam_name: "Please enter exam name",
                                                         exam_type: "Please select exam type",
                                                         year: "Please select year",
-                                                        degree: "Please select course",
+                                                        degree: "Please select department",
                                                         course: "Please select branch",
                                                         batch: "Please select batch",
                                                         semester: "Please select semester",
