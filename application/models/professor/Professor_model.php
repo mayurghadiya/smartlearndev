@@ -1442,9 +1442,45 @@ class Professor_model extends CI_Model {
         $this->db->where("s.course_id",$branch);
         return $this->db->get();
     }
+
     
     function  getcourseware()
     {
         return $this->db->get('courseware')->result_array();
+
+    public function get_studyresource()
+    {
+        $dept = $this->session->userdata("department");
+        $this->db->where("study_degree",$dept);
+        $this->db->or_where('study_degree',"All");
+        return  $this->db->get('study_resources')->result();
+     
+    }
+    
+    public function get_libraries()
+    {
+        $dept = $this->session->userdata("department");
+        $this->db->where("lm_degree",$dept);
+        $this->db->or_where('lm_degree',"All");
+        return  $this->db->get('library_manager')->result();
+    }
+    public function get_projects()
+    {
+         $dept = $this->session->userdata("department");
+        $this->db->where("pm_degree",$dept);
+        return $this->db->get('project_manager')->result();
+    }
+    
+    public function submittedproject()
+    {
+        $dept = $this->session->userdata("department");
+        $branch = $this->session->userdata("branch");
+        $this->db->select("ps.*,pm.*,s.* ");
+        $this->db->from('project_document_submission ps');
+        $this->db->join("project_manager pm", "pm.pm_id=ps.project_id");
+        $this->db->join("student s", "s.std_id=ps.student_id");
+        $this->db->where("s.std_degree",$dept);
+        $this->db->where("s.course_id",$branch);
+        return $this->db->get();
     }
 }

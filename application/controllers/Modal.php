@@ -160,9 +160,46 @@ class Modal extends CI_Controller {
                     }
                 }
                 
+
                 if($page_name=="addcourseware")
                 {
                      $page_data['branch'] = $this->db->get('course')->result_array();
+
+                if($page_name=="addstudyresource" || $page_name=="modal_edit_studyresource")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();
+                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
+                }
+                if($page_name=="addlibrary" || $page_name=="modal_edit_library")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();
+                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
+                }
+                 if($page_name=="addproject" || $page_name=="modal_edit_project")
+                {
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                    $dept = $this->session->userdata('department');
+                    $this->db->where("d_id",$dept);
+                    $page_data['degree'] = $this->db->get_where('degree', array('d_status' => 1))->result();                      
+                    $page_data['courses'] = $this->db->get('course')->result_array();
+                    $page_data['semesters'] = $this->db->get('semester')->result_array();
+                    }
+
                 }
                 
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		

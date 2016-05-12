@@ -345,7 +345,7 @@
            var course =  $("#branches").val();
            var batch =  $("#batches").val();
             var semester = $("#semesters").val();
-            var divclass = $("#class").val();
+            var divclass = $("#filterclass").val();
             $.ajax({
                 type:"POST",
                 url:"<?php echo base_url(); ?>index.php?admin/getprojects/allproject",

@@ -405,3 +405,101 @@ if (!function_exists('send_to_single_student')) {
     }
 
 }
+
+if (!function_exists('professor_inbox')) {
+
+    /**
+     * professor inbox
+     */
+    function professor_inbox() {
+        $CI = & get_instance();
+        $professor_details = professor_sender_detail();
+        $CI->db->order_by('created_at', 'DESC');
+        $inbox = $CI->db->get_where('email', array(
+                    'email_to' => $professor_details['professor_id']
+                ))->result();
+
+        return $inbox;
+    }
+
+}
+
+
+
+if (!function_exists('professor_sender_detail')) {
+
+    /**
+     * Admin sender details
+     * @return array
+     */
+    function professor_sender_detail() {
+        $CI = & get_instance();
+        $professor_details = $CI->session->all_userdata();
+
+        return $professor_details;
+    }
+
+}
+
+
+if (!function_exists('send_to_all_course_professor')) {
+
+    /**
+     * Send message to all course students
+     * @param type $data
+     */
+    function send_to_all_course_professor($data) {
+        $CI = & get_instance();
+        $students = $CI->db->get('student')->result();
+        $email_to = '';
+        $admin_details = professor_sender_detail();
+        foreach ($students as $row) {
+            $email_to .= $row->std_id . ',';
+            $data['email_to'] = $row->std_id;
+            $data['role_to'] = 'student';
+            $data['role_from'] = 'professor';
+            $data['course'] = 'all';
+            $data['semester'] = 'all';
+            $data['email_to'] = rtrim($email_to, ',');
+            $data['read'] = 0;
+            $data['is_draft'] = 0;
+            $data['admin_email'] = $admin_details['email'];
+            $data['admin_name'] = $admin_details['name'];
+        }
+        save_professor_email_data($data);
+    }
+
+}
+
+
+if (!function_exists('save_professor_email_data')) {
+
+    /**
+     * Save email data
+     * @param array $data
+     * 
+     * @return int
+     */
+    function save_professor_email_data($data) {
+        $CI = & get_instance();
+        $CI->db->insert('email', array(
+            'email_from' => $data['admin_email'],
+            'from_name' => $data['admin_name'],
+            'course' => $data['course'],
+            'semester' => $data['semester'],
+            'email_to' => $data['email_to'],
+            'subject' => $data['subject'],
+            'cc' => $data['cc'],
+            'message' => $data['message'],
+            'role_from' => $data['role_from'],
+            'role_to' => $data['role_to'],
+            'is_draft' => $data['is_draft'],
+            'file_name' => $data['file_name'],
+            'read' => $data['read']
+        ));
+        $insert_id = $CI->db->insert_id();
+
+        return $insert_id;
+    }
+
+}

@@ -5,7 +5,7 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                    <ul class="breadcrumb">
-                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><a href="<?php echo base_url('index.php?professor/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
                          <li><?php echo ucwords("asset management");?></li>
                          <li><?php echo ucwords("assignment Management");?></li>
                     </ul>
@@ -337,7 +337,7 @@
             var semester = $("#semesters").val();
             $.ajax({
                 type:"POST",
-                url:"<?php echo base_url(); ?>index.php?admin/getassignment/allassignment",
+                url:"<?php echo base_url(); ?>index.php?professor/getassignment/allassignment",
                 data:{'degree':degree,'course':course,'batch':batch,"semester":semester},
                 success:function(response)
                 {
@@ -354,7 +354,7 @@
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_course/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#branches").html(response);
@@ -369,14 +369,14 @@
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batches").html(response);
                         
                          $.ajax({
                                 type: "POST",
-                                url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                                url: "<?php echo base_url() . 'index.php?professor/get_semester'; ?>",
                                 data: dataString,
                                 success: function (response1) {
                                     $("#semesters").html(response1);
@@ -413,7 +413,7 @@
                     var semester = $("#semesters").val();
                     var divclass = $("#filterclass").val();
                     $.ajax({
-                        url: '<?php echo base_url(); ?>index.php?admin/getassignment/allassignment',
+                        url: '<?php echo base_url(); ?>index.php?professor/getassignment/allassignment',
                         type: 'post',
                         data:{'degree':degree,"course":course,"batch":batch,"semester":semester,'divclass':divclass},
                         success: function (content) {
@@ -492,7 +492,7 @@
 		function saveToDatabase(editableObj,column,id) {
 			$(editableObj).css("background","#FFF url(loaderIcon.gif) no-repeat right");
 			$.ajax({
-				url: "<?php echo base_url().'admin/savedata/assignment_manager/assign_id' ?>",
+				url: "<?php echo base_url().'professor/savedata/assignment_manager/assign_id' ?>",
 				type: "POST",
 				data:'column='+column+'&editval='+editableObj.innerHTML+'&id='+id,
 				success: function(data){                                
