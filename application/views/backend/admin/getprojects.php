@@ -10,6 +10,7 @@
                                                 <th><div>Branch</div></th>
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>
+                                                 <th><div><?php echo ucwords("class");?></div></th>
                                                  <th><div>File</div></th>
                                                 <th><div>Date of submission</div></th>											
                                                											
@@ -71,6 +72,18 @@
                                                         }
                                                         ?>
 
+                                                    </td>
+                                                     <td>
+                                                        <?php 
+                                                        foreach($class as $c)
+                                                        {
+                                                             if($c->class_id== $row->class_id)
+                                                            {
+                                                                echo $c->class_name;
+                                                            }
+                                                        }
+                                                            
+                                                        ?>
                                                     </td>
                                                     <td> <a href="<?php echo $row->pm_url; ?>" download=""><i class="fa fa-download"></i></a></td>
                                                     <td><?php echo date("F d, Y",strtotime($row->pm_dos)); ?></td>	

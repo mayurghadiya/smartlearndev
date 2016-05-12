@@ -41845,3 +41845,10941 @@ INFO - 2016-05-12 16:03:33 --> File loaded: /opt/lampp/htdocs/smartlearndev/appl
 INFO - 2016-05-12 16:03:33 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/footer.php
 INFO - 2016-05-12 16:03:33 --> Final output sent to browser
 DEBUG - 2016-05-12 16:03:33 --> Total execution time: 0.1385
+INFO - 2016-05-12 16:07:21 --> Config Class Initialized
+INFO - 2016-05-12 16:07:21 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:07:21 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:07:21 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:07:21 --> URI Class Initialized
+INFO - 2016-05-12 16:07:21 --> Router Class Initialized
+INFO - 2016-05-12 16:07:21 --> Output Class Initialized
+INFO - 2016-05-12 16:07:21 --> Security Class Initialized
+DEBUG - 2016-05-12 16:07:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:07:21 --> Input Class Initialized
+INFO - 2016-05-12 16:07:21 --> Language Class Initialized
+INFO - 2016-05-12 16:07:21 --> Loader Class Initialized
+INFO - 2016-05-12 16:07:21 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:07:21 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:07:22 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:07:22 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:07:22 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:07:22 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:07:22 --> Pagination Class Initialized
+INFO - 2016-05-12 16:07:22 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:07:22 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:07:22 --> Email Class Initialized
+DEBUG - 2016-05-12 16:07:22 --> Upload Class Initialized
+INFO - 2016-05-12 16:07:22 --> Model Class Initialized
+INFO - 2016-05-12 16:07:22 --> Model Class Initialized
+INFO - 2016-05-12 16:07:22 --> Model Class Initialized
+INFO - 2016-05-12 16:07:22 --> Controller Class Initialized
+INFO - 2016-05-12 16:07:22 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:07:22 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:07:22 --> Model Class Initialized
+INFO - 2016-05-12 16:07:22 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:07:22 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:07:22 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:07:22 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/assignment.php
+INFO - 2016-05-12 16:07:22 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:07:22 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:07:22 --> Final output sent to browser
+DEBUG - 2016-05-12 16:07:22 --> Total execution time: 0.1062
+INFO - 2016-05-12 16:07:30 --> Config Class Initialized
+INFO - 2016-05-12 16:07:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:07:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:07:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:07:30 --> URI Class Initialized
+INFO - 2016-05-12 16:07:30 --> Router Class Initialized
+INFO - 2016-05-12 16:07:30 --> Output Class Initialized
+INFO - 2016-05-12 16:07:30 --> Security Class Initialized
+DEBUG - 2016-05-12 16:07:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:07:30 --> Input Class Initialized
+INFO - 2016-05-12 16:07:30 --> Language Class Initialized
+ERROR - 2016-05-12 16:07:30 --> 404 Page Not Found: Professor/studyresource
+INFO - 2016-05-12 16:16:07 --> Config Class Initialized
+INFO - 2016-05-12 16:16:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:16:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:16:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:16:07 --> URI Class Initialized
+INFO - 2016-05-12 16:16:07 --> Router Class Initialized
+INFO - 2016-05-12 16:16:07 --> Output Class Initialized
+INFO - 2016-05-12 16:16:07 --> Security Class Initialized
+DEBUG - 2016-05-12 16:16:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:16:07 --> Input Class Initialized
+INFO - 2016-05-12 16:16:07 --> Language Class Initialized
+INFO - 2016-05-12 16:16:07 --> Loader Class Initialized
+INFO - 2016-05-12 16:16:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:16:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:16:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:16:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:16:07 --> Pagination Class Initialized
+INFO - 2016-05-12 16:16:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:16:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:16:07 --> Email Class Initialized
+DEBUG - 2016-05-12 16:16:07 --> Upload Class Initialized
+INFO - 2016-05-12 16:16:07 --> Model Class Initialized
+INFO - 2016-05-12 16:16:07 --> Model Class Initialized
+INFO - 2016-05-12 16:16:07 --> Model Class Initialized
+INFO - 2016-05-12 16:16:07 --> Controller Class Initialized
+INFO - 2016-05-12 16:16:07 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:16:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:16:07 --> Model Class Initialized
+INFO - 2016-05-12 16:16:07 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:16:22 --> Config Class Initialized
+INFO - 2016-05-12 16:16:22 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:16:22 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:16:22 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:16:22 --> URI Class Initialized
+INFO - 2016-05-12 16:16:22 --> Router Class Initialized
+INFO - 2016-05-12 16:16:22 --> Output Class Initialized
+INFO - 2016-05-12 16:16:22 --> Security Class Initialized
+DEBUG - 2016-05-12 16:16:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:16:22 --> Input Class Initialized
+INFO - 2016-05-12 16:16:22 --> Language Class Initialized
+INFO - 2016-05-12 16:16:23 --> Loader Class Initialized
+INFO - 2016-05-12 16:16:23 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:16:23 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:16:23 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:16:23 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:16:23 --> Pagination Class Initialized
+INFO - 2016-05-12 16:16:23 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:16:23 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:16:23 --> Email Class Initialized
+DEBUG - 2016-05-12 16:16:23 --> Upload Class Initialized
+INFO - 2016-05-12 16:16:23 --> Model Class Initialized
+INFO - 2016-05-12 16:16:23 --> Model Class Initialized
+INFO - 2016-05-12 16:16:23 --> Model Class Initialized
+INFO - 2016-05-12 16:16:23 --> Controller Class Initialized
+INFO - 2016-05-12 16:16:23 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:16:23 --> Model Class Initialized
+INFO - 2016-05-12 16:16:23 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/header.php
+INFO - 2016-05-12 16:16:23 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/user_login.php
+INFO - 2016-05-12 16:16:23 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/footer.php
+INFO - 2016-05-12 16:16:23 --> Final output sent to browser
+DEBUG - 2016-05-12 16:16:23 --> Total execution time: 0.1015
+INFO - 2016-05-12 16:16:27 --> Config Class Initialized
+INFO - 2016-05-12 16:16:27 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:16:27 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:16:27 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:16:27 --> URI Class Initialized
+INFO - 2016-05-12 16:16:27 --> Router Class Initialized
+INFO - 2016-05-12 16:16:27 --> Output Class Initialized
+INFO - 2016-05-12 16:16:27 --> Security Class Initialized
+DEBUG - 2016-05-12 16:16:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:16:27 --> Input Class Initialized
+INFO - 2016-05-12 16:16:27 --> Language Class Initialized
+INFO - 2016-05-12 16:16:27 --> Loader Class Initialized
+INFO - 2016-05-12 16:16:27 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:16:27 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:16:27 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:16:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:16:27 --> Pagination Class Initialized
+INFO - 2016-05-12 16:16:27 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:16:27 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:16:27 --> Email Class Initialized
+DEBUG - 2016-05-12 16:16:27 --> Upload Class Initialized
+INFO - 2016-05-12 16:16:27 --> Model Class Initialized
+INFO - 2016-05-12 16:16:27 --> Model Class Initialized
+INFO - 2016-05-12 16:16:27 --> Model Class Initialized
+INFO - 2016-05-12 16:16:27 --> Controller Class Initialized
+INFO - 2016-05-12 16:16:27 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:16:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:16:27 --> Model Class Initialized
+INFO - 2016-05-12 16:16:27 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:17:11 --> Config Class Initialized
+INFO - 2016-05-12 16:17:11 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:17:11 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:17:11 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:17:11 --> URI Class Initialized
+INFO - 2016-05-12 16:17:11 --> Router Class Initialized
+INFO - 2016-05-12 16:17:11 --> Output Class Initialized
+INFO - 2016-05-12 16:17:11 --> Security Class Initialized
+DEBUG - 2016-05-12 16:17:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:17:11 --> Input Class Initialized
+INFO - 2016-05-12 16:17:11 --> Language Class Initialized
+INFO - 2016-05-12 16:17:11 --> Loader Class Initialized
+INFO - 2016-05-12 16:17:11 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:17:11 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:17:11 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:17:11 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:17:11 --> Pagination Class Initialized
+INFO - 2016-05-12 16:17:11 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:17:11 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:17:11 --> Email Class Initialized
+DEBUG - 2016-05-12 16:17:11 --> Upload Class Initialized
+INFO - 2016-05-12 16:17:11 --> Model Class Initialized
+INFO - 2016-05-12 16:17:11 --> Model Class Initialized
+INFO - 2016-05-12 16:17:11 --> Model Class Initialized
+INFO - 2016-05-12 16:17:11 --> Controller Class Initialized
+INFO - 2016-05-12 16:17:11 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:17:11 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:17:11 --> Model Class Initialized
+INFO - 2016-05-12 16:17:11 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:17:11 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:17:11 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:17:11 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:17:11 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:17:11 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:17:11 --> Final output sent to browser
+DEBUG - 2016-05-12 16:17:11 --> Total execution time: 0.1011
+INFO - 2016-05-12 16:20:24 --> Config Class Initialized
+INFO - 2016-05-12 16:20:24 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:24 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:24 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:24 --> URI Class Initialized
+INFO - 2016-05-12 16:20:24 --> Router Class Initialized
+INFO - 2016-05-12 16:20:24 --> Output Class Initialized
+INFO - 2016-05-12 16:20:24 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:24 --> Input Class Initialized
+INFO - 2016-05-12 16:20:24 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:24 --> 404 Page Not Found: Professor/assets
+ERROR - 2016-05-12 16:20:24 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 16:20:24 --> Config Class Initialized
+INFO - 2016-05-12 16:20:24 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:24 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:24 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:24 --> URI Class Initialized
+INFO - 2016-05-12 16:20:24 --> Router Class Initialized
+INFO - 2016-05-12 16:20:24 --> Output Class Initialized
+INFO - 2016-05-12 16:20:24 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:24 --> Input Class Initialized
+INFO - 2016-05-12 16:20:24 --> Language Class Initialized
+INFO - 2016-05-12 16:20:24 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:24 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:24 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:24 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:24 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:24 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:24 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:24 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:24 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:24 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:24 --> Model Class Initialized
+INFO - 2016-05-12 16:20:24 --> Model Class Initialized
+INFO - 2016-05-12 16:20:24 --> Model Class Initialized
+INFO - 2016-05-12 16:20:24 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:24 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:24 --> Model Class Initialized
+INFO - 2016-05-12 16:20:24 --> Model Class Initialized
+INFO - 2016-05-12 16:20:24 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:20:24 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:24 --> Total execution time: 0.1568
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+INFO - 2016-05-12 16:20:29 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:29 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:29 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:29 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:29 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:29 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:29 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:29 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:29 --> Model Class Initialized
+INFO - 2016-05-12 16:20:29 --> Model Class Initialized
+INFO - 2016-05-12 16:20:29 --> Model Class Initialized
+INFO - 2016-05-12 16:20:29 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:29 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:20:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:20:29 --> Model Class Initialized
+INFO - 2016-05-12 16:20:29 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:20:29 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:20:29 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:20:29 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/student.php
+INFO - 2016-05-12 16:20:29 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:20:29 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:20:29 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:29 --> Total execution time: 0.0704
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+ERROR - 2016-05-12 16:20:29 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> Config Class Initialized
+INFO - 2016-05-12 16:20:29 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:29 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> URI Class Initialized
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Router Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:29 --> Output Class Initialized
+INFO - 2016-05-12 16:20:29 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:29 --> Input Class Initialized
+INFO - 2016-05-12 16:20:29 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:29 --> 404 Page Not Found: Uploads/student_image
+INFO - 2016-05-12 16:20:32 --> Config Class Initialized
+INFO - 2016-05-12 16:20:32 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:32 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:32 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:32 --> URI Class Initialized
+INFO - 2016-05-12 16:20:32 --> Router Class Initialized
+INFO - 2016-05-12 16:20:32 --> Output Class Initialized
+INFO - 2016-05-12 16:20:32 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:32 --> Input Class Initialized
+INFO - 2016-05-12 16:20:32 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:32 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 16:20:32 --> Config Class Initialized
+INFO - 2016-05-12 16:20:32 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:32 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:32 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:32 --> URI Class Initialized
+INFO - 2016-05-12 16:20:32 --> Router Class Initialized
+INFO - 2016-05-12 16:20:32 --> Output Class Initialized
+INFO - 2016-05-12 16:20:32 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:32 --> Input Class Initialized
+INFO - 2016-05-12 16:20:32 --> Language Class Initialized
+INFO - 2016-05-12 16:20:32 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:32 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:32 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:32 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:32 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:32 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:32 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:32 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:32 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:32 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:32 --> Model Class Initialized
+INFO - 2016-05-12 16:20:32 --> Model Class Initialized
+INFO - 2016-05-12 16:20:32 --> Model Class Initialized
+INFO - 2016-05-12 16:20:32 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:32 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:32 --> Model Class Initialized
+INFO - 2016-05-12 16:20:32 --> Model Class Initialized
+INFO - 2016-05-12 16:20:32 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_student_detail.php
+INFO - 2016-05-12 16:20:32 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:32 --> Total execution time: 0.2338
+INFO - 2016-05-12 16:20:35 --> Config Class Initialized
+INFO - 2016-05-12 16:20:35 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:35 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:35 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:35 --> URI Class Initialized
+INFO - 2016-05-12 16:20:35 --> Router Class Initialized
+INFO - 2016-05-12 16:20:35 --> Output Class Initialized
+INFO - 2016-05-12 16:20:35 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:35 --> Input Class Initialized
+INFO - 2016-05-12 16:20:35 --> Language Class Initialized
+INFO - 2016-05-12 16:20:35 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:35 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:35 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:35 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:35 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:35 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:35 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:35 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:35 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:35 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:35 --> Model Class Initialized
+INFO - 2016-05-12 16:20:35 --> Model Class Initialized
+INFO - 2016-05-12 16:20:35 --> Model Class Initialized
+INFO - 2016-05-12 16:20:35 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:35 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:20:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:20:35 --> Model Class Initialized
+INFO - 2016-05-12 16:20:35 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:20:35 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:20:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:20:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/subject.php
+INFO - 2016-05-12 16:20:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:20:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:20:35 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:35 --> Total execution time: 0.0738
+INFO - 2016-05-12 16:20:50 --> Config Class Initialized
+INFO - 2016-05-12 16:20:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:50 --> URI Class Initialized
+INFO - 2016-05-12 16:20:50 --> Router Class Initialized
+INFO - 2016-05-12 16:20:50 --> Output Class Initialized
+INFO - 2016-05-12 16:20:50 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:50 --> Input Class Initialized
+INFO - 2016-05-12 16:20:50 --> Language Class Initialized
+INFO - 2016-05-12 16:20:50 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:50 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:50 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:50 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:50 --> Model Class Initialized
+INFO - 2016-05-12 16:20:50 --> Model Class Initialized
+INFO - 2016-05-12 16:20:50 --> Model Class Initialized
+INFO - 2016-05-12 16:20:50 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:50 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:50 --> Model Class Initialized
+INFO - 2016-05-12 16:20:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/header.php
+INFO - 2016-05-12 16:20:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/user_login.php
+INFO - 2016-05-12 16:20:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/footer.php
+INFO - 2016-05-12 16:20:50 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:50 --> Total execution time: 0.0688
+INFO - 2016-05-12 16:20:55 --> Config Class Initialized
+INFO - 2016-05-12 16:20:55 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:55 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:55 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:55 --> URI Class Initialized
+INFO - 2016-05-12 16:20:55 --> Router Class Initialized
+INFO - 2016-05-12 16:20:55 --> Output Class Initialized
+INFO - 2016-05-12 16:20:55 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:55 --> Input Class Initialized
+INFO - 2016-05-12 16:20:55 --> Language Class Initialized
+INFO - 2016-05-12 16:20:55 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:55 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:55 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:55 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:55 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:55 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:55 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:55 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:55 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:55 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:55 --> Model Class Initialized
+INFO - 2016-05-12 16:20:55 --> Model Class Initialized
+INFO - 2016-05-12 16:20:55 --> Model Class Initialized
+INFO - 2016-05-12 16:20:55 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:55 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:55 --> Model Class Initialized
+ERROR - 2016-05-12 16:20:56 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 16:20:56 --> Config Class Initialized
+INFO - 2016-05-12 16:20:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:56 --> URI Class Initialized
+INFO - 2016-05-12 16:20:56 --> Router Class Initialized
+INFO - 2016-05-12 16:20:56 --> Output Class Initialized
+INFO - 2016-05-12 16:20:56 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:56 --> Input Class Initialized
+INFO - 2016-05-12 16:20:56 --> Language Class Initialized
+INFO - 2016-05-12 16:20:56 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:56 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:56 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:56 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:56 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:56 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:56 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:56 --> Model Class Initialized
+INFO - 2016-05-12 16:20:56 --> Model Class Initialized
+INFO - 2016-05-12 16:20:56 --> Model Class Initialized
+INFO - 2016-05-12 16:20:56 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:56 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:56 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: report_chart_helper
+INFO - 2016-05-12 16:20:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 16:20:56 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:56 --> Total execution time: 0.3044
+INFO - 2016-05-12 16:20:56 --> Config Class Initialized
+INFO - 2016-05-12 16:20:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:56 --> URI Class Initialized
+INFO - 2016-05-12 16:20:56 --> Router Class Initialized
+INFO - 2016-05-12 16:20:56 --> Output Class Initialized
+INFO - 2016-05-12 16:20:56 --> Security Class Initialized
+INFO - 2016-05-12 16:20:56 --> Config Class Initialized
+INFO - 2016-05-12 16:20:56 --> Hooks Class Initialized
+INFO - 2016-05-12 16:20:56 --> Config Class Initialized
+INFO - 2016-05-12 16:20:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:56 --> URI Class Initialized
+INFO - 2016-05-12 16:20:56 --> Router Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:56 --> URI Class Initialized
+INFO - 2016-05-12 16:20:56 --> Router Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:56 --> Input Class Initialized
+INFO - 2016-05-12 16:20:56 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:56 --> 404 Page Not Found: Indexhtml/index
+INFO - 2016-05-12 16:20:56 --> Output Class Initialized
+INFO - 2016-05-12 16:20:56 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:56 --> Input Class Initialized
+INFO - 2016-05-12 16:20:56 --> Language Class Initialized
+INFO - 2016-05-12 16:20:56 --> Output Class Initialized
+INFO - 2016-05-12 16:20:56 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:56 --> Input Class Initialized
+INFO - 2016-05-12 16:20:56 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:56 --> 404 Page Not Found: Logopng/index
+INFO - 2016-05-12 16:20:56 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:56 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:56 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:56 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:56 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:56 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:56 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:56 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:56 --> Model Class Initialized
+INFO - 2016-05-12 16:20:56 --> Model Class Initialized
+INFO - 2016-05-12 16:20:56 --> Model Class Initialized
+INFO - 2016-05-12 16:20:56 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:56 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:56 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:20:56 --> Helper loaded: report_chart_helper
+INFO - 2016-05-12 16:20:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 16:20:57 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:57 --> Total execution time: 0.1994
+INFO - 2016-05-12 16:20:59 --> Config Class Initialized
+INFO - 2016-05-12 16:20:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:59 --> URI Class Initialized
+INFO - 2016-05-12 16:20:59 --> Router Class Initialized
+INFO - 2016-05-12 16:20:59 --> Output Class Initialized
+INFO - 2016-05-12 16:20:59 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:59 --> Input Class Initialized
+INFO - 2016-05-12 16:20:59 --> Language Class Initialized
+INFO - 2016-05-12 16:20:59 --> Loader Class Initialized
+INFO - 2016-05-12 16:20:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:20:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:20:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:20:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:20:59 --> Pagination Class Initialized
+INFO - 2016-05-12 16:20:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:20:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:20:59 --> Email Class Initialized
+DEBUG - 2016-05-12 16:20:59 --> Upload Class Initialized
+INFO - 2016-05-12 16:20:59 --> Model Class Initialized
+INFO - 2016-05-12 16:20:59 --> Model Class Initialized
+INFO - 2016-05-12 16:20:59 --> Model Class Initialized
+INFO - 2016-05-12 16:20:59 --> Controller Class Initialized
+INFO - 2016-05-12 16:20:59 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:20:59 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:20:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 16:20:59 --> Final output sent to browser
+DEBUG - 2016-05-12 16:20:59 --> Total execution time: 0.1062
+INFO - 2016-05-12 16:20:59 --> Config Class Initialized
+INFO - 2016-05-12 16:20:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:20:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:20:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:20:59 --> URI Class Initialized
+INFO - 2016-05-12 16:20:59 --> Router Class Initialized
+INFO - 2016-05-12 16:20:59 --> Output Class Initialized
+INFO - 2016-05-12 16:20:59 --> Security Class Initialized
+DEBUG - 2016-05-12 16:20:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:20:59 --> Input Class Initialized
+INFO - 2016-05-12 16:20:59 --> Language Class Initialized
+ERROR - 2016-05-12 16:20:59 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 16:21:01 --> Config Class Initialized
+INFO - 2016-05-12 16:21:01 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:21:01 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:01 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:01 --> URI Class Initialized
+INFO - 2016-05-12 16:21:01 --> Router Class Initialized
+INFO - 2016-05-12 16:21:01 --> Output Class Initialized
+INFO - 2016-05-12 16:21:01 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:01 --> Input Class Initialized
+INFO - 2016-05-12 16:21:01 --> Language Class Initialized
+INFO - 2016-05-12 16:21:01 --> Loader Class Initialized
+INFO - 2016-05-12 16:21:01 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:21:01 --> Config Class Initialized
+INFO - 2016-05-12 16:21:01 --> Hooks Class Initialized
+INFO - 2016-05-12 16:21:01 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: date_format_helper
+DEBUG - 2016-05-12 16:21:01 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:01 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:01 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:21:01 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:21:01 --> URI Class Initialized
+INFO - 2016-05-12 16:21:01 --> Router Class Initialized
+INFO - 2016-05-12 16:21:01 --> Output Class Initialized
+INFO - 2016-05-12 16:21:01 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:01 --> Input Class Initialized
+INFO - 2016-05-12 16:21:01 --> Language Class Initialized
+INFO - 2016-05-12 16:21:01 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:21:01 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:21:01 --> Pagination Class Initialized
+INFO - 2016-05-12 16:21:01 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:21:01 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:21:01 --> Email Class Initialized
+DEBUG - 2016-05-12 16:21:01 --> Upload Class Initialized
+INFO - 2016-05-12 16:21:01 --> Model Class Initialized
+INFO - 2016-05-12 16:21:01 --> Model Class Initialized
+INFO - 2016-05-12 16:21:01 --> Model Class Initialized
+INFO - 2016-05-12 16:21:01 --> Controller Class Initialized
+INFO - 2016-05-12 16:21:01 --> Session: Class initialized using 'database' driver.
+ERROR - 2016-05-12 16:21:01 --> 404 Page Not Found: Admin/assets
+INFO - 2016-05-12 16:21:01 --> Model Class Initialized
+INFO - 2016-05-12 16:21:01 --> Model Class Initialized
+INFO - 2016-05-12 16:21:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/modal_edit_degree.php
+INFO - 2016-05-12 16:21:01 --> Final output sent to browser
+DEBUG - 2016-05-12 16:21:01 --> Total execution time: 0.1034
+INFO - 2016-05-12 16:21:10 --> Config Class Initialized
+INFO - 2016-05-12 16:21:10 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:21:10 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:10 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:10 --> URI Class Initialized
+INFO - 2016-05-12 16:21:10 --> Router Class Initialized
+INFO - 2016-05-12 16:21:10 --> Output Class Initialized
+INFO - 2016-05-12 16:21:10 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:10 --> Input Class Initialized
+INFO - 2016-05-12 16:21:10 --> Language Class Initialized
+INFO - 2016-05-12 16:21:10 --> Loader Class Initialized
+INFO - 2016-05-12 16:21:10 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:21:10 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:21:10 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:21:10 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:21:10 --> Pagination Class Initialized
+INFO - 2016-05-12 16:21:10 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:21:10 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:21:10 --> Email Class Initialized
+DEBUG - 2016-05-12 16:21:10 --> Upload Class Initialized
+INFO - 2016-05-12 16:21:10 --> Model Class Initialized
+INFO - 2016-05-12 16:21:10 --> Model Class Initialized
+INFO - 2016-05-12 16:21:10 --> Model Class Initialized
+INFO - 2016-05-12 16:21:10 --> Controller Class Initialized
+INFO - 2016-05-12 16:21:10 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:21:10 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:21:10 --> Model Class Initialized
+INFO - 2016-05-12 16:21:10 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:21:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:21:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/syllabus.php
+INFO - 2016-05-12 16:21:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:21:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:21:10 --> Final output sent to browser
+DEBUG - 2016-05-12 16:21:10 --> Total execution time: 0.0773
+INFO - 2016-05-12 16:21:12 --> Config Class Initialized
+INFO - 2016-05-12 16:21:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:21:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:12 --> URI Class Initialized
+INFO - 2016-05-12 16:21:12 --> Router Class Initialized
+INFO - 2016-05-12 16:21:12 --> Output Class Initialized
+INFO - 2016-05-12 16:21:12 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:12 --> Input Class Initialized
+INFO - 2016-05-12 16:21:12 --> Language Class Initialized
+ERROR - 2016-05-12 16:21:12 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 16:21:12 --> Config Class Initialized
+INFO - 2016-05-12 16:21:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:21:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:12 --> URI Class Initialized
+INFO - 2016-05-12 16:21:12 --> Router Class Initialized
+INFO - 2016-05-12 16:21:12 --> Output Class Initialized
+INFO - 2016-05-12 16:21:12 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:12 --> Input Class Initialized
+INFO - 2016-05-12 16:21:12 --> Language Class Initialized
+INFO - 2016-05-12 16:21:12 --> Loader Class Initialized
+INFO - 2016-05-12 16:21:12 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:21:12 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:21:12 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:21:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:21:12 --> Pagination Class Initialized
+INFO - 2016-05-12 16:21:12 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:21:12 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:21:12 --> Email Class Initialized
+DEBUG - 2016-05-12 16:21:12 --> Upload Class Initialized
+INFO - 2016-05-12 16:21:12 --> Model Class Initialized
+INFO - 2016-05-12 16:21:12 --> Model Class Initialized
+INFO - 2016-05-12 16:21:12 --> Model Class Initialized
+INFO - 2016-05-12 16:21:12 --> Controller Class Initialized
+INFO - 2016-05-12 16:21:12 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:21:12 --> Model Class Initialized
+INFO - 2016-05-12 16:21:12 --> Model Class Initialized
+INFO - 2016-05-12 16:21:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_syllabus.php
+INFO - 2016-05-12 16:21:12 --> Final output sent to browser
+DEBUG - 2016-05-12 16:21:12 --> Total execution time: 0.1156
+INFO - 2016-05-12 16:21:15 --> Config Class Initialized
+INFO - 2016-05-12 16:21:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:21:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:15 --> URI Class Initialized
+INFO - 2016-05-12 16:21:15 --> Router Class Initialized
+INFO - 2016-05-12 16:21:15 --> Output Class Initialized
+INFO - 2016-05-12 16:21:15 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:15 --> Input Class Initialized
+INFO - 2016-05-12 16:21:15 --> Language Class Initialized
+ERROR - 2016-05-12 16:21:15 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 16:21:15 --> Config Class Initialized
+INFO - 2016-05-12 16:21:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:21:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:21:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:21:15 --> URI Class Initialized
+INFO - 2016-05-12 16:21:15 --> Router Class Initialized
+INFO - 2016-05-12 16:21:15 --> Output Class Initialized
+INFO - 2016-05-12 16:21:15 --> Security Class Initialized
+DEBUG - 2016-05-12 16:21:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:21:15 --> Input Class Initialized
+INFO - 2016-05-12 16:21:15 --> Language Class Initialized
+INFO - 2016-05-12 16:21:15 --> Loader Class Initialized
+INFO - 2016-05-12 16:21:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:21:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:21:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:21:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:21:15 --> Pagination Class Initialized
+INFO - 2016-05-12 16:21:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:21:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:21:15 --> Email Class Initialized
+DEBUG - 2016-05-12 16:21:15 --> Upload Class Initialized
+INFO - 2016-05-12 16:21:15 --> Model Class Initialized
+INFO - 2016-05-12 16:21:15 --> Model Class Initialized
+INFO - 2016-05-12 16:21:15 --> Model Class Initialized
+INFO - 2016-05-12 16:21:15 --> Controller Class Initialized
+INFO - 2016-05-12 16:21:15 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:21:15 --> Model Class Initialized
+INFO - 2016-05-12 16:21:15 --> Model Class Initialized
+INFO - 2016-05-12 16:21:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addsyllabus.php
+INFO - 2016-05-12 16:21:15 --> Final output sent to browser
+DEBUG - 2016-05-12 16:21:15 --> Total execution time: 0.0508
+INFO - 2016-05-12 16:33:37 --> Config Class Initialized
+INFO - 2016-05-12 16:33:37 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:33:37 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:33:37 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:33:37 --> URI Class Initialized
+INFO - 2016-05-12 16:33:37 --> Router Class Initialized
+INFO - 2016-05-12 16:33:37 --> Output Class Initialized
+INFO - 2016-05-12 16:33:37 --> Security Class Initialized
+DEBUG - 2016-05-12 16:33:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:33:37 --> Input Class Initialized
+INFO - 2016-05-12 16:33:37 --> Language Class Initialized
+INFO - 2016-05-12 16:33:37 --> Loader Class Initialized
+INFO - 2016-05-12 16:33:37 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:33:37 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:33:37 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:33:37 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:33:37 --> Pagination Class Initialized
+INFO - 2016-05-12 16:33:37 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:33:37 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:33:37 --> Email Class Initialized
+DEBUG - 2016-05-12 16:33:37 --> Upload Class Initialized
+INFO - 2016-05-12 16:33:37 --> Model Class Initialized
+INFO - 2016-05-12 16:33:37 --> Model Class Initialized
+INFO - 2016-05-12 16:33:37 --> Model Class Initialized
+INFO - 2016-05-12 16:33:37 --> Controller Class Initialized
+INFO - 2016-05-12 16:33:37 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:33:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:33:37 --> Model Class Initialized
+INFO - 2016-05-12 16:33:37 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:33:37 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:33:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:33:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:33:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:33:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:33:37 --> Final output sent to browser
+DEBUG - 2016-05-12 16:33:37 --> Total execution time: 0.0457
+INFO - 2016-05-12 16:33:40 --> Config Class Initialized
+INFO - 2016-05-12 16:33:40 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:33:40 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:33:40 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:33:40 --> URI Class Initialized
+INFO - 2016-05-12 16:33:40 --> Router Class Initialized
+INFO - 2016-05-12 16:33:40 --> Output Class Initialized
+INFO - 2016-05-12 16:33:40 --> Security Class Initialized
+DEBUG - 2016-05-12 16:33:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:33:40 --> Input Class Initialized
+INFO - 2016-05-12 16:33:40 --> Language Class Initialized
+ERROR - 2016-05-12 16:33:40 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 16:33:40 --> Config Class Initialized
+INFO - 2016-05-12 16:33:40 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:33:40 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:33:40 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:33:40 --> URI Class Initialized
+INFO - 2016-05-12 16:33:40 --> Router Class Initialized
+INFO - 2016-05-12 16:33:40 --> Output Class Initialized
+INFO - 2016-05-12 16:33:40 --> Security Class Initialized
+DEBUG - 2016-05-12 16:33:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:33:40 --> Input Class Initialized
+INFO - 2016-05-12 16:33:40 --> Language Class Initialized
+INFO - 2016-05-12 16:33:40 --> Loader Class Initialized
+INFO - 2016-05-12 16:33:40 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:33:40 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:33:40 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:33:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:33:40 --> Pagination Class Initialized
+INFO - 2016-05-12 16:33:40 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:33:40 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:33:40 --> Email Class Initialized
+DEBUG - 2016-05-12 16:33:40 --> Upload Class Initialized
+INFO - 2016-05-12 16:33:40 --> Model Class Initialized
+INFO - 2016-05-12 16:33:40 --> Model Class Initialized
+INFO - 2016-05-12 16:33:40 --> Model Class Initialized
+INFO - 2016-05-12 16:33:40 --> Controller Class Initialized
+INFO - 2016-05-12 16:33:40 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:33:40 --> Model Class Initialized
+INFO - 2016-05-12 16:33:40 --> Model Class Initialized
+INFO - 2016-05-12 16:33:40 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addstudyresource.php
+INFO - 2016-05-12 16:33:40 --> Final output sent to browser
+DEBUG - 2016-05-12 16:33:40 --> Total execution time: 0.0497
+INFO - 2016-05-12 16:41:58 --> Config Class Initialized
+INFO - 2016-05-12 16:41:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:41:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:41:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:41:58 --> URI Class Initialized
+INFO - 2016-05-12 16:41:58 --> Router Class Initialized
+INFO - 2016-05-12 16:41:58 --> Output Class Initialized
+INFO - 2016-05-12 16:41:58 --> Security Class Initialized
+DEBUG - 2016-05-12 16:41:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:41:58 --> Input Class Initialized
+INFO - 2016-05-12 16:41:58 --> Language Class Initialized
+INFO - 2016-05-12 16:41:58 --> Loader Class Initialized
+INFO - 2016-05-12 16:41:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:41:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:41:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:41:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:41:58 --> Pagination Class Initialized
+INFO - 2016-05-12 16:41:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:41:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:41:58 --> Email Class Initialized
+DEBUG - 2016-05-12 16:41:58 --> Upload Class Initialized
+INFO - 2016-05-12 16:41:58 --> Model Class Initialized
+INFO - 2016-05-12 16:41:58 --> Model Class Initialized
+INFO - 2016-05-12 16:41:58 --> Model Class Initialized
+INFO - 2016-05-12 16:41:58 --> Controller Class Initialized
+INFO - 2016-05-12 16:41:58 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:41:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:41:58 --> Model Class Initialized
+INFO - 2016-05-12 16:41:58 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:41:58 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:41:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:41:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:41:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:41:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:41:58 --> Final output sent to browser
+DEBUG - 2016-05-12 16:41:58 --> Total execution time: 0.0467
+INFO - 2016-05-12 16:42:15 --> Config Class Initialized
+INFO - 2016-05-12 16:42:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:15 --> URI Class Initialized
+INFO - 2016-05-12 16:42:15 --> Router Class Initialized
+INFO - 2016-05-12 16:42:15 --> Output Class Initialized
+INFO - 2016-05-12 16:42:15 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:15 --> Input Class Initialized
+INFO - 2016-05-12 16:42:15 --> Language Class Initialized
+INFO - 2016-05-12 16:42:15 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:15 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:15 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:15 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:15 --> Model Class Initialized
+INFO - 2016-05-12 16:42:15 --> Model Class Initialized
+INFO - 2016-05-12 16:42:15 --> Model Class Initialized
+INFO - 2016-05-12 16:42:15 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:15 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:15 --> Model Class Initialized
+INFO - 2016-05-12 16:42:15 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:42:15 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:42:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:42:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:42:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:42:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:42:15 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:15 --> Total execution time: 0.0452
+INFO - 2016-05-12 16:42:29 --> Config Class Initialized
+INFO - 2016-05-12 16:42:29 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:30 --> URI Class Initialized
+INFO - 2016-05-12 16:42:30 --> Router Class Initialized
+INFO - 2016-05-12 16:42:30 --> Output Class Initialized
+INFO - 2016-05-12 16:42:30 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:30 --> Input Class Initialized
+INFO - 2016-05-12 16:42:30 --> Language Class Initialized
+ERROR - 2016-05-12 16:42:30 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 16:42:30 --> Config Class Initialized
+INFO - 2016-05-12 16:42:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:30 --> URI Class Initialized
+INFO - 2016-05-12 16:42:30 --> Router Class Initialized
+INFO - 2016-05-12 16:42:30 --> Output Class Initialized
+INFO - 2016-05-12 16:42:30 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:30 --> Input Class Initialized
+INFO - 2016-05-12 16:42:30 --> Language Class Initialized
+INFO - 2016-05-12 16:42:30 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:30 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:30 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:30 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:30 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:30 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:30 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:30 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:30 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:30 --> Model Class Initialized
+INFO - 2016-05-12 16:42:30 --> Model Class Initialized
+INFO - 2016-05-12 16:42:30 --> Model Class Initialized
+INFO - 2016-05-12 16:42:30 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:30 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:42:30 --> Model Class Initialized
+INFO - 2016-05-12 16:42:30 --> Model Class Initialized
+INFO - 2016-05-12 16:42:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addstudyresource.php
+INFO - 2016-05-12 16:42:30 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:30 --> Total execution time: 0.0550
+INFO - 2016-05-12 16:42:31 --> Config Class Initialized
+INFO - 2016-05-12 16:42:31 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:31 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:31 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:31 --> URI Class Initialized
+INFO - 2016-05-12 16:42:31 --> Router Class Initialized
+INFO - 2016-05-12 16:42:31 --> Output Class Initialized
+INFO - 2016-05-12 16:42:31 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:31 --> Input Class Initialized
+INFO - 2016-05-12 16:42:31 --> Language Class Initialized
+INFO - 2016-05-12 16:42:31 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:31 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:31 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:31 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:31 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:31 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:31 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:31 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:31 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:31 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:31 --> Model Class Initialized
+INFO - 2016-05-12 16:42:31 --> Model Class Initialized
+INFO - 2016-05-12 16:42:31 --> Model Class Initialized
+INFO - 2016-05-12 16:42:31 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:31 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:31 --> Model Class Initialized
+INFO - 2016-05-12 16:42:31 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:42:31 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:31 --> Total execution time: 0.0506
+INFO - 2016-05-12 16:42:36 --> Config Class Initialized
+INFO - 2016-05-12 16:42:36 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:36 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:36 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:36 --> URI Class Initialized
+INFO - 2016-05-12 16:42:36 --> Router Class Initialized
+INFO - 2016-05-12 16:42:36 --> Output Class Initialized
+INFO - 2016-05-12 16:42:36 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:36 --> Input Class Initialized
+INFO - 2016-05-12 16:42:36 --> Language Class Initialized
+INFO - 2016-05-12 16:42:36 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:36 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:36 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:36 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:36 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:36 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:36 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:36 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:36 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:36 --> Model Class Initialized
+INFO - 2016-05-12 16:42:36 --> Model Class Initialized
+INFO - 2016-05-12 16:42:36 --> Model Class Initialized
+INFO - 2016-05-12 16:42:36 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:36 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:36 --> Model Class Initialized
+INFO - 2016-05-12 16:42:36 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:42:36 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:36 --> Total execution time: 0.0464
+INFO - 2016-05-12 16:42:38 --> Config Class Initialized
+INFO - 2016-05-12 16:42:38 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:38 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:38 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:38 --> URI Class Initialized
+INFO - 2016-05-12 16:42:38 --> Router Class Initialized
+INFO - 2016-05-12 16:42:38 --> Output Class Initialized
+INFO - 2016-05-12 16:42:38 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:38 --> Input Class Initialized
+INFO - 2016-05-12 16:42:38 --> Language Class Initialized
+INFO - 2016-05-12 16:42:38 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:38 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:38 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:38 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:38 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:38 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:38 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:38 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:38 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:38 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:42:38 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:38 --> Total execution time: 0.0529
+INFO - 2016-05-12 16:42:38 --> Config Class Initialized
+INFO - 2016-05-12 16:42:38 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:38 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:38 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:38 --> URI Class Initialized
+INFO - 2016-05-12 16:42:38 --> Router Class Initialized
+INFO - 2016-05-12 16:42:38 --> Output Class Initialized
+INFO - 2016-05-12 16:42:38 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:38 --> Input Class Initialized
+INFO - 2016-05-12 16:42:38 --> Language Class Initialized
+INFO - 2016-05-12 16:42:38 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:38 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:38 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:38 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:38 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:38 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:38 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:38 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:38 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:38 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:38 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:38 --> Model Class Initialized
+INFO - 2016-05-12 16:42:38 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:42:38 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:38 --> Total execution time: 0.0772
+INFO - 2016-05-12 16:42:39 --> Config Class Initialized
+INFO - 2016-05-12 16:42:39 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:39 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:39 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:39 --> URI Class Initialized
+INFO - 2016-05-12 16:42:39 --> Router Class Initialized
+INFO - 2016-05-12 16:42:39 --> Output Class Initialized
+INFO - 2016-05-12 16:42:39 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:39 --> Input Class Initialized
+INFO - 2016-05-12 16:42:39 --> Language Class Initialized
+INFO - 2016-05-12 16:42:39 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:39 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:39 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:39 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:39 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:39 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:39 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:39 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:39 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:42:39 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:39 --> Total execution time: 0.0513
+INFO - 2016-05-12 16:42:39 --> Config Class Initialized
+INFO - 2016-05-12 16:42:39 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:39 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:39 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:39 --> URI Class Initialized
+INFO - 2016-05-12 16:42:39 --> Router Class Initialized
+INFO - 2016-05-12 16:42:39 --> Output Class Initialized
+INFO - 2016-05-12 16:42:39 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:39 --> Input Class Initialized
+INFO - 2016-05-12 16:42:39 --> Language Class Initialized
+INFO - 2016-05-12 16:42:39 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:39 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:39 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:39 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:39 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:39 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:39 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:39 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:39 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:39 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:39 --> Model Class Initialized
+INFO - 2016-05-12 16:42:39 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:42:39 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:39 --> Total execution time: 0.0460
+INFO - 2016-05-12 16:42:53 --> Config Class Initialized
+INFO - 2016-05-12 16:42:53 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:53 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:53 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:53 --> URI Class Initialized
+INFO - 2016-05-12 16:42:53 --> Router Class Initialized
+INFO - 2016-05-12 16:42:53 --> Output Class Initialized
+INFO - 2016-05-12 16:42:53 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:53 --> Input Class Initialized
+INFO - 2016-05-12 16:42:53 --> Language Class Initialized
+INFO - 2016-05-12 16:42:53 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:53 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:53 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:53 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:53 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:53 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:53 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:53 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:53 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:53 --> Model Class Initialized
+INFO - 2016-05-12 16:42:53 --> Model Class Initialized
+INFO - 2016-05-12 16:42:53 --> Model Class Initialized
+INFO - 2016-05-12 16:42:53 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:53 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:53 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:53 --> Model Class Initialized
+INFO - 2016-05-12 16:42:53 --> Helper loaded: notification_helper
+DEBUG - 2016-05-12 16:42:53 --> Upload class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:54 --> Config Class Initialized
+INFO - 2016-05-12 16:42:54 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:54 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:54 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:54 --> URI Class Initialized
+INFO - 2016-05-12 16:42:54 --> Router Class Initialized
+INFO - 2016-05-12 16:42:54 --> Output Class Initialized
+INFO - 2016-05-12 16:42:54 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:54 --> Input Class Initialized
+INFO - 2016-05-12 16:42:54 --> Language Class Initialized
+INFO - 2016-05-12 16:42:54 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:54 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:54 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:54 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:54 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:54 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:54 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:54 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:54 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:54 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:54 --> Model Class Initialized
+INFO - 2016-05-12 16:42:54 --> Model Class Initialized
+INFO - 2016-05-12 16:42:54 --> Model Class Initialized
+INFO - 2016-05-12 16:42:54 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:54 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:54 --> Model Class Initialized
+INFO - 2016-05-12 16:42:54 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:42:54 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:42:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:42:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:42:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:42:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:42:54 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:54 --> Total execution time: 0.0823
+INFO - 2016-05-12 16:42:55 --> Config Class Initialized
+INFO - 2016-05-12 16:42:55 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:42:55 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:42:55 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:42:55 --> URI Class Initialized
+INFO - 2016-05-12 16:42:55 --> Router Class Initialized
+INFO - 2016-05-12 16:42:55 --> Output Class Initialized
+INFO - 2016-05-12 16:42:55 --> Security Class Initialized
+DEBUG - 2016-05-12 16:42:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:42:55 --> Input Class Initialized
+INFO - 2016-05-12 16:42:55 --> Language Class Initialized
+INFO - 2016-05-12 16:42:55 --> Loader Class Initialized
+INFO - 2016-05-12 16:42:55 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:42:55 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:42:55 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:42:55 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:42:55 --> Pagination Class Initialized
+INFO - 2016-05-12 16:42:55 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:42:55 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:42:55 --> Email Class Initialized
+DEBUG - 2016-05-12 16:42:55 --> Upload Class Initialized
+INFO - 2016-05-12 16:42:55 --> Model Class Initialized
+INFO - 2016-05-12 16:42:55 --> Model Class Initialized
+INFO - 2016-05-12 16:42:55 --> Model Class Initialized
+INFO - 2016-05-12 16:42:55 --> Controller Class Initialized
+INFO - 2016-05-12 16:42:55 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:42:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:42:55 --> Model Class Initialized
+INFO - 2016-05-12 16:42:55 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:42:55 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:42:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:42:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:42:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:42:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:42:55 --> Final output sent to browser
+DEBUG - 2016-05-12 16:42:55 --> Total execution time: 0.0629
+INFO - 2016-05-12 16:43:01 --> Config Class Initialized
+INFO - 2016-05-12 16:43:01 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:01 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:01 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:01 --> URI Class Initialized
+INFO - 2016-05-12 16:43:01 --> Router Class Initialized
+INFO - 2016-05-12 16:43:01 --> Output Class Initialized
+INFO - 2016-05-12 16:43:01 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:01 --> Input Class Initialized
+INFO - 2016-05-12 16:43:01 --> Language Class Initialized
+INFO - 2016-05-12 16:43:01 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:01 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:01 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:01 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:01 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:01 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:01 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:01 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:01 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:01 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:01 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:43:01 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:43:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:43:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:43:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:43:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:43:01 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:01 --> Total execution time: 0.0589
+INFO - 2016-05-12 16:43:01 --> Config Class Initialized
+INFO - 2016-05-12 16:43:01 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:01 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:01 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:01 --> URI Class Initialized
+INFO - 2016-05-12 16:43:01 --> Router Class Initialized
+INFO - 2016-05-12 16:43:01 --> Output Class Initialized
+INFO - 2016-05-12 16:43:01 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:01 --> Input Class Initialized
+INFO - 2016-05-12 16:43:01 --> Language Class Initialized
+INFO - 2016-05-12 16:43:01 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:01 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:01 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:01 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:01 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:01 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:01 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:01 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:01 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:01 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:01 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> Model Class Initialized
+INFO - 2016-05-12 16:43:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:43:01 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:01 --> Total execution time: 0.0787
+INFO - 2016-05-12 16:43:09 --> Config Class Initialized
+INFO - 2016-05-12 16:43:09 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:09 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:09 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:09 --> URI Class Initialized
+INFO - 2016-05-12 16:43:09 --> Router Class Initialized
+INFO - 2016-05-12 16:43:09 --> Output Class Initialized
+INFO - 2016-05-12 16:43:09 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:09 --> Input Class Initialized
+INFO - 2016-05-12 16:43:09 --> Language Class Initialized
+INFO - 2016-05-12 16:43:09 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:09 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:09 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:09 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:09 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:09 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:09 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:09 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:09 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:09 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:09 --> Model Class Initialized
+INFO - 2016-05-12 16:43:09 --> Model Class Initialized
+INFO - 2016-05-12 16:43:09 --> Model Class Initialized
+INFO - 2016-05-12 16:43:09 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:09 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:09 --> Model Class Initialized
+INFO - 2016-05-12 16:43:09 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:43:09 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 16:43:10 --> Config Class Initialized
+INFO - 2016-05-12 16:43:10 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:10 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:10 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:10 --> URI Class Initialized
+INFO - 2016-05-12 16:43:10 --> Router Class Initialized
+INFO - 2016-05-12 16:43:10 --> Output Class Initialized
+INFO - 2016-05-12 16:43:10 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:10 --> Input Class Initialized
+INFO - 2016-05-12 16:43:10 --> Language Class Initialized
+INFO - 2016-05-12 16:43:10 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:10 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:10 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:10 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:10 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:10 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:10 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:10 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:10 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:10 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:10 --> Model Class Initialized
+INFO - 2016-05-12 16:43:10 --> Model Class Initialized
+INFO - 2016-05-12 16:43:10 --> Model Class Initialized
+INFO - 2016-05-12 16:43:10 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:10 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:10 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:10 --> Model Class Initialized
+INFO - 2016-05-12 16:43:10 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:43:10 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:43:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:43:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:43:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:43:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:43:10 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:10 --> Total execution time: 0.0616
+INFO - 2016-05-12 16:43:14 --> Config Class Initialized
+INFO - 2016-05-12 16:43:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:14 --> URI Class Initialized
+INFO - 2016-05-12 16:43:14 --> Router Class Initialized
+INFO - 2016-05-12 16:43:14 --> Output Class Initialized
+INFO - 2016-05-12 16:43:14 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:14 --> Input Class Initialized
+INFO - 2016-05-12 16:43:14 --> Language Class Initialized
+INFO - 2016-05-12 16:43:14 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:14 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:14 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:14 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:14 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:43:14 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:43:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:43:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:43:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:43:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:43:14 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:14 --> Total execution time: 0.0835
+INFO - 2016-05-12 16:43:14 --> Config Class Initialized
+INFO - 2016-05-12 16:43:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:14 --> URI Class Initialized
+INFO - 2016-05-12 16:43:14 --> Router Class Initialized
+INFO - 2016-05-12 16:43:14 --> Output Class Initialized
+INFO - 2016-05-12 16:43:14 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:14 --> Input Class Initialized
+INFO - 2016-05-12 16:43:14 --> Language Class Initialized
+INFO - 2016-05-12 16:43:14 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:14 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:14 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:14 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:14 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> Model Class Initialized
+INFO - 2016-05-12 16:43:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:43:14 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:14 --> Total execution time: 0.0502
+INFO - 2016-05-12 16:43:15 --> Config Class Initialized
+INFO - 2016-05-12 16:43:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:15 --> URI Class Initialized
+INFO - 2016-05-12 16:43:15 --> Router Class Initialized
+INFO - 2016-05-12 16:43:15 --> Output Class Initialized
+INFO - 2016-05-12 16:43:15 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:15 --> Input Class Initialized
+INFO - 2016-05-12 16:43:15 --> Language Class Initialized
+INFO - 2016-05-12 16:43:15 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:15 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:15 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:15 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:15 --> Model Class Initialized
+INFO - 2016-05-12 16:43:15 --> Model Class Initialized
+INFO - 2016-05-12 16:43:15 --> Model Class Initialized
+INFO - 2016-05-12 16:43:15 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:15 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:15 --> Model Class Initialized
+INFO - 2016-05-12 16:43:15 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:43:16 --> Config Class Initialized
+INFO - 2016-05-12 16:43:16 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:16 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:16 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:16 --> URI Class Initialized
+INFO - 2016-05-12 16:43:16 --> Router Class Initialized
+INFO - 2016-05-12 16:43:16 --> Output Class Initialized
+INFO - 2016-05-12 16:43:16 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:16 --> Input Class Initialized
+INFO - 2016-05-12 16:43:16 --> Language Class Initialized
+INFO - 2016-05-12 16:43:16 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:16 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:16 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:16 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:16 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:16 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:16 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:16 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:16 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:16 --> Model Class Initialized
+INFO - 2016-05-12 16:43:16 --> Model Class Initialized
+INFO - 2016-05-12 16:43:16 --> Model Class Initialized
+INFO - 2016-05-12 16:43:16 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:16 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:16 --> Model Class Initialized
+INFO - 2016-05-12 16:43:16 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:43:16 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:43:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:43:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:43:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:43:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:43:16 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:16 --> Total execution time: 0.0597
+INFO - 2016-05-12 16:43:21 --> Config Class Initialized
+INFO - 2016-05-12 16:43:21 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:21 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:21 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:21 --> URI Class Initialized
+INFO - 2016-05-12 16:43:21 --> Router Class Initialized
+INFO - 2016-05-12 16:43:21 --> Output Class Initialized
+INFO - 2016-05-12 16:43:21 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:21 --> Input Class Initialized
+INFO - 2016-05-12 16:43:21 --> Language Class Initialized
+INFO - 2016-05-12 16:43:21 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:21 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:21 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:21 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:21 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:21 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:21 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:21 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:21 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:21 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:21 --> Model Class Initialized
+INFO - 2016-05-12 16:43:21 --> Model Class Initialized
+INFO - 2016-05-12 16:43:21 --> Model Class Initialized
+INFO - 2016-05-12 16:43:21 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:21 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:43:25 --> Config Class Initialized
+INFO - 2016-05-12 16:43:25 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:25 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:25 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:25 --> URI Class Initialized
+INFO - 2016-05-12 16:43:25 --> Router Class Initialized
+INFO - 2016-05-12 16:43:25 --> Output Class Initialized
+INFO - 2016-05-12 16:43:25 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:25 --> Input Class Initialized
+INFO - 2016-05-12 16:43:25 --> Language Class Initialized
+INFO - 2016-05-12 16:43:25 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:25 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:25 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:25 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:25 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:25 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:25 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:25 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:25 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:25 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:25 --> Model Class Initialized
+INFO - 2016-05-12 16:43:25 --> Model Class Initialized
+INFO - 2016-05-12 16:43:25 --> Model Class Initialized
+INFO - 2016-05-12 16:43:25 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:25 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:43:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:43:25 --> Model Class Initialized
+INFO - 2016-05-12 16:43:25 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:43:25 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:43:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:43:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/assignment.php
+INFO - 2016-05-12 16:43:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:43:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:43:25 --> Final output sent to browser
+DEBUG - 2016-05-12 16:43:25 --> Total execution time: 0.0509
+INFO - 2016-05-12 16:43:28 --> Config Class Initialized
+INFO - 2016-05-12 16:43:28 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:43:28 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:43:28 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:43:28 --> URI Class Initialized
+INFO - 2016-05-12 16:43:28 --> Router Class Initialized
+INFO - 2016-05-12 16:43:28 --> Output Class Initialized
+INFO - 2016-05-12 16:43:28 --> Security Class Initialized
+DEBUG - 2016-05-12 16:43:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:43:28 --> Input Class Initialized
+INFO - 2016-05-12 16:43:28 --> Language Class Initialized
+INFO - 2016-05-12 16:43:28 --> Loader Class Initialized
+INFO - 2016-05-12 16:43:28 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:43:28 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:43:28 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:43:28 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:43:28 --> Pagination Class Initialized
+INFO - 2016-05-12 16:43:28 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:43:28 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:43:28 --> Email Class Initialized
+DEBUG - 2016-05-12 16:43:28 --> Upload Class Initialized
+INFO - 2016-05-12 16:43:28 --> Model Class Initialized
+INFO - 2016-05-12 16:43:28 --> Model Class Initialized
+INFO - 2016-05-12 16:43:28 --> Model Class Initialized
+INFO - 2016-05-12 16:43:28 --> Controller Class Initialized
+INFO - 2016-05-12 16:43:28 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:46:00 --> Config Class Initialized
+INFO - 2016-05-12 16:46:00 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:46:00 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:46:00 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:46:00 --> URI Class Initialized
+INFO - 2016-05-12 16:46:00 --> Router Class Initialized
+INFO - 2016-05-12 16:46:00 --> Output Class Initialized
+INFO - 2016-05-12 16:46:00 --> Security Class Initialized
+DEBUG - 2016-05-12 16:46:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:46:00 --> Input Class Initialized
+INFO - 2016-05-12 16:46:00 --> Language Class Initialized
+INFO - 2016-05-12 16:46:00 --> Loader Class Initialized
+INFO - 2016-05-12 16:46:00 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:46:00 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:46:00 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:46:00 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:46:00 --> Pagination Class Initialized
+INFO - 2016-05-12 16:46:00 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:46:00 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:46:00 --> Email Class Initialized
+DEBUG - 2016-05-12 16:46:00 --> Upload Class Initialized
+INFO - 2016-05-12 16:46:00 --> Model Class Initialized
+INFO - 2016-05-12 16:46:00 --> Model Class Initialized
+INFO - 2016-05-12 16:46:00 --> Model Class Initialized
+INFO - 2016-05-12 16:46:00 --> Controller Class Initialized
+INFO - 2016-05-12 16:46:00 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:46:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:46:00 --> Model Class Initialized
+INFO - 2016-05-12 16:46:00 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:46:00 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:46:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:46:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/assignment.php
+INFO - 2016-05-12 16:46:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:46:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:46:00 --> Final output sent to browser
+DEBUG - 2016-05-12 16:46:00 --> Total execution time: 0.0456
+INFO - 2016-05-12 16:46:03 --> Config Class Initialized
+INFO - 2016-05-12 16:46:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:46:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:46:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:46:03 --> URI Class Initialized
+INFO - 2016-05-12 16:46:03 --> Router Class Initialized
+INFO - 2016-05-12 16:46:03 --> Output Class Initialized
+INFO - 2016-05-12 16:46:03 --> Security Class Initialized
+DEBUG - 2016-05-12 16:46:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:46:03 --> Input Class Initialized
+INFO - 2016-05-12 16:46:03 --> Language Class Initialized
+INFO - 2016-05-12 16:46:03 --> Loader Class Initialized
+INFO - 2016-05-12 16:46:03 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:46:03 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:46:03 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:46:03 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:46:03 --> Pagination Class Initialized
+INFO - 2016-05-12 16:46:03 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:46:03 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:46:03 --> Email Class Initialized
+DEBUG - 2016-05-12 16:46:03 --> Upload Class Initialized
+INFO - 2016-05-12 16:46:03 --> Model Class Initialized
+INFO - 2016-05-12 16:46:03 --> Model Class Initialized
+INFO - 2016-05-12 16:46:03 --> Model Class Initialized
+INFO - 2016-05-12 16:46:03 --> Controller Class Initialized
+INFO - 2016-05-12 16:46:03 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:46:03 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:46:03 --> Model Class Initialized
+INFO - 2016-05-12 16:46:03 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:46:03 --> Final output sent to browser
+DEBUG - 2016-05-12 16:46:03 --> Total execution time: 0.0447
+INFO - 2016-05-12 16:46:04 --> Config Class Initialized
+INFO - 2016-05-12 16:46:04 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:46:04 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:46:04 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:46:04 --> URI Class Initialized
+INFO - 2016-05-12 16:46:04 --> Router Class Initialized
+INFO - 2016-05-12 16:46:04 --> Output Class Initialized
+INFO - 2016-05-12 16:46:04 --> Security Class Initialized
+DEBUG - 2016-05-12 16:46:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:46:04 --> Input Class Initialized
+INFO - 2016-05-12 16:46:04 --> Language Class Initialized
+INFO - 2016-05-12 16:46:04 --> Loader Class Initialized
+INFO - 2016-05-12 16:46:04 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:46:04 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:46:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:46:04 --> Pagination Class Initialized
+INFO - 2016-05-12 16:46:04 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:46:04 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:46:04 --> Email Class Initialized
+DEBUG - 2016-05-12 16:46:04 --> Upload Class Initialized
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Controller Class Initialized
+INFO - 2016-05-12 16:46:04 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:46:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:46:04 --> Final output sent to browser
+DEBUG - 2016-05-12 16:46:04 --> Total execution time: 0.0313
+INFO - 2016-05-12 16:46:04 --> Config Class Initialized
+INFO - 2016-05-12 16:46:04 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:46:04 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:46:04 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:46:04 --> URI Class Initialized
+INFO - 2016-05-12 16:46:04 --> Router Class Initialized
+INFO - 2016-05-12 16:46:04 --> Output Class Initialized
+INFO - 2016-05-12 16:46:04 --> Security Class Initialized
+DEBUG - 2016-05-12 16:46:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:46:04 --> Input Class Initialized
+INFO - 2016-05-12 16:46:04 --> Language Class Initialized
+INFO - 2016-05-12 16:46:04 --> Loader Class Initialized
+INFO - 2016-05-12 16:46:04 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:46:04 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:46:04 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:46:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:46:04 --> Pagination Class Initialized
+INFO - 2016-05-12 16:46:04 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:46:04 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:46:04 --> Email Class Initialized
+DEBUG - 2016-05-12 16:46:04 --> Upload Class Initialized
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Controller Class Initialized
+INFO - 2016-05-12 16:46:04 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:46:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:46:04 --> Model Class Initialized
+INFO - 2016-05-12 16:46:04 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:46:04 --> Final output sent to browser
+DEBUG - 2016-05-12 16:46:04 --> Total execution time: 0.0373
+INFO - 2016-05-12 16:46:08 --> Config Class Initialized
+INFO - 2016-05-12 16:46:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:46:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:46:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:46:08 --> URI Class Initialized
+INFO - 2016-05-12 16:46:08 --> Router Class Initialized
+INFO - 2016-05-12 16:46:08 --> Output Class Initialized
+INFO - 2016-05-12 16:46:08 --> Security Class Initialized
+DEBUG - 2016-05-12 16:46:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:46:08 --> Input Class Initialized
+INFO - 2016-05-12 16:46:08 --> Language Class Initialized
+INFO - 2016-05-12 16:46:08 --> Loader Class Initialized
+INFO - 2016-05-12 16:46:08 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:46:08 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:46:08 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:46:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:46:08 --> Pagination Class Initialized
+INFO - 2016-05-12 16:46:08 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:46:08 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:46:08 --> Email Class Initialized
+DEBUG - 2016-05-12 16:46:08 --> Upload Class Initialized
+INFO - 2016-05-12 16:46:08 --> Model Class Initialized
+INFO - 2016-05-12 16:46:08 --> Model Class Initialized
+INFO - 2016-05-12 16:46:08 --> Model Class Initialized
+INFO - 2016-05-12 16:46:08 --> Controller Class Initialized
+INFO - 2016-05-12 16:46:08 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:46:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:46:08 --> Model Class Initialized
+INFO - 2016-05-12 16:46:08 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:46:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getassignment.php
+INFO - 2016-05-12 16:46:08 --> Final output sent to browser
+DEBUG - 2016-05-12 16:46:08 --> Total execution time: 0.0527
+INFO - 2016-05-12 16:48:07 --> Config Class Initialized
+INFO - 2016-05-12 16:48:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:07 --> URI Class Initialized
+INFO - 2016-05-12 16:48:07 --> Router Class Initialized
+INFO - 2016-05-12 16:48:07 --> Output Class Initialized
+INFO - 2016-05-12 16:48:07 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:07 --> Input Class Initialized
+INFO - 2016-05-12 16:48:07 --> Language Class Initialized
+INFO - 2016-05-12 16:48:07 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:07 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:07 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:07 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:07 --> Model Class Initialized
+INFO - 2016-05-12 16:48:07 --> Model Class Initialized
+INFO - 2016-05-12 16:48:07 --> Model Class Initialized
+INFO - 2016-05-12 16:48:07 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:07 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:07 --> Model Class Initialized
+INFO - 2016-05-12 16:48:07 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:48:07 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:48:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:48:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/assignment.php
+INFO - 2016-05-12 16:48:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:48:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:48:07 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:07 --> Total execution time: 0.0414
+INFO - 2016-05-12 16:48:14 --> Config Class Initialized
+INFO - 2016-05-12 16:48:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:14 --> URI Class Initialized
+INFO - 2016-05-12 16:48:14 --> Router Class Initialized
+INFO - 2016-05-12 16:48:14 --> Output Class Initialized
+INFO - 2016-05-12 16:48:14 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:14 --> Input Class Initialized
+INFO - 2016-05-12 16:48:14 --> Language Class Initialized
+INFO - 2016-05-12 16:48:14 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:14 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:14 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:14 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:14 --> Model Class Initialized
+INFO - 2016-05-12 16:48:14 --> Model Class Initialized
+INFO - 2016-05-12 16:48:14 --> Model Class Initialized
+INFO - 2016-05-12 16:48:14 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:14 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:14 --> Model Class Initialized
+INFO - 2016-05-12 16:48:14 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:48:14 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:14 --> Total execution time: 0.0448
+INFO - 2016-05-12 16:48:15 --> Config Class Initialized
+INFO - 2016-05-12 16:48:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:15 --> URI Class Initialized
+INFO - 2016-05-12 16:48:15 --> Router Class Initialized
+INFO - 2016-05-12 16:48:15 --> Output Class Initialized
+INFO - 2016-05-12 16:48:15 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:15 --> Input Class Initialized
+INFO - 2016-05-12 16:48:15 --> Language Class Initialized
+INFO - 2016-05-12 16:48:15 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:15 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:15 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:15 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:15 --> Model Class Initialized
+INFO - 2016-05-12 16:48:15 --> Model Class Initialized
+INFO - 2016-05-12 16:48:15 --> Model Class Initialized
+INFO - 2016-05-12 16:48:15 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:15 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:15 --> Model Class Initialized
+INFO - 2016-05-12 16:48:15 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:48:15 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:15 --> Total execution time: 0.0467
+INFO - 2016-05-12 16:48:16 --> Config Class Initialized
+INFO - 2016-05-12 16:48:16 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:16 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:16 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:16 --> URI Class Initialized
+INFO - 2016-05-12 16:48:16 --> Router Class Initialized
+INFO - 2016-05-12 16:48:16 --> Output Class Initialized
+INFO - 2016-05-12 16:48:16 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:16 --> Input Class Initialized
+INFO - 2016-05-12 16:48:16 --> Language Class Initialized
+INFO - 2016-05-12 16:48:16 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:16 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:16 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:16 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:16 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:16 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:16 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:16 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:16 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:48:16 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:16 --> Total execution time: 0.0544
+INFO - 2016-05-12 16:48:16 --> Config Class Initialized
+INFO - 2016-05-12 16:48:16 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:16 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:16 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:16 --> URI Class Initialized
+INFO - 2016-05-12 16:48:16 --> Router Class Initialized
+INFO - 2016-05-12 16:48:16 --> Output Class Initialized
+INFO - 2016-05-12 16:48:16 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:16 --> Input Class Initialized
+INFO - 2016-05-12 16:48:16 --> Language Class Initialized
+INFO - 2016-05-12 16:48:16 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:16 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:16 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:16 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:16 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:16 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:16 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:16 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:16 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:16 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:16 --> Model Class Initialized
+INFO - 2016-05-12 16:48:16 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:48:16 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:16 --> Total execution time: 0.0532
+INFO - 2016-05-12 16:48:19 --> Config Class Initialized
+INFO - 2016-05-12 16:48:19 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:19 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:19 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:19 --> URI Class Initialized
+INFO - 2016-05-12 16:48:19 --> Router Class Initialized
+INFO - 2016-05-12 16:48:19 --> Output Class Initialized
+INFO - 2016-05-12 16:48:19 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:19 --> Input Class Initialized
+INFO - 2016-05-12 16:48:19 --> Language Class Initialized
+INFO - 2016-05-12 16:48:19 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:19 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:19 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:19 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:19 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:19 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:19 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:19 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:19 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:19 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:19 --> Model Class Initialized
+INFO - 2016-05-12 16:48:19 --> Model Class Initialized
+INFO - 2016-05-12 16:48:19 --> Model Class Initialized
+INFO - 2016-05-12 16:48:19 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:19 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:19 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:19 --> Model Class Initialized
+INFO - 2016-05-12 16:48:19 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:48:19 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getassignment.php
+INFO - 2016-05-12 16:48:19 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:19 --> Total execution time: 0.0402
+INFO - 2016-05-12 16:48:27 --> Config Class Initialized
+INFO - 2016-05-12 16:48:27 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:27 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:27 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:27 --> URI Class Initialized
+INFO - 2016-05-12 16:48:27 --> Router Class Initialized
+INFO - 2016-05-12 16:48:27 --> Output Class Initialized
+INFO - 2016-05-12 16:48:27 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:27 --> Input Class Initialized
+INFO - 2016-05-12 16:48:27 --> Language Class Initialized
+INFO - 2016-05-12 16:48:27 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:27 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:27 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:27 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:27 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:27 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:27 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:27 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:27 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:27 --> Model Class Initialized
+INFO - 2016-05-12 16:48:27 --> Model Class Initialized
+INFO - 2016-05-12 16:48:27 --> Model Class Initialized
+INFO - 2016-05-12 16:48:27 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:27 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:27 --> Model Class Initialized
+INFO - 2016-05-12 16:48:27 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:48:27 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:48:28 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:48:28 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/assignment.php
+INFO - 2016-05-12 16:48:28 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:48:28 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:48:28 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:28 --> Total execution time: 0.0453
+INFO - 2016-05-12 16:48:50 --> Config Class Initialized
+INFO - 2016-05-12 16:48:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:50 --> URI Class Initialized
+INFO - 2016-05-12 16:48:50 --> Router Class Initialized
+INFO - 2016-05-12 16:48:50 --> Output Class Initialized
+INFO - 2016-05-12 16:48:50 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:50 --> Input Class Initialized
+INFO - 2016-05-12 16:48:50 --> Language Class Initialized
+INFO - 2016-05-12 16:48:50 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:50 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:50 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:50 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:50 --> Model Class Initialized
+INFO - 2016-05-12 16:48:50 --> Model Class Initialized
+INFO - 2016-05-12 16:48:50 --> Model Class Initialized
+INFO - 2016-05-12 16:48:50 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:50 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:50 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:50 --> Model Class Initialized
+INFO - 2016-05-12 16:48:50 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:48:50 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:48:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:48:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:48:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:48:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:48:50 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:50 --> Total execution time: 0.0707
+ERROR - 2016-05-12 16:48:50 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 16:48:53 --> Config Class Initialized
+INFO - 2016-05-12 16:48:53 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:53 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:53 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:53 --> URI Class Initialized
+INFO - 2016-05-12 16:48:53 --> Router Class Initialized
+INFO - 2016-05-12 16:48:53 --> Output Class Initialized
+INFO - 2016-05-12 16:48:53 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:53 --> Input Class Initialized
+INFO - 2016-05-12 16:48:53 --> Language Class Initialized
+INFO - 2016-05-12 16:48:53 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:53 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:53 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:53 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:53 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:53 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:53 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:53 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:53 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:53 --> Model Class Initialized
+INFO - 2016-05-12 16:48:53 --> Model Class Initialized
+INFO - 2016-05-12 16:48:53 --> Model Class Initialized
+INFO - 2016-05-12 16:48:53 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:53 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:48:56 --> Config Class Initialized
+INFO - 2016-05-12 16:48:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:56 --> URI Class Initialized
+INFO - 2016-05-12 16:48:56 --> Router Class Initialized
+INFO - 2016-05-12 16:48:56 --> Output Class Initialized
+INFO - 2016-05-12 16:48:56 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:56 --> Input Class Initialized
+INFO - 2016-05-12 16:48:56 --> Language Class Initialized
+INFO - 2016-05-12 16:48:56 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:56 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:56 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:56 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:56 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:56 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:56 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:56 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:56 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:56 --> Model Class Initialized
+INFO - 2016-05-12 16:48:56 --> Model Class Initialized
+INFO - 2016-05-12 16:48:56 --> Model Class Initialized
+INFO - 2016-05-12 16:48:56 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:56 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:56 --> Model Class Initialized
+INFO - 2016-05-12 16:48:56 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:48:56 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:48:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:48:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:48:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:48:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:48:56 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:56 --> Total execution time: 0.0494
+INFO - 2016-05-12 16:48:59 --> Config Class Initialized
+INFO - 2016-05-12 16:48:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:48:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:48:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:48:59 --> URI Class Initialized
+INFO - 2016-05-12 16:48:59 --> Router Class Initialized
+INFO - 2016-05-12 16:48:59 --> Output Class Initialized
+INFO - 2016-05-12 16:48:59 --> Security Class Initialized
+DEBUG - 2016-05-12 16:48:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:48:59 --> Input Class Initialized
+INFO - 2016-05-12 16:48:59 --> Language Class Initialized
+INFO - 2016-05-12 16:48:59 --> Loader Class Initialized
+INFO - 2016-05-12 16:48:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:48:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:48:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:48:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:48:59 --> Pagination Class Initialized
+INFO - 2016-05-12 16:48:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:48:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:48:59 --> Email Class Initialized
+DEBUG - 2016-05-12 16:48:59 --> Upload Class Initialized
+INFO - 2016-05-12 16:48:59 --> Model Class Initialized
+INFO - 2016-05-12 16:48:59 --> Model Class Initialized
+INFO - 2016-05-12 16:48:59 --> Model Class Initialized
+INFO - 2016-05-12 16:48:59 --> Controller Class Initialized
+INFO - 2016-05-12 16:48:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:48:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:48:59 --> Model Class Initialized
+INFO - 2016-05-12 16:48:59 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:48:59 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:48:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:48:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:48:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:48:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:48:59 --> Final output sent to browser
+DEBUG - 2016-05-12 16:48:59 --> Total execution time: 0.0484
+INFO - 2016-05-12 16:49:06 --> Config Class Initialized
+INFO - 2016-05-12 16:49:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:49:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:49:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:49:06 --> URI Class Initialized
+INFO - 2016-05-12 16:49:06 --> Router Class Initialized
+INFO - 2016-05-12 16:49:06 --> Output Class Initialized
+INFO - 2016-05-12 16:49:06 --> Security Class Initialized
+DEBUG - 2016-05-12 16:49:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:49:06 --> Input Class Initialized
+INFO - 2016-05-12 16:49:06 --> Language Class Initialized
+INFO - 2016-05-12 16:49:06 --> Loader Class Initialized
+INFO - 2016-05-12 16:49:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:49:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:49:06 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:49:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:49:06 --> Pagination Class Initialized
+INFO - 2016-05-12 16:49:06 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:49:06 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:49:06 --> Email Class Initialized
+DEBUG - 2016-05-12 16:49:06 --> Upload Class Initialized
+INFO - 2016-05-12 16:49:06 --> Model Class Initialized
+INFO - 2016-05-12 16:49:06 --> Model Class Initialized
+INFO - 2016-05-12 16:49:06 --> Model Class Initialized
+INFO - 2016-05-12 16:49:06 --> Controller Class Initialized
+INFO - 2016-05-12 16:49:06 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:51:02 --> Config Class Initialized
+INFO - 2016-05-12 16:51:02 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:51:02 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:51:02 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:51:02 --> URI Class Initialized
+INFO - 2016-05-12 16:51:02 --> Router Class Initialized
+INFO - 2016-05-12 16:51:02 --> Output Class Initialized
+INFO - 2016-05-12 16:51:02 --> Security Class Initialized
+DEBUG - 2016-05-12 16:51:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:51:02 --> Input Class Initialized
+INFO - 2016-05-12 16:51:02 --> Language Class Initialized
+INFO - 2016-05-12 16:51:02 --> Loader Class Initialized
+INFO - 2016-05-12 16:51:02 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:51:02 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:51:02 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:51:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:51:02 --> Pagination Class Initialized
+INFO - 2016-05-12 16:51:02 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:51:02 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:51:02 --> Email Class Initialized
+DEBUG - 2016-05-12 16:51:02 --> Upload Class Initialized
+INFO - 2016-05-12 16:51:02 --> Model Class Initialized
+INFO - 2016-05-12 16:51:02 --> Model Class Initialized
+INFO - 2016-05-12 16:51:02 --> Model Class Initialized
+INFO - 2016-05-12 16:51:02 --> Controller Class Initialized
+INFO - 2016-05-12 16:51:02 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:51:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:51:02 --> Model Class Initialized
+INFO - 2016-05-12 16:51:02 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:51:02 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:51:02 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:51:02 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:51:02 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:51:02 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:51:02 --> Final output sent to browser
+DEBUG - 2016-05-12 16:51:02 --> Total execution time: 0.0614
+INFO - 2016-05-12 16:51:07 --> Config Class Initialized
+INFO - 2016-05-12 16:51:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:51:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:51:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:51:07 --> URI Class Initialized
+INFO - 2016-05-12 16:51:07 --> Router Class Initialized
+INFO - 2016-05-12 16:51:07 --> Output Class Initialized
+INFO - 2016-05-12 16:51:07 --> Security Class Initialized
+DEBUG - 2016-05-12 16:51:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:51:07 --> Input Class Initialized
+INFO - 2016-05-12 16:51:07 --> Language Class Initialized
+INFO - 2016-05-12 16:51:07 --> Loader Class Initialized
+INFO - 2016-05-12 16:51:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:51:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:51:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:51:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:51:07 --> Pagination Class Initialized
+INFO - 2016-05-12 16:51:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:51:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:51:07 --> Email Class Initialized
+DEBUG - 2016-05-12 16:51:07 --> Upload Class Initialized
+INFO - 2016-05-12 16:51:07 --> Model Class Initialized
+INFO - 2016-05-12 16:51:07 --> Model Class Initialized
+INFO - 2016-05-12 16:51:07 --> Model Class Initialized
+INFO - 2016-05-12 16:51:07 --> Controller Class Initialized
+INFO - 2016-05-12 16:51:07 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:51:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:51:07 --> Model Class Initialized
+INFO - 2016-05-12 16:51:07 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:51:07 --> Final output sent to browser
+DEBUG - 2016-05-12 16:51:07 --> Total execution time: 0.0511
+INFO - 2016-05-12 16:51:08 --> Config Class Initialized
+INFO - 2016-05-12 16:51:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:51:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:51:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:51:08 --> URI Class Initialized
+INFO - 2016-05-12 16:51:08 --> Router Class Initialized
+INFO - 2016-05-12 16:51:08 --> Output Class Initialized
+INFO - 2016-05-12 16:51:08 --> Security Class Initialized
+DEBUG - 2016-05-12 16:51:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:51:08 --> Input Class Initialized
+INFO - 2016-05-12 16:51:08 --> Language Class Initialized
+INFO - 2016-05-12 16:51:08 --> Loader Class Initialized
+INFO - 2016-05-12 16:51:08 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:51:08 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:51:08 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:51:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:51:08 --> Pagination Class Initialized
+INFO - 2016-05-12 16:51:08 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:51:08 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:51:08 --> Email Class Initialized
+DEBUG - 2016-05-12 16:51:08 --> Upload Class Initialized
+INFO - 2016-05-12 16:51:08 --> Model Class Initialized
+INFO - 2016-05-12 16:51:08 --> Model Class Initialized
+INFO - 2016-05-12 16:51:08 --> Model Class Initialized
+INFO - 2016-05-12 16:51:08 --> Controller Class Initialized
+INFO - 2016-05-12 16:51:08 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:51:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:51:08 --> Model Class Initialized
+INFO - 2016-05-12 16:51:08 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:51:08 --> Final output sent to browser
+DEBUG - 2016-05-12 16:51:08 --> Total execution time: 0.0682
+INFO - 2016-05-12 16:51:12 --> Config Class Initialized
+INFO - 2016-05-12 16:51:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:51:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:51:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:51:12 --> URI Class Initialized
+INFO - 2016-05-12 16:51:12 --> Router Class Initialized
+INFO - 2016-05-12 16:51:12 --> Output Class Initialized
+INFO - 2016-05-12 16:51:12 --> Security Class Initialized
+DEBUG - 2016-05-12 16:51:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:51:12 --> Input Class Initialized
+INFO - 2016-05-12 16:51:12 --> Language Class Initialized
+INFO - 2016-05-12 16:51:12 --> Loader Class Initialized
+INFO - 2016-05-12 16:51:12 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:51:12 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:51:12 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:51:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:51:12 --> Pagination Class Initialized
+INFO - 2016-05-12 16:51:12 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:51:12 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:51:12 --> Email Class Initialized
+DEBUG - 2016-05-12 16:51:12 --> Upload Class Initialized
+INFO - 2016-05-12 16:51:12 --> Model Class Initialized
+INFO - 2016-05-12 16:51:12 --> Model Class Initialized
+INFO - 2016-05-12 16:51:12 --> Model Class Initialized
+INFO - 2016-05-12 16:51:12 --> Controller Class Initialized
+INFO - 2016-05-12 16:51:12 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:51:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:51:12 --> Model Class Initialized
+INFO - 2016-05-12 16:51:12 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:51:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getstudyresource.php
+INFO - 2016-05-12 16:51:12 --> Final output sent to browser
+DEBUG - 2016-05-12 16:51:12 --> Total execution time: 0.0815
+INFO - 2016-05-12 16:51:14 --> Config Class Initialized
+INFO - 2016-05-12 16:51:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:51:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:51:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:51:14 --> URI Class Initialized
+INFO - 2016-05-12 16:51:14 --> Router Class Initialized
+INFO - 2016-05-12 16:51:14 --> Output Class Initialized
+INFO - 2016-05-12 16:51:14 --> Security Class Initialized
+DEBUG - 2016-05-12 16:51:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:51:14 --> Input Class Initialized
+INFO - 2016-05-12 16:51:14 --> Language Class Initialized
+INFO - 2016-05-12 16:51:14 --> Loader Class Initialized
+INFO - 2016-05-12 16:51:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:51:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:51:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:51:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:51:14 --> Pagination Class Initialized
+INFO - 2016-05-12 16:51:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:51:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:51:14 --> Email Class Initialized
+DEBUG - 2016-05-12 16:51:14 --> Upload Class Initialized
+INFO - 2016-05-12 16:51:14 --> Model Class Initialized
+INFO - 2016-05-12 16:51:14 --> Model Class Initialized
+INFO - 2016-05-12 16:51:14 --> Model Class Initialized
+INFO - 2016-05-12 16:51:14 --> Controller Class Initialized
+INFO - 2016-05-12 16:51:14 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:51:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:51:14 --> Model Class Initialized
+INFO - 2016-05-12 16:51:14 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:51:14 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:51:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:51:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:51:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:51:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:51:14 --> Final output sent to browser
+DEBUG - 2016-05-12 16:51:14 --> Total execution time: 0.0492
+INFO - 2016-05-12 16:53:54 --> Config Class Initialized
+INFO - 2016-05-12 16:53:54 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:53:54 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:53:54 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:53:54 --> URI Class Initialized
+INFO - 2016-05-12 16:53:54 --> Router Class Initialized
+INFO - 2016-05-12 16:53:54 --> Output Class Initialized
+INFO - 2016-05-12 16:53:54 --> Security Class Initialized
+DEBUG - 2016-05-12 16:53:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:53:54 --> Input Class Initialized
+INFO - 2016-05-12 16:53:54 --> Language Class Initialized
+ERROR - 2016-05-12 16:53:54 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 16:53:55 --> Config Class Initialized
+INFO - 2016-05-12 16:53:55 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:53:55 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:53:55 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:53:55 --> URI Class Initialized
+INFO - 2016-05-12 16:53:55 --> Router Class Initialized
+INFO - 2016-05-12 16:53:55 --> Output Class Initialized
+INFO - 2016-05-12 16:53:55 --> Security Class Initialized
+DEBUG - 2016-05-12 16:53:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:53:55 --> Input Class Initialized
+INFO - 2016-05-12 16:53:55 --> Language Class Initialized
+INFO - 2016-05-12 16:53:55 --> Loader Class Initialized
+INFO - 2016-05-12 16:53:55 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:53:55 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:53:55 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:53:55 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:53:55 --> Pagination Class Initialized
+INFO - 2016-05-12 16:53:55 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:53:55 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:53:55 --> Email Class Initialized
+DEBUG - 2016-05-12 16:53:55 --> Upload Class Initialized
+INFO - 2016-05-12 16:53:55 --> Model Class Initialized
+INFO - 2016-05-12 16:53:55 --> Model Class Initialized
+INFO - 2016-05-12 16:53:55 --> Model Class Initialized
+INFO - 2016-05-12 16:53:55 --> Controller Class Initialized
+INFO - 2016-05-12 16:53:55 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:53:55 --> Model Class Initialized
+INFO - 2016-05-12 16:53:55 --> Model Class Initialized
+INFO - 2016-05-12 16:53:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addstudyresource.php
+INFO - 2016-05-12 16:53:55 --> Final output sent to browser
+DEBUG - 2016-05-12 16:53:55 --> Total execution time: 0.0748
+INFO - 2016-05-12 16:53:56 --> Config Class Initialized
+INFO - 2016-05-12 16:53:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:53:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:53:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:53:56 --> URI Class Initialized
+INFO - 2016-05-12 16:53:56 --> Router Class Initialized
+INFO - 2016-05-12 16:53:56 --> Output Class Initialized
+INFO - 2016-05-12 16:53:56 --> Security Class Initialized
+DEBUG - 2016-05-12 16:53:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:53:56 --> Input Class Initialized
+INFO - 2016-05-12 16:53:56 --> Language Class Initialized
+INFO - 2016-05-12 16:53:56 --> Loader Class Initialized
+INFO - 2016-05-12 16:53:56 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:53:56 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:53:56 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:53:56 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:53:56 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:53:56 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:53:56 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:53:57 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:53:57 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:53:57 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:53:57 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:53:57 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:53:57 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:53:57 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:53:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:53:57 --> Pagination Class Initialized
+INFO - 2016-05-12 16:53:57 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:53:57 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:53:57 --> Email Class Initialized
+DEBUG - 2016-05-12 16:53:57 --> Upload Class Initialized
+INFO - 2016-05-12 16:53:57 --> Model Class Initialized
+INFO - 2016-05-12 16:53:57 --> Model Class Initialized
+INFO - 2016-05-12 16:53:57 --> Model Class Initialized
+INFO - 2016-05-12 16:53:57 --> Controller Class Initialized
+INFO - 2016-05-12 16:53:57 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:53:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:53:57 --> Model Class Initialized
+INFO - 2016-05-12 16:53:57 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:53:57 --> Final output sent to browser
+DEBUG - 2016-05-12 16:53:57 --> Total execution time: 0.0765
+INFO - 2016-05-12 16:54:02 --> Config Class Initialized
+INFO - 2016-05-12 16:54:02 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:02 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:02 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:02 --> URI Class Initialized
+INFO - 2016-05-12 16:54:02 --> Router Class Initialized
+INFO - 2016-05-12 16:54:02 --> Output Class Initialized
+INFO - 2016-05-12 16:54:02 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:02 --> Input Class Initialized
+INFO - 2016-05-12 16:54:02 --> Language Class Initialized
+INFO - 2016-05-12 16:54:02 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:02 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:02 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:02 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:02 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:02 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:02 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:02 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:02 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:02 --> Model Class Initialized
+INFO - 2016-05-12 16:54:02 --> Model Class Initialized
+INFO - 2016-05-12 16:54:02 --> Model Class Initialized
+INFO - 2016-05-12 16:54:02 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:02 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:02 --> Model Class Initialized
+INFO - 2016-05-12 16:54:02 --> Helper loaded: notification_helper
+DEBUG - 2016-05-12 16:54:02 --> Upload class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:03 --> Config Class Initialized
+INFO - 2016-05-12 16:54:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:03 --> URI Class Initialized
+INFO - 2016-05-12 16:54:03 --> Router Class Initialized
+INFO - 2016-05-12 16:54:03 --> Output Class Initialized
+INFO - 2016-05-12 16:54:03 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:03 --> Input Class Initialized
+INFO - 2016-05-12 16:54:03 --> Language Class Initialized
+INFO - 2016-05-12 16:54:03 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:03 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:03 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:03 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:03 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:03 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:03 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:03 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:03 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:03 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:03 --> Model Class Initialized
+INFO - 2016-05-12 16:54:03 --> Model Class Initialized
+INFO - 2016-05-12 16:54:03 --> Model Class Initialized
+INFO - 2016-05-12 16:54:03 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:03 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:03 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:03 --> Model Class Initialized
+INFO - 2016-05-12 16:54:03 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:03 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:03 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:03 --> Total execution time: 0.0873
+INFO - 2016-05-12 16:54:06 --> Config Class Initialized
+INFO - 2016-05-12 16:54:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:06 --> URI Class Initialized
+INFO - 2016-05-12 16:54:06 --> Router Class Initialized
+INFO - 2016-05-12 16:54:06 --> Output Class Initialized
+INFO - 2016-05-12 16:54:06 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:06 --> Input Class Initialized
+INFO - 2016-05-12 16:54:06 --> Language Class Initialized
+INFO - 2016-05-12 16:54:06 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:06 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:06 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:06 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:06 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:06 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:06 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:06 --> Model Class Initialized
+INFO - 2016-05-12 16:54:06 --> Model Class Initialized
+INFO - 2016-05-12 16:54:06 --> Model Class Initialized
+INFO - 2016-05-12 16:54:06 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:06 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:06 --> Model Class Initialized
+INFO - 2016-05-12 16:54:06 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:06 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:06 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:06 --> Total execution time: 0.0556
+INFO - 2016-05-12 16:54:06 --> Config Class Initialized
+INFO - 2016-05-12 16:54:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:06 --> URI Class Initialized
+INFO - 2016-05-12 16:54:06 --> Router Class Initialized
+INFO - 2016-05-12 16:54:06 --> Output Class Initialized
+INFO - 2016-05-12 16:54:06 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:06 --> Input Class Initialized
+INFO - 2016-05-12 16:54:06 --> Language Class Initialized
+INFO - 2016-05-12 16:54:06 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:07 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:07 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:07 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:07 --> Model Class Initialized
+INFO - 2016-05-12 16:54:07 --> Model Class Initialized
+INFO - 2016-05-12 16:54:07 --> Model Class Initialized
+INFO - 2016-05-12 16:54:07 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:07 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:54:07 --> Model Class Initialized
+INFO - 2016-05-12 16:54:07 --> Model Class Initialized
+INFO - 2016-05-12 16:54:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addstudyresource.php
+INFO - 2016-05-12 16:54:07 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:07 --> Total execution time: 0.0461
+INFO - 2016-05-12 16:54:09 --> Config Class Initialized
+INFO - 2016-05-12 16:54:09 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:09 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:09 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:09 --> URI Class Initialized
+INFO - 2016-05-12 16:54:09 --> Router Class Initialized
+INFO - 2016-05-12 16:54:09 --> Output Class Initialized
+INFO - 2016-05-12 16:54:09 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:09 --> Input Class Initialized
+INFO - 2016-05-12 16:54:09 --> Language Class Initialized
+INFO - 2016-05-12 16:54:09 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:09 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:09 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:09 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:09 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:09 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:09 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:09 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:09 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:09 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:09 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:09 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:09 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:09 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:09 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:09 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:09 --> Total execution time: 0.0579
+INFO - 2016-05-12 16:54:09 --> Config Class Initialized
+INFO - 2016-05-12 16:54:09 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:09 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:09 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:09 --> URI Class Initialized
+INFO - 2016-05-12 16:54:09 --> Router Class Initialized
+INFO - 2016-05-12 16:54:09 --> Output Class Initialized
+INFO - 2016-05-12 16:54:09 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:09 --> Input Class Initialized
+INFO - 2016-05-12 16:54:09 --> Language Class Initialized
+INFO - 2016-05-12 16:54:09 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:09 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:09 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:09 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:09 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:09 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:09 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:09 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:09 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:09 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:09 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> Model Class Initialized
+INFO - 2016-05-12 16:54:09 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:54:09 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:09 --> Total execution time: 0.0543
+INFO - 2016-05-12 16:54:12 --> Config Class Initialized
+INFO - 2016-05-12 16:54:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:12 --> URI Class Initialized
+INFO - 2016-05-12 16:54:12 --> Router Class Initialized
+INFO - 2016-05-12 16:54:12 --> Output Class Initialized
+INFO - 2016-05-12 16:54:12 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:12 --> Input Class Initialized
+INFO - 2016-05-12 16:54:12 --> Language Class Initialized
+INFO - 2016-05-12 16:54:12 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:12 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:12 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:12 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:12 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:12 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:12 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:12 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:12 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:12 --> Model Class Initialized
+INFO - 2016-05-12 16:54:12 --> Model Class Initialized
+INFO - 2016-05-12 16:54:12 --> Model Class Initialized
+INFO - 2016-05-12 16:54:12 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:12 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:12 --> Model Class Initialized
+INFO - 2016-05-12 16:54:12 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:54:13 --> Config Class Initialized
+INFO - 2016-05-12 16:54:13 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:13 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:13 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:13 --> URI Class Initialized
+INFO - 2016-05-12 16:54:13 --> Router Class Initialized
+INFO - 2016-05-12 16:54:13 --> Output Class Initialized
+INFO - 2016-05-12 16:54:13 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:13 --> Input Class Initialized
+INFO - 2016-05-12 16:54:13 --> Language Class Initialized
+INFO - 2016-05-12 16:54:13 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:13 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:13 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:13 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:13 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:13 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:13 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:13 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:13 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:13 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:13 --> Model Class Initialized
+INFO - 2016-05-12 16:54:13 --> Model Class Initialized
+INFO - 2016-05-12 16:54:13 --> Model Class Initialized
+INFO - 2016-05-12 16:54:13 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:13 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:13 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:13 --> Model Class Initialized
+INFO - 2016-05-12 16:54:13 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:13 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:13 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:13 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:13 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:13 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:13 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:13 --> Total execution time: 0.0615
+INFO - 2016-05-12 16:54:17 --> Config Class Initialized
+INFO - 2016-05-12 16:54:17 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:18 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:18 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:18 --> URI Class Initialized
+INFO - 2016-05-12 16:54:18 --> Router Class Initialized
+INFO - 2016-05-12 16:54:18 --> Output Class Initialized
+INFO - 2016-05-12 16:54:18 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:18 --> Input Class Initialized
+INFO - 2016-05-12 16:54:18 --> Language Class Initialized
+INFO - 2016-05-12 16:54:18 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:18 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:18 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:18 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:18 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:18 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:18 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:18 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:18 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:18 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:18 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:18 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:18 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:18 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:18 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:18 --> Total execution time: 0.0561
+INFO - 2016-05-12 16:54:18 --> Config Class Initialized
+INFO - 2016-05-12 16:54:18 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:18 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:18 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:18 --> URI Class Initialized
+INFO - 2016-05-12 16:54:18 --> Router Class Initialized
+INFO - 2016-05-12 16:54:18 --> Output Class Initialized
+INFO - 2016-05-12 16:54:18 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:18 --> Input Class Initialized
+INFO - 2016-05-12 16:54:18 --> Language Class Initialized
+INFO - 2016-05-12 16:54:18 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:18 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:18 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:18 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:18 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:18 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:18 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:18 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:18 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:18 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> Model Class Initialized
+INFO - 2016-05-12 16:54:18 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:54:18 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:18 --> Total execution time: 0.0624
+INFO - 2016-05-12 16:54:20 --> Config Class Initialized
+INFO - 2016-05-12 16:54:20 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:20 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:20 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:20 --> URI Class Initialized
+INFO - 2016-05-12 16:54:20 --> Router Class Initialized
+INFO - 2016-05-12 16:54:20 --> Output Class Initialized
+INFO - 2016-05-12 16:54:20 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:20 --> Input Class Initialized
+INFO - 2016-05-12 16:54:20 --> Language Class Initialized
+INFO - 2016-05-12 16:54:20 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:20 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:20 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:20 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:20 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:20 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:20 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:20 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:20 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:20 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:20 --> Model Class Initialized
+INFO - 2016-05-12 16:54:20 --> Model Class Initialized
+INFO - 2016-05-12 16:54:20 --> Model Class Initialized
+INFO - 2016-05-12 16:54:20 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:20 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:54:55 --> Config Class Initialized
+INFO - 2016-05-12 16:54:55 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:55 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:55 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:55 --> URI Class Initialized
+INFO - 2016-05-12 16:54:55 --> Router Class Initialized
+INFO - 2016-05-12 16:54:55 --> Output Class Initialized
+INFO - 2016-05-12 16:54:55 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:55 --> Input Class Initialized
+INFO - 2016-05-12 16:54:55 --> Language Class Initialized
+INFO - 2016-05-12 16:54:55 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:55 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:55 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:55 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:55 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:55 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:55 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:55 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:55 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:55 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:55 --> Model Class Initialized
+INFO - 2016-05-12 16:54:55 --> Model Class Initialized
+INFO - 2016-05-12 16:54:55 --> Model Class Initialized
+INFO - 2016-05-12 16:54:55 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:55 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:55 --> Model Class Initialized
+INFO - 2016-05-12 16:54:55 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:55 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:55 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:55 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:55 --> Total execution time: 0.0499
+INFO - 2016-05-12 16:54:58 --> Config Class Initialized
+INFO - 2016-05-12 16:54:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:58 --> URI Class Initialized
+INFO - 2016-05-12 16:54:58 --> Router Class Initialized
+INFO - 2016-05-12 16:54:58 --> Output Class Initialized
+INFO - 2016-05-12 16:54:58 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:58 --> Input Class Initialized
+INFO - 2016-05-12 16:54:58 --> Language Class Initialized
+INFO - 2016-05-12 16:54:58 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:58 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:58 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:58 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:58 --> Model Class Initialized
+INFO - 2016-05-12 16:54:58 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:54:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:54:59 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:54:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:54:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:54:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:54:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:54:59 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:59 --> Total execution time: 0.0566
+INFO - 2016-05-12 16:54:59 --> Config Class Initialized
+INFO - 2016-05-12 16:54:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:54:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:54:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:54:59 --> URI Class Initialized
+INFO - 2016-05-12 16:54:59 --> Router Class Initialized
+INFO - 2016-05-12 16:54:59 --> Output Class Initialized
+INFO - 2016-05-12 16:54:59 --> Security Class Initialized
+DEBUG - 2016-05-12 16:54:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:54:59 --> Input Class Initialized
+INFO - 2016-05-12 16:54:59 --> Language Class Initialized
+INFO - 2016-05-12 16:54:59 --> Loader Class Initialized
+INFO - 2016-05-12 16:54:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:54:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:54:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:54:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:54:59 --> Pagination Class Initialized
+INFO - 2016-05-12 16:54:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:54:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:54:59 --> Email Class Initialized
+DEBUG - 2016-05-12 16:54:59 --> Upload Class Initialized
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Controller Class Initialized
+INFO - 2016-05-12 16:54:59 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> Model Class Initialized
+INFO - 2016-05-12 16:54:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:54:59 --> Final output sent to browser
+DEBUG - 2016-05-12 16:54:59 --> Total execution time: 0.0468
+INFO - 2016-05-12 16:55:00 --> Config Class Initialized
+INFO - 2016-05-12 16:55:00 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:00 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:00 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:00 --> URI Class Initialized
+INFO - 2016-05-12 16:55:00 --> Router Class Initialized
+INFO - 2016-05-12 16:55:00 --> Output Class Initialized
+INFO - 2016-05-12 16:55:00 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:00 --> Input Class Initialized
+INFO - 2016-05-12 16:55:00 --> Language Class Initialized
+INFO - 2016-05-12 16:55:00 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:00 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:00 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:00 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:00 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:00 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:00 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:00 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:00 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:00 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:00 --> Model Class Initialized
+INFO - 2016-05-12 16:55:00 --> Model Class Initialized
+INFO - 2016-05-12 16:55:00 --> Model Class Initialized
+INFO - 2016-05-12 16:55:00 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:00 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:00 --> Model Class Initialized
+INFO - 2016-05-12 16:55:00 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:00 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:00 --> Total execution time: 0.0773
+INFO - 2016-05-12 16:55:02 --> Config Class Initialized
+INFO - 2016-05-12 16:55:02 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:02 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:02 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:02 --> URI Class Initialized
+INFO - 2016-05-12 16:55:02 --> Router Class Initialized
+INFO - 2016-05-12 16:55:02 --> Output Class Initialized
+INFO - 2016-05-12 16:55:02 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:02 --> Input Class Initialized
+INFO - 2016-05-12 16:55:02 --> Language Class Initialized
+INFO - 2016-05-12 16:55:02 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:02 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:02 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:02 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:02 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:02 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:02 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:02 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:02 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:02 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:02 --> Total execution time: 0.0453
+INFO - 2016-05-12 16:55:02 --> Config Class Initialized
+INFO - 2016-05-12 16:55:02 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:02 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:02 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:02 --> URI Class Initialized
+INFO - 2016-05-12 16:55:02 --> Router Class Initialized
+INFO - 2016-05-12 16:55:02 --> Output Class Initialized
+INFO - 2016-05-12 16:55:02 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:02 --> Input Class Initialized
+INFO - 2016-05-12 16:55:02 --> Language Class Initialized
+INFO - 2016-05-12 16:55:02 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:02 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:02 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:02 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:02 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:02 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:02 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:02 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:02 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:02 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:02 --> Model Class Initialized
+INFO - 2016-05-12 16:55:02 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:02 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:02 --> Total execution time: 0.0348
+INFO - 2016-05-12 16:55:06 --> Config Class Initialized
+INFO - 2016-05-12 16:55:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:06 --> URI Class Initialized
+INFO - 2016-05-12 16:55:06 --> Router Class Initialized
+INFO - 2016-05-12 16:55:06 --> Output Class Initialized
+INFO - 2016-05-12 16:55:06 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:06 --> Input Class Initialized
+INFO - 2016-05-12 16:55:06 --> Language Class Initialized
+INFO - 2016-05-12 16:55:06 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:06 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:06 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:06 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:06 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:06 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:06 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:06 --> Model Class Initialized
+INFO - 2016-05-12 16:55:06 --> Model Class Initialized
+INFO - 2016-05-12 16:55:06 --> Model Class Initialized
+INFO - 2016-05-12 16:55:06 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:06 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:06 --> Model Class Initialized
+INFO - 2016-05-12 16:55:06 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:07 --> Config Class Initialized
+INFO - 2016-05-12 16:55:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:07 --> URI Class Initialized
+INFO - 2016-05-12 16:55:07 --> Router Class Initialized
+INFO - 2016-05-12 16:55:07 --> Output Class Initialized
+INFO - 2016-05-12 16:55:07 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:07 --> Input Class Initialized
+INFO - 2016-05-12 16:55:07 --> Language Class Initialized
+INFO - 2016-05-12 16:55:07 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:07 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:07 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:07 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:07 --> Model Class Initialized
+INFO - 2016-05-12 16:55:07 --> Model Class Initialized
+INFO - 2016-05-12 16:55:07 --> Model Class Initialized
+INFO - 2016-05-12 16:55:07 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:07 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:07 --> Model Class Initialized
+INFO - 2016-05-12 16:55:07 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:55:07 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:55:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:55:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:55:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:55:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:55:07 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:07 --> Total execution time: 0.0841
+INFO - 2016-05-12 16:55:16 --> Config Class Initialized
+INFO - 2016-05-12 16:55:16 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:16 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:16 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:16 --> URI Class Initialized
+INFO - 2016-05-12 16:55:16 --> Router Class Initialized
+INFO - 2016-05-12 16:55:16 --> Output Class Initialized
+INFO - 2016-05-12 16:55:16 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:16 --> Input Class Initialized
+INFO - 2016-05-12 16:55:16 --> Language Class Initialized
+INFO - 2016-05-12 16:55:16 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:16 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:16 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:16 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:16 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:16 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:16 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:16 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:16 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:55:16 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:55:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:55:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:55:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:55:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:55:16 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:16 --> Total execution time: 0.0607
+INFO - 2016-05-12 16:55:16 --> Config Class Initialized
+INFO - 2016-05-12 16:55:16 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:16 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:16 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:16 --> URI Class Initialized
+INFO - 2016-05-12 16:55:16 --> Router Class Initialized
+INFO - 2016-05-12 16:55:16 --> Output Class Initialized
+INFO - 2016-05-12 16:55:16 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:16 --> Input Class Initialized
+INFO - 2016-05-12 16:55:16 --> Language Class Initialized
+INFO - 2016-05-12 16:55:16 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:16 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:16 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:16 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:16 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:16 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:16 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:16 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:16 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:16 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> Model Class Initialized
+INFO - 2016-05-12 16:55:16 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 16:55:16 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:16 --> Total execution time: 0.0601
+INFO - 2016-05-12 16:55:20 --> Config Class Initialized
+INFO - 2016-05-12 16:55:20 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:20 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:20 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:20 --> URI Class Initialized
+INFO - 2016-05-12 16:55:20 --> Router Class Initialized
+INFO - 2016-05-12 16:55:20 --> Output Class Initialized
+INFO - 2016-05-12 16:55:20 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:20 --> Input Class Initialized
+INFO - 2016-05-12 16:55:20 --> Language Class Initialized
+INFO - 2016-05-12 16:55:20 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:20 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:20 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:20 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:20 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:20 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:20 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:20 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:20 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:20 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:20 --> Model Class Initialized
+INFO - 2016-05-12 16:55:20 --> Model Class Initialized
+INFO - 2016-05-12 16:55:20 --> Model Class Initialized
+INFO - 2016-05-12 16:55:20 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:20 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:20 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:20 --> Model Class Initialized
+INFO - 2016-05-12 16:55:20 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:20 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:20 --> Total execution time: 0.0504
+INFO - 2016-05-12 16:55:21 --> Config Class Initialized
+INFO - 2016-05-12 16:55:21 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:21 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:21 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:21 --> URI Class Initialized
+INFO - 2016-05-12 16:55:21 --> Router Class Initialized
+INFO - 2016-05-12 16:55:21 --> Output Class Initialized
+INFO - 2016-05-12 16:55:21 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:21 --> Input Class Initialized
+INFO - 2016-05-12 16:55:21 --> Language Class Initialized
+INFO - 2016-05-12 16:55:21 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:21 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:21 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:21 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:21 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:21 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:21 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:21 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:21 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:21 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:21 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:21 --> Total execution time: 0.0474
+INFO - 2016-05-12 16:55:21 --> Config Class Initialized
+INFO - 2016-05-12 16:55:21 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:21 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:21 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:21 --> URI Class Initialized
+INFO - 2016-05-12 16:55:21 --> Router Class Initialized
+INFO - 2016-05-12 16:55:21 --> Output Class Initialized
+INFO - 2016-05-12 16:55:21 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:21 --> Input Class Initialized
+INFO - 2016-05-12 16:55:21 --> Language Class Initialized
+INFO - 2016-05-12 16:55:21 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:21 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:21 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:21 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:21 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:21 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:21 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:21 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:21 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:21 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:21 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:21 --> Model Class Initialized
+INFO - 2016-05-12 16:55:21 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:21 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:21 --> Total execution time: 0.0496
+INFO - 2016-05-12 16:55:25 --> Config Class Initialized
+INFO - 2016-05-12 16:55:25 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:25 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:25 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:25 --> URI Class Initialized
+INFO - 2016-05-12 16:55:25 --> Router Class Initialized
+INFO - 2016-05-12 16:55:25 --> Output Class Initialized
+INFO - 2016-05-12 16:55:25 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:25 --> Input Class Initialized
+INFO - 2016-05-12 16:55:25 --> Language Class Initialized
+INFO - 2016-05-12 16:55:25 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:25 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:25 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:25 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:25 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:25 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:25 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:25 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:25 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:25 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:25 --> Model Class Initialized
+INFO - 2016-05-12 16:55:25 --> Model Class Initialized
+INFO - 2016-05-12 16:55:25 --> Model Class Initialized
+INFO - 2016-05-12 16:55:25 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:25 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:25 --> Model Class Initialized
+INFO - 2016-05-12 16:55:25 --> Helper loaded: notification_helper
+INFO - 2016-05-12 16:55:26 --> Config Class Initialized
+INFO - 2016-05-12 16:55:26 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:26 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:26 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:26 --> URI Class Initialized
+INFO - 2016-05-12 16:55:26 --> Router Class Initialized
+INFO - 2016-05-12 16:55:26 --> Output Class Initialized
+INFO - 2016-05-12 16:55:26 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:26 --> Input Class Initialized
+INFO - 2016-05-12 16:55:26 --> Language Class Initialized
+INFO - 2016-05-12 16:55:26 --> Loader Class Initialized
+INFO - 2016-05-12 16:55:26 --> Helper loaded: url_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: file_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: form_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: security_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: string_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: directory_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: download_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 16:55:26 --> Helper loaded: forum_helper
+INFO - 2016-05-12 16:55:26 --> Database Driver Class Initialized
+INFO - 2016-05-12 16:55:26 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 16:55:26 --> Pagination Class Initialized
+INFO - 2016-05-12 16:55:26 --> XML-RPC Class Initialized
+INFO - 2016-05-12 16:55:26 --> Form Validation Class Initialized
+INFO - 2016-05-12 16:55:26 --> Email Class Initialized
+DEBUG - 2016-05-12 16:55:26 --> Upload Class Initialized
+INFO - 2016-05-12 16:55:26 --> Model Class Initialized
+INFO - 2016-05-12 16:55:26 --> Model Class Initialized
+INFO - 2016-05-12 16:55:26 --> Model Class Initialized
+INFO - 2016-05-12 16:55:26 --> Controller Class Initialized
+INFO - 2016-05-12 16:55:26 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 16:55:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 16:55:26 --> Model Class Initialized
+INFO - 2016-05-12 16:55:26 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 16:55:26 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 16:55:26 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 16:55:26 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 16:55:26 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 16:55:26 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 16:55:26 --> Final output sent to browser
+DEBUG - 2016-05-12 16:55:26 --> Total execution time: 0.0763
+INFO - 2016-05-12 16:55:35 --> Config Class Initialized
+INFO - 2016-05-12 16:55:35 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:35 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:35 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:35 --> URI Class Initialized
+INFO - 2016-05-12 16:55:35 --> Router Class Initialized
+INFO - 2016-05-12 16:55:35 --> Output Class Initialized
+INFO - 2016-05-12 16:55:35 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:35 --> Input Class Initialized
+INFO - 2016-05-12 16:55:35 --> Language Class Initialized
+ERROR - 2016-05-12 16:55:35 --> 404 Page Not Found: Professor/project
+INFO - 2016-05-12 16:55:41 --> Config Class Initialized
+INFO - 2016-05-12 16:55:41 --> Hooks Class Initialized
+DEBUG - 2016-05-12 16:55:41 --> UTF-8 Support Enabled
+INFO - 2016-05-12 16:55:41 --> Utf8 Class Initialized
+INFO - 2016-05-12 16:55:41 --> URI Class Initialized
+INFO - 2016-05-12 16:55:41 --> Router Class Initialized
+INFO - 2016-05-12 16:55:41 --> Output Class Initialized
+INFO - 2016-05-12 16:55:41 --> Security Class Initialized
+DEBUG - 2016-05-12 16:55:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 16:55:41 --> Input Class Initialized
+INFO - 2016-05-12 16:55:41 --> Language Class Initialized
+ERROR - 2016-05-12 16:55:41 --> 404 Page Not Found: Professor/library
+INFO - 2016-05-12 17:00:43 --> Config Class Initialized
+INFO - 2016-05-12 17:00:43 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:00:43 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:00:43 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:00:43 --> URI Class Initialized
+INFO - 2016-05-12 17:00:43 --> Router Class Initialized
+INFO - 2016-05-12 17:00:43 --> Output Class Initialized
+INFO - 2016-05-12 17:00:43 --> Security Class Initialized
+DEBUG - 2016-05-12 17:00:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:00:43 --> Input Class Initialized
+INFO - 2016-05-12 17:00:43 --> Language Class Initialized
+INFO - 2016-05-12 17:00:43 --> Loader Class Initialized
+INFO - 2016-05-12 17:00:43 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:00:43 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:00:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:00:43 --> Pagination Class Initialized
+INFO - 2016-05-12 17:00:43 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:00:43 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:00:43 --> Email Class Initialized
+DEBUG - 2016-05-12 17:00:43 --> Upload Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Controller Class Initialized
+INFO - 2016-05-12 17:00:43 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:00:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:00:43 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:00:43 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:00:43 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 17:00:43 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:00:43 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:00:43 --> Final output sent to browser
+DEBUG - 2016-05-12 17:00:43 --> Total execution time: 0.0966
+INFO - 2016-05-12 17:00:43 --> Config Class Initialized
+INFO - 2016-05-12 17:00:43 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:00:43 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:00:43 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:00:43 --> URI Class Initialized
+INFO - 2016-05-12 17:00:43 --> Router Class Initialized
+INFO - 2016-05-12 17:00:43 --> Output Class Initialized
+INFO - 2016-05-12 17:00:43 --> Security Class Initialized
+DEBUG - 2016-05-12 17:00:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:00:43 --> Input Class Initialized
+INFO - 2016-05-12 17:00:43 --> Language Class Initialized
+INFO - 2016-05-12 17:00:43 --> Loader Class Initialized
+INFO - 2016-05-12 17:00:43 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:00:43 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:00:43 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:00:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:00:43 --> Pagination Class Initialized
+INFO - 2016-05-12 17:00:43 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:00:43 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:00:43 --> Email Class Initialized
+DEBUG - 2016-05-12 17:00:43 --> Upload Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Controller Class Initialized
+INFO - 2016-05-12 17:00:43 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> Model Class Initialized
+INFO - 2016-05-12 17:00:43 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_studyresource.php
+INFO - 2016-05-12 17:00:43 --> Final output sent to browser
+DEBUG - 2016-05-12 17:00:43 --> Total execution time: 0.0561
+INFO - 2016-05-12 17:02:53 --> Config Class Initialized
+INFO - 2016-05-12 17:02:53 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:02:53 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:02:53 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:02:53 --> URI Class Initialized
+INFO - 2016-05-12 17:02:53 --> Router Class Initialized
+INFO - 2016-05-12 17:02:53 --> Output Class Initialized
+INFO - 2016-05-12 17:02:53 --> Security Class Initialized
+DEBUG - 2016-05-12 17:02:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:02:53 --> Input Class Initialized
+INFO - 2016-05-12 17:02:53 --> Language Class Initialized
+INFO - 2016-05-12 17:02:53 --> Loader Class Initialized
+INFO - 2016-05-12 17:02:53 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:02:53 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:02:53 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:02:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:02:53 --> Pagination Class Initialized
+INFO - 2016-05-12 17:02:53 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:02:53 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:02:53 --> Email Class Initialized
+DEBUG - 2016-05-12 17:02:53 --> Upload Class Initialized
+INFO - 2016-05-12 17:02:53 --> Model Class Initialized
+INFO - 2016-05-12 17:02:53 --> Model Class Initialized
+INFO - 2016-05-12 17:02:53 --> Model Class Initialized
+INFO - 2016-05-12 17:02:53 --> Controller Class Initialized
+INFO - 2016-05-12 17:02:53 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:02:53 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:02:53 --> Model Class Initialized
+INFO - 2016-05-12 17:02:53 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:02:53 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:02:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:02:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/studyresource.php
+INFO - 2016-05-12 17:02:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:02:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:02:53 --> Final output sent to browser
+DEBUG - 2016-05-12 17:02:53 --> Total execution time: 0.0488
+INFO - 2016-05-12 17:02:57 --> Config Class Initialized
+INFO - 2016-05-12 17:02:57 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:02:57 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:02:57 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:02:57 --> URI Class Initialized
+INFO - 2016-05-12 17:02:57 --> Router Class Initialized
+INFO - 2016-05-12 17:02:57 --> Output Class Initialized
+INFO - 2016-05-12 17:02:57 --> Security Class Initialized
+DEBUG - 2016-05-12 17:02:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:02:57 --> Input Class Initialized
+INFO - 2016-05-12 17:02:57 --> Language Class Initialized
+INFO - 2016-05-12 17:02:57 --> Loader Class Initialized
+INFO - 2016-05-12 17:02:57 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:02:57 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:02:57 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:02:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:02:57 --> Pagination Class Initialized
+INFO - 2016-05-12 17:02:57 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:02:57 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:02:57 --> Email Class Initialized
+DEBUG - 2016-05-12 17:02:57 --> Upload Class Initialized
+INFO - 2016-05-12 17:02:57 --> Model Class Initialized
+INFO - 2016-05-12 17:02:57 --> Model Class Initialized
+INFO - 2016-05-12 17:02:57 --> Model Class Initialized
+INFO - 2016-05-12 17:02:57 --> Controller Class Initialized
+INFO - 2016-05-12 17:02:57 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:02:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:02:57 --> Model Class Initialized
+INFO - 2016-05-12 17:02:57 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:02:57 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:02:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:02:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:02:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:02:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:02:57 --> Final output sent to browser
+DEBUG - 2016-05-12 17:02:57 --> Total execution time: 0.1417
+INFO - 2016-05-12 17:03:15 --> Config Class Initialized
+INFO - 2016-05-12 17:03:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:03:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:03:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:03:15 --> URI Class Initialized
+INFO - 2016-05-12 17:03:15 --> Router Class Initialized
+INFO - 2016-05-12 17:03:15 --> Output Class Initialized
+INFO - 2016-05-12 17:03:15 --> Security Class Initialized
+DEBUG - 2016-05-12 17:03:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:03:15 --> Input Class Initialized
+INFO - 2016-05-12 17:03:15 --> Language Class Initialized
+INFO - 2016-05-12 17:03:15 --> Loader Class Initialized
+INFO - 2016-05-12 17:03:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:03:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:03:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:03:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:03:15 --> Pagination Class Initialized
+INFO - 2016-05-12 17:03:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:03:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:03:15 --> Email Class Initialized
+DEBUG - 2016-05-12 17:03:15 --> Upload Class Initialized
+INFO - 2016-05-12 17:03:15 --> Model Class Initialized
+INFO - 2016-05-12 17:03:15 --> Model Class Initialized
+INFO - 2016-05-12 17:03:15 --> Model Class Initialized
+INFO - 2016-05-12 17:03:15 --> Controller Class Initialized
+INFO - 2016-05-12 17:03:15 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:03:58 --> Config Class Initialized
+INFO - 2016-05-12 17:03:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:03:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:03:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:03:58 --> URI Class Initialized
+INFO - 2016-05-12 17:03:58 --> Router Class Initialized
+INFO - 2016-05-12 17:03:58 --> Output Class Initialized
+INFO - 2016-05-12 17:03:58 --> Security Class Initialized
+DEBUG - 2016-05-12 17:03:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:03:58 --> Input Class Initialized
+INFO - 2016-05-12 17:03:58 --> Language Class Initialized
+INFO - 2016-05-12 17:03:58 --> Loader Class Initialized
+INFO - 2016-05-12 17:03:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:03:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:03:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:03:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:03:58 --> Pagination Class Initialized
+INFO - 2016-05-12 17:03:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:03:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:03:58 --> Email Class Initialized
+DEBUG - 2016-05-12 17:03:58 --> Upload Class Initialized
+INFO - 2016-05-12 17:03:58 --> Model Class Initialized
+INFO - 2016-05-12 17:03:58 --> Model Class Initialized
+INFO - 2016-05-12 17:03:58 --> Model Class Initialized
+INFO - 2016-05-12 17:03:58 --> Controller Class Initialized
+INFO - 2016-05-12 17:03:58 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:03:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:03:58 --> Model Class Initialized
+INFO - 2016-05-12 17:03:58 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:03:58 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:03:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:03:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:03:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:03:58 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:03:58 --> Final output sent to browser
+DEBUG - 2016-05-12 17:03:58 --> Total execution time: 0.0653
+INFO - 2016-05-12 17:04:04 --> Config Class Initialized
+INFO - 2016-05-12 17:04:04 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:04:04 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:04:04 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:04:04 --> URI Class Initialized
+INFO - 2016-05-12 17:04:04 --> Router Class Initialized
+INFO - 2016-05-12 17:04:04 --> Output Class Initialized
+INFO - 2016-05-12 17:04:04 --> Security Class Initialized
+DEBUG - 2016-05-12 17:04:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:04:04 --> Input Class Initialized
+INFO - 2016-05-12 17:04:04 --> Language Class Initialized
+INFO - 2016-05-12 17:04:04 --> Loader Class Initialized
+INFO - 2016-05-12 17:04:04 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:04:04 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:04:04 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:04:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:04:04 --> Pagination Class Initialized
+INFO - 2016-05-12 17:04:04 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:04:04 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:04:04 --> Email Class Initialized
+DEBUG - 2016-05-12 17:04:04 --> Upload Class Initialized
+INFO - 2016-05-12 17:04:04 --> Model Class Initialized
+INFO - 2016-05-12 17:04:04 --> Model Class Initialized
+INFO - 2016-05-12 17:04:04 --> Model Class Initialized
+INFO - 2016-05-12 17:04:04 --> Controller Class Initialized
+INFO - 2016-05-12 17:04:04 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:04:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:04:04 --> Model Class Initialized
+INFO - 2016-05-12 17:04:04 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:04:04 --> Final output sent to browser
+DEBUG - 2016-05-12 17:04:04 --> Total execution time: 0.0511
+INFO - 2016-05-12 17:04:05 --> Config Class Initialized
+INFO - 2016-05-12 17:04:05 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:04:05 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:04:05 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:04:05 --> URI Class Initialized
+INFO - 2016-05-12 17:04:05 --> Router Class Initialized
+INFO - 2016-05-12 17:04:05 --> Output Class Initialized
+INFO - 2016-05-12 17:04:05 --> Security Class Initialized
+DEBUG - 2016-05-12 17:04:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:04:05 --> Input Class Initialized
+INFO - 2016-05-12 17:04:05 --> Language Class Initialized
+INFO - 2016-05-12 17:04:05 --> Loader Class Initialized
+INFO - 2016-05-12 17:04:05 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:04:05 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:04:05 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:04:05 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:04:05 --> Pagination Class Initialized
+INFO - 2016-05-12 17:04:05 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:04:05 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:04:05 --> Email Class Initialized
+DEBUG - 2016-05-12 17:04:05 --> Upload Class Initialized
+INFO - 2016-05-12 17:04:05 --> Model Class Initialized
+INFO - 2016-05-12 17:04:05 --> Model Class Initialized
+INFO - 2016-05-12 17:04:05 --> Model Class Initialized
+INFO - 2016-05-12 17:04:05 --> Controller Class Initialized
+INFO - 2016-05-12 17:04:05 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:04:05 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:04:05 --> Model Class Initialized
+INFO - 2016-05-12 17:04:05 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:04:05 --> Final output sent to browser
+DEBUG - 2016-05-12 17:04:05 --> Total execution time: 0.0462
+INFO - 2016-05-12 17:04:07 --> Config Class Initialized
+INFO - 2016-05-12 17:04:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:04:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:04:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:04:07 --> URI Class Initialized
+INFO - 2016-05-12 17:04:07 --> Router Class Initialized
+INFO - 2016-05-12 17:04:07 --> Output Class Initialized
+INFO - 2016-05-12 17:04:07 --> Security Class Initialized
+DEBUG - 2016-05-12 17:04:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:04:07 --> Input Class Initialized
+INFO - 2016-05-12 17:04:07 --> Language Class Initialized
+ERROR - 2016-05-12 17:04:07 --> 404 Page Not Found: Professor/getlibrary
+INFO - 2016-05-12 17:04:52 --> Config Class Initialized
+INFO - 2016-05-12 17:04:52 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:04:52 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:04:52 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:04:52 --> URI Class Initialized
+INFO - 2016-05-12 17:04:52 --> Router Class Initialized
+INFO - 2016-05-12 17:04:52 --> Output Class Initialized
+INFO - 2016-05-12 17:04:52 --> Security Class Initialized
+DEBUG - 2016-05-12 17:04:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:04:52 --> Input Class Initialized
+INFO - 2016-05-12 17:04:52 --> Language Class Initialized
+INFO - 2016-05-12 17:04:52 --> Loader Class Initialized
+INFO - 2016-05-12 17:04:52 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:04:52 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:04:52 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:04:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:04:52 --> Pagination Class Initialized
+INFO - 2016-05-12 17:04:52 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:04:52 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:04:52 --> Email Class Initialized
+DEBUG - 2016-05-12 17:04:52 --> Upload Class Initialized
+INFO - 2016-05-12 17:04:52 --> Model Class Initialized
+INFO - 2016-05-12 17:04:52 --> Model Class Initialized
+INFO - 2016-05-12 17:04:52 --> Model Class Initialized
+INFO - 2016-05-12 17:04:52 --> Controller Class Initialized
+INFO - 2016-05-12 17:04:52 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:04:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:04:52 --> Model Class Initialized
+INFO - 2016-05-12 17:04:52 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:04:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getlibrary.php
+INFO - 2016-05-12 17:04:52 --> Final output sent to browser
+DEBUG - 2016-05-12 17:04:52 --> Total execution time: 0.1381
+INFO - 2016-05-12 17:04:59 --> Config Class Initialized
+INFO - 2016-05-12 17:04:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:04:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:04:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:04:59 --> URI Class Initialized
+INFO - 2016-05-12 17:04:59 --> Router Class Initialized
+INFO - 2016-05-12 17:04:59 --> Output Class Initialized
+INFO - 2016-05-12 17:04:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:04:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:04:59 --> Input Class Initialized
+INFO - 2016-05-12 17:04:59 --> Language Class Initialized
+INFO - 2016-05-12 17:04:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:04:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:04:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:04:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:04:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:04:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:04:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:04:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:04:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:04:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:04:59 --> Model Class Initialized
+INFO - 2016-05-12 17:04:59 --> Model Class Initialized
+INFO - 2016-05-12 17:04:59 --> Model Class Initialized
+INFO - 2016-05-12 17:04:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:04:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:04:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:04:59 --> Model Class Initialized
+INFO - 2016-05-12 17:04:59 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:04:59 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:04:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:04:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:04:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:04:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:04:59 --> Final output sent to browser
+DEBUG - 2016-05-12 17:04:59 --> Total execution time: 0.0773
+INFO - 2016-05-12 17:05:03 --> Config Class Initialized
+INFO - 2016-05-12 17:05:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:03 --> URI Class Initialized
+INFO - 2016-05-12 17:05:03 --> Router Class Initialized
+INFO - 2016-05-12 17:05:03 --> Output Class Initialized
+INFO - 2016-05-12 17:05:03 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:03 --> Input Class Initialized
+INFO - 2016-05-12 17:05:03 --> Language Class Initialized
+ERROR - 2016-05-12 17:05:03 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:05:03 --> Config Class Initialized
+INFO - 2016-05-12 17:05:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:03 --> URI Class Initialized
+INFO - 2016-05-12 17:05:03 --> Router Class Initialized
+INFO - 2016-05-12 17:05:03 --> Output Class Initialized
+INFO - 2016-05-12 17:05:03 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:03 --> Input Class Initialized
+INFO - 2016-05-12 17:05:03 --> Language Class Initialized
+INFO - 2016-05-12 17:05:04 --> Loader Class Initialized
+INFO - 2016-05-12 17:05:04 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:05:04 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:05:04 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:05:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:05:04 --> Pagination Class Initialized
+INFO - 2016-05-12 17:05:04 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:05:04 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:05:04 --> Email Class Initialized
+DEBUG - 2016-05-12 17:05:04 --> Upload Class Initialized
+INFO - 2016-05-12 17:05:04 --> Model Class Initialized
+INFO - 2016-05-12 17:05:04 --> Model Class Initialized
+INFO - 2016-05-12 17:05:04 --> Model Class Initialized
+INFO - 2016-05-12 17:05:04 --> Controller Class Initialized
+INFO - 2016-05-12 17:05:04 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:05:04 --> Model Class Initialized
+INFO - 2016-05-12 17:05:04 --> Model Class Initialized
+INFO - 2016-05-12 17:05:04 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addlibrary.php
+INFO - 2016-05-12 17:05:04 --> Final output sent to browser
+DEBUG - 2016-05-12 17:05:04 --> Total execution time: 0.0478
+INFO - 2016-05-12 17:05:30 --> Config Class Initialized
+INFO - 2016-05-12 17:05:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:30 --> URI Class Initialized
+INFO - 2016-05-12 17:05:30 --> Router Class Initialized
+INFO - 2016-05-12 17:05:30 --> Output Class Initialized
+INFO - 2016-05-12 17:05:30 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:30 --> Input Class Initialized
+INFO - 2016-05-12 17:05:30 --> Language Class Initialized
+INFO - 2016-05-12 17:05:30 --> Loader Class Initialized
+INFO - 2016-05-12 17:05:30 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:05:30 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:05:30 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:05:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:05:30 --> Pagination Class Initialized
+INFO - 2016-05-12 17:05:30 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:05:30 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:05:30 --> Email Class Initialized
+DEBUG - 2016-05-12 17:05:30 --> Upload Class Initialized
+INFO - 2016-05-12 17:05:30 --> Model Class Initialized
+INFO - 2016-05-12 17:05:30 --> Model Class Initialized
+INFO - 2016-05-12 17:05:30 --> Model Class Initialized
+INFO - 2016-05-12 17:05:30 --> Controller Class Initialized
+INFO - 2016-05-12 17:05:30 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:05:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:05:30 --> Model Class Initialized
+INFO - 2016-05-12 17:05:30 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:05:30 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:05:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:05:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:05:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:05:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:05:30 --> Final output sent to browser
+DEBUG - 2016-05-12 17:05:30 --> Total execution time: 0.1108
+INFO - 2016-05-12 17:05:37 --> Config Class Initialized
+INFO - 2016-05-12 17:05:37 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:37 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:37 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:37 --> URI Class Initialized
+INFO - 2016-05-12 17:05:37 --> Router Class Initialized
+INFO - 2016-05-12 17:05:37 --> Output Class Initialized
+INFO - 2016-05-12 17:05:37 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:37 --> Input Class Initialized
+INFO - 2016-05-12 17:05:37 --> Language Class Initialized
+ERROR - 2016-05-12 17:05:37 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:05:37 --> Config Class Initialized
+INFO - 2016-05-12 17:05:37 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:37 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:37 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:37 --> URI Class Initialized
+INFO - 2016-05-12 17:05:37 --> Router Class Initialized
+INFO - 2016-05-12 17:05:37 --> Output Class Initialized
+INFO - 2016-05-12 17:05:37 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:37 --> Input Class Initialized
+INFO - 2016-05-12 17:05:37 --> Language Class Initialized
+INFO - 2016-05-12 17:05:37 --> Loader Class Initialized
+INFO - 2016-05-12 17:05:37 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:05:37 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:05:37 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:05:37 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:05:37 --> Pagination Class Initialized
+INFO - 2016-05-12 17:05:37 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:05:37 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:05:37 --> Email Class Initialized
+DEBUG - 2016-05-12 17:05:37 --> Upload Class Initialized
+INFO - 2016-05-12 17:05:37 --> Model Class Initialized
+INFO - 2016-05-12 17:05:37 --> Model Class Initialized
+INFO - 2016-05-12 17:05:37 --> Model Class Initialized
+INFO - 2016-05-12 17:05:37 --> Controller Class Initialized
+INFO - 2016-05-12 17:05:37 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:05:37 --> Model Class Initialized
+INFO - 2016-05-12 17:05:37 --> Model Class Initialized
+INFO - 2016-05-12 17:05:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_library.php
+INFO - 2016-05-12 17:05:37 --> Final output sent to browser
+DEBUG - 2016-05-12 17:05:37 --> Total execution time: 0.0499
+INFO - 2016-05-12 17:05:45 --> Config Class Initialized
+INFO - 2016-05-12 17:05:45 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:45 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:45 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:45 --> URI Class Initialized
+INFO - 2016-05-12 17:05:45 --> Router Class Initialized
+INFO - 2016-05-12 17:05:45 --> Output Class Initialized
+INFO - 2016-05-12 17:05:45 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:45 --> Input Class Initialized
+INFO - 2016-05-12 17:05:45 --> Language Class Initialized
+ERROR - 2016-05-12 17:05:45 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:05:45 --> Config Class Initialized
+INFO - 2016-05-12 17:05:45 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:05:45 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:05:45 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:05:45 --> URI Class Initialized
+INFO - 2016-05-12 17:05:45 --> Router Class Initialized
+INFO - 2016-05-12 17:05:45 --> Output Class Initialized
+INFO - 2016-05-12 17:05:45 --> Security Class Initialized
+DEBUG - 2016-05-12 17:05:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:05:45 --> Input Class Initialized
+INFO - 2016-05-12 17:05:45 --> Language Class Initialized
+INFO - 2016-05-12 17:05:45 --> Loader Class Initialized
+INFO - 2016-05-12 17:05:45 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:05:45 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:05:45 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:05:45 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:05:45 --> Pagination Class Initialized
+INFO - 2016-05-12 17:05:45 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:05:45 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:05:45 --> Email Class Initialized
+DEBUG - 2016-05-12 17:05:45 --> Upload Class Initialized
+INFO - 2016-05-12 17:05:45 --> Model Class Initialized
+INFO - 2016-05-12 17:05:45 --> Model Class Initialized
+INFO - 2016-05-12 17:05:45 --> Model Class Initialized
+INFO - 2016-05-12 17:05:45 --> Controller Class Initialized
+INFO - 2016-05-12 17:05:45 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:05:45 --> Model Class Initialized
+INFO - 2016-05-12 17:05:45 --> Model Class Initialized
+INFO - 2016-05-12 17:05:45 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addlibrary.php
+INFO - 2016-05-12 17:05:45 --> Final output sent to browser
+DEBUG - 2016-05-12 17:05:45 --> Total execution time: 0.0557
+INFO - 2016-05-12 17:06:25 --> Config Class Initialized
+INFO - 2016-05-12 17:06:25 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:25 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:25 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:25 --> URI Class Initialized
+INFO - 2016-05-12 17:06:25 --> Router Class Initialized
+INFO - 2016-05-12 17:06:25 --> Output Class Initialized
+INFO - 2016-05-12 17:06:25 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:25 --> Input Class Initialized
+INFO - 2016-05-12 17:06:25 --> Language Class Initialized
+INFO - 2016-05-12 17:06:25 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:25 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:25 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:25 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:25 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:25 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:25 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:25 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:25 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:25 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:25 --> Model Class Initialized
+INFO - 2016-05-12 17:06:25 --> Model Class Initialized
+INFO - 2016-05-12 17:06:25 --> Model Class Initialized
+INFO - 2016-05-12 17:06:25 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:25 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:25 --> Model Class Initialized
+INFO - 2016-05-12 17:06:25 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:06:25 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:06:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:06:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:06:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:06:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:06:25 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:25 --> Total execution time: 0.0570
+INFO - 2016-05-12 17:06:30 --> Config Class Initialized
+INFO - 2016-05-12 17:06:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:30 --> URI Class Initialized
+INFO - 2016-05-12 17:06:30 --> Router Class Initialized
+INFO - 2016-05-12 17:06:30 --> Output Class Initialized
+INFO - 2016-05-12 17:06:30 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:30 --> Input Class Initialized
+INFO - 2016-05-12 17:06:30 --> Language Class Initialized
+ERROR - 2016-05-12 17:06:30 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:06:30 --> Config Class Initialized
+INFO - 2016-05-12 17:06:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:30 --> URI Class Initialized
+INFO - 2016-05-12 17:06:30 --> Router Class Initialized
+INFO - 2016-05-12 17:06:30 --> Output Class Initialized
+INFO - 2016-05-12 17:06:30 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:30 --> Input Class Initialized
+INFO - 2016-05-12 17:06:30 --> Language Class Initialized
+INFO - 2016-05-12 17:06:30 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:30 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:30 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:30 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:30 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:30 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:30 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:30 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:30 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:30 --> Model Class Initialized
+INFO - 2016-05-12 17:06:30 --> Model Class Initialized
+INFO - 2016-05-12 17:06:30 --> Model Class Initialized
+INFO - 2016-05-12 17:06:30 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:30 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:06:30 --> Model Class Initialized
+INFO - 2016-05-12 17:06:30 --> Model Class Initialized
+INFO - 2016-05-12 17:06:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_library.php
+INFO - 2016-05-12 17:06:30 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:30 --> Total execution time: 0.0705
+INFO - 2016-05-12 17:06:36 --> Config Class Initialized
+INFO - 2016-05-12 17:06:36 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:36 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:36 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:36 --> URI Class Initialized
+INFO - 2016-05-12 17:06:36 --> Router Class Initialized
+INFO - 2016-05-12 17:06:36 --> Output Class Initialized
+INFO - 2016-05-12 17:06:36 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:36 --> Input Class Initialized
+INFO - 2016-05-12 17:06:36 --> Language Class Initialized
+ERROR - 2016-05-12 17:06:36 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:06:36 --> Config Class Initialized
+INFO - 2016-05-12 17:06:36 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:36 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:36 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:36 --> URI Class Initialized
+INFO - 2016-05-12 17:06:37 --> Router Class Initialized
+INFO - 2016-05-12 17:06:37 --> Output Class Initialized
+INFO - 2016-05-12 17:06:37 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:37 --> Input Class Initialized
+INFO - 2016-05-12 17:06:37 --> Language Class Initialized
+INFO - 2016-05-12 17:06:37 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:37 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:37 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:37 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:37 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:37 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:37 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:37 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:37 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:37 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:37 --> Model Class Initialized
+INFO - 2016-05-12 17:06:37 --> Model Class Initialized
+INFO - 2016-05-12 17:06:37 --> Model Class Initialized
+INFO - 2016-05-12 17:06:37 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:37 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:06:37 --> Model Class Initialized
+INFO - 2016-05-12 17:06:37 --> Model Class Initialized
+INFO - 2016-05-12 17:06:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_library.php
+INFO - 2016-05-12 17:06:37 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:37 --> Total execution time: 0.0501
+INFO - 2016-05-12 17:06:40 --> Config Class Initialized
+INFO - 2016-05-12 17:06:40 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:40 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:40 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:40 --> URI Class Initialized
+INFO - 2016-05-12 17:06:40 --> Router Class Initialized
+INFO - 2016-05-12 17:06:40 --> Output Class Initialized
+INFO - 2016-05-12 17:06:40 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:40 --> Input Class Initialized
+INFO - 2016-05-12 17:06:40 --> Language Class Initialized
+INFO - 2016-05-12 17:06:40 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:40 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:40 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:40 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:40 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:40 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:40 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:40 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:40 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:40 --> Model Class Initialized
+INFO - 2016-05-12 17:06:40 --> Model Class Initialized
+INFO - 2016-05-12 17:06:40 --> Model Class Initialized
+INFO - 2016-05-12 17:06:40 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:40 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:40 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:40 --> Model Class Initialized
+INFO - 2016-05-12 17:06:40 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:06:41 --> Config Class Initialized
+INFO - 2016-05-12 17:06:41 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:41 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:41 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:41 --> URI Class Initialized
+INFO - 2016-05-12 17:06:41 --> Router Class Initialized
+INFO - 2016-05-12 17:06:41 --> Output Class Initialized
+INFO - 2016-05-12 17:06:41 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:41 --> Input Class Initialized
+INFO - 2016-05-12 17:06:41 --> Language Class Initialized
+INFO - 2016-05-12 17:06:41 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:41 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:41 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:41 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:41 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:41 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:41 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:41 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:41 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:41 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:41 --> Model Class Initialized
+INFO - 2016-05-12 17:06:41 --> Model Class Initialized
+INFO - 2016-05-12 17:06:41 --> Model Class Initialized
+INFO - 2016-05-12 17:06:41 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:41 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:41 --> Model Class Initialized
+INFO - 2016-05-12 17:06:41 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:06:41 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:06:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:06:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:06:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:06:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:06:41 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:41 --> Total execution time: 0.0725
+INFO - 2016-05-12 17:06:42 --> Config Class Initialized
+INFO - 2016-05-12 17:06:42 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:42 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:42 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:42 --> URI Class Initialized
+INFO - 2016-05-12 17:06:42 --> Router Class Initialized
+INFO - 2016-05-12 17:06:42 --> Output Class Initialized
+INFO - 2016-05-12 17:06:42 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:42 --> Input Class Initialized
+INFO - 2016-05-12 17:06:42 --> Language Class Initialized
+INFO - 2016-05-12 17:06:42 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:42 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:42 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:42 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:42 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:42 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:42 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:42 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:42 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:42 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:42 --> Model Class Initialized
+INFO - 2016-05-12 17:06:42 --> Model Class Initialized
+INFO - 2016-05-12 17:06:42 --> Model Class Initialized
+INFO - 2016-05-12 17:06:42 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:42 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:42 --> Model Class Initialized
+INFO - 2016-05-12 17:06:42 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:06:42 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:06:42 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:06:42 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:06:42 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:06:42 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:06:42 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:42 --> Total execution time: 0.0572
+INFO - 2016-05-12 17:06:47 --> Config Class Initialized
+INFO - 2016-05-12 17:06:47 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:47 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:47 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:47 --> URI Class Initialized
+INFO - 2016-05-12 17:06:47 --> Router Class Initialized
+INFO - 2016-05-12 17:06:47 --> Output Class Initialized
+INFO - 2016-05-12 17:06:47 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:47 --> Input Class Initialized
+INFO - 2016-05-12 17:06:47 --> Language Class Initialized
+INFO - 2016-05-12 17:06:47 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:47 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:47 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:47 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:47 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:47 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:47 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:47 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:47 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:06:47 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:06:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:06:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:06:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:06:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:06:47 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:47 --> Total execution time: 0.0750
+INFO - 2016-05-12 17:06:47 --> Config Class Initialized
+INFO - 2016-05-12 17:06:47 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:47 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:47 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:47 --> URI Class Initialized
+INFO - 2016-05-12 17:06:47 --> Router Class Initialized
+INFO - 2016-05-12 17:06:47 --> Output Class Initialized
+INFO - 2016-05-12 17:06:47 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:47 --> Input Class Initialized
+INFO - 2016-05-12 17:06:47 --> Language Class Initialized
+INFO - 2016-05-12 17:06:47 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:47 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:47 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:47 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:47 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:47 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:47 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:47 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:47 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:47 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> Model Class Initialized
+INFO - 2016-05-12 17:06:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_library.php
+INFO - 2016-05-12 17:06:47 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:47 --> Total execution time: 0.0384
+INFO - 2016-05-12 17:06:49 --> Config Class Initialized
+INFO - 2016-05-12 17:06:49 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:49 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:49 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:49 --> URI Class Initialized
+INFO - 2016-05-12 17:06:49 --> Router Class Initialized
+INFO - 2016-05-12 17:06:49 --> Output Class Initialized
+INFO - 2016-05-12 17:06:49 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:49 --> Input Class Initialized
+INFO - 2016-05-12 17:06:49 --> Language Class Initialized
+INFO - 2016-05-12 17:06:49 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:49 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:49 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:49 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:49 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:49 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:49 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:49 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:49 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:49 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:49 --> Model Class Initialized
+INFO - 2016-05-12 17:06:49 --> Model Class Initialized
+INFO - 2016-05-12 17:06:49 --> Model Class Initialized
+INFO - 2016-05-12 17:06:49 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:49 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:49 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:49 --> Model Class Initialized
+INFO - 2016-05-12 17:06:49 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:06:49 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:49 --> Total execution time: 0.0537
+INFO - 2016-05-12 17:06:50 --> Config Class Initialized
+INFO - 2016-05-12 17:06:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:50 --> URI Class Initialized
+INFO - 2016-05-12 17:06:50 --> Router Class Initialized
+INFO - 2016-05-12 17:06:50 --> Output Class Initialized
+INFO - 2016-05-12 17:06:50 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:50 --> Input Class Initialized
+INFO - 2016-05-12 17:06:50 --> Language Class Initialized
+INFO - 2016-05-12 17:06:50 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:50 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:50 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:50 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:50 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:50 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:06:50 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:50 --> Total execution time: 0.0376
+INFO - 2016-05-12 17:06:50 --> Config Class Initialized
+INFO - 2016-05-12 17:06:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:50 --> URI Class Initialized
+INFO - 2016-05-12 17:06:50 --> Router Class Initialized
+INFO - 2016-05-12 17:06:50 --> Output Class Initialized
+INFO - 2016-05-12 17:06:50 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:50 --> Input Class Initialized
+INFO - 2016-05-12 17:06:50 --> Language Class Initialized
+INFO - 2016-05-12 17:06:50 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:50 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:50 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:50 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:50 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:50 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:50 --> Model Class Initialized
+INFO - 2016-05-12 17:06:50 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:06:50 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:50 --> Total execution time: 0.0588
+INFO - 2016-05-12 17:06:51 --> Config Class Initialized
+INFO - 2016-05-12 17:06:51 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:51 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:51 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:51 --> URI Class Initialized
+INFO - 2016-05-12 17:06:51 --> Router Class Initialized
+INFO - 2016-05-12 17:06:51 --> Output Class Initialized
+INFO - 2016-05-12 17:06:51 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:51 --> Input Class Initialized
+INFO - 2016-05-12 17:06:51 --> Language Class Initialized
+INFO - 2016-05-12 17:06:51 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:51 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:51 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:51 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:51 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:51 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:51 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:51 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:51 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:51 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:51 --> Model Class Initialized
+INFO - 2016-05-12 17:06:51 --> Model Class Initialized
+INFO - 2016-05-12 17:06:51 --> Model Class Initialized
+INFO - 2016-05-12 17:06:51 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:51 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:51 --> Model Class Initialized
+INFO - 2016-05-12 17:06:51 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:06:51 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:51 --> Total execution time: 0.0543
+INFO - 2016-05-12 17:06:57 --> Config Class Initialized
+INFO - 2016-05-12 17:06:57 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:06:57 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:06:57 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:06:57 --> URI Class Initialized
+INFO - 2016-05-12 17:06:57 --> Router Class Initialized
+INFO - 2016-05-12 17:06:57 --> Output Class Initialized
+INFO - 2016-05-12 17:06:57 --> Security Class Initialized
+DEBUG - 2016-05-12 17:06:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:06:57 --> Input Class Initialized
+INFO - 2016-05-12 17:06:57 --> Language Class Initialized
+INFO - 2016-05-12 17:06:57 --> Loader Class Initialized
+INFO - 2016-05-12 17:06:57 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:06:57 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:06:57 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:06:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:06:57 --> Pagination Class Initialized
+INFO - 2016-05-12 17:06:57 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:06:57 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:06:57 --> Email Class Initialized
+DEBUG - 2016-05-12 17:06:57 --> Upload Class Initialized
+INFO - 2016-05-12 17:06:57 --> Model Class Initialized
+INFO - 2016-05-12 17:06:57 --> Model Class Initialized
+INFO - 2016-05-12 17:06:57 --> Model Class Initialized
+INFO - 2016-05-12 17:06:57 --> Controller Class Initialized
+INFO - 2016-05-12 17:06:57 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:06:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:06:57 --> Model Class Initialized
+INFO - 2016-05-12 17:06:57 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:06:57 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:06:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:06:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:06:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:06:57 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:06:57 --> Final output sent to browser
+DEBUG - 2016-05-12 17:06:57 --> Total execution time: 0.0737
+INFO - 2016-05-12 17:07:03 --> Config Class Initialized
+INFO - 2016-05-12 17:07:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:07:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:07:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:07:03 --> URI Class Initialized
+INFO - 2016-05-12 17:07:03 --> Router Class Initialized
+INFO - 2016-05-12 17:07:03 --> Output Class Initialized
+INFO - 2016-05-12 17:07:03 --> Security Class Initialized
+DEBUG - 2016-05-12 17:07:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:07:03 --> Input Class Initialized
+INFO - 2016-05-12 17:07:03 --> Language Class Initialized
+ERROR - 2016-05-12 17:07:03 --> 404 Page Not Found: Professor/participate
+INFO - 2016-05-12 17:11:47 --> Config Class Initialized
+INFO - 2016-05-12 17:11:47 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:11:47 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:11:47 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:11:47 --> URI Class Initialized
+INFO - 2016-05-12 17:11:47 --> Router Class Initialized
+INFO - 2016-05-12 17:11:47 --> Output Class Initialized
+INFO - 2016-05-12 17:11:47 --> Security Class Initialized
+DEBUG - 2016-05-12 17:11:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:11:47 --> Input Class Initialized
+INFO - 2016-05-12 17:11:47 --> Language Class Initialized
+INFO - 2016-05-12 17:11:47 --> Loader Class Initialized
+INFO - 2016-05-12 17:11:47 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:11:47 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:11:47 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:11:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:11:47 --> Pagination Class Initialized
+INFO - 2016-05-12 17:11:47 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:11:47 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:11:47 --> Email Class Initialized
+DEBUG - 2016-05-12 17:11:47 --> Upload Class Initialized
+INFO - 2016-05-12 17:11:47 --> Model Class Initialized
+INFO - 2016-05-12 17:11:47 --> Model Class Initialized
+INFO - 2016-05-12 17:11:47 --> Model Class Initialized
+INFO - 2016-05-12 17:11:47 --> Controller Class Initialized
+INFO - 2016-05-12 17:11:47 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:11:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:11:47 --> Model Class Initialized
+INFO - 2016-05-12 17:11:47 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:11:47 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:11:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:11:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/participate.php
+INFO - 2016-05-12 17:11:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:11:47 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:11:47 --> Final output sent to browser
+DEBUG - 2016-05-12 17:11:47 --> Total execution time: 0.0606
+INFO - 2016-05-12 17:20:56 --> Config Class Initialized
+INFO - 2016-05-12 17:20:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:20:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:20:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:20:56 --> URI Class Initialized
+INFO - 2016-05-12 17:20:56 --> Router Class Initialized
+INFO - 2016-05-12 17:20:56 --> Output Class Initialized
+INFO - 2016-05-12 17:20:56 --> Security Class Initialized
+DEBUG - 2016-05-12 17:20:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:20:56 --> Input Class Initialized
+INFO - 2016-05-12 17:20:56 --> Language Class Initialized
+INFO - 2016-05-12 17:20:56 --> Loader Class Initialized
+INFO - 2016-05-12 17:20:56 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:20:56 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:20:56 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:20:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:20:56 --> Pagination Class Initialized
+INFO - 2016-05-12 17:20:56 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:20:56 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:20:56 --> Email Class Initialized
+DEBUG - 2016-05-12 17:20:56 --> Upload Class Initialized
+INFO - 2016-05-12 17:20:56 --> Model Class Initialized
+INFO - 2016-05-12 17:20:56 --> Model Class Initialized
+INFO - 2016-05-12 17:20:56 --> Model Class Initialized
+INFO - 2016-05-12 17:20:56 --> Controller Class Initialized
+INFO - 2016-05-12 17:20:56 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:20:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:20:56 --> Model Class Initialized
+INFO - 2016-05-12 17:20:56 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:20:56 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:20:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:20:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/participate.php
+INFO - 2016-05-12 17:20:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:20:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:20:56 --> Final output sent to browser
+DEBUG - 2016-05-12 17:20:56 --> Total execution time: 0.0742
+INFO - 2016-05-12 17:22:51 --> Config Class Initialized
+INFO - 2016-05-12 17:22:51 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:22:51 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:22:51 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:22:51 --> URI Class Initialized
+INFO - 2016-05-12 17:22:51 --> Router Class Initialized
+INFO - 2016-05-12 17:22:51 --> Output Class Initialized
+INFO - 2016-05-12 17:22:51 --> Security Class Initialized
+DEBUG - 2016-05-12 17:22:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:22:51 --> Input Class Initialized
+INFO - 2016-05-12 17:22:51 --> Language Class Initialized
+INFO - 2016-05-12 17:22:51 --> Loader Class Initialized
+INFO - 2016-05-12 17:22:51 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:22:51 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:22:51 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:22:51 --> Pagination Class Initialized
+INFO - 2016-05-12 17:22:51 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:22:51 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:22:51 --> Email Class Initialized
+DEBUG - 2016-05-12 17:22:51 --> Upload Class Initialized
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> Controller Class Initialized
+INFO - 2016-05-12 17:22:51 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:22:51 --> Config Class Initialized
+INFO - 2016-05-12 17:22:51 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:22:51 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:22:51 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:22:51 --> URI Class Initialized
+INFO - 2016-05-12 17:22:51 --> Router Class Initialized
+INFO - 2016-05-12 17:22:51 --> Output Class Initialized
+INFO - 2016-05-12 17:22:51 --> Security Class Initialized
+DEBUG - 2016-05-12 17:22:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:22:51 --> Input Class Initialized
+INFO - 2016-05-12 17:22:51 --> Language Class Initialized
+INFO - 2016-05-12 17:22:51 --> Loader Class Initialized
+INFO - 2016-05-12 17:22:51 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:22:51 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:22:51 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:22:51 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:22:51 --> Pagination Class Initialized
+INFO - 2016-05-12 17:22:51 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:22:51 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:22:51 --> Email Class Initialized
+DEBUG - 2016-05-12 17:22:51 --> Upload Class Initialized
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> Controller Class Initialized
+INFO - 2016-05-12 17:22:51 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:22:51 --> Model Class Initialized
+INFO - 2016-05-12 17:22:51 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/header.php
+INFO - 2016-05-12 17:22:51 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/user_login.php
+INFO - 2016-05-12 17:22:51 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/site/footer.php
+INFO - 2016-05-12 17:22:51 --> Final output sent to browser
+DEBUG - 2016-05-12 17:22:51 --> Total execution time: 0.0466
+INFO - 2016-05-12 17:22:59 --> Config Class Initialized
+INFO - 2016-05-12 17:22:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:22:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:22:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:22:59 --> URI Class Initialized
+INFO - 2016-05-12 17:22:59 --> Router Class Initialized
+INFO - 2016-05-12 17:22:59 --> Output Class Initialized
+INFO - 2016-05-12 17:22:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:22:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:22:59 --> Input Class Initialized
+INFO - 2016-05-12 17:22:59 --> Language Class Initialized
+INFO - 2016-05-12 17:22:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:22:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:22:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:22:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:22:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:22:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:22:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:22:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:22:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:22:59 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Config Class Initialized
+INFO - 2016-05-12 17:22:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:22:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:22:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:22:59 --> URI Class Initialized
+INFO - 2016-05-12 17:22:59 --> Router Class Initialized
+INFO - 2016-05-12 17:22:59 --> Output Class Initialized
+INFO - 2016-05-12 17:22:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:22:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:22:59 --> Input Class Initialized
+INFO - 2016-05-12 17:22:59 --> Language Class Initialized
+INFO - 2016-05-12 17:22:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:22:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:22:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:22:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:22:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:22:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:22:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:22:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:22:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:22:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:22:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:22:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:22:59 --> Model Class Initialized
+INFO - 2016-05-12 17:22:59 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:22:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:22:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/dashboard.php
+INFO - 2016-05-12 17:22:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:22:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:22:59 --> Final output sent to browser
+DEBUG - 2016-05-12 17:22:59 --> Total execution time: 0.0917
+INFO - 2016-05-12 17:23:05 --> Config Class Initialized
+INFO - 2016-05-12 17:23:05 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:05 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:05 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:05 --> URI Class Initialized
+INFO - 2016-05-12 17:23:05 --> Router Class Initialized
+INFO - 2016-05-12 17:23:05 --> Output Class Initialized
+INFO - 2016-05-12 17:23:05 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:05 --> Input Class Initialized
+INFO - 2016-05-12 17:23:05 --> Language Class Initialized
+INFO - 2016-05-12 17:23:05 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:05 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:05 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:05 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:05 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:05 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:05 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:05 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:05 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:05 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:05 --> Model Class Initialized
+INFO - 2016-05-12 17:23:05 --> Model Class Initialized
+INFO - 2016-05-12 17:23:05 --> Model Class Initialized
+INFO - 2016-05-12 17:23:05 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:05 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:05 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:05 --> Model Class Initialized
+INFO - 2016-05-12 17:23:05 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:23:05 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:23:05 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:23:05 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:23:05 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:23:05 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:23:05 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:05 --> Total execution time: 0.0694
+INFO - 2016-05-12 17:23:15 --> Config Class Initialized
+INFO - 2016-05-12 17:23:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:15 --> URI Class Initialized
+INFO - 2016-05-12 17:23:15 --> Router Class Initialized
+INFO - 2016-05-12 17:23:15 --> Output Class Initialized
+INFO - 2016-05-12 17:23:15 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:15 --> Input Class Initialized
+INFO - 2016-05-12 17:23:15 --> Language Class Initialized
+INFO - 2016-05-12 17:23:15 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:15 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:15 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:15 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:15 --> Model Class Initialized
+INFO - 2016-05-12 17:23:15 --> Model Class Initialized
+INFO - 2016-05-12 17:23:15 --> Model Class Initialized
+INFO - 2016-05-12 17:23:15 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:15 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:15 --> Model Class Initialized
+INFO - 2016-05-12 17:23:15 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:15 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:15 --> Total execution time: 0.0447
+INFO - 2016-05-12 17:23:16 --> Config Class Initialized
+INFO - 2016-05-12 17:23:16 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:16 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:16 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:16 --> URI Class Initialized
+INFO - 2016-05-12 17:23:16 --> Router Class Initialized
+INFO - 2016-05-12 17:23:16 --> Output Class Initialized
+INFO - 2016-05-12 17:23:16 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:16 --> Input Class Initialized
+INFO - 2016-05-12 17:23:16 --> Language Class Initialized
+INFO - 2016-05-12 17:23:16 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:16 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:16 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:16 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:16 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:16 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:16 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:16 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:16 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:16 --> Model Class Initialized
+INFO - 2016-05-12 17:23:16 --> Model Class Initialized
+INFO - 2016-05-12 17:23:16 --> Model Class Initialized
+INFO - 2016-05-12 17:23:16 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:16 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:16 --> Model Class Initialized
+INFO - 2016-05-12 17:23:16 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:16 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:16 --> Total execution time: 0.0523
+INFO - 2016-05-12 17:23:23 --> Config Class Initialized
+INFO - 2016-05-12 17:23:23 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:23 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:23 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:23 --> URI Class Initialized
+INFO - 2016-05-12 17:23:23 --> Router Class Initialized
+INFO - 2016-05-12 17:23:23 --> Output Class Initialized
+INFO - 2016-05-12 17:23:23 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:23 --> Input Class Initialized
+INFO - 2016-05-12 17:23:23 --> Language Class Initialized
+INFO - 2016-05-12 17:23:23 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:23 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:23 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:23 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:23 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:23 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:23 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:23 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:23 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:23 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:23 --> Model Class Initialized
+INFO - 2016-05-12 17:23:23 --> Model Class Initialized
+INFO - 2016-05-12 17:23:23 --> Model Class Initialized
+INFO - 2016-05-12 17:23:23 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:23 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:23 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:23 --> Model Class Initialized
+INFO - 2016-05-12 17:23:23 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:23 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:23:23 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:23 --> Total execution time: 0.1051
+INFO - 2016-05-12 17:23:25 --> Config Class Initialized
+INFO - 2016-05-12 17:23:25 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:25 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:25 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:25 --> URI Class Initialized
+INFO - 2016-05-12 17:23:25 --> Router Class Initialized
+INFO - 2016-05-12 17:23:25 --> Output Class Initialized
+INFO - 2016-05-12 17:23:25 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:25 --> Input Class Initialized
+INFO - 2016-05-12 17:23:25 --> Language Class Initialized
+INFO - 2016-05-12 17:23:25 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:25 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:25 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:25 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:25 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:25 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:25 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:25 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:25 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:25 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:25 --> Model Class Initialized
+INFO - 2016-05-12 17:23:25 --> Model Class Initialized
+INFO - 2016-05-12 17:23:25 --> Model Class Initialized
+INFO - 2016-05-12 17:23:25 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:25 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:25 --> Model Class Initialized
+INFO - 2016-05-12 17:23:25 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:25 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:23:25 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:25 --> Total execution time: 0.0751
+INFO - 2016-05-12 17:23:27 --> Config Class Initialized
+INFO - 2016-05-12 17:23:27 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:27 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:27 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:27 --> URI Class Initialized
+INFO - 2016-05-12 17:23:27 --> Router Class Initialized
+INFO - 2016-05-12 17:23:27 --> Output Class Initialized
+INFO - 2016-05-12 17:23:27 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:27 --> Input Class Initialized
+INFO - 2016-05-12 17:23:27 --> Language Class Initialized
+INFO - 2016-05-12 17:23:27 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:27 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:27 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:27 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:27 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:27 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:27 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:27 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:27 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:27 --> Model Class Initialized
+INFO - 2016-05-12 17:23:27 --> Model Class Initialized
+INFO - 2016-05-12 17:23:27 --> Model Class Initialized
+INFO - 2016-05-12 17:23:27 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:27 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:27 --> Model Class Initialized
+INFO - 2016-05-12 17:23:27 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:28 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:23:28 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:28 --> Total execution time: 0.0581
+INFO - 2016-05-12 17:23:30 --> Config Class Initialized
+INFO - 2016-05-12 17:23:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:30 --> URI Class Initialized
+INFO - 2016-05-12 17:23:30 --> Router Class Initialized
+INFO - 2016-05-12 17:23:30 --> Output Class Initialized
+INFO - 2016-05-12 17:23:30 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:30 --> Input Class Initialized
+INFO - 2016-05-12 17:23:30 --> Language Class Initialized
+INFO - 2016-05-12 17:23:30 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:30 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:30 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:30 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:30 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:30 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:30 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:30 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:30 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:30 --> Model Class Initialized
+INFO - 2016-05-12 17:23:30 --> Model Class Initialized
+INFO - 2016-05-12 17:23:30 --> Model Class Initialized
+INFO - 2016-05-12 17:23:30 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:30 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:30 --> Model Class Initialized
+INFO - 2016-05-12 17:23:30 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:23:30 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:30 --> Total execution time: 0.0677
+INFO - 2016-05-12 17:23:39 --> Config Class Initialized
+INFO - 2016-05-12 17:23:39 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:39 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:39 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:39 --> URI Class Initialized
+INFO - 2016-05-12 17:23:39 --> Router Class Initialized
+INFO - 2016-05-12 17:23:39 --> Output Class Initialized
+INFO - 2016-05-12 17:23:39 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:39 --> Input Class Initialized
+INFO - 2016-05-12 17:23:39 --> Language Class Initialized
+INFO - 2016-05-12 17:23:39 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:39 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:39 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:39 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:39 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:39 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:39 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:39 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:39 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:39 --> Model Class Initialized
+INFO - 2016-05-12 17:23:39 --> Model Class Initialized
+INFO - 2016-05-12 17:23:39 --> Model Class Initialized
+INFO - 2016-05-12 17:23:39 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:39 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:39 --> Model Class Initialized
+INFO - 2016-05-12 17:23:39 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:23:39 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:23:39 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:23:39 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:23:39 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:23:39 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:23:39 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:39 --> Total execution time: 0.1048
+INFO - 2016-05-12 17:23:46 --> Config Class Initialized
+INFO - 2016-05-12 17:23:46 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:46 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:46 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:46 --> URI Class Initialized
+INFO - 2016-05-12 17:23:46 --> Router Class Initialized
+INFO - 2016-05-12 17:23:46 --> Output Class Initialized
+INFO - 2016-05-12 17:23:46 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:46 --> Input Class Initialized
+INFO - 2016-05-12 17:23:46 --> Language Class Initialized
+INFO - 2016-05-12 17:23:46 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:46 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:46 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:46 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:46 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:46 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:46 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:46 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:46 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:46 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:46 --> Model Class Initialized
+INFO - 2016-05-12 17:23:46 --> Model Class Initialized
+INFO - 2016-05-12 17:23:46 --> Model Class Initialized
+INFO - 2016-05-12 17:23:46 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:46 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:46 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:46 --> Model Class Initialized
+INFO - 2016-05-12 17:23:46 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:46 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:46 --> Total execution time: 0.0530
+INFO - 2016-05-12 17:23:47 --> Config Class Initialized
+INFO - 2016-05-12 17:23:47 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:47 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:47 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:47 --> URI Class Initialized
+INFO - 2016-05-12 17:23:47 --> Router Class Initialized
+INFO - 2016-05-12 17:23:47 --> Output Class Initialized
+INFO - 2016-05-12 17:23:47 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:47 --> Input Class Initialized
+INFO - 2016-05-12 17:23:47 --> Language Class Initialized
+INFO - 2016-05-12 17:23:47 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:47 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:47 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:47 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:47 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:47 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:47 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:47 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:47 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:47 --> Model Class Initialized
+INFO - 2016-05-12 17:23:47 --> Model Class Initialized
+INFO - 2016-05-12 17:23:47 --> Model Class Initialized
+INFO - 2016-05-12 17:23:47 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:47 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:47 --> Model Class Initialized
+INFO - 2016-05-12 17:23:47 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:47 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:47 --> Total execution time: 0.0846
+INFO - 2016-05-12 17:23:49 --> Config Class Initialized
+INFO - 2016-05-12 17:23:49 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:49 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:49 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:49 --> URI Class Initialized
+INFO - 2016-05-12 17:23:49 --> Router Class Initialized
+INFO - 2016-05-12 17:23:49 --> Output Class Initialized
+INFO - 2016-05-12 17:23:49 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:49 --> Input Class Initialized
+INFO - 2016-05-12 17:23:49 --> Language Class Initialized
+INFO - 2016-05-12 17:23:49 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:49 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:49 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:49 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:49 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:49 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:49 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:49 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:49 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:49 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:49 --> Model Class Initialized
+INFO - 2016-05-12 17:23:49 --> Model Class Initialized
+INFO - 2016-05-12 17:23:49 --> Model Class Initialized
+INFO - 2016-05-12 17:23:49 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:49 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:49 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:49 --> Model Class Initialized
+INFO - 2016-05-12 17:23:49 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:49 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:49 --> Total execution time: 0.0485
+INFO - 2016-05-12 17:23:54 --> Config Class Initialized
+INFO - 2016-05-12 17:23:54 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:23:54 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:23:54 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:23:54 --> URI Class Initialized
+INFO - 2016-05-12 17:23:54 --> Router Class Initialized
+INFO - 2016-05-12 17:23:54 --> Output Class Initialized
+INFO - 2016-05-12 17:23:54 --> Security Class Initialized
+DEBUG - 2016-05-12 17:23:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:23:54 --> Input Class Initialized
+INFO - 2016-05-12 17:23:54 --> Language Class Initialized
+INFO - 2016-05-12 17:23:54 --> Loader Class Initialized
+INFO - 2016-05-12 17:23:54 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:23:54 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:23:54 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:23:54 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:23:54 --> Pagination Class Initialized
+INFO - 2016-05-12 17:23:54 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:23:54 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:23:54 --> Email Class Initialized
+DEBUG - 2016-05-12 17:23:54 --> Upload Class Initialized
+INFO - 2016-05-12 17:23:54 --> Model Class Initialized
+INFO - 2016-05-12 17:23:54 --> Model Class Initialized
+INFO - 2016-05-12 17:23:54 --> Model Class Initialized
+INFO - 2016-05-12 17:23:54 --> Controller Class Initialized
+INFO - 2016-05-12 17:23:54 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:23:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:23:54 --> Model Class Initialized
+INFO - 2016-05-12 17:23:54 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:23:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:23:54 --> Final output sent to browser
+DEBUG - 2016-05-12 17:23:54 --> Total execution time: 0.1027
+INFO - 2016-05-12 17:24:07 --> Config Class Initialized
+INFO - 2016-05-12 17:24:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:24:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:24:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:24:07 --> URI Class Initialized
+INFO - 2016-05-12 17:24:07 --> Router Class Initialized
+INFO - 2016-05-12 17:24:07 --> Output Class Initialized
+INFO - 2016-05-12 17:24:07 --> Security Class Initialized
+DEBUG - 2016-05-12 17:24:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:24:07 --> Input Class Initialized
+INFO - 2016-05-12 17:24:07 --> Language Class Initialized
+INFO - 2016-05-12 17:24:07 --> Loader Class Initialized
+INFO - 2016-05-12 17:24:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:24:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:24:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:24:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:24:07 --> Pagination Class Initialized
+INFO - 2016-05-12 17:24:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:24:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:24:07 --> Email Class Initialized
+DEBUG - 2016-05-12 17:24:07 --> Upload Class Initialized
+INFO - 2016-05-12 17:24:07 --> Model Class Initialized
+INFO - 2016-05-12 17:24:07 --> Model Class Initialized
+INFO - 2016-05-12 17:24:07 --> Model Class Initialized
+INFO - 2016-05-12 17:24:07 --> Controller Class Initialized
+INFO - 2016-05-12 17:24:07 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:24:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:24:07 --> Model Class Initialized
+INFO - 2016-05-12 17:24:07 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:24:07 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:24:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:24:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:24:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:24:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:24:07 --> Final output sent to browser
+DEBUG - 2016-05-12 17:24:07 --> Total execution time: 0.0832
+INFO - 2016-05-12 17:24:08 --> Config Class Initialized
+INFO - 2016-05-12 17:24:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:24:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:24:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:24:08 --> URI Class Initialized
+INFO - 2016-05-12 17:24:08 --> Router Class Initialized
+INFO - 2016-05-12 17:24:08 --> Output Class Initialized
+INFO - 2016-05-12 17:24:08 --> Security Class Initialized
+DEBUG - 2016-05-12 17:24:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:24:08 --> Input Class Initialized
+INFO - 2016-05-12 17:24:08 --> Language Class Initialized
+INFO - 2016-05-12 17:24:08 --> Loader Class Initialized
+INFO - 2016-05-12 17:24:08 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:24:08 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:24:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:24:08 --> Pagination Class Initialized
+INFO - 2016-05-12 17:24:08 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:24:08 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:24:08 --> Email Class Initialized
+DEBUG - 2016-05-12 17:24:08 --> Upload Class Initialized
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Controller Class Initialized
+INFO - 2016-05-12 17:24:08 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:24:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:24:08 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:24:08 --> Final output sent to browser
+DEBUG - 2016-05-12 17:24:08 --> Total execution time: 0.0862
+INFO - 2016-05-12 17:24:08 --> Config Class Initialized
+INFO - 2016-05-12 17:24:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:24:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:24:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:24:08 --> URI Class Initialized
+INFO - 2016-05-12 17:24:08 --> Router Class Initialized
+INFO - 2016-05-12 17:24:08 --> Output Class Initialized
+INFO - 2016-05-12 17:24:08 --> Security Class Initialized
+DEBUG - 2016-05-12 17:24:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:24:08 --> Input Class Initialized
+INFO - 2016-05-12 17:24:08 --> Language Class Initialized
+INFO - 2016-05-12 17:24:08 --> Loader Class Initialized
+INFO - 2016-05-12 17:24:08 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:24:08 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:24:08 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:24:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:24:08 --> Pagination Class Initialized
+INFO - 2016-05-12 17:24:08 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:24:08 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:24:08 --> Email Class Initialized
+DEBUG - 2016-05-12 17:24:08 --> Upload Class Initialized
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Controller Class Initialized
+INFO - 2016-05-12 17:24:08 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:24:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:24:08 --> Model Class Initialized
+INFO - 2016-05-12 17:24:08 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:24:08 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:24:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:24:08 --> Final output sent to browser
+DEBUG - 2016-05-12 17:24:08 --> Total execution time: 0.0885
+INFO - 2016-05-12 17:24:15 --> Config Class Initialized
+INFO - 2016-05-12 17:24:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:24:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:24:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:24:15 --> URI Class Initialized
+INFO - 2016-05-12 17:24:15 --> Router Class Initialized
+INFO - 2016-05-12 17:24:15 --> Output Class Initialized
+INFO - 2016-05-12 17:24:15 --> Security Class Initialized
+DEBUG - 2016-05-12 17:24:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:24:15 --> Input Class Initialized
+INFO - 2016-05-12 17:24:15 --> Language Class Initialized
+ERROR - 2016-05-12 17:24:15 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:24:15 --> Config Class Initialized
+INFO - 2016-05-12 17:24:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:24:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:24:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:24:15 --> URI Class Initialized
+INFO - 2016-05-12 17:24:15 --> Router Class Initialized
+INFO - 2016-05-12 17:24:15 --> Output Class Initialized
+INFO - 2016-05-12 17:24:15 --> Security Class Initialized
+DEBUG - 2016-05-12 17:24:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:24:15 --> Input Class Initialized
+INFO - 2016-05-12 17:24:15 --> Language Class Initialized
+INFO - 2016-05-12 17:24:15 --> Loader Class Initialized
+INFO - 2016-05-12 17:24:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:24:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:24:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:24:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:24:15 --> Pagination Class Initialized
+INFO - 2016-05-12 17:24:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:24:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:24:15 --> Email Class Initialized
+DEBUG - 2016-05-12 17:24:15 --> Upload Class Initialized
+INFO - 2016-05-12 17:24:15 --> Model Class Initialized
+INFO - 2016-05-12 17:24:15 --> Model Class Initialized
+INFO - 2016-05-12 17:24:15 --> Model Class Initialized
+INFO - 2016-05-12 17:24:15 --> Controller Class Initialized
+INFO - 2016-05-12 17:24:15 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:24:15 --> Model Class Initialized
+INFO - 2016-05-12 17:24:15 --> Model Class Initialized
+INFO - 2016-05-12 17:24:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_project.php
+INFO - 2016-05-12 17:24:15 --> Final output sent to browser
+DEBUG - 2016-05-12 17:24:15 --> Total execution time: 0.0574
+INFO - 2016-05-12 17:25:35 --> Config Class Initialized
+INFO - 2016-05-12 17:25:35 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:25:35 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:25:35 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:25:35 --> URI Class Initialized
+INFO - 2016-05-12 17:25:35 --> Router Class Initialized
+INFO - 2016-05-12 17:25:35 --> Output Class Initialized
+INFO - 2016-05-12 17:25:35 --> Security Class Initialized
+DEBUG - 2016-05-12 17:25:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:25:35 --> Input Class Initialized
+INFO - 2016-05-12 17:25:35 --> Language Class Initialized
+INFO - 2016-05-12 17:25:35 --> Loader Class Initialized
+INFO - 2016-05-12 17:25:35 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:25:35 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:25:35 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:25:35 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:25:35 --> Pagination Class Initialized
+INFO - 2016-05-12 17:25:35 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:25:35 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:25:35 --> Email Class Initialized
+DEBUG - 2016-05-12 17:25:35 --> Upload Class Initialized
+INFO - 2016-05-12 17:25:35 --> Model Class Initialized
+INFO - 2016-05-12 17:25:35 --> Model Class Initialized
+INFO - 2016-05-12 17:25:35 --> Model Class Initialized
+INFO - 2016-05-12 17:25:35 --> Controller Class Initialized
+INFO - 2016-05-12 17:25:35 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:25:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:25:35 --> Model Class Initialized
+INFO - 2016-05-12 17:25:35 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:25:35 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:25:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:25:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:25:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:25:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:25:35 --> Final output sent to browser
+DEBUG - 2016-05-12 17:25:35 --> Total execution time: 0.0799
+INFO - 2016-05-12 17:25:51 --> Config Class Initialized
+INFO - 2016-05-12 17:25:51 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:25:51 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:25:51 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:25:51 --> URI Class Initialized
+INFO - 2016-05-12 17:25:51 --> Router Class Initialized
+INFO - 2016-05-12 17:25:51 --> Output Class Initialized
+INFO - 2016-05-12 17:25:51 --> Security Class Initialized
+DEBUG - 2016-05-12 17:25:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:25:51 --> Input Class Initialized
+INFO - 2016-05-12 17:25:51 --> Language Class Initialized
+INFO - 2016-05-12 17:25:51 --> Loader Class Initialized
+INFO - 2016-05-12 17:25:51 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:25:51 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:25:51 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:25:51 --> Pagination Class Initialized
+INFO - 2016-05-12 17:25:51 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:25:51 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:25:51 --> Email Class Initialized
+DEBUG - 2016-05-12 17:25:51 --> Upload Class Initialized
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Controller Class Initialized
+INFO - 2016-05-12 17:25:51 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:25:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:25:51 --> Final output sent to browser
+DEBUG - 2016-05-12 17:25:51 --> Total execution time: 0.0509
+INFO - 2016-05-12 17:25:51 --> Config Class Initialized
+INFO - 2016-05-12 17:25:51 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:25:51 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:25:51 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:25:51 --> URI Class Initialized
+INFO - 2016-05-12 17:25:51 --> Router Class Initialized
+INFO - 2016-05-12 17:25:51 --> Output Class Initialized
+INFO - 2016-05-12 17:25:51 --> Security Class Initialized
+DEBUG - 2016-05-12 17:25:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:25:51 --> Input Class Initialized
+INFO - 2016-05-12 17:25:51 --> Language Class Initialized
+INFO - 2016-05-12 17:25:51 --> Loader Class Initialized
+INFO - 2016-05-12 17:25:51 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:25:51 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:25:51 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:25:51 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:25:51 --> Pagination Class Initialized
+INFO - 2016-05-12 17:25:51 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:25:51 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:25:51 --> Email Class Initialized
+DEBUG - 2016-05-12 17:25:51 --> Upload Class Initialized
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Controller Class Initialized
+INFO - 2016-05-12 17:25:51 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:25:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:25:51 --> Model Class Initialized
+INFO - 2016-05-12 17:25:51 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:25:51 --> Final output sent to browser
+DEBUG - 2016-05-12 17:25:51 --> Total execution time: 0.0527
+INFO - 2016-05-12 17:25:52 --> Config Class Initialized
+INFO - 2016-05-12 17:25:52 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:25:52 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:25:52 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:25:52 --> URI Class Initialized
+INFO - 2016-05-12 17:25:52 --> Router Class Initialized
+INFO - 2016-05-12 17:25:52 --> Output Class Initialized
+INFO - 2016-05-12 17:25:52 --> Security Class Initialized
+DEBUG - 2016-05-12 17:25:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:25:52 --> Input Class Initialized
+INFO - 2016-05-12 17:25:52 --> Language Class Initialized
+INFO - 2016-05-12 17:25:52 --> Loader Class Initialized
+INFO - 2016-05-12 17:25:52 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:25:52 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:25:52 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:25:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:25:52 --> Pagination Class Initialized
+INFO - 2016-05-12 17:25:52 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:25:52 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:25:52 --> Email Class Initialized
+DEBUG - 2016-05-12 17:25:52 --> Upload Class Initialized
+INFO - 2016-05-12 17:25:52 --> Model Class Initialized
+INFO - 2016-05-12 17:25:52 --> Model Class Initialized
+INFO - 2016-05-12 17:25:52 --> Model Class Initialized
+INFO - 2016-05-12 17:25:52 --> Controller Class Initialized
+INFO - 2016-05-12 17:25:52 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:25:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:25:52 --> Model Class Initialized
+INFO - 2016-05-12 17:25:52 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:25:52 --> Final output sent to browser
+DEBUG - 2016-05-12 17:25:52 --> Total execution time: 0.0777
+INFO - 2016-05-12 17:25:56 --> Config Class Initialized
+INFO - 2016-05-12 17:25:56 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:25:56 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:25:56 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:25:56 --> URI Class Initialized
+INFO - 2016-05-12 17:25:56 --> Router Class Initialized
+INFO - 2016-05-12 17:25:56 --> Output Class Initialized
+INFO - 2016-05-12 17:25:56 --> Security Class Initialized
+DEBUG - 2016-05-12 17:25:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:25:56 --> Input Class Initialized
+INFO - 2016-05-12 17:25:56 --> Language Class Initialized
+INFO - 2016-05-12 17:25:56 --> Loader Class Initialized
+INFO - 2016-05-12 17:25:56 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:25:56 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:25:56 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:25:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:25:56 --> Pagination Class Initialized
+INFO - 2016-05-12 17:25:56 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:25:56 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:25:56 --> Email Class Initialized
+DEBUG - 2016-05-12 17:25:56 --> Upload Class Initialized
+INFO - 2016-05-12 17:25:56 --> Model Class Initialized
+INFO - 2016-05-12 17:25:56 --> Model Class Initialized
+INFO - 2016-05-12 17:25:56 --> Model Class Initialized
+INFO - 2016-05-12 17:25:56 --> Controller Class Initialized
+INFO - 2016-05-12 17:25:56 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:25:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:25:56 --> Model Class Initialized
+INFO - 2016-05-12 17:25:56 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:25:56 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:25:56 --> Final output sent to browser
+DEBUG - 2016-05-12 17:25:56 --> Total execution time: 0.0599
+INFO - 2016-05-12 17:26:14 --> Config Class Initialized
+INFO - 2016-05-12 17:26:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:14 --> URI Class Initialized
+INFO - 2016-05-12 17:26:14 --> Router Class Initialized
+INFO - 2016-05-12 17:26:14 --> Output Class Initialized
+INFO - 2016-05-12 17:26:14 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:14 --> Input Class Initialized
+INFO - 2016-05-12 17:26:14 --> Language Class Initialized
+INFO - 2016-05-12 17:26:14 --> Loader Class Initialized
+INFO - 2016-05-12 17:26:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:26:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:26:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:26:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:26:14 --> Pagination Class Initialized
+INFO - 2016-05-12 17:26:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:26:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:26:14 --> Email Class Initialized
+DEBUG - 2016-05-12 17:26:14 --> Upload Class Initialized
+INFO - 2016-05-12 17:26:14 --> Model Class Initialized
+INFO - 2016-05-12 17:26:14 --> Model Class Initialized
+INFO - 2016-05-12 17:26:14 --> Model Class Initialized
+INFO - 2016-05-12 17:26:14 --> Controller Class Initialized
+INFO - 2016-05-12 17:26:14 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:26:14 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:26:14 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:26:14 --> Final output sent to browser
+DEBUG - 2016-05-12 17:26:14 --> Total execution time: 0.1747
+ERROR - 2016-05-12 17:26:14 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 17:26:14 --> Config Class Initialized
+INFO - 2016-05-12 17:26:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:14 --> URI Class Initialized
+INFO - 2016-05-12 17:26:14 --> Router Class Initialized
+INFO - 2016-05-12 17:26:14 --> Output Class Initialized
+INFO - 2016-05-12 17:26:14 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:14 --> Input Class Initialized
+INFO - 2016-05-12 17:26:14 --> Language Class Initialized
+ERROR - 2016-05-12 17:26:14 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:26:17 --> Config Class Initialized
+INFO - 2016-05-12 17:26:17 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:17 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:17 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:17 --> URI Class Initialized
+INFO - 2016-05-12 17:26:17 --> Router Class Initialized
+INFO - 2016-05-12 17:26:17 --> Output Class Initialized
+INFO - 2016-05-12 17:26:17 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:17 --> Input Class Initialized
+INFO - 2016-05-12 17:26:17 --> Language Class Initialized
+INFO - 2016-05-12 17:26:17 --> Loader Class Initialized
+INFO - 2016-05-12 17:26:17 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:26:17 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:26:17 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:26:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:26:17 --> Pagination Class Initialized
+INFO - 2016-05-12 17:26:17 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:26:17 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:26:17 --> Email Class Initialized
+DEBUG - 2016-05-12 17:26:17 --> Upload Class Initialized
+INFO - 2016-05-12 17:26:17 --> Model Class Initialized
+INFO - 2016-05-12 17:26:17 --> Model Class Initialized
+INFO - 2016-05-12 17:26:17 --> Model Class Initialized
+INFO - 2016-05-12 17:26:17 --> Controller Class Initialized
+INFO - 2016-05-12 17:26:17 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:26:17 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:26:17 --> Final output sent to browser
+DEBUG - 2016-05-12 17:26:17 --> Total execution time: 0.0470
+INFO - 2016-05-12 17:26:18 --> Config Class Initialized
+INFO - 2016-05-12 17:26:18 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:18 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:18 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:18 --> URI Class Initialized
+INFO - 2016-05-12 17:26:18 --> Router Class Initialized
+INFO - 2016-05-12 17:26:18 --> Output Class Initialized
+INFO - 2016-05-12 17:26:18 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:18 --> Input Class Initialized
+INFO - 2016-05-12 17:26:18 --> Language Class Initialized
+INFO - 2016-05-12 17:26:18 --> Loader Class Initialized
+INFO - 2016-05-12 17:26:18 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:26:18 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:26:18 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:26:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:26:18 --> Pagination Class Initialized
+INFO - 2016-05-12 17:26:18 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:26:18 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:26:18 --> Email Class Initialized
+DEBUG - 2016-05-12 17:26:18 --> Upload Class Initialized
+INFO - 2016-05-12 17:26:18 --> Model Class Initialized
+INFO - 2016-05-12 17:26:18 --> Model Class Initialized
+INFO - 2016-05-12 17:26:18 --> Model Class Initialized
+INFO - 2016-05-12 17:26:18 --> Controller Class Initialized
+INFO - 2016-05-12 17:26:18 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:26:18 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:26:18 --> Final output sent to browser
+DEBUG - 2016-05-12 17:26:18 --> Total execution time: 0.0519
+INFO - 2016-05-12 17:26:21 --> Config Class Initialized
+INFO - 2016-05-12 17:26:21 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:21 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:21 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:21 --> URI Class Initialized
+INFO - 2016-05-12 17:26:21 --> Router Class Initialized
+INFO - 2016-05-12 17:26:21 --> Output Class Initialized
+INFO - 2016-05-12 17:26:21 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:21 --> Input Class Initialized
+INFO - 2016-05-12 17:26:21 --> Language Class Initialized
+INFO - 2016-05-12 17:26:21 --> Loader Class Initialized
+INFO - 2016-05-12 17:26:21 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:26:21 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:26:21 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:26:21 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:26:21 --> Pagination Class Initialized
+INFO - 2016-05-12 17:26:21 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:26:21 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:26:21 --> Email Class Initialized
+DEBUG - 2016-05-12 17:26:21 --> Upload Class Initialized
+INFO - 2016-05-12 17:26:21 --> Model Class Initialized
+INFO - 2016-05-12 17:26:21 --> Model Class Initialized
+INFO - 2016-05-12 17:26:21 --> Model Class Initialized
+INFO - 2016-05-12 17:26:21 --> Controller Class Initialized
+INFO - 2016-05-12 17:26:21 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:26:21 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:26:21 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:26:21 --> Final output sent to browser
+DEBUG - 2016-05-12 17:26:21 --> Total execution time: 0.0814
+INFO - 2016-05-12 17:26:26 --> Config Class Initialized
+INFO - 2016-05-12 17:26:26 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:26 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:26 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:26 --> URI Class Initialized
+INFO - 2016-05-12 17:26:26 --> Router Class Initialized
+INFO - 2016-05-12 17:26:26 --> Output Class Initialized
+INFO - 2016-05-12 17:26:26 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:26 --> Input Class Initialized
+INFO - 2016-05-12 17:26:26 --> Language Class Initialized
+INFO - 2016-05-12 17:26:26 --> Loader Class Initialized
+INFO - 2016-05-12 17:26:26 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:26:26 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:26:26 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:26:26 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:26:26 --> Pagination Class Initialized
+INFO - 2016-05-12 17:26:26 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:26:26 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:26:26 --> Email Class Initialized
+DEBUG - 2016-05-12 17:26:26 --> Upload Class Initialized
+INFO - 2016-05-12 17:26:26 --> Model Class Initialized
+INFO - 2016-05-12 17:26:26 --> Model Class Initialized
+INFO - 2016-05-12 17:26:26 --> Model Class Initialized
+INFO - 2016-05-12 17:26:26 --> Controller Class Initialized
+INFO - 2016-05-12 17:26:26 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:26:26 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:26:26 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:26:26 --> Final output sent to browser
+DEBUG - 2016-05-12 17:26:26 --> Total execution time: 0.0774
+INFO - 2016-05-12 17:26:26 --> Config Class Initialized
+INFO - 2016-05-12 17:26:26 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:26:26 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:26:26 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:26:26 --> URI Class Initialized
+INFO - 2016-05-12 17:26:26 --> Router Class Initialized
+INFO - 2016-05-12 17:26:26 --> Output Class Initialized
+INFO - 2016-05-12 17:26:26 --> Security Class Initialized
+DEBUG - 2016-05-12 17:26:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:26:26 --> Input Class Initialized
+INFO - 2016-05-12 17:26:26 --> Language Class Initialized
+ERROR - 2016-05-12 17:26:26 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:28:01 --> Config Class Initialized
+INFO - 2016-05-12 17:28:01 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:01 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:01 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:01 --> URI Class Initialized
+INFO - 2016-05-12 17:28:01 --> Router Class Initialized
+INFO - 2016-05-12 17:28:01 --> Output Class Initialized
+INFO - 2016-05-12 17:28:01 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:01 --> Input Class Initialized
+INFO - 2016-05-12 17:28:01 --> Language Class Initialized
+INFO - 2016-05-12 17:28:01 --> Loader Class Initialized
+INFO - 2016-05-12 17:28:01 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:28:01 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:28:01 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:28:01 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:28:01 --> Pagination Class Initialized
+INFO - 2016-05-12 17:28:01 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:28:01 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:28:01 --> Email Class Initialized
+DEBUG - 2016-05-12 17:28:01 --> Upload Class Initialized
+INFO - 2016-05-12 17:28:01 --> Model Class Initialized
+INFO - 2016-05-12 17:28:01 --> Model Class Initialized
+INFO - 2016-05-12 17:28:01 --> Model Class Initialized
+INFO - 2016-05-12 17:28:01 --> Controller Class Initialized
+INFO - 2016-05-12 17:28:01 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:28:01 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:28:01 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:28:01 --> Final output sent to browser
+DEBUG - 2016-05-12 17:28:01 --> Total execution time: 0.0767
+INFO - 2016-05-12 17:28:01 --> Config Class Initialized
+INFO - 2016-05-12 17:28:01 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:01 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:01 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:01 --> URI Class Initialized
+INFO - 2016-05-12 17:28:01 --> Router Class Initialized
+INFO - 2016-05-12 17:28:01 --> Output Class Initialized
+INFO - 2016-05-12 17:28:01 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:01 --> Input Class Initialized
+INFO - 2016-05-12 17:28:01 --> Language Class Initialized
+ERROR - 2016-05-12 17:28:01 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:28:03 --> Config Class Initialized
+INFO - 2016-05-12 17:28:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:03 --> URI Class Initialized
+INFO - 2016-05-12 17:28:03 --> Router Class Initialized
+INFO - 2016-05-12 17:28:03 --> Output Class Initialized
+INFO - 2016-05-12 17:28:03 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:03 --> Input Class Initialized
+INFO - 2016-05-12 17:28:03 --> Language Class Initialized
+ERROR - 2016-05-12 17:28:03 --> 404 Page Not Found: Admin/img
+INFO - 2016-05-12 17:28:04 --> Config Class Initialized
+INFO - 2016-05-12 17:28:04 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:04 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:04 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:04 --> URI Class Initialized
+INFO - 2016-05-12 17:28:04 --> Router Class Initialized
+INFO - 2016-05-12 17:28:04 --> Output Class Initialized
+INFO - 2016-05-12 17:28:04 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:04 --> Input Class Initialized
+INFO - 2016-05-12 17:28:04 --> Language Class Initialized
+INFO - 2016-05-12 17:28:04 --> Loader Class Initialized
+INFO - 2016-05-12 17:28:04 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:28:04 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:28:04 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:28:04 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:28:04 --> Pagination Class Initialized
+INFO - 2016-05-12 17:28:04 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:28:04 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:28:04 --> Email Class Initialized
+DEBUG - 2016-05-12 17:28:04 --> Upload Class Initialized
+INFO - 2016-05-12 17:28:04 --> Model Class Initialized
+INFO - 2016-05-12 17:28:04 --> Model Class Initialized
+INFO - 2016-05-12 17:28:04 --> Model Class Initialized
+INFO - 2016-05-12 17:28:04 --> Controller Class Initialized
+INFO - 2016-05-12 17:28:04 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:28:04 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:28:04 --> Final output sent to browser
+DEBUG - 2016-05-12 17:28:04 --> Total execution time: 0.0734
+INFO - 2016-05-12 17:28:07 --> Config Class Initialized
+INFO - 2016-05-12 17:28:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:07 --> URI Class Initialized
+INFO - 2016-05-12 17:28:07 --> Router Class Initialized
+INFO - 2016-05-12 17:28:07 --> Output Class Initialized
+INFO - 2016-05-12 17:28:07 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:07 --> Input Class Initialized
+INFO - 2016-05-12 17:28:07 --> Language Class Initialized
+INFO - 2016-05-12 17:28:07 --> Loader Class Initialized
+INFO - 2016-05-12 17:28:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:28:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:28:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:28:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:28:07 --> Pagination Class Initialized
+INFO - 2016-05-12 17:28:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:28:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:28:07 --> Email Class Initialized
+DEBUG - 2016-05-12 17:28:07 --> Upload Class Initialized
+INFO - 2016-05-12 17:28:07 --> Model Class Initialized
+INFO - 2016-05-12 17:28:07 --> Model Class Initialized
+INFO - 2016-05-12 17:28:07 --> Model Class Initialized
+INFO - 2016-05-12 17:28:07 --> Controller Class Initialized
+INFO - 2016-05-12 17:28:07 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:28:07 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:28:07 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:28:07 --> Final output sent to browser
+DEBUG - 2016-05-12 17:28:07 --> Total execution time: 0.0798
+INFO - 2016-05-12 17:28:11 --> Config Class Initialized
+INFO - 2016-05-12 17:28:11 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:11 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:11 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:11 --> URI Class Initialized
+INFO - 2016-05-12 17:28:11 --> Router Class Initialized
+INFO - 2016-05-12 17:28:11 --> Output Class Initialized
+INFO - 2016-05-12 17:28:11 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:11 --> Input Class Initialized
+INFO - 2016-05-12 17:28:11 --> Language Class Initialized
+INFO - 2016-05-12 17:28:11 --> Loader Class Initialized
+INFO - 2016-05-12 17:28:11 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:28:11 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:28:11 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:28:11 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:28:11 --> Pagination Class Initialized
+INFO - 2016-05-12 17:28:11 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:28:11 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:28:11 --> Email Class Initialized
+DEBUG - 2016-05-12 17:28:11 --> Upload Class Initialized
+INFO - 2016-05-12 17:28:11 --> Model Class Initialized
+INFO - 2016-05-12 17:28:11 --> Model Class Initialized
+INFO - 2016-05-12 17:28:11 --> Model Class Initialized
+INFO - 2016-05-12 17:28:11 --> Controller Class Initialized
+INFO - 2016-05-12 17:28:11 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:28:11 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:28:11 --> Final output sent to browser
+DEBUG - 2016-05-12 17:28:11 --> Total execution time: 0.0830
+INFO - 2016-05-12 17:28:14 --> Config Class Initialized
+INFO - 2016-05-12 17:28:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:14 --> URI Class Initialized
+INFO - 2016-05-12 17:28:14 --> Router Class Initialized
+INFO - 2016-05-12 17:28:14 --> Output Class Initialized
+INFO - 2016-05-12 17:28:14 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:14 --> Input Class Initialized
+INFO - 2016-05-12 17:28:14 --> Language Class Initialized
+INFO - 2016-05-12 17:28:14 --> Loader Class Initialized
+INFO - 2016-05-12 17:28:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:28:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:28:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:28:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:28:14 --> Pagination Class Initialized
+INFO - 2016-05-12 17:28:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:28:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:28:14 --> Email Class Initialized
+DEBUG - 2016-05-12 17:28:14 --> Upload Class Initialized
+INFO - 2016-05-12 17:28:14 --> Model Class Initialized
+INFO - 2016-05-12 17:28:14 --> Model Class Initialized
+INFO - 2016-05-12 17:28:14 --> Model Class Initialized
+INFO - 2016-05-12 17:28:14 --> Controller Class Initialized
+INFO - 2016-05-12 17:28:14 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:28:14 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:28:23 --> Config Class Initialized
+INFO - 2016-05-12 17:28:23 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:28:23 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:28:23 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:28:23 --> URI Class Initialized
+INFO - 2016-05-12 17:28:23 --> Router Class Initialized
+INFO - 2016-05-12 17:28:23 --> Output Class Initialized
+INFO - 2016-05-12 17:28:23 --> Security Class Initialized
+DEBUG - 2016-05-12 17:28:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:28:23 --> Input Class Initialized
+INFO - 2016-05-12 17:28:23 --> Language Class Initialized
+INFO - 2016-05-12 17:28:23 --> Loader Class Initialized
+INFO - 2016-05-12 17:28:23 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:28:23 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:28:23 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:28:23 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:28:23 --> Pagination Class Initialized
+INFO - 2016-05-12 17:28:23 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:28:23 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:28:23 --> Email Class Initialized
+DEBUG - 2016-05-12 17:28:23 --> Upload Class Initialized
+INFO - 2016-05-12 17:28:23 --> Model Class Initialized
+INFO - 2016-05-12 17:28:23 --> Model Class Initialized
+INFO - 2016-05-12 17:28:23 --> Model Class Initialized
+INFO - 2016-05-12 17:28:23 --> Controller Class Initialized
+INFO - 2016-05-12 17:28:23 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:28:23 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:29:50 --> Config Class Initialized
+INFO - 2016-05-12 17:29:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:29:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:29:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:29:50 --> URI Class Initialized
+INFO - 2016-05-12 17:29:50 --> Router Class Initialized
+INFO - 2016-05-12 17:29:50 --> Output Class Initialized
+INFO - 2016-05-12 17:29:50 --> Security Class Initialized
+DEBUG - 2016-05-12 17:29:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:29:50 --> Input Class Initialized
+INFO - 2016-05-12 17:29:50 --> Language Class Initialized
+INFO - 2016-05-12 17:29:50 --> Loader Class Initialized
+INFO - 2016-05-12 17:29:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:29:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:29:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:29:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:29:50 --> Pagination Class Initialized
+INFO - 2016-05-12 17:29:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:29:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:29:50 --> Email Class Initialized
+DEBUG - 2016-05-12 17:29:50 --> Upload Class Initialized
+INFO - 2016-05-12 17:29:50 --> Model Class Initialized
+INFO - 2016-05-12 17:29:50 --> Model Class Initialized
+INFO - 2016-05-12 17:29:50 --> Model Class Initialized
+INFO - 2016-05-12 17:29:50 --> Controller Class Initialized
+INFO - 2016-05-12 17:29:50 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:29:50 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:29:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:29:50 --> Final output sent to browser
+DEBUG - 2016-05-12 17:29:50 --> Total execution time: 0.1136
+INFO - 2016-05-12 17:29:50 --> Config Class Initialized
+INFO - 2016-05-12 17:29:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:29:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:29:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:29:50 --> URI Class Initialized
+INFO - 2016-05-12 17:29:50 --> Router Class Initialized
+INFO - 2016-05-12 17:29:50 --> Output Class Initialized
+INFO - 2016-05-12 17:29:50 --> Security Class Initialized
+DEBUG - 2016-05-12 17:29:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:29:50 --> Input Class Initialized
+INFO - 2016-05-12 17:29:50 --> Language Class Initialized
+ERROR - 2016-05-12 17:29:50 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:29:53 --> Config Class Initialized
+INFO - 2016-05-12 17:29:53 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:29:53 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:29:53 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:29:53 --> URI Class Initialized
+INFO - 2016-05-12 17:29:53 --> Router Class Initialized
+INFO - 2016-05-12 17:29:53 --> Output Class Initialized
+INFO - 2016-05-12 17:29:53 --> Security Class Initialized
+DEBUG - 2016-05-12 17:29:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:29:53 --> Input Class Initialized
+INFO - 2016-05-12 17:29:53 --> Language Class Initialized
+INFO - 2016-05-12 17:29:53 --> Loader Class Initialized
+INFO - 2016-05-12 17:29:53 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:29:53 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:29:53 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:29:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:29:53 --> Pagination Class Initialized
+INFO - 2016-05-12 17:29:53 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:29:53 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:29:53 --> Email Class Initialized
+DEBUG - 2016-05-12 17:29:53 --> Upload Class Initialized
+INFO - 2016-05-12 17:29:53 --> Model Class Initialized
+INFO - 2016-05-12 17:29:53 --> Model Class Initialized
+INFO - 2016-05-12 17:29:53 --> Model Class Initialized
+INFO - 2016-05-12 17:29:53 --> Controller Class Initialized
+INFO - 2016-05-12 17:29:53 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:29:53 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:29:53 --> Model Class Initialized
+INFO - 2016-05-12 17:29:53 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:29:53 --> Config Class Initialized
+INFO - 2016-05-12 17:29:53 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:29:53 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:29:53 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:29:53 --> URI Class Initialized
+INFO - 2016-05-12 17:29:53 --> Router Class Initialized
+INFO - 2016-05-12 17:29:53 --> Output Class Initialized
+INFO - 2016-05-12 17:29:53 --> Security Class Initialized
+DEBUG - 2016-05-12 17:29:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:29:53 --> Input Class Initialized
+INFO - 2016-05-12 17:29:53 --> Language Class Initialized
+ERROR - 2016-05-12 17:29:53 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:29:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:29:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:29:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+ERROR - 2016-05-12 17:29:53 --> 404 Page Not Found: Admin/img
+INFO - 2016-05-12 17:29:53 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:29:53 --> Final output sent to browser
+DEBUG - 2016-05-12 17:29:53 --> Total execution time: 0.1627
+INFO - 2016-05-12 17:29:58 --> Config Class Initialized
+INFO - 2016-05-12 17:29:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:29:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:29:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:29:58 --> URI Class Initialized
+INFO - 2016-05-12 17:29:58 --> Router Class Initialized
+INFO - 2016-05-12 17:29:58 --> Output Class Initialized
+INFO - 2016-05-12 17:29:58 --> Security Class Initialized
+DEBUG - 2016-05-12 17:29:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:29:58 --> Input Class Initialized
+INFO - 2016-05-12 17:29:58 --> Language Class Initialized
+INFO - 2016-05-12 17:29:58 --> Loader Class Initialized
+INFO - 2016-05-12 17:29:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:29:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:29:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:29:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:29:58 --> Pagination Class Initialized
+INFO - 2016-05-12 17:29:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:29:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:29:58 --> Email Class Initialized
+DEBUG - 2016-05-12 17:29:58 --> Upload Class Initialized
+INFO - 2016-05-12 17:29:58 --> Model Class Initialized
+INFO - 2016-05-12 17:29:58 --> Model Class Initialized
+INFO - 2016-05-12 17:29:58 --> Model Class Initialized
+INFO - 2016-05-12 17:29:58 --> Controller Class Initialized
+INFO - 2016-05-12 17:29:58 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:29:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:29:58 --> Model Class Initialized
+INFO - 2016-05-12 17:29:58 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:29:58 --> Final output sent to browser
+DEBUG - 2016-05-12 17:29:58 --> Total execution time: 0.0821
+INFO - 2016-05-12 17:29:59 --> Config Class Initialized
+INFO - 2016-05-12 17:29:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:29:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:29:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:29:59 --> URI Class Initialized
+INFO - 2016-05-12 17:29:59 --> Router Class Initialized
+INFO - 2016-05-12 17:29:59 --> Output Class Initialized
+INFO - 2016-05-12 17:29:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:29:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:29:59 --> Input Class Initialized
+INFO - 2016-05-12 17:29:59 --> Language Class Initialized
+INFO - 2016-05-12 17:29:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:29:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:29:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:29:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:29:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:29:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:29:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:29:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:29:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:29:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:29:59 --> Model Class Initialized
+INFO - 2016-05-12 17:29:59 --> Model Class Initialized
+INFO - 2016-05-12 17:29:59 --> Model Class Initialized
+INFO - 2016-05-12 17:29:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:29:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:29:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:29:59 --> Model Class Initialized
+INFO - 2016-05-12 17:29:59 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:29:59 --> Final output sent to browser
+DEBUG - 2016-05-12 17:29:59 --> Total execution time: 0.0340
+INFO - 2016-05-12 17:30:03 --> Config Class Initialized
+INFO - 2016-05-12 17:30:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:30:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:30:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:30:03 --> URI Class Initialized
+INFO - 2016-05-12 17:30:03 --> Router Class Initialized
+INFO - 2016-05-12 17:30:03 --> Output Class Initialized
+INFO - 2016-05-12 17:30:03 --> Security Class Initialized
+DEBUG - 2016-05-12 17:30:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:30:03 --> Input Class Initialized
+INFO - 2016-05-12 17:30:03 --> Language Class Initialized
+INFO - 2016-05-12 17:30:03 --> Loader Class Initialized
+INFO - 2016-05-12 17:30:03 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:30:03 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:30:03 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:30:03 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:30:03 --> Pagination Class Initialized
+INFO - 2016-05-12 17:30:03 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:30:03 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:30:03 --> Email Class Initialized
+DEBUG - 2016-05-12 17:30:03 --> Upload Class Initialized
+INFO - 2016-05-12 17:30:03 --> Model Class Initialized
+INFO - 2016-05-12 17:30:03 --> Model Class Initialized
+INFO - 2016-05-12 17:30:03 --> Model Class Initialized
+INFO - 2016-05-12 17:30:03 --> Controller Class Initialized
+INFO - 2016-05-12 17:30:03 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:30:03 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:30:03 --> Model Class Initialized
+INFO - 2016-05-12 17:30:03 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:30:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:30:03 --> Final output sent to browser
+DEBUG - 2016-05-12 17:30:03 --> Total execution time: 0.1130
+INFO - 2016-05-12 17:31:34 --> Config Class Initialized
+INFO - 2016-05-12 17:31:34 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:31:34 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:31:34 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:31:34 --> URI Class Initialized
+INFO - 2016-05-12 17:31:34 --> Router Class Initialized
+INFO - 2016-05-12 17:31:34 --> Output Class Initialized
+INFO - 2016-05-12 17:31:34 --> Security Class Initialized
+DEBUG - 2016-05-12 17:31:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:31:34 --> Input Class Initialized
+INFO - 2016-05-12 17:31:34 --> Language Class Initialized
+INFO - 2016-05-12 17:31:34 --> Loader Class Initialized
+INFO - 2016-05-12 17:31:34 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:31:34 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:31:34 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:31:34 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:31:34 --> Pagination Class Initialized
+INFO - 2016-05-12 17:31:34 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:31:34 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:31:34 --> Email Class Initialized
+DEBUG - 2016-05-12 17:31:34 --> Upload Class Initialized
+INFO - 2016-05-12 17:31:34 --> Model Class Initialized
+INFO - 2016-05-12 17:31:34 --> Model Class Initialized
+INFO - 2016-05-12 17:31:34 --> Model Class Initialized
+INFO - 2016-05-12 17:31:34 --> Controller Class Initialized
+INFO - 2016-05-12 17:31:34 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:31:34 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:31:34 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:31:34 --> Final output sent to browser
+DEBUG - 2016-05-12 17:31:34 --> Total execution time: 0.0897
+INFO - 2016-05-12 17:31:34 --> Config Class Initialized
+INFO - 2016-05-12 17:31:34 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:31:34 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:31:34 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:31:34 --> URI Class Initialized
+INFO - 2016-05-12 17:31:34 --> Router Class Initialized
+INFO - 2016-05-12 17:31:34 --> Output Class Initialized
+INFO - 2016-05-12 17:31:34 --> Security Class Initialized
+DEBUG - 2016-05-12 17:31:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:31:34 --> Input Class Initialized
+INFO - 2016-05-12 17:31:34 --> Language Class Initialized
+ERROR - 2016-05-12 17:31:34 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:31:37 --> Config Class Initialized
+INFO - 2016-05-12 17:31:37 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:31:37 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:31:37 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:31:37 --> URI Class Initialized
+INFO - 2016-05-12 17:31:37 --> Router Class Initialized
+INFO - 2016-05-12 17:31:37 --> Output Class Initialized
+INFO - 2016-05-12 17:31:37 --> Security Class Initialized
+DEBUG - 2016-05-12 17:31:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:31:37 --> Input Class Initialized
+INFO - 2016-05-12 17:31:37 --> Language Class Initialized
+ERROR - 2016-05-12 17:31:37 --> 404 Page Not Found: Admin/img
+INFO - 2016-05-12 17:31:38 --> Config Class Initialized
+INFO - 2016-05-12 17:31:38 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:31:38 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:31:38 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:31:38 --> URI Class Initialized
+INFO - 2016-05-12 17:31:38 --> Router Class Initialized
+INFO - 2016-05-12 17:31:38 --> Output Class Initialized
+INFO - 2016-05-12 17:31:38 --> Security Class Initialized
+DEBUG - 2016-05-12 17:31:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:31:38 --> Input Class Initialized
+INFO - 2016-05-12 17:31:38 --> Language Class Initialized
+INFO - 2016-05-12 17:31:38 --> Loader Class Initialized
+INFO - 2016-05-12 17:31:38 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:31:38 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:31:38 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:31:38 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:31:38 --> Pagination Class Initialized
+INFO - 2016-05-12 17:31:38 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:31:38 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:31:38 --> Email Class Initialized
+DEBUG - 2016-05-12 17:31:38 --> Upload Class Initialized
+INFO - 2016-05-12 17:31:38 --> Model Class Initialized
+INFO - 2016-05-12 17:31:38 --> Model Class Initialized
+INFO - 2016-05-12 17:31:38 --> Model Class Initialized
+INFO - 2016-05-12 17:31:38 --> Controller Class Initialized
+INFO - 2016-05-12 17:31:38 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:31:38 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:31:38 --> Final output sent to browser
+DEBUG - 2016-05-12 17:31:38 --> Total execution time: 0.0549
+INFO - 2016-05-12 17:31:40 --> Config Class Initialized
+INFO - 2016-05-12 17:31:40 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:31:40 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:31:40 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:31:40 --> URI Class Initialized
+INFO - 2016-05-12 17:31:40 --> Router Class Initialized
+INFO - 2016-05-12 17:31:40 --> Output Class Initialized
+INFO - 2016-05-12 17:31:40 --> Security Class Initialized
+DEBUG - 2016-05-12 17:31:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:31:40 --> Input Class Initialized
+INFO - 2016-05-12 17:31:40 --> Language Class Initialized
+INFO - 2016-05-12 17:31:40 --> Loader Class Initialized
+INFO - 2016-05-12 17:31:40 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:31:40 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:31:40 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:31:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:31:40 --> Pagination Class Initialized
+INFO - 2016-05-12 17:31:40 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:31:40 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:31:40 --> Email Class Initialized
+DEBUG - 2016-05-12 17:31:40 --> Upload Class Initialized
+INFO - 2016-05-12 17:31:40 --> Model Class Initialized
+INFO - 2016-05-12 17:31:40 --> Model Class Initialized
+INFO - 2016-05-12 17:31:40 --> Model Class Initialized
+INFO - 2016-05-12 17:31:40 --> Controller Class Initialized
+INFO - 2016-05-12 17:31:40 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:31:40 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:31:40 --> Final output sent to browser
+DEBUG - 2016-05-12 17:31:40 --> Total execution time: 0.0558
+INFO - 2016-05-12 17:31:43 --> Config Class Initialized
+INFO - 2016-05-12 17:31:43 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:31:43 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:31:43 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:31:43 --> URI Class Initialized
+INFO - 2016-05-12 17:31:43 --> Router Class Initialized
+INFO - 2016-05-12 17:31:43 --> Output Class Initialized
+INFO - 2016-05-12 17:31:43 --> Security Class Initialized
+DEBUG - 2016-05-12 17:31:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:31:43 --> Input Class Initialized
+INFO - 2016-05-12 17:31:43 --> Language Class Initialized
+INFO - 2016-05-12 17:31:43 --> Loader Class Initialized
+INFO - 2016-05-12 17:31:43 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:31:43 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:31:43 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:31:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:31:43 --> Pagination Class Initialized
+INFO - 2016-05-12 17:31:43 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:31:43 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:31:43 --> Email Class Initialized
+DEBUG - 2016-05-12 17:31:43 --> Upload Class Initialized
+INFO - 2016-05-12 17:31:43 --> Model Class Initialized
+INFO - 2016-05-12 17:31:43 --> Model Class Initialized
+INFO - 2016-05-12 17:31:43 --> Model Class Initialized
+INFO - 2016-05-12 17:31:43 --> Controller Class Initialized
+INFO - 2016-05-12 17:31:43 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:31:43 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:31:44 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:31:44 --> Final output sent to browser
+DEBUG - 2016-05-12 17:31:44 --> Total execution time: 0.0567
+INFO - 2016-05-12 17:32:20 --> Config Class Initialized
+INFO - 2016-05-12 17:32:20 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:20 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:20 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:20 --> URI Class Initialized
+INFO - 2016-05-12 17:32:20 --> Router Class Initialized
+INFO - 2016-05-12 17:32:20 --> Output Class Initialized
+INFO - 2016-05-12 17:32:20 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:20 --> Input Class Initialized
+INFO - 2016-05-12 17:32:20 --> Language Class Initialized
+INFO - 2016-05-12 17:32:20 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:20 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:20 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:20 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:20 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:20 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:20 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:20 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:20 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:20 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:20 --> Model Class Initialized
+INFO - 2016-05-12 17:32:20 --> Model Class Initialized
+INFO - 2016-05-12 17:32:20 --> Model Class Initialized
+INFO - 2016-05-12 17:32:20 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:20 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:20 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:20 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:32:20 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:20 --> Total execution time: 0.0940
+INFO - 2016-05-12 17:32:20 --> Config Class Initialized
+INFO - 2016-05-12 17:32:20 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:20 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:20 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:20 --> URI Class Initialized
+INFO - 2016-05-12 17:32:20 --> Router Class Initialized
+INFO - 2016-05-12 17:32:20 --> Output Class Initialized
+INFO - 2016-05-12 17:32:20 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:20 --> Input Class Initialized
+INFO - 2016-05-12 17:32:20 --> Language Class Initialized
+ERROR - 2016-05-12 17:32:20 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:32:23 --> Config Class Initialized
+INFO - 2016-05-12 17:32:23 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:23 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:23 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:23 --> URI Class Initialized
+INFO - 2016-05-12 17:32:23 --> Router Class Initialized
+INFO - 2016-05-12 17:32:23 --> Output Class Initialized
+INFO - 2016-05-12 17:32:23 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:23 --> Input Class Initialized
+INFO - 2016-05-12 17:32:23 --> Language Class Initialized
+ERROR - 2016-05-12 17:32:23 --> 404 Page Not Found: Admin/img
+INFO - 2016-05-12 17:32:24 --> Config Class Initialized
+INFO - 2016-05-12 17:32:24 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:24 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:24 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:24 --> URI Class Initialized
+INFO - 2016-05-12 17:32:24 --> Router Class Initialized
+INFO - 2016-05-12 17:32:24 --> Output Class Initialized
+INFO - 2016-05-12 17:32:24 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:24 --> Input Class Initialized
+INFO - 2016-05-12 17:32:24 --> Language Class Initialized
+INFO - 2016-05-12 17:32:24 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:24 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:24 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:24 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:24 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:24 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:24 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:24 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:24 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:24 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:24 --> Model Class Initialized
+INFO - 2016-05-12 17:32:24 --> Model Class Initialized
+INFO - 2016-05-12 17:32:24 --> Model Class Initialized
+INFO - 2016-05-12 17:32:24 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:24 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:24 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:24 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:24 --> Total execution time: 0.0571
+INFO - 2016-05-12 17:32:25 --> Config Class Initialized
+INFO - 2016-05-12 17:32:25 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:25 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:25 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:25 --> URI Class Initialized
+INFO - 2016-05-12 17:32:25 --> Router Class Initialized
+INFO - 2016-05-12 17:32:25 --> Output Class Initialized
+INFO - 2016-05-12 17:32:25 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:25 --> Input Class Initialized
+INFO - 2016-05-12 17:32:25 --> Language Class Initialized
+INFO - 2016-05-12 17:32:25 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:25 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:25 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:25 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:25 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:25 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:25 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:25 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:25 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:25 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:25 --> Model Class Initialized
+INFO - 2016-05-12 17:32:25 --> Model Class Initialized
+INFO - 2016-05-12 17:32:25 --> Model Class Initialized
+INFO - 2016-05-12 17:32:25 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:25 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:25 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:25 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:25 --> Total execution time: 0.1012
+INFO - 2016-05-12 17:32:28 --> Config Class Initialized
+INFO - 2016-05-12 17:32:28 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:28 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:28 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:28 --> URI Class Initialized
+INFO - 2016-05-12 17:32:28 --> Router Class Initialized
+INFO - 2016-05-12 17:32:28 --> Output Class Initialized
+INFO - 2016-05-12 17:32:28 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:28 --> Input Class Initialized
+INFO - 2016-05-12 17:32:28 --> Language Class Initialized
+INFO - 2016-05-12 17:32:28 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:28 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:28 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:28 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:28 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:28 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:28 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:28 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:28 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:28 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:28 --> Model Class Initialized
+INFO - 2016-05-12 17:32:28 --> Model Class Initialized
+INFO - 2016-05-12 17:32:28 --> Model Class Initialized
+INFO - 2016-05-12 17:32:28 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:28 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:28 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:32:28 --> Severity: error --> Exception: Cannot use object of type stdClass as array /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php 80
+ERROR - 2016-05-12 17:32:28 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+INFO - 2016-05-12 17:32:46 --> Config Class Initialized
+INFO - 2016-05-12 17:32:46 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:46 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:46 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:46 --> URI Class Initialized
+INFO - 2016-05-12 17:32:46 --> Router Class Initialized
+INFO - 2016-05-12 17:32:46 --> Output Class Initialized
+INFO - 2016-05-12 17:32:46 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:46 --> Input Class Initialized
+INFO - 2016-05-12 17:32:46 --> Language Class Initialized
+INFO - 2016-05-12 17:32:46 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:46 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:46 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:46 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:46 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:46 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:46 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:46 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:46 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:46 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:46 --> Model Class Initialized
+INFO - 2016-05-12 17:32:46 --> Model Class Initialized
+INFO - 2016-05-12 17:32:46 --> Model Class Initialized
+INFO - 2016-05-12 17:32:46 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:46 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:46 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:46 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:46 --> Total execution time: 0.0601
+INFO - 2016-05-12 17:32:47 --> Config Class Initialized
+INFO - 2016-05-12 17:32:47 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:47 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:47 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:47 --> URI Class Initialized
+INFO - 2016-05-12 17:32:47 --> Router Class Initialized
+INFO - 2016-05-12 17:32:47 --> Output Class Initialized
+INFO - 2016-05-12 17:32:47 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:47 --> Input Class Initialized
+INFO - 2016-05-12 17:32:47 --> Language Class Initialized
+INFO - 2016-05-12 17:32:47 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:47 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:47 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:47 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:47 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:47 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:47 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:47 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:47 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:47 --> Model Class Initialized
+INFO - 2016-05-12 17:32:47 --> Model Class Initialized
+INFO - 2016-05-12 17:32:47 --> Model Class Initialized
+INFO - 2016-05-12 17:32:47 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:47 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:47 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:47 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:47 --> Total execution time: 0.0583
+INFO - 2016-05-12 17:32:48 --> Config Class Initialized
+INFO - 2016-05-12 17:32:48 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:48 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:48 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:48 --> URI Class Initialized
+INFO - 2016-05-12 17:32:48 --> Router Class Initialized
+INFO - 2016-05-12 17:32:48 --> Output Class Initialized
+INFO - 2016-05-12 17:32:48 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:48 --> Input Class Initialized
+INFO - 2016-05-12 17:32:48 --> Language Class Initialized
+INFO - 2016-05-12 17:32:48 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:48 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:48 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:48 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:48 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:48 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:48 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:48 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:48 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:48 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:48 --> Model Class Initialized
+INFO - 2016-05-12 17:32:48 --> Model Class Initialized
+INFO - 2016-05-12 17:32:48 --> Model Class Initialized
+INFO - 2016-05-12 17:32:48 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:48 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:48 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:32:48 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:48 --> Total execution time: 0.0979
+INFO - 2016-05-12 17:32:48 --> Config Class Initialized
+INFO - 2016-05-12 17:32:48 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:48 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:48 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:48 --> URI Class Initialized
+INFO - 2016-05-12 17:32:48 --> Router Class Initialized
+INFO - 2016-05-12 17:32:48 --> Output Class Initialized
+INFO - 2016-05-12 17:32:48 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:48 --> Input Class Initialized
+INFO - 2016-05-12 17:32:48 --> Language Class Initialized
+ERROR - 2016-05-12 17:32:48 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:32:50 --> Config Class Initialized
+INFO - 2016-05-12 17:32:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:32:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:32:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:32:50 --> URI Class Initialized
+INFO - 2016-05-12 17:32:50 --> Router Class Initialized
+INFO - 2016-05-12 17:32:50 --> Output Class Initialized
+INFO - 2016-05-12 17:32:50 --> Security Class Initialized
+DEBUG - 2016-05-12 17:32:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:32:50 --> Input Class Initialized
+INFO - 2016-05-12 17:32:50 --> Language Class Initialized
+INFO - 2016-05-12 17:32:50 --> Loader Class Initialized
+INFO - 2016-05-12 17:32:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:32:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:32:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:32:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:32:50 --> Pagination Class Initialized
+INFO - 2016-05-12 17:32:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:32:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:32:50 --> Email Class Initialized
+DEBUG - 2016-05-12 17:32:50 --> Upload Class Initialized
+INFO - 2016-05-12 17:32:50 --> Model Class Initialized
+INFO - 2016-05-12 17:32:50 --> Model Class Initialized
+INFO - 2016-05-12 17:32:50 --> Model Class Initialized
+INFO - 2016-05-12 17:32:50 --> Controller Class Initialized
+INFO - 2016-05-12 17:32:50 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:32:50 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:32:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:32:50 --> Final output sent to browser
+DEBUG - 2016-05-12 17:32:50 --> Total execution time: 0.1282
+ERROR - 2016-05-12 17:32:50 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 17:33:06 --> Config Class Initialized
+INFO - 2016-05-12 17:33:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:06 --> URI Class Initialized
+INFO - 2016-05-12 17:33:06 --> Router Class Initialized
+INFO - 2016-05-12 17:33:06 --> Output Class Initialized
+INFO - 2016-05-12 17:33:06 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:06 --> Input Class Initialized
+INFO - 2016-05-12 17:33:06 --> Language Class Initialized
+INFO - 2016-05-12 17:33:06 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:06 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:06 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:06 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:06 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:06 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:06 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:06 --> Model Class Initialized
+INFO - 2016-05-12 17:33:06 --> Model Class Initialized
+INFO - 2016-05-12 17:33:06 --> Model Class Initialized
+INFO - 2016-05-12 17:33:06 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:06 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:33:06 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:33:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:33:06 --> Final output sent to browser
+DEBUG - 2016-05-12 17:33:06 --> Total execution time: 0.0717
+INFO - 2016-05-12 17:33:06 --> Config Class Initialized
+INFO - 2016-05-12 17:33:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:06 --> URI Class Initialized
+INFO - 2016-05-12 17:33:06 --> Router Class Initialized
+INFO - 2016-05-12 17:33:06 --> Output Class Initialized
+INFO - 2016-05-12 17:33:06 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:06 --> Input Class Initialized
+INFO - 2016-05-12 17:33:06 --> Language Class Initialized
+ERROR - 2016-05-12 17:33:06 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:33:09 --> Config Class Initialized
+INFO - 2016-05-12 17:33:09 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:09 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:09 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:09 --> URI Class Initialized
+INFO - 2016-05-12 17:33:09 --> Router Class Initialized
+INFO - 2016-05-12 17:33:09 --> Output Class Initialized
+INFO - 2016-05-12 17:33:09 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:09 --> Input Class Initialized
+INFO - 2016-05-12 17:33:09 --> Language Class Initialized
+ERROR - 2016-05-12 17:33:09 --> 404 Page Not Found: Admin/img
+INFO - 2016-05-12 17:33:09 --> Config Class Initialized
+INFO - 2016-05-12 17:33:09 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:09 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:09 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:09 --> URI Class Initialized
+INFO - 2016-05-12 17:33:09 --> Router Class Initialized
+INFO - 2016-05-12 17:33:09 --> Output Class Initialized
+INFO - 2016-05-12 17:33:09 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:09 --> Input Class Initialized
+INFO - 2016-05-12 17:33:09 --> Language Class Initialized
+INFO - 2016-05-12 17:33:09 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:09 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:09 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:09 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:09 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:09 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:09 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:09 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:09 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:09 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:09 --> Model Class Initialized
+INFO - 2016-05-12 17:33:09 --> Model Class Initialized
+INFO - 2016-05-12 17:33:09 --> Model Class Initialized
+INFO - 2016-05-12 17:33:09 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:09 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:33:09 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:33:09 --> Final output sent to browser
+DEBUG - 2016-05-12 17:33:09 --> Total execution time: 0.0775
+INFO - 2016-05-12 17:33:10 --> Config Class Initialized
+INFO - 2016-05-12 17:33:10 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:10 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:10 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:10 --> URI Class Initialized
+INFO - 2016-05-12 17:33:10 --> Router Class Initialized
+INFO - 2016-05-12 17:33:10 --> Output Class Initialized
+INFO - 2016-05-12 17:33:10 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:10 --> Input Class Initialized
+INFO - 2016-05-12 17:33:10 --> Language Class Initialized
+INFO - 2016-05-12 17:33:10 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:10 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:10 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:10 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:10 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:10 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:10 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:10 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:10 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:10 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:10 --> Model Class Initialized
+INFO - 2016-05-12 17:33:10 --> Model Class Initialized
+INFO - 2016-05-12 17:33:10 --> Model Class Initialized
+INFO - 2016-05-12 17:33:10 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:10 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:33:10 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:33:10 --> Final output sent to browser
+DEBUG - 2016-05-12 17:33:10 --> Total execution time: 0.1165
+INFO - 2016-05-12 17:33:14 --> Config Class Initialized
+INFO - 2016-05-12 17:33:14 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:14 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:14 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:14 --> URI Class Initialized
+INFO - 2016-05-12 17:33:14 --> Router Class Initialized
+INFO - 2016-05-12 17:33:14 --> Output Class Initialized
+INFO - 2016-05-12 17:33:14 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:14 --> Input Class Initialized
+INFO - 2016-05-12 17:33:14 --> Language Class Initialized
+INFO - 2016-05-12 17:33:14 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:14 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:14 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:14 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:14 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:14 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:14 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:14 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:14 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:14 --> Model Class Initialized
+INFO - 2016-05-12 17:33:14 --> Model Class Initialized
+INFO - 2016-05-12 17:33:14 --> Model Class Initialized
+INFO - 2016-05-12 17:33:14 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:14 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:33:14 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:33:14 --> Severity: error --> Exception: Cannot use object of type stdClass as array /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php 80
+ERROR - 2016-05-12 17:33:14 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+INFO - 2016-05-12 17:33:48 --> Config Class Initialized
+INFO - 2016-05-12 17:33:48 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:48 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:48 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:48 --> URI Class Initialized
+INFO - 2016-05-12 17:33:48 --> Router Class Initialized
+INFO - 2016-05-12 17:33:48 --> Output Class Initialized
+INFO - 2016-05-12 17:33:48 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:48 --> Input Class Initialized
+INFO - 2016-05-12 17:33:48 --> Language Class Initialized
+INFO - 2016-05-12 17:33:48 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:48 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:48 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:48 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:48 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:48 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:48 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:48 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:48 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:48 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:48 --> Model Class Initialized
+INFO - 2016-05-12 17:33:48 --> Model Class Initialized
+INFO - 2016-05-12 17:33:48 --> Model Class Initialized
+INFO - 2016-05-12 17:33:48 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:48 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:33:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:33:48 --> Model Class Initialized
+INFO - 2016-05-12 17:33:48 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:33:48 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:33:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:33:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:33:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:33:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:33:48 --> Final output sent to browser
+DEBUG - 2016-05-12 17:33:48 --> Total execution time: 0.0732
+INFO - 2016-05-12 17:33:53 --> Config Class Initialized
+INFO - 2016-05-12 17:33:53 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:53 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:53 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:53 --> URI Class Initialized
+INFO - 2016-05-12 17:33:53 --> Router Class Initialized
+INFO - 2016-05-12 17:33:53 --> Output Class Initialized
+INFO - 2016-05-12 17:33:53 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:53 --> Input Class Initialized
+INFO - 2016-05-12 17:33:53 --> Language Class Initialized
+INFO - 2016-05-12 17:33:53 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:53 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:53 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:53 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:53 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:53 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:53 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:53 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:53 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:53 --> Model Class Initialized
+INFO - 2016-05-12 17:33:53 --> Model Class Initialized
+INFO - 2016-05-12 17:33:53 --> Model Class Initialized
+INFO - 2016-05-12 17:33:53 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:53 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:33:53 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:33:53 --> Model Class Initialized
+INFO - 2016-05-12 17:33:53 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:33:53 --> Final output sent to browser
+DEBUG - 2016-05-12 17:33:53 --> Total execution time: 0.0689
+INFO - 2016-05-12 17:33:54 --> Config Class Initialized
+INFO - 2016-05-12 17:33:54 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:54 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:54 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:54 --> URI Class Initialized
+INFO - 2016-05-12 17:33:54 --> Router Class Initialized
+INFO - 2016-05-12 17:33:54 --> Output Class Initialized
+INFO - 2016-05-12 17:33:54 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:54 --> Input Class Initialized
+INFO - 2016-05-12 17:33:54 --> Language Class Initialized
+INFO - 2016-05-12 17:33:54 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:54 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:54 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:54 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:54 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:54 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:54 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:54 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:54 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:54 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:54 --> Model Class Initialized
+INFO - 2016-05-12 17:33:54 --> Model Class Initialized
+INFO - 2016-05-12 17:33:54 --> Model Class Initialized
+INFO - 2016-05-12 17:33:54 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:54 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:33:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:33:54 --> Model Class Initialized
+INFO - 2016-05-12 17:33:54 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:33:54 --> Final output sent to browser
+DEBUG - 2016-05-12 17:33:54 --> Total execution time: 0.0556
+INFO - 2016-05-12 17:33:58 --> Config Class Initialized
+INFO - 2016-05-12 17:33:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:33:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:33:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:33:58 --> URI Class Initialized
+INFO - 2016-05-12 17:33:58 --> Router Class Initialized
+INFO - 2016-05-12 17:33:58 --> Output Class Initialized
+INFO - 2016-05-12 17:33:58 --> Security Class Initialized
+DEBUG - 2016-05-12 17:33:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:33:58 --> Input Class Initialized
+INFO - 2016-05-12 17:33:58 --> Language Class Initialized
+INFO - 2016-05-12 17:33:58 --> Loader Class Initialized
+INFO - 2016-05-12 17:33:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:33:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:33:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:33:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:33:58 --> Pagination Class Initialized
+INFO - 2016-05-12 17:33:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:33:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:33:58 --> Email Class Initialized
+DEBUG - 2016-05-12 17:33:58 --> Upload Class Initialized
+INFO - 2016-05-12 17:33:58 --> Model Class Initialized
+INFO - 2016-05-12 17:33:58 --> Model Class Initialized
+INFO - 2016-05-12 17:33:58 --> Model Class Initialized
+INFO - 2016-05-12 17:33:58 --> Controller Class Initialized
+INFO - 2016-05-12 17:33:58 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:33:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:33:58 --> Model Class Initialized
+INFO - 2016-05-12 17:33:58 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:33:58 --> Severity: error --> Exception: Cannot use object of type stdClass as array /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php 80
+ERROR - 2016-05-12 17:33:58 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in /opt/lampp/htdocs/smartlearndev/system/core/Common.php on line 658 and defined in /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php:190
+Stack trace:
+#0 /opt/lampp/htdocs/smartlearndev/system/core/Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown /opt/lampp/htdocs/smartlearndev/system/core/Exceptions.php 190
+INFO - 2016-05-12 17:34:12 --> Config Class Initialized
+INFO - 2016-05-12 17:34:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:34:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:34:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:34:12 --> URI Class Initialized
+INFO - 2016-05-12 17:34:12 --> Router Class Initialized
+INFO - 2016-05-12 17:34:12 --> Output Class Initialized
+INFO - 2016-05-12 17:34:12 --> Security Class Initialized
+DEBUG - 2016-05-12 17:34:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:34:12 --> Input Class Initialized
+INFO - 2016-05-12 17:34:12 --> Language Class Initialized
+INFO - 2016-05-12 17:34:12 --> Loader Class Initialized
+INFO - 2016-05-12 17:34:12 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:34:12 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:34:12 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:34:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:34:12 --> Pagination Class Initialized
+INFO - 2016-05-12 17:34:12 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:34:12 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:34:12 --> Email Class Initialized
+DEBUG - 2016-05-12 17:34:12 --> Upload Class Initialized
+INFO - 2016-05-12 17:34:12 --> Model Class Initialized
+INFO - 2016-05-12 17:34:12 --> Model Class Initialized
+INFO - 2016-05-12 17:34:12 --> Model Class Initialized
+INFO - 2016-05-12 17:34:12 --> Controller Class Initialized
+INFO - 2016-05-12 17:34:12 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:34:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:34:12 --> Model Class Initialized
+INFO - 2016-05-12 17:34:12 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:34:12 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:34:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:34:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:34:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:34:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:34:12 --> Final output sent to browser
+DEBUG - 2016-05-12 17:34:12 --> Total execution time: 0.0587
+INFO - 2016-05-12 17:34:17 --> Config Class Initialized
+INFO - 2016-05-12 17:34:17 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:34:17 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:34:17 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:34:17 --> URI Class Initialized
+INFO - 2016-05-12 17:34:17 --> Router Class Initialized
+INFO - 2016-05-12 17:34:17 --> Output Class Initialized
+INFO - 2016-05-12 17:34:17 --> Security Class Initialized
+DEBUG - 2016-05-12 17:34:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:34:17 --> Input Class Initialized
+INFO - 2016-05-12 17:34:17 --> Language Class Initialized
+INFO - 2016-05-12 17:34:17 --> Loader Class Initialized
+INFO - 2016-05-12 17:34:17 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:34:17 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:34:17 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:34:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:34:17 --> Pagination Class Initialized
+INFO - 2016-05-12 17:34:17 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:34:17 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:34:17 --> Email Class Initialized
+DEBUG - 2016-05-12 17:34:17 --> Upload Class Initialized
+INFO - 2016-05-12 17:34:17 --> Model Class Initialized
+INFO - 2016-05-12 17:34:17 --> Model Class Initialized
+INFO - 2016-05-12 17:34:17 --> Model Class Initialized
+INFO - 2016-05-12 17:34:17 --> Controller Class Initialized
+INFO - 2016-05-12 17:34:17 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:34:17 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:34:17 --> Model Class Initialized
+INFO - 2016-05-12 17:34:17 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:34:17 --> Final output sent to browser
+DEBUG - 2016-05-12 17:34:17 --> Total execution time: 0.0544
+INFO - 2016-05-12 17:34:18 --> Config Class Initialized
+INFO - 2016-05-12 17:34:18 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:34:18 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:34:18 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:34:18 --> URI Class Initialized
+INFO - 2016-05-12 17:34:18 --> Router Class Initialized
+INFO - 2016-05-12 17:34:18 --> Output Class Initialized
+INFO - 2016-05-12 17:34:18 --> Security Class Initialized
+DEBUG - 2016-05-12 17:34:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:34:18 --> Input Class Initialized
+INFO - 2016-05-12 17:34:18 --> Language Class Initialized
+INFO - 2016-05-12 17:34:18 --> Loader Class Initialized
+INFO - 2016-05-12 17:34:18 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:34:18 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:34:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:34:18 --> Pagination Class Initialized
+INFO - 2016-05-12 17:34:18 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:34:18 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:34:18 --> Email Class Initialized
+DEBUG - 2016-05-12 17:34:18 --> Upload Class Initialized
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Controller Class Initialized
+INFO - 2016-05-12 17:34:18 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:34:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:34:18 --> Final output sent to browser
+DEBUG - 2016-05-12 17:34:18 --> Total execution time: 0.0458
+INFO - 2016-05-12 17:34:18 --> Config Class Initialized
+INFO - 2016-05-12 17:34:18 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:34:18 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:34:18 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:34:18 --> URI Class Initialized
+INFO - 2016-05-12 17:34:18 --> Router Class Initialized
+INFO - 2016-05-12 17:34:18 --> Output Class Initialized
+INFO - 2016-05-12 17:34:18 --> Security Class Initialized
+DEBUG - 2016-05-12 17:34:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:34:18 --> Input Class Initialized
+INFO - 2016-05-12 17:34:18 --> Language Class Initialized
+INFO - 2016-05-12 17:34:18 --> Loader Class Initialized
+INFO - 2016-05-12 17:34:18 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:34:18 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:34:18 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:34:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:34:18 --> Pagination Class Initialized
+INFO - 2016-05-12 17:34:18 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:34:18 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:34:18 --> Email Class Initialized
+DEBUG - 2016-05-12 17:34:18 --> Upload Class Initialized
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Controller Class Initialized
+INFO - 2016-05-12 17:34:18 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:34:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:34:18 --> Model Class Initialized
+INFO - 2016-05-12 17:34:18 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:34:18 --> Final output sent to browser
+DEBUG - 2016-05-12 17:34:18 --> Total execution time: 0.0604
+INFO - 2016-05-12 17:34:22 --> Config Class Initialized
+INFO - 2016-05-12 17:34:22 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:34:22 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:34:22 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:34:22 --> URI Class Initialized
+INFO - 2016-05-12 17:34:22 --> Router Class Initialized
+INFO - 2016-05-12 17:34:22 --> Output Class Initialized
+INFO - 2016-05-12 17:34:22 --> Security Class Initialized
+DEBUG - 2016-05-12 17:34:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:34:22 --> Input Class Initialized
+INFO - 2016-05-12 17:34:22 --> Language Class Initialized
+INFO - 2016-05-12 17:34:22 --> Loader Class Initialized
+INFO - 2016-05-12 17:34:22 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:34:22 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:34:22 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:34:22 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:34:22 --> Pagination Class Initialized
+INFO - 2016-05-12 17:34:22 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:34:22 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:34:22 --> Email Class Initialized
+DEBUG - 2016-05-12 17:34:22 --> Upload Class Initialized
+INFO - 2016-05-12 17:34:22 --> Model Class Initialized
+INFO - 2016-05-12 17:34:22 --> Model Class Initialized
+INFO - 2016-05-12 17:34:22 --> Model Class Initialized
+INFO - 2016-05-12 17:34:22 --> Controller Class Initialized
+INFO - 2016-05-12 17:34:22 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:34:22 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:34:22 --> Model Class Initialized
+INFO - 2016-05-12 17:34:22 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:34:22 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:34:22 --> Final output sent to browser
+DEBUG - 2016-05-12 17:34:22 --> Total execution time: 0.0914
+INFO - 2016-05-12 17:35:59 --> Config Class Initialized
+INFO - 2016-05-12 17:35:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:35:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:35:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:35:59 --> URI Class Initialized
+INFO - 2016-05-12 17:35:59 --> Router Class Initialized
+INFO - 2016-05-12 17:35:59 --> Output Class Initialized
+INFO - 2016-05-12 17:35:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:35:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:35:59 --> Input Class Initialized
+INFO - 2016-05-12 17:35:59 --> Language Class Initialized
+INFO - 2016-05-12 17:35:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:35:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:35:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:35:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:35:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:35:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:35:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:35:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:35:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:35:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:35:59 --> Model Class Initialized
+INFO - 2016-05-12 17:35:59 --> Model Class Initialized
+INFO - 2016-05-12 17:35:59 --> Model Class Initialized
+INFO - 2016-05-12 17:35:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:35:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:35:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:35:59 --> Model Class Initialized
+INFO - 2016-05-12 17:35:59 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:35:59 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:35:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:35:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:35:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:35:59 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:35:59 --> Final output sent to browser
+DEBUG - 2016-05-12 17:35:59 --> Total execution time: 0.0753
+ERROR - 2016-05-12 17:35:59 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 17:36:02 --> Config Class Initialized
+INFO - 2016-05-12 17:36:02 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:36:02 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:36:02 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:36:02 --> URI Class Initialized
+INFO - 2016-05-12 17:36:02 --> Router Class Initialized
+INFO - 2016-05-12 17:36:02 --> Output Class Initialized
+INFO - 2016-05-12 17:36:02 --> Security Class Initialized
+DEBUG - 2016-05-12 17:36:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:36:02 --> Input Class Initialized
+INFO - 2016-05-12 17:36:02 --> Language Class Initialized
+INFO - 2016-05-12 17:36:02 --> Loader Class Initialized
+INFO - 2016-05-12 17:36:02 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:36:02 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:36:02 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:36:02 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:36:02 --> Pagination Class Initialized
+INFO - 2016-05-12 17:36:02 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:36:02 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:36:02 --> Email Class Initialized
+DEBUG - 2016-05-12 17:36:02 --> Upload Class Initialized
+INFO - 2016-05-12 17:36:02 --> Model Class Initialized
+INFO - 2016-05-12 17:36:02 --> Model Class Initialized
+INFO - 2016-05-12 17:36:02 --> Model Class Initialized
+INFO - 2016-05-12 17:36:02 --> Controller Class Initialized
+INFO - 2016-05-12 17:36:02 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:36:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:36:02 --> Model Class Initialized
+INFO - 2016-05-12 17:36:02 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:36:03 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:36:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:36:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:36:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:36:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:36:03 --> Final output sent to browser
+DEBUG - 2016-05-12 17:36:03 --> Total execution time: 0.1188
+ERROR - 2016-05-12 17:36:03 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 17:36:07 --> Config Class Initialized
+INFO - 2016-05-12 17:36:07 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:36:07 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:36:07 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:36:07 --> URI Class Initialized
+INFO - 2016-05-12 17:36:07 --> Router Class Initialized
+INFO - 2016-05-12 17:36:07 --> Output Class Initialized
+INFO - 2016-05-12 17:36:07 --> Security Class Initialized
+DEBUG - 2016-05-12 17:36:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:36:07 --> Input Class Initialized
+INFO - 2016-05-12 17:36:07 --> Language Class Initialized
+INFO - 2016-05-12 17:36:07 --> Loader Class Initialized
+INFO - 2016-05-12 17:36:07 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:36:07 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:36:07 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:36:07 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:36:07 --> Pagination Class Initialized
+INFO - 2016-05-12 17:36:07 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:36:07 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:36:07 --> Email Class Initialized
+DEBUG - 2016-05-12 17:36:07 --> Upload Class Initialized
+INFO - 2016-05-12 17:36:07 --> Model Class Initialized
+INFO - 2016-05-12 17:36:07 --> Model Class Initialized
+INFO - 2016-05-12 17:36:07 --> Model Class Initialized
+INFO - 2016-05-12 17:36:07 --> Controller Class Initialized
+INFO - 2016-05-12 17:36:07 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:36:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:36:07 --> Model Class Initialized
+INFO - 2016-05-12 17:36:07 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:36:07 --> Final output sent to browser
+DEBUG - 2016-05-12 17:36:07 --> Total execution time: 0.0500
+INFO - 2016-05-12 17:36:08 --> Config Class Initialized
+INFO - 2016-05-12 17:36:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:36:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:36:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:36:08 --> URI Class Initialized
+INFO - 2016-05-12 17:36:08 --> Router Class Initialized
+INFO - 2016-05-12 17:36:08 --> Output Class Initialized
+INFO - 2016-05-12 17:36:08 --> Security Class Initialized
+DEBUG - 2016-05-12 17:36:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:36:08 --> Input Class Initialized
+INFO - 2016-05-12 17:36:08 --> Language Class Initialized
+INFO - 2016-05-12 17:36:08 --> Loader Class Initialized
+INFO - 2016-05-12 17:36:08 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:36:08 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:36:08 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:36:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:36:08 --> Pagination Class Initialized
+INFO - 2016-05-12 17:36:08 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:36:08 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:36:08 --> Email Class Initialized
+DEBUG - 2016-05-12 17:36:08 --> Upload Class Initialized
+INFO - 2016-05-12 17:36:08 --> Model Class Initialized
+INFO - 2016-05-12 17:36:08 --> Model Class Initialized
+INFO - 2016-05-12 17:36:08 --> Model Class Initialized
+INFO - 2016-05-12 17:36:08 --> Controller Class Initialized
+INFO - 2016-05-12 17:36:08 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:36:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:36:08 --> Model Class Initialized
+INFO - 2016-05-12 17:36:08 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:36:08 --> Final output sent to browser
+DEBUG - 2016-05-12 17:36:08 --> Total execution time: 0.0787
+INFO - 2016-05-12 17:36:12 --> Config Class Initialized
+INFO - 2016-05-12 17:36:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:36:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:36:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:36:12 --> URI Class Initialized
+INFO - 2016-05-12 17:36:12 --> Router Class Initialized
+INFO - 2016-05-12 17:36:12 --> Output Class Initialized
+INFO - 2016-05-12 17:36:12 --> Security Class Initialized
+DEBUG - 2016-05-12 17:36:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:36:12 --> Input Class Initialized
+INFO - 2016-05-12 17:36:12 --> Language Class Initialized
+INFO - 2016-05-12 17:36:12 --> Loader Class Initialized
+INFO - 2016-05-12 17:36:12 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:36:12 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:36:12 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:36:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:36:12 --> Pagination Class Initialized
+INFO - 2016-05-12 17:36:12 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:36:12 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:36:12 --> Email Class Initialized
+DEBUG - 2016-05-12 17:36:12 --> Upload Class Initialized
+INFO - 2016-05-12 17:36:12 --> Model Class Initialized
+INFO - 2016-05-12 17:36:12 --> Model Class Initialized
+INFO - 2016-05-12 17:36:12 --> Model Class Initialized
+INFO - 2016-05-12 17:36:12 --> Controller Class Initialized
+INFO - 2016-05-12 17:36:12 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:36:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:36:12 --> Model Class Initialized
+INFO - 2016-05-12 17:36:12 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:36:12 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:36:12 --> Final output sent to browser
+DEBUG - 2016-05-12 17:36:12 --> Total execution time: 0.1001
+INFO - 2016-05-12 17:37:03 --> Config Class Initialized
+INFO - 2016-05-12 17:37:03 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:03 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:03 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:03 --> URI Class Initialized
+INFO - 2016-05-12 17:37:03 --> Router Class Initialized
+INFO - 2016-05-12 17:37:03 --> Output Class Initialized
+INFO - 2016-05-12 17:37:03 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:03 --> Input Class Initialized
+INFO - 2016-05-12 17:37:03 --> Language Class Initialized
+INFO - 2016-05-12 17:37:03 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:03 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:03 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:03 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:03 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:03 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:03 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:03 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:03 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:03 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:03 --> Model Class Initialized
+INFO - 2016-05-12 17:37:03 --> Model Class Initialized
+INFO - 2016-05-12 17:37:03 --> Model Class Initialized
+INFO - 2016-05-12 17:37:03 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:03 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:03 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:03 --> Model Class Initialized
+INFO - 2016-05-12 17:37:03 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:37:03 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:37:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:37:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:37:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:37:03 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:37:03 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:03 --> Total execution time: 0.0657
+ERROR - 2016-05-12 17:37:03 --> Severity: Core Warning --> PHP Startup: Unable to load dynamic library '/opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so' - /opt/lampp/lib/php/extensions/no-debug-non-zts-20151012/pdo_mysql.so: cannot open shared object file: No such file or directory Unknown 0
+INFO - 2016-05-12 17:37:12 --> Config Class Initialized
+INFO - 2016-05-12 17:37:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:12 --> URI Class Initialized
+INFO - 2016-05-12 17:37:12 --> Router Class Initialized
+INFO - 2016-05-12 17:37:12 --> Output Class Initialized
+INFO - 2016-05-12 17:37:12 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:12 --> Input Class Initialized
+INFO - 2016-05-12 17:37:12 --> Language Class Initialized
+INFO - 2016-05-12 17:37:12 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:12 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:12 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:12 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:12 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:12 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:12 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:12 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:12 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:12 --> Model Class Initialized
+INFO - 2016-05-12 17:37:12 --> Model Class Initialized
+INFO - 2016-05-12 17:37:12 --> Model Class Initialized
+INFO - 2016-05-12 17:37:12 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:12 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:12 --> Model Class Initialized
+INFO - 2016-05-12 17:37:12 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:12 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:12 --> Total execution time: 0.0566
+INFO - 2016-05-12 17:37:12 --> Config Class Initialized
+INFO - 2016-05-12 17:37:12 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:12 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:12 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:12 --> URI Class Initialized
+INFO - 2016-05-12 17:37:12 --> Router Class Initialized
+INFO - 2016-05-12 17:37:12 --> Output Class Initialized
+INFO - 2016-05-12 17:37:12 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:12 --> Input Class Initialized
+INFO - 2016-05-12 17:37:12 --> Language Class Initialized
+INFO - 2016-05-12 17:37:13 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:13 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:13 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:13 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:13 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:13 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:13 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:13 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:13 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:13 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:13 --> Model Class Initialized
+INFO - 2016-05-12 17:37:13 --> Model Class Initialized
+INFO - 2016-05-12 17:37:13 --> Model Class Initialized
+INFO - 2016-05-12 17:37:13 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:13 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:13 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:13 --> Model Class Initialized
+INFO - 2016-05-12 17:37:13 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:13 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:13 --> Total execution time: 0.0427
+INFO - 2016-05-12 17:37:17 --> Config Class Initialized
+INFO - 2016-05-12 17:37:17 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:17 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:17 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:17 --> URI Class Initialized
+INFO - 2016-05-12 17:37:17 --> Router Class Initialized
+INFO - 2016-05-12 17:37:17 --> Output Class Initialized
+INFO - 2016-05-12 17:37:17 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:17 --> Input Class Initialized
+INFO - 2016-05-12 17:37:17 --> Language Class Initialized
+INFO - 2016-05-12 17:37:17 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:17 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:17 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:17 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:17 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:17 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:17 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:17 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:17 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:17 --> Model Class Initialized
+INFO - 2016-05-12 17:37:17 --> Model Class Initialized
+INFO - 2016-05-12 17:37:17 --> Model Class Initialized
+INFO - 2016-05-12 17:37:17 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:17 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:17 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:17 --> Model Class Initialized
+INFO - 2016-05-12 17:37:17 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:17 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/admin/getprojects.php
+INFO - 2016-05-12 17:37:17 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:17 --> Total execution time: 0.0767
+INFO - 2016-05-12 17:37:21 --> Config Class Initialized
+INFO - 2016-05-12 17:37:21 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:21 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:21 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:21 --> URI Class Initialized
+INFO - 2016-05-12 17:37:21 --> Router Class Initialized
+INFO - 2016-05-12 17:37:21 --> Output Class Initialized
+INFO - 2016-05-12 17:37:21 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:21 --> Input Class Initialized
+INFO - 2016-05-12 17:37:21 --> Language Class Initialized
+INFO - 2016-05-12 17:37:21 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:21 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:21 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:21 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:21 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:21 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:21 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:21 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:21 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:21 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:21 --> Model Class Initialized
+INFO - 2016-05-12 17:37:21 --> Model Class Initialized
+INFO - 2016-05-12 17:37:21 --> Model Class Initialized
+INFO - 2016-05-12 17:37:21 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:21 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:21 --> Model Class Initialized
+INFO - 2016-05-12 17:37:21 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:37:21 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:37:21 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:37:21 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:37:21 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:37:21 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:37:21 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:21 --> Total execution time: 0.0785
+INFO - 2016-05-12 17:37:30 --> Config Class Initialized
+INFO - 2016-05-12 17:37:30 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:30 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:30 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:30 --> URI Class Initialized
+INFO - 2016-05-12 17:37:30 --> Router Class Initialized
+INFO - 2016-05-12 17:37:30 --> Output Class Initialized
+INFO - 2016-05-12 17:37:30 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:30 --> Input Class Initialized
+INFO - 2016-05-12 17:37:30 --> Language Class Initialized
+INFO - 2016-05-12 17:37:30 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:30 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:30 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:30 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:30 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:30 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:30 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:30 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:30 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:30 --> Model Class Initialized
+INFO - 2016-05-12 17:37:30 --> Model Class Initialized
+INFO - 2016-05-12 17:37:30 --> Model Class Initialized
+INFO - 2016-05-12 17:37:30 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:30 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:30 --> Model Class Initialized
+INFO - 2016-05-12 17:37:30 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:37:30 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:37:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:37:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/library.php
+INFO - 2016-05-12 17:37:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:37:30 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:37:30 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:30 --> Total execution time: 0.1196
+INFO - 2016-05-12 17:37:35 --> Config Class Initialized
+INFO - 2016-05-12 17:37:35 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:35 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:35 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:35 --> URI Class Initialized
+INFO - 2016-05-12 17:37:35 --> Router Class Initialized
+INFO - 2016-05-12 17:37:35 --> Output Class Initialized
+INFO - 2016-05-12 17:37:35 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:35 --> Input Class Initialized
+INFO - 2016-05-12 17:37:35 --> Language Class Initialized
+ERROR - 2016-05-12 17:37:35 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:37:35 --> Config Class Initialized
+INFO - 2016-05-12 17:37:35 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:35 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:35 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:35 --> URI Class Initialized
+INFO - 2016-05-12 17:37:35 --> Router Class Initialized
+INFO - 2016-05-12 17:37:35 --> Output Class Initialized
+INFO - 2016-05-12 17:37:35 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:35 --> Input Class Initialized
+INFO - 2016-05-12 17:37:35 --> Language Class Initialized
+INFO - 2016-05-12 17:37:35 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:35 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:35 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:35 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:35 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:35 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:35 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:35 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:35 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:35 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:35 --> Model Class Initialized
+INFO - 2016-05-12 17:37:35 --> Model Class Initialized
+INFO - 2016-05-12 17:37:35 --> Model Class Initialized
+INFO - 2016-05-12 17:37:35 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:35 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:37:35 --> Model Class Initialized
+INFO - 2016-05-12 17:37:35 --> Model Class Initialized
+INFO - 2016-05-12 17:37:35 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addlibrary.php
+INFO - 2016-05-12 17:37:35 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:35 --> Total execution time: 0.0647
+INFO - 2016-05-12 17:37:38 --> Config Class Initialized
+INFO - 2016-05-12 17:37:38 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:38 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:38 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:38 --> URI Class Initialized
+INFO - 2016-05-12 17:37:38 --> Router Class Initialized
+INFO - 2016-05-12 17:37:38 --> Output Class Initialized
+INFO - 2016-05-12 17:37:38 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:38 --> Input Class Initialized
+INFO - 2016-05-12 17:37:38 --> Language Class Initialized
+INFO - 2016-05-12 17:37:38 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:38 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:38 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:38 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:38 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:38 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:38 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:38 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:38 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:38 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:38 --> Model Class Initialized
+INFO - 2016-05-12 17:37:38 --> Model Class Initialized
+INFO - 2016-05-12 17:37:38 --> Model Class Initialized
+INFO - 2016-05-12 17:37:38 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:38 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:38 --> Model Class Initialized
+INFO - 2016-05-12 17:37:38 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:38 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:38 --> Total execution time: 0.0397
+INFO - 2016-05-12 17:37:39 --> Config Class Initialized
+INFO - 2016-05-12 17:37:39 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:39 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:39 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:39 --> URI Class Initialized
+INFO - 2016-05-12 17:37:39 --> Router Class Initialized
+INFO - 2016-05-12 17:37:39 --> Output Class Initialized
+INFO - 2016-05-12 17:37:39 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:39 --> Input Class Initialized
+INFO - 2016-05-12 17:37:39 --> Language Class Initialized
+INFO - 2016-05-12 17:37:39 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:39 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:39 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:39 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:39 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:39 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:39 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:39 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:39 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:39 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:39 --> Total execution time: 0.0354
+INFO - 2016-05-12 17:37:39 --> Config Class Initialized
+INFO - 2016-05-12 17:37:39 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:39 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:39 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:39 --> URI Class Initialized
+INFO - 2016-05-12 17:37:39 --> Router Class Initialized
+INFO - 2016-05-12 17:37:39 --> Output Class Initialized
+INFO - 2016-05-12 17:37:39 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:39 --> Input Class Initialized
+INFO - 2016-05-12 17:37:39 --> Language Class Initialized
+INFO - 2016-05-12 17:37:39 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:39 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:39 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:39 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:39 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:39 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:39 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:39 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:39 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:39 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:39 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:39 --> Model Class Initialized
+INFO - 2016-05-12 17:37:39 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:39 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:39 --> Total execution time: 0.0527
+INFO - 2016-05-12 17:37:41 --> Config Class Initialized
+INFO - 2016-05-12 17:37:41 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:41 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:41 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:41 --> URI Class Initialized
+INFO - 2016-05-12 17:37:41 --> Router Class Initialized
+INFO - 2016-05-12 17:37:41 --> Output Class Initialized
+INFO - 2016-05-12 17:37:41 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:41 --> Input Class Initialized
+INFO - 2016-05-12 17:37:41 --> Language Class Initialized
+INFO - 2016-05-12 17:37:41 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:41 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:41 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:41 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:41 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:41 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:41 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:41 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:41 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:41 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:41 --> Model Class Initialized
+INFO - 2016-05-12 17:37:41 --> Model Class Initialized
+INFO - 2016-05-12 17:37:41 --> Model Class Initialized
+INFO - 2016-05-12 17:37:41 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:41 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:41 --> Model Class Initialized
+INFO - 2016-05-12 17:37:41 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:41 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:41 --> Total execution time: 0.0348
+INFO - 2016-05-12 17:37:42 --> Config Class Initialized
+INFO - 2016-05-12 17:37:42 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:42 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:42 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:42 --> URI Class Initialized
+INFO - 2016-05-12 17:37:42 --> Router Class Initialized
+INFO - 2016-05-12 17:37:42 --> Output Class Initialized
+INFO - 2016-05-12 17:37:42 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:42 --> Input Class Initialized
+INFO - 2016-05-12 17:37:42 --> Language Class Initialized
+INFO - 2016-05-12 17:37:42 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:42 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:42 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:42 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:42 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:42 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:42 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:42 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:42 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:42 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:42 --> Model Class Initialized
+INFO - 2016-05-12 17:37:42 --> Model Class Initialized
+INFO - 2016-05-12 17:37:42 --> Model Class Initialized
+INFO - 2016-05-12 17:37:42 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:42 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:42 --> Model Class Initialized
+INFO - 2016-05-12 17:37:42 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:42 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:42 --> Total execution time: 0.0571
+INFO - 2016-05-12 17:37:43 --> Config Class Initialized
+INFO - 2016-05-12 17:37:43 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:43 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:43 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:43 --> URI Class Initialized
+INFO - 2016-05-12 17:37:43 --> Router Class Initialized
+INFO - 2016-05-12 17:37:43 --> Output Class Initialized
+INFO - 2016-05-12 17:37:43 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:43 --> Input Class Initialized
+INFO - 2016-05-12 17:37:43 --> Language Class Initialized
+INFO - 2016-05-12 17:37:43 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:43 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:43 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:44 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:44 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:44 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:44 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:44 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:44 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:44 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:44 --> Model Class Initialized
+INFO - 2016-05-12 17:37:44 --> Model Class Initialized
+INFO - 2016-05-12 17:37:44 --> Model Class Initialized
+INFO - 2016-05-12 17:37:44 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:44 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:44 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:44 --> Model Class Initialized
+INFO - 2016-05-12 17:37:44 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:44 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:44 --> Total execution time: 0.0548
+INFO - 2016-05-12 17:37:48 --> Config Class Initialized
+INFO - 2016-05-12 17:37:48 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:48 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:48 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:48 --> URI Class Initialized
+INFO - 2016-05-12 17:37:48 --> Router Class Initialized
+INFO - 2016-05-12 17:37:48 --> Output Class Initialized
+INFO - 2016-05-12 17:37:48 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:48 --> Input Class Initialized
+INFO - 2016-05-12 17:37:48 --> Language Class Initialized
+INFO - 2016-05-12 17:37:48 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:48 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:48 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:48 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:48 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:48 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:48 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:48 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:48 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:48 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:48 --> Model Class Initialized
+INFO - 2016-05-12 17:37:48 --> Model Class Initialized
+INFO - 2016-05-12 17:37:48 --> Model Class Initialized
+INFO - 2016-05-12 17:37:48 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:48 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:48 --> Model Class Initialized
+INFO - 2016-05-12 17:37:48 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:37:48 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:37:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:37:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:37:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:37:48 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:37:48 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:48 --> Total execution time: 0.1216
+INFO - 2016-05-12 17:37:52 --> Config Class Initialized
+INFO - 2016-05-12 17:37:52 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:52 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:52 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:52 --> URI Class Initialized
+INFO - 2016-05-12 17:37:52 --> Router Class Initialized
+INFO - 2016-05-12 17:37:52 --> Output Class Initialized
+INFO - 2016-05-12 17:37:52 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:52 --> Input Class Initialized
+INFO - 2016-05-12 17:37:52 --> Language Class Initialized
+ERROR - 2016-05-12 17:37:52 --> 404 Page Not Found: Professor/assets
+INFO - 2016-05-12 17:37:52 --> Config Class Initialized
+INFO - 2016-05-12 17:37:52 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:52 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:52 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:52 --> URI Class Initialized
+INFO - 2016-05-12 17:37:52 --> Router Class Initialized
+INFO - 2016-05-12 17:37:52 --> Output Class Initialized
+INFO - 2016-05-12 17:37:52 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:52 --> Input Class Initialized
+INFO - 2016-05-12 17:37:52 --> Language Class Initialized
+INFO - 2016-05-12 17:37:52 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:52 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:52 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:52 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:52 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:52 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:52 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:52 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:52 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:52 --> Model Class Initialized
+INFO - 2016-05-12 17:37:52 --> Model Class Initialized
+INFO - 2016-05-12 17:37:52 --> Model Class Initialized
+INFO - 2016-05-12 17:37:52 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:52 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:37:52 --> Model Class Initialized
+INFO - 2016-05-12 17:37:52 --> Model Class Initialized
+INFO - 2016-05-12 17:37:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addproject.php
+INFO - 2016-05-12 17:37:52 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:52 --> Total execution time: 0.0462
+INFO - 2016-05-12 17:37:57 --> Config Class Initialized
+INFO - 2016-05-12 17:37:57 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:57 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:57 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:57 --> URI Class Initialized
+INFO - 2016-05-12 17:37:57 --> Router Class Initialized
+INFO - 2016-05-12 17:37:57 --> Output Class Initialized
+INFO - 2016-05-12 17:37:57 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:57 --> Input Class Initialized
+INFO - 2016-05-12 17:37:57 --> Language Class Initialized
+INFO - 2016-05-12 17:37:57 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:57 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:57 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:57 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:57 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:57 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:57 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:57 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:57 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:57 --> Model Class Initialized
+INFO - 2016-05-12 17:37:57 --> Model Class Initialized
+INFO - 2016-05-12 17:37:57 --> Model Class Initialized
+INFO - 2016-05-12 17:37:57 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:57 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:57 --> Model Class Initialized
+INFO - 2016-05-12 17:37:57 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:57 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:57 --> Total execution time: 0.0532
+INFO - 2016-05-12 17:37:58 --> Config Class Initialized
+INFO - 2016-05-12 17:37:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:58 --> URI Class Initialized
+INFO - 2016-05-12 17:37:58 --> Router Class Initialized
+INFO - 2016-05-12 17:37:58 --> Output Class Initialized
+INFO - 2016-05-12 17:37:58 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:58 --> Input Class Initialized
+INFO - 2016-05-12 17:37:58 --> Language Class Initialized
+INFO - 2016-05-12 17:37:58 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:58 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:58 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:58 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:58 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:58 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:58 --> Total execution time: 0.0534
+INFO - 2016-05-12 17:37:58 --> Config Class Initialized
+INFO - 2016-05-12 17:37:58 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:58 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:58 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:58 --> URI Class Initialized
+INFO - 2016-05-12 17:37:58 --> Router Class Initialized
+INFO - 2016-05-12 17:37:58 --> Output Class Initialized
+INFO - 2016-05-12 17:37:58 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:58 --> Input Class Initialized
+INFO - 2016-05-12 17:37:58 --> Language Class Initialized
+INFO - 2016-05-12 17:37:58 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:58 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:58 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:58 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:58 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:58 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:58 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:58 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:58 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:58 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:58 --> Model Class Initialized
+INFO - 2016-05-12 17:37:58 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:58 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:58 --> Total execution time: 0.0550
+INFO - 2016-05-12 17:37:59 --> Config Class Initialized
+INFO - 2016-05-12 17:37:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:37:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:37:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:37:59 --> URI Class Initialized
+INFO - 2016-05-12 17:37:59 --> Router Class Initialized
+INFO - 2016-05-12 17:37:59 --> Output Class Initialized
+INFO - 2016-05-12 17:37:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:37:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:37:59 --> Input Class Initialized
+INFO - 2016-05-12 17:37:59 --> Language Class Initialized
+INFO - 2016-05-12 17:37:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:37:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:37:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:37:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:37:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:37:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:37:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:37:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:37:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:37:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:37:59 --> Model Class Initialized
+INFO - 2016-05-12 17:37:59 --> Model Class Initialized
+INFO - 2016-05-12 17:37:59 --> Model Class Initialized
+INFO - 2016-05-12 17:37:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:37:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:37:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:37:59 --> Model Class Initialized
+INFO - 2016-05-12 17:37:59 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:37:59 --> Final output sent to browser
+DEBUG - 2016-05-12 17:37:59 --> Total execution time: 0.0563
+INFO - 2016-05-12 17:38:15 --> Config Class Initialized
+INFO - 2016-05-12 17:38:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:15 --> URI Class Initialized
+INFO - 2016-05-12 17:38:15 --> Router Class Initialized
+INFO - 2016-05-12 17:38:15 --> Output Class Initialized
+INFO - 2016-05-12 17:38:15 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:15 --> Input Class Initialized
+INFO - 2016-05-12 17:38:15 --> Language Class Initialized
+INFO - 2016-05-12 17:38:15 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:15 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:15 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:15 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:15 --> Model Class Initialized
+INFO - 2016-05-12 17:38:15 --> Model Class Initialized
+INFO - 2016-05-12 17:38:15 --> Model Class Initialized
+INFO - 2016-05-12 17:38:15 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:15 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:38:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:15 --> Model Class Initialized
+INFO - 2016-05-12 17:38:15 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:38:15 --> Final output sent to browser
+DEBUG - 2016-05-12 17:38:15 --> Total execution time: 0.0529
+INFO - 2016-05-12 17:38:42 --> Config Class Initialized
+INFO - 2016-05-12 17:38:42 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:42 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:42 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:42 --> URI Class Initialized
+INFO - 2016-05-12 17:38:42 --> Router Class Initialized
+INFO - 2016-05-12 17:38:42 --> Output Class Initialized
+INFO - 2016-05-12 17:38:42 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:42 --> Input Class Initialized
+INFO - 2016-05-12 17:38:42 --> Language Class Initialized
+INFO - 2016-05-12 17:38:43 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:43 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:43 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:43 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:43 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:43 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:43 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:43 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:43 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:38:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:38:43 --> Final output sent to browser
+DEBUG - 2016-05-12 17:38:43 --> Total execution time: 0.0431
+INFO - 2016-05-12 17:38:43 --> Config Class Initialized
+INFO - 2016-05-12 17:38:43 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:43 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:43 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:43 --> URI Class Initialized
+INFO - 2016-05-12 17:38:43 --> Router Class Initialized
+INFO - 2016-05-12 17:38:43 --> Output Class Initialized
+INFO - 2016-05-12 17:38:43 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:43 --> Input Class Initialized
+INFO - 2016-05-12 17:38:43 --> Language Class Initialized
+ERROR - 2016-05-12 17:38:43 --> 404 Page Not Found: Professor/checkprojectstd
+INFO - 2016-05-12 17:38:43 --> Config Class Initialized
+INFO - 2016-05-12 17:38:43 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:43 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:43 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:43 --> URI Class Initialized
+INFO - 2016-05-12 17:38:43 --> Router Class Initialized
+INFO - 2016-05-12 17:38:43 --> Output Class Initialized
+INFO - 2016-05-12 17:38:43 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:43 --> Input Class Initialized
+INFO - 2016-05-12 17:38:43 --> Language Class Initialized
+INFO - 2016-05-12 17:38:43 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:43 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:43 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:43 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:43 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:43 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:43 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:43 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:43 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:43 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:38:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:43 --> Model Class Initialized
+INFO - 2016-05-12 17:38:43 --> Helper loaded: notification_helper
+DEBUG - 2016-05-12 17:38:43 --> Upload class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:44 --> Config Class Initialized
+INFO - 2016-05-12 17:38:44 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:44 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:44 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:44 --> URI Class Initialized
+INFO - 2016-05-12 17:38:44 --> Router Class Initialized
+INFO - 2016-05-12 17:38:44 --> Output Class Initialized
+INFO - 2016-05-12 17:38:44 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:44 --> Input Class Initialized
+INFO - 2016-05-12 17:38:44 --> Language Class Initialized
+INFO - 2016-05-12 17:38:44 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:44 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:44 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:44 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:44 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:44 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:44 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:44 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:44 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:44 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:44 --> Model Class Initialized
+INFO - 2016-05-12 17:38:44 --> Model Class Initialized
+INFO - 2016-05-12 17:38:44 --> Model Class Initialized
+INFO - 2016-05-12 17:38:44 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:44 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:38:44 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:44 --> Model Class Initialized
+INFO - 2016-05-12 17:38:44 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:38:44 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:38:44 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:38:44 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:38:44 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:38:44 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:38:44 --> Final output sent to browser
+DEBUG - 2016-05-12 17:38:44 --> Total execution time: 0.0927
+INFO - 2016-05-12 17:38:46 --> Config Class Initialized
+INFO - 2016-05-12 17:38:46 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:46 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:46 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:46 --> URI Class Initialized
+INFO - 2016-05-12 17:38:46 --> Router Class Initialized
+INFO - 2016-05-12 17:38:46 --> Output Class Initialized
+INFO - 2016-05-12 17:38:46 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:46 --> Input Class Initialized
+INFO - 2016-05-12 17:38:46 --> Language Class Initialized
+INFO - 2016-05-12 17:38:46 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:46 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:46 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:46 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:46 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:46 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:46 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:46 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:46 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:46 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:46 --> Model Class Initialized
+INFO - 2016-05-12 17:38:46 --> Model Class Initialized
+INFO - 2016-05-12 17:38:46 --> Model Class Initialized
+INFO - 2016-05-12 17:38:46 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:46 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:38:46 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:46 --> Model Class Initialized
+INFO - 2016-05-12 17:38:46 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:38:46 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:38:46 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:38:46 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:38:46 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:38:46 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:38:46 --> Final output sent to browser
+DEBUG - 2016-05-12 17:38:46 --> Total execution time: 0.0840
+INFO - 2016-05-12 17:38:49 --> Config Class Initialized
+INFO - 2016-05-12 17:38:49 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:49 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:49 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:49 --> URI Class Initialized
+INFO - 2016-05-12 17:38:49 --> Router Class Initialized
+INFO - 2016-05-12 17:38:49 --> Output Class Initialized
+INFO - 2016-05-12 17:38:49 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:49 --> Input Class Initialized
+INFO - 2016-05-12 17:38:49 --> Language Class Initialized
+INFO - 2016-05-12 17:38:49 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:49 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:49 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:49 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:49 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:49 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:49 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:49 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:49 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:49 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:49 --> Model Class Initialized
+INFO - 2016-05-12 17:38:49 --> Model Class Initialized
+INFO - 2016-05-12 17:38:49 --> Model Class Initialized
+INFO - 2016-05-12 17:38:49 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:49 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:38:49 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:38:49 --> Model Class Initialized
+INFO - 2016-05-12 17:38:49 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:38:49 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:38:49 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:38:49 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:38:49 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:38:49 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:38:49 --> Final output sent to browser
+DEBUG - 2016-05-12 17:38:49 --> Total execution time: 0.0742
+INFO - 2016-05-12 17:38:50 --> Config Class Initialized
+INFO - 2016-05-12 17:38:50 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:38:50 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:38:50 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:38:50 --> URI Class Initialized
+INFO - 2016-05-12 17:38:50 --> Router Class Initialized
+INFO - 2016-05-12 17:38:50 --> Output Class Initialized
+INFO - 2016-05-12 17:38:50 --> Security Class Initialized
+DEBUG - 2016-05-12 17:38:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:38:50 --> Input Class Initialized
+INFO - 2016-05-12 17:38:50 --> Language Class Initialized
+INFO - 2016-05-12 17:38:50 --> Loader Class Initialized
+INFO - 2016-05-12 17:38:50 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:38:50 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:38:50 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:38:50 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:38:50 --> Pagination Class Initialized
+INFO - 2016-05-12 17:38:50 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:38:50 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:38:50 --> Email Class Initialized
+DEBUG - 2016-05-12 17:38:50 --> Upload Class Initialized
+INFO - 2016-05-12 17:38:50 --> Model Class Initialized
+INFO - 2016-05-12 17:38:50 --> Model Class Initialized
+INFO - 2016-05-12 17:38:50 --> Model Class Initialized
+INFO - 2016-05-12 17:38:50 --> Controller Class Initialized
+INFO - 2016-05-12 17:38:50 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:38:50 --> Model Class Initialized
+INFO - 2016-05-12 17:38:50 --> Model Class Initialized
+INFO - 2016-05-12 17:38:50 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_project.php
+INFO - 2016-05-12 17:38:50 --> Final output sent to browser
+DEBUG - 2016-05-12 17:38:50 --> Total execution time: 0.1003
+INFO - 2016-05-12 17:39:37 --> Config Class Initialized
+INFO - 2016-05-12 17:39:37 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:39:37 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:39:37 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:39:37 --> URI Class Initialized
+INFO - 2016-05-12 17:39:37 --> Router Class Initialized
+INFO - 2016-05-12 17:39:37 --> Output Class Initialized
+INFO - 2016-05-12 17:39:37 --> Security Class Initialized
+DEBUG - 2016-05-12 17:39:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:39:37 --> Input Class Initialized
+INFO - 2016-05-12 17:39:37 --> Language Class Initialized
+INFO - 2016-05-12 17:39:37 --> Loader Class Initialized
+INFO - 2016-05-12 17:39:37 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:39:37 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:39:37 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:39:37 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:39:37 --> Pagination Class Initialized
+INFO - 2016-05-12 17:39:37 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:39:37 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:39:37 --> Email Class Initialized
+DEBUG - 2016-05-12 17:39:37 --> Upload Class Initialized
+INFO - 2016-05-12 17:39:37 --> Model Class Initialized
+INFO - 2016-05-12 17:39:37 --> Model Class Initialized
+INFO - 2016-05-12 17:39:37 --> Model Class Initialized
+INFO - 2016-05-12 17:39:37 --> Controller Class Initialized
+INFO - 2016-05-12 17:39:37 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:39:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:39:37 --> Model Class Initialized
+INFO - 2016-05-12 17:39:37 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:39:37 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:39:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:39:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:39:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:39:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:39:37 --> Final output sent to browser
+DEBUG - 2016-05-12 17:39:37 --> Total execution time: 0.0613
+INFO - 2016-05-12 17:39:41 --> Config Class Initialized
+INFO - 2016-05-12 17:39:41 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:39:41 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:39:41 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:39:41 --> URI Class Initialized
+INFO - 2016-05-12 17:39:41 --> Router Class Initialized
+INFO - 2016-05-12 17:39:41 --> Output Class Initialized
+INFO - 2016-05-12 17:39:41 --> Security Class Initialized
+DEBUG - 2016-05-12 17:39:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:39:41 --> Input Class Initialized
+INFO - 2016-05-12 17:39:41 --> Language Class Initialized
+INFO - 2016-05-12 17:39:41 --> Loader Class Initialized
+INFO - 2016-05-12 17:39:41 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:39:41 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:39:41 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:39:41 --> Pagination Class Initialized
+INFO - 2016-05-12 17:39:41 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:39:41 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:39:41 --> Email Class Initialized
+DEBUG - 2016-05-12 17:39:41 --> Upload Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Controller Class Initialized
+INFO - 2016-05-12 17:39:41 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:39:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:39:41 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:39:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:39:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:39:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:39:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:39:41 --> Final output sent to browser
+DEBUG - 2016-05-12 17:39:41 --> Total execution time: 0.0528
+INFO - 2016-05-12 17:39:41 --> Config Class Initialized
+INFO - 2016-05-12 17:39:41 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:39:41 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:39:41 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:39:41 --> URI Class Initialized
+INFO - 2016-05-12 17:39:41 --> Router Class Initialized
+INFO - 2016-05-12 17:39:41 --> Output Class Initialized
+INFO - 2016-05-12 17:39:41 --> Security Class Initialized
+DEBUG - 2016-05-12 17:39:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:39:41 --> Input Class Initialized
+INFO - 2016-05-12 17:39:41 --> Language Class Initialized
+INFO - 2016-05-12 17:39:41 --> Loader Class Initialized
+INFO - 2016-05-12 17:39:41 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:39:41 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:39:41 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:39:41 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:39:41 --> Pagination Class Initialized
+INFO - 2016-05-12 17:39:41 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:39:41 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:39:41 --> Email Class Initialized
+DEBUG - 2016-05-12 17:39:41 --> Upload Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Controller Class Initialized
+INFO - 2016-05-12 17:39:41 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> Model Class Initialized
+INFO - 2016-05-12 17:39:41 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_project.php
+INFO - 2016-05-12 17:39:41 --> Final output sent to browser
+DEBUG - 2016-05-12 17:39:41 --> Total execution time: 0.0444
+INFO - 2016-05-12 17:40:36 --> Config Class Initialized
+INFO - 2016-05-12 17:40:36 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:40:36 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:40:36 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:40:36 --> URI Class Initialized
+INFO - 2016-05-12 17:40:36 --> Router Class Initialized
+INFO - 2016-05-12 17:40:36 --> Output Class Initialized
+INFO - 2016-05-12 17:40:36 --> Security Class Initialized
+DEBUG - 2016-05-12 17:40:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:40:36 --> Input Class Initialized
+INFO - 2016-05-12 17:40:36 --> Language Class Initialized
+INFO - 2016-05-12 17:40:36 --> Loader Class Initialized
+INFO - 2016-05-12 17:40:36 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:40:36 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:40:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:40:36 --> Pagination Class Initialized
+INFO - 2016-05-12 17:40:36 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:40:36 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:40:36 --> Email Class Initialized
+DEBUG - 2016-05-12 17:40:36 --> Upload Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Controller Class Initialized
+INFO - 2016-05-12 17:40:36 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:40:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:40:36 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:40:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:40:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:40:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:40:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:40:36 --> Final output sent to browser
+DEBUG - 2016-05-12 17:40:36 --> Total execution time: 0.0783
+INFO - 2016-05-12 17:40:36 --> Config Class Initialized
+INFO - 2016-05-12 17:40:36 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:40:36 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:40:36 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:40:36 --> URI Class Initialized
+INFO - 2016-05-12 17:40:36 --> Router Class Initialized
+INFO - 2016-05-12 17:40:36 --> Output Class Initialized
+INFO - 2016-05-12 17:40:36 --> Security Class Initialized
+DEBUG - 2016-05-12 17:40:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:40:36 --> Input Class Initialized
+INFO - 2016-05-12 17:40:36 --> Language Class Initialized
+INFO - 2016-05-12 17:40:36 --> Loader Class Initialized
+INFO - 2016-05-12 17:40:36 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:40:36 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:40:36 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:40:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:40:36 --> Pagination Class Initialized
+INFO - 2016-05-12 17:40:36 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:40:36 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:40:36 --> Email Class Initialized
+DEBUG - 2016-05-12 17:40:36 --> Upload Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Controller Class Initialized
+INFO - 2016-05-12 17:40:36 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> Model Class Initialized
+INFO - 2016-05-12 17:40:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_project.php
+INFO - 2016-05-12 17:40:36 --> Final output sent to browser
+DEBUG - 2016-05-12 17:40:36 --> Total execution time: 0.0549
+INFO - 2016-05-12 17:40:52 --> Config Class Initialized
+INFO - 2016-05-12 17:40:52 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:40:52 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:40:52 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:40:52 --> URI Class Initialized
+INFO - 2016-05-12 17:40:52 --> Router Class Initialized
+INFO - 2016-05-12 17:40:52 --> Output Class Initialized
+INFO - 2016-05-12 17:40:52 --> Security Class Initialized
+DEBUG - 2016-05-12 17:40:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:40:52 --> Input Class Initialized
+INFO - 2016-05-12 17:40:52 --> Language Class Initialized
+INFO - 2016-05-12 17:40:52 --> Loader Class Initialized
+INFO - 2016-05-12 17:40:52 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:40:52 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:40:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:40:52 --> Pagination Class Initialized
+INFO - 2016-05-12 17:40:52 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:40:52 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:40:52 --> Email Class Initialized
+DEBUG - 2016-05-12 17:40:52 --> Upload Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Controller Class Initialized
+INFO - 2016-05-12 17:40:52 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:40:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:40:52 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:40:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:40:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:40:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:40:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:40:52 --> Final output sent to browser
+DEBUG - 2016-05-12 17:40:52 --> Total execution time: 0.1026
+INFO - 2016-05-12 17:40:52 --> Config Class Initialized
+INFO - 2016-05-12 17:40:52 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:40:52 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:40:52 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:40:52 --> URI Class Initialized
+INFO - 2016-05-12 17:40:52 --> Router Class Initialized
+INFO - 2016-05-12 17:40:52 --> Output Class Initialized
+INFO - 2016-05-12 17:40:52 --> Security Class Initialized
+DEBUG - 2016-05-12 17:40:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:40:52 --> Input Class Initialized
+INFO - 2016-05-12 17:40:52 --> Language Class Initialized
+INFO - 2016-05-12 17:40:52 --> Loader Class Initialized
+INFO - 2016-05-12 17:40:52 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:40:52 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:40:52 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:40:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:40:52 --> Pagination Class Initialized
+INFO - 2016-05-12 17:40:52 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:40:52 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:40:52 --> Email Class Initialized
+DEBUG - 2016-05-12 17:40:52 --> Upload Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Controller Class Initialized
+INFO - 2016-05-12 17:40:52 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> Model Class Initialized
+INFO - 2016-05-12 17:40:52 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/modal_edit_project.php
+INFO - 2016-05-12 17:40:52 --> Final output sent to browser
+DEBUG - 2016-05-12 17:40:52 --> Total execution time: 0.0422
+INFO - 2016-05-12 17:40:59 --> Config Class Initialized
+INFO - 2016-05-12 17:40:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:40:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:40:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:40:59 --> URI Class Initialized
+INFO - 2016-05-12 17:40:59 --> Router Class Initialized
+INFO - 2016-05-12 17:40:59 --> Output Class Initialized
+INFO - 2016-05-12 17:40:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:40:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:40:59 --> Input Class Initialized
+INFO - 2016-05-12 17:40:59 --> Language Class Initialized
+INFO - 2016-05-12 17:40:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:40:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:40:59 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:40:59 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:40:59 --> Pagination Class Initialized
+INFO - 2016-05-12 17:40:59 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:40:59 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:40:59 --> Email Class Initialized
+DEBUG - 2016-05-12 17:40:59 --> Upload Class Initialized
+INFO - 2016-05-12 17:40:59 --> Model Class Initialized
+INFO - 2016-05-12 17:40:59 --> Model Class Initialized
+INFO - 2016-05-12 17:40:59 --> Model Class Initialized
+INFO - 2016-05-12 17:40:59 --> Controller Class Initialized
+INFO - 2016-05-12 17:40:59 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:40:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:40:59 --> Model Class Initialized
+INFO - 2016-05-12 17:40:59 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:40:59 --> Final output sent to browser
+DEBUG - 2016-05-12 17:40:59 --> Total execution time: 0.0404
+INFO - 2016-05-12 17:40:59 --> Config Class Initialized
+INFO - 2016-05-12 17:40:59 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:40:59 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:40:59 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:40:59 --> URI Class Initialized
+INFO - 2016-05-12 17:40:59 --> Router Class Initialized
+INFO - 2016-05-12 17:40:59 --> Output Class Initialized
+INFO - 2016-05-12 17:40:59 --> Security Class Initialized
+DEBUG - 2016-05-12 17:40:59 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:40:59 --> Input Class Initialized
+INFO - 2016-05-12 17:40:59 --> Language Class Initialized
+INFO - 2016-05-12 17:40:59 --> Loader Class Initialized
+INFO - 2016-05-12 17:40:59 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:40:59 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:41:00 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:41:00 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:41:00 --> Pagination Class Initialized
+INFO - 2016-05-12 17:41:00 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:41:00 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:41:00 --> Email Class Initialized
+DEBUG - 2016-05-12 17:41:00 --> Upload Class Initialized
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Controller Class Initialized
+INFO - 2016-05-12 17:41:00 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:41:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:41:00 --> Config Class Initialized
+INFO - 2016-05-12 17:41:00 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:41:00 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:41:00 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:41:00 --> URI Class Initialized
+INFO - 2016-05-12 17:41:00 --> Router Class Initialized
+INFO - 2016-05-12 17:41:00 --> Output Class Initialized
+INFO - 2016-05-12 17:41:00 --> Security Class Initialized
+DEBUG - 2016-05-12 17:41:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:41:00 --> Input Class Initialized
+INFO - 2016-05-12 17:41:00 --> Language Class Initialized
+INFO - 2016-05-12 17:41:00 --> Loader Class Initialized
+INFO - 2016-05-12 17:41:00 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:41:00 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:41:00 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:41:00 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:41:00 --> Pagination Class Initialized
+INFO - 2016-05-12 17:41:00 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:41:00 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:41:00 --> Email Class Initialized
+DEBUG - 2016-05-12 17:41:00 --> Upload Class Initialized
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Controller Class Initialized
+INFO - 2016-05-12 17:41:00 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:41:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:41:00 --> Model Class Initialized
+INFO - 2016-05-12 17:41:00 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:41:00 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:41:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:41:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:41:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:41:00 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:41:00 --> Final output sent to browser
+DEBUG - 2016-05-12 17:41:00 --> Total execution time: 0.0827
+INFO - 2016-05-12 17:44:54 --> Config Class Initialized
+INFO - 2016-05-12 17:44:54 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:44:54 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:44:54 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:44:54 --> URI Class Initialized
+INFO - 2016-05-12 17:44:54 --> Router Class Initialized
+INFO - 2016-05-12 17:44:54 --> Output Class Initialized
+INFO - 2016-05-12 17:44:54 --> Security Class Initialized
+DEBUG - 2016-05-12 17:44:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:44:54 --> Input Class Initialized
+INFO - 2016-05-12 17:44:54 --> Language Class Initialized
+INFO - 2016-05-12 17:44:54 --> Loader Class Initialized
+INFO - 2016-05-12 17:44:54 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:44:54 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:44:54 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:44:54 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:44:54 --> Pagination Class Initialized
+INFO - 2016-05-12 17:44:54 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:44:54 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:44:54 --> Email Class Initialized
+DEBUG - 2016-05-12 17:44:54 --> Upload Class Initialized
+INFO - 2016-05-12 17:44:54 --> Model Class Initialized
+INFO - 2016-05-12 17:44:54 --> Model Class Initialized
+INFO - 2016-05-12 17:44:54 --> Model Class Initialized
+INFO - 2016-05-12 17:44:54 --> Controller Class Initialized
+INFO - 2016-05-12 17:44:54 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:44:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:44:54 --> Model Class Initialized
+INFO - 2016-05-12 17:44:54 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:44:54 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:44:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:44:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:44:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:44:54 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:44:54 --> Final output sent to browser
+DEBUG - 2016-05-12 17:44:54 --> Total execution time: 0.0675
+INFO - 2016-05-12 17:45:06 --> Config Class Initialized
+INFO - 2016-05-12 17:45:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:45:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:45:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:45:06 --> URI Class Initialized
+INFO - 2016-05-12 17:45:06 --> Router Class Initialized
+INFO - 2016-05-12 17:45:06 --> Output Class Initialized
+INFO - 2016-05-12 17:45:06 --> Security Class Initialized
+DEBUG - 2016-05-12 17:45:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:45:06 --> Input Class Initialized
+INFO - 2016-05-12 17:45:06 --> Language Class Initialized
+INFO - 2016-05-12 17:45:06 --> Loader Class Initialized
+INFO - 2016-05-12 17:45:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:45:06 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:45:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:45:06 --> Pagination Class Initialized
+INFO - 2016-05-12 17:45:06 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:45:06 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:45:06 --> Email Class Initialized
+DEBUG - 2016-05-12 17:45:06 --> Upload Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Controller Class Initialized
+INFO - 2016-05-12 17:45:06 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:45:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:45:06 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:45:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:45:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/project.php
+INFO - 2016-05-12 17:45:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:45:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:45:06 --> Final output sent to browser
+DEBUG - 2016-05-12 17:45:06 --> Total execution time: 0.0825
+INFO - 2016-05-12 17:45:06 --> Config Class Initialized
+INFO - 2016-05-12 17:45:06 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:45:06 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:45:06 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:45:06 --> URI Class Initialized
+INFO - 2016-05-12 17:45:06 --> Router Class Initialized
+INFO - 2016-05-12 17:45:06 --> Output Class Initialized
+INFO - 2016-05-12 17:45:06 --> Security Class Initialized
+DEBUG - 2016-05-12 17:45:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:45:06 --> Input Class Initialized
+INFO - 2016-05-12 17:45:06 --> Language Class Initialized
+INFO - 2016-05-12 17:45:06 --> Loader Class Initialized
+INFO - 2016-05-12 17:45:06 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:45:06 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:45:06 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:45:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:45:06 --> Pagination Class Initialized
+INFO - 2016-05-12 17:45:06 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:45:06 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:45:06 --> Email Class Initialized
+DEBUG - 2016-05-12 17:45:06 --> Upload Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Controller Class Initialized
+INFO - 2016-05-12 17:45:06 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> Model Class Initialized
+INFO - 2016-05-12 17:45:06 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/addproject.php
+INFO - 2016-05-12 17:45:06 --> Final output sent to browser
+DEBUG - 2016-05-12 17:45:06 --> Total execution time: 0.0453
+INFO - 2016-05-12 17:45:17 --> Config Class Initialized
+INFO - 2016-05-12 17:45:17 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:45:17 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:45:17 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:45:17 --> URI Class Initialized
+INFO - 2016-05-12 17:45:17 --> Router Class Initialized
+INFO - 2016-05-12 17:45:17 --> Output Class Initialized
+INFO - 2016-05-12 17:45:17 --> Security Class Initialized
+DEBUG - 2016-05-12 17:45:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:45:17 --> Input Class Initialized
+INFO - 2016-05-12 17:45:17 --> Language Class Initialized
+ERROR - 2016-05-12 17:45:17 --> 404 Page Not Found: Professor/graduate
+INFO - 2016-05-12 17:45:37 --> Config Class Initialized
+INFO - 2016-05-12 17:45:37 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:45:37 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:45:37 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:45:37 --> URI Class Initialized
+INFO - 2016-05-12 17:45:37 --> Router Class Initialized
+INFO - 2016-05-12 17:45:37 --> Output Class Initialized
+INFO - 2016-05-12 17:45:37 --> Security Class Initialized
+DEBUG - 2016-05-12 17:45:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:45:37 --> Input Class Initialized
+INFO - 2016-05-12 17:45:37 --> Language Class Initialized
+INFO - 2016-05-12 17:45:37 --> Loader Class Initialized
+INFO - 2016-05-12 17:45:37 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:45:37 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:45:37 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:45:37 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:45:37 --> Pagination Class Initialized
+INFO - 2016-05-12 17:45:37 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:45:37 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:45:37 --> Email Class Initialized
+DEBUG - 2016-05-12 17:45:37 --> Upload Class Initialized
+INFO - 2016-05-12 17:45:37 --> Model Class Initialized
+INFO - 2016-05-12 17:45:37 --> Model Class Initialized
+INFO - 2016-05-12 17:45:37 --> Model Class Initialized
+INFO - 2016-05-12 17:45:37 --> Controller Class Initialized
+INFO - 2016-05-12 17:45:37 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:45:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:45:37 --> Model Class Initialized
+INFO - 2016-05-12 17:45:37 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:45:37 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:45:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:45:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/participate.php
+INFO - 2016-05-12 17:45:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:45:37 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:45:37 --> Final output sent to browser
+DEBUG - 2016-05-12 17:45:37 --> Total execution time: 0.0929
+INFO - 2016-05-12 17:46:08 --> Config Class Initialized
+INFO - 2016-05-12 17:46:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:46:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:46:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:46:08 --> URI Class Initialized
+INFO - 2016-05-12 17:46:08 --> Router Class Initialized
+INFO - 2016-05-12 17:46:08 --> Output Class Initialized
+INFO - 2016-05-12 17:46:08 --> Security Class Initialized
+DEBUG - 2016-05-12 17:46:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:46:08 --> Input Class Initialized
+INFO - 2016-05-12 17:46:08 --> Language Class Initialized
+INFO - 2016-05-12 17:46:08 --> Loader Class Initialized
+INFO - 2016-05-12 17:46:08 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:46:08 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:46:08 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:46:08 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:46:08 --> Pagination Class Initialized
+INFO - 2016-05-12 17:46:08 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:46:08 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:46:08 --> Email Class Initialized
+DEBUG - 2016-05-12 17:46:08 --> Upload Class Initialized
+INFO - 2016-05-12 17:46:08 --> Model Class Initialized
+INFO - 2016-05-12 17:46:08 --> Model Class Initialized
+INFO - 2016-05-12 17:46:08 --> Model Class Initialized
+INFO - 2016-05-12 17:46:08 --> Controller Class Initialized
+INFO - 2016-05-12 17:46:08 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:46:08 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:46:08 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:46:08 --> Final output sent to browser
+DEBUG - 2016-05-12 17:46:08 --> Total execution time: 0.1298
+INFO - 2016-05-12 17:46:08 --> Config Class Initialized
+INFO - 2016-05-12 17:46:08 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:46:08 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:46:08 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:46:08 --> URI Class Initialized
+INFO - 2016-05-12 17:46:08 --> Router Class Initialized
+INFO - 2016-05-12 17:46:08 --> Output Class Initialized
+INFO - 2016-05-12 17:46:08 --> Security Class Initialized
+DEBUG - 2016-05-12 17:46:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:46:08 --> Input Class Initialized
+INFO - 2016-05-12 17:46:08 --> Language Class Initialized
+ERROR - 2016-05-12 17:46:08 --> 404 Page Not Found: Admin/mainfest.appcache
+INFO - 2016-05-12 17:46:10 --> Config Class Initialized
+INFO - 2016-05-12 17:46:10 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:46:10 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:46:10 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:46:10 --> URI Class Initialized
+INFO - 2016-05-12 17:46:10 --> Router Class Initialized
+INFO - 2016-05-12 17:46:10 --> Output Class Initialized
+INFO - 2016-05-12 17:46:10 --> Security Class Initialized
+DEBUG - 2016-05-12 17:46:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:46:10 --> Input Class Initialized
+INFO - 2016-05-12 17:46:10 --> Language Class Initialized
+INFO - 2016-05-12 17:46:10 --> Loader Class Initialized
+INFO - 2016-05-12 17:46:10 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:46:10 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:46:10 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:46:10 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:46:10 --> Pagination Class Initialized
+INFO - 2016-05-12 17:46:10 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:46:10 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:46:10 --> Email Class Initialized
+DEBUG - 2016-05-12 17:46:10 --> Upload Class Initialized
+INFO - 2016-05-12 17:46:10 --> Model Class Initialized
+INFO - 2016-05-12 17:46:10 --> Model Class Initialized
+INFO - 2016-05-12 17:46:10 --> Model Class Initialized
+INFO - 2016-05-12 17:46:10 --> Controller Class Initialized
+INFO - 2016-05-12 17:46:10 --> Session: Class initialized using 'database' driver.
+INFO - 2016-05-12 17:46:10 --> Helper loaded: notification_helper
+INFO - 2016-05-12 17:46:10 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/index.php
+INFO - 2016-05-12 17:46:10 --> Final output sent to browser
+DEBUG - 2016-05-12 17:46:10 --> Total execution time: 0.0604
+INFO - 2016-05-12 17:46:15 --> Config Class Initialized
+INFO - 2016-05-12 17:46:15 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:46:15 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:46:15 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:46:15 --> URI Class Initialized
+INFO - 2016-05-12 17:46:15 --> Router Class Initialized
+INFO - 2016-05-12 17:46:15 --> Output Class Initialized
+INFO - 2016-05-12 17:46:15 --> Security Class Initialized
+DEBUG - 2016-05-12 17:46:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:46:15 --> Input Class Initialized
+INFO - 2016-05-12 17:46:15 --> Language Class Initialized
+INFO - 2016-05-12 17:46:15 --> Loader Class Initialized
+INFO - 2016-05-12 17:46:15 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:46:15 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:46:15 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:46:15 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:46:15 --> Pagination Class Initialized
+INFO - 2016-05-12 17:46:15 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:46:15 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:46:15 --> Email Class Initialized
+DEBUG - 2016-05-12 17:46:15 --> Upload Class Initialized
+INFO - 2016-05-12 17:46:15 --> Model Class Initialized
+INFO - 2016-05-12 17:46:15 --> Model Class Initialized
+INFO - 2016-05-12 17:46:15 --> Model Class Initialized
+INFO - 2016-05-12 17:46:15 --> Controller Class Initialized
+INFO - 2016-05-12 17:46:15 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:46:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:46:15 --> Model Class Initialized
+INFO - 2016-05-12 17:46:15 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:46:15 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:46:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:46:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/participate.php
+INFO - 2016-05-12 17:46:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:46:15 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:46:15 --> Final output sent to browser
+DEBUG - 2016-05-12 17:46:15 --> Total execution time: 0.0605
+INFO - 2016-05-12 17:46:36 --> Config Class Initialized
+INFO - 2016-05-12 17:46:36 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:46:36 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:46:36 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:46:36 --> URI Class Initialized
+INFO - 2016-05-12 17:46:36 --> Router Class Initialized
+INFO - 2016-05-12 17:46:36 --> Output Class Initialized
+INFO - 2016-05-12 17:46:36 --> Security Class Initialized
+DEBUG - 2016-05-12 17:46:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:46:36 --> Input Class Initialized
+INFO - 2016-05-12 17:46:36 --> Language Class Initialized
+INFO - 2016-05-12 17:46:36 --> Loader Class Initialized
+INFO - 2016-05-12 17:46:36 --> Helper loaded: url_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: file_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: form_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: security_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: string_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: inflector_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: directory_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: download_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: multi_language_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: system_setting_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: date_format_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: breadcrumb_helper
+INFO - 2016-05-12 17:46:36 --> Helper loaded: forum_helper
+INFO - 2016-05-12 17:46:36 --> Database Driver Class Initialized
+INFO - 2016-05-12 17:46:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-05-12 17:46:36 --> Pagination Class Initialized
+INFO - 2016-05-12 17:46:36 --> XML-RPC Class Initialized
+INFO - 2016-05-12 17:46:36 --> Form Validation Class Initialized
+INFO - 2016-05-12 17:46:36 --> Email Class Initialized
+DEBUG - 2016-05-12 17:46:36 --> Upload Class Initialized
+INFO - 2016-05-12 17:46:36 --> Model Class Initialized
+INFO - 2016-05-12 17:46:36 --> Model Class Initialized
+INFO - 2016-05-12 17:46:36 --> Model Class Initialized
+INFO - 2016-05-12 17:46:36 --> Controller Class Initialized
+INFO - 2016-05-12 17:46:36 --> Session: Class initialized using 'database' driver.
+DEBUG - 2016-05-12 17:46:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-05-12 17:46:36 --> Model Class Initialized
+INFO - 2016-05-12 17:46:36 --> Helper loaded: notification_helper
+ERROR - 2016-05-12 17:46:36 --> Severity: Notice --> Undefined variable: title /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php 2
+INFO - 2016-05-12 17:46:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/header.php
+INFO - 2016-05-12 17:46:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/participate.php
+INFO - 2016-05-12 17:46:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/professor/includes/footer.php
+INFO - 2016-05-12 17:46:36 --> File loaded: /opt/lampp/htdocs/smartlearndev/application/views/backend/modal.php
+INFO - 2016-05-12 17:46:36 --> Final output sent to browser
+DEBUG - 2016-05-12 17:46:36 --> Total execution time: 0.0595
+INFO - 2016-05-12 17:46:47 --> Config Class Initialized
+INFO - 2016-05-12 17:46:47 --> Hooks Class Initialized
+DEBUG - 2016-05-12 17:46:47 --> UTF-8 Support Enabled
+INFO - 2016-05-12 17:46:47 --> Utf8 Class Initialized
+INFO - 2016-05-12 17:46:47 --> URI Class Initialized
+INFO - 2016-05-12 17:46:47 --> Router Class Initialized
+INFO - 2016-05-12 17:46:47 --> Output Class Initialized
+INFO - 2016-05-12 17:46:47 --> Security Class Initialized
+DEBUG - 2016-05-12 17:46:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-05-12 17:46:47 --> Input Class Initialized
+INFO - 2016-05-12 17:46:47 --> Language Class Initialized
+ERROR - 2016-05-12 17:46:47 --> 404 Page Not Found: Professor/graduate

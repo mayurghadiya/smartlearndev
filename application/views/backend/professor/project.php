@@ -5,7 +5,7 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                    <ul class="breadcrumb">
-                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
+                         <li><a href="<?php echo base_url('index.php?professor/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
                          <li><?php echo ucwords("asset management");?></li>
                          <li><?php echo ucwords("Project Management");?></li>
                     </ul>                  
@@ -182,7 +182,7 @@
                                                    
                                                     <td class="menu-action">
                                                         <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_project/<?php echo $row->pm_id; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/project/delete/<?php echo $row->pm_id; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
+                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?professor/project/delete/<?php echo $row->pm_id; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i></a>	
                                                        
                                                     </td>	
                                                 </tr>
@@ -348,7 +348,7 @@
             var divclass = $("#filterclass").val();
             $.ajax({
                 type:"POST",
-                url:"<?php echo base_url(); ?>index.php?admin/getprojects/allproject",
+                url:"<?php echo base_url(); ?>index.php?professor/getprojects/allproject",
                 data:{'degree':degree,'course':course,'batch':batch,"semester":semester,"divclass":divclass},
                 success:function(response)
                 {
@@ -365,7 +365,7 @@
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_course/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_course/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#branches").html(response);
@@ -380,7 +380,7 @@
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batches").html(response);
