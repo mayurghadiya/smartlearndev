@@ -40,16 +40,18 @@ class Professor extends Professor_Controller {
     }
 
     function subject($param1 = '', $param2 = '') {
-
-        if ($param1 == 'create') {
-            $data['sm_course_id'] = $this->input->post('course');
-            $data['sm_sem_id'] = $this->input->post('semester');
-            $data['subject_name'] = $this->input->post('subname');
-            $data['subject_code'] = $this->input->post('subcode');
-            $data['professor_id'] = implode(',', $this->input->post('professor'));
-            $data['sm_status'] = 1;
-            $data['created_date'] = date('Y-m-d');
-        }
+       
+       $dept = $this->session->userdata('department');
+        $page_data['subject'] = $this->db->query("SELECT * FROM subject_manager WHERE FIND_IN_SET('" . $dept . "',professor_id)")->result();
+        $login_id = $this->session->userdata('login_user_id');
+      $degree =   $this->db->get_where("professor",array("professor_id"=>$login_id))->result();
+     
+        $this->db->where("degree_id",$degree[0]->department);
+        $page_data['course'] = $this->db->get('course')->result();
+        $page_data['semester'] = $this->db->get('semester')->result();
+        $page_data['page_name'] = 'subject';
+        $page_data['page_title'] = 'Subject Management';
+        $this->__template('subject', $page_data);
     }
 
     function events() {
@@ -1924,6 +1926,31 @@ class Professor extends Professor_Controller {
         $page_data['page_name'] = 'project';
         $page_data['page_title'] = 'Project Management';
         $this->__template('project', $page_data);
+    }
+    
+    function graduate($param1 = '', $param2 = '') {
+        
+        $this->load->model('admin/Crud_model');
+       
+        $page_data['title'] = 'Recent Graduates';
+        $page_data['page_name'] = 'graduate';
+        $page_data['degree'] = $this->Crud_model->get_all_degree();
+        $page_data['graduates'] = $this->Crud_model->get_all_graduates();
+        $this->__template('graduate', $page_data);
+    }
+    
+    /**
+     * Email inbox
+     */
+    function email_inbox() {
+        $this->load->model('professor/Professor_model');
+        $this->load->helper('system_email');
+
+        $data['inbox'] = admin_inbox();
+        $data['title'] = 'Inbox';
+        $data['content'] = 'backend/admin/email_inbox';
+        //$data['page_name'] = 
+        $this->load->view('backend/admin/includes/email_template', $data);
     }
 
 
