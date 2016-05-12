@@ -57,9 +57,17 @@ class Professor extends Professor_Controller {
         $data['title'] = 'Events';
         $this->__template('events', $data);
     }
-
+    
+    function courseware()
+    {
+        $page_data['courseware'] = $this->Professor_model->getcourseware();
+        $page_data['branch'] = $this->Professor_model->get_all_course();        
+        $page_data['page_name'] = 'courseware';
+        $page_data['page_title'] = 'Courseware Management';
+        $this->__template('courseware', $page_data);
+    }
+    
     function holiday($param1 = '', $param2 = '') {
-
 
         $page_data['holiday'] = $this->Professor_model->getholiday();
         $page_data['page_name'] = 'holiday';

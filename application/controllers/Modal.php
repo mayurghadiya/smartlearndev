@@ -160,6 +160,11 @@ class Modal extends CI_Controller {
                     }
                 }
                 
+                if($page_name=="addcourseware")
+                {
+                     $page_data['branch'] = $this->db->get('course')->result_array();
+                }
+                
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		
 		echo '<script src="http://192.168.1.36/smart_learn_dev/assets/js/neon-custom-ajax.js"></script>';
 	}

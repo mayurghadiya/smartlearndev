@@ -1442,4 +1442,9 @@ class Professor_model extends CI_Model {
         $this->db->where("s.course_id",$branch);
         return $this->db->get();
     }
+    
+    function  getcourseware()
+    {
+        return $this->db->get('courseware')->result_array();
+    }
 }
