@@ -274,12 +274,12 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                             <ul>                  
 
                                 <li>
-                                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor") { ?> class="open" <?php } ?> >
+                                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "assessments") { ?> class="open" <?php } ?> >
                                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
                                         <span class="menu-text">Basic Management</span>  
                                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                                     </a>
-                                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor") { ?> style="display: block" <?php } ?>>
+                                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "assessments") { ?> style="display: block" <?php } ?>>
                                         <ul>
                                             
                                             <li <?php if ($page_name == "student") { ?> class="selectednavmenu" <?php } ?>>
@@ -301,8 +301,13 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                 <a href="<?php echo base_url(); ?>professor/holiday">
                                                     <span class="menu-text">Holiday</span>  						
                                                 </a> 
-                                            </li>                                            
-                                            	
+                                            </li>     
+                                            <li <?php if ($page_name == "assessments") { ?> class="selectednavmenu" <?php } ?>>
+                                                <a href="<?php echo base_url(); ?>professor/assessments">
+                                                    <span class="menu-text">Assessments Management</span>  						
+                                                </a> 
+                                            </li>
+
                                         </ul> 
                                     </div>
                                 </li> 

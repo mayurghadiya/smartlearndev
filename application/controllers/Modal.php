@@ -117,10 +117,19 @@ class Modal extends CI_Controller {
                 if($page_name=="addassessment" || $page_name=="modal_edit_assessment")
                 {
                     
+                    if($this->session->userdata('login_type')=="professor")
+                    {
+                         $page_data['degree'] = $this->Professor_model->get_all_degree();
+                    $page_data['course'] = $this->Professor_model->get_all_course();
+                    $page_data['semester'] = $this->Professor_model->get_all_semester();
+                    $page_data['fees_structure'] = $this->Professor_model->get_all_fees_structure();
+                    }
+                    else{
                   $page_data['degree'] = $this->Crud_model->get_all_degree();
                     $page_data['course'] = $this->Crud_model->get_all_course();
                     $page_data['semester'] = $this->Crud_model->get_all_semester();
                      $page_data['batch'] = $this->Crud_model->get_all_bacth();
+                    }
                 }
                 if($page_name=="modal_student_detail")
                 {

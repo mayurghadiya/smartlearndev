@@ -1359,6 +1359,10 @@ class Professor_model extends CI_Model {
      */
     public function assessment()
     {
+        $dept = $this->session->userdata('department');
+        $branch = $this->session->userdata('branch');
+        $this->db->where("degree",$dept);
+        $this->db->where("course",$branch);
        return $this->db->get('assessments')->result_array();
     }
     

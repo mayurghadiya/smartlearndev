@@ -5768,6 +5768,8 @@ class Admin extends CI_Controller {
             $data['submissions'] = $this->input->post('submissions');
             $data['feedback_tutor'] = $this->input->post('feedback');
             $data['marks'] = $this->input->post('marks');
+            $data['user_role'] = $this->session->userdata('login_type');
+            $data['user_role_id'] = $this->session->userdata('login_user_id');
             $this->Crud_model->create_assessment($data);
             $this->session->set_flashdata('flash_message', 'Assessment added Successfully.');
             redirect(base_url('admin/assessments'));
@@ -5804,11 +5806,20 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $page_data);
     }
 
-    function assessment_student() {
+    function assessment_student()
+    {        
         $batch = $this->input->post("batch");
         $sem = $this->input->post("semester");
         $degree = $this->input->post("degree");
         $course = $this->input->post("course");
+
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $html ='<option value="">Select Student</option>';  
+       foreach($datastudent as $row):
+          $html .='<option value="'.$row->std_id.'">'.$row->name.'</option>';
+       endforeach;
+       echo $html;
+        
     }
 
     function class_routine() {

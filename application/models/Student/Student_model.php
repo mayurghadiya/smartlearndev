@@ -638,5 +638,15 @@ class Student_model extends CI_Model {
                     'student_id'=> $student_id
                 ))->get()->row();
     }
+    /**
+     * Student assessment
+     * @param int $student_id
+     * @return object
+     */
+    function student_assessment() {
+        $student_id = $this->session->userdata('login_user_id');
+        
+        return $this->db->get_where("assessments",array("student"=>$student_id))->result();
+    }
 
 }

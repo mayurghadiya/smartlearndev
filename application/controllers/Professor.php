@@ -935,4 +935,71 @@ class Professor extends Professor_Controller {
         echo json_encode($data);
     }
     
+    
+     function assessments($param = '', $id = '') {
+        $this->load->model('admin/Crud_model');
+        if ($param == 'create') {
+            $data['degree'] = $this->input->post('degree');
+            $data['course'] = $this->input->post('course');
+            $data['batch'] = $this->input->post('batch');
+            $data['semester'] = $this->input->post('semester');
+            $data['student'] = $this->input->post('student');
+            $data['instruction'] = $this->input->post('instruction');
+            $data['submissions'] = $this->input->post('submissions');
+            $data['feedback_tutor'] = $this->input->post('feedback');
+            $data['marks'] = $this->input->post('marks');
+            $data['user_role'] = $this->session->userdata('login_type');
+            $data['user_role_id'] = $this->session->userdata('login_user_id');
+            $this->Professor_model->create_assessment($data);
+            $this->session->set_flashdata('flash_message', 'Assessment added Successfully.');
+            redirect(base_url('professor/assessments'));
+        }
+
+        if ($param == 'update') {
+            $data['degree'] = $this->input->post('degree');
+            $data['course'] = $this->input->post('course');
+            $data['batch'] = $this->input->post('batch');
+            $data['semester'] = $this->input->post('semester');
+            $data['student'] = $this->input->post('student');
+            $data['instruction'] = $this->input->post('instruction');
+            $data['submissions'] = $this->input->post('submissions');
+            $data['feedback_tutor'] = $this->input->post('feedback');
+            $data['marks'] = $this->input->post('marks');
+            $this->Professor_model->update_assessment($data, $id);
+            $this->session->set_flashdata('flash_message', 'Assessment update Successfully.');
+            redirect(base_url('professor/assessments'));
+        }
+        if ($param == 'delete') {
+            $this->Professor_model->delete_assessment($id);
+            $this->session->set_flashdata('flash_message', 'Assessment delete Successfully.');
+            redirect(base_url('professor/assessments'));
+        }
+
+
+        $page_data['title'] = 'assessments';
+        $page_data['page_name'] = 'assessments';
+        $page_data['assessments'] = $this->Professor_model->assessment();
+        $page_data['degree'] = $this->Professor_model->get_all_degree();
+        $page_data['course'] = $this->Professor_model->get_all_course();
+        $page_data['semester'] = $this->Professor_model->get_all_semester();
+        $page_data['batch'] = $this->Professor_model->get_all_bacth();
+        $this->__template('assessments', $page_data);
+    }
+    
+    function assessment_student()
+    {        
+        $batch = $this->input->post("batch");
+        $sem = $this->input->post("semester");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $html ='<option value="">Select Student</option>';  
+       foreach($datastudent as $row):
+          $html .='<option value="'.$row->std_id.'">'.$row->name.'</option>';
+       endforeach;
+       echo $html;
+        
+    }
+    
 }
