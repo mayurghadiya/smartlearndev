@@ -214,7 +214,7 @@ $.toaster({
 				group_name: "Enter group name",				
 				user_type: "Select user type",
 				'user_role[]': "Select user",	
-                                degree: "Select course",
+                                degree: "Select department",
                                 course: "Select branch",
                                 batch: "Select batch",
                                 semester: "Select semester",
