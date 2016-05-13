@@ -749,7 +749,18 @@ class Student extends CI_Controller {
     }
    
 // payment nikita 
-    
+    function courseware($param = '', $param2 = '')
+    {        
+        $this->db->select("cw.*,c.* ");
+        $this->db->from('courseware cw');
+        $this->db->join('course c','c.course_id=cw.branch_id');
+        $page_data['courseware'] =  $this->db->get('courseware')->result_array();
+
+        $page_data['page_name'] = 'courseware';
+        $page_data['page_title'] = 'Courseware Management';
+        $this->load->view('backend/index', $page_data);
+        
+    }
     function vocationalcourse($param1 = '', $param2 = '')
     {
         if ($param1 == 'register') {
