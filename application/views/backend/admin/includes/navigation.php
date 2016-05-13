@@ -89,12 +89,12 @@
                     </div>
                 </li> 
                 <li>
-                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library") { ?> class="open" <?php } ?> >
+                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" ||$page_name == "courseware" ) { ?> class="open" <?php } ?> >
                         <span class="menu-icon"><i class="fa fa-sitemap"> </i></span>
                         <span class="menu-text">Asset Management</span>
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" || $page_name == 'subscriber') { ?> style="display: block;" <?php } ?>>
+                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" || $page_name == 'subscriber' ||$page_name == "courseware" ) { ?> style="display: block;" <?php } ?>>
                         <ul class="clearfix">   
                             <li  <?php if ($page_name == "events") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/events">
@@ -126,6 +126,11 @@
                             <li <?php if ($page_name == "participate") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url('admin/participate'); ?>">
                                     <span class="menu-text">Participate</span>  
+                                </a>
+                            </li>
+                            <li <?php if ($page_name == "courseware") { ?> class="selectednavmenu" <?php } ?>>
+                                <a href="<?php echo base_url('admin/courseware'); ?>">
+                                    <span class="menu-text">Courseware</span>  
                                 </a>
                             </li> 
                             <li <?php if ($page_name == "subscriber") { ?> class="selectednavmenu" <?php } ?>>
@@ -432,7 +437,7 @@
                                     <span class="menu-text">List Groups</span>  
                                 </a>
                             </li>
-                            <!--  <li>
+                              <li>
                                   <a href="<?php echo base_url(); ?>admin/assign_module">
                                       <span class="menu-text">Assign Module</span>  
                                   </a>
@@ -441,7 +446,7 @@
                                   <a href="<?php echo base_url(); ?>admin/list_module">
                                       <span class="menu-text">List Module</span>  
                                   </a>
-                              </li>-->			
+                              </li>			
                         </ul>   
                     </div>
                 </li> 

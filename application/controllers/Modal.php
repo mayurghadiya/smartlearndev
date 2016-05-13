@@ -160,6 +160,11 @@ class Modal extends CI_Controller {
                     }
                 }
                 
+
+                if($page_name=="addcourseware" || $page_name=="modal_edit_courseware")
+                {
+                     $page_data['branch'] = $this->db->get('course')->result_array();
+                }
                 if($page_name=="addstudyresource" || $page_name=="modal_edit_studyresource")
                 {
                     if($this->session->userdata('login_type')=="professor")
@@ -194,6 +199,7 @@ class Modal extends CI_Controller {
                     $page_data['courses'] = $this->db->get('course')->result_array();
                     $page_data['semesters'] = $this->db->get('semester')->result_array();
                     }
+
                 }
                 
 		$this->load->view( 'backend/'.$account_type.'/'.$page_name.'.php' ,$page_data);		

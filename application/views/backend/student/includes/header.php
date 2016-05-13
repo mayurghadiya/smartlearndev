@@ -248,7 +248,7 @@
                                                                  <li><a target="_blank" href="<?php echo base_url(); ?>student/class_routine">Class Routine</a></li>
 
                                                                  <li><a target="_blank" href="<?php echo base_url(); ?>student/assessment">Assessment</a></li>
-
+                                                                <li><a target="_blank" href="<?php echo base_url(); ?>student/courseware">Courseware</a></li>
                                                         </ul>
                                                     </div>
                                                 </nav>

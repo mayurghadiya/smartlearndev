@@ -50,12 +50,21 @@ class Professor_model extends CI_Model {
     function update_syllabus($data, $id) {
         $this->db->update("smart_syllabus", $data, array("syllabus_id" => $id));
     }
-
+    function courseware_update($data, $id)
+    {
+          $this->db->update("courseware", $data, array("courseware_id" => $id));
+    }
     function delete_syllabus($id) {
         $this->db->where("syllabus_id", $id);
         $this->db->delete("smart_syllabus");
     }
-
+    
+    function delete_courseware($id)
+    {
+        $this->db->where("courseware_id", $id);
+        $this->db->delete("courseware");
+    }
+    
     function getsyllabus($id) {
         $this->db->where("syllabus_id", $id);
         return $this->db->get('smart_syllabus')->result();
@@ -1409,6 +1418,10 @@ class Professor_model extends CI_Model {
         $this->db->insert('assignment_manager', $data);
     }
     
+    function add_courseware($data)
+    {
+        $this->db->insert('courseware',$data);
+    }
     public function updateassignment($data,$param2)
     {
           $this->db->where('assign_id', $param2);
@@ -1441,6 +1454,15 @@ class Professor_model extends CI_Model {
         $this->db->where("s.std_degree",$dept);
         $this->db->where("s.course_id",$branch);
         return $this->db->get();
+    }
+
+    
+    function  getcourseware()
+    {
+        $this->db->select("cw.*,c.* ");
+        $this->db->from('courseware cw');
+        $this->db->join('course c','c.course_id=cw.branch_id');
+        return $this->db->get('courseware')->result_array();
     }
     public function get_studyresource()
     {
