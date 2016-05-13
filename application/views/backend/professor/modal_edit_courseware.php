@@ -19,7 +19,7 @@ foreach ($edit_data as $row):
                             <div class="">
                                 <span style="color:red">* <?php echo "is " . ucwords("mandatory field"); ?> </span> 
                             </div>
-                            <?php echo form_open(base_url() . 'index.php?professor/courseware/do_update/' . $row['courseware_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmcoursewareedit', 'target' => '_top')); ?>
+                            <?php echo form_open(base_url() . 'index.php?professor/courseware/do_update/' . $row['courseware_id'], array('class' => 'form-horizontal form-groups-bordered validate', 'id' => 'frmcoursewareedit', 'target' => '_top','enctype'=>'multipart/form-data')); ?>
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("Branch"); ?><span style="color:red">*</span></label>
@@ -79,7 +79,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="btn btn-info vd_bg-green" ><?php echo ucwords("add"); ?></button>
+                                    <button type="submit" class="btn btn-info vd_bg-green" ><?php echo ucwords("update"); ?></button>
                                 </div>
                             </div>
                             </form>                            
