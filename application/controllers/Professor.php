@@ -2340,17 +2340,22 @@ class Professor extends Professor_Controller {
                 if ($_FILES['userfile']['name'] != '') {
                     
                     
-                    //upload config
-                    $config = array(
-                        'upload_path' => './uploads/professor/',
-                        'allowed_types' => 'jpg|png|gif',
-                        'max_size' => '2048'
-                    );
-                    $this->load->library('upload');
-                    $this->upload->initialize($config);
-                    $this->upload->do_upload('userfile');
-                    $upload_data = $this->upload->data();
-                    $data['image_path'] = isset($upload_data['file_name']) ? $upload_data['file_name'] : '';
+                    $allowed_types = explode('|','gif|jpg|png|jpeg');
+                   
+                $ext = explode(".",$_FILES['userfile']['name']);
+                $ext_file =strtolower(end($ext));
+                $file_name = date('dmYhis').'.'.$ext_file;
+                if(in_array($ext_file, $allowed_types)){
+                   
+                  $upl_path= FCPATH . 'uploads/professor/'.$file_name;
+                  mkdir(FCPATH . 'uploads/professor',0777);
+                  move_uploaded_file($_FILES['userfile']['tmp_name'],$upl_path,0777);
+                }
+                else{
+                    $file_name = '';
+                }
+                    
+                    $data['image_path'] = $file_name;
                     
                     
                 }
