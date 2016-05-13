@@ -437,7 +437,7 @@
                                     <span class="menu-text">List Groups</span>  
                                 </a>
                             </li>
-                            <!--  <li>
+                              <li>
                                   <a href="<?php echo base_url(); ?>admin/assign_module">
                                       <span class="menu-text">Assign Module</span>  
                                   </a>
@@ -446,7 +446,7 @@
                                   <a href="<?php echo base_url(); ?>admin/list_module">
                                       <span class="menu-text">List Module</span>  
                                   </a>
-                              </li>-->			
+                              </li>			
                         </ul>   
                     </div>
                 </li> 
