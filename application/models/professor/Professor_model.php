@@ -58,7 +58,13 @@ class Professor_model extends CI_Model {
         $this->db->where("syllabus_id", $id);
         $this->db->delete("smart_syllabus");
     }
-
+    
+    function delete_courseware($id)
+    {
+        $this->db->where("courseware_id", $id);
+        $this->db->delete("courseware");
+    }
+    
     function getsyllabus($id) {
         $this->db->where("syllabus_id", $id);
         return $this->db->get('smart_syllabus')->result();

@@ -102,7 +102,11 @@ class Professor extends Professor_Controller {
         if ($param == 'do_update') {
             
             if ($_FILES['attachment']['name'] != "") {
-                unlink("uploads/courseware/" . $this->input->post('oldfile'));
+                if($this->input->post('oldfile')!="")
+                {
+                    error_reporting(0);
+                    unlink("uploads/courseware/" . $this->input->post('oldfile'));
+                }                
                 $path = FCPATH . 'uploads/courseware';
                 if (!is_dir($path)) {
                     mkdir($path, 0777);
@@ -130,6 +134,14 @@ class Professor extends Professor_Controller {
 
             $this->Professor_model->courseware_update($insert, $param2);
             $this->session->set_flashdata('flash_message', "Courseware Updated Successfully");
+           redirect(base_url() . 'professor/courseware/', 'refresh');
+        }
+        
+        if ($param == 'delete') {            
+            $data = $this->db->get_where('courseware', array('courseware_id' => $param2))->result_array();
+          
+            $this->Professor_model->delete_courseware($param2);
+            $this->session->set_flashdata('flash_message', "Courseware deleted successfully");
             redirect(base_url() . 'professor/courseware/', 'refresh');
         }
         
