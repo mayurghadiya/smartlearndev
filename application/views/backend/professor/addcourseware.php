@@ -14,7 +14,7 @@
                     <div class="">
                         <span style="color:red">* <?php echo "is " . ucwords("mandatory field"); ?></span> 
                     </div>                                    
-                    <?php echo form_open(base_url() . 'index.php?professor/courseware/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmcourseware', 'target' => '_top')); ?>
+                    <?php echo form_open(base_url() . 'index.php?professor/courseware/create', array('class' => 'form-horizontal form-groups-bordered validate', 'role' => 'form', 'id' => 'frmcourseware', 'target' => '_top','enctype'=>'multipart/form-data')); ?>
                     <div class="padded">
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("Branch"); ?><span style="color:red">*</span></label>
@@ -50,6 +50,15 @@
                             <div class="col-sm-5">
                                 <textarea class="form-control" name="description" id="description"></textarea>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
+                            <div class="col-sm-5">
+                                <select name="status">
+                                    <option value="1">Active</option>
+                                    <option value="0">Inactive</option>
+                                </select>
+                            </div>	
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-5">

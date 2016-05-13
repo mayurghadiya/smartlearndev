@@ -161,7 +161,7 @@ class Modal extends CI_Controller {
                 }
                 
 
-                if($page_name=="addcourseware")
+                if($page_name=="addcourseware" || $page_name=="modal_edit_courseware")
                 {
                      $page_data['branch'] = $this->db->get('course')->result_array();
                 }

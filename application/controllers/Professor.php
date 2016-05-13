@@ -60,10 +60,81 @@ class Professor extends Professor_Controller {
         $this->__template('events', $data);
     }
     
-    function courseware()
+    function courseware($param = '', $param2 = '')
     {
+         if ($param == "create") {
+            if ($_FILES['attachment']['name'] != "") {
+                $path = FCPATH . 'uploads/syllabus';
+                if (!is_dir($path)) {
+                    mkdir($path, 0777);
+                }
+                $config['upload_path'] = 'uploads/courseware';
+                $config['allowed_types'] = '*';
+
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                //$this->upload->set_allowed_types('*');	
+                    
+                if (!$this->upload->do_upload('attachment')) {
+                    $this->session->set_flashdata('flash_message', $this->upload->display_errors());
+                    redirect(base_url() . 'professor/courseware/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $insert['attachment'] = $file['file_name'];
+                }
+            } else {
+                $insert['attachment'] = '';
+            }
+
+
+            $insert['topic'] = $this->input->post('topic');
+            $insert['description'] = $this->input->post('description');
+            $insert['branch_id'] = $this->input->post('branch');
+            $insert['status'] = $this->input->post('status');
+            $insert['professor_id'] = $this->session->userdata('login_user_id');
+            $insert['created_date'] = date('Y-m-d') ;
+            
+            $this->Professor_model->add_courseware($insert);
+            $this->session->set_flashdata('flash_message', "Courseware added successfully");
+            redirect(base_url() . 'professor/courseware/', 'refresh');
+        }
+        
+        if ($param == 'do_update') {
+            
+            if ($_FILES['attachment']['name'] != "") {
+                unlink("uploads/courseware/" . $this->input->post('oldfile'));
+                $path = FCPATH . 'uploads/courseware';
+                if (!is_dir($path)) {
+                    mkdir($path, 0777);
+                }
+                $config['upload_path'] = 'uploads/courseware';
+                $config['allowed_types'] = '*';
+
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                //$this->upload->set_allowed_types('*');	
+
+                if (!$this->upload->do_upload('attachment')) {
+                    $this->session->set_flashdata('flash_message', $this->upload->display_errors());
+                   redirect(base_url() . 'professor/courseware/', 'refresh');
+                } else {
+                    $file = $this->upload->data();
+                    $insert['attachment'] = $file['file_name'];
+                }
+            } 
+            $insert['topic'] = $this->input->post('topic');
+            $insert['description'] = $this->input->post('description');
+            $insert['branch_id'] = $this->input->post('branch');
+            $insert['status'] = $this->input->post('status');
+            $insert['updated_date'] = date('Y-m-d') ;
+
+            $this->Professor_model->courseware_update($insert, $param2);
+            $this->session->set_flashdata('flash_message', "Courseware Updated Successfully");
+            redirect(base_url() . 'professor/courseware/', 'refresh');
+        }
+        
         $page_data['courseware'] = $this->Professor_model->getcourseware();
-        $page_data['branch'] = $this->Professor_model->get_all_course();        
+           
         $page_data['page_name'] = 'courseware';
         $page_data['page_title'] = 'Courseware Management';
         $this->__template('courseware', $page_data);
