@@ -853,6 +853,26 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
+     function courseware($param = '', $param2 = '')
+    {
+        if ($param == 'delete') {            
+            $data = $this->db->get_where('courseware', array('courseware_id' => $param2))->result_array();
+          
+            $this->Professor_model->delete_courseware($param2);
+            $this->session->set_flashdata('flash_message', "Courseware deleted successfully");
+            redirect(base_url() . 'professor/courseware/', 'refresh');
+        }
+        
+        $this->db->select("cw.*,c.* ");
+        $this->db->from('courseware cw');
+        $this->db->join('course c','c.course_id=cw.branch_id');
+        $page_data['courseware'] =  $this->db->get('courseware')->result_array();
+
+        $page_data['page_name'] = 'courseware';
+        $page_data['page_title'] = 'Courseware Management';
+        $this->load->view('backend/index', $page_data);
+        
+    }
     function division($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');

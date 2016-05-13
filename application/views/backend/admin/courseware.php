@@ -5,7 +5,7 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                        <li><a href="<?php echo base_url('index.php?professor/dashboard'); ?>"><?php echo ucwords("home"); ?></a> </li>
+                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home"); ?></a> </li>
                         <li><?php echo ucwords("asset management"); ?></li>
                         <li><?php echo ucwords("courseware Management"); ?></li>
                     </ul>
@@ -65,8 +65,7 @@
                                                         <?php } ?>
                                                     </td>
                                                     <td class="menu-action">
-                                                        <a href="#" onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/modal_edit_courseware/<?php echo $row['courseware_id']; ?>');" data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"><i class="fa fa-pencil"></i></a>
-                                                        <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?professor/courseware/delete/<?php echo $row['courseware_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
+                                                         <a href="#" onclick="confirm_modal('<?php echo base_url(); ?>index.php?admin/courseware/delete/<?php echo $row['courseware_id']; ?>');" data-original-title="Remove" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"><i class="fa fa-times"></i> </a>
                                                     </td>
                                                 </tr>
                                             <?php                                                
@@ -84,32 +83,4 @@
         </div>              
     </div>
     <!-- row --> 
-</div>
-<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
-<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-
-<style>
-    #sub-tables_filter{
-        margin-top: -50px;
-    }
-</style> 
-
-<style>
-    .nav-fixedtabs {
-        left: 86%;
-        position: fixed;
-        top: 25%;
-    }
-    #navfixed{
-        cursor: pointer;
-    }
-
-</style>
-
-
-<div class="md-fab-wrapper">
-
-    <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addcourseware/');" href="#" id="navfixed" data-toggle="tab">
-        <i class="material-icons">&#xE145;</i>
-    </a>
 </div>
