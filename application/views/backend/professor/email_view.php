@@ -36,9 +36,15 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">To</label>
                                         <div class="col-sm-9">
-                                            <?php
+                                            <?php                                       
+                                            if(!empty($email->email_to))
+                                            {
                                             $query = "SELECT email FROM student ";
                                             $query .= "WHERE std_id IN ($email->email_to)";
+                                            }else{
+                                            $query = "SELECT email FROM admin ";
+                                            $query .= "WHERE admin_id IN ($email->professor_to_admin)";
+                                            }
                                             $result = $this->db->query($query)->result();
                                             $sent_list = '';
                                             foreach ($result as $re) {

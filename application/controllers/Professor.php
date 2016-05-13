@@ -14,6 +14,7 @@ class Professor extends Professor_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+        
     }
 
     /**
@@ -288,6 +289,8 @@ class Professor extends Professor_Controller {
         $page_data['centerlist'] = $this->db->get('center_user')->result();
         $this->__template('exam', $page_data);
     }
+    
+    
 
     /**
      * Course list from degree
@@ -1968,6 +1971,7 @@ class Professor extends Professor_Controller {
         
         $this->load->helper('system_email');
         if ($_POST) {
+           
             $filename = '';
             $attachments = array();
             if ($_FILES['userfile']['name'][0] != '') {
@@ -1989,26 +1993,48 @@ class Professor extends Professor_Controller {
             }
             $filename = rtrim($filename, ',');
             $_POST['file_name'] = $filename;
-
+              $admin_list = array();
+            if (count($_POST['to'])) {
+                 $admin_list = $_POST['to'];
+                 $admin_to = '';
+                  foreach ($admin_list as $row) {
+                      
+                  
+            $admin_to .= $row . ',';                 
+            }
+            
+            }
+           //  $admin_to;
+           $admin_to = rtrim($admin_to, ',');
+     
             if ($_POST['course'] == 'all') {
                 // send to all students 
-                send_to_all_course($_POST);
+                send_to_all_course_professor($_POST,$admin_to);
             } else if ($_POST['semester'] == 'all') {
                 //send to all semester of the course
-                send_to_course_all_semester($_POST, $_POST['course']);
-            } else if ($_POST['student'] == 'all') {
+                send_to_course_all_semester_professor($_POST, $_POST['course'],$admin_to);
+                
+            } else if ($_POST['student'][0] == 'all' || $_POST['student']) {
+                
+                
                 //send to all students of the course and semeter
-                send_to_all_student_course_semester($_POST, $_POST['course'], $_POST['semester']);
+                send_to_all_student_course_semester_professor($_POST, $_POST['course'], $_POST['semester'],$admin_to);
             } else {
                 //send particular student                
-                send_to_single_student($_POST);
+                send_to_single_student_professor($_POST,$admin_to);
             }
+            
 
-            $teacher_list = array();
+          
+           
+            
+                    
+            
+           // $teacher_list = array();
             //send mails to others
-            if (count($_POST['teacheremail'])) {
-                $teacher_list = $_POST['teacheremail'];
-            }
+          //  if (count($_POST['teacheremail'])) {
+           //     $teacher_list = $_POST['teacheremail'];
+           // }
 
             //cc
             $cc_list = explode(',', $_POST['cc']);
@@ -2018,9 +2044,10 @@ class Professor extends Professor_Controller {
             }
 
             //send email
-            //var_dump($teacher_list);
+            //var_dump($admin_list);
             //exit;
-            $this->setemail($teacher_list, $_POST['subject'], $_POST['message'], $email_cc_list, $attachments);
+             $this->setemail($admin_list, $_POST['subject'], $_POST['message'], $email_cc_list, $attachments);
+            
 
             redirect(base_url('professor/email_inbox'));
         }
@@ -2036,6 +2063,140 @@ class Professor extends Professor_Controller {
         $data['content'] = 'backend/professor/email_compose';
         $this->load->view('backend/professor/includes/email_template', $data);
     }
+    function email_sent() {
+        $this->load->model('professor/Professor_model');
+        $this->load->helper('system_email');
+        $data['sent_mail'] = professor_sent_email(); //admin
+        $data['title'] = 'Sent Email';
+        $data['content'] = 'backend/professor/email_sent';
+        $this->load->view('backend/professor/includes/email_template', $data);
+    }
+     /**
+     * View particular email details
+     * @param int $id
+     */
+    function email_view($id) {
+        $this->load->model('admin/Crud_model');
+        $this->load->helper('system_email');
+        $data['email'] = view_email($id);
+        $data['title'] = $data['email']->subject;
+        $data['content'] = 'backend/professor/email_view';
+        $this->load->view('backend/professor/includes/email_template', $data);
+    }
+    
+    
+    
+     /**
+     * Professor inbox email view
+     * @param int $id
+     */
+    function inbox_email($id) {
+        $this->load->model('admin/Crud_model');
+        $this->load->helper('system_email');
+
+        $data['email'] = admin_inbox_email_view($id);
+        $data['title'] = $data['email']->subject;
+        $data['content'] = 'backend/professor/email_inbox_view';
+        $this->load->view('backend/professor/includes/email_template', $data);
+    }
+    
+    /**
+     * Email reply from admin
+     * @param int $id
+     */
+    function email_reply($id) {
+        $this->load->model('admin/Crud_model');
+        $this->load->helper('system_email');
+        if ($_POST) {
+            $filename = '';
+            if ($_FILES) {
+                $files = $_FILES;
+                $cpt = count($_FILES['userfile']['name']);
+                for ($i = 0; $i < $cpt; $i++) {
+                    $_FILES['userfile']['name'] = $files['userfile']['name'][$i];
+                    $_FILES['userfile']['type'] = $files['userfile']['type'][$i];
+                    $_FILES['userfile']['tmp_name'] = $files['userfile']['tmp_name'][$i];
+                    $_FILES['userfile']['error'] = $files['userfile']['error'][$i];
+                    $_FILES['userfile']['size'] = $files['userfile']['size'][$i];
+
+                    $this->upload->initialize($this->set_upload_options());
+                    $this->upload->do_upload();
+                    $uploaded = $this->upload->data();
+                    $filename .= $uploaded['file_name'] . ',';
+                }
+            }
+            $filename = rtrim($filename, ',');
+            $_POST['file_name'] = $filename;
+
+            professor_email_reply($_POST);
+
+            redirect(base_url('professor/email_inbox'));
+        }
+
+        $data['email'] = admin_inbox_email_view($id);
+        $data['title'] = $data['email']->subject;
+        $data['content'] = 'backend/professor/email_reply';
+        $this->load->view('backend/professor/includes/email_template', $data);
+    }
+    
+      /**
+     * Set mail config
+     */
+    function setemail($emails, $subject = '', $message = '', $cc, $attachment) {
+        $config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'mayur.ghadiya@searchnative.in',
+            'smtp_pass' => 'the mayurz97375',
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1'
+        );
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
+        //$this->load->library('email');
+        //$this->email->initialize($config);
+        $subject = $subject;
+        $message = $message;
+        foreach ($emails as $email) {
+            $this->email->clear(TRUE);
+            $this->sendEmail($email, $subject, $message, $cc, $attachment);
+        }
+    }
+    
+    public function sendEmail($email, $subject, $message, $cc, $attachments) {
+        //$this->email->set_newline("\r\n");
+        $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
+        $this->email->to($email);
+        foreach ($cc as $row) {
+            $this->email->cc($row);
+        }
+        $this->email->subject($subject);
+        $this->email->message($message);
+        //$files = array('D:\unit testing.docx', 'D:\vtiger trial version features.docx');        
+        if (count($attachments)) {
+            foreach ($attachments as $row) {
+                $this->email->attach($row);
+            }
+        }
+        if ($this->email->send()) {
+            echo 'Email send.';
+        } else {
+            show_error($this->email->print_debugger());
+        }
+    }
+    
+    /**
+     * Delete email
+     * @param type $id
+     */
+      function delete_email($id) {
+        $this->load->library('user_agent');
+        $this->load->model('admin/Crud_model');
+        $this->Crud_model->delete_email($id);
+        redirect($this->agent->referrer());
+    }
+
 
     
     /**
@@ -2051,6 +2212,73 @@ class Professor extends Professor_Controller {
             <option value="<?php echo $row->std_id; ?>"><?php echo $row->std_first_name . ' ' . $row->std_last_name; ?></option>
             <?php
         }
+    }
+    
+   
+     /**
+     * Semester list from branch
+     * @param string $branch_id
+     */
+    function semesters_list_from_branch($branch_id) {
+        
+        $this->load->model('admin/Crud_model');
+        $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
+
+        echo json_encode($semester);
+    }
+    
+    
+      /*     * ****MANAGE OWN PROFILE AND CHANGE PASSWORD	
+      Auth : mayur panchal
+      /******** */
+
+    function manage_profile($param1 = '', $param2 = '', $param3 = '') {
+          $this->load->model('admin/Crud_model');
+        if ($param1 == 'update_profile_info') {
+            if (!empty($_POST)) {
+               
+             $data = array(                   
+                    'address' => $this->input->post('address'),
+                    'city' => $this->input->post('city'),
+                    'zip' => $this->input->post('zip_code'),
+                    'mobile' => $this->input->post('mobile'),
+                    'dob' => $this->input->post('dob'),
+                    'occupation' => $this->input->post('occupation'),
+                    'about' => $this->input->post('about')
+                );
+                if ($_FILES['userfile']['name'] != '') {
+                    
+                    
+                    //upload config
+                    $config = array(
+                        'upload_path' => './uploads/professor/',
+                        'allowed_types' => 'jpg|png|gif',
+                        'max_size' => '2048'
+                    );
+                    $this->load->library('upload');
+                    $this->upload->initialize($config);
+                    $this->upload->do_upload('userfile');
+                    $upload_data = $this->upload->data();
+                    $data['image_path'] = isset($upload_data['file_name']) ? $upload_data['file_name'] : '';
+                    
+                    
+                }
+                $param2 = $this->session->userdata("login_user_id");
+                $this->Crud_model->save_professor($data, $param2);    
+                $this->session->set_flashdata("flash_message",'Profile update successfully');
+                redirect(base_url().'professor/manage_profile');
+                
+                //$data['identification_num'] = rand(1111,9999);
+            }
+
+            
+            
+        }
+        $page_data['page_name'] = 'manage_profile';
+        $page_data['page_title'] = 'Manage Profile';
+        $page_data['degree_list'] = $this->Professor_model->get_all_degree();
+        $page_data['edit_data'] = $this->db->get_where('professor', array('professor_id' => $this->session->userdata('login_user_id')))->result_array();
+        $this->__template('manage_profile', $page_data);
     }
 
 }

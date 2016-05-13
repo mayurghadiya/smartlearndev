@@ -393,6 +393,11 @@
         //find batch from degree and course
         function batch_from_degree_and_course(degree_id, course_id) {
             //remove all element from batch
+            
+            if(course_id=='all')
+            {
+                   $('#batch').html('<option value="all">All</option>');                  
+            }else{
             $('#batch').find('option').remove().end();
             $.ajax({
                 url: '<?php echo base_url(); ?>index.php?admin/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
@@ -406,6 +411,7 @@
                     })
                 }
             })
+            }
         }
         
         //get semester from brach

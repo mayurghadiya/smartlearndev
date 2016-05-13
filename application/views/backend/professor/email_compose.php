@@ -1,5 +1,5 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+<link href="<?php echo base_url().'assets/select2/css/' ?>select2.css" rel="stylesheet" />
+<script src="<?php echo base_url().'assets/select2/js/' ?>select2.js"></script>
 <style>
     
     .select2-container-multi .select2-choices .select2-search-field input{
@@ -274,6 +274,7 @@
     </div>
     <!-- .vd_container --> 
 </div>
+<div id="getscript"></div>
 <!-- .vd_content-wrapper --> 
 
 <!-- Middle Content End --> 
@@ -393,11 +394,16 @@
         //find batch from degree and course
         function batch_from_degree_and_course(degree_id, course_id) {
             //remove all element from batch
+            if(course_id=='all')
+            {
+                   $('#batch').html('<option value="all">All</option>');                  
+            }
+            else{
             $('#batch').find('option').remove().end();
             $.ajax({
                 url: '<?php echo base_url(); ?>index.php?professor/batch_list_from_degree_and_course/' + degree_id + '/' + course_id,
                 type: 'get',
-                success: function (content) {
+                success: function (content) {                  
                     $('#batch').append('<option value="">Select</option>');
                     var batch = jQuery.parseJSON(content);
                     console.log(batch);
@@ -406,19 +412,21 @@
                     })
                 }
             })
+            }
         }
         
         //get semester from brach
         function get_semester_from_branch(branch_id) {
             $('#semester').find('option').remove().end();
             $.ajax({
-                url: '<?php echo base_url(); ?>index.php?professor/get_semesters_of_branch/' + branch_id,
+                url: '<?php echo base_url(); ?>index.php?professor/semesters_list_from_branch/' + branch_id,
                 type: 'get',
                 success: function (content) {
                     $('#semester').append('<option value="all">All</option>');
                     var semester = jQuery.parseJSON(content);
                     $.each(semester, function (key, value) {
                         $('#semester').append('<option value=' + value.s_id + '>' + value.s_name + '</option>');
+                            
                     })
                 }
             })
@@ -444,7 +452,7 @@ $(document).ready(function(){
             var course = $('#course').val();
             var batch = $('#batch').val();
             var semester = $('#semester').val();
-            course_semester_student(course, semester);
+          //  course_semester_student(course, semester);
         }
     })
 })

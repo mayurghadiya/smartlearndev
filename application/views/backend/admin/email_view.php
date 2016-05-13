@@ -37,13 +37,23 @@
                                         <label class="col-sm-2 control-label">To</label>
                                         <div class="col-sm-9">
                                             <?php
+                                            if(!empty($email->email_to))
+                                        {
                                             $query = "SELECT email FROM student ";
                                             $query .= "WHERE std_id IN ($email->email_to)";
+                                        
                                             $result = $this->db->query($query)->result();
                                             $sent_list = '';
                                             foreach ($result as $re) {
                                                 $sent_list .= $re->email . ', ';
                                             }
+                                                                                        
+                                        }else{
+                                             $professor = $this->db->get_where('professor', array(
+                                            'professor_id'  => $email->admin_to_professor
+                                        ))->row();
+                                             $sent_list = $professor->email;
+                                        }
                                             ?>
                                             <textarea class="form-control" id="sent_to" name="to" style="height: 75px" readonly=""><?php echo rtrim($sent_list, ', '); ?></textarea>
                                         </div>

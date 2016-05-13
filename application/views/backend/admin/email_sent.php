@@ -82,12 +82,21 @@
                                     </td>
                                     <td style="width: 20%">
                                         <?php 
+                                        if(!empty($row->email_to))
+                                        {
                                         $query = "SELECT email FROM student WHERE std_id IN ($row->email_to)";
+                                        
                                         $result = $this->db->query($query)->result();
                                         if(count($result) > 1) {
                                             echo "{$result[0]->email}...";
                                         } else {
                                             echo "{$result[0]->email}";
+                                        }
+                                        }else{
+                                             $professor = $this->db->get_where('professor', array(
+                                            'professor_id'  => $row->admin_to_professor
+                                        ))->row();
+                                             echo $professor->email;
                                         }
                                         ?>
                                         <?php //echo $row->email_to; ?>

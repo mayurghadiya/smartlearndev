@@ -85,11 +85,19 @@
                                     </td>
                                     <td style="width: 20%">
                                         <?php
+                                        if(!empty($row->email_to))
+                                        {
                                         $admin = $this->db->get_where('admin', array(
                                             'admin_id'  => $row->email_to
                                         ))->row();
-                                        ?>
-                                        <?php echo $admin->email; ?>
+                                        
+                                         echo $admin->email; 
+                                        }else{
+                                             $professor = $this->db->get_where('professor', array(
+                                            'professor_id'  => $row->student_to_professor
+                                        ))->row();
+                                             echo $professor->email;
+                                        }?>
                                     </td>
                                     <td>
                                         <span class="label vd_bg-green append-icon"><?php echo $row->subject; ?></span> 
