@@ -860,7 +860,7 @@ class Admin extends CI_Controller {
           
             $this->Professor_model->delete_courseware($param2);
             $this->session->set_flashdata('flash_message', "Courseware deleted successfully");
-            redirect(base_url() . 'professor/courseware/', 'refresh');
+            redirect(base_url() . 'admin/courseware/', 'refresh');
         }
         
         $this->db->select("cw.*,c.* ");
