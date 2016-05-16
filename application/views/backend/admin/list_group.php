@@ -41,8 +41,9 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label"><?php echo ucwords("Type of Users");?><span style="color:red">*</span></label>
                             <div class="col-sm-7 controls">
-                                <select id="user_type" onchange="return get_user(this.value)" name="user_type" class="width-50" style="width:100%;" >
+                                <select id="user_type" name="user_type" class="width-50" style="width:100%;" >
                                     <option value="">Select User Type</option>
+                                    
                                 </select>
                                 <div id="test"></div>
                                 <label for="user_type" class="error"></label>

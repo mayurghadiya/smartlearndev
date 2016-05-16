@@ -25,19 +25,21 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("Group Name");?><span style="color:red">*</span></label>
                             <div class="col-sm-5 controls">
-                                <input type="text" placeholder="Group Name" name="group_name">
+                                <input type="text" placeholder="Group Name" name="group_name" >
                                 <span class="help-inline"></span> </div>
                         </div>
-                       <!-- <div class="form-group">
-                            <label class="col-sm-4 control-label">Type of Users<span style="color:red">*</span></label>
-                            <div class="col-sm-7 controls">
-                                <select id="user_type" onchange="return get_user(this.value)" name="user_type" class="width-50" style="width:100%;" >
+                       <div class="form-group">
+                            <label class="col-sm-3 control-label">Type of Users<span style="color:red">*</span></label>
+                            <div class="col-sm-5 controls">
+                                <select id="user_type" onchange="return get_user(this.value)" name="user_type"  >
                                     <option value="">Select User Type</option>
-                                    <option value="1">Student</option>
+                                    <option value="student">Student</option>
+                                    <option value="professor">Professor</option>
                                 </select>
                                 <div id="test"></div>
                             </div>
-                        </div>	-->
+                        </div>	
+                        <div id="divfilter" hidden>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
@@ -88,7 +90,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+                        </div>
                         <div class="row">
                             <div class="col-sm-5">
                                 <select name="from[]" id="multiselect" class="form-control" size="8" multiple="multiple">
@@ -183,6 +185,26 @@
             }
         });
     }
+    function get_user(type)
+    {
+        if(type=='student')
+        {
+            $("#divfilter").show();
+        }
+        else
+        {
+            $("#divfilter").hide();
+            $.ajax({
+            url: '<?php echo base_url(); ?>index.php?admin/get_group_professor/',
+            type: 'POST',            
+            //data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+            success: function (content) {
+                $("#multiselect").html(content);
+            }
+        });
+        }
+    }
+    
 </script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script> 
 <script type="text/javascript">

@@ -642,16 +642,12 @@ class Admin extends CI_Controller {
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
             $data['group_name'] = $this->input->post('group_name');
-            $data['user_type'] = 1;
+            $data['user_type'] = $this->input->post('user_type');
             $data['user_role'] = implode(',', $this->input->post('user_role'));
-            //print_r($data); die;
-            $check_already_exist_name = $this->db->get_where('group', array('group_name' => $this->input->post('group_name')))->row();
-            if (count($check_already_exist_name) > 0) {
-                $this->session->set_flashdata('flash_message', get_phrase('group_name_already_exist.'));
-            } else {
-                $this->db->insert('group', $data);
-                $this->session->set_flashdata('flash_message', get_phrase('group_added_successfully'));
-            }
+
+            $this->db->insert('group', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('group_added_successfully'));
+
             redirect(base_url() . 'admin/create_group', 'refresh');
         }
         $page_data['user_role'] = $param1;
@@ -703,34 +699,113 @@ class Admin extends CI_Controller {
         }
     }
 
-    /*     * **Develop By Hardik Bhut 14-december-2015**** */
-
     function get_group_ajax($group_id) {
         $get_group_list = $this->db->get_where('group', array('g_id' => $group_id))->result_array();
-        foreach ($get_group_list as $row_key => $row_value) {
-            $user_role = explode(',', $row_value['user_role']);
-            $user_type[] = $row_value['user_type'];
-            if ($row_value['user_type'] == 1) {
-                $user_type[] = '<option value="1">Student</option>';
-                $sections = $this->db->get_where('student', array('user_type' => $row_value['user_type']))->result_array();
+        $user_role=explode(',',$get_group_list[0]['user_role']);
+           if($get_group_list[0]['user_type']=='student')
+           {               
+               $user_type[]='<option value="student">Student</option>';
+               $sections=$this->db->get('student')->result_array();
                 foreach ($sections as $row) {
-                    if (!in_array($row['std_id'], $user_role)) {
-                        $full_user_list[] = '<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';
-                    }
-                }
-            }
-            foreach ($user_role as $user_role_value) {
-                if ($row_value['user_type'] == '1') {
+                    if(!in_array($row['std_id'],$user_role))
+                    {
+                        $full_user_list[]= '<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';
+                        }
 
-                    $user_role_student_query = $this->db->get_where('student', array('std_id' => $user_role_value))->result_array();
-                    foreach ($user_role_student_query as $user_role_student_row) {
-                        $group[] = '<option value="' . $user_role_student_row['std_id'] . '">' . $user_role_student_row['name'] . '</option>';
+                    if(in_array($row['std_id'],$user_role))
+                    {
+                        $group[]= '<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';
+                        }
+
                     }
-                }
-            }
-            $out = array('group' => $group, 'user_type' => $user_type, 'full_user_list' => $full_user_list);
-            echo json_encode($out);
-        }
+           }
+           if($get_group_list[0]['user_type']=='professor')
+           {               
+               $user_type[]='<option value="professor">Professor</option>';
+               $sections=$this->db->get('professor')->result_array();
+                foreach ($sections as $row) {
+                    if(!in_array($row['professor_id'],$user_role))
+                    {
+                        $full_user_list[]= '<option value="' . $row['professor_id'] . '">' . $row['name'] . '</option>';
+                        }
+
+                    if(in_array($row['professor_id'],$user_role))
+                    {
+                        $group[]= '<option value="' . $row['professor_id'] . '">' . $row['name'] . '</option>';
+                        }
+
+                    }
+           }
+        $out = array('group'=>$group,'user_type'=>$user_type,'full_user_list'=>$full_user_list); 
+	echo json_encode($out);
+        
+//        
+//       foreach ($get_group_list as $row_key => $row_value)
+//		 {
+//			$user_role=explode(',',$row_value['user_role']);
+//			$user_type[]=$row_value['user_type'];
+//			if($row_value['user_type']==1){
+//				  $user_type[]='<option value="1">Sport</option>';
+//			$sections=$this->db->get_where('student' , array('user_type' =>$row_value['user_type']))->result_array();
+//			foreach ($sections as $row) {
+//				if(!in_array($row['std_id'],$user_role))
+//				{
+//					$full_user_list[]= '<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';
+//					}
+//				}
+//			}if($row_value['user_type']==2){
+//				 $user_type[]='<option value="2">Professor</option>';
+//				 $sections = $this->db->get_where('professor' , array('user_type' => $row_value['user_type']))->result_array();
+//				  foreach ($sections as $row) {
+//					if(!in_array($row['professor_id'],$user_role))
+//					{
+//						$full_user_list[]= '<option value="' . $row['professor_id'] . '">' . $row['name'] . '</option>';
+//					}
+//				}
+//					
+//			}if($row_value['user_type']==3){
+//				  $user_type[]='<option value="3">Student</option>';
+//				  $sections = $this->db->get_where('student' , array('user_type' =>$row_value['user_type']))->result_array();
+//				  foreach ($sections as $row) {
+//					if(!in_array($row['std_id'],$user_role)){
+//					$full_user_list[]='<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';	
+//					}
+//				  }
+//			}
+//			foreach ($user_role as $user_role_value)
+//			{
+//				
+//				if($row_value['user_type']=='1')
+//				{
+//					$user_role_query = $this->db->get_where('student' , array('std_id' => $user_role_value))->result_array();
+//					foreach ($user_role_query as $user_role_row)
+//					{
+//						$group[]= '<option value="' . $user_role_row['std_id'] . '">' . $user_role_row['name'] . '</option>';
+//					}
+//				}
+//				if($row_value['user_type']=='2')
+//				{
+//					
+//					$user_role_student_query = $this->db->get_where('professor' , array('professor_id' => $user_role_value))->result_array();
+//					foreach ($user_role_student_query as $user_role_student_row)
+//					{
+//						$group[]= '<option value="' . $user_role_student_row['professor_id'] . '">' . $user_role_student_row['name'] . '</option>';
+//					}
+//				}
+//				if($row_value['user_type']=='3')
+//				{
+//					$user_role_query = $this->db->get_where('student' , array('std_id' => $user_role_value))->result_array();
+//					foreach ($user_role_query as $user_role_row)
+//					{
+//						$group[]= '<option value="' . $user_role_row['std_id'] . '">' . $user_role_row['name'] . '</option>';
+//					}
+//				}
+//				
+//			}
+//			$out = array('group'=>$group,'user_type'=>$user_type,'full_user_list'=>$full_user_list); 
+//			echo json_encode($out);
+//		}
+             
     }
 
     /*     * ** Develop By Hardik Bhut 15-december-2015 **** */
@@ -781,13 +856,16 @@ class Admin extends CI_Controller {
 
     function get_module_ajax($group_id) {
         $get_assign_module_list = $this->db->get_where('assign_module', array('group_id' => $group_id))->result_array();
-
+        $assigned_module_list=array();
+        $full_module_list=array();
+        if(count($get_assign_module_list)> 0)
+        {
         foreach ($get_assign_module_list as $row_key => $row_value) {
             $module_record = explode(',', $row_value['module_id']);
             $modules_query = $this->db->get('modules')->result_array();
             
             foreach ($modules_query as $modules_row) {
-                if (in_array($modules_row['module_id'], $module_record)) {
+                if (!in_array($modules_row['module_id'], $module_record)) {
                     $full_module_list[] = '<option value="' . $modules_row['module_id'] . '">' . $modules_row['module_name'] . '</option>';
                 }
             }
@@ -798,6 +876,7 @@ class Admin extends CI_Controller {
                     $assigned_module_list[] = '<option value="' . $user_role_row['module_id'] . '">' . $user_role_row['module_name'] . '</option>';
                 }
             }
+        }
         }
         $out = array('assigned_module_list' => $assigned_module_list, 'full_module_list' => $full_module_list);
         echo json_encode($out);
@@ -4425,7 +4504,16 @@ class Admin extends CI_Controller {
         }
         echo $html;
     }
-
+    function get_group_professor()
+    {
+         $dataprofessor = $this->db->get("professor")->result_array();
+        foreach ($dataprofessor as $row) {
+            $html .='<option value="' . $row['professor_id'] . '">' . $row['name'] . '</option>';
+        }
+        echo $html;
+    }
+    
+    
     function get_filter_student() {
         $batch = $this->input->post("batch");
         $sem = $this->input->post("sem");
