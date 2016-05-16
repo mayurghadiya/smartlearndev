@@ -119,7 +119,10 @@ endforeach;
                 rules: {
                 course_name: "required",
                 professor: "required",
-                fee: "required",
+                fee: {
+                        required: true,
+                        currency: ['$', false]
+                    },
                 course_status: "required",
                 startdate1: "required",
                 enddate1: "required",
@@ -127,7 +130,10 @@ endforeach;
             messages: {
                 course_name: "Enter course name",
                 professor: "Select professor",
-                fee: "Enter course fee",
+                fee: {
+                        required: "Enter  fee",
+                        currency: "Enter valid amount"
+                    },
                 course_status: "Select status",
                 startdate1: "Select date",
                 enddate1: "Select date",

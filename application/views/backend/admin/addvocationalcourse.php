@@ -101,7 +101,10 @@
             rules: {
                 course_name: "required",
                 professor: "required",
-                fee: "required",
+                fee: {
+                        required: true,
+                        currency: ['$', false]
+                    },
                 course_status: "required",
                 startdate: "required",
                 enddate: "required",
@@ -109,7 +112,10 @@
             messages: {
                 course_name: "Enter course name",
                 professor: "Select professor",
-                fee: "Enter course fee",
+                fee: {
+                        required: "Enter  fee",
+                        currency: "Enter valid amount"
+                    },
                 course_status: "Select status",
                 startdate: "Select date",
                 enddate: "Select date",
