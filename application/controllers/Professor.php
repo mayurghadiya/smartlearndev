@@ -14,7 +14,6 @@ class Professor extends Professor_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
-        
     }
 
     /**
@@ -41,13 +40,13 @@ class Professor extends Professor_Controller {
     }
 
     function subject($param1 = '', $param2 = '') {
-       
-       $dept = $this->session->userdata('department');
+
+        $dept = $this->session->userdata('department');
         $page_data['subject'] = $this->db->query("SELECT * FROM subject_manager WHERE FIND_IN_SET('" . $dept . "',professor_id)")->result();
         $login_id = $this->session->userdata('login_user_id');
-      $degree =   $this->db->get_where("professor",array("professor_id"=>$login_id))->result();
-     
-        $this->db->where("degree_id",$degree[0]->department);
+        $degree = $this->db->get_where("professor", array("professor_id" => $login_id))->result();
+
+        $this->db->where("degree_id", $degree[0]->department);
         $page_data['course'] = $this->db->get('course')->result();
         $page_data['semester'] = $this->db->get('semester')->result();
         $page_data['page_name'] = 'subject';
@@ -60,10 +59,9 @@ class Professor extends Professor_Controller {
         $data['title'] = 'Events';
         $this->__template('events', $data);
     }
-    
-    function courseware($param = '', $param2 = '')
-    {
-         if ($param == "create") {
+
+    function courseware($param = '', $param2 = '') {
+        if ($param == "create") {
             if ($_FILES['attachment']['name'] != "") {
                 $path = FCPATH . 'uploads/syllabus';
                 if (!is_dir($path)) {
@@ -75,7 +73,7 @@ class Professor extends Professor_Controller {
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
                 //$this->upload->set_allowed_types('*');	
-                    
+
                 if (!$this->upload->do_upload('attachment')) {
                     $this->session->set_flashdata('flash_message', $this->upload->display_errors());
                     redirect(base_url() . 'professor/courseware/', 'refresh');
@@ -93,21 +91,20 @@ class Professor extends Professor_Controller {
             $insert['branch_id'] = $this->input->post('branch');
             $insert['status'] = $this->input->post('status');
             $insert['professor_id'] = $this->session->userdata('login_user_id');
-            $insert['created_date'] = date('Y-m-d') ;
-            
+            $insert['created_date'] = date('Y-m-d');
+
             $this->Professor_model->add_courseware($insert);
             $this->session->set_flashdata('flash_message', "Courseware added successfully");
             redirect(base_url() . 'professor/courseware/', 'refresh');
         }
-        
+
         if ($param == 'do_update') {
-            
+
             if ($_FILES['attachment']['name'] != "") {
-                if($this->input->post('oldfile')!="")
-                {
+                if ($this->input->post('oldfile') != "") {
                     error_reporting(0);
                     unlink("uploads/courseware/" . $this->input->post('oldfile'));
-                }                
+                }
                 $path = FCPATH . 'uploads/courseware';
                 if (!is_dir($path)) {
                     mkdir($path, 0777);
@@ -121,38 +118,38 @@ class Professor extends Professor_Controller {
 
                 if (!$this->upload->do_upload('attachment')) {
                     $this->session->set_flashdata('flash_message', $this->upload->display_errors());
-                   redirect(base_url() . 'professor/courseware/', 'refresh');
+                    redirect(base_url() . 'professor/courseware/', 'refresh');
                 } else {
                     $file = $this->upload->data();
                     $insert['attachment'] = $file['file_name'];
                 }
-            } 
+            }
             $insert['topic'] = $this->input->post('topic');
             $insert['description'] = $this->input->post('description');
             $insert['branch_id'] = $this->input->post('branch');
             $insert['status'] = $this->input->post('status');
-            $insert['updated_date'] = date('Y-m-d') ;
+            $insert['updated_date'] = date('Y-m-d');
 
             $this->Professor_model->courseware_update($insert, $param2);
             $this->session->set_flashdata('flash_message', "Courseware Updated Successfully");
-           redirect(base_url() . 'professor/courseware/', 'refresh');
+            redirect(base_url() . 'professor/courseware/', 'refresh');
         }
-        
-        if ($param == 'delete') {            
+
+        if ($param == 'delete') {
             $data = $this->db->get_where('courseware', array('courseware_id' => $param2))->result_array();
-          
+
             $this->Professor_model->delete_courseware($param2);
             $this->session->set_flashdata('flash_message', "Courseware deleted successfully");
             redirect(base_url() . 'professor/courseware/', 'refresh');
         }
-        
+
         $page_data['courseware'] = $this->Professor_model->getcourseware();
-           
+
         $page_data['page_name'] = 'courseware';
         $page_data['page_title'] = 'Courseware Management';
         $this->__template('courseware', $page_data);
     }
-    
+
     function holiday($param1 = '', $param2 = '') {
 
         $page_data['holiday'] = $this->Professor_model->getholiday();
@@ -380,8 +377,6 @@ class Professor extends Professor_Controller {
         $page_data['centerlist'] = $this->db->get('center_user')->result();
         $this->__template('exam', $page_data);
     }
-    
-    
 
     /**
      * Course list from degree
@@ -701,7 +696,7 @@ class Professor extends Professor_Controller {
         foreach ($subjects as $row) {
             ?>
             <option value="<?php echo $row->sm_id; ?>"
-                    <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
+            <?php if ($row->sm_id == $time_table) echo 'selected'; ?>><?php echo $row->subject_name . '  Code: ' . $row->subject_code; ?></option>
             <!--echo "<option value={$row->sm_id}>{$row->subject_name}  (Code: {$row->subject_code})</option>";-->
             <?php
         }
@@ -1011,7 +1006,7 @@ class Professor extends Professor_Controller {
 
         $page_data['submitedassignment'] = $this->Professor_model->submitttedassignment();
 
-     $page_data['degree'] = $this->Professor_model->get_all_degree();
+        $page_data['degree'] = $this->Professor_model->get_all_degree();
         $page_data['course'] = $this->Professor_model->get_all_course();
         $page_data['semester'] = $this->Professor_model->get_all_semester();
         $page_data['batch'] = $this->Professor_model->get_all_bacth();
@@ -1109,16 +1104,15 @@ class Professor extends Professor_Controller {
         $course = $this->input->post("course");
 
         $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
-        $html ='<option value="">Select Student</option>';  
-       foreach($datastudent as $row):
-          $html .='<option value="'.$row->std_id.'">'.$row->name.'</option>';
-       endforeach;
-       echo $html;
-             
+        $html = '<option value="">Select Student</option>';
+        foreach ($datastudent as $row):
+            $html .='<option value="' . $row->std_id . '">' . $row->name . '</option>';
+        endforeach;
+        echo $html;
     }
-    
-     function studyresource($param1 = '', $param2 = '') {
-       
+
+    function studyresource($param1 = '', $param2 = '') {
+
         if ($param1 == 'create') {
             if ($_FILES['resourcefile']['name'] != "") {
 
@@ -1254,7 +1248,7 @@ class Professor extends Professor_Controller {
             $this->session->set_flashdata('flash_message', 'Studyresource Deleted Successfully');
             redirect(base_url() . 'professor/studyresource/', 'refresh');
         }
-        
+
         $page_data['studyresource'] = $this->Professor_model->get_studyresource();
         $page_data['degree'] = $this->Professor_model->get_all_degree();
         $page_data['course'] = $this->Professor_model->get_all_course();
@@ -1264,7 +1258,8 @@ class Professor extends Professor_Controller {
         $page_data['page_title'] = 'Study Resource Management';
         $this->__template('studyresource', $page_data);
     }
-     function get_semesterall() {
+
+    function get_semesterall() {
 
         $cid = $this->input->post("course");
 
@@ -1291,7 +1286,8 @@ class Professor extends Professor_Controller {
         }
         echo $option;
     }
-     function get_courcestudy($param = '') {
+
+    function get_courcestudy($param = '') {
 
         $did = $this->input->post("degree");
 
@@ -1312,6 +1308,7 @@ class Professor extends Professor_Controller {
             echo $html;
         }
     }
+
     function getassignment($param = '') {
         if ($param = 'allassignment') {
             $degree = $this->input->post('degree');
@@ -1335,7 +1332,8 @@ class Professor extends Professor_Controller {
             $this->load->view("backend/admin/getassignment", $data);
         }
     }
-      function get_batchs($param = '') {
+
+    function get_batchs($param = '') {
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
         $html = '';
@@ -1356,8 +1354,8 @@ class Professor extends Professor_Controller {
             echo $html;
         }
     }
-    
-     function getstudyresource() {
+
+    function getstudyresource() {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
         $batch = $this->input->post('batch');
@@ -1411,8 +1409,8 @@ class Professor extends Professor_Controller {
 
         $this->load->view("backend/admin/getstudyresource", $data);
     }
-    
-     function course_filter($param = '') {
+
+    function course_filter($param = '') {
         $did = $this->input->post("degree");
 
         if ($did != '') {
@@ -1430,7 +1428,8 @@ class Professor extends Professor_Controller {
             }
         }
     }
-     function batch_filter($param = '') {
+
+    function batch_filter($param = '') {
         $cid = $this->input->post("course");
         $did = $this->input->post("degree");
         if ($cid != '') {
@@ -1455,9 +1454,9 @@ class Professor extends Professor_Controller {
             }
         }
     }
-    
+
     function library($param1 = '', $param2 = '') {
-        
+
         if ($param1 == 'create') {
 
 
@@ -1641,7 +1640,8 @@ class Professor extends Professor_Controller {
         $page_data['page_title'] = 'Library Management';
         $this->__template('library', $page_data);
     }
-     function batchwisestudent() {
+
+    function batchwisestudent() {
         $batch = $this->input->post("batch");
         if ($batch != "") {
             $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1))->result();
@@ -1655,8 +1655,8 @@ class Professor extends Professor_Controller {
         }
         echo $html;
     }
-    
-      function semwisestudent() {
+
+    function semwisestudent() {
         $batch = $this->input->post("batch");
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
@@ -1669,8 +1669,8 @@ class Professor extends Professor_Controller {
         }
         echo $html;
     }
-    
-      function getlibrary($param = '') {
+
+    function getlibrary($param = '') {
 
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
@@ -1714,17 +1714,17 @@ class Professor extends Professor_Controller {
 
         $this->load->view("backend/admin/getlibrary", $data);
     }
-    
-     function participate($param1 = '', $param2 = '') {
-        
-      
+
+    function participate($param1 = '', $param2 = '') {
+
+
 
         $this->db->select("ls.*,s.*");
         $this->db->from('survey_list ls');
         $this->db->join("student s", "s.std_id=ls.student_id");
         $page_data['survey'] = $this->db->get()->result();
         $page_data['questions'] = $this->db->get('survey_question')->result();
-        
+
         $page_data['participate'] = $this->db->get('participate_manager')->result();
         $page_data['degree'] = $this->db->get('degree')->result();
         $page_data['batch'] = $this->db->get('batch')->result();
@@ -1738,7 +1738,8 @@ class Professor extends Professor_Controller {
         $page_data['uploads'] = $this->db->get('student_upload')->result_array();
         $this->__template('participate', $page_data);
     }
-       function getprojects($param = '') {
+
+    function getprojects($param = '') {
         if ($param == 'allproject') {
             $degree = $this->input->post('degree');
             $course = $this->input->post('course');
@@ -1785,8 +1786,8 @@ class Professor extends Professor_Controller {
             $this->load->view("backend/admin/getprojects", $data);
         }
     }
-    
-      function batchwisestudentcheckbox($param = '') {
+
+    function batchwisestudentcheckbox($param = '') {
         $batch = $this->input->post("batch");
         $sem = $this->input->post("sem");
         $degree = $this->input->post("degree");
@@ -1815,8 +1816,8 @@ class Professor extends Professor_Controller {
             }
         }
     }
-    
-       function checkboxstudent($param = '') {
+
+    function checkboxstudent($param = '') {
 
         $batch = $this->input->post("batch");
         $sem = $this->input->post("sem");
@@ -1824,7 +1825,7 @@ class Professor extends Professor_Controller {
         $course = $this->input->post("course");
         $class = $this->input->post("divclass");
 
-        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree,'class_id'=>$class))->result();
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree, 'class_id' => $class))->result();
         $html = '';
         if ($param != '') {
             $edit_data = $this->db->get_where('project_manager', array('pm_id' => $param))->result_array();
@@ -1846,8 +1847,8 @@ class Professor extends Professor_Controller {
         }
         echo $html;
     }
-    
-      function checkprjects() {
+
+    function checkprjects() {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
         $batch = $this->input->post('batch');
@@ -1859,7 +1860,8 @@ class Professor extends Professor_Controller {
                     'pm_batch' => $batch, 'pm_semester' => $semester))->result_array();
         echo json_encode($data);
     }
-      function checkprjectsedit($id = '') {
+
+    function checkprjectsedit($id = '') {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
         $batch = $this->input->post('batch');
@@ -1871,7 +1873,8 @@ class Professor extends Professor_Controller {
                     'pm_batch' => $batch, 'pm_semester' => $semester, 'pm_id!=' => $id))->result_array();
         echo json_encode($data);
     }
-     function checkprject($id = '') {
+
+    function checkprject($id = '') {
         $degree = $this->input->post('degree');
         $course = $this->input->post('course');
         $batch = $this->input->post('batch');
@@ -1883,9 +1886,9 @@ class Professor extends Professor_Controller {
                     'pm_batch' => $batch, 'pm_semester' => $semester))->result_array();
         echo json_encode($data);
     }
-    
-      function project($param1 = '', $param2 = '') {
-        
+
+    function project($param1 = '', $param2 = '') {
+
         if ($param1 == 'create') {
             $checkstd = $this->input->post('student');
             if (empty($checkstd)) {
@@ -1959,7 +1962,7 @@ class Professor extends Professor_Controller {
                 $this->session->set_flashdata('flash_message', "Student not found, data not added!");
                 redirect(base_url() . 'professor/project/', 'refresh');
             }
-          
+
             if ($_FILES['projectfile']['name'] != "") {
 
                 $config['upload_path'] = 'uploads/project_file';
@@ -2009,9 +2012,9 @@ class Professor extends Professor_Controller {
             redirect(base_url() . 'professor/project/', 'refresh');
         }
         $page_data['project'] = $this->Professor_model->get_projects();
-        
+
         $page_data['submitedproject'] = $this->Professor_model->submittedproject();
-         $page_data['degree'] = $this->Professor_model->get_all_degree();
+        $page_data['degree'] = $this->Professor_model->get_all_degree();
         $page_data['course'] = $this->Professor_model->get_all_course();
         $page_data['semester'] = $this->Professor_model->get_all_semester();
         $page_data['batch'] = $this->Professor_model->get_all_bacth();
@@ -2021,18 +2024,18 @@ class Professor extends Professor_Controller {
         $page_data['page_title'] = 'Project Management';
         $this->__template('project', $page_data);
     }
-    
+
     function graduate($param1 = '', $param2 = '') {
-        
+
         $this->load->model('admin/Crud_model');
-       
+
         $page_data['title'] = 'Recent Graduates';
         $page_data['page_name'] = 'graduate';
         $page_data['degree'] = $this->Crud_model->get_all_degree();
         $page_data['graduates'] = $this->Crud_model->get_all_graduates();
         $this->__template('graduate', $page_data);
     }
-    
+
     /**
      * Email inbox
      */
@@ -2046,8 +2049,7 @@ class Professor extends Professor_Controller {
         //$data['page_name'] = 
         $this->load->view('backend/professor/includes/email_template', $data);
     }
-    
-    
+
     /**
      * Email compose
      * 
@@ -2058,11 +2060,11 @@ class Professor extends Professor_Controller {
         //load the Crud model
         $this->load->model('professor/Professor_model');
         $this->load->model('admin/Crud_model');
-        
-        
+
+
         $this->load->helper('system_email');
         if ($_POST) {
-           
+
             $filename = '';
             $attachments = array();
             if ($_FILES['userfile']['name'][0] != '') {
@@ -2084,49 +2086,46 @@ class Professor extends Professor_Controller {
             }
             $filename = rtrim($filename, ',');
             $_POST['file_name'] = $filename;
-              $admin_list = array();
+            $admin_list = array();
             if (count($_POST['to'])) {
-                 $admin_list = $_POST['to'];
-                 $admin_to = '';
-                  foreach ($admin_list as $row) {
-                      
-                  
-            $admin_to .= $row . ',';                 
+                $admin_list = $_POST['to'];
+                $admin_to = '';
+                foreach ($admin_list as $row) {
+
+
+                    $admin_to .= $row . ',';
+                }
             }
-            
-            }
-           //  $admin_to;
-           $admin_to = rtrim($admin_to, ',');
-     
+            //  $admin_to;
+            $admin_to = rtrim($admin_to, ',');
+
             if ($_POST['course'] == 'all') {
                 // send to all students 
-                send_to_all_course_professor($_POST,$admin_to);
+                send_to_all_course_professor($_POST, $admin_to);
             } else if ($_POST['semester'] == 'all') {
                 //send to all semester of the course
-                send_to_course_all_semester_professor($_POST, $_POST['course'],$admin_to);
-                
+                send_to_course_all_semester_professor($_POST, $_POST['course'], $admin_to);
             } else if ($_POST['student'][0] == 'all' || $_POST['student']) {
-                
-                
+
+
                 //send to all students of the course and semeter
-                send_to_all_student_course_semester_professor($_POST, $_POST['course'], $_POST['semester'],$admin_to);
+                send_to_all_student_course_semester_professor($_POST, $_POST['course'], $_POST['semester'], $admin_to);
             } else {
                 //send particular student                
-                send_to_single_student_professor($_POST,$admin_to);
+                send_to_single_student_professor($_POST, $admin_to);
             }
-            
 
-          
-           
-            
-                    
-            
-           // $teacher_list = array();
+
+
+
+
+
+
+            // $teacher_list = array();
             //send mails to others
-          //  if (count($_POST['teacheremail'])) {
-           //     $teacher_list = $_POST['teacheremail'];
-           // }
-
+            //  if (count($_POST['teacheremail'])) {
+            //     $teacher_list = $_POST['teacheremail'];
+            // }
             //cc
             $cc_list = explode(',', $_POST['cc']);
             $email_cc_list = array();
@@ -2137,8 +2136,8 @@ class Professor extends Professor_Controller {
             //send email
             //var_dump($admin_list);
             //exit;
-             $this->setemail($admin_list, $_POST['subject'], $_POST['message'], $email_cc_list, $attachments);
-            
+            $this->setemail($admin_list, $_POST['subject'], $_POST['message'], $email_cc_list, $attachments);
+
 
             redirect(base_url('professor/email_inbox'));
         }
@@ -2154,6 +2153,7 @@ class Professor extends Professor_Controller {
         $data['content'] = 'backend/professor/email_compose';
         $this->load->view('backend/professor/includes/email_template', $data);
     }
+
     function email_sent() {
         $this->load->model('professor/Professor_model');
         $this->load->helper('system_email');
@@ -2162,7 +2162,8 @@ class Professor extends Professor_Controller {
         $data['content'] = 'backend/professor/email_sent';
         $this->load->view('backend/professor/includes/email_template', $data);
     }
-     /**
+
+    /**
      * View particular email details
      * @param int $id
      */
@@ -2174,10 +2175,8 @@ class Professor extends Professor_Controller {
         $data['content'] = 'backend/professor/email_view';
         $this->load->view('backend/professor/includes/email_template', $data);
     }
-    
-    
-    
-     /**
+
+    /**
      * Professor inbox email view
      * @param int $id
      */
@@ -2190,7 +2189,7 @@ class Professor extends Professor_Controller {
         $data['content'] = 'backend/professor/email_inbox_view';
         $this->load->view('backend/professor/includes/email_template', $data);
     }
-    
+
     /**
      * Email reply from admin
      * @param int $id
@@ -2229,8 +2228,8 @@ class Professor extends Professor_Controller {
         $data['content'] = 'backend/professor/email_reply';
         $this->load->view('backend/professor/includes/email_template', $data);
     }
-    
-      /**
+
+    /**
      * Set mail config
      */
     function setemail($emails, $subject = '', $message = '', $cc, $attachment) {
@@ -2254,7 +2253,7 @@ class Professor extends Professor_Controller {
             $this->sendEmail($email, $subject, $message, $cc, $attachment);
         }
     }
-    
+
     public function sendEmail($email, $subject, $message, $cc, $attachments) {
         //$this->email->set_newline("\r\n");
         $this->email->from('mayur.ghadiya@searchnative.in', 'Search Native India');
@@ -2276,20 +2275,18 @@ class Professor extends Professor_Controller {
             show_error($this->email->print_debugger());
         }
     }
-    
+
     /**
      * Delete email
      * @param type $id
      */
-      function delete_email($id) {
+    function delete_email($id) {
         $this->load->library('user_agent');
         $this->load->model('admin/Crud_model');
         $this->Crud_model->delete_email($id);
         redirect($this->agent->referrer());
     }
 
-
-    
     /**
      * Get all student by course and semester
      * @param string $course_id
@@ -2304,31 +2301,29 @@ class Professor extends Professor_Controller {
             <?php
         }
     }
-    
-   
-     /**
+
+    /**
      * Semester list from branch
      * @param string $branch_id
      */
     function semesters_list_from_branch($branch_id) {
-        
+
         $this->load->model('admin/Crud_model');
         $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
 
         echo json_encode($semester);
     }
-    
-    
-      /*     * ****MANAGE OWN PROFILE AND CHANGE PASSWORD	
+
+    /*     * ****MANAGE OWN PROFILE AND CHANGE PASSWORD	
       Auth : mayur panchal
       /******** */
 
     function manage_profile($param1 = '', $param2 = '', $param3 = '') {
-          $this->load->model('admin/Crud_model');
+        $this->load->model('admin/Crud_model');
         if ($param1 == 'update_profile_info') {
             if (!empty($_POST)) {
-               
-             $data = array(                   
+
+                $data = array(
                     'address' => $this->input->post('address'),
                     'city' => $this->input->post('city'),
                     'zip' => $this->input->post('zip_code'),
@@ -2338,43 +2333,80 @@ class Professor extends Professor_Controller {
                     'about' => $this->input->post('about')
                 );
                 if ($_FILES['userfile']['name'] != '') {
-                    
-                    
-                    $allowed_types = explode('|','gif|jpg|png|jpeg');
-                   
-                $ext = explode(".",$_FILES['userfile']['name']);
-                $ext_file =strtolower(end($ext));
-                $file_name = date('dmYhis').'.'.$ext_file;
-                if(in_array($ext_file, $allowed_types)){
-                   
-                  $upl_path= FCPATH . 'uploads/professor/'.$file_name;
-                  mkdir(FCPATH . 'uploads/professor',0777);
-                  move_uploaded_file($_FILES['userfile']['tmp_name'],$upl_path,0777);
-                }
-                else{
-                    $file_name = '';
-                }
-                    
+
+
+                    $allowed_types = explode('|', 'gif|jpg|png|jpeg');
+
+                    $ext = explode(".", $_FILES['userfile']['name']);
+                    $ext_file = strtolower(end($ext));
+                    $file_name = date('dmYhis') . '.' . $ext_file;
+                    if (in_array($ext_file, $allowed_types)) {
+
+                        $upl_path = FCPATH . 'uploads/professor/' . $file_name;
+                        mkdir(FCPATH . 'uploads/professor', 0777);
+                        move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path, 0777);
+                    } else {
+                        $file_name = '';
+                    }
+
                     $data['image_path'] = $file_name;
-                    
-                    
                 }
                 $param2 = $this->session->userdata("login_user_id");
-                $this->Crud_model->save_professor($data, $param2);    
-                $this->session->set_flashdata("flash_message",'Profile update successfully');
-                redirect(base_url().'professor/manage_profile');
-                
+                $this->Crud_model->save_professor($data, $param2);
+                $this->session->set_flashdata("flash_message", 'Profile update successfully');
+                redirect(base_url() . 'professor/manage_profile');
+
                 //$data['identification_num'] = rand(1111,9999);
             }
-
-            
-            
         }
         $page_data['page_name'] = 'manage_profile';
         $page_data['page_title'] = 'Manage Profile';
         $page_data['degree_list'] = $this->Professor_model->get_all_degree();
         $page_data['edit_data'] = $this->db->get_where('professor', array('professor_id' => $this->session->userdata('login_user_id')))->result_array();
         $this->__template('manage_profile', $page_data);
+    }
+
+    /**
+     * Attendance
+     */
+    function attendance() {
+        require 'vendor/autoload.php';
+        $this->load->library('Class_routine_attendance');
+        $this->load->model('admin/Crud_model');
+        if ($_POST) {
+            $class_routine = $this->Professor_model->class_routine_attendance($this->session->userdata('login_user_id'));
+            echo '<pre>';
+            foreach ($class_routine as $row) {
+                if ($row->RecurrenceRule) {
+                    //parse reccurrence rule
+                    $rule = $this->class_routine_attendance->parse_reccurrence_rule($row->RecurrenceRule);
+                    $rule_array = array();
+                    $reccur_rule = '';
+                    foreach ($rule as $key => $value) {
+                        $separate_rule = explode('=>', $value);
+                        $reccur_rule .= "'$separate_rule[0]' => '$separate_rule[1]'" . ';';
+                    }
+                    $conditional_rules = $this->class_routine_attendance->conditional_reccurrence_rule($reccur_rule);
+                    $rrule = new RRule\RRule($conditional_rules);
+                    foreach ($rrule as $occurrence) {
+                        if ($occurrence->format('Y-m-d') == date('Y-m-d')) {
+                            echo $occurrence->format('Y-m-d');
+                            echo '<br/>';
+                            break;
+                        }
+                        echo '<br/>';
+                    }
+                } else {
+                    //single schedule
+                }
+            }
+        }
+        $data['title'] = 'Attendance';
+        $data['page_name'] = 'attendance';
+        $data['page_title'] = 'Attendance';
+        $data['degree'] = $this->Crud_model->get_all_degree();
+        $data['class'] = $this->Crud_model->class_list();
+        $this->__template('attendance', $data);
     }
 
 }

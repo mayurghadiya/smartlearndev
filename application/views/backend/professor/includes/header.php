@@ -409,21 +409,6 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     </div>
                                 </li>  
 
-                                     
-
-                                             
-
-                                
-
-                                <!--<li>
-                                    <a href="reports.html">
-                                        <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span>
-                                        <span class="menu-text">Reports</span>  
-                                    </a>
-                                </li>-->
-                                
-                                
-
                                 <li> 
                                     <a href="<?php echo base_url('video_streaming'); ?>">
                                         <span class="menu-icon entypo-icon"><i class="fa fa-desktop"></i></span>
