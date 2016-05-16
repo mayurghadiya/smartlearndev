@@ -1015,4 +1015,47 @@ class Professor extends Professor_Controller {
         echo $html;
     }
 
+    /**
+     * Attendance
+     */
+    function attendance() {
+        require 'vendor/autoload.php';
+        $this->load->library('Class_routine_attendance');
+        $this->load->model('admin/Crud_model');
+        if ($_POST) {
+            $class_routine = $this->Professor_model->class_routine_attendance($this->session->userdata('login_user_id'));
+            echo '<pre>';
+            foreach ($class_routine as $row) {
+                if ($row->RecurrenceRule) {
+                    //parse reccurrence rule
+                    $rule = $this->class_routine_attendance->parse_reccurrence_rule($row->RecurrenceRule);
+                    $rule_array = array();
+                    $reccur_rule = '';
+                    foreach ($rule as $key => $value) {
+                        $separate_rule = explode('=>', $value);
+                        $reccur_rule .= "'$separate_rule[0]' => '$separate_rule[1]'" . ';';
+                    }
+                    $conditional_rules = $this->class_routine_attendance->conditional_reccurrence_rule($reccur_rule);
+                    $rrule = new RRule\RRule($conditional_rules);
+                    foreach ($rrule as $occurrence) {
+                        if ($occurrence->format('Y-m-d') == date('Y-m-d')) {
+                            echo $occurrence->format('Y-m-d');
+                            echo '<br/>';
+                            break;
+                        }
+                        echo '<br/>';
+                    }
+                } else {
+                    //single schedule
+                }
+            }
+        }
+        $data['title'] = 'Attendance';
+        $data['page_name'] = 'attendance';
+        $data['page_title'] = 'Attendance';
+        $data['degree'] = $this->Crud_model->get_all_degree();
+        $data['class'] = $this->Crud_model->class_list();
+        $this->__template('attendance', $data);
+    }
+
 }

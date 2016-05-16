@@ -1402,4 +1402,12 @@ class Crud_model extends CI_Model {
             $this->db->delete("assessments",array("assessment_id"=>$id));
     }
     
+    /**
+     * Class list
+     * @return mixed
+     */
+    function class_list() {
+        return $this->db->get('class')->result();
+    }
+    
 }

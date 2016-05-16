@@ -2213,7 +2213,7 @@ class Admin extends CI_Controller {
         ini_set('max_execution_time', 500);
         //load the Crud model
         $this->load->model('admin/Crud_model');
-        $this->load->helper('system_email');
+        $this->load->helper('system_email');        
         if ($_POST) {
             $filename = '';
             $attachments = array();
@@ -2234,6 +2234,8 @@ class Admin extends CI_Controller {
                     array_push($attachments, $uploaded['full_path']);
                 }
             }
+            echo '<pre>';
+            var_dump($_POST);
             $filename = rtrim($filename, ',');
             $_POST['file_name'] = $filename;
 
