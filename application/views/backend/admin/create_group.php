@@ -1,34 +1,34 @@
 <div class="vd_content-wrapper">
     <div class="vd_container">
         <div class="vd_content clearfix">
-             <div class="vd_head-section clearfix">
+            <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
-                         <li><?php echo ucwords("user management");?></li>
-                         <li><?php echo ucwords("Group Creation");?></li>
+                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home"); ?></a> </li>
+                        <li><?php echo ucwords("user management"); ?></li>
+                        <li><?php echo ucwords("Group Creation"); ?></li>
                     </ul>                    
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1><?php echo ucwords("Group Creation");?></h1>
+                    <h1><?php echo ucwords("Group Creation"); ?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="">
-                            <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
+                            <span style="color:red">* <?php echo "is " . ucwords("mandatory field"); ?></span> 
                         </div>  
                         <?php echo form_open(base_url() . 'index.php?admin/create_group/create', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'id' => 'create_group')); ?>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Group Name");?><span style="color:red">*</span></label>
+                            <label class="col-sm-3 control-label"><?php echo ucwords("Group Name"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5 controls">
                                 <input type="text" placeholder="Group Name" name="group_name" >
                                 <span class="help-inline"></span> </div>
                         </div>
-                       <div class="form-group">
+                        <div class="form-group">
                             <label class="col-sm-3 control-label">Type of Users<span style="color:red">*</span></label>
                             <div class="col-sm-5 controls">
                                 <select id="user_type" onchange="return get_user(this.value)" name="user_type"  >
@@ -40,63 +40,63 @@
                             </div>
                         </div>	
                         <div id="divfilter" hidden>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
-                            <div class="col-sm-5">
-                                <select name="degree" id="degree" >
-                                    <option value="">Select department</option>
-                                    <?php
-                                    $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
-                                    foreach ($datadegree as $rowdegree) {
-                                        ?>
-                                    <option value="<?= $rowdegree->d_id ?>"><?= $rowdegree->d_name ?></option>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("department"); ?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <select name="degree" id="degree" >
+                                        <option value="">Select department</option>
                                         <?php
-                                    }
-                                    ?>
-                                </select>
-                            </div>
-                        </div>	
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Branch");?><span style="color:red">*</span></label>
-                            <div class="col-sm-5">
-                                <select name="course" id="course" >
-                                    <option value="">Select Branch</option>
-                                    
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Batch");?><span style="color:red">*</span></label>
-                            <div class="col-sm-5">
-                                <select name="batch" id="batch" onchange="get_student2(this.value);" >
-                                    <option value="">Select batch</option>
-                                    
-                                </select>
-                            </div>
-                        </div>	
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label"><?php echo ucwords("Semester");?><span style="color:red">*</span></label>
-                            <div class="col-sm-5">
-                                <select name="semester" id="semester"  onchange="get_students2(this.value);" >
-                                    <option value="">Select semester</option>
-                                    <?php
-                                    $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
-                                    foreach ($datasem as $rowsem) {
+                                        $datadegree = $this->db->get_where('degree', array('d_status' => 1))->result();
+                                        foreach ($datadegree as $rowdegree) {
+                                            ?>
+                                            <option value="<?= $rowdegree->d_id ?>"><?= $rowdegree->d_name ?></option>
+                                            <?php
+                                        }
                                         ?>
-                                    <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                                </select>
+                                    </select>
+                                </div>
+                            </div>	
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Branch"); ?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <select name="course" id="course" >
+                                        <option value="">Select Branch</option>
+
+                                    </select>
+                                </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Batch"); ?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <select name="batch" id="batch" onchange="get_student2(this.value);" >
+                                        <option value="">Select batch</option>
+
+                                    </select>
+                                </div>
+                            </div>	
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><?php echo ucwords("Semester"); ?><span style="color:red">*</span></label>
+                                <div class="col-sm-5">
+                                    <select name="semester" id="semester"  onchange="get_students2(this.value);" >
+                                        <option value="">Select semester</option>
+                                        <?php
+                                        $datasem = $this->db->get_where('semester', array('s_status' => 1))->result();
+                                        foreach ($datasem as $rowsem) {
+                                            ?>
+                                            <option value="<?= $rowsem->s_id ?>"><?= $rowsem->s_name ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-5">
                                 <select name="from[]" id="multiselect" class="form-control" size="8" multiple="multiple">
                                 </select>
                             </div>
-                            
+
                             <div class="col-sm-2">
                                     <!--<button type="button" id="multiselect_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>-->
                                 <div>&nbsp;</div>
@@ -105,7 +105,7 @@
                                 <button type="button" id="multiselect_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
                                 <!--<button type="button" id="multiselect_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>-->
                             </div>
-                            
+
                             <div class="col-sm-5">
                                 <select name="user_role[]" id="multiselect_to" class="form-control" size="8" multiple="multiple" ></select>
                             </div>
@@ -113,61 +113,61 @@
                         <!-- col-sm-9-->
                         <div class="col-sm-3">                
                             <div class="mgbt-xs-5">
-                                <button class="btn vd_btn vd_bg-green " type="submit"><?php echo ucwords("Create");?></button>
+                                <button class="btn vd_btn vd_bg-green " type="submit"><?php echo ucwords("Create"); ?></button>
                             </div>
                         </div>
                     </div>		
                     </form>
                 </div>
             </div></div>
-        
-        
+
+
     </div>
-    
+
     <!-- row --> 
-    
+
 </div>
- <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
-    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-   
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+<script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function () {
-    $("#degree").change(function () {
-        var degree = $(this).val();
-        var dataString = "degree=" + degree;
-        $.ajax({
-            type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_cource/project'; ?>",
-            data: dataString,
-            success: function (response) {
-                $("#course").html(response);
-            }
+        $("#degree").change(function () {
+            var degree = $(this).val();
+            var dataString = "degree=" + degree;
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url() . 'index.php?admin/get_cource/project'; ?>",
+                data: dataString,
+                success: function (response) {
+                    $("#course").html(response);
+                }
+            });
         });
-    });
 
-    $("#course").change(function () {
-        var course = $(this).val();
-        var degree = $("#degree").val();
-        var dataString = "course=" + course + "&degree=" + degree;
-        $.ajax({
-            type: "POST",
-            url: "<?php echo base_url() . 'index.php?admin/get_batchs/project'; ?>",
-            data: dataString,
-            success: function (response) {
-                $("#batch").html(response);
-                $.ajax({
-                    type: "POST",
-                    url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
-                    data: dataString,
-                    success: function (response1) {
-                        $("#semester").html(response1);
-                    }
-                });
-            }
+        $("#course").change(function () {
+            var course = $(this).val();
+            var degree = $("#degree").val();
+            var dataString = "course=" + course + "&degree=" + degree;
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url() . 'index.php?admin/get_batchs/project'; ?>",
+                data: dataString,
+                success: function (response) {
+                    $("#batch").html(response);
+                    $.ajax({
+                        type: "POST",
+                        url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                        data: dataString,
+                        success: function (response1) {
+                            $("#semester").html(response1);
+                        }
+                    });
+                }
+            });
         });
-    });
 
-});
+    });
 
     function get_students2(sem)
     {
@@ -178,7 +178,6 @@
         $.ajax({
             url: '<?php echo base_url(); ?>index.php?admin/get_group_student/',
             type: 'POST',
-            
             data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
             success: function (content) {
                 $("#multiselect").html(content);
@@ -187,24 +186,23 @@
     }
     function get_user(type)
     {
-        if(type=='student')
+        if (type == 'student')
         {
             $("#divfilter").show();
-        }
-        else
+        } else
         {
             $("#divfilter").hide();
             $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_group_professor/',
-            type: 'POST',            
-            //data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
-            success: function (content) {
-                $("#multiselect").html(content);
-            }
-        });
+                url: '<?php echo base_url(); ?>index.php?admin/get_group_professor/',
+                type: 'POST',
+                //data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+                success: function (content) {
+                    $("#multiselect").html(content);
+                }
+            });
         }
     }
-    
+
 </script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script> 
 <script type="text/javascript">
