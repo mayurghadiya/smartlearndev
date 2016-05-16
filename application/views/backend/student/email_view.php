@@ -66,12 +66,22 @@
                                         <label class="col-sm-2 control-label">To</label>
                                         <div class="col-sm-7">
                                             <?php                                            
-                                            $admin = $this->db->get_where('admin', array(
-                                                        'admin_id' => $email->email_to
-                                                    ))->row();
+                                        if(!empty($email->email_to))
+                                        {
+                                        $admin = $this->db->get_where('admin', array(
+                                            'admin_id'  => $email->email_to
+                                        ))->row();
+                                        
+                                        $send_email =  $admin->email; 
+                                        }else{
+                                             $professor = $this->db->get_where('professor', array(
+                                            'professor_id'  => $email->student_to_professor
+                                        ))->row();
+                                             $send_email = $professor->email;
+                                        }
                                             ?>
                                             <input type="text" readonly="" class="form-control" name="from" id="from"
-                                                   value="<?php echo $admin->email; ?>"/>
+                                                   value="<?php echo $send_email; ?>"/>
                                         </div>
                                     </div>
 

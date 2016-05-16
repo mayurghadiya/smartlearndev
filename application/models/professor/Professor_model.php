@@ -48,12 +48,21 @@ class Professor_model extends CI_Model {
     function update_syllabus($data, $id) {
         $this->db->update("smart_syllabus", $data, array("syllabus_id" => $id));
     }
-
+    function courseware_update($data, $id)
+    {
+          $this->db->update("courseware", $data, array("courseware_id" => $id));
+    }
     function delete_syllabus($id) {
         $this->db->where("syllabus_id", $id);
         $this->db->delete("smart_syllabus");
     }
-
+    
+    function delete_courseware($id)
+    {
+        $this->db->where("courseware_id", $id);
+        $this->db->delete("courseware");
+    }
+    
     function getsyllabus($id) {
         $this->db->where("syllabus_id", $id);
         return $this->db->get('smart_syllabus')->result();
@@ -1400,9 +1409,15 @@ class Professor_model extends CI_Model {
         $this->db->insert('assignment_manager', $data);
     }
 
-    public function updateassignment($data, $param2) {
-        $this->db->where('assign_id', $param2);
-        $this->db->update('assignment_manager', $data);
+    
+    function add_courseware($data)
+    {
+        $this->db->insert('courseware',$data);
+    }
+    public function updateassignment($data,$param2)
+    {
+          $this->db->where('assign_id', $param2);
+            $this->db->update('assignment_manager', $data);
     }
 
     public function deleteassignment($param2) {
@@ -1440,5 +1455,47 @@ class Professor_model extends CI_Model {
             'ProfessorID'   => $id
         ])->result();
     }
-
+    
+    function  getcourseware()
+    {
+        $this->db->select("cw.*,c.* ");
+        $this->db->from('courseware cw');
+        $this->db->join('course c','c.course_id=cw.branch_id');
+        return $this->db->get('courseware')->result_array();
+    }
+    public function get_studyresource()
+    {
+        $dept = $this->session->userdata("department");
+        $this->db->where("study_degree",$dept);
+        $this->db->or_where('study_degree',"All");
+        return  $this->db->get('study_resources')->result();
+     
+    }
+    
+    public function get_libraries()
+    {
+        $dept = $this->session->userdata("department");
+        $this->db->where("lm_degree",$dept);
+        $this->db->or_where('lm_degree',"All");
+        return  $this->db->get('library_manager')->result();
+    }
+    public function get_projects()
+    {
+         $dept = $this->session->userdata("department");
+        $this->db->where("pm_degree",$dept);
+        return $this->db->get('project_manager')->result();
+    }
+    
+    public function submittedproject()
+    {
+        $dept = $this->session->userdata("department");
+        $branch = $this->session->userdata("branch");
+        $this->db->select("ps.*,pm.*,s.* ");
+        $this->db->from('project_document_submission ps');
+        $this->db->join("project_manager pm", "pm.pm_id=ps.project_id");
+        $this->db->join("student s", "s.std_id=ps.student_id");
+        $this->db->where("s.std_degree",$dept);
+        $this->db->where("s.course_id",$branch);
+        return $this->db->get();
+    }
 }

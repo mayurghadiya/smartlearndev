@@ -785,11 +785,13 @@ class Admin extends CI_Controller {
         foreach ($get_assign_module_list as $row_key => $row_value) {
             $module_record = explode(',', $row_value['module_id']);
             $modules_query = $this->db->get('modules')->result_array();
+            
             foreach ($modules_query as $modules_row) {
-                if (!in_array($modules_row['module_id'], $module_record)) {
+                if (in_array($modules_row['module_id'], $module_record)) {
                     $full_module_list[] = '<option value="' . $modules_row['module_id'] . '">' . $modules_row['module_name'] . '</option>';
                 }
             }
+            
             foreach ($module_record as $module_record_value) {
                 $user_role_query = $this->db->get_where('modules', array('module_id' => $module_record_value))->result_array();
                 foreach ($user_role_query as $user_role_row) {
@@ -853,6 +855,26 @@ class Admin extends CI_Controller {
 
     // End Herry Patel
     //created by nikita 
+     function courseware($param = '', $param2 = '')
+    {
+        if ($param == 'delete') {            
+            $data = $this->db->get_where('courseware', array('courseware_id' => $param2))->result_array();
+          
+            $this->Professor_model->delete_courseware($param2);
+            $this->session->set_flashdata('flash_message', "Courseware deleted successfully");
+            redirect(base_url() . 'admin/courseware/', 'refresh');
+        }
+        
+        $this->db->select("cw.*,c.* ");
+        $this->db->from('courseware cw');
+        $this->db->join('course c','c.course_id=cw.branch_id');
+        $page_data['courseware'] =  $this->db->get('courseware')->result_array();
+
+        $page_data['page_name'] = 'courseware';
+        $page_data['page_title'] = 'Courseware Management';
+        $this->load->view('backend/index', $page_data);
+        
+    }
     function division($param1 = '', $param2 = '') {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');

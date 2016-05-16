@@ -741,7 +741,7 @@ class Crud_model extends CI_Model {
      * @return array
      */
     function get_all_teacher() {
-        return $this->db->get('teacher')->result();
+        return $this->db->get('professor')->result();
     }
 
     /**

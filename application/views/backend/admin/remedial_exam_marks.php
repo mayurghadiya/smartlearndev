@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <div class="form-group col-sm-4 validating">
-                                                <label><?php echo ucwords("Course");?></label>
+                                                <label><?php echo ucwords("department");?></label>
                                                 <select id="degree" name="degree" class="form-control">
                                                     <option value="">Select</option>
                                                     <?php foreach ($degree as $row) { ?>

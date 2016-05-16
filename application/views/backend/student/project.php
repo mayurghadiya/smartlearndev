@@ -45,7 +45,7 @@
                                             <tr>
                                                 <th><div>#</div></th>											
                                                 <th><div>Project Title</div></th>											
-                                                <th><div>Course</div></th>											
+                                                <th><div>Department</div></th>											
                                                 <th><div>Branch</div></th>											
                                                 <th><div>Batch</div></th>											
                                                 <th><div>Semester</div></th>											
