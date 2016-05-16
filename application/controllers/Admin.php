@@ -702,6 +702,8 @@ class Admin extends CI_Controller {
     function get_group_ajax($group_id) {
         $get_group_list = $this->db->get_where('group', array('g_id' => $group_id))->result_array();
         $user_role=explode(',',$get_group_list[0]['user_role']);
+        $full_user_list=array();
+        $group=array();
            if($get_group_list[0]['user_type']=='student')
            {               
                $user_type[]='<option value="student">Student</option>';
@@ -737,75 +739,7 @@ class Admin extends CI_Controller {
                     }
            }
         $out = array('group'=>$group,'user_type'=>$user_type,'full_user_list'=>$full_user_list); 
-	echo json_encode($out);
-        
-//        
-//       foreach ($get_group_list as $row_key => $row_value)
-//		 {
-//			$user_role=explode(',',$row_value['user_role']);
-//			$user_type[]=$row_value['user_type'];
-//			if($row_value['user_type']==1){
-//				  $user_type[]='<option value="1">Sport</option>';
-//			$sections=$this->db->get_where('student' , array('user_type' =>$row_value['user_type']))->result_array();
-//			foreach ($sections as $row) {
-//				if(!in_array($row['std_id'],$user_role))
-//				{
-//					$full_user_list[]= '<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';
-//					}
-//				}
-//			}if($row_value['user_type']==2){
-//				 $user_type[]='<option value="2">Professor</option>';
-//				 $sections = $this->db->get_where('professor' , array('user_type' => $row_value['user_type']))->result_array();
-//				  foreach ($sections as $row) {
-//					if(!in_array($row['professor_id'],$user_role))
-//					{
-//						$full_user_list[]= '<option value="' . $row['professor_id'] . '">' . $row['name'] . '</option>';
-//					}
-//				}
-//					
-//			}if($row_value['user_type']==3){
-//				  $user_type[]='<option value="3">Student</option>';
-//				  $sections = $this->db->get_where('student' , array('user_type' =>$row_value['user_type']))->result_array();
-//				  foreach ($sections as $row) {
-//					if(!in_array($row['std_id'],$user_role)){
-//					$full_user_list[]='<option value="' . $row['std_id'] . '">' . $row['name'] . '</option>';	
-//					}
-//				  }
-//			}
-//			foreach ($user_role as $user_role_value)
-//			{
-//				
-//				if($row_value['user_type']=='1')
-//				{
-//					$user_role_query = $this->db->get_where('student' , array('std_id' => $user_role_value))->result_array();
-//					foreach ($user_role_query as $user_role_row)
-//					{
-//						$group[]= '<option value="' . $user_role_row['std_id'] . '">' . $user_role_row['name'] . '</option>';
-//					}
-//				}
-//				if($row_value['user_type']=='2')
-//				{
-//					
-//					$user_role_student_query = $this->db->get_where('professor' , array('professor_id' => $user_role_value))->result_array();
-//					foreach ($user_role_student_query as $user_role_student_row)
-//					{
-//						$group[]= '<option value="' . $user_role_student_row['professor_id'] . '">' . $user_role_student_row['name'] . '</option>';
-//					}
-//				}
-//				if($row_value['user_type']=='3')
-//				{
-//					$user_role_query = $this->db->get_where('student' , array('std_id' => $user_role_value))->result_array();
-//					foreach ($user_role_query as $user_role_row)
-//					{
-//						$group[]= '<option value="' . $user_role_row['std_id'] . '">' . $user_role_row['name'] . '</option>';
-//					}
-//				}
-//				
-//			}
-//			$out = array('group'=>$group,'user_type'=>$user_type,'full_user_list'=>$full_user_list); 
-//			echo json_encode($out);
-//		}
-             
+	echo json_encode($out);             
     }
 
     /*     * ** Develop By Hardik Bhut 15-december-2015 **** */
@@ -828,7 +762,7 @@ class Admin extends CI_Controller {
             } else {
                 $this->db->insert('assign_module', $data);
             }
-            $this->session->set_flashdata('flash_message', get_phrase('data_added_successfully'));
+            $this->session->set_flashdata('flash_message', 'Module assign successfully');
             redirect(base_url() . 'admin/assign_module', 'refresh');
         }
         $page_data['page_name'] = 'assign_module';
