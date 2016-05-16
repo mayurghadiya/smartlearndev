@@ -65,17 +65,7 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script> 
 
 <script type="text/javascript">
-    $(function () {
-        // bind change event to select
-        $('#dropclass').on('change', function () {
-            // var url = $(this).val(); // get selected value
-            var classId = $(this).val();
-            if (classId) { // require a URL
-                window.location = "<?php echo base_url('/index.php?admin/group/'); ?>/" + classId;
-            }
-            return false;
-        });
-    });
+   
     function get_module_ajax(group_id) {
 
         $.ajax({
