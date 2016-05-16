@@ -241,11 +241,11 @@ $.toaster({
 		$("#assign_module").validate({
 			rules: {
 				group_name: "required",				
-				module_name: "required",
+				'module_name[]': "required",
 			},
 			messages: {
 				group_name: "Please enter group name",				
-				module_name: "Value required ",			
+				'module_name[]': "Module name required ",			
 			}
 		});
 		});
@@ -254,11 +254,11 @@ $.toaster({
 		$("#list_module").validate({
 			rules: {
 				group_name: "required",				
-				module_name: "required",
+				'module_name[]': "required",
 			},
 			messages: {
 				group_name: "Please select group name",				
-				module_name: "Value required ",			
+				'module_name[]': "Module name required ",			
 			}
 		});
 		});

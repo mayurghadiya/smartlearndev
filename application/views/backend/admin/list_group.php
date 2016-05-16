@@ -4,26 +4,26 @@
             <div class="vd_head-section clearfix">
                 <div class="vd_panel-header">
                     <ul class="breadcrumb">
-                         <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home");?></a> </li>
-                         <li><?php echo ucwords("user management");?></li>
-                         <li><?php echo ucwords("List Group");?></li>
+                        <li><a href="<?php echo base_url('index.php?admin/dashboard'); ?>"><?php echo ucwords("home"); ?></a> </li>
+                        <li><?php echo ucwords("user management"); ?></li>
+                        <li><?php echo ucwords("List Group"); ?></li>
                     </ul>                  
                 </div>
             </div>
             <div class="vd_title-section clearfix">
                 <div class="vd_panel-header no-subtitle">
-                    <h1><?php echo ucwords("List Group");?></h1>
+                    <h1><?php echo ucwords("List Group"); ?></h1>
                 </div>
             </div>
             <div class="vd_content-section clearfix">
                 <div class="row">
                     <div class="col-sm-12">
-                         <div class="">
-                            <span style="color:red">* <?php echo "is ".ucwords("mandatory field");?></span> 
+                        <div class="">
+                            <span style="color:red">* <?php echo "is " . ucwords("mandatory field"); ?></span> 
                         </div> 
                         <?php echo form_open(base_url() . 'index.php?admin/list_group/do_update', array('class' => 'form-horizontal form-groups-bordered validate', 'target' => '_top', 'id' => 'list_group')); ?>
                         <div class="form-group">
-                            <label class="col-sm-4 control-label"><?php echo ucwords("Group");?><span style="color:red">*</span></label>
+                            <label class="col-sm-4 control-label"><?php echo ucwords("Group"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-7 controls">
                                 <select class="form-control width-50" onchange="return get_group_ajax(this.value)" name="group_name" id="group_name">
                                     <option value="">Select Group Name</option>
@@ -39,10 +39,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-4 control-label"><?php echo ucwords("Type of Users");?><span style="color:red">*</span></label>
+                            <label class="col-sm-4 control-label"><?php echo ucwords("Type of Users"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-7 controls">
-                                <select id="user_type" onchange="return get_user(this.value)" name="user_type" class="width-50" style="width:100%;" >
+                                <select id="user_type" name="user_type" class="width-50" style="width:100%;" >
                                     <option value="">Select User Type</option>
+
                                 </select>
                                 <div id="test"></div>
                                 <label for="user_type" class="error"></label>
@@ -70,7 +71,7 @@
                         <!-- col-sm-9-->
                         <div class="col-sm-3">
                             <div class="mgbt-xs-5">
-                                <button class="btn vd_btn vd_bg-green " type="submit"><?php echo ucwords("Update");?></button>
+                                <button class="btn vd_btn vd_bg-green " type="submit"><?php echo ucwords("Update"); ?></button>
 
                             </div>
                         </div>
@@ -88,40 +89,40 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
 
 <script type="text/javascript">
-                            $(function () {
-                                // bind change event to select
-                                $('#dropclass').on('change', function () {
-                                    // var url = $(this).val(); // get selected value
-                                    var classId = $(this).val();
-                                    if (classId) { // require a URL
-                                        window.location = "<?php echo base_url('/index.php?admin/group/'); ?>/" + classId;
-                                    }
-                                    return false;
-                                });
-                            });
-                            function get_user(user_id) {
-                                $("#test").append('<input type="hidden" name="user_type" value="' + user_id + '">');
-                                $.ajax({
-                                    url: '<?php echo base_url(); ?>index.php?admin/get_user/' + user_id,
-                                    success: function (response)
-                                    {
-                                        //jQuery('#multiselect').html(response);
-                                    }
-                                });
-                            }
-                            function get_group_ajax(group_id) {
+    $(function () {
+        // bind change event to select
+        $('#dropclass').on('change', function () {
+            // var url = $(this).val(); // get selected value
+            var classId = $(this).val();
+            if (classId) { // require a URL
+                window.location = "<?php echo base_url('/index.php?admin/group/'); ?>/" + classId;
+            }
+            return false;
+        });
+    });
+    function get_user(user_id) {
+        $("#test").append('<input type="hidden" name="user_type" value="' + user_id + '">');
+        $.ajax({
+            url: '<?php echo base_url(); ?>index.php?admin/get_user/' + user_id,
+            success: function (response)
+            {
+                //jQuery('#multiselect').html(response);
+            }
+        });
+    }
+    function get_group_ajax(group_id) {
 
-                                $.ajax({
-                                    url: '<?php echo base_url(); ?>index.php?admin/get_group_ajax/' + group_id,
-                                    success: function (response)
-                                    {
-                                        var json = jQuery.parseJSON(response);
-                                        jQuery('.group_listing').html(json.group);
-                                        jQuery('#user_type').html(json.user_type);
-                                        jQuery('#multiselect').html(json.full_user_list);
-                                    }
-                                });
-                            }
+        $.ajax({
+            url: '<?php echo base_url(); ?>index.php?admin/get_group_ajax/' + group_id,
+            success: function (response)
+            {
+                var json = jQuery.parseJSON(response);
+                jQuery('.group_listing').html(json.group);
+                jQuery('#user_type').html(json.user_type);
+                jQuery('#multiselect').html(json.full_user_list);
+            }
+        });
+    }
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
