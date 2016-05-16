@@ -189,6 +189,7 @@
         if (type == 'student')
         {
             $("#divfilter").show();
+            $("#multiselect").html("");
         } else
         {
             $("#divfilter").hide();
