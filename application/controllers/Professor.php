@@ -2409,10 +2409,11 @@ class Professor extends Professor_Controller {
             $this->load->library('Class_routine_attendance');
             $this->load->model('admin/Crud_model');
             if ($_POST) {
-                $class_routine = $this->Professor_model->class_routine_attendance($_POST);
+                $class_routine = $this->Professor_model->class_routine_attendance($_POST);                
                 $attendance_routine = array();
-                foreach ($class_routine as $row) {
-                    if ($row->RecurrenceRule) {
+                foreach ($class_routine as $row) {                    
+                    if ($row->RecurrenceRule) {                        
+                        //exit;
                         //parse reccurrence rule
                         $rule = $this->class_routine_attendance->parse_reccurrence_rule($row->RecurrenceRule);
                         $rule_array = array();
@@ -2423,11 +2424,16 @@ class Professor extends Professor_Controller {
                         }
                         $conditional_rules = $this->class_routine_attendance->conditional_reccurrence_rule($reccur_rule);
                         $rrule = new RRule\RRule($conditional_rules);
+                        echo '<pre>';
+                        var_dump($rrule);
                         foreach ($rrule as $occurrence) {
                             if ($occurrence->format('Y-m-d') == date('Y-m-d')) {
                                 array_push($attendance_routine, $row);
+                                //echo '<pre>';
+                                //var_dump($row);                                
                                 break;
                             }
+                            //break;
                         }
                     } else {
                         //single schedule event

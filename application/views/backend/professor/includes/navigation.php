@@ -11,12 +11,12 @@
             <ul>                  
 
                 <li>
-                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" ) { ?> class="open" <?php } ?> >
+                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor") { ?> class="open" <?php } ?> >
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
                         <span class="menu-text">Basic Management</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
-                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" ) { ?> style="display: block" <?php } ?>>
+                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor") { ?> style="display: block" <?php } ?>>
                         <ul>
                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/degree"> 
@@ -54,7 +54,7 @@
                                     <span class="menu-text">Subject</span>  						
                                 </a> 
                             </li>
-                             <li <?php if ($page_name == "syllabus") { ?> class="selectednavmenu" <?php } ?>>
+                            <li <?php if ($page_name == "syllabus") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/syllabus">
                                     <span class="menu-text">Syllabus Management</span>  						
                                 </a> 
@@ -126,12 +126,12 @@
                     </div>
                 </li>
                 <li>
-                    <a  href="javascript:void(0);" data-action="click-trigger" <?php if($page_name == "graduate" || $page_name == 'charity_fund'){  ?> class="open" <?php } ?>>
+                    <a  href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "graduate" || $page_name == 'charity_fund') { ?> class="open" <?php } ?>>
                         <span class="menu-icon"><i class="fa fa-building"> </i></span>
                         <span class="menu-text">University</span>
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu"   data-action="click-target"  <?php if($page_name == "graduate" || $page_name == 'charity_fund'){  ?> style="display: block;" <?php } ?>>
+                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "graduate" || $page_name == 'charity_fund') { ?> style="display: block;" <?php } ?>>
                         <ul class="clearfix">   
                             <li  <?php if ($page_name == "graduate") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/graduate">
@@ -147,12 +147,12 @@
                     </div>
                 </li>	
                 <li>
-                    <a  href="javascript:void(0);" data-action="click-trigger" <?php if($page_name == "professor"){  ?> class="open" <?php } ?>>
+                    <a  href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "professor") { ?> class="open" <?php } ?>>
                         <span class="menu-icon"><i class="fa fa-user"> </i></span>
                         <span class="menu-text">Professor</span>
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                     </a>
-                    <div class="child-menu"   data-action="click-target"  <?php if($page_name == "professor"){  ?> style="display: block;" <?php } ?>>
+                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "professor") { ?> style="display: block;" <?php } ?>>
                         <ul class="clearfix">   
                             <li  <?php if ($page_name == "professor") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/professor">
@@ -162,12 +162,12 @@
                         </ul>
                     </div>
                 </li>	
-                 <li class="<?php if($page_name == 'class_routine') echo 'active'; ?>">
-                    <a  href="<?php echo base_url('professor/class_routine'); ?>" <?php if($page_name == "class_routine"){  ?> <?php } ?>>
+                <li class="<?php if ($page_name == 'class_routine') echo 'active'; ?>">
+                    <a  href="<?php echo base_url('professor/class_routine'); ?>" <?php if ($page_name == "class_routine") { ?> <?php } ?>>
                         <span class="menu-icon"><i class="fa fa-road"> </i></span>
                         <span class="menu-text">Class Routine</span>
                     </a>
-                </li>
+                </li>                
                 <li>
                     <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "exam" || $page_name == "exam_time_table" || $page_name == "exam_marks" || $page_name == "grade" || $page_name == "remedial_exam" || $page_name == "remedial_exam_time_table" || $page_name == "remedial_exam_marks") { ?> class="open" <?php } ?>>
                         <span class="menu-icon"><i class="fa fa-th-list"></i></span> 
