@@ -2348,6 +2348,7 @@ class Professor extends Professor_Controller {
 
                         move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path);
                           chmod($upl_path, 0777);
+                            $this->session->set_userdata('image_path',  $file_name);
                     } else {
                         $file_name = '';
                     }
