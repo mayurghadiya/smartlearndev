@@ -9,6 +9,15 @@ $edit_data = $this->db->select()
         ->get()
         ->row();
 
+ $course_id = $edit_data->course_id;
+ $semester_id = $edit_data->semester_id;
+         $degree_id = $edit_data->degree_id;
+         $batch_id = $edit_data->batch_id;
+         $this->db->distinct('em_name');
+$exam_list = $this->db->get_where('exam_manager',array('course_id' => $course_id,
+                            'em_semester' => $semester_id,
+                            'degree_id' => $degree_id,
+                            'batch_id' => $batch_id))->result();
 $exam_type = $this->db->get('exam_type')->result();
 $degree = $this->db->get('degree')->result();
 $course = $this->db->get_where('course', array(
@@ -92,6 +101,9 @@ $semester = $this->db->get('semester')->result();
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_exam" name="exam" required="">
                                     <option value="">Select</option>
+                                     <?php foreach($exam_list as $exams){ ?>
+                                    <option value="<?php echo $exams->em_id; ?>" <?php  if($exams->em_id==$edit_data->exam_id){ echo "selected=selected"; } ?>><?php echo $exams->em_name; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>
@@ -100,6 +112,7 @@ $semester = $this->db->get('semester')->result();
                             <div class="col-sm-7">
                                 <select class="form-control" id="edit_subject" name="subject" required="">
                                     <option value="">Select</option>
+                                   
                                 </select>
                             </div>
                         </div> 
@@ -191,8 +204,10 @@ $semester = $this->db->get('semester')->result();
     var subject_id = '<?php echo $edit_data->subject_id; ?>';
 
     function get_exam_list(course_id, semester_id) {
+        var edit_degree = $("#edit_degree").val();
+        var batch_id = $("#edit_batch").val();
         $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_exam_list/' + course_id + '/' + semester_id + '/' + time_table_exam_id,
+            url: '<?php echo base_url(); ?>index.php?admin/get_exam_list/'+edit_degree+'/'+ course_id +'/'+batch_id+ '/' + semester_id + '/' + time_table_exam_id,
             type: 'get',
             success: function (content) {
                 $('#edit_exam').html(content);
@@ -213,7 +228,7 @@ $semester = $this->db->get('semester')->result();
     $(document).ready(function () {
         var course_id = $('#edit_course').val();
         var semester_id = $('#edit_semester').val();
-        get_exam_list(course_id, semester_id, time_table_exam_id);
+       // get_exam_list(course_id, semester_id, time_table_exam_id);
         subject_list(course_id, semester_id, subject_id);
 
         $('#edit_course').on('click', function () {

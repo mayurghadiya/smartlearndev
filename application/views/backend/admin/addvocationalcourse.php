@@ -80,7 +80,8 @@
 <script>
     $(document).ready(function () {
         $("#startdate").datepicker({
-            dateFormat: 'dd M yy',
+            dateFormat: 'dd M yy',     
+            minDate:'0',
             changeMonth: true,
             changeYear: true,
             onClose: function (selectedDate) {
@@ -113,12 +114,12 @@
                 course_name: "Enter course name",
                 professor: "Select professor",
                 fee: {
-                        required: "Enter  fee",
+                        required: "Enter fee",
                         currency: "Enter valid amount"
                     },
                 course_status: "Select status",
-                startdate: "Select date",
-                enddate: "Select date",
+                startdate: "Select start date",
+                enddate: "Select end date",
             }
         });
     });
