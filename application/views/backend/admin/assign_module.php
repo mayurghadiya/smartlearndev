@@ -19,7 +19,7 @@
                                     $group_query = $this->db->get('group')->result_array();
                                     foreach ($group_query as $group_row):
                                         ?>
-                                        <option value="<?php echo $group_row['user_type']; ?>"><?php echo $group_row['group_name']; ?></option>
+                                        <option value="<?php echo $group_row['g_id']; ?>,<?php echo $group_row['user_type']; ?>"><?php echo $group_row['group_name']; ?></option>
                                         <?php
                                     endforeach;
                                     ?>	
@@ -75,14 +75,17 @@
 
 <script type="text/javascript">
     $("#group_name").change(function(){
-       var type=$(this).val() 
+        
+       var type_array=$(this).val();
+        var type=type_array.split(',');
+       
        $.ajax({
             url: '<?php echo base_url(); ?>index.php?admin/get_module',
             type:'post',
             dataType:'json',
             data:
             {
-                'type': type,
+                'type': type[1],
             },    
             success: function (response)
             {
