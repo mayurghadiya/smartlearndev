@@ -21,7 +21,7 @@ class Professor extends Professor_Controller {
      * @param string $view
      * @param string $data
      */
-    function __template($view, $data) {
+    function __template($view, $data) {        
         $this->load->view('backend/professor/includes/header.php', $data);
         $this->load->view('backend/professor/' . $view);
 
@@ -2343,8 +2343,11 @@ class Professor extends Professor_Controller {
                     if (in_array($ext_file, $allowed_types)) {
 
                         $upl_path = FCPATH . 'uploads/professor/' . $file_name;
-                        mkdir(FCPATH . 'uploads/professor', 0777);
-                        move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path, 0777);
+                      //  mkdir(FCPATH . 'uploads/professor', 0777);
+                            
+
+                        move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path);
+                          chmod($upl_path, 0777);
                     } else {
                         $file_name = '';
                     }
