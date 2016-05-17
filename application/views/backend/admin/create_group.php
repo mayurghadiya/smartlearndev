@@ -33,6 +33,7 @@
                             <div class="col-sm-5 controls">
                                 <select id="user_type" onchange="return get_user(this.value)" name="user_type"  >
                                     <option value="">Select User Type</option>
+                                    <option value="admin">Admin</option>
                                     <option value="student">Student</option>
                                     <option value="professor">Professor</option>
                                 </select>
@@ -190,11 +191,23 @@
         {
             $("#divfilter").show();
             $("#multiselect").html("");
-        } else
+        } else if(type=='professor')
         {
             $("#divfilter").hide();
             $.ajax({
                 url: '<?php echo base_url(); ?>index.php?admin/get_group_professor/',
+                type: 'POST',
+                //data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
+                success: function (content) {
+                    $("#multiselect").html(content);
+                }
+            });
+        }
+        else if(type=='admin')
+        {
+            $("#divfilter").hide();
+            $.ajax({
+                url: '<?php echo base_url(); ?>index.php?admin/get_group_admin/',
                 type: 'POST',
                 //data: {'batch': batch, 'sem': sem, 'course': course, 'degree': degree},
                 success: function (content) {
