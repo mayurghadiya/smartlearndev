@@ -2411,6 +2411,7 @@ class Professor extends Professor_Controller {
             if ($_POST) {
                 $class_routine = $this->Professor_model->class_routine_attendance($_POST);                
                 $attendance_routine = array();
+                $selected_date = date('Y-m-d', strtotime($_POST['class_date']));
                 foreach ($class_routine as $row) {                    
                     if ($row->RecurrenceRule) {                        
                         //exit;
@@ -2423,14 +2424,12 @@ class Professor extends Professor_Controller {
                             $reccur_rule .= "'$separate_rule[0]' => '$separate_rule[1]'" . ';';
                         }
                         $conditional_rules = $this->class_routine_attendance->conditional_reccurrence_rule($reccur_rule);
+                        $conditional_rules['DTSTART'] = $row->Start;                        
                         $rrule = new RRule\RRule($conditional_rules);
-                        echo '<pre>';
-                        var_dump($rrule);
                         foreach ($rrule as $occurrence) {
-                            if ($occurrence->format('Y-m-d') == date('Y-m-d')) {
-                                array_push($attendance_routine, $row);
-                                //echo '<pre>';
-                                //var_dump($row);                                
+                            if ($occurrence->format('Y-m-d') == $selected_date) {
+                                array_push($attendance_routine, $row); 
+                                echo $occurrence->format('Y-m-d');
                                 break;
                             }
                             //break;
