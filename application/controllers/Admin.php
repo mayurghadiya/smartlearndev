@@ -785,9 +785,14 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'List Module';
         $this->load->view('backend/index', $page_data);
     }
-
-    /*     * ** Develop By Hardik Bhut 15-december-2015 **** */
-
+    
+    function get_module()
+    {
+        $type=$this->input->post('type');
+        $data=$this->db->get_where('modules',array('user_type'=>$type))->result_array();
+        echo json_encode($data);
+    }
+    
     function get_module_ajax($group_id) {
         $get_assign_module_list = $this->db->get_where('assign_module', array('group_id' => $group_id))->result_array();
         $assigned_module_list=array();
@@ -4448,7 +4453,14 @@ class Admin extends CI_Controller {
         }
         echo $html;
     }
-    
+    function get_group_admin()
+    {
+         $dataprofessor = $this->db->get("admin")->result_array();
+        foreach ($dataprofessor as $row) {
+            $html .='<option value="' . $row['admin_id'] . '">' . $row['name'] . '</option>';
+        }
+        echo $html;
+    }
     
     function get_filter_student() {
         $batch = $this->input->post("batch");

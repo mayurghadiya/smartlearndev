@@ -13,13 +13,13 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">Group Name</label>
                             <div class="col-sm-7 controls">
-                                <select name="group_name" class="form-control" style="width:100%;" data-validate="required" data-message-required="<?php echo get_phrase('value_required'); ?>">
+                                <select name="group_name" id="group_name" class="form-control" style="width:100%;" >
                                     <option value="">Select Group Name</option>
                                     <?php
                                     $group_query = $this->db->get('group')->result_array();
                                     foreach ($group_query as $group_row):
                                         ?>
-                                        <option value="<?php echo $group_row['g_id']; ?>"><?php echo $group_row['group_name']; ?></option>
+                                        <option value="<?php echo $group_row['user_type']; ?>"><?php echo $group_row['group_name']; ?></option>
                                         <?php
                                     endforeach;
                                     ?>	
@@ -29,15 +29,15 @@
                         <div class="row">
                             <div class="col-sm-5">
                                 <select class="form-control" style="width:100%;" size="8" multiple="multiple" id="multiselect">
-                                    <label value="">Existing Modules</option>
-                                        <?php
+                                    <option value="">Existing Modules</option>
+<!--                                        <?php
                                         $modules_query = $this->db->get('modules')->result_array();
                                         foreach ($modules_query as $modules_row):
                                             ?>
                                             <option value="<?php echo $modules_row['module_id']; ?>"><?php echo $modules_row['module_name']; ?></option>
                                             <?php
                                         endforeach;
-                                        ?>	
+                                        ?>	-->
                                 </select>
                             </div>
 
@@ -74,40 +74,62 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script> 
 
 <script type="text/javascript">
-    $(function () {
-        // bind change event to select
-        $('#dropclass').on('change', function () {
-            // var url = $(this).val(); // get selected value
-            var classId = $(this).val();
-            if (classId) { // require a URL
-                window.location = "<?php echo base_url('/index.php?admin/group/'); ?>/" + classId;
+    $("#group_name").change(function(){
+       var type=$(this).val() 
+       $.ajax({
+            url: '<?php echo base_url(); ?>index.php?admin/get_module',
+            type:'post',
+            dataType:'json',
+            data:
+            {
+                'type': type,
+            },    
+            success: function (response)
+            {
+                
+                var option;
+                for(var i=0;i<response.length;i++)
+                {
+                    option +="<option value="+response[i].module_id+">"+response[i].module_name+"</option>";
+                }
+                $("#multiselect").html(option);
             }
-            return false;
         });
     });
-    function get_user(user_id) {
-        $("#test").append('<input type="hidden" name="user_type" value="' + user_id + '">');
-        $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_user/' + user_id,
-            success: function (response)
-            {
-                //jQuery('#multiselect').html(response);
-            }
-        });
-    }
-    function get_group_ajax(group_id) {
-
-        $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_group_ajax/' + group_id,
-            success: function (response)
-            {
-                var json = jQuery.parseJSON(response);
-                jQuery('.group_listing').html(json.group);
-                jQuery('#user_type').html(json.user_type);
-                jQuery('#multiselect').html(json.full_user_list);
-            }
-        });
-    }
+//    $(function () {
+//        // bind change event to select
+//        $('#dropclass').on('change', function () {
+//            // var url = $(this).val(); // get selected value
+//            var classId = $(this).val();
+//            if (classId) { // require a URL
+//                window.location = "<?php echo base_url('/index.php?admin/group/'); ?>/" + classId;
+//            }
+//            return false;
+//        });
+//    });
+//    function get_user(user_id) {
+//        $("#test").append('<input type="hidden" name="user_type" value="' + user_id + '">');
+//        $.ajax({
+//            url: '<?php echo base_url(); ?>index.php?admin/get_user/' + user_id,
+//            success: function (response)
+//            {
+//                //jQuery('#multiselect').html(response);
+//            }
+//        });
+//    }
+//    function get_group_ajax(group_id) {
+//
+//        $.ajax({
+//            url: '<?php echo base_url(); ?>index.php?admin/get_group_ajax/' + group_id,
+//            success: function (response)
+//            {
+//                var json = jQuery.parseJSON(response);
+//                jQuery('.group_listing').html(json.group);
+//                jQuery('#user_type').html(json.user_type);
+//                jQuery('#multiselect').html(json.full_user_list);
+//            }
+//        });
+//    }
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
