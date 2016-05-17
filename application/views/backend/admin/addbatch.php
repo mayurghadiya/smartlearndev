@@ -9,7 +9,7 @@
                 <div class="panel-heading">
                     <div class="panel-title" >
                         <i class="entypo-plus-circled"></i>
-                        <?php echo ucwords("Add Assignment");?>
+                        <?php echo ucwords("Add Batch");?>
                     </div>
                 </div>
                 <div class="panel-body"> 

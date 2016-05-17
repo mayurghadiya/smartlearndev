@@ -5033,6 +5033,15 @@ class Admin extends CI_Controller {
 
         echo json_encode($data);
     }
+    
+    function check_duplicate_department($id = '') {
+        $degree = $this->input->post('d_name');      
+        $data = $this->db->get_where('degree', array('d_name' => $degree,
+                    'd_id!=' => $id))->result_array();
+        echo json_encode($data);
+    }
+    
+    
 
     /**
      * Grade
