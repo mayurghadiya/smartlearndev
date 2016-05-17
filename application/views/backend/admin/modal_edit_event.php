@@ -118,11 +118,11 @@ $edit_data = $this->db->get_where('event_manager', array('event_id' => $param2))
                 event_time: "required"
             },
             messages: {
-                event_name: "Please Enter Event Name",
-                event_desc: "Please Enter Event Description",
-                event_date: "Please Select Event Date",
-                event_location: "Please enter event location",
-                event_time: "Please enter event time"
+                event_name: "Enter Event Name",
+                event_desc: "Enter Event Description",
+                event_date: "Select Event Date",
+                event_location: "Enter event location",
+                event_time: "Enter event time"
             }
         });
     });

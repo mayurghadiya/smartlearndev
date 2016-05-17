@@ -242,6 +242,7 @@ endforeach;
                 instruction: "required",
                 submissions: "required",
                 feedback: "required",
+                marks:"required",
                 
             },
             messages: {               
@@ -252,6 +253,7 @@ endforeach;
                 instruction: "Enter instruction",
                 submissions: "Enter about submissions",
                 feedback: "Enter feedback",               
+                marks:"Enter about marks",
             }
         });
     });
