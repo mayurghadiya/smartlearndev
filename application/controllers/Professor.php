@@ -21,7 +21,7 @@ class Professor extends Professor_Controller {
      * @param string $view
      * @param string $data
      */
-    function __template($view, $data) {
+    function __template($view, $data) {        
         $this->load->view('backend/professor/includes/header.php', $data);
         $this->load->view('backend/professor/' . $view);
 
@@ -2343,8 +2343,12 @@ class Professor extends Professor_Controller {
                     if (in_array($ext_file, $allowed_types)) {
 
                         $upl_path = FCPATH . 'uploads/professor/' . $file_name;
-                        mkdir(FCPATH . 'uploads/professor', 0777);
-                        move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path, 0777);
+                      //  mkdir(FCPATH . 'uploads/professor', 0777);
+                            
+
+                        move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path);
+                          chmod($upl_path, 0777);
+                            $this->session->set_userdata('image_path',  $file_name);
                     } else {
                         $file_name = '';
                     }
@@ -2409,10 +2413,12 @@ class Professor extends Professor_Controller {
             $this->load->library('Class_routine_attendance');
             $this->load->model('admin/Crud_model');
             if ($_POST) {
-                $class_routine = $this->Professor_model->class_routine_attendance($_POST);
+                $class_routine = $this->Professor_model->class_routine_attendance($_POST);                
                 $attendance_routine = array();
-                foreach ($class_routine as $row) {
-                    if ($row->RecurrenceRule) {
+                $selected_date = date('Y-m-d', strtotime($_POST['class_date']));
+                foreach ($class_routine as $row) {                    
+                    if ($row->RecurrenceRule) {                        
+                        //exit;
                         //parse reccurrence rule
                         $rule = $this->class_routine_attendance->parse_reccurrence_rule($row->RecurrenceRule);
                         $rule_array = array();
@@ -2422,12 +2428,15 @@ class Professor extends Professor_Controller {
                             $reccur_rule .= "'$separate_rule[0]' => '$separate_rule[1]'" . ';';
                         }
                         $conditional_rules = $this->class_routine_attendance->conditional_reccurrence_rule($reccur_rule);
+                        $conditional_rules['DTSTART'] = $row->Start;                        
                         $rrule = new RRule\RRule($conditional_rules);
                         foreach ($rrule as $occurrence) {
-                            if ($occurrence->format('Y-m-d') == date('Y-m-d')) {
-                                array_push($attendance_routine, $row);
+                            if ($occurrence->format('Y-m-d') == $selected_date) {
+                                array_push($attendance_routine, $row); 
+                                echo $occurrence->format('Y-m-d');
                                 break;
                             }
+                            //break;
                         }
                     } else {
                         //single schedule event

@@ -2274,8 +2274,6 @@ class Admin extends CI_Controller {
                     array_push($attachments, $uploaded['full_path']);
                 }
             }
-            echo '<pre>';
-            var_dump($_POST);
             $filename = rtrim($filename, ',');
             $_POST['file_name'] = $filename;
 
@@ -5073,21 +5071,27 @@ class Admin extends CI_Controller {
      * @param string $branch_id
      */
     function get_semesters_of_branch($branch_id = '') {
+//        $this->load->model('admin/Crud_model');
+//        $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
+//
+//        echo '<select class="batch" style="width: 70%;" onChange="subject_list()" id="semester" style="width: 50%" name="semester" data-bind="value:semester" data-role="dropdownlist"
+//                            data-value-field="value" data-text-field="text" required="required">';
+//
+//        echo '<option value="">Select</option>';
+//
+//        foreach ($semester as $row) {
+//      
+        /*    <option id="//<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>    
+        
+//        }
+         * 
+         */
+//
+//        echo '</select>';
         $this->load->model('admin/Crud_model');
         $semester = $this->Crud_model->get_semesters_of_branch($branch_id);
 
-        echo '<select class="batch" style="width: 70%;" onChange="subject_list()" id="semester" style="width: 50%" name="semester" data-bind="value:semester" data-role="dropdownlist"
-                            data-value-field="value" data-text-field="text" required="required">';
-
-        echo '<option value="">Select</option>';
-
-        foreach ($semester as $row) {
-            ?>
-            <option id="<?php echo $row->s_id; ?>"><?php echo $row->s_name; ?></option>    
-        <?php
-        }
-
-        echo '</select>';
+        echo json_encode($semester);
     }
 
     /**

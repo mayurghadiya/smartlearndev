@@ -112,18 +112,7 @@
                                     }
                                 }
                             }
-                        },
-                        resources: [
-                            {
-                                field: "ownerId",
-                                title: "Owner",
-                                dataSource: [
-                                    {text: "Alex", value: 1, color: "#f8a398"},
-                                    {text: "Bob", value: 2, color: "#51a0ed"},
-                                    {text: "Charlie", value: 3, color: "#56ca85"}
-                                ]
-                            }
-                        ]
+                        }
                     });
 
                 });

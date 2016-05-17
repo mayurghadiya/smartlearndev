@@ -219,7 +219,7 @@
             function get_semester_from_branch(branch_id) {
                 $('#semester').find('option').remove().end();
                 $.ajax({
-                    url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                    url: '<?php echo base_url(); ?>index.php?admin/semesters_list_from_branch/' + branch_id,
                     type: 'get',
                     success: function (content) {
                         $('#semester').append('<option value="">Select</option>');

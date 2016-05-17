@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title><?php echo system_name(); ?> | <?php echo $title; ?></title>
+<title><?php echo system_name(); ?> | <?php  if(isset($title)){echo $title;} elseif(isset($page_title)){ echo $page_title; }; ?></title>
 <meta name="keywords" content="HTML5 Template, CSS3, All Purpose professor Template, Smart learn" />
 <meta name="description" content="Login Pages - Responsive professor HTML Template">
 <meta name="author" content="Venmond">
@@ -224,7 +224,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                             <li id="top-menu-profile" class="profile mega-li"> 
                                                 <a href="#" class="mega-link"  data-action="click-trigger"> 
                                                     <span  class="mega-image">
-                                                        <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('professor', $this->session->userdata('professor_id')); ?>" alt="...">             
+                                                        <img width="45" height="35" src="<?php echo base_url().'uploads/professor/'.$this->session->userdata('image_path');  //echo $this->crud_model->get_image_url('professor', $this->session->userdata('professor_id')); ?>" alt="...">             
                                                     </span>
                                                     <span class="mega-name">
                                                         <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
@@ -274,14 +274,14 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                             <ul>                  
 
                                 <li>
-                                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "assessments" ) { ?> class="open" <?php } ?> >
+                                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "assessments") { ?> class="open" <?php } ?> >
                                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
                                         <span class="menu-text">Basic Management</span>  
                                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                                     </a>
-                                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "assessments" ) { ?> style="display: block" <?php } ?>>
+                                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "assessments") { ?> style="display: block" <?php } ?>>
                                         <ul>
-                                            
+
                                             <li <?php if ($page_name == "student") { ?> class="selectednavmenu" <?php } ?>>
                                                 <a href="<?php echo base_url(); ?>professor/student"> 
                                                     <span class="menu-text">Student</span>  						
@@ -312,12 +312,12 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                     </div>
                                 </li> 
                                 <li>
-                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" ||$page_name == "courseware" ) { ?> class="open" <?php } ?> >
+                                    <a href="javascript:void(0);"   data-action="click-trigger" <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" || $page_name == "courseware") { ?> class="open" <?php } ?> >
                                         <span class="menu-icon"><i class="fa fa-sitemap"> </i></span>
                                         <span class="menu-text">Asset Management</span>
                                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>            
                                     </a>
-                                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" || $page_name == 'subscriber' ||$page_name == "courseware" ) { ?> style="display: block;" <?php } ?>>
+                                    <div class="child-menu"   data-action="click-target"  <?php if ($page_name == "events" || $page_name == "assignment" || $page_name == "project" || $page_name == "participate" || $page_name == "studyresource" || $page_name == "library" || $page_name == 'subscriber' || $page_name == "courseware") { ?> style="display: block;" <?php } ?>>
                                         <ul class="clearfix">   
                                             <li  <?php if ($page_name == "events") { ?> class="selectednavmenu" <?php } ?>>
                                                 <a href="<?php echo base_url(); ?>professor/events">
@@ -372,14 +372,20 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                     <span class="menu-text">Toppers Graduate</span>  
                                                 </a>
                                             </li> 
-                                         
+
                                         </ul>
                                     </div>
                                 </li>	
-                                 <li class="<?php if($page_name == 'class_routine') echo 'active'; ?>">
-                                    <a  href="<?php echo base_url('professor/class_routine'); ?>" <?php if($page_name == "class_routine"){  ?> <?php } ?>>
+                                <li class="<?php if ($page_name == 'class_routine') echo 'active'; ?>">
+                                    <a  href="<?php echo base_url('professor/class_routine'); ?>" <?php if ($page_name == "class_routine") { ?> <?php } ?>>
                                         <span class="menu-icon"><i class="fa fa-road"> </i></span>
                                         <span class="menu-text">Class Routine</span>
+                                    </a>
+                                </li>
+                                <li class="<?php if ($page_name == 'attendance') echo 'active'; ?>">
+                                    <a  href="<?php echo base_url('professor/attendance'); ?>" <?php if ($page_name == "attendance") { ?> <?php } ?>>
+                                        <span class="menu-icon"><i class="fa fa-desktop"> </i></span>
+                                        <span class="menu-text">Attendance</span>
                                     </a>
                                 </li>
                                 <li>
@@ -405,7 +411,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                                     <span class="menu-text">Marks</span>  
                                                 </a>
                                             </li> 
-                                           </ul>   
+                                        </ul>   
                                     </div>
                                 </li>  
 
@@ -440,9 +446,9 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                         </ul> 
                                     </div>
                                 </li> 
-                                
-                                
-                                
+
+
+
 
                             </ul>
                             <!-- Head menu search form ends -->         
