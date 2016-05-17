@@ -42,7 +42,7 @@
                             <div class="panel-body">
                                 <h2 class="mgtp--10"><i class="icon-feather mgr-10 vd_green"></i> <?php echo ucwords("Compose New Email");?> </h2>
                                 <br/>
-                                <form class="form-horizontal" role="form" action="" method="post" 
+                                <form class="form-horizontal" role="form" action="<?php echo base_url(); ?>admin/email_compose" method="post" 
                                       enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label"><?php echo ucwords("Course");?></label>
@@ -418,9 +418,10 @@
         function get_semester_from_branch(branch_id) {
             $('#semester').find('option').remove().end();
             $.ajax({
-                url: '<?php echo base_url(); ?>index.php?admin/get_semesters_of_branch/' + branch_id,
+                url: '<?php echo base_url(); ?>index.php?admin/semesters_list_from_branch/' + branch_id,
                 type: 'get',
                 success: function (content) {
+                    console.log(content);
                     $('#semester').append('<option value="all">All</option>');
                     var semester = jQuery.parseJSON(content);
                     $.each(semester, function (key, value) {

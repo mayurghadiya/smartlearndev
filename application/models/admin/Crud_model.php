@@ -8,8 +8,6 @@ class Crud_model extends CI_Model {
     function __construct() {
         parent::__construct();
     }
-    
-   
 
     /*     * ****  
       Created :-- Mayur Panchal
@@ -1307,7 +1305,7 @@ class Crud_model extends CI_Model {
                         ->get()
                         ->result();
     }
-    
+
     /**
      * Professor list
      * @return mixed
@@ -1315,7 +1313,7 @@ class Crud_model extends CI_Model {
     function professor() {
         return $this->db->get('professor')->result();
     }
-    
+
     /**
      * Insert or update professor information
      * @param mixed $data
@@ -1324,7 +1322,7 @@ class Crud_model extends CI_Model {
      */
     function save_professor($data, $id = NULL) {
         $insert_id = 0;
-        if($id) {
+        if ($id) {
             //update
             $this->db->where('professor_id', $id);
             $this->db->update('professor', $data);
@@ -1333,10 +1331,10 @@ class Crud_model extends CI_Model {
             $this->db->insert('professor', $data);
             $insert_id = $this->db->insert_id();
         }
-        
+
         return $insert_id;
     }
-    
+
     /**
      * Class routine professor list
      * @param string $subject_id
@@ -1344,27 +1342,27 @@ class Crud_model extends CI_Model {
      */
     function class_routine_professor($subject_id) {
         $subject = $this->db->select()
-                ->from('subject_manager')
-                ->where([
-                    'sm_id' => $subject_id
-                ])->get()->row();
-        
+                        ->from('subject_manager')
+                        ->where([
+                            'sm_id' => $subject_id
+                        ])->get()->row();
+
         $professors = explode(',', $subject->professor_id);
-        
+
         return $this->db->select()
-                ->from('professor')
-                ->where_in('professor_id', $professors)->get()->result();
+                        ->from('professor')
+                        ->where_in('professor_id', $professors)->get()->result();
     }
-    
+
     /**
      * Filtered class routine
      * @param mixed $where
      * @return mixed
      */
-    function filtered_class_routine($where){
+    function filtered_class_routine($where) {
         return $this->db->get_where('class_routine', $where)->result();
     }
-    
+
     /**
      * Professor based on department and branch
      * @param string $department
@@ -1373,33 +1371,103 @@ class Crud_model extends CI_Model {
      */
     function professor_by_department_and_branch($department, $branch) {
         return $this->db->get_where('professor', [
-            'department' => $department,
-            'branch'    => $branch
-        ])->result();
+                    'department' => $department,
+                    'branch' => $branch
+                ])->result();
     }
-    
-     /*
+
+    /*
      * 
      * Created by mayur panchal
      * Message : -- for get assessments
      */
-    public function assessment()
-    {
-       return $this->db->get('assessments')->result_array();
+
+    public function assessment() {
+        return $this->db->get('assessments')->result_array();
     }
-    
-    public function create_assessment($data)
-    {
-        $this->db->insert("assessments",$data);
+
+    public function create_assessment($data) {
+        $this->db->insert("assessments", $data);
     }
-    
-    public function update_assessment($data,$id)
-    {
-        $this->db->update("assessments",$data,array("assessment_id"=>$id));
+
+    public function update_assessment($data, $id) {
+        $this->db->update("assessments", $data, array("assessment_id" => $id));
     }
-    public function delete_assessment($id)
-    {
-            $this->db->delete("assessments",array("assessment_id"=>$id));
+
+    public function delete_assessment($id) {
+        $this->db->delete("assessments", array("assessment_id" => $id));
     }
-    
+
+    /**
+     * Class list
+     * @return mixed
+     */
+    function class_list() {
+        return $this->db->get('class')->result();
+    }
+
+    /**
+     * Student list by course and semester
+     * @param int $course_id
+     * @param int $semester_id
+     * @return array
+     */
+    function student_list_by_department_course_batch_semester_class($degree_id, $course_id, $batch_id, $semester_id, $class_id) {
+        return $this->db->select('std_id, email, std_first_name, std_last_name, std_roll')->from('student')->where(array(
+                    'std_degree' => $degree_id,
+                    'course_id' => $course_id,
+                    'std_batch' => $batch_id,
+                    'semester_id' => $semester_id,
+                    'class_id' => $class_id
+                ))->order_by('std_first_name', 'ASC')->get()->result();
+    }
+
+    /**
+     * Save student attendance
+     * @param mixed $data
+     * @param string $id
+     * @return int
+     */
+    function save_student_attendance($data, $id = NULL) {
+        $insert_id = 0;
+        if ($id) {
+            //update
+            $this->db->where('attendance_id', $id);
+            $this->db->update('attendance', $data);
+        } else {
+            //insert
+            $this->db->insert('attendance', $data);
+            $insert_id = $this->db->insert_id();
+        }
+
+        return $insert_id;
+    }
+
+    /**
+     * 
+     * @param string $department
+     * @param string $branch
+     * @param string $batch
+     * @param string $semester
+     * @param string $class
+     * @param string $class_routine
+     * @param string $date
+     * @param string $student
+     * @return int
+     */
+    function check_attendance_status($department, $branch, $batch, $semester, $class, $class_routine, $date, $student) {        
+        return $this->db->select('attendance_id, is_present, student_id')
+                        ->from('attendance')
+                        ->where(array(
+                            'department_id' => $department,
+                            'branch_id' => $branch,
+                            'batch_id' => $batch,
+                            'semester_id' => $semester,
+                            'class_id' => $class,
+                            'class_routine_id' => $class_routine,
+                            'date_taken' => $date,
+                            'student_id' => $student
+                        ))->get()->row();
+    }
+
 }
