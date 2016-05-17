@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<title><?php echo system_name(); ?> | <?php echo $title; ?></title>
+<title><?php echo system_name(); ?> | <?php  if(isset($title)){echo $title;} elseif(isset($page_title)){ echo $page_title; }; ?></title>
 <meta name="keywords" content="HTML5 Template, CSS3, All Purpose professor Template, Smart learn" />
 <meta name="description" content="Login Pages - Responsive professor HTML Template">
 <meta name="author" content="Venmond">
@@ -224,7 +224,7 @@ $skin = $this->db->get_where('system_setting', array('type' => 'skin_colour'))->
                                             <li id="top-menu-profile" class="profile mega-li"> 
                                                 <a href="#" class="mega-link"  data-action="click-trigger"> 
                                                     <span  class="mega-image">
-                                                        <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('professor', $this->session->userdata('professor_id')); ?>" alt="...">             
+                                                        <img width="45" height="35" src="<?php echo base_url().'uploads/professor/'.$this->session->userdata('image_path');  //echo $this->crud_model->get_image_url('professor', $this->session->userdata('professor_id')); ?>" alt="...">             
                                                     </span>
                                                     <span class="mega-name">
                                                         <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 

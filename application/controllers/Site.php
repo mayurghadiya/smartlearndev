@@ -232,6 +232,7 @@ class Site extends CI_Controller {
             $this->session->set_userdata('branch', $row->branch);
             $this->session->set_userdata('department', $row->department);
             $this->session->set_userdata('login_type', 'professor');
+            $this->session->set_userdata('image_path',  $row->image_path);
             redirect(base_url('professor'));
         }
 
