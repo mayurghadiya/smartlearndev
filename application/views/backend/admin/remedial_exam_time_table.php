@@ -95,7 +95,7 @@
         <!-- row --> 
     </div>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
-    <?php if ($validation_error != '') { ?> 
+    <?php if (isset($validation_error) != '') { ?> 
         <script>
                                                             $(document).ready(function () {
                                                                 $('#add_time_table').click();
