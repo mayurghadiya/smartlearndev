@@ -200,7 +200,7 @@
                 dateFormat: 'dd M yy',
                 changeMonth: true,
                 changeYear: true,
-                maxDate: 0
+                //maxDate: 0
             });
             $('#exam-data-table').dataTable({
                 "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
