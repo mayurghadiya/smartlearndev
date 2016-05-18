@@ -305,7 +305,7 @@ $semester = $this->db->get('semester')->result();
                 var course = $('#edit_course').val();
                 var batch = $('#edit_batch').val();
                 var semester = $(this).val();
-                alert(degree+" "+course+" "+batch+" "+semester+" "+time_table_exam_id);
+               // alert(degree+" "+course+" "+batch+" "+semester+" "+time_table_exam_id);
                 get_exam_list(degree, course, batch, semester,time_table_exam_id);
                 subject_list(course, semester);
             });

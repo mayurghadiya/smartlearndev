@@ -191,7 +191,7 @@ endforeach;
                         },
                 syllabusfile: 
                         {
-                            extension:'Upload valid file',  
+                            extension:'Upload PDF file only',  
                         },
             }
         });

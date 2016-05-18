@@ -20,7 +20,11 @@ if(count($student))
                 <div class="tab-pane box" id="add" style="padding: 5px">
                     <div class="box-content">  
                         <div class="panel-body table-responsive">
+                          <?php if($student[0]->profile_photo != ""){ ?> 
                             <img src="<?php echo base_url().'uploads/student_image/'.$student[0]->profile_photo; ?>" height="100" width="100" />
+                             <?php }else {?>
+                                                        <img src="<?= base_url() ?>/uploads/no-image.jpg" height="100px" width="100px"/>
+                                                        <?php }?>
                                    
                              <table class="table table-striped" id="data-tables">
                                         <thead>

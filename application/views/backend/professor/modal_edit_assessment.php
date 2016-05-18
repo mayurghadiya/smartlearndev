@@ -174,7 +174,7 @@ endforeach;
         var dataString = "course=" + course + "&degree=" + degree+"&batch="+batch+"&semester="+semester;
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url() . 'index.php?admin/checkassignment/'.$param2; ?>",          
+                url: "<?php echo base_url() . 'index.php?professor/checkassignment/'.$param2; ?>",          
                 data:dataString,
                 success:function(response){
                     $("#student").html(response);
@@ -187,7 +187,7 @@ endforeach;
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_cource/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_cource/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course2").html(response);
@@ -204,13 +204,13 @@ endforeach;
                 var dataString = "course="+course+"&degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?admin/get_batches/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_batches/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#batch2").html(response);
                         $.ajax({
                                 type: "POST",
-                                url: "<?php echo base_url() . 'index.php?admin/get_semester'; ?>",
+                                url: "<?php echo base_url() . 'index.php?professor/get_semester'; ?>",
                                 data: dataString,
                                 success: function (response1) {
                                     $("#semester1").html(response1);

@@ -73,4 +73,25 @@
             </div>              
         </div>
         <!-- row --> 
+<<<<<<< HEAD
+    </div>
+     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+    
+<style>
+    .nav-fixedtabs {
+    left: 86%;
+    position: fixed;
+    top: 25%;
+    }
+    #navfixed{
+        cursor: pointer;
+    }
+    
+    </style>
+    
+   
+   
+=======
     </div>    
+>>>>>>> db50cd30d9539703a7b698a2a5ae6a807f798951
