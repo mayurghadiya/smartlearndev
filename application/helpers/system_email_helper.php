@@ -493,11 +493,9 @@ if (!function_exists('send_to_single_student')) {
      * @param array $data
      */
     function send_to_single_student($data) {
-        if(isset($data['teacheremail']))
-            {
-                $data['admin_to_professor'] = $teacher_email;
-            }
-        $CI = & get_instance();
+         $CI = & get_instance();
+       
+       
         $admin_detail = admin_sender_detail();
         foreach ($data['student'] as $row) {
              
@@ -512,13 +510,10 @@ if (!function_exists('send_to_single_student')) {
                 $edata['is_draft'] = 0; 
                 $edata['file_name'] = $data['file_name'];
                 $edata['read'] = 0;
-                $edata['student_read'] = '';
-                if(isset($data['teacheremail']))
-                 {
-                     $edata['admin_to_professor'] = $teacher_email;
-                 }
-            $CI->db->insert('email',$edata);
+                $edata['student_read'] = '';              
+              $CI->db->insert('email',$edata);
         }
+      
     }
 
 }

@@ -27,12 +27,11 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
-        $this->load->helper('permission');
-//        echo $this->uri->segment(2);
-//        exit;
-        
-//       echo user_permission();
-//       exit;
+
+        if (!$this->input->is_ajax_request()) {
+            $this->load->helper('permission');        
+             user_permission();
+        }
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
@@ -2311,10 +2310,10 @@ class Admin extends CI_Controller {
             } else if ($_POST['semester'] == 'all') {
                 //send to all semester of the course
                 send_to_course_all_semester($_POST, $_POST['course']);
-            } else if ($_POST['student'] == 'all') {
+            } else if ($_POST['student'][0] == 'all') {
                 //send to all students of the course and semeter
                 send_to_all_student_course_semester($_POST, $_POST['course'], $_POST['semester']);
-            } else {
+            } else {               
                 //send particular student                
                 send_to_single_student($_POST);
             }

@@ -265,11 +265,13 @@
 
                                                 <li id="top-menu-profile" class="profile mega-li"> 
                                                     <a href="#" class="mega-link"  data-action="click-trigger"> 
+                                                        <?php if ($this->session->userdata('student_login') == 1) { ?>
                                                         <span  class="mega-image">
-                                                            <img src="<?php echo base_url(); ?>assets/img/avatar/avatar.jpg" alt="example image" />               
+                                                           <img width="45" height="35" src="<?php echo $this->crud_model->get_image_url('student', $this->session->userdata('std_id')); ?>" alt="...">             
                                                         </span>
+                                                        <?php } ?>
                                                         <span class="mega-name">
-                                                            Caroline <i class="fa fa-caret-down fa-fw"></i> 
+                                                           <?php echo $this->session->userdata('name'); ?> <i class="fa fa-caret-down fa-fw"></i> 
                                                         </span>
                                                     </a> 
                                                     <div class="vd_mega-menu-content  width-xs-2  left-xs left-sm" data-action="click-target">
