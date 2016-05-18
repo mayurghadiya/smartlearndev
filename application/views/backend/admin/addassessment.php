@@ -195,6 +195,8 @@
                 instruction: "required",
                 submissions: "required",
                 feedback: "required",
+                marks:"required",
+                
                 
             },
             messages: {               
@@ -205,6 +207,7 @@
                 instruction: "Enter instruction",
                 submissions: "Enter about submissions",
                 feedback: "Enter feedback",               
+                marks:"Enter about marks",
             }
         });
 

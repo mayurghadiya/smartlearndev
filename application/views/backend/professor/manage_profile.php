@@ -75,35 +75,33 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("mobile"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <input id="mobile" class="form-control" type="text" name="mobile" required=""
+                                <input id="mobile" class="form-control" type="text" name="mobile" 
                                        value="<?php echo $professor['mobile']; ?>"/>
                             </div>	
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("address"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <textarea id="address" class="form-control" name="address" required=""><?php echo $professor['address']; ?></textarea>
+                                <textarea id="address" class="form-control" name="address" ><?php echo $professor['address']; ?></textarea>
                             </div>	
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("city"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <input id="city" class="form-control" type="text" name="city" required=""
+                                <input id="city" class="form-control" type="text" name="city" 
                                        value="<?php echo $professor['city']; ?>"/>
                             </div>	
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("zip code"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <input id="zip-code" class="form-control" type="text" name="zip_code" required=""
-                                       value="<?php echo $professor['zip']; ?>"/>
+                                <input id="zip-code" class="form-control" type="text" name="zip_code"  value="<?php echo $professor['zip']; ?>"/>
                             </div>	
                         </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label"><?php echo ucwords("date of birth"); ?><span style="color:red">*</span></label>
                             <div class="col-sm-5">
-                                <input id="date-of-birth" class="form-control datepicker-normal" type="text" name="dob" required=""
-                                       value="<?php echo $professor['dob']; ?>"/>
+                                <input id="date-of-birth" class="form-control datepicker-normal" type="text" name="dob"    value="<?php echo $professor['dob']; ?>"/>
                             </div>	
                         </div>
                         <div class="form-group">
@@ -196,9 +194,47 @@
       </div>
       <!-- .vd_container --> 
     </div>
-    <!-- .vd_content-wrapper --> 
+    <!-- .vd_content-wrapper -->
+    <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
+     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
+    <script type="text/javascript">
+                                            $.validator.setDefaults({
+                                                submitHandler: function (form) {
+                                                    alert('sad');
+                                                    form.submit();
+                                                }
+                                            });
+                                            $().ready(function () {
+                                                
+                                                $("#edit_profile").validate({
+                                                    rules: {
+                                                        mobile: "required",
+                                                        address: "required",
+                                                        city: "required",
+                                                        zip_code: "required",
+                                                        dob: "required",                                                       
+                                                        userfile:{								
+                                                                         extension:'gif|jpg|png|jpeg',  
+                                                                            
+                                                        }
+                                                    },
+                                                    messages: {
+                                                        mobile: "Enter mobile no",
+                                                        address: "Enter address",
+                                                        city: "Enter city",
+                                                        zip_code: "Enter zipcode",
+                                                        dob: "Select date of birth",
+                                                       userfile:{								
+                                                        extension:'upload valid image',  
+                                                                            
+                                                        }
+                                                    }
+                                                });
+                                            });
+    </script>
+
 	
-<script type="text/javascript" src="<?=$this->config->item('js_path')?>jquery-1.7.1.min.js"></script>
+
 <script type="text/javascript">
 		$(function(){
 			$("#upload_link").on('click', function(e){
@@ -222,13 +258,15 @@
     });
 </script>
 <script type="text/javascript">
-$(window).load(function() 
-{	"use strict";	
-	$( "#datepicker-normal" ).datepicker({ 
+     $(document).ready(function () {
+           $( ".datepicker-normal" ).datepicker({ 
 		dateFormat: 'dd M yy',
+                maxDate:'0',
 		changeMonth: true,
 		changeYear: true
 	
 	});
-});
+        });
+
 </script>
+

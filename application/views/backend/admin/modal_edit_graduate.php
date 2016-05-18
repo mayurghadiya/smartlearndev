@@ -138,7 +138,7 @@ $students = $this->db->get_where('student', array(
                                             <div class="col-sm-5">
                                                 <input id="main_img" class="form-control coverimage2" type="file" name="main_img" />
                                             </div>
-                                            <div id="image_container1"><img class='img-thumbnail' style='width:300px;margin:20px;' src='<?php echo "uploads/student_image/".$edit_data->student_img; ?>' ></div>
+                                            <div id="image_container1"><img class='img-thumbnail' style='width:300px;margin:20px;' src='<?php echo base_url()."uploads/student_image/".$edit_data->student_img; ?>' ></div>
                           </div>   
 
                         <div class="form-group">
@@ -194,15 +194,15 @@ $students = $this->db->get_where('student', array(
                    
                 },
                 messages: {
-                    degree: "Please select course",
-                    course: "Please select branch",
-                    batch: "Please select batch",
-                    semester: "Please select semester",
-                    student: "Please select student",
+                    degree: "Select course",
+                    course: "Select branch",
+                    batch: "Select batch",
+                    semester: "Select semester",
+                    student: "Select student",
                     main_img:{
                           extension:"Only gif,jpg,png file is allowed!" 
                     },
-                    year: "Please enter year"
+                    year: "Enter year"
                     
                 }
             });

@@ -179,7 +179,7 @@
                 semester: "Select Semester",
                 syllabusfile: {
                     required: "Upload file",
-                        extension:'Upload valid file',  
+                        extension:'Upload PDF file only',  
                     },
                 title:
                         {

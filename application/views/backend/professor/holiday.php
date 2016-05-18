@@ -73,6 +73,7 @@
             </div>              
         </div>
         <!-- row --> 
+<<<<<<< HEAD
     </div>
      <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
@@ -89,9 +90,8 @@
     
     </style>
     
-    <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addholiday/');" href="#" id="navfixed" data-toggle="tab">
-            <i class="material-icons">&#xE145;</i>
-        </a>
-    </div>
    
+   
+=======
+    </div>    
+>>>>>>> db50cd30d9539703a7b698a2a5ae6a807f798951

@@ -14,6 +14,7 @@ class Professor extends Professor_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+        error_reporting(0);
     }
 
     /**
@@ -156,8 +157,21 @@ class Professor extends Professor_Controller {
         $this->__template('courseware', $page_data);
     }
 
-    function holiday($param1 = '', $param2 = '') {
+    function holiday($param = '', $param1 = '', $param2 = '') {
 
+         if ($param == 'create')
+         { 
+            $data['holiday_name'] = $this->input->post('holiday_name');
+            $data['holiday_startdate'] = date('Y-m-d', strtotime($this->input->post('holiday_startdate')));
+            $data['holiday_enddate'] = date('Y-m-d', strtotime($this->input->post('holiday_enddate')));
+            $year = explode('-', $data['holiday_startdate']);
+            $data['holiday_year'] = $year[0];
+            $data['holiday_status'] = $this->input->post('holiday_status');
+            $data['created_date'] = date('Y-m-d');
+            $this->db->insert('holiday', $data);
+            $this->session->set_flashdata('flash_message', get_phrase('holiday_added_successfully'));
+            redirect(base_url() . 'professor/holiday/', 'refresh');
+        }
         $page_data['holiday'] = $this->Professor_model->getholiday();
         $page_data['page_name'] = 'holiday';
         $page_data['page_title'] = 'Holiday Management';
@@ -1104,6 +1118,19 @@ class Professor extends Professor_Controller {
     }
 
     function assessment_student() {
+        $batch = $this->input->post("batch");
+        $sem = $this->input->post("semester");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $html = '<option value="">Select Student</option>';
+        foreach ($datastudent as $row):
+            $html .='<option value="' . $row->std_id . '">' . $row->name . '</option>';
+        endforeach;
+        echo $html;
+    }
+    function get_assessment_student($param= '') {
         $batch = $this->input->post("batch");
         $sem = $this->input->post("semester");
         $degree = $this->input->post("degree");

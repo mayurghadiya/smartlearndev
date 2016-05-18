@@ -59,7 +59,14 @@
                                                 <tr>
                                                     <td><?php echo $count++; ?></td>											
                                                     <td><?php echo $row->name; ?></td>											
-                                                    <td><img src="<?= base_url() ?>/uploads/student_image/<?= $row->profile_photo; ?>" height="100px" width="100px"/></td>											
+                                                    <td>
+                                                         <?php if($row->profile_photo != ""){ ?>   
+                                                        <img src="<?= base_url() ?>/uploads/student_image/<?= $row->profile_photo; ?>" height="100px" width="100px
+                                                        "/>
+                                                        <?php }else {?>
+                                                        <img src="<?= base_url() ?>/uploads/no-image.jpg" height="100px" width="100px"/>
+                                                        <?php }?>
+                                                    </td>											
                                                     <td><?php echo $row->std_first_name . " " . $row->std_last_name; ?></td>					
                                                     <td><?php echo $row->email; ?></td>											
                                                     <td><?php echo $row->std_mobile; ?></td>											

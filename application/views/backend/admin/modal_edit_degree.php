@@ -24,6 +24,7 @@ foreach ($edit_data as $row):
                                 <div class="col-sm-5">
                                     <input type="text" class="form-control" name="d_name" id="d_name" value="<?php echo $row['d_name']; ?>"   />
                                 </div>
+                                  <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                             </div>                   
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo ucwords("status");?></label>
@@ -40,7 +41,7 @@ foreach ($edit_data as $row):
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <button type="submit" class="submit btn btn-info vd_bg-green"><?php echo ucwords("update");?></button>
+                                    <button type="submit" id="btnupd" class="submit btn btn-info vd_bg-green"><?php echo ucwords("update");?></button>
                                 </div>
                             </div>
                             </form>
@@ -57,6 +58,37 @@ endforeach;
         submitHandler: function (form) {
             form.submit();
         }
+    });
+    $("#btnupd").click(function (event) {
+        if ($("#d_name").val() != null)
+        {   
+            $.ajax({
+                type: "POST",
+                url: "<?php echo base_url() . 'index.php?admin/check_duplicate_department/'.$param2; ?>",
+                dataType: 'json',
+                async: false,
+                data:
+                        {
+                            'd_name': $("#d_name").val()
+                        },
+                success: function (response) {
+
+                   
+                    if (response.length == 0) {
+                        $("#error_lable_exist").html('');
+                        $('#degreeformedit').attr('validated', true);
+                        $('#degreeformedit').submit();
+                    } else
+                    {                         
+                        $("#error_lable_exist").html('Record is already present in the system');
+                        return false;
+                    }
+                }
+            });
+            return false;
+        }
+        event.preventDefault();
+
     });
 
     $().ready(function () {
