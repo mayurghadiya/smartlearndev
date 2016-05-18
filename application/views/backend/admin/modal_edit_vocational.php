@@ -38,6 +38,21 @@ foreach ( $edit_data as $row):
                                             </div>	
                                         </div>
                                         <div class="form-group">
+                                           <label class="col-sm-3 control-label"><?php echo ucwords("Course Category"); ?><span style="color:red">*</span></label>
+                                           <div class="col-sm-5">
+                                               <?php
+                                               $category = $this->db->get('course_category')->result_array();
+                                               ?>
+                                               <select id="category_id" name="category_id" class="form-control">
+                                                   <option value="">Select Category</option>
+                                                   <?php foreach ($category as $crow) { ?>
+                                                       <option value="<?php echo $crow['category_id']; ?>" <?php if($crow['category_id']==$row['category_id']){  echo "selected=selected"; } ?>><?php echo $crow['category_name']; ?>
+                                                       </option>
+                                                   <?php } ?>
+                                               </select>
+                                           </div>	
+                                       </div>
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("course fee"); ?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <input type="text" class="form-control" name="fee" id="fee" value="<?php echo $row['course_fee'];?>" />
@@ -119,6 +134,7 @@ endforeach;
                 rules: {
                 course_name: "required",
                 professor: "required",
+                category_id:"required",
                 fee: {
                         required: true,
                         currency: ['$', false]
@@ -130,6 +146,7 @@ endforeach;
             messages: {
                 course_name: "Enter course name",
                 professor: "Select professor",
+                category_id:"Select category",
                 fee: {
                         required: "Enter  fee",
                         currency: "Enter valid amount"

@@ -40,6 +40,7 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th><?php echo ucwords("course name");?></th>
+                                                 <th><?php echo ucwords("course category");?></th>
                                                 <th><?php echo ucwords("course start date");?></th>
                                                 <th><?php echo ucwords("course end date");?></th>
                                                 <th><?php echo ucwords("course fee");?></th>
@@ -54,6 +55,11 @@
                                                 ?><tr>
                                             <td><?php echo $count++; ?></td>
                                               <td><?php echo $row['course_name']; ?></td>    
+                                              <td><?php foreach($category as $cat){
+                                                  if($cat->category_id==$row['category_id']){
+                                                      echo $cat->category_name;
+                                                  }
+                                              } ?></td>
                                               <td><?php echo date('F d, Y', strtotime($row['course_startdate'])); ?></td>    
                                               <td><?php echo date('F d, Y', strtotime($row['course_enddate'])); ?></td>    
                                               <td><?php echo $row['course_fee']; ?></td>   

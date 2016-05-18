@@ -51,6 +51,41 @@ class Admin extends CI_Controller {
         $this->db->where($id, $update_id);
         $this->db->update($table, $data);
     }
+    
+    function category($param1='',$param2='')
+    {
+         if ($param1 == 'create') {
+            $data['category_name'] = $this->input->post('category_name');
+            $data['category_status'] = $this->input->post('category_status');
+            $data['created_date'] = date('Y-m-d h:i:s');
+            $this->db->insert('course_category', $data);
+            $this->session->set_flashdata('flash_message', 'Category added successfully');
+            redirect(base_url() . 'admin/category/', 'refresh');
+        }
+
+        if ($param1 == 'do_update') {
+           $data['category_name'] = $this->input->post('category_name');
+            $data['category_status'] = $this->input->post('category_status');
+
+            $this->db->where('category_id', $param2);
+            $this->db->update('course_category', $data);
+            $this->session->set_flashdata('flash_message', 'category updated successfully');
+
+            redirect(base_url() . 'admin/category/', 'refresh');
+        }
+        if ($param1 == 'delete') {
+            $this->db->where('category_id', $param2);
+            $this->db->delete('course_category');
+            $this->session->set_flashdata('flash_message','category deleted successfully');
+
+            redirect(base_url() . 'admin/category/', 'refresh');
+        }
+
+        $page_data['category'] = $this->db->get('course_category')->result_array();
+        $page_data['page_name'] = 'course_category';
+        $page_data['page_title'] = 'Category';
+        $this->load->view('backend/index', $page_data);
+    }
 
     function status($str) {
         if ($str) {
@@ -289,6 +324,12 @@ class Admin extends CI_Controller {
             echo "true";
         }
     }
+    function check_course_category()
+    {
+        $data = $this->db->get_where('course_category', array('category_name' => $this->input->post('category_name')))->result();
+        echo json_encode($data);
+    }
+   
 
     function get_cource_multiple($param = '') {
         $did = implode(',', $this->input->post("degree"));
@@ -965,6 +1006,9 @@ class Admin extends CI_Controller {
             $data['course_enddate'] = date('Y-m-d', strtotime($this->input->post('enddate')));
             $data['course_fee'] = $this->input->post('fee');
             $data['professor_id'] = $this->input->post('professor');
+            $data['category_id'] = $this->input->post('category_id');
+            
+            
             $data['status'] = $this->status($this->input->post('course_status'));
             $data['created_date'] = date('Y-m-d');
 
@@ -979,6 +1023,7 @@ class Admin extends CI_Controller {
             $data['course_fee'] = $this->input->post('fee');
             $data['professor_id'] = $this->input->post('professor');
             $data['status'] = $this->status($this->input->post('course_status'));
+            $data['category_id'] = $this->input->post('category_id');
             $data['updated_date'] = date('Y-m-d');
 
             $this->db->where('vocational_course_id', $param2);
@@ -994,6 +1039,7 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
         }
         $page_data['vocationalcourse'] = $this->db->get('vocational_course')->result_array();
+        $page_data['category'] = $this->db->get('course_category')->result();
         $page_data['page_name'] = 'vocational_course';
         $page_data['page_title'] = 'Vocational course';
         $this->load->view('backend/index', $page_data);
