@@ -24,6 +24,13 @@
                                                 <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
                                         </div>	
                                         <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("category Description");?><span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <textarea name="category_desc"></textarea>
+                                            </div>
+                                                <lable class="error" id="error_lable_exist" style="color:#f85d2c"></lable>
+                                        </div>	
+                                        <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
                                             <div class="col-sm-5">
                                                 <select name="category_status">
@@ -66,6 +73,7 @@
                         {
                             required:true,
                         },
+                        category_desc:"required",
                         category_status:"required",
                 },
                 messages: {
@@ -73,6 +81,7 @@
                     {
                          required:"Enter category name",
                     },
+                    category_desc:"Enter Description",
                     category_status:"Select Status",
                 }
             });

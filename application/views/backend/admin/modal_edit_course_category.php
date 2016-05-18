@@ -26,6 +26,13 @@ foreach ($edit_data as $row):
                                 </div>
                             </div> 
                              <div class="form-group">
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("category Description");?><span style="color:red">*</span></label>
+                                            <div class="col-sm-5">
+                                                <textarea name="category_desc"><?php  echo $row['category_desc']; ?></textarea>
+                                            </div>
+                                               
+                                        </div>	
+                             <div class="form-group">
                                             <label class="col-sm-3 control-label"><?php echo ucwords("Status");?></label>
                                             <div class="col-sm-5">
                                                 <select name="category_status">
@@ -59,10 +66,12 @@ endforeach;
         $("#frmeditclass").validate({
             rules: {
                 category_name: "required",
+                category_desc:"required",
                 category_status:"required",
             },
             messages: {
                 category_name: "Enter class name",
+                category_desc:"Enter Description",
                 category_status:"Select Status",
             }
             

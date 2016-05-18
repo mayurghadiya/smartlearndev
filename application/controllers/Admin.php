@@ -57,6 +57,7 @@ class Admin extends CI_Controller {
             $data['category_name'] = $this->input->post('category_name');
             $data['category_status'] = $this->input->post('category_status');
             $data['created_date'] = date('Y-m-d h:i:s');
+            $data['category_desc'] = $this->input->post('category_desc');
             $this->db->insert('course_category', $data);
             $this->session->set_flashdata('flash_message', 'Category added successfully');
             redirect(base_url() . 'admin/category/', 'refresh');
@@ -65,7 +66,7 @@ class Admin extends CI_Controller {
         if ($param1 == 'do_update') {
            $data['category_name'] = $this->input->post('category_name');
             $data['category_status'] = $this->input->post('category_status');
-
+            $data['category_desc'] = $this->input->post('category_desc');   
             $this->db->where('category_id', $param2);
             $this->db->update('course_category', $data);
             $this->session->set_flashdata('flash_message', 'category updated successfully');

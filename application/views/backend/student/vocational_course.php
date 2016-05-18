@@ -29,6 +29,7 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th><?php echo ucwords("course name");?></th>
+                                                <th><?php echo ucwords("category");?></th>
                                                 <th><?php echo ucwords("course start date");?></th>
                                                 <th><?php echo ucwords("course end date");?></th>
                                                 <th><?php echo ucwords("course fee");?></th>
@@ -41,7 +42,15 @@
                                             foreach ($vocationalcourse as $row):
                                                 ?><tr>
                                             <td><?php echo $count++; ?></td>
-                                              <td><?php echo $row['course_name']; ?></td>    
+                                              <td><?php echo $row['course_name']; ?></td>   
+                                               <td><?php 
+                                               $categories = $this->db->get('course_category')->result();
+                                               foreach($categories as $category)
+                                               {
+                                               
+                                               if($category->category_id==$row['category_id']){ echo $category->category_name; } 
+                                               }
+                                               ?></td>    
                                               <td><?php echo date('F d, Y', strtotime($row['course_startdate'])); ?></td>    
                                               <td><?php echo date('F d, Y', strtotime($row['course_enddate'])); ?></td>    
                                               <td><?php echo $row['course_fee']; ?></td>   
