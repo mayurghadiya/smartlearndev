@@ -28,7 +28,14 @@
 
 <!-- Javascript =============================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-<?php if ($this->uri->segment(2) != 'dashboard') { ?>
+
+<?php 
+$record_num = $this->uri->segment_array();
+
+$segment = end($record_num);
+
+?>
+<?php if ( $segment != 'professor' && $segment != 'dashboard' && $this->router->fetch_method() != 'index') { ?>    
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
 <?php } ?> 
 <!--[if lt IE 9]>
@@ -97,3 +104,4 @@ if ($message != '') {
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/multiselect.min.js"></script>
 <script src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
 <script src="<?= $this->config->item('js_path') ?>additional-methods.min.js"></script>
+</html>

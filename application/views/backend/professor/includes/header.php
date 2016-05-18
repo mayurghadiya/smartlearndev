@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <meta charset="utf-8" />
 <title><?php echo system_name(); ?> | <?php  if(isset($title)){echo $title;} elseif(isset($page_title)){ echo $page_title; }; ?></title>
 <meta name="keywords" content="HTML5 Template, CSS3, All Purpose professor Template, Smart learn" />

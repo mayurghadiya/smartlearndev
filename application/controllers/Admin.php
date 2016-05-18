@@ -2739,10 +2739,10 @@ class Admin extends CI_Controller {
                                 's_name' => $result['Semester']
                             ),
                             'course' => array(
-                                'c_name' => $result['Course Name']
+                                'c_name' => $result['Branch Name']
                             ),
                             'degree' => array(
-                                'd_name' => $result['Degree Name']
+                                'd_name' => $result['Course Name']
                             ),
                             'batch' => array(
                                 'b_name' => $result['Batch Name']

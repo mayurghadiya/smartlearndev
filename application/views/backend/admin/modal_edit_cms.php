@@ -58,7 +58,7 @@ foreach ($edit_data as $row) {
                         <div class="form-group form-actions">
                             <div class="col-sm-2"> </div>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn vd_btn vd_bg-green vd_white submit"><i class="icon-ok"></i> Edit</button>
+                                <button type="submit" class="btn vd_btn vd_bg-green vd_white submit"><i class="icon-ok"></i> Update</button>
                             </div>
                         </div>
                         </form>

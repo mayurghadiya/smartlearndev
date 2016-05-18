@@ -28,10 +28,6 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                    Banner Slider
                                 </a></li>
-                             <li >
-                                <a href="#add" data-toggle="tab"><i class="entypo-plus-circled"></i>
-                                    Add Banner Slider
-                                </a></li>
                                 <li >
                                 <a href="#general" data-toggle="tab"><i class="entypo-plus-circled"></i>
                                    Slider General Setting
