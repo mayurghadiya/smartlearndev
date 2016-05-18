@@ -20,6 +20,7 @@ $.toaster({
 <thead>
     <tr>
         <th><div>#</div></th>												
+        <th><div>Roll No</div></th>												
         <th><div>Full Name</div></th>												
         <th><div>Email</div></th>												
         <th><div>Mobile No</div></th>												
@@ -45,7 +46,8 @@ $.toaster({
                     <?php }
                 }
                 ?>
-             </td>-->											
+             </td>-->	
+            <td><?php echo $row->std_roll?></td>
             <td><?php echo $row->std_first_name . " " . $row->std_last_name; ?></td>					
             <td><?php echo $row->email; ?></td>											
             <td><?php echo $row->std_mobile; ?></td>											
