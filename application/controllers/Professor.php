@@ -56,7 +56,6 @@ class Professor extends Professor_Controller {
         $data['title'] = 'Professor Dashboard';
         $this->__template('dashboard', $data);
 
-        redirect(base_url('professor'));
 
     }
 
