@@ -97,7 +97,8 @@
                                             <?php } ?>
                                         </tbody>
                                         <tfoot>
-                                        <th></th>
+                                        <td>Search</td>
+                                        <th style="display: none;"></th>
                                         <th></th>
                                         <th></th>
                                         <th></th>
@@ -125,7 +126,7 @@
         var table = $('#example').DataTable();
 
         $("#example tfoot th").each(function (i) {
-            var select = $('<select><option value=""></option></select>')
+            var select = $('<select><option value="">All</option></select>')
                     .appendTo($(this).empty())
                     .on('change', function () {
                         table.column(i)

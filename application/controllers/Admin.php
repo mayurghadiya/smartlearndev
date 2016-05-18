@@ -2310,10 +2310,10 @@ class Admin extends CI_Controller {
             } else if ($_POST['semester'] == 'all') {
                 //send to all semester of the course
                 send_to_course_all_semester($_POST, $_POST['course']);
-            } else if ($_POST['student'] == 'all') {
+            } else if ($_POST['student'][0] == 'all') {
                 //send to all students of the course and semeter
                 send_to_all_student_course_semester($_POST, $_POST['course'], $_POST['semester']);
-            } else {
+            } else {               
                 //send particular student                
                 send_to_single_student($_POST);
             }
@@ -2769,10 +2769,10 @@ class Admin extends CI_Controller {
                                 's_name' => $result['Semester']
                             ),
                             'course' => array(
-                                'c_name' => $result['Course Name']
+                                'c_name' => $result['Branch Name']
                             ),
                             'degree' => array(
-                                'd_name' => $result['Degree Name']
+                                'd_name' => $result['Course Name']
                             ),
                             'batch' => array(
                                 'b_name' => $result['Batch Name']
@@ -5038,6 +5038,15 @@ class Admin extends CI_Controller {
 
         echo json_encode($data);
     }
+    
+    function check_duplicate_department($id = '') {
+        $degree = $this->input->post('d_name');      
+        $data = $this->db->get_where('degree', array('d_name' => $degree,
+                    'd_id!=' => $id))->result_array();
+        echo json_encode($data);
+    }
+    
+    
 
     /**
      * Grade
@@ -5909,6 +5918,20 @@ class Admin extends CI_Controller {
        endforeach;
        echo $html;
         
+    }
+    
+    function get_assessment_student($param= '') {
+        $batch = $this->input->post("batch");
+        $sem = $this->input->post("semester");
+        $degree = $this->input->post("degree");
+        $course = $this->input->post("course");
+
+        $datastudent = $this->db->get_where("student", array("std_batch" => $batch, 'std_status' => 1, "semester_id" => $sem, 'course_id' => $course, 'std_degree' => $degree))->result();
+        $html = '<option value="">Select Student</option>';
+        foreach ($datastudent as $row):
+            $html .='<option value="' . $row->std_id . '">' . $row->name . '</option>';
+        endforeach;
+        echo $html;
     }
 
     function class_routine() {

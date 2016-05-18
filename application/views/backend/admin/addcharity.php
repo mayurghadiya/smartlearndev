@@ -221,7 +221,7 @@
             }
         });
 
-        $(window).load(function () {
+        $(document).ready(function () {
             $('.datepicker-normal').datepicker({
                dateFormat: 'dd M yy',
                 changeMonth: true,

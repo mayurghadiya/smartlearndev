@@ -206,7 +206,6 @@
     $(document).ready(function () {
         $('#module').on('change', function () {
             var import_type = $(this).val();
-
             if (import_type == 'exam_marks' || import_type == 'exam_time_table') {
                 $('#degree_main').css('display', 'block');
                 $('#course_main').css('display', 'block');
