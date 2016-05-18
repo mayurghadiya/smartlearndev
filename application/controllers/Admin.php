@@ -2311,10 +2311,10 @@ class Admin extends CI_Controller {
             } else if ($_POST['semester'] == 'all') {
                 //send to all semester of the course
                 send_to_course_all_semester($_POST, $_POST['course']);
-            } else if ($_POST['student'] == 'all') {
+            } else if ($_POST['student'][0] == 'all') {
                 //send to all students of the course and semeter
                 send_to_all_student_course_semester($_POST, $_POST['course'], $_POST['semester']);
-            } else {
+            } else {               
                 //send particular student                
                 send_to_single_student($_POST);
             }

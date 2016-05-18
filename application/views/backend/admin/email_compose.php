@@ -1,5 +1,5 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+<link href="<?php echo base_url().'assets/select2/css/' ?>select2.css" rel="stylesheet" />
+<script src="<?php echo base_url().'assets/select2/js/' ?>select2.js"></script>
 <style>
     
     .select2-container-multi .select2-choices .select2-search-field input{
@@ -451,7 +451,7 @@ $(document).ready(function(){
             var course = $('#course').val();
             var batch = $('#batch').val();
             var semester = $('#semester').val();
-            course_semester_student(course, semester);
+           // course_semester_student(course, semester);
         }
     })
 })
