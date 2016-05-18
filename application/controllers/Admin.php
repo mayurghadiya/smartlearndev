@@ -27,12 +27,11 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
-        $this->load->helper('permission');
-//        echo $this->uri->segment(2);
-//        exit;
-        
-//       echo user_permission();
-//       exit;
+
+        if (!$this->input->is_ajax_request()) {
+            $this->load->helper('permission');        
+             user_permission();
+        }
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	

@@ -233,7 +233,7 @@ class Site extends CI_Controller {
             $this->session->set_userdata('department', $row->department);
             $this->session->set_userdata('login_type', 'professor');
             $this->session->set_userdata('image_path',  $row->image_path);
-            redirect(base_url('professor'));
+            redirect(base_url('index.php?professor/dashboard'));
         }
 
         return 'invalid';
@@ -253,7 +253,7 @@ class Site extends CI_Controller {
         } elseif ($type == 'subadmin') {
             redirect(base_url('index.php?sub_admin'));
         } elseif($type == 'professor') {
-            redirect(base_url('professor'));
+            redirect(base_url('index.php?professor/dashboard'));
         }
     }
 
