@@ -89,9 +89,5 @@
     
     </style>
     
-    <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-success nav-fixed-a-tabs vd_bg-red"  onclick="showAjaxModal('<?php echo base_url(); ?>index.php?modal/popup/addholiday/');" href="#" id="navfixed" data-toggle="tab">
-            <i class="material-icons">&#xE145;</i>
-        </a>
-    </div>
+   
    
