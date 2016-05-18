@@ -109,7 +109,11 @@
                                                 <input type="hidden" name="date" value="<?php echo $date; ?>"/>
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading">
-                                                        <div class="panel-title">Student List</div>
+                                                        <div class="panel-title">
+                                                            Student List
+                                                            <br/>
+                                                            Total Students: <?php echo count($student); ?>
+                                                        </div>
                                                     </div>
                                                     <div class="panel-body">
                                                         <table class="table table-striped table-responsive" id="attendance-data-table-2">
@@ -182,6 +186,38 @@
         });
         $(document).ready(function () {
             "use strict";
+            var department_id = '<?php echo $department; ?>';
+            var branch_id = '<?php echo $branch; ?>';
+            var batch_id = '<?php echo $batch; ?>';
+            var semester_id = '<?php echo $semester; ?>';
+            var class_id = '<?php echo $class_name; ?>';
+            var class_date = '<?php echo $date; ?>';
+            var class_routine = '<?php echo $class_routine; ?>';
+            var professor_id = '<?php echo $this->session->userdata('login_user_id'); ?>';
+
+            $('#department').val(department_id);
+            branch_from_department(department_id);
+            setTimeout(function () {
+                $('#branch').val(branch_id)
+            }, 100);
+            batch_from_department_and_branch(department_id, branch_id);
+            setTimeout(function () {
+                $('#batch').val(batch_id);
+            }, 100);
+            semester_list_from_branch(branch_id);
+            setTimeout(function () {
+                $('#semester').val(semester_id);
+            }, 100);
+            $('#class').val(class_id);
+<?php if ($date != '') { ?>
+                $('#date').val('<?php echo date('d F Y', strtotime($date)); ?>');
+<?php } ?>
+
+            setTimeout(function () {
+                fetch_class_routine(department_id, branch_id, batch_id, semester_id, class_id, professor_id, class_date)
+            }, 100);
+            setTimeout(function(){ $('#class_routine').val(class_routine)}, 1000);
+
             $('#attendance-data-table').dataTable({
                 "dom": "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
                         "<'row'<'col-sm-12'tr>>" +
@@ -206,30 +242,30 @@
                         "<'row'<'col-sm-12'tr>>" +
                         "<'row'<'col-sm-6'i><'col-sm-6'p>>",
             });
-
             // branch from department
             $('#department').on('change', function () {
-                var department_id = $(this).val();
+                department_id = $(this).val();
                 branch_from_department(department_id);
             });
-
             $('#branch').on('change', function () {
-                var department_id = $('#department').val();
-                var branch_id = $(this).val();
+                department_id = $('#department').val();
+                branch_id = $(this).val();
                 batch_from_department_and_branch(department_id, branch_id);
                 semester_list_from_branch(branch_id);
             });
-
-
             $('#date').on('change', function () {
-                var class_date = $(this).val();
-                var department_id = $('#department').val();
-                var branch_id = $('#branch').val();
-                var batch_id = $('#batch').val();
-                var semester_id = $('#semester').val();
-                var class_id = $('#semester').val();
+                class_date = $(this).val();
+                department_id = $('#department').val();
+                branch_id = $('#branch').val();
+                batch_id = $('#batch').val();
+                semester_id = $('#semester').val();
+                class_id = $('#class').val();
                 var professor_id = '<?php echo $this->session->userdata('login_user_id'); ?>';
+                fetch_class_routine(department_id, branch_id, batch_id, semester_id, class_id, professor_id, class_date);
 
+            });
+
+            function fetch_class_routine(department_id, branch_id, batch_id, semester_id, class_id, professor_id, class_date) {
                 $.ajax({
                     url: '<?php echo base_url(); ?>professor/check_class_routine',
                     type: 'POST',
@@ -240,16 +276,13 @@
                         'branch_id': branch_id,
                         'semester_id': semester_id,
                         'class_id': class_id,
-                        'professor_id': professor_id,
                         'batch_id': batch_id
                     },
                     success: function (content) {
                         $('#class_routine').html(content);
                     }
                 });
-
-            });
-
+            }
             function branch_from_department(department_id) {
                 $('#branch').find('option').remove().end();
                 $('#branch').append('<option value="">Select</option>');

@@ -14,7 +14,14 @@ class Professor extends Professor_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+
+//        if (!$this->input->is_ajax_request()) {
+//            $this->load->helper('permission');        
+//             user_permission();
+//        }
+
         error_reporting(0);
+
     }
 
     /**
@@ -41,9 +48,15 @@ class Professor extends Professor_Controller {
         $this->calendar_json();
         $this->__template('dashboard', $data);
     }
-
     function dashboard() {
-        redirect(base_url('professor'));
+
+       // $this->index();
+       // redirect(base_url() . 'professor/', 'refresh');
+        $data['page_name'] = 'dashboard';
+        $data['title'] = 'Professor Dashboard';
+        $this->__template('dashboard', $data);
+
+
     }
 
     function subject($param1 = '', $param2 = '') {

@@ -11,12 +11,20 @@
             <ul>                  
 
                 <li>
+<<<<<<< HEAD
                     <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course"  || $page_name=="assessments" || $page_name=="course_category" || $page_name == "class") { ?> class="open" <?php } ?> >
+=======
+                    <a href="javascript:void(0);" data-action="click-trigger" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course" || $page_name=="class") { ?> class="open" <?php } ?> >
+>>>>>>> 036c6480d52d60d9093d19cb2ea3b0756e254a7e
                         <span class="menu-icon entypo-icon"><i class="icon-tools"></i></span> 
                         <span class="menu-text">Basic Management</span>  
                         <span class="menu-badge"><span class="badge vd_bg-black-30"><i class="fa fa-angle-down"></i></span></span>
                     </a>
+<<<<<<< HEAD
                     <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course" || $page_name=="assessments"  || $page_name=="course_category" || $page_name == "class") { ?> style="display: block" <?php } ?>>
+=======
+                    <div class="child-menu"  data-action="click-target" <?php if ($page_name == "degree" || $page_name == "course" || $page_name == "batch" || $page_name == "semesterlist" || $page_name == "admission_type" || $page_name == "student" || $page_name == "subject" || $page_name=="syllabus" || $page_name == "holiday" || $page_name == "chancellor" || $page_name == "vocational_course" || $page_name=="assessments" || $page_name=="class") { ?> style="display: block" <?php } ?>>
+>>>>>>> 036c6480d52d60d9093d19cb2ea3b0756e254a7e
                         <ul>
                             <li <?php if ($page_name == "degree") { ?> class="selectednavmenu" <?php } ?>>
                                 <a href="<?php echo base_url(); ?>admin/degree"> 
@@ -39,7 +47,11 @@
                                     <span class="menu-text">Semester</span>  						
                                 </a> 
                             </li>	
+<<<<<<< HEAD
                             <li <?php if ($page_name == "class") { ?> class="selectednavmenu" <?php } ?>>
+=======
+                             <li <?php if ($page_name == "class") { ?> class="selectednavmenu" <?php } ?>>
+>>>>>>> 036c6480d52d60d9093d19cb2ea3b0756e254a7e
                                 <a href="<?php echo base_url(); ?>admin/division">
                                     <span class="menu-text">Class</span>  						
                                 </a> 
