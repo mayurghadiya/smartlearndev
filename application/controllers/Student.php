@@ -29,10 +29,10 @@ class Student extends CI_Controller {
         $notification = show_notification($this->session->userdata('student_id'));
         $this->session->set_userdata('notifications', $notification);
         $this->load->helper('text');     
-        if (!$this->input->is_ajax_request()) {
-            $this->load->helper('permission');        
-             user_permission();
-        }
+//        if (!$this->input->is_ajax_request()) {
+//            $this->load->helper('permission');        
+//             user_permission();
+//        }
        
     }
 

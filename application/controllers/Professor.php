@@ -15,10 +15,10 @@ class Professor extends Professor_Controller {
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
 
-//        if (!$this->input->is_ajax_request()) {
-//            $this->load->helper('permission');        
-//             user_permission();
-//        }
+        if (!$this->input->is_ajax_request()) {
+            $this->load->helper('permission');        
+             user_permission();
+        }
 
         error_reporting(0);
 
