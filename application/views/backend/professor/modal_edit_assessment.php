@@ -187,7 +187,7 @@ endforeach;
                 var dataString = "degree="+degree;
                 $.ajax({
                     type:"POST",
-                    url:"<?php echo base_url().'index.php?professor/get_cource/'; ?>",
+                    url:"<?php echo base_url().'index.php?professor/get_course/'; ?>",
                     data:dataString,                   
                     success:function(response){
                         $("#course2").html(response);
@@ -219,6 +219,25 @@ endforeach;
                     }
                 });
         });
+         $("#semester1").change(function(){
+        if($("#degree2").val() != null & $("#batch2").val() != null & $("#semester1").val() != null & $("#course2").val() != null)
+        {
+        var course = $("#course2").val();
+        var degree = $("#degree2").val();
+        var batch = $("#batch2").val();
+        var semester = $("#semester1").val();
+        var dataString = "course=" + course + "&degree=" + degree+"&batch="+batch+"&semester="+semester;
+            $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url() . 'index.php?professor/get_assessment_student'; ?>",
+                    data: dataString,
+                    success: function (responses) {
+                        $("#student").html(responses);
+                    }
+                });
+        }
+    
+    });
     
     
     $.validator.setDefaults({
