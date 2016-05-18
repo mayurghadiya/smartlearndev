@@ -243,6 +243,7 @@ $centerlist = $this->db->get('center_user')->result();
 
         $(".datepicker-normal-edit").datepicker({
             dateFormat: 'dd M yy',
+            minDate:'0',
             changeMonth: true,
             changeYear: true,
             onClose: function (selectedDate) {

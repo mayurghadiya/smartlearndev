@@ -106,12 +106,12 @@
                                                                         event_time: "required"
                                                                     },
                                                                     messages: {
-                                                                        event_name: "Please enter event name",
-                                                                        event_desc: "Please enter event description",
-                                                                        event_date: "Please select event date",
-                                                                         event_end_date:"Please select event end date",
-                                                                        event_location: "Please enter event location",
-                                                                        event_time: "Please enter event time"
+                                                                        event_name: "Enter event name",
+                                                                        event_desc: "Enter event description",
+                                                                        event_date: "Select event date",
+                                                                         event_end_date:"Select event end date",
+                                                                        event_location: "Enter event location",
+                                                                        event_time: "Enter event time"
                                                                     }
                                                                 });
                                                             });

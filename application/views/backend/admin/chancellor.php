@@ -41,9 +41,9 @@
                                             <tr>
                                                 <th><div>#</div></th>
                                                 <th><?php echo ucwords("chancellor name");?></th>
-                                                <th></th>
+                                                <th><?php echo ucwords("image");?></th>
                                                 <th><?php echo ucwords("contact no");?></th>
-                                                <th><?php echo ucwords("email id");?></th>
+                                                <th><?php echo ucwords("email");?></th>
                                                 <th><?php echo ucwords("designation");?></th>
                                                 <th><?php echo ucwords("description");?></th>
                                                 <th><?php echo ucwords("action");?></th>
@@ -56,7 +56,7 @@
                                             <tr>
                                                 <td><?php echo $count++; ?></td>
                                                 <td><?php echo $row['people_name']; ?></td>    
-                                                <td> <img src="<?= base_url() ?>/uploads/system_image/<?= $row['people_photo']; ?>" height="70px" width="70px" id="blah"  /></td>
+                                                <td> <img src="<?= base_url() ?>/uploads/system_image/<?= $row['people_photo']; ?>" height="70" width="70" id="blah"  /></td>
                                                <td><?php echo $row['people_phone']; ?></td> 
                                                 <td><?php echo $row['people_email']; ?></td> 
                                                  <td><?php echo $row['people_designation']; ?></td> 

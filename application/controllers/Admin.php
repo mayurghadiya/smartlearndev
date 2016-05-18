@@ -27,6 +27,12 @@ class Admin extends CI_Controller {
         $this->output->set_header("Cache-Control: post-check=0, pre-check=0");
         $this->output->set_header("Pragma: no-cache");
         $this->load->helper('notification');
+        $this->load->helper('permission');
+//        echo $this->uri->segment(2);
+//        exit;
+        
+//       echo user_permission();
+//       exit;
     }
 
     /*     * *default functin, redirects to login page if no admin logged in yet	
@@ -738,6 +744,23 @@ class Admin extends CI_Controller {
 
                     }
            }
+           if($get_group_list[0]['user_type']=='admin')
+           {
+               $user_type[]='<option value="admin">Admin</option>';
+               $sections=$this->db->get('admin')->result_array();
+                foreach ($sections as $row) {
+                    if(!in_array($row['admin_id'],$user_role))
+                    {
+                        $full_user_list[]= '<option value="' . $row['admin_id'] . '">' . $row['name'] . '</option>';
+                        }
+
+                    if(in_array($row['admin_id'],$user_role))
+                    {
+                        $group[]= '<option value="' . $row['admin_id'] . '">' . $row['name'] . '</option>';
+                        }
+
+                    }
+           }
         $out = array('group'=>$group,'user_type'=>$user_type,'full_user_list'=>$full_user_list); 
 	echo json_encode($out);             
     }
@@ -748,15 +771,17 @@ class Admin extends CI_Controller {
         if ($this->session->userdata('admin_login') != 1)
             redirect(base_url(), 'refresh');
         if ($param1 == 'create') {
-            $data['group_id'] = $this->input->post('group_name');
+            $group_name=$this->input->post('group_name');
+            $group_explode=explode(',',$group_name);
+            $data['group_id'] = $group_explode[0];
             $data['module_id'] = implode(',', $this->input->post('module_name'));
             //print_r($data); die;
             $this->db->where(array('group_id' => $this->input->post('group_name')));
             $module_row = $this->db->get('assign_module')->row();
-            $this->db->where(array('group_id' => $this->input->post('group_name')));
-            $group_count = $this->db->count_all_results('assign_module');
-
-            if ($group_count > 0) {
+//            $this->db->where(array('group_id' => $this->input->post('group_name')));
+//            $group_count = $this->db->count_all_results('assign_module');
+            
+            if (count($module_row) > 0) {
                 $this->db->where('assign_module_id', $module_row->assign_module_id);
                 $this->db->update('assign_module', $data);
             } else {
@@ -785,18 +810,26 @@ class Admin extends CI_Controller {
         $page_data['page_title'] = 'List Module';
         $this->load->view('backend/index', $page_data);
     }
-
-    /*     * ** Develop By Hardik Bhut 15-december-2015 **** */
-
-    function get_module_ajax($group_id) {
-        $get_assign_module_list = $this->db->get_where('assign_module', array('group_id' => $group_id))->result_array();
+    
+    function get_module()
+    {
+        $type=$this->input->post('type');
+        $data=$this->db->get_where('modules',array('user_type'=>$type))->result_array();
+        echo json_encode($data);
+    }
+    
+    function get_module_ajax() {
+        
+        $get_assign_module_list = $this->db->get_where('assign_module', array('group_id' => $this->input->post('id')))->result_array();
+        
         $assigned_module_list=array();
-        $full_module_list=array();
+        $full_module_list=array();       
+        
         if(count($get_assign_module_list)> 0)
         {
         foreach ($get_assign_module_list as $row_key => $row_value) {
             $module_record = explode(',', $row_value['module_id']);
-            $modules_query = $this->db->get('modules')->result_array();
+            $modules_query = $this->db->get_where('modules',array('user_type'=>$this->input->post('type')))->result_array();
             
             foreach ($modules_query as $modules_row) {
                 if (!in_array($modules_row['module_id'], $module_record)) {
@@ -4446,7 +4479,14 @@ class Admin extends CI_Controller {
         }
         echo $html;
     }
-    
+    function get_group_admin()
+    {
+         $dataprofessor = $this->db->get("admin")->result_array();
+        foreach ($dataprofessor as $row) {
+            $html .='<option value="' . $row['admin_id'] . '">' . $row['name'] . '</option>';
+        }
+        echo $html;
+    }
     
     function get_filter_student() {
         $batch = $this->input->post("batch");
@@ -4999,6 +5039,15 @@ class Admin extends CI_Controller {
 
         echo json_encode($data);
     }
+    
+    function check_duplicate_department($id = '') {
+        $degree = $this->input->post('d_name');      
+        $data = $this->db->get_where('degree', array('d_name' => $degree,
+                    'd_id!=' => $id))->result_array();
+        echo json_encode($data);
+    }
+    
+    
 
     /**
      * Grade

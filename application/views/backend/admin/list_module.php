@@ -19,7 +19,7 @@
                                     $group_query = $this->db->get('group')->result_array();
                                     foreach ($group_query as $group_row):
                                         ?>
-                                        <option value="<?php echo $group_row['g_id']; ?>"><?php echo $group_row['group_name']; ?></option>
+                                        <option value="<?php echo $group_row['g_id']; ?>,<?php echo $group_row['user_type']; ?>"><?php echo $group_row['group_name']; ?></option>
                                         <?php
                                     endforeach;
                                     ?>	
@@ -67,15 +67,24 @@
 <script type="text/javascript">
    
     function get_module_ajax(group_id) {
-
+           
+       var type_array = group_id;
+        var type=type_array.split(',');
         $.ajax({
-            url: '<?php echo base_url(); ?>index.php?admin/get_module_ajax/' + group_id,
-            success: function (response)
+            url: '<?php echo base_url(); ?>index.php?admin/get_module_ajax',
+            type:'post',
+            dataType:'json',
+            data:
             {
-                var json = $.parseJSON(response);
-                //alert(json.assigned_module_list);
-                jQuery('#multiselect').html(json.full_module_list);
-                jQuery('#multiselect_to').html(json.assigned_module_list);
+                'type': type[1],
+                'id':type[0],
+            }, 
+            success: function (response)
+           {
+//                var json = $.parseJSON(response);
+//                //alert(json.assigned_module_list);
+                jQuery('#multiselect').html(response.full_module_list);
+                jQuery('#multiselect_to').html(response.assigned_module_list);
             }
         });
     }
