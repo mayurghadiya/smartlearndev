@@ -22,7 +22,7 @@ class Professor extends Professor_Controller {
      * @param string $view
      * @param string $data
      */
-    function __template($view, $data) {        
+    function __template($view, $data) {
         $this->load->view('backend/professor/includes/header.php', $data);
         $this->load->view('backend/professor/' . $view);
 
@@ -31,13 +31,19 @@ class Professor extends Professor_Controller {
     }
 
     function index() {
+        $this->load->helper('report_chart');
+        $course = $this->db->get('course')->result();
+        $data['male_female_pie_chart'] = male_female_students();
+        $data['new_student_joining'] = new_student_registration();
+        $data['male_vs_female_course_wise'] = male_vs_female_course_wise();
         $data['page_name'] = 'dashboard';
         $data['title'] = 'Professor Dashboard';
+        $this->calendar_json();
         $this->__template('dashboard', $data);
     }
 
     function dashboard() {
-        $this->index();
+        redirect(base_url('professor'));
     }
 
     function subject($param1 = '', $param2 = '') {
@@ -2370,12 +2376,12 @@ class Professor extends Professor_Controller {
                     if (in_array($ext_file, $allowed_types)) {
 
                         $upl_path = FCPATH . 'uploads/professor/' . $file_name;
-                      //  mkdir(FCPATH . 'uploads/professor', 0777);
-                            
+                        //  mkdir(FCPATH . 'uploads/professor', 0777);
+
 
                         move_uploaded_file($_FILES['userfile']['tmp_name'], $upl_path);
-                          chmod($upl_path, 0777);
-                            $this->session->set_userdata('image_path',  $file_name);
+                        chmod($upl_path, 0777);
+                        $this->session->set_userdata('image_path', $file_name);
                     } else {
                         $file_name = '';
                     }
@@ -2435,17 +2441,17 @@ class Professor extends Professor_Controller {
      * Check class routine
      */
     function check_class_routine() {
+        date_default_timezone_set('Etc/UTC');
         if ($_POST) {
             require 'vendor/autoload.php';
             $this->load->library('Class_routine_attendance');
             $this->load->model('admin/Crud_model');
             if ($_POST) {
-                $class_routine = $this->Professor_model->class_routine_attendance($_POST);                
+                $class_routine = $this->Professor_model->class_routine_attendance($_POST);
                 $attendance_routine = array();
                 $selected_date = date('Y-m-d', strtotime($_POST['class_date']));
-                foreach ($class_routine as $row) {                    
-                    if ($row->RecurrenceRule) {                        
-                        //exit;
+                foreach ($class_routine as $row) {
+                    if ($row->RecurrenceRule) {
                         //parse reccurrence rule
                         $rule = $this->class_routine_attendance->parse_reccurrence_rule($row->RecurrenceRule);
                         $rule_array = array();
@@ -2455,12 +2461,12 @@ class Professor extends Professor_Controller {
                             $reccur_rule .= "'$separate_rule[0]' => '$separate_rule[1]'" . ';';
                         }
                         $conditional_rules = $this->class_routine_attendance->conditional_reccurrence_rule($reccur_rule);
-                        $conditional_rules['DTSTART'] = $row->Start;                        
+                        $conditional_rules['DTSTART'] = $row->Start;
                         $rrule = new RRule\RRule($conditional_rules);
                         foreach ($rrule as $occurrence) {
                             if ($occurrence->format('Y-m-d') == $selected_date) {
-                                array_push($attendance_routine, $row); 
-                                echo $occurrence->format('Y-m-d');
+                                array_push($attendance_routine, $row);
+                                //echo $occurrence->format('Y-m-d');
                                 break;
                             }
                             //break;
@@ -2490,13 +2496,12 @@ class Professor extends Professor_Controller {
 
             foreach ($student as $row) {
                 $date = date('Y-m-d', strtotime($_POST['date']));
-                $status = $this->Crud_model->check_attendance_status($_POST['department'], $_POST['branch'], $_POST['batch'],
-                        $_POST['semester'], $_POST['class'], $_POST['class_routine'], $date, $row->std_id);
-                
+                $status = $this->Crud_model->check_attendance_status($_POST['department'], $_POST['branch'], $_POST['batch'], $_POST['semester'], $_POST['class'], $_POST['class_routine'], $date, $row->std_id);
+
                 //check for existing attendnace
-                if($status) {
+                if ($status) {
                     //update existing attendance of the student
-                    if(isset($_POST['student_' . $status->student_id])) {
+                    if (isset($_POST['student_' . $status->student_id])) {
                         //present
                         $update['is_present'] = 1;
                     } else {
@@ -2530,6 +2535,18 @@ class Professor extends Professor_Controller {
         }
         $this->session->set_flashdata('flash_message', 'Attendance is successfully updated.');
         redirect(base_url('professor/attendance'));
+    }
+
+    function calendar_json() {
+        $this->load->helper('file');
+        $this->db->select('event_date AS date, event_name AS title, event_location AS Location, event_desc AS description');
+        $this->db->select('DATE_FORMAT(event_date, "%d %b %Y") AS event_start_date, TIME_FORMAT(event_date, "%h:%i %p") AS event_start_time');
+        $this->db->from('event_manager');
+        $query = $this->db->get();
+        $file = FCPATH . 'event.humanDate.json.php';
+        $result = json_encode($query->result());
+
+        write_file($file, $result);
     }
 
 }
