@@ -34,7 +34,7 @@ foreach ( $edit_data as $row):
                             <label class="col-sm-3 control-label"><?php echo ucwords("department");?> <span style="color:red">*</span></label>
                             <div class="col-sm-5">
                                 <select id="degree1" name="degree1[]" class="form-control" multiple>
-                                    <option value="">Select Course</option>                                        
+                                    <option value="">Select department</option>                                        
                                 <?php
                                 $d=explode(',',$row['degree_id']);
                                 foreach ($degree as $srow) 

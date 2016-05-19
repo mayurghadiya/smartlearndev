@@ -28,10 +28,10 @@
                                             </div>
                                         </div>	
                                          <div class="form-group">
-                                            <label class="col-sm-3 control-label"><?php echo ucwords("course");?><span style="color:red">*</span></label>
+                                            <label class="col-sm-3 control-label"><?php echo ucwords("department");?><span style="color:red">*</span></label>
                                             <div class="col-sm-5">
                                                 <select id="degree" name="degree[]" class="form-control" multiple>
-                                                    <option value="default">Select Course</option>
+                                                    <option value="default">Select department</option>
                                                         <?php foreach ($degree as $srow) { ?>
                                                         <option value="<?php echo $srow['d_id']; ?>"><?php echo $srow['d_name']; ?>
                                                         </option>
@@ -156,8 +156,8 @@
                     b_name: "Enter batch name",
                     'degree[]': 
                             {
-                                 valueNotEquals: "Select course",
-                                 required:"Select course",
+                                 valueNotEquals: "Select department",
+                                 required:"Select department",
                             },
                     'course[]': 
                     {
