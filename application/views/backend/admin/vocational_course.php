@@ -26,7 +26,11 @@
                                 <a href="#list" data-toggle="tab"><i class="entypo-menu"></i> 
                                     <?php echo ucwords("vocational course list");?>
                                 </a></li>
-                          
+                          <li class="">
+                                <a href="#registerlist" data-toggle="tab"><i class="entypo-menu"></i> 
+                                    <?php echo ucwords("registered student list");?>
+                                </a></li>
+                                
                         </ul>
                         <!------CONTROL TABS END------>
                             
@@ -90,6 +94,36 @@
                                     </table>
                                 </div>
                             </div>
+                            <div class="tab-pane box" id="registerlist" >
+                                 <div class="panel-body table-responsive">
+                                    <table class="table table-striped" id="data-tables1">
+                                        <thead>
+                                            <tr>
+                                                <th><div>#</div></th>
+                                                <th><?php echo ucwords("course name");?></th>
+                                                <th><?php echo ucwords("student name");?></th>
+                                                <th><?php echo ucwords("paid amount");?></th>
+                                                <th><?php echo ucwords("paid date");?></th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                 <?php $count = 1;
+                                            foreach ($vocationalcoursefee as $row):
+                                                ?>
+                                            <tr>
+                                                <td><?php echo $count++; ?></td>
+                                                <td><?php echo $row['course_name']; ?></td>  
+                                                <td><?php echo $row['name']; ?></td>  
+                                                <td><?php echo $row['pay_amount']; ?></td>  
+                                                <td><?php echo $row['pay_date']; ?></td>  
+                                            </tr>
+                                             <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                            </div>
                             <!----TABLE LISTING ENDS--->
                             
                         </div>
@@ -101,7 +135,11 @@
     </div>
      <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.js"></script>
     <script type="text/javascript" src="<?= $this->config->item('js_path') ?>jquery.validate.min.js"></script>
-    
+    <script>
+    $(document).ready(function(){
+         $('#data-tables1').dataTable();
+    });
+    </script>
 <style>
     .nav-fixedtabs {
     left: 86%;

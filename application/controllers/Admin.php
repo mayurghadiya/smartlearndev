@@ -1039,6 +1039,15 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/vocationalcourse/', 'refresh');
         }
         $page_data['vocationalcourse'] = $this->db->get('vocational_course')->result_array();
+        
+        $this->db->select('vcf.*,vc.*,s.name');
+        $this->db->from('vocational_course_fee vcf');
+        $this->db->join('vocational_course vc','vc.vocational_course_id= vcf.vocational_course_id');
+        $this->db->join('student s','s.std_id= vcf.student_id');
+        $page_data['vocationalcoursefee'] = $this->db->get()->result_array();
+//        echo "<pre>";
+//        print_r($page_data['vocationalcoursefee']);
+//        exit;
         $page_data['category'] = $this->db->get('course_category')->result();
         $page_data['page_name'] = 'vocational_course';
         $page_data['page_title'] = 'Vocational course';
